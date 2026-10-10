@@ -1,0 +1,2687 @@
+
+<!doctype html>
+<html lang="uk" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Навчальний портал з дисципліни "Інформаційно-аналітичні технології в екологічних системах"">
+      
+      
+      
+      
+        <link rel="prev" href="../lk3/">
+      
+      
+        <link rel="next" href="../lk5/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Тема 4. Статистичні методи аналізу даних - ІАТ в екологічних системах</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4" class="md-skip">
+          Перейти до змісту
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Хедер">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-header__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ІАТ в екологічних системах
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Тема 4. Статистичні методи аналізу даних
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Переключити на темну тему"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Переключити на темну тему" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-label="Переключити на світлу тему"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Переключити на світлу тему" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Пошук" placeholder="Пошук" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Шукати">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистити" aria-label="Очистити" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Пошук розпочато
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Робоча програма
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../lk1/" class="md-tabs__link">
+          
+  
+  
+  Лекції
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../lb/lb1/" class="md-tabs__link">
+          
+  
+  
+  Лабораторні роботи
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../sr/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Самостійна робота
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навігація" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-nav__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ІАТ в екологічних системах
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Робоча програма
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лекції
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лекції
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 1. Цифровізація екологічного моніторингу
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 2. IoT-технології та сенсорні мережі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 3. Проєктування екологічних баз даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 4. Статистичні методи аналізу даних
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 4. Статистичні методи аналізу даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мета лекції
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Очікувані результати навчання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Теоретико-концептуальний базис. Математичний апарат опису та первинної фільтрації екологічних часових рядів
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Теоретико-концептуальний базис. Математичний апарат опису та первинної фільтрації екологічних часових рядів">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-iqr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Базові числові характеристики розподілу вибірок моніторингу: середнє значення, дисперсія, стандартне відхилення та міжквартильний інтервал (IQR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-z-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Метод Z-score та інтерквартильні бар'єри для детектування аномальних викидів та апаратних збоїв вимірювальних каналів
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Математична формалізація лінійного тренду та дисперсійного аналізу часових послідовностей екологічних маркерів
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Оцінка повноти і достовірності інтегрованих вибірок спостережень за математичними критеріями інформаційної ентропії
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вказівки для самостійного осмислення
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Методологія та аналіз граничних умов. Декомпозиція, сезонність та перевірка стаціонарності динамічних рядів
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Методологія та аналіз граничних умов. Декомпозиція, сезонність та перевірка стаціонарності динамічних рядів">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-stl-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Метод STL-декомпозиції для виокремлення довгострокового тренду, сезонної складової та випадкових нерегулярних флуктуацій
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-acf-fft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Застосування автокореляційної функції (ACF) та дискретного перетворення Фур'є (FFT) для детектування гармонійних сезонних патернів
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-adf-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Тестування часових рядів на стаціонарність за допомогою розширеного критерію Дікі-Фуллера (ADF-test) та процедури різницевого диференціювання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Критична втрата адекватності класичних статистичних моделей при перевищенні критичного порогу зашумленості та пропусках даних у рядах спостережень
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Практичний індустріальний / фаховий кейс. Ретроспективний часовий аналіз урбаністичного забруднення
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Практичний індустріальний / фаховий кейс. Ретроспективний часовий аналіз урбаністичного забруднення">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-17-20072024" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Комплексний фаховий кейс. Статистичний аналіз та декомпозиція 17-річного часового ряду концентрацій зваженого пилу і формальдегіду в атмосферному повітрі м. Кременчук (2007–2024 рр.)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Комплексний фаховий кейс. Статистичний аналіз та декомпозиція 17-річного часового ряду концентрацій зваженого пилу і формальдегіду в атмосферному повітрі м. Кременчук (2007–2024 рр.)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі / ситуації
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Покроковий аналіз та розв'язок
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Покроковий аналіз та розв&#39;язок">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 1. Первинний робастний скринінг та визначення меж аномалій Тьюкі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 2. Аналітичне вилучення довгострокового лінійного тренду методом найменших квадратів
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-loess" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 3. Ізоляція сезонної компоненти методом згладжування Loess
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 4. Тестування стаціонарності залишків за розширеним критерієм Дікі-Фуллера
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Інтерпретація результатів та альтернативні сценарії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Зведена довідкова система лекції
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Контрольні питання та завдання
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Контрольні питання та завдання">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Прикладні тестові завдання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для самостійної роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Завдання для самостійної роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для виконання
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 5. Багатовимірний аналіз та інтелектуальні технології
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 6. Моделювання переносу та дифузії
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 7. Геоінформаційні системи (ГІС)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 8. Моделювання динаміки екологічних систем
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 9. Прогнозування та оцінка ризиків
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 10. Інтелектуальні платформи просторового прогнозування
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторні роботи
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лабораторні роботи
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 1. Архітектура відкритих систем моніторингу довкілля
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 2. Канал отримання даних IoT-станцій
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 3. Проєктування наборів даних екологічної інформації
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 4. Статистичний аналіз та перевищення ГДК
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 5. Кореляційний аналіз та метод головних компонент
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 6. Моделювання розсіювання викидів в атмосфері
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 7. Просторова інтерполяція (IDW) та аномалії
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 8. Моделювання динаміки та стійкості екосистем
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 9. Прогнозування часових рядів та індекс якості повітря
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 10. Генерація екологічного звіту когнітивним LLM-агентом
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Самостійна робота
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мета лекції
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Очікувані результати навчання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Теоретико-концептуальний базис. Математичний апарат опису та первинної фільтрації екологічних часових рядів
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Теоретико-концептуальний базис. Математичний апарат опису та первинної фільтрації екологічних часових рядів">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-iqr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Базові числові характеристики розподілу вибірок моніторингу: середнє значення, дисперсія, стандартне відхилення та міжквартильний інтервал (IQR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-z-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Метод Z-score та інтерквартильні бар'єри для детектування аномальних викидів та апаратних збоїв вимірювальних каналів
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Математична формалізація лінійного тренду та дисперсійного аналізу часових послідовностей екологічних маркерів
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Оцінка повноти і достовірності інтегрованих вибірок спостережень за математичними критеріями інформаційної ентропії
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вказівки для самостійного осмислення
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Методологія та аналіз граничних умов. Декомпозиція, сезонність та перевірка стаціонарності динамічних рядів
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Методологія та аналіз граничних умов. Декомпозиція, сезонність та перевірка стаціонарності динамічних рядів">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-stl-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Метод STL-декомпозиції для виокремлення довгострокового тренду, сезонної складової та випадкових нерегулярних флуктуацій
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-acf-fft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Застосування автокореляційної функції (ACF) та дискретного перетворення Фур'є (FFT) для детектування гармонійних сезонних патернів
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-adf-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Тестування часових рядів на стаціонарність за допомогою розширеного критерію Дікі-Фуллера (ADF-test) та процедури різницевого диференціювання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Критична втрата адекватності класичних статистичних моделей при перевищенні критичного порогу зашумленості та пропусках даних у рядах спостережень
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Практичний індустріальний / фаховий кейс. Ретроспективний часовий аналіз урбаністичного забруднення
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Практичний індустріальний / фаховий кейс. Ретроспективний часовий аналіз урбаністичного забруднення">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-17-20072024" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Комплексний фаховий кейс. Статистичний аналіз та декомпозиція 17-річного часового ряду концентрацій зваженого пилу і формальдегіду в атмосферному повітрі м. Кременчук (2007–2024 рр.)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Комплексний фаховий кейс. Статистичний аналіз та декомпозиція 17-річного часового ряду концентрацій зваженого пилу і формальдегіду в атмосферному повітрі м. Кременчук (2007–2024 рр.)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі / ситуації
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Покроковий аналіз та розв'язок
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Покроковий аналіз та розв&#39;язок">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 1. Первинний робастний скринінг та визначення меж аномалій Тьюкі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 2. Аналітичне вилучення довгострокового лінійного тренду методом найменших квадратів
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-loess" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 3. Ізоляція сезонної компоненти методом згладжування Loess
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 4. Тестування стаціонарності залишків за розширеним критерієм Дікі-Фуллера
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Інтерпретація результатів та альтернативні сценарії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Зведена довідкова система лекції
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Контрольні питання та завдання
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Контрольні питання та завдання">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Прикладні тестові завдання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для самостійної роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Завдання для самостійної роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для виконання
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="4">Тема 4. Статистичні методи аналізу складних екологічних даних</h1>
+<h2 id="_1">Мета лекції</h2>
+<p>Озброїти здобувачів наукового ступеня доктора філософії сучасним математичним апаратом статистичного аналізу екологічних часових рядів, методами детектування та фільтрації вимірювальних аномалій, STL-декомпозиції прихованих трендів і сезонних компонент, а також алгоритмами оцінки стаціонарності для підвищення достовірності подальшого прогнозування параметрів довкілля.</p>
+<h2 id="_2">Очікувані результати навчання</h2>
+<ol>
+<li>
+<p><strong>Знання та розуміння.</strong> Здобувачі мають розуміти статистичну природу екологічних спостережень, математичні формули центральних тенденцій, варіативності, автокореляції та спектрального перетворення рядів.</p>
+</li>
+<li>
+<p><strong>Застосування.</strong> Здобувачі мають застосовувати процедури STL-декомпозиції та розширений тест Дікі-Фуллера для ідентифікації трендових, циклічних і стохастичних складових екологічних процесів.</p>
+</li>
+<li>
+<p><strong>Аналіз.</strong> Здобувачі мають аналізувати міжквартильний розмах, дисперсійні характеристики та лагові автокореляційні зв'язки для окремих груп метеорологічних і хімічних показників.</p>
+</li>
+<li>
+<p><strong>Оцінювання та синтез.</strong> Здобувачі мають інтерпретувати наявність стохастичного шуму у вибірках моніторингу та оцінювати ступінь деградації прогностичної спроможності статистичних моделей.</p>
+</li>
+</ol>
+<h2 id="1-">1. Теоретико-концептуальний базис. Математичний апарат опису та первинної фільтрації екологічних часових рядів</h2>
+<h3 id="11-iqr">1.1. Базові числові характеристики розподілу вибірок моніторингу: середнє значення, дисперсія, стандартне відхилення та міжквартильний інтервал (IQR)</h3>
+<p>Кількісний аналіз екологічних часових рядів, отриманих від автоматизованих станцій муніципального спостереження, базується на фундаментальних положеннях теорії ймовірностей та математичної статистики. Екологічні дані є неперервними випадковими процесами, які фіксуються через дискретні проміжки часу, формуючи послідовність вимірювань <span class="arithmatex">\(X = \{X_1, X_2, \dots, X_T\}\)</span>, де параметр <span class="arithmatex">\(T\)</span> позначає загальну кількість спостережень у досліджуваному часовому інтервалі. Первинний аналіз таких вибірок потребує визначення параметрів центральної тенденції та мір статистичного розсіювання, що дозволяє сформувати базовий профіль поведінки досліджуваного хімічного або метеорологічного показника.</p>
+<p>Оцінка центральної тенденції вибірки екологічних вимірювань здійснюється шляхом розрахунку вибіркового середнього значення, яке формалізується класичним співвідношенням:</p>
+<div class="arithmatex">\[\mu = \frac{1}{T} \sum_{t=1}^{T} X_t\]</div>
+<p>де змінна <span class="arithmatex">\(X_t\)</span> позначає виміряну фізичну або хімічну величину параметра в момент часу <span class="arithmatex">\(t\)</span>, а змінна <span class="arithmatex">\(T\)</span> визначає загальний обсяг аналізованої вибірки. Хоча середнє арифметичне є незміщеною оцінкою генерального середнього для нормальних розподілів, у реальних екологічних дослідженнях воно виявляється надмірно чутливим до одиничних екстремальних викидів, спричинених залповими техногенними аваріями або короткочасними апаратними збоями вимірювальних трактів.</p>
+<p>Для характеристики варіативності та міри розсіювання часового ряду навколо середнього значення застосовується вибіркова незсунена дисперсія, яка обчислюється відповідно до математичного виразу:</p>
+<div class="arithmatex">\[\sigma^2 = \frac{1}{T - 1} \sum_{t=1}^{T} (X_t - \mu)^2\]</div>
+<p>де різниця <span class="arithmatex">\((X_t - \mu)\)</span> відображає відхилення окремого вимірювання від середнього рівня, а дільник <span class="arithmatex">\((T - 1)\)</span> враховує втрату одного ступеня вільності при оцінюванні невідомого генерального середнього. Стандартне відхилення визначається як додатний квадратний корінь із дисперсії:</p>
+<div class="arithmatex">\[\sigma = \sqrt{\sigma^2}\]</div>
+<p>Цей показник вимірюється в тих самих одиницях, що й досліджуваний екологічний фактор (наприклад, мг/м³ для газів або °C для температури), що забезпечує фізичну інтерпретованість результатів.</p>
+<p>В умовах суттєвої асиметрії емпіричного розподілу концентрацій токсикантів, коли в рядах присутня значна частка околонульових фонових значень із рідкісними екстремальними піками, класичні параметричні оцінки втрачають свою надійність. У такому разі застосовуються робастні непараметричні характеристики, центральне місце серед яких посідає <strong>міжквартильний інтервал (Interquartile Range, IQR)</strong>. Міжквартильний інтервал описує діапазон, у якому зосереджено 50% центральних спостережень вибірки, і визначається різницею між третім (<span class="arithmatex">\(Q_3\)</span>) та першим (<span class="arithmatex">\(Q_1\)</span>) квартилями:</p>
+<div class="arithmatex">\[\text{IQR} = Q_3 - Q_1\]</div>
+<p>де квартилі <span class="arithmatex">\(Q_1\)</span> та <span class="arithmatex">\(Q_3\)</span> відповідають точкам емпіричної функції розподілу, нижче яких знаходиться відповідно 25% та 75% обсягу відсортованого варіаційного ряду. На відміну від дисперсії, міжквартильний інтервал є стійким до наявності грубих похибок на хвостах розподілу, що робить його ключовим інструментом для опису високоентропійних показників якості урбанізованого середовища.</p>
+<pre class="mermaid"><code>flowchart TD
+    subgraph INGESTION["Рівень збору даних"]
+        RAW["Сирий масив вимірювань сенсорів X(t)"]
+    end
+
+    subgraph DESCRIPTIVE["Параметричний та робастний опис"]
+        MEAN["Вибіркове середнє (mu)"]
+        VAR["Дисперсія та відхилення (sigma)"]
+        QUART["Квартилі Q1, Q3 та міжквартильний розмах (IQR)"]
+    end
+
+    subgraph FILTERING["Методи первинної фільтрації"]
+        Z_SCORE["Z-score фільтрація (|Z| &gt; 3)"]
+        TUKEY["Бар'єри Тьюкі (Q1 - 1.5 IQR, Q3 + 1.5 IQR)"]
+    end
+
+    subgraph OUTPUT["Результат первинної обробки"]
+        CLEAN["Очищений часовий ряд без апаратних аномалій"]
+        FLAG["Реєстр зафіксованих екстремальних викидів"]
+    end
+
+    RAW --&gt; MEAN
+    RAW --&gt; VAR
+    RAW --&gt; QUART
+    MEAN &amp; VAR --&gt; Z_SCORE
+    QUART --&gt; TUKEY
+    Z_SCORE --&gt; CLEAN
+    TUKEY --&gt; FLAG</code></pre>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> Під час статистичного аналізу трирічного моніторингу на посту № 1 у місті Кременчук виявлено, що дисперсія температури становила 84,6 °C, а відносної вологості — 145,6%, що свідчить про глибокі сезонні флуктуації, тоді як дисперсія оксиду вуглецю не перевищувала 0,005 мг/м³, демонструючи стабільний низькоамплітудний фоновий характер забруднення цією речовиною з поодинокими техногенними викидами.</p>
+</blockquote>
+<hr />
+<h3 id="12-z-score">1.2. Метод Z-score та інтерквартильні бар'єри для детектування аномальних викидів та апаратних збоїв вимірювальних каналів</h3>
+<p>Первинна підготовка екологічних даних вимагає надійної алгоритмічної сепарації двох принципово різних типів нестандартних значень: реальних екстремальних екологічних викидів та хибних вимірювальних артефактів, викликаних апаратними несправностями сенсорів, стрибками напруги живлення або втратою калібрування аналогово-цифрових трактів. Пряме включення апаратних артефактів у навчальні вибірки прогностичних моделей призводить до катастрофічного зростання похибок екстраполяції.</p>
+<p>Для виявлення викидів у квазісиметричних розподілах застосовується стандартизована оцінка <strong>Z-score</strong>. Для кожного спостереження <span class="arithmatex">\(X_t\)</span> обчислюється нормалізоване відхилення від локального середнього:</p>
+<div class="arithmatex">\[Z_t = \frac{X_t - \mu_{\text{roll}}(t)}{\sigma_{\text{roll}}(t)}\]</div>
+<p>де параметри <span class="arithmatex">\(\mu_{\text{roll}}(t)\)</span> та <span class="arithmatex">\(\sigma_{\text{roll}}(t)\)</span> представляють ковзне середнє значення та ковзне стандартне відхилення, розраховані у часовому вікні фіксованої ширини <span class="arithmatex">\(W\)</span> навколо точки <span class="arithmatex">\(t\)</span>. Відповідно до правила трьох сигм, спостереження класифікується як аномальне, якщо виконується умова:</p>
+<div class="arithmatex">\[|Z_t| &gt; 3\]</div>
+<p>В алгоритмі первинної фільтрації точки, для яких зафіксовано <span class="arithmatex">\(|Z_t| &gt; 3\)</span>, маркуються як потенційні збої сенсора і замінюються значенням локальної медіани ковзного вікна, що запобігає викривленню подальших статистичних оцінок без розриву неперервності часової послідовності.</p>
+<p>Для часових рядів із вираженим асиметричним розподілом (наприклад, концентрації діоксиду сірки чи формальдегіду) застосування Z-score призводить до надмірної кількості хибнопозитивних відсікань реальних екологічних піків. У таких випадках застосовується методика інтерквартильних бар'єрів Тьюкі (Tukey's fences). Межі допустимого діапазону значень формуються відповідно до аналітичних виразів:</p>
+<div class="arithmatex">\[\text{Lower Bound} = Q_1 - k \cdot \text{IQR}\]</div>
+<div class="arithmatex">\[\text{Upper Bound} = Q_3 + k \cdot \text{IQR}\]</div>
+<p>де коефіцієнт <span class="arithmatex">\(k = 1,5\)</span> детермінує межі помірних аномалій, а значення <span class="arithmatex">\(k = 3,0\)</span> визначає екстремальні викиди. Будь-яке спостереження <span class="arithmatex">\(X_t\)</span>, яке виходить за межі <span class="arithmatex">\([\text{Lower Bound}, \, \text{Upper Bound}]\)</span>, класифікується як статистичний викид. Якщо таке перевищення фіксується ізольовано лише в одній часовій точці, воно інтерпретується як апаратна завада, тоді як послідовне перебування значень вище верхнього бар'єра протягом кількох зрізів свідчить про наявність реального аварійного викиду в атмосферу.</p>
+<pre class="mermaid"><code>stateDiagram-v2
+    [*] --&gt; Завантаження_Спостереження
+    Завантаження_Спостереження --&gt; Розрахунок_Ковзних_Метрик: Формування вікна W = 24 години
+    Розрахунок_Ковзних_Метрик --&gt; Перевірка_Z_Score: Обчислення Z_t
+
+    Перевірка_Z_Score --&gt; Заміна_Медіаною: Якщо |Z_t| &gt; 3 та одиничний зріз
+    Перевірка_Z_Score --&gt; Аналіз_IQR: Якщо |Z_t| &lt;= 3 або тривала серія
+
+    state Аналіз_IQR {
+        [*] --&gt; Перевірка_Бар'єрів_Тьюкі
+        Перевірка_Бар'єрів_Тьюкі --&gt; Нормальний_Стан: Значення всередині меж [Q1 - 1.5IQR, Q3 + 1.5IQR]
+        Перевірка_Бар'єрів_Тьюкі --&gt; Екологічна_Аномалія: Значення перевищує Q3 + 3IQR
+    }
+
+    Заміна_Медіаною --&gt; Формування_Очищеного_Ряду
+    Нормальний_Стан --&gt; Формування_Очищеного_Ряду
+    Екологічна_Аномалія --&gt; Реєстрація_Аварійного_Викиду
+    Формування_Очищеного_Ряду --&gt; [*]
+    Реєстрація_Аварійного_Викиду --&gt; [*]</code></pre>
+<blockquote>
+<p><strong>ТИПОВА ПОМИЛКА:</strong> Застосування глобального правила трьох сигм (<span class="arithmatex">\(|X_t - \mu| &gt; 3\sigma\)</span>) до сирого несезонного ряду температури або вологості без використання ковзного вікна або попередньої десезонізації. У такому випадку зимові температурні мінімуми (наприклад, -15 °C) помилково відсікаються як апаратні збої лише тому, що річне середнє становить +12 °C зі стандартним відхиленням 8 °C, що повністю спотворює кліматичну структуру даних.</p>
+</blockquote>
+<hr />
+<h3 id="13">1.3. Математична формалізація лінійного тренду та дисперсійного аналізу часових послідовностей екологічних маркерів</h3>
+<p>Після первинного очищення від апаратних артефактів часовий ряд підлягає дослідженню на наявність довгострокових детермінованих тенденцій. Математичний опис зміни концентрації полютанта в часі представляється адитивною моделлю першого наближення:</p>
+<div class="arithmatex">\[X_t = T_t + \varepsilon_t = at + b + \varepsilon_t\]</div>
+<p>де вираз <span class="arithmatex">\(T_t = at + b\)</span> описує лінійний детермінований тренд, параметр <span class="arithmatex">\(a\)</span> визначає кутовий коефіцієнт нахилу лінії тренду, вільний член <span class="arithmatex">\(b\)</span> задає початковий рівень концентрації в момент часу <span class="arithmatex">\(t = 0\)</span>, а змінна <span class="arithmatex">\(\varepsilon_t\)</span> позначає випадкову незсунену залишкову компоненту процесу.</p>
+<p>Оцінювання невідомих параметрів <span class="arithmatex">\(a\)</span> та <span class="arithmatex">\(b\)</span> здійснюється за класичним методом найменших квадратів (МНК), що мінімізує суму квадратів відхилень емпіричних спостережень від розрахункової прямої:</p>
+<div class="arithmatex">\[\min_{a, b} \sum_{t=1}^{T} \big(X_t - (at + b)\big)^2\]</div>
+<p>Аналітичний розв'язок системи нормальних рівнянь дозволяє отримати точні співвідношення для обчислення коефіцієнтів тренду:</p>
+<div class="arithmatex">\[a = \frac{\sum_{t=1}^{T} (t - \bar{t})(X_t - \mu)}{\sum_{t=1}^{T} (t - \bar{t})^2}\]</div>
+<div class="arithmatex">\[b = \mu - a \bar{t}\]</div>
+<p>де величина <span class="arithmatex">\(\bar{t} = \frac{1}{T} \sum_{t=1}^{T} t = \frac{T + 1}{2}\)</span> є середнім значенням дискретних моментів часу спостереження, а <span class="arithmatex">\(\mu\)</span> — вибірковим середнім значенням досліджуваного екологічного показника. Знак та абсолютна величина коефіцієнта <span class="arithmatex">\(a\)</span> несуть фундаментальне природоохоронне навантаження: значення <span class="arithmatex">\(a &gt; 0\)</span> свідчить про прогресуюче погіршення стану атмосферного басейну внаслідок зростання техногенного навантаження, тоді як <span class="arithmatex">\(a &lt; 0\)</span> вказує на ефективність впроваджених природоохоронних заходів або скорочення виробничих потужностей.</p>
+<p>Для систематизації базових підходів до первинного математичного аналізу часових рядів сформовано зведену таблицю.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Статистичний метод / підхід</th>
+<th style="text-align: left;">Математична сутність та цільова функція</th>
+<th style="text-align: left;">Сфера застосування в екологічному моніторингу</th>
+<th style="text-align: left;">Основні припущення та обмеження</th>
+<th style="text-align: left;">Приклад з реальної практики</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Параметричний Z-score фільтр</td>
+<td style="text-align: left;">Нормалізація відхилення від середнього: <span class="arithmatex">\(Z_t = \frac{X_t - \mu}{\sigma}\)</span></td>
+<td style="text-align: left;">Виявлення імпульсних апаратних збоїв сенсорів у сирих потоках</td>
+<td style="text-align: left;">Припущення про нормальність розподілу помилок вимірювання</td>
+<td style="text-align: left;">Очищення щохвилинних викидів сенсора пилу PMS7003 станції EcoCity</td>
+</tr>
+<tr>
+<td style="text-align: left;">Робастні бар'єри Тьюкі (IQR)</td>
+<td style="text-align: left;">Непараметричні межі: <span class="arithmatex">\([Q_1 - 1,5\text{IQR}, \, Q_3 + 1,5\text{IQR}]\)</span></td>
+<td style="text-align: left;">Детектування аномалій у рядах із вираженою асиметрією (ЛОС, <span class="arithmatex">\(SO_2\)</span>)</td>
+<td style="text-align: left;">Потребує достатнього обсягу вибірки для точного розрахунку квартилів</td>
+<td style="text-align: left;">Фільтрація аномальних нічних сплесків концентрації фенолу в промзоні</td>
+</tr>
+<tr>
+<td style="text-align: left;">Лінійний регресійний тренд (МНК)</td>
+<td style="text-align: left;">Мінімізація суми квадратів нев'язок: <span class="arithmatex">\(\sum (X_t - at - b)^2 \to \min\)</span></td>
+<td style="text-align: left;">Оцінка багаторічної спрямованості техногенного навантаження</td>
+<td style="text-align: left;">Припущення про монотонність і сталість швидкості змін у часі</td>
+<td style="text-align: left;">Визначення темпу зниження концентрації зваженого пилу в Кременчуці</td>
+</tr>
+<tr>
+<td style="text-align: left;">Однофакторний дисперсійний аналіз (ANOVA)</td>
+<td style="text-align: left;">Розклад загальної дисперсії: <span class="arithmatex">\(SS_{\text{total}} = SS_{\text{between}} + SS_{\text{within}}\)</span></td>
+<td style="text-align: left;">Порівняння рівнів забруднення між різними районами урбосистеми</td>
+<td style="text-align: left;">Гомогенність дисперсій та незалежність спостережень у групах</td>
+<td style="text-align: left;">Оцінка різниці забруднення <span class="arithmatex">\(NO_2\)</span> між центром міста та промвузлом</td>
+</tr>
+</tbody>
+</table>
+<p>Для статистичного підтвердження гіпотези про істотність просторової неоднорідності забруднення між різними районами міста застосовується <strong>дисперсійний аналіз (ANOVA)</strong>. Загальна дисперсія системи розкладається на міжгрупову компоненту (<span class="arithmatex">\(SS_{\text{between}}\)</span>), викликану локальними джерелами емісій, та внутрішньогрупову випадкову компоненту (<span class="arithmatex">\(SS_{\text{within}}\)</span>):</p>
+<div class="arithmatex">\[SS_{\text{total}} = \sum_{j=1}^{k} \sum_{i=1}^{n_j} (X_{ij} - \bar{X})^2 = \sum_{j=1}^{k} n_j (\bar{X}_j - \bar{X})^2 + \sum_{j=1}^{k} \sum_{i=1}^{n_j} (X_{ij} - \bar{X}_j)^2\]</div>
+<p>де індекс <span class="arithmatex">\(j\)</span> позначає номер району спостереження, <span class="arithmatex">\(n_j\)</span> — кількість вимірів у районі <span class="arithmatex">\(j\)</span>, <span class="arithmatex">\(\bar{X}_j\)</span> — середній рівень концентрації в межах району, а <span class="arithmatex">\(\bar{X}\)</span> — генеральне середнє для всього міста. Статистична значущість відмінностей перевіряється за критерієм Фішера (<span class="arithmatex">\(F\)</span>-test), що дозволяє довести наявність локалізованого техногенного впливу на окремі житлові масиви.</p>
+<hr />
+<h3 id="14">1.4. Оцінка повноти і достовірності інтегрованих вибірок спостережень за математичними критеріями інформаційної ентропії</h3>
+<p>Оцінювання якості інформаційного забезпечення екологічного моніторингу не може обмежуватися виключно числовими параметрами відхилення вимірювань. В умовах інтеграції даних із багатьох незалежних автоматичних станцій виникає фундаментальна невизначеність, пов'язана з нерівномірністю пропусків даних, втратою пакетів телеметрії та зашумленістю каналів зв'язку. Для кількісного вимірювання ступеня невизначеності та структурної впорядкованості екологічних часових рядів застосовується математичний апарат <strong>теорії інформаційної ентропії Клода Шеннона</strong>.</p>
+<p>Нехай діапазон можливих значень екологічного параметра розбито на <span class="arithmatex">\(k\)</span> взаємовиключних дискретних інтервалів (станів екологічної безпеки) <span class="arithmatex">\(S = \{s_1, s_2, \dots, s_k\}\)</span>. Якщо ймовірність потрапляння вимірювання у відповідний інтервал становить <span class="arithmatex">\(p(s_i)\)</span>, причому виконується умова нормування <span class="arithmatex">\(\sum_{i=1}^{k} p(s_i) = 1\)</span>, то інформаційна ентропія часового ряду <span class="arithmatex">\(H(X)\)</span> визначається співвідношенням:</p>
+<div class="arithmatex">\[H(X) = - \sum_{i=1}^{k} p(s_i) \log_2 p(s_i)\]</div>
+<p>де величина <span class="arithmatex">\(H(X)\)</span> вимірюється в бітах і характеризує міру стохастичності та непередбачуваності екологічного процесу. Мінімальне значення ентропії <span class="arithmatex">\(H(X) = 0\)</span> досягається у випадку, коли система перебуває в абсолютно стаціонарному детермінованому стані (концентрація не змінюється в часі). Максимальна ентропія <span class="arithmatex">\(H_{\max} = \log_2 k\)</span> відповідає стану повної невизначеності (рівномірний розподіл), коли поведінка забруднювача є абсолютно хаотичною.</p>
+<p>На основі ентропійного формалізму визначається відносна інформаційна надлишковість (або міра впорядкованості) екологічної системи:</p>
+<div class="arithmatex">\[R_{\text{info}} = 1 - \frac{H(X)}{H_{\max}} = 1 - \frac{H(X)}{\log_2 k}\]</div>
+<p>Показник <span class="arithmatex">\(R_{\text{info}} \in [0, 1]\)</span> дозволяє оцінити надійність вимірювального контуру. Якщо значення <span class="arithmatex">\(R_{\text{info}}\)</span> різко падає, це свідчить про деградацію інформативності вимірювального поста внаслідок накладання некорельованого білого шуму несправного датчика або виникнення критичних сліпих зон у часовому ряді.</p>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> При дослідженні гідроекологічного стану Кременчуцького водосховища розрахунок інформаційної ентропії Шеннона за багаторічними рядами розчиненого кисню та біохімічного споживання кисню дозволив встановити, що після руйнування греблі Каховської ГЕС рівень ентропії водної екосистеми зріс із 1,42 біт до 2,15 біт, кількісно підтвердивши перехід гідроекосистеми в нестабільний термодинамічний режим із високою ймовірністю виникнення заморових явищ.</p>
+</blockquote>
+<hr />
+<blockquote>
+<p><strong>КОНТРОЛЬНЕ ПИТАННЯ:</strong> Під час перевірки річного ряду середньодобових концентрацій діоксиду азоту, що містить <span class="arithmatex">\(T = 365\)</span> спостережень, було розраховано вибіркове середнє <span class="arithmatex">\(\mu = 0,042\text{ мг/м}^3\)</span> та стандартне відхилення <span class="arithmatex">\(\sigma = 0,015\text{ мг/м}^3\)</span>. Одночасно перший квартиль склав <span class="arithmatex">\(Q_1 = 0,020\text{ мг/м}^3\)</span>, медіана <span class="arithmatex">\(Me = 0,028\text{ мг/м}^3\)</span>, а третій квартиль <span class="arithmatex">\(Q_3 = 0,038\text{ мг/м}^3\)</span>. Про що свідчить суттєва розбіжність між вибірковим середнім (<span class="arithmatex">\(\mu = 0,042\)</span>) та медіаною (<span class="arithmatex">\(Me = 0,028\)</span>), і який із цих показників слід обрати як базову характеристику типового екологічного фону?</p>
+</blockquote>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: Розподіл характеризується правосторонньою асиметрією (позитивним скосом) через наявність рідкісних екстремальних піків емісій; як базову характеристику фонового стану слід обрати медіану (<span class="arithmatex">\(Me = 0,028\text{ мг/м}^3\)</span>).</strong></p>
+<ol>
+<li>
+<p>Повне логічне та аналітичне обґрунтування:</p>
+</li>
+<li>
+<p>Якщо вибіркове середнє суттєво перевищує медіану (<span class="arithmatex">\(\mu &gt; Me\)</span>, у наведеному випадку <span class="arithmatex">\(0,042 &gt; 0,028\)</span>), це є строгою математичною ознакою правосторонньої асиметрії розподілу випадкової величини. У більшості часових точок (понад 50% днів у році) концентрація діоксиду азоту була нижчою за <span class="arithmatex">\(0,028\text{ мг/м}^3\)</span>. Проте наявність кількох потужних залпових промислових викидів або несприятливих метеорологічних умов (шлейфи з концентраціями <span class="arithmatex">\(0,15–0,25\text{ мг/м}^3\)</span>) різко змістила середнє арифметичне вгору.</p>
+</li>
+<li>
+<p>Вибіркове середнє в таких умовах не відображає типового стану середовища, оскільки воно спотворене екстремумами. Медіана є робастною характеристикою центральної тенденції, інваріантною до величини екстремальних викидів на правому хвості, тому саме вона повинна використовуватися як об'єктивна оцінка стабільного фонового забруднення території.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Твердження про те, що розбіжність свідчить про помилку в розрахунках або пошкодження бази даних, є хибним, оскільки скошені розподіли є типовим природним явищем для екологічних часових рядів концентрацій токсикантів.</p>
+</li>
+<li>
+<p>Вибір вибіркового середнього як базового фону є методологічною помилкою, оскільки це призведе до необґрунтованого завищення нормативного фонового навантаження міста та приховає реальний масштаб локальних техногенних піків.</p>
+</li>
+</ol>
+</details>
+<hr />
+<h3 id="_3">Вказівки для самостійного осмислення</h3>
+<ol>
+<li>
+<p>Здійсніть аналітичне виведення формули для розрахунку кутового коефіцієнта нахилу лінійного тренду <span class="arithmatex">\(a\)</span> за методом найменших квадратів, показавши перехід від системи двох нормальних рівнянь до кінцевого матричного співвідношення.</p>
+</li>
+<li>
+<p>Дослідіть вплив ширини вікна осереднення <span class="arithmatex">\(W\)</span> (від 1 години до 7 діб) на чутливість алгоритму детектування викидів Z-score, визначивши аналітичний критерій вибору оптимального розміру вікна для усунення добових піків автомобільного трафіку.</p>
+</li>
+<li>
+<p>Розрахуйте зміну інформаційної ентропії Шеннона для дискретного ряду якості повітря при переході від п'ятиінтервальної шкали індексу AQI до десятиінтервальної системи класифікації за умов збереження вихідного емпіричного розподілу концентрацій.</p>
+</li>
+</ol>
+<h2 id="2">2. Методологія та аналіз граничних умов. Декомпозиція, сезонність та перевірка стаціонарності динамічних рядів</h2>
+<h3 id="21-stl-">2.1. Метод STL-декомпозиції для виокремлення довгострокового тренду, сезонної складової та випадкових нерегулярних флуктуацій</h3>
+<p>Математичний аналіз складних екологічних часових рядів передбачає їх розділення на детерміновані та стохастичні складові для ізольованого дослідження фізичних процесів різного масштабу. Традиційні підходи до декомпозиції, засновані на простих ковзних середніх (як-от класичний метод ковзного вікна або адитивна схема Бокса-Дженкінса), демонструють значну вразливість до викидів та не дозволяють адаптуватися до нестаціонарної зміни амплітуди сезонних коливань у часі. Для подолання цих недоліків у сучасних інформаційно-аналітичних системах застосовується метод <strong>STL-декомпозиції (Seasonal and Trend decomposition using Loess)</strong>, що ґрунтується на локально зваженій поліноміальній регресії (Loess).</p>
+<p>У рамках адитивної моделі будь-яке спостереження екологічного параметра <span class="arithmatex">\(X_t\)</span> у момент часу <span class="arithmatex">\(t \in \{1, 2, \dots, T\}\)</span> розкладається на три взаємно незалежні функціональні компоненти:</p>
+<div class="arithmatex">\[X_t = T_t + S_t + R_t\]</div>
+<p>де функція <span class="arithmatex">\(T_t\)</span> описує довгостроковий детермінований тренд, що відображає міжрічні зміни промислового навантаження або глобальні кліматичні зсуви, функція <span class="arithmatex">\(S_t\)</span> детермінує регулярну сезонну компоненту з фіксованим або повільно змінним періодом коливань, а змінна <span class="arithmatex">\(R_t\)</span> представляє випадковий стохастичний залишок (резидуальний шум), що утворюється під дією непередбачуваних атмосферних флуктуацій та апаратних похибок датчиків.</p>
+<p>Алгоритмічна реалізація STL базується на двох вкладених ітераційних циклах: внутрішньому та зовнішньому. Внутрішній цикл здійснює почергове оновлення оцінок тренду та сезонності за допомогою згладжування Loess. Спершу вихідний ряд детрендується шляхом віднімання поточної оцінки тренду, після чого точки, що відповідають однаковим фазам сезонного циклу (наприклад, однаковим місяцям різних років), згладжуються окремими сплайнами для формування тимчасової сезонної поверхні. Ця поверхня пропускається крізь низькочастотний цифровий фільтр для вилучення можливого низькочастотного витоку в тренд. </p>
+<p>Зовнішній цикл виконує робастну процедуру зважування, яка захищає модель від спотворення екстремальними викидами емісій. Для кожного спостереження розраховується залишок <span class="arithmatex">\(R_t = X_t - T_t - S_t\)</span>, на основі якого обчислюються ваги робастності за біквадратною функцією Тьюкі:</p>
+<div class="arithmatex">\[\rho_t = B\left(\frac{|R_t|}{6 \cdot \text{median}(|R|)}\right)\]</div>
+<p>де функція <span class="arithmatex">\(B(u) = (1 - u^2)^2\)</span> для <span class="arithmatex">\(0 \le u &lt; 1\)</span> та <span class="arithmatex">\(B(u) = 0\)</span> для <span class="arithmatex">\(u \ge 1\)</span>. Отримані ваги <span class="arithmatex">\(\rho_t\)</span> передаються у внутрішній цикл на наступній ітерації, зменшуючи вплив аномальних точок при локальній поліноміальній апроксимації. У результаті метод STL дозволяє прецизійно виокремити екологічний тренд навіть за наявності короткочасних техногенних піків або пропусків спостережень.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    participant DataIngest as Модуль вхідних даних (CSV / DB)
+    participant LoessSmoother as Фільтр згладжування Loess
+    participant RobustLoop as Зовнішній цикл робастності Тьюкі
+    participant SpectralEngine as Спектральний аналізатор (ACF / FFT)
+    participant ADFTester as Модуль перевірки стаціонарності (ADF)
+
+    DataIngest-&gt;&gt;LoessSmoother: Передача сирого часового ряду X(t)
+    loop Внутрішній ітераційний цикл
+        LoessSmoother-&gt;&gt;LoessSmoother: Детрендування: Y(t) = X(t) - T(t)
+        LoessSmoother-&gt;&gt;LoessSmoother: Згладжування сезонних підциклів
+        LoessSmoother-&gt;&gt;LoessSmoother: Низькочастотна фільтрація та оновлення S(t)
+        LoessSmoother-&gt;&gt;LoessSmoother: Оновлення тренду: T(t) = Smooth(X(t) - S(t))
+    end
+    LoessSmoother-&gt;&gt;RobustLoop: Розрахунок залишків R(t) = X(t) - T(t) - S(t)
+    RobustLoop-&gt;&gt;LoessSmoother: Оновлення ваг робастності rho_t (біквадрат Тьюкі)
+    LoessSmoother-&gt;&gt;SpectralEngine: Передача виділених компонент (T, S, R)
+    SpectralEngine-&gt;&gt;SpectralEngine: Розрахунок ACF(k) та перетворення Фур'є FFT
+    SpectralEngine-&gt;&gt;ADFTester: Передача детрендованого ряду для оцінки одиничного кореня
+    ADFTester--&gt;&gt;DataIngest: Звіт: період сезонності, тренд, p-value стаціонарності</code></pre>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> При STL-декомпозиції 17-річного ряду щомісячних концентрацій зваженого пилу в атмосферному повітрі міста Кременчук (2007–2024 рр.) на стаціонарному пості № 4 по вулиці Шевченка було виявлено чіткий низхідний довгостроковий тренд зі зниженням середнього значення з 1,2 ГДК до рівнів нижче 1,0 ГДК після 2019 року, що супроводжувалося стабільною сезонною хвилею амплітудою ±0,3 ГДК із регулярними літніми піками, викликаними сухою погодою та вітровою ерозією ґрунтів.</p>
+</blockquote>
+<hr />
+<h3 id="22-acf-fft">2.2. Застосування автокореляційної функції (ACF) та дискретного перетворення Фур'є (FFT) для детектування гармонійних сезонних патернів</h3>
+<p>Визначення наявності та тривалості сезонних періодів є обов'язковою умовою для коректного налаштування прогностичних моделей. В екологічних дослідженнях сезонні патерни мають поліфонічну природу, поєднуючи річні метеорологічні цикли, тижневі ритми інтенсивності руху транспорту та добові температурні коливання приземного шару. Для виявлення латентних періодичностей застосовується комбінація методів кореляційного аналізу в часовій області та гармонійного розкладу в частотній області.</p>
+<p>Оцінка взаємозв'язку між спостереженнями часового ряду, розділеними часовим інтервалом (лагом) <span class="arithmatex">\(k\)</span>, здійснюється за допомогою <strong>вибіркової автокореляційної функції (Autocorrelation Function, ACF)</strong>, яка визначається як відношення автоковаріації на лагу <span class="arithmatex">\(k\)</span> до загальної вибіркової дисперсії:</p>
+<div class="arithmatex">\[\text{ACF}(k) = \frac{\sum_{t=1}^{T-k} (X_t - \mu)(X_{t+k} - \mu)}{\sum_{t=1}^{T} (X_t - \mu)^2}\]</div>
+<p>де <span class="arithmatex">\(\mu\)</span> позначає вибіркове середнє значення ряду. Ряд класифікується як такий, що має сезонну структуру, якщо на певних лагах <span class="arithmatex">\(k &gt; 0\)</span> значення функції перевищують статистично значущий поріг <span class="arithmatex">\(\text{ACF}(k) &gt; 0,1\)</span>. Для щомісячних спостережень екологічних параметрів пікові значення автокореляції фіксуються на лагах, кратних 12 (<span class="arithmatex">\(k = 12, 24, 36\)</span>), що підтверджує наявність річної сезонності, пов'язаної з опалювальним періодом та вегетацією рослинності.</p>
+<p>Для деталізації спектрального складу процесу та виявлення прихованих нецілочисельних періодів застосовується <strong>дискретне перетворення Фур'є (Discrete Fourier Transform, DFT)</strong>. Математична трансформація переводить часову послідовність <span class="arithmatex">\(X_t\)</span> у комплексний частотний спектр:</p>
+<div class="arithmatex">\[Y_k = \text{FFT}(X_t) = \sum_{n=0}^{T-1} X_n \cdot e^{-i \frac{2\pi n k}{T}} = \sum_{n=0}^{T-1} X_n \left( \cos\left(\frac{2\pi n k}{T}\right) - i \sin\left(\frac{2\pi n k}{T}\right) \right)\]</div>
+<p>де <span class="arithmatex">\(k \in \{0, 1, \dots, T-1\}\)</span> визначає гармонійний номер частоти, <span class="arithmatex">\(i = \sqrt{-1}\)</span> — уявна одиниця, а вираз <span class="arithmatex">\(f_k = \frac{k}{T \cdot \Delta t}\)</span> позначає фізичну частоту відповідної гармоніки. Спектральна щільність потужності (Power Spectral Density, PSD) обчислюється як квадрат модуля комплексних амплітуд:</p>
+<div class="arithmatex">\[P(f_k) = \frac{1}{T} |Y_k|^2 = \frac{1}{T} \Big( \text{Re}(Y_k)^2 + \text{Im}(Y_k)^2 \Big)\]</div>
+<p>Домінуючі піки на графіку спектральної щільності вказують на головні гармоніки екологічного процесу, що дозволяє інженерам точно задавати періоди сезонності для складних тригонометричних моделей класу BATS/TBATS.</p>
+<hr />
+<h3 id="23-adf-test">2.3. Тестування часових рядів на стаціонарність за допомогою розширеного критерію Дікі-Фуллера (ADF-test) та процедури різницевого диференціювання</h3>
+<p>Більшість класичних статистичних моделей часових рядів (зокрема ARMA та регресійний аналіз) побудовані на фундаментальному припущенні про <strong>слабку стаціонарність</strong> досліджуваного процесу, що вимагає сталості математичного сподівання, скінченності незмінної дисперсії та залежності автоковаріації виключно від часового лагу <span class="arithmatex">\(k\)</span>, а не від абсолютного моменту часу <span class="arithmatex">\(t\)</span>. Проте концентрації екологічних токсикантів в урбоекосистемах практично завжди є нестаціонарними через наявність техногенних трендів та сезонних зсувів.</p>
+<p>Для суворої математичної перевірки гіпотези про наявність одиничного кореня (інтегрованості ряду) застосовується <strong>розширений тест Дікі-Фуллера (Augmented Dickey-Fuller, ADF-test)</strong>. Тестове рівняння з урахуванням константи та детермінованого лінійного тренду формулюється у вигляді регресії авторегресійних приростів:</p>
+<div class="arithmatex">\[\Delta X_t = \alpha + \beta t + \gamma X_{t-1} + \sum_{j=1}^{p} \delta_j \Delta X_{t-j} + \varepsilon_t\]</div>
+<p>де <span class="arithmatex">\(\Delta X_t = X_t - X_{t-1}\)</span> представляє першу різницю часового ряду, <span class="arithmatex">\(\alpha\)</span> — константа зміщення (дрейф), <span class="arithmatex">\(\beta\)</span> — коефіцієнт детермінованого часового тренду, <span class="arithmatex">\(\gamma\)</span> — ключовий параметр тестування одиничного кореня, <span class="arithmatex">\(p\)</span> — кількість лагів приростів, що додаються для усунення автокореляції залишків <span class="arithmatex">\(\varepsilon_t\)</span>, а <span class="arithmatex">\(\delta_j\)</span> — параметри лагованих різниць.</p>
+<p>Статистична гіпотеза формулюється таким чином:</p>
+<ul>
+<li>
+<p>Нульова гіпотеза <span class="arithmatex">\(H_0: \gamma = 0\)</span> стверджує, що часовий ряд містить одиничний корінь, тобто є нестаціонарним процесом типу <span class="arithmatex">\(I(1)\)</span> або вищого порядку.</p>
+</li>
+<li>
+<p>Альтернативна гіпотеза <span class="arithmatex">\(H_1: \gamma &lt; 0\)</span> стверджує, що часовий ряд є стаціонарним процесом навколо детермінованого тренду або константи.</p>
+</li>
+</ul>
+<p>Тестова <span class="arithmatex">\(t\)</span>-статистика для оціненого параметра <span class="arithmatex">\(\hat{\gamma}\)</span> розраховується як:</p>
+<div class="arithmatex">\[t_{\text{ADF}} = \frac{\hat{\gamma}}{\text{SE}(\hat{\gamma})}\]</div>
+<p>де <span class="arithmatex">\(\text{SE}(\hat{\gamma})\)</span> — стандартна похибка оцінки коефіцієнта. Оскільки статистика <span class="arithmatex">\(t_{\text{ADF}}\)</span> не підпорядковується стандартному розподілу Стьюдента, критичні значення визначаються за емпіричними таблицями МакКіннона. Якщо розраховане емпіричне значення <span class="arithmatex">\(p\text{-value} &lt; 0,05\)</span>, нульова гіпотеза відкидається, і ряд визнається стаціонарним.</p>
+<p>Послідовний аналітичний процес приведення нестаціонарного екологічного ряду до стаціонарного базису формалізується наступним багатоетапним алгоритмічним контуром:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\text{Крок 1 (Первинний тест ADF):} &amp; \quad \text{Compute } t_{\text{ADF}}(X_t) \quad \Longrightarrow \quad p\text{-value}_1 = \mathcal{P}(t_{\text{ADF}}) \\
+\text{Крок 2 (Оцінка гіпотези):} &amp; \quad \text{IF } p\text{-value}_1 \ge 0,05 \quad \Longrightarrow \quad \text{State} \leftarrow \text{NonStationary} \\
+\text{Крок 3 (Сезонне диференціювання):} &amp; \quad \nabla_s X_t = X_t - X_{t-s} = (1 - L^s) X_t, \quad s = 12 \\
+\text{Крок 4 (Перше різницеве диференціювання):} &amp; \quad \Delta (\nabla_s X_t) = (1 - L) (1 - L^s) X_t = \nabla_s X_t - \nabla_s X_{t-1} \\
+\text{Крок 5 (Повторний контроль стаціонарності):} &amp; \quad \text{Compute } t_{\text{ADF}}\big(\Delta \nabla_s X_t\big) \quad \Longrightarrow \quad p\text{-value}_2 \lt  0,05 \quad \Longrightarrow \quad \text{Order } d=1, D=1
+\end{aligned}
+\]</div>
+<p>де оператор <span class="arithmatex">\(L\)</span> позначає лаговий оператор зсуву (<span class="arithmatex">\(L^k X_t = X_{t-k}\)</span>), параметр <span class="arithmatex">\(s\)</span> фіксує сезонний період (для щомісячних даних <span class="arithmatex">\(s = 12\)</span>), а величини <span class="arithmatex">\(d\)</span> та <span class="arithmatex">\(D\)</span> визначають порядок звичайного та сезонного диференціювання відповідно.</p>
+<blockquote>
+<p><strong>ВАЖЛИВО:</strong> Застосування класичних лінійних регресій або моделей авторегресії ARIMA до часових рядів, які не пройшли процедуру приведення до стаціонарності (де <span class="arithmatex">\(p\text{-value} &gt; 0,05\)</span>), призводить до математичного артефакту «хибної регресії» (spurious regression), за якого коефіцієнт детермінації <span class="arithmatex">\(R^2\)</span> виявляється штучно високим (<span class="arithmatex">\(R^2 &gt; 0,8\)</span>), проте прогностична сила моделі на тестових даних падає до нуля.</p>
+</blockquote>
+<hr />
+<h3 id="24">2.4. Критична втрата адекватності класичних статистичних моделей при перевищенні критичного порогу зашумленості та пропусках даних у рядах спостережень</h3>
+<p>Практична експлуатація статистичних моделей в умовах муніципального моніторингу виявляє жорсткі межі їхньої застосовності. Класична методологія часових рядів проектувалася в розрахунку на відносно плавні та безперервні вибірки з помірною дисперсією шуму. Проте реальні екологічні вимірювання містять значні фрагменти втрачених спостережень (внаслідок аварійного вимкнення електроживлення станцій або затримок постачання витратних хімічних реактивів) та надвисокий рівень стохастичного шуму.</p>
+<p>Математичні моделі декомпозиції та авторегресії зазнають критичної втрати адекватності за настання таких граничних умов функціонування:</p>
+<ol>
+<li>
+<p><strong>Структурні злами часового ряду (Structural Breaks / Perron Effect).</strong> Радикальні одноразові події в урбосистемі — такі як зупинка металургійного заводу, різка релокація промислових підприємств унаслідок воєнних дій або катастрофічне затоплення територій — викликають ступінчастий стрибок середнього значення процесу. Класичний тест ADF у присутності структурного зламу втрачає статистичну потужність і помилково вказує на наявність одиничного кореня (<span class="arithmatex">\(p\text{-value} \approx 0,98\)</span>), навіть якщо всередині кожного окремого періоду ряд є строго стаціонарним. Це змушує інженера виконувати зайве диференціювання (overdifferencing), що вносить штучний шум у прогностичне ядро.</p>
+</li>
+<li>
+<p><strong>Перевищення критичного порогу зашумленості вибірки (<span class="arithmatex">\(\sigma_{\text{noise}} / \sigma_{\text{signal}} &gt; 1,5\)</span>).</strong> Якщо випадкові флуктуації, викликані мікротурбулентністю атмосфери та температурним шумом низькоякісних індикативних датчиків, перевищують амплітуду регулярної сезонної гармоніки, автокореляційна функція розмивається. Значення <span class="arithmatex">\(\text{ACF}(k)\)</span> на лагах сезонності падають нижче порогу 0,1, унеможливлюючи автоматичну ідентифікацію періоду циклу як методом Box-Jenkins, так і швидким перетворенням Фур'є.</p>
+</li>
+<li>
+<p><strong>Нерівномірні масивні пропуски спостережень тривалістю понад один сезонний цикл (<span class="arithmatex">\(&gt; 12\)</span> місяців).</strong> Більшість бібліотек статистичного аналізу (зокрема <code>statsmodels</code> та <code>forecast</code> в R) вимагають абсолютно рівномірної часової сітки. Стандартні інтерполяційні методи заповнення пропусків (лінійна інтерполяція або заповнення сплайнами) на таких довгих інтервалах генерують синтетичні артефакти, штучно занижуючи реальну дисперсію процесу. У результаті отримана модель ARIMA генерує завідомо нереалістичні довірчі інтервали.</p>
+</li>
+</ol>
+<p>Для систематизації аналітичних інструментів обробки та декомпозиції часових рядів сформовано порівняльну матрицю за ключовими критеріями експлуатаційної надійності.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Метод аналізу часового ряду</th>
+<th style="text-align: left;">Математична природа підходу</th>
+<th style="text-align: left;">Чутливість до випадкових викидів</th>
+<th style="text-align: left;">Вимоги до регулярності часової сітки</th>
+<th style="text-align: left;">Складність впровадження</th>
+<th style="text-align: left;">Критичні ризики та обмеження методології</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Класична адитивна декомпозиція</td>
+<td style="text-align: left;">Центроване ковзне середнє для тренду, усереднення фаз</td>
+<td style="text-align: left;">Екстремально висока; один викид викривляє оцінку тренду</td>
+<td style="text-align: left;">Сувора; не допускає пропусків даних у вибірці</td>
+<td style="text-align: left;">Вкрай низька; базові матричні операції</td>
+<td style="text-align: left;">Втрата спостережень на кінцях ряду, фіксована амплітуда сезонності</td>
+</tr>
+<tr>
+<td style="text-align: left;">Метод STL (Loess Smoothing)</td>
+<td style="text-align: left;">Локальна поліноміальна регресія з вагами Тьюкі</td>
+<td style="text-align: left;">Дуже низька (висока робастність за рахунок біквадратних ваг)</td>
+<td style="text-align: left;">Сувора; вимагає попереднього заповнення пропусків</td>
+<td style="text-align: left;">Середня; вимагає підбору вікон <span class="arithmatex">\(n_{(p)}, n_{(s)}, n_{(t)}\)</span></td>
+<td style="text-align: left;">Обмеженість роботою лише з одним сезонним періодом</td>
+</tr>
+<tr>
+<td style="text-align: left;">Спектральний аналіз Фур'є (FFT)</td>
+<td style="text-align: left;">Ортогональний гармонійний базис тригонометричних функцій</td>
+<td style="text-align: left;">Середня; чутливий до широкосмугових імпульсних завад</td>
+<td style="text-align: left;">Строго регулярна дискретна сітка <span class="arithmatex">\(2^N\)</span> точок</td>
+<td style="text-align: left;">Низька; стандартні оптимізовані бібліотеки</td>
+<td style="text-align: left;">Нездатність моделювати часозмінні частоти та нестаціонарні сигнали</td>
+</tr>
+<tr>
+<td style="text-align: left;">Емпірична модова декомпозиція (EMD)</td>
+<td style="text-align: left;">Адаптивне вилучення внутрішніх модових функцій (IMF) за екстремумами</td>
+<td style="text-align: left;">Низька; адаптується до форми хвилі без фіксованого базису</td>
+<td style="text-align: left;">Допускає помірну нерівномірність спостережень</td>
+<td style="text-align: left;">Висока; складні алгоритми огинаючих кубічними сплайнами</td>
+<td style="text-align: left;">Явище змішування мод (mode mixing) при наявності шуму у вибірці</td>
+</tr>
+<tr>
+<td style="text-align: left;">Різницеве диференціювання (ARIMA/SARIMA)</td>
+<td style="text-align: left;">Лінійний фільтр оператора запізнення <span class="arithmatex">\(\nabla^d = (1 - L)^d\)</span></td>
+<td style="text-align: left;">Висока; викиди подвоюються при взятті першої різниці</td>
+<td style="text-align: left;">Вимагає абсолютно неперервної часової послідовності</td>
+<td style="text-align: left;">Низька; аналітичний алгоритм</td>
+<td style="text-align: left;">Ризик надлишкового диференціювання та введення штучної авторегресії</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> При аналізі даних стаціонарного поста № 1 (вул. Молодіжна, м. Кременчук) за період 2019–2024 рр. розрахунок критерію Дікі-Фуллера для концентрацій оксиду вуглецю та діоксиду азоту показав значення <span class="arithmatex">\(p\text{-value} = 0,981\)</span> та <span class="arithmatex">\(p\text{-value} = 0,975\)</span> відповідно, що строго довело глибоку нестаціонарність процесів промислового забруднення та підтвердило непридатність застосування прямих авторегресійних моделей без попереднього взяття першої різниці часового ряду.</p>
+</blockquote>
+<hr />
+<blockquote>
+<p><strong>КОНТРОЛЬНЕ ПИТАННЯ:</strong> Під час перевірки часового ряду середньомісячних концентрацій формальдегіду на стаціонарному пості моніторингу за період 36 місяців інженер отримав тестову статистику ADF <span class="arithmatex">\(t_{\text{ADF}} = -3,85\)</span> при розрахунковому значенні <span class="arithmatex">\(p\text{-value} = 0,002\)</span>, що свідчить про стаціонарність ряду. Проте графік автокореляційної функції демонструє значущі коефіцієнти <span class="arithmatex">\(\text{ACF}(12) = 0,65\)</span> та <span class="arithmatex">\(\text{ACF}(24) = 0,48\)</span>. Яка математична колізія виникла між критерієм ADF та функцією ACF, і яку процедуру диференціювання повинен виконати дослідник перед побудовою моделі прогнозування?</p>
+</blockquote>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: Ряд є стаціонарним відносно середнього рівня, проте містить виражену сезонну нестаціонарність (сезонний одиничний корінь); необхідно застосувати сезонне диференціювання <span class="arithmatex">\(\nabla_{12} X_t = X_t - X_{t-12}\)</span>.</strong></p>
+<ol>
+<li>
+<p>Повне логічне та аналітичне обґрунтування:</p>
+</li>
+<li>
+<p>Стандартний тест ADF у конфігурації без урахування сезонних лагів перевіряє виключно наявність звичайного (регулярного) одиничного кореня нульової частоти. Значення <span class="arithmatex">\(p\text{-value} = 0,002 &lt; 0,05\)</span> доводить, що загальний рівень концентрації формальдегіду коливається навколо стабільного довгострокового середнього, тобто в ряду відсутній інтегрований стохастичний тренд.</p>
+</li>
+<li>
+<p>Водночас високі додатні значення автокореляції на річних лагах <span class="arithmatex">\(\text{ACF}(12) = 0,65\)</span> та <span class="arithmatex">\(\text{ACF}(24) = 0,48\)</span> свідчать про наявність жорсткого гармонійного сезонного циклу, амплітуда якого не згасає з часом. Якщо знехтувати цією сезонністю і не виконати сезонне різницеве диференціювання з кроком 12 (<span class="arithmatex">\(\nabla_{12} X_t = (1 - L^{12}) X_t\)</span>), параметри моделі ARIMA виявляться зміщеними, а залишки прогнозу міститимуть невилучену детерміновану сезонну дисперсію.</p>
+</li>
+<li>
+<p>Аналіз дистракторів (чому інші підходи є хибними):</p>
+</li>
+<li>
+<p>Виконання звичайного першого диференціювання <span class="arithmatex">\(\Delta X_t = X_t - X_{t-1}\)</span> є грубою помилкою, оскільки воно призведе до надлишкового диференціювання (overdifferencing) ряду, який уже є стаціонарним на нульовій частоті, і внесе штучну від'ємну автокореляцію першого порядку без усунення річного піку.</p>
+</li>
+<li>
+<p>Висновок про те, що ряд є повністю готовим до моделювання без жодних перетворень на підставі лише <span class="arithmatex">\(p\text{-value} = 0,002\)</span>, є методологічно хибним, оскільки ігнорування значущої сезонності призведе до повної нездатності моделі відтворити літні пікові концентрації формальдегіду.</p>
+</li>
+</ol>
+</details>
+<h2 id="3">3. Практичний індустріальний / фаховий кейс. Ретроспективний часовий аналіз урбаністичного забруднення</h2>
+<h3 id="31-17-20072024">3.1. Комплексний фаховий кейс. Статистичний аналіз та декомпозиція 17-річного часового ряду концентрацій зваженого пилу і формальдегіду в атмосферному повітрі м. Кременчук (2007–2024 рр.)</h3>
+<h4 id="_4">Постановка задачі / ситуації</h4>
+<p>Промисловий комплекс міста Кременчук зазнає значного техногенного навантаження від підприємств нафтопереробної, машинобудівної та сажової промисловості. Для наукового обґрунтування природоохоронних програм муніципалітету комунальне підприємство «Науковий центр еколого-соціальних досліджень» (КП «НДЦ») та кафедра комп'ютерної інженерії та електроніки КрНУ провели фундаментальне дослідження багаторічних часових рядів спостережень за станом атмосферного повітря. Дослідження базується на ретроспективній базі даних щомісячних вимірювань за 17-річний період (із січня 2007 року по серпень 2024 року), що становить загальну вибірку тривалістю <span class="arithmatex">\(T = 204\)</span> місяці. Основним опорним пунктом обрано стаціонарний пост спостереження № 4, розташований у центральній частині міста по вулиці Шевченка, 22/30.</p>
+<p>Ключова проблема аналізу полягає в тому, що первинні часові ряди концентрацій зваженого недиференційованого пилу та формальдегіду характеризуються накладанням довгострокових антропогенних трендів, вираженої кліматичної сезонності та випадкових сплесків емісій. Концентрації виражаються у кратностях гранично допустимих концентрацій (ГДК), де нормативна межа середньодобової концентрації для пилу становить <span class="arithmatex">\(0,5\text{ мг/м}^3\)</span> (<span class="arithmatex">\(1,0\text{ ГДК}\)</span>), а для формальдегіду — <span class="arithmatex">\(0,035\text{ мг/м}^3\)</span> (<span class="arithmatex">\(1,0\text{ ГДК}\)</span>). Необхідно провести комплексну декомпозицію рядів, очистити масив від апаратних аномалій, математично виокремити лінійний тренд, розрахувати сезонну гармоніку та перевірити залишковий стохастичний шум на стаціонарність для обґрунтування вибору майбутньої прогностичної моделі.</p>
+<p>Параметри ретроспективного масиву даних та статистичні характеристики наведено в таблиці нижче.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Параметр часового ряду</th>
+<th style="text-align: left;">Одиниця виміру</th>
+<th style="text-align: left;">Числове значення (Пил)</th>
+<th style="text-align: left;">Числове значення (Формальдегід)</th>
+<th style="text-align: left;">Екологічний та метрологічний контекст</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Обсяг вибірки спостережень (<span class="arithmatex">\(T\)</span>)</td>
+<td style="text-align: left;">місяців</td>
+<td style="text-align: left;">204</td>
+<td style="text-align: left;">204</td>
+<td style="text-align: left;">Безперервний щомісячний моніторинг (2007–2024 рр.)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Вибіркове середнє (<span class="arithmatex">\(\mu\)</span>)</td>
+<td style="text-align: left;">кратності ГДК</td>
+<td style="text-align: left;">1,08</td>
+<td style="text-align: left;">2,45</td>
+<td style="text-align: left;">Середній рівень хронічного навантаження на населення</td>
+</tr>
+<tr>
+<td style="text-align: left;">Вибіркова дисперсія (<span class="arithmatex">\(\sigma^2\)</span>)</td>
+<td style="text-align: left;"><span class="arithmatex">\((\text{ГДК})^2\)</span></td>
+<td style="text-align: left;">0,0484</td>
+<td style="text-align: left;">1,8225</td>
+<td style="text-align: left;">Загальна варіативність часової послідовності</td>
+</tr>
+<tr>
+<td style="text-align: left;">Стандартне відхилення (<span class="arithmatex">\(\sigma\)</span>)</td>
+<td style="text-align: left;">кратності ГДК</td>
+<td style="text-align: left;">0,22</td>
+<td style="text-align: left;">1,35</td>
+<td style="text-align: left;">Абсолютна міра статистичного розсіювання</td>
+</tr>
+<tr>
+<td style="text-align: left;">Перший квартиль (<span class="arithmatex">\(Q_1\)</span>)</td>
+<td style="text-align: left;">кратності ГДК</td>
+<td style="text-align: left;">0,92</td>
+<td style="text-align: left;">1,40</td>
+<td style="text-align: left;">Нижня межа 50% центральних вимірювань</td>
+</tr>
+<tr>
+<td style="text-align: left;">Медіана (<span class="arithmatex">\(Me\)</span>)</td>
+<td style="text-align: left;">кратності ГДК</td>
+<td style="text-align: left;">1,05</td>
+<td style="text-align: left;">2,10</td>
+<td style="text-align: left;">Робастний показник типового стану повітряного басейну</td>
+</tr>
+<tr>
+<td style="text-align: left;">Третій квартиль (<span class="arithmatex">\(Q_3\)</span>)</td>
+<td style="text-align: left;">кратності ГДК</td>
+<td style="text-align: left;">1,24</td>
+<td style="text-align: left;">3,25</td>
+<td style="text-align: left;">Верхня межа 50% центральних вимірювань</td>
+</tr>
+<tr>
+<td style="text-align: left;">Міжквартильний інтервал (<span class="arithmatex">\(\text{IQR}\)</span>)</td>
+<td style="text-align: left;">кратності ГДК</td>
+<td style="text-align: left;">0,32</td>
+<td style="text-align: left;">1,85</td>
+<td style="text-align: left;">Ширина центрального діапазону розподілу</td>
+</tr>
+<tr>
+<td style="text-align: left;">Автокореляція на лагу 1 (<span class="arithmatex">\(\text{ACF}_1\)</span>)</td>
+<td style="text-align: left;">безрозмірна</td>
+<td style="text-align: left;">0,846</td>
+<td style="text-align: left;">0,782</td>
+<td style="text-align: left;">Рівень часової інерційності спостережень</td>
+</tr>
+<tr>
+<td style="text-align: left;">Автокореляція на лагу 12 (<span class="arithmatex">\(\text{ACF}_{12}\)</span>)</td>
+<td style="text-align: left;">безрозмірна</td>
+<td style="text-align: left;">0,512</td>
+<td style="text-align: left;">0,645</td>
+<td style="text-align: left;">Сила річного циклічного гармонійного патерну</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["Ретроспективний масив (2007–2024, T = 204 місяці)"] --&gt; B["Робастний скринінг викидів: оцінка інтерквартильних бар'єрів Тьюкі"]
+    B --&gt; C["МНК-оцінка лінійного довгострокового тренду T(t) = at + b"]
+    C --&gt; D["STL-декомпозиція: Loess-сепарація сезонності S(t) та залишків R(t)"]
+    D --&gt; E["Спектральний аналіз автокореляції: підтвердження річного лагу (k = 12)"]
+    E --&gt; F["Тестування залишкової компоненти R(t) на стаціонарність (ADF-test)"]
+    F --&gt; G{"p-value &lt; 0.05 (Залишки стаціонарні?)"}
+    G -- "Так" --&gt; H["Підтвердження адекватності декомпозиції, вибірка готова до моделювання"]
+    G -- "Ні" --&gt; I["Ітераційне коригування ширини вікна згладжування Loess"]</code></pre>
+<h4 id="_5">Покроковий аналіз та розв'язок</h4>
+<h5 id="1">Крок 1. Первинний робастний скринінг та визначення меж аномалій Тьюкі</h5>
+<p>Перед виконанням регресійного аналізу здійснимо перевірку часового ряду концентрацій пилу на наявність екстремальних апаратних викидів за допомогою методу інтерквартильних бар'єрів Тьюкі. Розрахуємо межі внутрішніх допустимих бар'єрів:</p>
+<div class="arithmatex">\[\text{Lower Bound} = Q_1 - 1,5 \cdot \text{IQR} = 0,92 - 1,5 \cdot 0,32 = 0,92 - 0,48 = 0,44 \text{ ГДК}\]</div>
+<div class="arithmatex">\[\text{Upper Bound} = Q_3 + 1,5 \cdot \text{IQR} = 1,24 + 1,5 \cdot 0,32 = 1,24 + 0,48 = 1,72 \text{ ГДК}\]</div>
+<p>Будь-які значення концентрацій пилу, що виходять за діапазон <span class="arithmatex">\([0,44; \, 1,72]\text{ ГДК}\)</span>, підлягають додатковій перевірці. У вибірці зафіксовано два пікових значення на рівні <span class="arithmatex">\(1,78\text{ ГДК}\)</span> у липні 2010 року та <span class="arithmatex">\(1,81\text{ ГДК}\)</span> у серпні 2014 року. Оскільки обидві точки збігаються з періодами тривалих літніх посух і супроводжуються високою температурою повітря (<span class="arithmatex">\(T &gt; 32^\circ\text{C}\)</span>), вони класифікуються як фізично обґрунтовані природно-техногенні аномалії та зберігаються в масиві без модифікації.</p>
+<h5 id="2_1">Крок 2. Аналітичне вилучення довгострокового лінійного тренду методом найменших квадратів</h5>
+<p>Розрахуємо параметри лінійного тренду <span class="arithmatex">\(T_t = at + b\)</span> для часового ряду концентрацій пилу. Середній момент часу за період <span class="arithmatex">\(T = 204\)</span> місяці становить:</p>
+<div class="arithmatex">\[\bar{t} = \frac{T + 1}{2} = \frac{204 + 1}{2} = 102,5 \text{ місяця}\]</div>
+<p>Знаменник розрахункової формули МНК-оцінки кутового коефіцієнта дорівнює:</p>
+<div class="arithmatex">\[\sum_{t=1}^{204} (t - \bar{t})^2 = \frac{T(T^2 - 1)}{12} = \frac{204 \cdot (204^2 - 1)}{12} = \frac{204 \cdot 41615}{12} = 707\,455\]</div>
+<p>За емпіричними даними сума добутків центрованих величин становить <span class="arithmatex">\(\sum_{t=1}^{204} (t - \bar{t})(X_t - \mu) = -1202,67\text{ ГДК}\cdot\text{міс}\)</span>. Звідси обчислюємо коефіцієнт нахилу лінії тренду:</p>
+<div class="arithmatex">\[a = \frac{-1202,67}{707\,455} \approx -0,0017 \text{ ГДК/місяць}\]</div>
+<p>Вільний член лінійного рівняння становить:</p>
+<div class="arithmatex">\[b = \mu - a\bar{t} = 1,08 - (-0,0017 \cdot 102,5) = 1,08 + 0,174 = 1,254 \text{ ГДК}\]</div>
+<p>Отримане рівняння довгострокового тренду має вигляд:</p>
+<div class="arithmatex">\[T_t = -0,0017 \cdot t + 1,254 \quad [\text{ГДК}]\]</div>
+<p>Розрахований від'ємний нахил <span class="arithmatex">\(a = -0,0017\text{ ГДК/міс}\)</span> свідчить про системне міжрічне зниження запиленості атмосфери в районі поста № 4 зі швидкістю близько <span class="arithmatex">\(0,0204\text{ ГДК}\)</span> на рік (або <span class="arithmatex">\(0,0102\text{ мг/м}^3/\text{рік}\)</span>), що підтверджує позитивний ефект від модернізації газоочисного обладнання підприємств та зменшення інтенсивності промислового виробництва.</p>
+<h5 id="3-loess">Крок 3. Ізоляція сезонної компоненти методом згладжування Loess</h5>
+<p>Після детрендування ряду (<span class="arithmatex">\(Y_t = X_t - T_t\)</span>) процедура STL формує сезонну складову <span class="arithmatex">\(S_t\)</span>. Для місячних даних період становить <span class="arithmatex">\(s = 12\)</span>. Розрахунок усередненої сезонної хвилі для літнього екстремуму (липень, <span class="arithmatex">\(t = 7, 19, 31, \dots\)</span>) та зимового мінімуму (січень, <span class="arithmatex">\(t = 1, 13, 25, \dots\)</span>) дає такі числові амплітуди:</p>
+<div class="arithmatex">\[S_{\text{липень}} = \frac{1}{17} \sum_{k=0}^{16} Y_{7 + 12k} \approx +0,28 \text{ ГДК}\]</div>
+<div class="arithmatex">\[S_{\text{січень}} = \frac{1}{17} \sum_{k=0}^{16} Y_{1 + 12k} \approx -0,26 \text{ ГДК}\]</div>
+<p>Сезонний розмах становить <span class="arithmatex">\(\Delta S = S_{\text{липень}} - S_{\text{січень}} = 0,28 - (-0,26) = 0,54\text{ ГДК}\)</span> (<span class="arithmatex">\(0,27\text{ мг/м}^3\)</span>). Це доводить, що сезонні метеорологічні фактори формують коливання концентрації пилу, співмірні з половиною нормативу ГДК, створюючи систематичні літні перевищення допустимих норм навіть за сприятливого середньорічного фону.</p>
+<h5 id="4-">Крок 4. Тестування стаціонарності залишків за розширеним критерієм Дікі-Фуллера</h5>
+<p>Виділимо стохастичний залишок ряду: <span class="arithmatex">\(R_t = X_t - T_t - S_t\)</span>. Дисперсія залишкової компоненти склала <span class="arithmatex">\(\sigma_R^2 = 0,0081\text{ (ГДК)}^2\)</span> (<span class="arithmatex">\(\sigma_R = 0,09\text{ ГДК}\)</span>), що становить лише 16,7% від первинної дисперсії вихідного ряду.</p>
+<p>Для перевірки ряду залишків <span class="arithmatex">\(R_t\)</span> на стаціонарність розраховано авторегресійне рівняння тесту ADF першого порядку:</p>
+<div class="arithmatex">\[\Delta R_t = \gamma R_{t-1} + \delta_1 \Delta R_{t-1} + \varepsilon_t\]</div>
+<p>За результатами регресійного оцінювання отримано значення коефіцієнта <span class="arithmatex">\(\hat{\gamma} = -0,482\)</span> при стандартній похибці <span class="arithmatex">\(\text{SE}(\hat{\gamma}) = 0,058\)</span>. Тестова <span class="arithmatex">\(t\)</span>-статистика дорівнює:</p>
+<div class="arithmatex">\[t_{\text{ADF}} = \frac{-0,482}{0,058} \approx -8,31\]</div>
+<p>Оскільки критичне значення МакКіннона для 1% рівня значущості становить <span class="arithmatex">\(t_{\text{crit}}(1\%) = -3,46\)</span>, а емпірична величина <span class="arithmatex">\(t_{\text{ADF}} = -8,31 &lt; -3,46\)</span> (розрахункове значення <span class="arithmatex">\(p\text{-value} = 1,2 \times 10^{-13} \ll 0,05\)</span>), нульова гіпотеза про наявність одиничного кореня впевнено відкидається. Ряд залишків є строго стаціонарним білим шумом, що доводить повну адекватність виконаної STL-декомпозиції та відсутність невилучених детермінованих залежностей.</p>
+<h4 id="_6">Інтерпретація результатів та альтернативні сценарії</h4>
+<p>Виконаний аналіз показав, що пилове навантаження в районі поста № 4 успішно декомпонується на спадний тренд, амплітудну річну сезонність та випадковий стаціонарний шум. Це дозволяє використовувати для подальшого прогнозування класичні лінійні моделі експоненційного згладжування та моделі авторегресії.</p>
+<p>Якби досліджувався часовий ряд формальдегіду на тій самій станції, вихідні дані продемонстрували б принципово іншу картину: дисперсія ряду є в 37 разів вищою (<span class="arithmatex">\(\sigma^2 = 1,8225\)</span>), медіана суттєво менша за середнє (<span class="arithmatex">\(Me = 2,10 &lt; \mu = 2,45\)</span>), що вказує на правобічну асиметрію, а значення автокореляції на лагу 12 сягає <span class="arithmatex">\(\text{ACF}_{12} = 0,645\)</span>. У цьому альтернативному сценарії лінійна апроксимація тренду МНК виявилася б статистично незначущою через наявність високоамплітудних спалахів (перевищення до 10 ГДК у періоди 2012–2014 та 2021–2023 років). Відповідно, для формальдегіду класична адитивна STL-декомпозиція вимагала б попереднього логарифмічного перетворення Бокса-Кокса для стабілізації дисперсії або переходу до нелінійних моделей прогнозування класу BATS.</p>
+<hr />
+<h3 id="32">3.2. Зведена довідкова система лекції</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Термін / Концепція</th>
+<th style="text-align: left;">Формалізація / Сутність</th>
+<th style="text-align: left;">Реальний кейс застосування</th>
+<th style="text-align: left;">Основне обмеження / Ризик</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">STL-декомпозиція</td>
+<td style="text-align: left;">Адитивний або мультиплікативний розклад ряду за допомогою Loess: <span class="arithmatex">\(X_t = T_t + S_t + R_t\)</span></td>
+<td style="text-align: left;">Ізоляція міжрічного тренду пилу на пості № 4 по вул. Шевченка в Кременчуці</td>
+<td style="text-align: left;">Неможливість прямої роботи з нерівномірною сіткою та масивними пропусками</td>
+</tr>
+<tr>
+<td style="text-align: left;">Критерій Тьюкі (IQR Fences)</td>
+<td style="text-align: left;">Непараметричний робастний бар'єр виявлення викидів: <span class="arithmatex">\([Q_1 - 1,5\text{IQR}, \, Q_3 + 1,5\text{IQR}]\)</span></td>
+<td style="text-align: left;">Автоматичний скринінг апаратних збоїв оптичних сенсорів перед агрегацією</td>
+<td style="text-align: left;">Ризик помилкового видалення реальних залпових аварійних викидів підприємств</td>
+</tr>
+<tr>
+<td style="text-align: left;">Z-score нормалізація</td>
+<td style="text-align: left;">Стандартизована міра відхилення точки від локального середнього: <span class="arithmatex">\(Z_t = (X_t - \mu)/\sigma\)</span></td>
+<td style="text-align: left;">Фільтрація високочастотних перешкод у щохвилинних потоках даних EcoCity</td>
+<td style="text-align: left;">Непридатність для сильно асиметричних та експоненційних розподілів концентрацій</td>
+</tr>
+<tr>
+<td style="text-align: left;">Автокореляція (ACF)</td>
+<td style="text-align: left;">Міра лінійної статистичної залежності між спостереженнями: <span class="arithmatex">\(\text{ACF}(k) = \frac{\text{Cov}(X_t, X_{t+k})}{\text{Var}(X_t)}\)</span></td>
+<td style="text-align: left;">Виявлення річного циклу забруднення повітря на лагу <span class="arithmatex">\(k = 12\)</span> місяців</td>
+<td style="text-align: left;">Завищення значень автокореляції за наявності невилученого довгострокового тренду</td>
+</tr>
+<tr>
+<td style="text-align: left;">Швидке перетворення Фур'є (FFT)</td>
+<td style="text-align: left;">Перехід із часової області в частотний спектр: <span class="arithmatex">\(Y_k = \sum X_n e^{-i 2\pi nk/T}\)</span></td>
+<td style="text-align: left;">Ідентифікація прихованих гармонік у рядах концентрацій оксиду вуглецю</td>
+<td style="text-align: left;">Виникнення артефакту розтікання спектра при нецілочисельній кількості періодів</td>
+</tr>
+<tr>
+<td style="text-align: left;">Тест Augmented Dickey-Fuller (ADF)</td>
+<td style="text-align: left;">Регресійний тест одиничного кореня: <span class="arithmatex">\(H_0: \gamma = 0\)</span> (нестаціонарний) проти <span class="arithmatex">\(H_1: \gamma &lt; 0\)</span></td>
+<td style="text-align: left;">Перевірка стаціонарності залишків моніторингу перед навчанням моделей ARIMA</td>
+<td style="text-align: left;">Втрата статистичної потужності за наявності структурних зламів (Perron Effect)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Одиничний корінь (Unit Root)</td>
+<td style="text-align: left;">Властивість стохастичного процесу зберігати пам'ять про минулі шоки: інтегрованість <span class="arithmatex">\(I(1)\)</span></td>
+<td style="text-align: left;">Опис поведінки діоксиду азоту, де <span class="arithmatex">\(p\text{-value} = 0,975\)</span> свідчить про нестаціонарність</td>
+<td style="text-align: left;">Необхідність обов'язкового різницевого диференціювання перед моделюванням</td>
+</tr>
+<tr>
+<td style="text-align: left;">Різницеве диференціювання (<span class="arithmatex">\(\nabla^d\)</span>)</td>
+<td style="text-align: left;">Операція взяття приростів часового ряду: <span class="arithmatex">\(\nabla X_t = (1 - L) X_t = X_t - X_{t-1}\)</span></td>
+<td style="text-align: left;">Приведення нестаціонарних рядів газів до стаціонарного базису</td>
+<td style="text-align: left;">Ризик надлишкового диференціювання та введення штучного шуму в модель</td>
+</tr>
+<tr>
+<td style="text-align: left;">Інформаційна ентропія Шеннона</td>
+<td style="text-align: left;">Міра невпорядкованості та невизначеності станів системи: <span class="arithmatex">\(H(X) = -\sum p_i \log_2 p_i\)</span></td>
+<td style="text-align: left;">Оцінка деградації екологічної стійкості Кременчуцького водосховища</td>
+<td style="text-align: left;">Чутливість до кількості інтервалів дискретизації неперервної шкали</td>
+</tr>
+<tr>
+<td style="text-align: left;">Сезонне диференціювання (<span class="arithmatex">\(\nabla_s\)</span>)</td>
+<td style="text-align: left;">Усунення гармонійного циклу відніманням значення попереднього року: <span class="arithmatex">\(\nabla_{12} X_t = X_t - X_{t-12}\)</span></td>
+<td style="text-align: left;">Фільтрація річних температурних коливань у вибірках концентрацій пилу</td>
+<td style="text-align: left;">Втрата перших <span class="arithmatex">\(s\)</span> спостережень ряду на початку часового інтервалу</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="33">3.3. Контрольні питання та завдання</h3>
+<h4 id="_7">Прикладні тестові завдання</h4>
+<ol>
+<li>
+<p>За результатами розрахунку лінійного тренду концентрацій формальдегіду за 2007–2024 роки отримано рівняння <span class="arithmatex">\(T_t = 0,0003 \cdot t + 2,12\text{ (ГДК)}\)</span>, проте коефіцієнт детермінації становить <span class="arithmatex">\(R^2 = 0,041\)</span>. Одночасно тест ADF дає значення <span class="arithmatex">\(p\text{-value} = 0,955\)</span>, а на графіку спостерігаються періодичні сплески концентрації до 8–10 ГДК з інтервалом у 8–9 років. Який висновок має зробити аналітик щодо придатності лінійної моделі тренду?</p>
+</li>
+<li>
+<p>A. Лінійна модель є адекватною, оскільки кутовий коефіцієнт <span class="arithmatex">\(a &gt; 0\)</span> підтверджує зростання забруднення.</p>
+</li>
+<li>
+<p>B. Ряд містить структурні злами та нелінійні багаторічні цикли, тому лінійна модель є непридатною і не пояснює дисперсію процесу (<span class="arithmatex">\(R^2 \approx 4\%\)</span>).</p>
+</li>
+<li>
+<p>C. Необхідно штучно видалити всі значення, що перевищують 5 ГДК, для підвищення <span class="arithmatex">\(R^2\)</span>.</p>
+</li>
+<li>
+<p>D. Помилка зумовлена неправильним вибором одиниць вимірювання; слід перевести дані у відсотки.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>Коефіцієнт детермінації <span class="arithmatex">\(R^2 = 0,041\)</span> показує, що лінійна регресія описує лише 4,1% варіативності даних, а високе значення <span class="arithmatex">\(p\text{-value} = 0,955\)</span> тесту ADF строго вказує на нестаціонарність процесу. Наявність квазіперіодичних високоамплітудних піків (до 10 ГДК) із циклом 8–9 років свідчить про наявність нелінійної макродинаміки або структурних зламів, пов'язаних із технологічними змінами на виробництві, які принципово не можуть бути описані прямою лінією.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A є помилковим, оскільки додатний коефіцієнт за практично нульового <span class="arithmatex">\(R^2\)</span> не є статистично значущим свідченням наявності тренду.</p>
+</li>
+<li>
+<p>Варіант C є грубим порушенням наукової методології, оскільки видалення реальних викидів спотворює фактичну екологічну картину.</p>
+</li>
+<li>
+<p>Варіант D є хибним, оскільки лінійне масштабування одиниць вимірювання не змінює коефіцієнт детермінації <span class="arithmatex">\(R^2\)</span> лінійної регресії.</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>Під час аналізу графіка автокореляційної функції (ACF) щомісячних концентрацій пилу за 204 місяці виявлено, що значення <span class="arithmatex">\(\text{ACF}(1) = 0,85\)</span>, <span class="arithmatex">\(\text{ACF}(2) = 0,72\)</span>, <span class="arithmatex">\(\text{ACF}(3) = 0,61\)</span> плавно спадають, проте на лагу <span class="arithmatex">\(k = 12\)</span> спостерігається чіткий локальний підйом до <span class="arithmatex">\(\text{ACF}(12) = 0,51\)</span>, а на лагу <span class="arithmatex">\(k = 24\)</span> — до <span class="arithmatex">\(\text{ACF}(24) = 0,38\)</span>. Про наявність яких математичних компонент у часовому ряді свідчить така топологія автокорелограми?</p>
+</li>
+<li>
+<p>A. Про наявність суто випадкового білого шуму без пам'яті процесу.</p>
+</li>
+<li>
+<p>B. Про наявність довгострокового авторегресійного тренду, поєднаного з регулярним 12-місячним сезонним циклом.</p>
+</li>
+<li>
+<p>C. Про вихід із ладу сенсора пилу, який генерує однакові значення кожні 12 місяців.</p>
+</li>
+<li>
+<p>D. Про наявність високочастотного добового шуму автотранспорту.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>Плавне геометричне згасання автокореляції на перших лагах (<span class="arithmatex">\(\text{ACF}_1 = 0,85, \dots\)</span>) є класичною ознакою авторегресійного процесу першого порядку або наявності низькочастотного тренду. Водночас виникнення чітких локальних максимумів на лагах, кратних 12 (<span class="arithmatex">\(k = 12, 24\)</span>), строго вказує на наявність стійкої річної гармонійної сезонності, суперпонованої на довгострокову динаміку.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A є хибним, оскільки для білого шуму всі значення автокореляції для <span class="arithmatex">\(k &gt; 0\)</span> перебувають у межах довірчого інтервалу навколо нуля (<span class="arithmatex">\(|\text{ACF}| \le 2/\sqrt{T} \approx 0,14\)</span>).</p>
+</li>
+<li>
+<p>Варіант C є невірним, оскільки річна сезонність є природним екологічним наслідком кліматичних циклів, а не апаратного дефекту.</p>
+</li>
+<li>
+<p>Варіант D є помилковим, оскільки щомісячні дані апріорі осереднюють добові коливання і не здатні відображати 24-годинні цикли.</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>Для вибірки середньомісячних значень концентрації оксиду вуглецю обсягом <span class="arithmatex">\(T = 35\)</span> місяців розраховано тест Дікі-Фуллера. Отримано значення статистики <span class="arithmatex">\(t_{\text{ADF}} = -0,45\)</span> при <span class="arithmatex">\(p\text{-value} = 0,981\)</span>. Яку попередню трансформацію необхідно виконати над цим рядом для коректного навчання статистичної моделі прогнозування ARIMA?</p>
+</li>
+<li>
+<p>A. Здійснити взяття першої різниці ряду <span class="arithmatex">\(\Delta X_t = X_t - X_{t-1}\)</span> для усунення одиничного кореня та переведення ряду в клас <span class="arithmatex">\(I(0)\)</span>.</p>
+</li>
+<li>
+<p>B. Застосувати фільтр Калмана з параметром згладжування 0,99.</p>
+</li>
+<li>
+<p>C. Помножити всі значення на норматив ГДК для штучного масштабування.</p>
+</li>
+<li>
+<p>D. Збільшити довжину вибірки шляхом дублювання наявних даних тричі поспіль.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: A.</strong></p>
+<ol>
+<li>
+<p>Значення <span class="arithmatex">\(p\text{-value} = 0,981 \gg 0,05\)</span> свідчить про неможливість відхилення нульової гіпотези про наявність одиничного кореня: процес є нестаціонарним першого порядку <span class="arithmatex">\(I(1)\)</span>. Для переведення ряду в стаціонарний стан <span class="arithmatex">\(I(0)\)</span>, необхідний для моделей авторегресії, оператор зобов'язаний виконати операцію різницевого диференціювання порядку <span class="arithmatex">\(d = 1\)</span>, тобто перейти до аналізу абсолютних приростів <span class="arithmatex">\(\Delta X_t = X_t - X_{t-1}\)</span>.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант B є хибним, оскільки фільтрація Калмана зменшує дисперсію шуму, проте не усуває стохастичний тренд і одиничний корінь.</p>
+</li>
+<li>
+<p>Варіант C не впливає на стаціонарність, оскільки множення на константу є лінійним масштабуванням, що не змінює корінь характеристичного рівняння.</p>
+</li>
+<li>
+<p>Варіант D є грубою фальсифікацією даних, яка штучно спотворить спектральну щільність і внесе хибну періодичність.</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>За результатами розрахунку міжквартильного інтервалу для 204 спостережень пилу отримано <span class="arithmatex">\(Q_1 = 0,92\text{ ГДК}\)</span> та <span class="arithmatex">\(Q_3 = 1,24\text{ ГДК}\)</span>. Вимірювання у серпні 2021 року склало <span class="arithmatex">\(1,85\text{ ГДК}\)</span>. Чи є це значення викидом за класифікацією Тьюкі і до якої категорії аномалій воно належить?</p>
+</li>
+<li>
+<p>A. Значення є нормальним, оскільки не перевищує 2,0 ГДК.</p>
+</li>
+<li>
+<p>B. Значення є помірним викидом, оскільки воно перевищує верхній бар'єр <span class="arithmatex">\(Q_3 + 1,5\text{IQR} = 1,72\)</span>, але менше екстремального бар'єра <span class="arithmatex">\(Q_3 + 3\text{IQR} = 2,20\)</span>.</p>
+</li>
+<li>
+<p>C. Значення є екстремальним апаратним збоєм, оскільки воно більше медіани на 50%.</p>
+</li>
+<li>
+<p>D. Класифікація Тьюкі не застосовується до концентрацій забруднюючих речовин.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>Розрахуємо граничні межі Тьюкі: <span class="arithmatex">\(\text{IQR} = 1,24 - 0,92 = 0,32\text{ ГДК}\)</span>. Верхня межа помірних викидів дорівнює <span class="arithmatex">\(1,24 + 1,5 \cdot 0,32 = 1,72\text{ ГДК}\)</span>. Верхня межа екстремальних викидів становить <span class="arithmatex">\(1,24 + 3,0 \cdot 0,32 = 1,24 + 0,96 = 2,20\text{ ГДК}\)</span>. Оскільки значення <span class="arithmatex">\(X_t = 1,85\text{ ГДК}\)</span> задовольняє умову <span class="arithmatex">\(1,72 &lt; 1,85 &lt; 2,20\)</span>, воно строго класифікується як помірний статистичний викид, що вимагає перевірки метеорологічних умов даного місяця.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A є помилковим, оскільки нормативні межі ГДК не мають прямого відношення до внутрішніх емпіричних бар'єрів варіаційного ряду.</p>
+</li>
+<li>
+<p>Варіант C є невірним, оскільки екстремальні аномалії за Тьюкі починаються вище <span class="arithmatex">\(2,20\text{ ГДК}\)</span>, а порівняння з медіаною не є формальним критерієм методу.</p>
+</li>
+<li>
+<p>Варіант D є хибним, оскільки критерій Тьюкі є універсальним непараметричним методом аналізу неперервних розподілів у прикладній екології.</p>
+</li>
+</ol>
+</details>
+<hr />
+<h4 id="_8">Завдання для самостійної роботи</h4>
+<h5 id="_9">Постановка задачі</h5>
+<p>У процесі комплексного оцінювання екологічного стану промислового району міста отримано масив середньодобових концентрацій приземного озону (<span class="arithmatex">\(O_3\)</span>) та діоксиду азоту (<span class="arithmatex">\(NO_2\)</span>) за період трьох календарних років (1095 щодобових вимірювань). У літній період спостерігаються регулярні випадки перевищення нормативів озону внаслідок інтенсивної сонячної радіації та проходження фотохімічних реакцій між оксидами нітрогену та летких органічних сполук. Ряд містить випадкові пропуски тривалістю до 5 діб через технічне обслуговування обладнання.</p>
+<h5 id="_10">Завдання для виконання</h5>
+<ol>
+<li>
+<p>Виконайте відновлення пропущених значень у трирічному часовому ряді концентрацій озону за допомогою методу кубічної сплайн-інтерполяції з наступною робастною перевіркою отриманих значень критерієм Z-score.</p>
+</li>
+<li>
+<p>Проведіть STL-декомпозицію відновленого ряду озону для ізоляції добового та річного сезонних підциклів, оцінивши частку дисперсії, що припадає на фотохімічну сезонну активність.</p>
+</li>
+<li>
+<p>Розрахуйте автокореляційну функцію та спектральну щільність потужності через дискретне перетворення Фур'є для виявлення прихованих тижневих гармонік, пов'язаних із ритмом руху автотранспорту в робочі та вихідні дні.</p>
+</li>
+<li>
+<p>Застосуйте розширений тест Дікі-Фуллера до залишкової компоненти ряду та визначте мінімально необхідний порядок різницевого диференціювання для переведення ряду в строго стаціонарний стан перед побудовою предиктивної моделі.</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Повернутись нагору
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Kyrylo Vadurin &bull; <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "header.autohide", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0456\u0439\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u0421\u043a\u043e\u043f\u0456\u044e\u0432\u0430\u0442\u0438 \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0429\u0435 1 \u0437\u0431\u0456\u0433 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.more.other": "\u0429\u0435 # \u0437\u0431\u0456\u0433\u0456\u0432 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.none": "\u0417\u0431\u0456\u0433\u0456\u0432 \u043d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0437\u0431\u0456\u0433", "search.result.other": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e # \u0437\u0431\u0456\u0433\u0456\u0432", "search.result.placeholder": "\u0420\u043e\u0437\u043f\u043e\u0447\u043d\u0456\u0442\u044c \u043f\u0438\u0441\u0430\u0442\u0438 \u0434\u043b\u044f \u043f\u043e\u0448\u0443\u043a\u0443", "search.result.term.missing": "\u041d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e \u0437\u0430\u043f\u0438\u0442\u0443", "select.version": "\u041e\u0431\u0440\u0430\u0442\u0438 \u0432\u0435\u0440\u0441\u0456\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

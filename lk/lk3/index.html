@@ -1,0 +1,2658 @@
+
+<!doctype html>
+<html lang="uk" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Навчальний портал з дисципліни "Інформаційно-аналітичні технології в екологічних системах"">
+      
+      
+      
+      
+        <link rel="prev" href="../lk2/">
+      
+      
+        <link rel="next" href="../lk4/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Тема 3. Проєктування екологічних баз даних - ІАТ в екологічних системах</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3" class="md-skip">
+          Перейти до змісту
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Хедер">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-header__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ІАТ в екологічних системах
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Тема 3. Проєктування екологічних баз даних
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Переключити на темну тему"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Переключити на темну тему" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-label="Переключити на світлу тему"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Переключити на світлу тему" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Пошук" placeholder="Пошук" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Шукати">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистити" aria-label="Очистити" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Пошук розпочато
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Робоча програма
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../lk1/" class="md-tabs__link">
+          
+  
+  
+  Лекції
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../lb/lb1/" class="md-tabs__link">
+          
+  
+  
+  Лабораторні роботи
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../sr/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Самостійна робота
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навігація" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-nav__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ІАТ в екологічних системах
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Робоча програма
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лекції
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лекції
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 1. Цифровізація екологічного моніторингу
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 2. IoT-технології та сенсорні мережі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 3. Проєктування екологічних баз даних
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 3. Проєктування екологічних баз даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мета лекції
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Очікувані результати навчання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Теоретико-концептуальний базис. Реляційне та об'єктно-орієнтоване моделювання екологічних сховищ даних
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Теоретико-концептуальний базис. Реляційне та об&#39;єктно-орієнтоване моделювання екологічних сховищ даних">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Концептуальне проєктування таблиць сутностей екологічного моніторингу на основі кортежних моделей та реляційної алгебри Кодда
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Специфікація метаданих постів спостереження, інгредієнтного складу викидів та гранично допустимих концентрацій у реляційній моделі SQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Механізми декларативного контролю цілісності, оптимізації зв'язків «один-до-багатьох» та конфігурації первинних і зовнішніх ключів
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-orm-eloquent-laravel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Проєктування об'єктно-реляційного відображення з використанням ORM Eloquent та версіонування структури засобами міграцій Laravel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вказівки для самостійного осмислення
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Методологія та аналіз граничних умов. Управління великими масивами часових рядів та оптимізація запитів
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Методологія та аналіз граничних умов. Управління великими масивами часових рядів та оптимізація запитів">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Алгоритми фільтрації та генерації унікальних хеш-ідентифікаторів записів для усунення дублювання вимірювань сенсорів реального часу
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-20-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Організація багаторівневого усереднення даних від однохвилинних спостережень до 20-хвилинних, добових, місячних та річних зрізів у фонових процесах cron
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Критичні обмеження пропускної здатності дискових підсистем та деградація продуктивності реляційних СУБД при масштабуванні транзакцій екологічних Big Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-pdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Архітектура безпечного доступу до даних через параметризовані запити PDO та ізоляцію транзакцій для підтримки аналітичних вибірок
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Практичний індустріальний / фаховий кейс. Розробка корпоративної бази даних екологічного підприємства
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Практичний індустріальний / фаховий кейс. Розробка корпоративної бази даних екологічного підприємства">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-vaisala-no-827" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Комплексний фаховий кейс. Проєктування та розгортання структури бази даних комунального підприємства для збереження показників станцій Vaisala з автоматичною генерацією звітів за формою постанови КМУ № 827
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Комплексний фаховий кейс. Проєктування та розгортання структури бази даних комунального підприємства для збереження показників станцій Vaisala з автоматичною генерацією звітів за формою постанови КМУ № 827">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі / ситуації
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Покроковий аналіз та розв'язок
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Покроковий аналіз та розв&#39;язок">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 1. Розрахунок швидкості накопичення сирих даних та визначення дискового горизонту
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-split_measurement_ua171" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 2. Проєктування та розрахунок ємності агрегатної таблиці split_measurement_ua171
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-data-retention-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 3. Розрахунок граничного періоду утримання сирих даних (Data Retention Policy)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-sql-no-827" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 4. Оптимізація часу виконання SQL-запиту для генерації звіту за Постановою № 827
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Інтерпретація результатів та альтернативні сценарії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Зведена довідкова система лекції
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Контрольні питання та завдання
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Контрольні питання та завдання">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Прикладні тестові завдання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для самостійної роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Завдання для самостійної роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для виконання
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 4. Статистичні методи аналізу даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 5. Багатовимірний аналіз та інтелектуальні технології
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 6. Моделювання переносу та дифузії
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 7. Геоінформаційні системи (ГІС)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 8. Моделювання динаміки екологічних систем
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 9. Прогнозування та оцінка ризиків
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 10. Інтелектуальні платформи просторового прогнозування
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторні роботи
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лабораторні роботи
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 1. Архітектура відкритих систем моніторингу довкілля
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 2. Канал отримання даних IoT-станцій
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 3. Проєктування наборів даних екологічної інформації
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 4. Статистичний аналіз та перевищення ГДК
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 5. Кореляційний аналіз та метод головних компонент
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 6. Моделювання розсіювання викидів в атмосфері
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 7. Просторова інтерполяція (IDW) та аномалії
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 8. Моделювання динаміки та стійкості екосистем
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 9. Прогнозування часових рядів та індекс якості повітря
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 10. Генерація екологічного звіту когнітивним LLM-агентом
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Самостійна робота
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мета лекції
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Очікувані результати навчання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Теоретико-концептуальний базис. Реляційне та об'єктно-орієнтоване моделювання екологічних сховищ даних
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Теоретико-концептуальний базис. Реляційне та об&#39;єктно-орієнтоване моделювання екологічних сховищ даних">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Концептуальне проєктування таблиць сутностей екологічного моніторингу на основі кортежних моделей та реляційної алгебри Кодда
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Специфікація метаданих постів спостереження, інгредієнтного складу викидів та гранично допустимих концентрацій у реляційній моделі SQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Механізми декларативного контролю цілісності, оптимізації зв'язків «один-до-багатьох» та конфігурації первинних і зовнішніх ключів
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-orm-eloquent-laravel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Проєктування об'єктно-реляційного відображення з використанням ORM Eloquent та версіонування структури засобами міграцій Laravel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вказівки для самостійного осмислення
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Методологія та аналіз граничних умов. Управління великими масивами часових рядів та оптимізація запитів
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Методологія та аналіз граничних умов. Управління великими масивами часових рядів та оптимізація запитів">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Алгоритми фільтрації та генерації унікальних хеш-ідентифікаторів записів для усунення дублювання вимірювань сенсорів реального часу
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-20-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Організація багаторівневого усереднення даних від однохвилинних спостережень до 20-хвилинних, добових, місячних та річних зрізів у фонових процесах cron
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Критичні обмеження пропускної здатності дискових підсистем та деградація продуктивності реляційних СУБД при масштабуванні транзакцій екологічних Big Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-pdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Архітектура безпечного доступу до даних через параметризовані запити PDO та ізоляцію транзакцій для підтримки аналітичних вибірок
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Практичний індустріальний / фаховий кейс. Розробка корпоративної бази даних екологічного підприємства
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Практичний індустріальний / фаховий кейс. Розробка корпоративної бази даних екологічного підприємства">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-vaisala-no-827" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Комплексний фаховий кейс. Проєктування та розгортання структури бази даних комунального підприємства для збереження показників станцій Vaisala з автоматичною генерацією звітів за формою постанови КМУ № 827
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Комплексний фаховий кейс. Проєктування та розгортання структури бази даних комунального підприємства для збереження показників станцій Vaisala з автоматичною генерацією звітів за формою постанови КМУ № 827">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі / ситуації
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Покроковий аналіз та розв'язок
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Покроковий аналіз та розв&#39;язок">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 1. Розрахунок швидкості накопичення сирих даних та визначення дискового горизонту
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-split_measurement_ua171" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 2. Проєктування та розрахунок ємності агрегатної таблиці split_measurement_ua171
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-data-retention-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 3. Розрахунок граничного періоду утримання сирих даних (Data Retention Policy)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-sql-no-827" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 4. Оптимізація часу виконання SQL-запиту для генерації звіту за Постановою № 827
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Інтерпретація результатів та альтернативні сценарії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Зведена довідкова система лекції
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Контрольні питання та завдання
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Контрольні питання та завдання">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Прикладні тестові завдання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для самостійної роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Завдання для самостійної роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для виконання
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="3">Тема 3. Проектування екологічних баз даних</h1>
+<h2 id="_1">Мета лекції</h2>
+<p>Сформувати глибокі теоретичні знання та практичні компетенції щодо проєктування, нормалізації, оптимізації та масштабування реляційних баз даних екологічного моніторингу для забезпечення надійного збереження високочастотних часових рядів, автоматизованого розрахунку статистичних зрізів та підтримки регуляторного формування звітності про стан атмосферного повітря.</p>
+<h2 id="_2">Очікувані результати навчання</h2>
+<ol>
+<li>
+<p><strong>Знання та розуміння.</strong> Здобувачі мають опанувати математичні основи реляційної моделі даних, правила нормалізації та принципи структурування багатовимірних часових рядів екологічних параметрів.</p>
+</li>
+<li>
+<p><strong>Застосування.</strong> Здобувачі мають застосовувати засоби реляційних СУБД, мову SQL, механізми міграцій та ORM-шаблони для розробки схеми екологічної бази даних.</p>
+</li>
+<li>
+<p><strong>Аналіз.</strong> Здобувачі мають досліджувати обчислювальну складність операцій запису, пошуку й агрегації неперервних потоків сенсорних даних різної дискретизації.</p>
+</li>
+<li>
+<p><strong>Оцінювання та синтез.</strong> Здобувачі мають проектувати оптимальні структури збереження первинних та агрегованих показників, що забезпечують формування регламентних звітів згідно з чинним природоохоронним законодавством.</p>
+</li>
+</ol>
+<h2 id="1-">1. Теоретико-концептуальний базис. Реляційне та об'єктно-орієнтоване моделювання екологічних сховищ даних</h2>
+<h3 id="11">1.1. Концептуальне проєктування таблиць сутностей екологічного моніторингу на основі кортежних моделей та реляційної алгебри Кодда</h3>
+<p>Формування архітектури баз даних для збереження інформації екологічного моніторингу спирається на математичний апарат реляційної моделі, запропонований Едгаром Коддом. У рамках цього підходу предметна область описується як сукупність нормалізованих відношень, де кожне відношення являє собою підмножину декартового добутку відповідних доменів атрибутів. Специфіка екологічних часових рядів, що характеризуються високою частотою надходження вимірювань, різнорідністю фізико-хімічних параметрів та наявністю просторової прив'язки, вимагає суворої формалізації сутностей за допомогою кортежних моделей.</p>
+<p>У концептуальній моделі база даних представляється як множина взаємопов'язаних відношень. Основними сутностями виступають пости спостереження, вимірювані полютанти, часові зрізи спостережень та нормативні обмеження якості середовища. Математично схема відношення вимірювальної станції описується кортежем:</p>
+<div class="arithmatex">\[R_{\text{post}} = \langle \text{PostID}, \, \text{CityName}, \, \text{Address}, \, \text{GeoLat}, \, \text{GeoLon}, \, \text{OwnerOrg}, \, \text{StationType} \rangle\]</div>
+<p>де кожний компонент є елементом відповідного домену: <span class="arithmatex">\(\text{PostID} \in \mathbb{N}\)</span> задає унікальний сурогатний первинний ключ, <span class="arithmatex">\(\text{CityName} \in \text{DOM}_{\text{string}}\)</span> та <span class="arithmatex">\(\text{Address} \in \text{DOM}_{\text{string}}\)</span> визначають адресну прив'язку об'єкта, <span class="arithmatex">\(\text{GeoLat}, \text{GeoLon} \in \mathbb{R}\)</span> фіксують десяткові координати у просторі <span class="arithmatex">\(R^2\)</span>, а параметри <span class="arithmatex">\(\text{OwnerOrg}\)</span> і <span class="arithmatex">\(\text{StationType}\)</span> класифікують відомчу належність та технічну категорію поста.</p>
+<p>Відношення первинних спостережень формується як динамічний часовий ряд, де кортеж вимірювання має вигляд:</p>
+<div class="arithmatex">\[R_{\text{data}} = \langle \text{RecordID}, \, \text{PostID}, \, \text{PollutantID}, \, \text{Timestamp}, \, \text{Value}, \, \text{UnitID}, \, \text{IntegrityRatio}, \, \text{Hash} \rangle\]</div>
+<p>де атрибут <span class="arithmatex">\(\text{RecordID}\)</span> виступає унікальним ідентифікатором транзакції, <span class="arithmatex">\(\text{PostID}\)</span> та <span class="arithmatex">\(\text{PollutantID}\)</span> реалізують зовнішні ключі, <span class="arithmatex">\(\text{Timestamp} \in \text{DOM}_{\text{datetime}}\)</span> фіксує точний час реєстрації за шкалою UTC, <span class="arithmatex">\(\text{Value} \in \mathbb{R}^+\)</span> представляє виміряну фізичну концентрацію, <span class="arithmatex">\(\text{UnitID}\)</span> детермінує інженерні одиниці виміру, показник <span class="arithmatex">\(\text{IntegrityRatio} \in [0, 1]\)</span> відображає частку валідних вимірювань за інтервал осереднення, а атрибут <span class="arithmatex">\(\text{Hash}\)</span> забезпечує криптографічний контроль дублікатів.</p>
+<p>Маніпуляція екологічними даними в реляційній алгебрі реалізується через фундаментальні теоретико-множинні оператори: селекцію (<span class="arithmatex">\(\sigma\)</span>), проекцію (<span class="arithmatex">\(\Pi\)</span>) та природне з'єднання (<span class="arithmatex">\(\bowtie\)</span>). Наприклад, формальна операція вибірки випадків перевищення нормативів діоксиду азоту на конкретному муніципальному посту записується аналітичним виразом:</p>
+<div class="arithmatex">\[\mathcal{Q}_{\text{exceed}} = \Pi_{\text{Timestamp}, \text{Value}, \text{MPCValue}} \Big( \sigma_{\text{PostID} = k \; \land \; \text{Value} &gt; \text{MPCValue}} \big( R_{\text{data}} \bowtie R_{\text{pollutant}} \bowtie R_{\text{mpc}} \big) \Big)\]</div>
+<p>де з'єднання відношень <span class="arithmatex">\(R_{\text{data}}\)</span>, <span class="arithmatex">\(R_{\text{pollutant}}\)</span> та <span class="arithmatex">\(R_{\text{mpc}}\)</span> формує єдиний контекст порівняння концентрації з чинним нормативом гранично допустимої концентрації (<span class="arithmatex">\(\text{MPCValue}\)</span>), селекція фільтрує вимірювання, що порушують регламентний поріг на посту <span class="arithmatex">\(k\)</span>, а проекція виокремлює часову мітку, фактичну та нормативну концентрації для побудови звітної відомості.</p>
+<pre class="mermaid"><code>flowchart TD
+    subgraph STATIONS_RELATION["Відношення постів: ObservationPost"]
+        PK_Post["PostID (PK)"]
+        Attr_Post["CityID, Address, Coordinates, StationType"]
+    end
+
+    subgraph POLLUTANTS_RELATION["Відношення речовин: Pollutant"]
+        PK_Pol["PollutantID (PK)"]
+        Attr_Pol["Name, ChemicalFormula, UnitID"]
+    end
+
+    subgraph MPC_RELATION["Відношення нормативів: MPC"]
+        PK_MPC["MpcID (PK)"]
+        Attr_MPC["PollutantID (FK), ValueDaily, ValueMax, ValidFrom, ValidTo"]
+    end
+
+    subgraph MEASUREMENTS_RELATION["Відношення вимірювань: split_measurement_ua171"]
+        PK_Meas["RecordID (PK)"]
+        FK_Meas_Post["PostID (FK)"]
+        Attr_Meas["TimestampStart, TimestampEnd, IntervalType, Values, Ratios, UniqueHash"]
+    end
+
+    PK_Post --&gt;|1 to N| FK_Meas_Post
+    PK_Pol --&gt;|1 to N| Attr_MPC
+    PK_Pol -.-&gt;|Зв'язок параметрів| Attr_Meas</code></pre>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> При розробці муніципальної інформаційної системи моніторингу якості повітря міста Кременчук реляційна структура була спроєктована з виділенням спеціалізованої таблиці <code>split_measurement_ua171</code>, де індекс <code>ua171</code> позначає глобальний географічний класифікатор (17 — Полтавська область, 1 — місто Кременчук), що дозволило централізовано зберігати понад 2,5 мільйона записів з 20-хвилинною дискретизацією та виконувати швидкі аналітичні вибірки без блокування транзакційного ядра.</p>
+</blockquote>
+<hr />
+<h3 id="12-sql">1.2. Специфікація метаданих постів спостереження, інгредієнтного складу викидів та гранично допустимих концентрацій у реляційній моделі SQL</h3>
+<p>Проєктування екологічної бази даних вимагає відокремлення транзакційних потоків спостережень від нормативно-довідкової інформації. Метадані формують нормативний та геоінформаційний контекст, без якого фізико-хімічні показники втрачають прикладну цінність. У реляційній моделі SQL нормативно-довідковий шар організовується відповідно до вимог третьої нормальної форми (3NF), що виключає транзитивні залежності та запобігає виникненню аномалій модифікації даних.</p>
+<p>Специфікація постів спостереження включає таблиці міст (<code>cities</code>), географічних адрес (<code>addresses</code>) та безпосередньо вимірювальних станцій (<code>observation_posts</code>). Поділ адресних характеристик та координат дозволяє підтримувати просторову топологію моніторингової мережі, адаптуючись до зміни назв топонімів або тимчасового переміщення мобільних станцій спостереження.</p>
+<p>Таблиця контрольованих полютантів (<code>pollutants</code>) фіксує інгредієнтний склад викидів, специфікуючи хімічні маркери за їхніми кодами (пилові фракції PM1, PM2.5, PM10, оксиди вуглецю, діоксид азоту, діоксид сірки, формальдегід, фенол, ароматичні вуглеводні). Нормативні межі вмісту цих речовин виносяться в окрему таблицю нормативів (<code>mpc_limits</code>). Оскільки екологічне законодавство має динамічний характер, таблиця нормативів містить часові межі дії значень, що формалізується схемою із полями початку (<code>valid_from</code>) та завершення (<code>valid_to</code>) дії нормативу. Це дозволяє здійснювати ретроспективний аналіз якості повітря за тими стандартами, які діяли на момент проведення вимірювання, запобігаючи спотворенню статистичних оцінок.</p>
+<p>Для систематизації архітектурних рішень при проєктуванні екологічних баз даних сформовано порівняльну таблицю технологічних парадигм організації сховищ.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Парадигма організації БД</th>
+<th style="text-align: left;">Модель даних та структурні особливості</th>
+<th style="text-align: left;">Продуктивність операцій запису та аналітики</th>
+<th style="text-align: left;">Механізми масштабування</th>
+<th style="text-align: left;">Приклад з реальної практики</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Класична реляційна модель (SQL)</td>
+<td style="text-align: left;">Таблиці з фіксованою схемою, первинні та зовнішні ключі, ACID-транзакції</td>
+<td style="text-align: left;">Висока надійність транзакцій, уповільнення аналітичних вибірок на великих обсягах (<span class="arithmatex">\(&gt;10^7\)</span> рядків)</td>
+<td style="text-align: left;">Вертикальне масштабування, шардування таблиць за роками</td>
+<td style="text-align: left;">База даних MySQL комунального підприємства «НДЦ» м. Кременчук</td>
+</tr>
+<tr>
+<td style="text-align: left;">Часорядна модель (Time-Series DB)</td>
+<td style="text-align: left;">Орієнтація на часові мітки, автоматичне партиціонування за часом, компресія дельт</td>
+<td style="text-align: left;">Оптимізована під масивний паралельний потік запису (<span class="arithmatex">\(&gt;10^5\)</span> подій/с), швидка агрегація часових вікон</td>
+<td style="text-align: left;">Горизонтальне кластерне масштабування</td>
+<td style="text-align: left;">Розгортання InfluxDB / TimescaleDB для сенсорних мереж Smart City</td>
+</tr>
+<tr>
+<td style="text-align: left;">Документо-орієнтована модель (NoSQL)</td>
+<td style="text-align: left;">Напівструктуровані документи JSON/BSON, динамічна поліморфна схема</td>
+<td style="text-align: left;">Висока швидкість ініціалізації запису неструктурованих пакетів, відсутність строгих ACID-гарантій</td>
+<td style="text-align: left;">Просте горизонтальне масштабування через реплікацію та автошардинг</td>
+<td style="text-align: left;">Збереження сирих телеметричних логів станцій Vaisala у MongoDB</td>
+</tr>
+<tr>
+<td style="text-align: left;">Графова модель даних</td>
+<td style="text-align: left;">Вузли (станції, джерела) та ребра (напрямки вітрового переносу, зв'язки впливу)</td>
+<td style="text-align: left;">Швидкий пошук шляхів поширення забруднення та топологічної зв'язності мережі</td>
+<td style="text-align: left;">Складне масштабування при збільшенні щільності взаємних зв'язків</td>
+<td style="text-align: left;">Моделювання міграції викидів уздовж русла Дніпра в Neo4j</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>ТИПОВА ПОМИЛКА:</strong> Збереження всього масиву екологічних вимірювань різних хімічних речовин у вигляді неструктурованих рядків JSON усередині єдиного текстового стовпця реляційної таблиці. Хоча такий підхід спрощує початкове додавання нових сенсорів, він повністю блокує індексацію за значеннями окремих параметрів, унеможливлює використання оптимізатора SQL-запитів та перетворює будь-яку фільтрацію за критерієм перевищення ГДК на повне послідовне сканування всієї таблиці (Full Table Scan), що паралізує сервер при досягненні обсягу бази в кілька гігабайтів.</p>
+</blockquote>
+<hr />
+<h3 id="13-">1.3. Механізми декларативного контролю цілісності, оптимізації зв'язків «один-до-багатьох» та конфігурації первинних і зовнішніх ключів</h3>
+<p>Забезпечення цілісності інформаційного сховища є критичним інваріантом функціонування систем екологічного менеджменту. Помилки узгодженості, втрата зовнішніх ключів або поява сутностей-сиріт (наприклад, вимірювань, прив'язаних до неіснуючого поста) можуть призвести до спотворення екологічної звітності та некоректних рішень регуляторних органів.</p>
+<p>Декларативний контроль цілісності забезпечується системою обмежень реляційної СУБД. Обмеження сутності (Entity Integrity) гарантується використанням унікальних непорожніх сурогатних ключів (<code>PRIMARY KEY</code> типу <code>BIGINT UNSIGNED AUTO_INCREMENT</code>). Посилальна цілісність (Referential Integrity) регулюється зовнішніми ключами (<code>FOREIGN KEY</code>) із обов'язковим декларуванням каскадних правил поведінки при модифікації чи видаленні батьківських записів:</p>
+<div class="arithmatex">\[\text{FK\_Constraint}: \quad \forall t \in R_{\text{data}} \quad \exists s \in R_{\text{post}} \quad \text{such that} \quad t[\text{PostID}] = s[\text{PostID}]\]</div>
+<p>Для запобігання втрати історичних спостережень при видаленні інформації про виведені з експлуатації пости спостереження застосовується правило м'якого видалення (<code>Soft Deletes</code>) на рівні бізнес-логіки та обмеження <code>ON DELETE RESTRICT</code> на рівні фізичної схеми бази даних, що апаратно блокує пряме видалення об'єктів моніторингу за наявності пов'язаних із ними вимірювань.</p>
+<p>Оптимізація реляційних зв'язків типу «один-до-багатьох» між станцією та мільйонами її вимірювань базується на правильній побудові складених B-Tree індексів. Поодинокий індекс за часовою міткою є неефективним при вибірці даних конкретної станції. Оптимальним є конфігурування складеного покриваючого індексу:</p>
+<div class="arithmatex">\[\text{Index}_{\text{opt}} = \big\langle \text{PostID}, \, \text{Timestamp}, \, \text{PollutantID} \big\rangle\]</div>
+<p>Така структура індексу дозволяє системі знаходити необхідні часові інтервали для обраного вимірювального вузла виключно шляхом навігації по сторінках індексного дерева в оперативній пам'яті (Index-Only Scan), без звернення до блоків даних на жорсткому диску, що знижує час виконання запитів формування звітності за Постановою № 827 із десятків секунд до кількох мілісекунд.</p>
+<hr />
+<h3 id="14-orm-eloquent-laravel">1.4. Проєктування об'єктно-реляційного відображення з використанням ORM Eloquent та версіонування структури засобами міграцій Laravel</h3>
+<p>Імплементація програмного доступу до бази даних здійснюється на основі патерну проектування Active Record, реалізованого в об'єктно-реляційному відображенні <strong>ORM Eloquent</strong> фреймворку Laravel. Парадигма ORM абстрагує прикладну бізнес-логіку аналізу забруднення від низькорівневих діалектів SQL, представляючи кожну таблицю бази даних у вигляді відповідного класу PHP, а кожний рядок — у вигляді екземпляра цього об'єкта.</p>
+<p>В архітектурі системи для кожної станції та кожного типу даних проектуються спеціалізовані моделі. Наприклад, модель станції <code>Station1748</code> інкапсулює логіку взаємодії з даними поста громадської мережі EcoCity. Для автоматичного розрахунку та захисту від дублювання записів використовується подійний механізм життєвого циклу моделі (Model Observers / Lifecycle Hooks). У момент ініціалізації запису генерується унікальний детермінований цифровий відбиток:</p>
+<div class="arithmatex">\[\text{UniqueHash} = \text{MD5}\big( \text{place\_id} \parallel \text{split\_number} \parallel \text{option} \parallel \text{measurement\_value} \parallel \text{measurement\_time} \big)\]</div>
+<p>де символ <span class="arithmatex">\(\parallel\)</span> позначає конкатенацію рядкових представлень атрибутів вимірювання. Генерація хешу здійснюється у методі <code>boot()</code> моделі безпосередньо перед виконанням SQL-запиту вставки. У разі надходження дублюючого пакета за тим самим часовим зрізом СУБД відхиляє транзакцію завдяки обмеженню <code>UNIQUE(unique_hash)</code>, гарантуючи абсолютну валідність часового ряду.</p>
+<p>Версіонування та еволюція структури сховища організуються за допомогою механізму <strong>міграцій Laravel</strong>. Міграції являють собою системні файли коду, які описують мутації структури таблиць, додавання нових стовпців, індексів та зовнішніх ключів у часі. Це забезпечує повну відтворюваність середовища бази даних на серверах розробки, тестових кластерах та виробничих серверах без необхідності ручного імпорту SQL-дампів.</p>
+<pre class="mermaid"><code>stateDiagram-v2
+    [*] --&gt; Створення_Файлу_Міграції: Команда artisan make:migration
+    Створення_Файлу_Міграції --&gt; Опис_Схеми_та_Індексів: Визначення методів up() та down()
+    Опис_Схеми_та_Індексів --&gt; Виконання_Міграції: Команда artisan migrate
+
+    state Виконання_Міграції {
+        Перевірка_Таблиці_migrations --&gt; Фільтрація_Незастосованих: Вибірка за полем batch
+        Фільтрація_Незастосованих --&gt; Виконання_DDL_Запитів: Створення таблиці та індексів
+        Виконання_DDL_Запитів --&gt; Фіксація_Пакета_Міграції: Запис імені файлу в migrations
+    }
+
+    Виконання_Міграції --&gt; Робочий_Стан_БД: Структура синхронізована
+    Робочий_Стан_БД --&gt; Відкат_Міграцій: Команда artisan migrate:rollback
+    Відкат_Міграцій --&gt; Опис_Схеми_та_Індексів: Виконання методу down()
+    Робочий_Стан_БД --&gt; [*]</code></pre>
+<p>Інформація про всі застосовані пакети фіксується у системній таблиці <code>migrations</code>. Це виключає ризик повторного виконання DDL-команд та дозволяє команді інженерів безболісно розширювати архітектуру сховища, наприклад, під час підключення нових датчиків важких металів чи радіаційного фону без зупинки основного циклу моніторингу.</p>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> У проєкті муніципальної бази даних Кременчука розгортання схеми, що містила окремі таблиці для серійних номерів станцій Vaisala (<code>station_T3950716</code>, <code>station_V0440346</code>, <code>station_T3950713</code>) та інтегрованої таблиці <code>split_measurement_ua171</code>, було здійснено за допомогою ланцюжка з 20 послідовних міграцій, що забезпечило безпомилковий перехід від монолітної тестової структури до масштабованої реляційної моделі на виробничому VPS-сервері під керуванням Ubuntu 22.04 LTS.</p>
+</blockquote>
+<hr />
+<blockquote>
+<p><strong>КОНТРОЛЬНЕ ПИТАННЯ:</strong> Під час натурної експлуатації муніципальної бази даних було помічено, що швидкість формування місячного аналітичного звіту щодо забруднення повітря різко деградувала з 0,2 секунди до 48 секунд після накопичення 10 мільйонів рядків у таблиці первинних вимірювань. База даних спроєктована в класичній нормалізованій формі 3NF, де таблиця вимірювань містить лише атомарні щохвилинні значення одного датчика на рядок. Яке архітектурне рішення в рамках реляційної моделі дозволить кардинально відновити швидкодію формування звітності без втрати ретроспективних первинних даних?</p>
+</blockquote>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: Впровадження контрольованої денормалізації через проектування агрегатної таблиці часових зрізів із фоновим перерахунком у регламентних завданнях cron.</strong></p>
+<ol>
+<li>
+<p>Повне логічне та аналітичне обґрунтування:</p>
+</li>
+<li>
+<p>Запити формування екологічних звітів за нормативами Постанови № 827 оперують усередненими 20-хвилинними, добовими та місячними показниками. У чистій схемі 3NF для отримання місячного графіка за всіма полютантами СУБД змушена агрегувати мільйони атомарних рядків за допомогою операцій <code>AVG()</code>, <code>GROUP BY</code> та багаторазових з'єднань <code>JOIN</code>.</p>
+</li>
+<li>
+<p>Оптимальним інженерним рішенням є розгортання денормалізованої таблиці часових зрізів (аналог <code>split_measurement_ua171</code> або <code>vaisala_splits</code>), де один рядок містить уже попередньо осереднені значення для всіх вимірюваних газів і пилу за фіксований проміжок часу разом із показниками повноти даних. Фоновий процес операційної системи (cron) перераховує та наповнює цю таблицю з низьким пріоритетом кожні 20 хвилин. Аналітичний веб-інтерфейс звертається виключно до агрегатної таблиці, яка містить у сотні разів менше записів, що повертає час виконання запиту до мілісекундного діапазону.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Твердження про необхідність простого збільшення обсягу оперативної пам'яті сервера (RAM) вирішує проблему лише тимчасово і призводить до невиправданих фінансових витрат, оскільки не усуває алгоритмічну складність обчислення агрегатів над невпинно зростаючим масивом.</p>
+</li>
+<li>
+<p>Пропозиція щодо видалення щохвилинних первинних даних після їх запису є неприпустимою, оскільки первинні хвилинні ряди необхідні для розслідування залпових аварійних викидів, перевірки дрейфу датчиків та проведення наукових досліджень просторової дифузії.</p>
+</li>
+</ol>
+</details>
+<hr />
+<h3 id="_3">Вказівки для самостійного осмислення</h3>
+<ol>
+<li>
+<p>Складіть математичну схему реляційних функціональних залежностей для сутності контролю викидів промислового підприємства та доведіть аналітично, чи перебуває запропонована в кейсі таблиця агрегованих зрізів <code>split_measurement_ua171</code> у третій нормальній формі (3NF) або нормальній формі Бойса-Кодда (BCNF).</p>
+</li>
+<li>
+<p>Спроєктуйте міграцію Laravel, яка реалізує створення складеного індексу за атрибутами просторових координат та часової мітки з використанням геопросторових типів даних MySQL Spatial (<code>POINT</code>, <code>SRID 3857</code>), порівнявши ефективність просторового R-Tree індексу зі стандартним B-Tree індексом.</p>
+</li>
+<li>
+<p>Проаналізуйте наслідки використання механізму <code>SoftDeletes</code> для великих таблиць екологічних часових рядів та оцініть вплив додаткової умови <code>WHERE deleted_at IS NULL</code> на швидкість сканування індексів в аналітичних SQL-запитах.</p>
+</li>
+</ol>
+<h2 id="2">2. Методологія та аналіз граничних умов. Управління великими масивами часових рядів та оптимізація запитів</h2>
+<h3 id="21-">2.1. Алгоритми фільтрації та генерації унікальних хеш-ідентифікаторів записів для усунення дублювання вимірювань сенсорів реального часу</h3>
+<p>Масове надходження потокових вимірювань від периферійних екологічних комплексів через нестабільні бездротові канали зв'язку неминуче супроводжується мережевими колізіями, затримками та повторним надсиланням пакетів датаграм. Якщо механізм повторної передачі протоколу транспортного рівня спрацьовує за умов втрати пакета підтвердження (ACK), серверний приймальний інтерфейс отримує дублюючі пакети спостережень. У реляційній базі даних пряма вставка таких записів без попереднього семантичного аналізу призводить до спотворення статистичних рядів, штучного заниження або завищення розрахункових середньодобових концентрацій та хибної ідентифікації тривалості перевищень гранично допустимих концентрацій.</p>
+<p>Для забезпечення ідемпотентності операцій запису розроблено алгоритм фільтрації та генерації детермінованих цифрових відбитків на етапі перехоплення транзакцій. Традиційний підхід, що базується на використанні виключно мітки часу як унікального ключа, виявляється непридатним у мультисенсорних комплексах, оскільки кілька різних датчиків (наприклад, концентрації оксиду вуглецю та пилу PM10) опитуються одночасно і мають ідентичний часовий штамп. Тому формується складений криптографічний геш-ідентифікатор, який однозначно зв'язує фізичний вузол, часовий зріз, тип досліджуваного параметра та виміряну числову амплітуду.</p>
+<p>Формалізація наскрізного процесу фільтрації, дедуплікації, інтервальної агрегації та контрольованої очистки первинних даних описується у вигляді математико-алгоритмічного контуру:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\text{Крок 1 (Формування гешу):} &amp; \quad h_k = \mathcal{H}_{\text{MD5}}\Big( \text{id}_{\text{place}} \parallel t_{\text{meas}} \parallel \text{opt}_{\text{code}} \parallel \text{round}(v_{\text{meas}}, 4) \Big) \\
+\text{Крок 2 (Ідемпотентний запис):} &amp; \quad \text{INSERT INTO } R_{\text{raw}} \text{ VALUES } (\dots, h_k) \quad \text{ON DUPLICATE KEY UPDATE } \text{id} = \text{id} \\
+\text{Крок 3 (Віконна агрегація):} &amp; \quad \bar{C}_{j}(\mathcal{W}_m) = \frac{1}{|\mathcal{W}_m|} \sum_{t_i \in \mathcal{W}_m} C_{j}(t_i), \quad \mathcal{W}_m = [T_m, \, T_m + \Delta t) \\
+\text{Крок 4 (Оцінка повноти ряду):} &amp; \quad \mathcal{K}_{\text{ratio}}(\mathcal{W}_m) = \frac{|\{t_i \in \mathcal{W}_m : C_{j}(t_i) \neq \text{NULL}\}|}{N_{\text{nominal}}} \\
+\text{Крок 5 (Регламентна ротація):} &amp; \quad \text{DELETE FROM } R_{\text{raw}} \quad \text{WHERE } t_{\text{meas}} &lt; (t_{\text{current}} - T_{\text{retention}}) \quad \land \quad \text{Processed} = 1
+\end{aligned}
+\]</div>
+<p>де змінні та функціональні оператори мають наступне фізичне й системне значення:</p>
+<ul>
+<li>
+<p>Функція <span class="arithmatex">\(\mathcal{H}_{\text{MD5}}(\cdot)\)</span> реалізує гешування конкатенованого рядка параметрів, повертаючи фіксований 32-символьний шістнадцятковий цифровий відбиток.</p>
+</li>
+<li>
+<p>Змінні <span class="arithmatex">\(\text{id}_{\text{place}}\)</span>, <span class="arithmatex">\(t_{\text{meas}}\)</span>, <span class="arithmatex">\(\text{opt}_{\text{code}}\)</span> та <span class="arithmatex">\(v_{\text{meas}}\)</span> відображають ідентифікатор вимірювального поста, часову мітку заміру, літерний або числовий код хімічного полютанта та виміряну фізичну величину відповідно.</p>
+</li>
+<li>
+<p>Функція <span class="arithmatex">\(\text{round}(v_{\text{meas}}, 4)\)</span> відсікає мікроколивання молодших розрядів аналогово-цифрового перетворювача, спричинені температурним дрейфом.</p>
+</li>
+<li>
+<p>Вираз <span class="arithmatex">\(\text{ON DUPLICATE KEY UPDATE}\)</span> забезпечує апаратне ігнорування вставки дублюючого рядка механізмом реляційного ядра без аварійної зупинки поточної транзакції.</p>
+</li>
+<li>
+<p>Множина <span class="arithmatex">\(\mathcal{W}_m\)</span> визначає межі розрахункового часового вікна дискретизації тривалістю <span class="arithmatex">\(\Delta t\)</span> (для стандарту Постанови № 827 величина <span class="arithmatex">\(\Delta t = 20\text{ хв}\)</span>).</p>
+</li>
+<li>
+<p>Коефіцієнт <span class="arithmatex">\(\mathcal{K}_{\text{ratio}}(\mathcal{W}_m) \in [0, 1]\)</span> фіксує повноту спостережень відносно номінально очікуваної кількості вимірів <span class="arithmatex">\(N_{\text{nominal}}\)</span> (для хвилинних вимірювань за 20-хвилинний інтервал номінальне значення становить <span class="arithmatex">\(N_{\text{nominal}} = 20\)</span>).</p>
+</li>
+<li>
+<p>Параметр <span class="arithmatex">\(T_{\text{retention}}\)</span> регламентує період збереження детальних хвилинних вибірок, після завершення якого сирі масиви підлягають апаратному очищенню для вивільнення дискового простору.</p>
+</li>
+</ul>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    actor Sensor as Сенсорна станція Vaisala / EcoCity
+    participant Worker as Планувальник Cron (PHP Console)
+    participant Engine as СУБД MySQL (InnoDB Storage Engine)
+    participant Buffer as Буферний пул InnoDB (RAM)
+    participant Disk as Дискова підсистема SSD
+
+    Sensor-&gt;&gt;Worker: Потокова передача сирих пакетів (Vaisala API / Socket)
+    Worker-&gt;&gt;Worker: Розрахунок детермінованого MD5-хешу запису
+    Worker-&gt;&gt;Engine: Пакетний запит INSERT ... ON DUPLICATE KEY UPDATE
+    Engine-&gt;&gt;Buffer: Пошук сторінки B-Tree індексу у пулі буферів
+    alt Запис уже присутній у базі (Колізія хешу)
+        Buffer--&gt;&gt;Engine: Збіг індексного значення unique_hash
+        Engine--&gt;&gt;Worker: Ігнорування вставки (0 рядків додано)
+    else Новий унікальний вимір
+        Buffer-&gt;&gt;Buffer: Модифікація сторінки даних в оперативній пам'яті
+        Engine-&gt;&gt;Disk: Асинхронний запис у журнал транзакцій (redo log)
+        Engine--&gt;&gt;Worker: Підтвердження фіксації транзакції
+    end
+    Note over Worker,Engine: Регламентне завдання усереднення (кожні 20 хв)
+    Worker-&gt;&gt;Engine: Розрахунок агрегатів AVG() та заповнення split_measurement_ua171
+    Worker-&gt;&gt;Engine: Очищення сирих рядків старших за T_retention (DELETE)</code></pre>
+<p>Застосування такого підходу гарантує збереження суворої хронологічної монотонності часового ряду без необхідності виконання попередніх ресурсомістких SQL-запитів типу <code>SELECT COUNT(*)</code> перед кожною операцією вставки, що зберігає пропускну здатність дискової підсистеми сервера.</p>
+<hr />
+<h3 id="22-20-cron">2.2. Організація багаторівневого усереднення даних від однохвилинних спостережень до 20-хвилинних, добових, місячних та річних зрізів у фонових процесах cron</h3>
+<p>Безперервний потік щохвилинних вимірювань формує значні обсяги інформації: один вимірювальний пост, оснащений комплексним газоаналізатором та метеостанцією, генерує близько 1440 часових зрізів на добу за кожним із 15 контрольованих параметрів, що становить понад 7,8 мільйона записів на рік. Пряме виконання аналітичних SQL-запитів для побудови графіків або формування звітів за такими неагрегованими таблицями потребує зчитування сотень мегабайтів дискових сторінок, викликаючи блокування таблиць і різке зростання затримок відповіді системи.</p>
+<p>Методологічне вирішення полягає у побудові <strong>асинхронного ієрархічного конвеєра осереднення даних</strong>, реалізованого через системний планувальник завдань операційної системи (<code>cron</code>) та консольні команди фреймворку Laravel. Архітектура функціонування розподіляється на незалежні часові цикли:</p>
+<p>Перший фоновий процес (<code>VaisalaApi.php</code>) ініціюється кожні 10 хвилин. Його завданням є авторизація на шлюзах вимірювальних станцій, вивантаження накопичених порцій сирих спостережень, валідація форматів та їхня пакетна фіксація у первинних таблицях типу <code>station_T3950716</code> або <code>station1748</code>. Факт успішного виконання або помилки мережевої сесії обов'язково протоколюється у таблиці аудиту <code>vaisala_api_log</code>.</p>
+<p>Другий фоновий процес (<code>SetVaisala20mSplits.php</code>) запускається кожні 20 хвилин. Цей модуль вибирає всі непозначені сирі записи за минулий інтервал, розраховує середньоарифметичні значення концентрацій забруднюючих речовин, оцінює відносну повноту інформаційного потоку <span class="arithmatex">\(\mathcal{K}_{\text{ratio}}\)</span> та формує новий денормалізований рядок у зведеній таблиці <code>split_measurement_ua171</code>. Якщо кількість успішних спостережень за 20 хвилин становить менше 75% від номінальної (<span class="arithmatex">\(N &lt; 15\)</span>), запис маркується спеціальним прапорцем неповноти даних, що виключає його використання для арбітражних рішень, але зберігає для загального статистичного обліку.</p>
+<p>Третій рівень конвеєра активується в кінці доби та наприкінці календарного місяця. Спеціалізовані обробники агрегують уже сформовані 20-хвилинні інтервали у добові, місячні та річні еквіваленти, записуючи результати у відповідні поля реляційної схеми (<code>is_daily = 1</code>, <code>is_monthly = 1</code>, <code>is_yearly = 1</code>). Така багаторівнева структура дозволяє клієнтським веб-додаткам миттєво зчитувати готові річні тренди без повторного виконання математичних операцій над первинними масивами.</p>
+<blockquote>
+<p><strong>ВАЖЛИВО:</strong> Регламентні процеси агрегації часових рядів обов'язково повинні виконуватися в межах транзакцій із рівнем ізоляції <code>READ COMMITTED</code> або використовувати механізм блокування рядків <code>FOR UPDATE</code> для запобігання ситуації гонитви (race condition), коли фоновий процес намагається розрахувати середнє значення над масивом, у який у цей же момент записуються нові пакети від мережевого сокета.</p>
+</blockquote>
+<hr />
+<h3 id="23-big-data">2.3. Критичні обмеження пропускної здатності дискових підсистем та деградація продуктивності реляційних СУБД при масштабуванні транзакцій екологічних Big Data</h3>
+<p>Незважаючи на високу стабільність класичних реляційних систем керування базами даних (зокрема MySQL та PostgreSQL), їхня експлуатація в задачах неперервної фіксації екологічних часових рядів стикається з жорсткими фізичними та алгоритмічними обмеженнями. Основним вузьким місцем виступає <strong>I/O-пляшкове горло</strong> дискової підсистеми, зумовлене деградацією продуктивності буферного пулу оперативної пам'яті (<code>InnoDB Buffer Pool</code>).</p>
+<p>Поки загальний обсяг активних індексів та таблиць вміщується в оперативну пам'ять сервера, операції вставки та вибірки відбуваються з мікросекундною затримкою. Проте, коли розмір бази даних перевищує виділений обсяг RAM (типова ситуація для бюджетних муніципальних серверів із 1–2 Гбайт оперативної пам'яті при розмірі сховища понад 20 Гбайт), СУБД змушена постійно витісняти старі сторінки пам'яті на фізичний диск за алгоритмом LRU (Least Recently Used). При надходженні аналітичного запиту на вибірку ретроспективних даних за минулий рік виникає лавиноподібне зчитування випадкових блоків з диска (disk thrashing), що призводить до повного вичерпання ліміту операцій вводу-виводу за секунду (<strong>IOPS starvation</strong>) та паралізує обслуговування нових пакетів від датчиків.</p>
+<p>Граничні умови стабільного функціонування реляційної моделі спостережень порушуються в таких реальних інженерних ситуаціях:</p>
+<ol>
+<li>
+<p><strong>Накладання фонових процесів агрегації (Cron Overlap).</strong> Якщо обсяг первинних даних різко зростає або дискова підсистема деградує, черговий запуск скрипта розрахунку 20-хвилинних зрізів може тривати довше регламентного інтервалу (наприклад, 25 хвилин замість очікуваних 30 секунд). Планувальник операційної системи ініціює наступний екземпляр процесу паралельно з незавершеним, що викликає взаємне блокування ресурсів бази даних (deadlocks), вичерпання пулу доступних SQL-з'єднань (<code>max_connections</code>) та аварійну зупинку веб-сервера.</p>
+</li>
+<li>
+<p><strong>Масивне блокування метаданих при ротації даних (Metadata Lock Contention).</strong> Процедура очищення застарілих щохвилинних спостережень за допомогою оператора <code>DELETE FROM station_raw WHERE ...</code> сканує значні діапазони індексів. Це накладає блокування спільних блоків (Shared Locks), що унеможливлює паралельне виконання операцій вставки нових пакетів (<code>INSERT</code>) від автоматичних станцій. Черга вхідних повідомлень починає лавиноподібно зростати в оперативній пам'яті шлюзу, викликаючи аварійне скидання сокетів.</p>
+</li>
+<li>
+<p><strong>Дефіцит вільного дискового простору та фрагментація табличних просторів.</strong> Збереження багаторічних ретроспективних даних на невеликих VPS-серверах із фіксованим накопичувачем (наприклад, 20–40 Гбайт) призводить до заповнення понад 90% диска. За таких умов СУБД втрачає можливість створювати тимчасові файли для сортування великих аналітичних вибірок, табличний простір <code>ibdata</code> фрагментується, а механізм подвійного запису (<code>doublewrite buffer</code>) уповільнює будь-яку транзакцію у 3–5 разів.</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> Під час експлуатації муніципального сервера екологічного моніторингу КП «НДЦ» на орендованому VPS-хостингу з лімітом диска 20 Гбайт і оперативною пам'яттю 1024 Мбайт одночасне накопичення сирих однохвилинних показників чотирьох станцій EcoCity призвело до вичерпання 85% дискового простору за 14 місяців, що змусило розробників терміново впровадити скрипт <code>DeleteOldMeasurementData.php</code> для ротаційного видалення сирих вимірювань після їхньої фіксації у таблиці зведених зрізів.</p>
+</blockquote>
+<hr />
+<h3 id="24-pdo">2.4. Архітектура безпечного доступу до даних через параметризовані запити PDO та ізоляцію транзакцій для підтримки аналітичних вибірок</h3>
+<p>Забезпечення стійкості інформаційної системи вимагає розмежування транзакційних потоків високої інтенсивності (OLTP), що наповнюють базу даними від сенсорів, та аналітичних запитів низької частоти (OLAP), що генеруються користувачами через вебінтерфейси для побудови графіків і звітів. Безпечна взаємодія серверного додатку на базі PHP з реляційним ядром реалізується через інтерфейс <strong>PHP Data Objects (PDO)</strong>.</p>
+<p>Використання параметризованих підготовлених запитів (Prepared Statements) у PDO вирішує дві фундаментальні інженерні задачі. По-перше, воно повністю усуває загрозу ін'єкцій шкідливого SQL-коду, оскільки передані параметри (наприклад, назва станції чи часові межі) компілюються СУБД окремо від структури запиту і ні за яких умов не можуть змінити логіку виконання інструкції. По-друге, механізм підготовлених запитів оптимізує навантаження на процесор бази даних завдяки повторному використанню вже скомпільованого плану виконання (Execution Plan) для циклічних пакетних вставок вимірювань.</p>
+<p>Для запобігання взаємного впливу між процесами аналітики та збереженням вимірювань критичним є вибір правильного рівня ізоляції транзакцій стандарту ANSI/ISO SQL. Рівень <code>SERIALIZABLE</code> хоча й гарантує абсолютну узгодженість, є неприйнятним через надмірну кількість блокувань діапазонів ключів (Range Locks). Оптимальним інваріантом є встановлення рівня ізоляції <strong>READ COMMITTED</strong> у поєднанні з механізмом багатовірсійного керування конкурентним доступом (<strong>MVCC</strong>, Multi-Version Concurrency Control). У цьому режимі аналітичні запити вибірки даних для візуалізації зчитують зліпок бази даних на момент початку виконання інструкції, не блокуючи процеси додавання нових спостережень від станцій моніторингу.</p>
+<p>Для порівняння архітектурних методів оптимізації обробки та агрегації екологічних часових рядів наведено систематизовану матрицю інженерних рішень.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Стратегія обробки даних</th>
+<th style="text-align: left;">Архітектурна реалізація</th>
+<th style="text-align: left;">Продуктивність операцій вставки (Write Throughput)</th>
+<th style="text-align: left;">Вплив на аналітичні запити (Read Latency)</th>
+<th style="text-align: left;">Складність впровадження</th>
+<th style="text-align: left;">Критичні ризики та обмеження методології</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Синхронна построкова вставка через тригери БД</td>
+<td style="text-align: left;">Тригери <code>AFTER INSERT</code> для розрахунку середніх значень</td>
+<td style="text-align: left;">Вкрай низька (до <span class="arithmatex">\(10^2\)</span> рядків/с через накладні витрати)</td>
+<td style="text-align: left;">Мінімальна затримка; агрегати завжди актуальні</td>
+<td style="text-align: left;">Низька; реалізується суто засобами СУБД</td>
+<td style="text-align: left;">Каскадне блокування таблиць, різке падіння швидкості запису сенсорного потоку</td>
+</tr>
+<tr>
+<td style="text-align: left;">Пакетна асинхронна агрегація у планувальнику Cron</td>
+<td style="text-align: left;">Консольні команди PHP Laravel за розкладом cron</td>
+<td style="text-align: left;">Висока (до <span class="arithmatex">\(10^4\)</span> рядків/с при використанні bulk insert)</td>
+<td style="text-align: left;">Затримка появи агрегатів до 20 хвилин</td>
+<td style="text-align: left;">Середня; вимагає налаштування черг і системного демона</td>
+<td style="text-align: left;">Ризик накладання завдань (cron overlap) при деградації диска та поява дедлоків</td>
+</tr>
+<tr>
+<td style="text-align: left;">Автоматичне секціонування таблиць (Partitioning)</td>
+<td style="text-align: left;">Розбиття таблиці вимірювань на секції за діапазоном дат <code>RANGE(TO_DAYS)</code></td>
+<td style="text-align: left;">Дуже висока; швидке відсікання старих секцій через <code>DROP PARTITION</code></td>
+<td style="text-align: left;">Висока швидкість вибірок за рахунок механізму Partition Pruning</td>
+<td style="text-align: left;">Висока; вимагає включення поля дати у всі складені первинні ключі</td>
+<td style="text-align: left;">Жорсткі обмеження СУБД на побудову глобальних зовнішніх ключів</td>
+</tr>
+<tr>
+<td style="text-align: left;">Часорядні гіпертаблиці (TimescaleDB Hypertables)</td>
+<td style="text-align: left;">Автоматичне дворівневе шардування за часом і простором поверх PostgreSQL</td>
+<td style="text-align: left;">Екстремально висока; паралельна оптимізована фіксація</td>
+<td style="text-align: left;">Мінімальна затримка; нативна підтримка аналітичних функцій часу</td>
+<td style="text-align: left;">Дуже висока; вимагає міграції з MySQL та специфічних модулів</td>
+<td style="text-align: left;">Високі апаратні вимоги до RAM для утримання метаданих гіперчанків</td>
+</tr>
+<tr>
+<td style="text-align: left;">Проміжне буферизування у пам'яті (Redis / Memory Engine)</td>
+<td style="text-align: left;">Приймання потоку в чергу Redis з періодичним дампом у реляційну БД</td>
+<td style="text-align: left;">Максимальна; лімітується лише швидкістю мережевого інтерфейсу</td>
+<td style="text-align: left;">Читання поточних даних із RAM, історичних — з диска</td>
+<td style="text-align: left;">Висока; поява додаткового вузла архітектури</td>
+<td style="text-align: left;">Ризик втрати оперативних даних за умови раптового знеструмлення сервера</td>
+</tr>
+</tbody>
+</table>
+<p>Аналіз матриці свідчить, що комбінація секціонування таблиць за часовими інтервалами та асинхронної пакетної агрегації через консольні команди Laravel є найбільш збалансованим вибором для міських екологічних систем, розгорнутих на стандартних ресурсообмежених серверах.</p>
+<blockquote>
+<p><strong>КОНТРОЛЬНЕ ПИТАННЯ:</strong> Під час переходу станцій екологічного моніторингу міста в аварійний режим підвищеної дискретизації (пакети надходять щосекунди від 10 станцій) муніципальний сервер на базі MySQL почав фіксувати масові помилки <code>Lock wait timeout exceeded; try restarting transaction</code>. Моніторинг показує, що 98% процесорного часу споживає дискова підсистема (стан <code>iowait</code>), а розмір таблиці сирих вимірювань сягнув 12 Гбайт при доступних 1024 Мбайт оперативної пам'яті. Запропонуйте поетапний комплекс інженерних заходів для ліквідації дедлоків та стабілізації процесу збереження даних без втрати спостережень.</p>
+</blockquote>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: Перехід на буферизовану пакетну вставку, оптимізація розміру транзакцій та секціонування таблиць.</strong></p>
+<ol>
+<li>
+<p>Покроковий план стабілізації системи:</p>
+</li>
+<li>
+<p><strong>Етап 1 (Буферизація вхідного потоку):</strong> Замість безпосередньої вставки кожного окремого секундного вимірювання окремою SQL-транзакцією потік повідомлень перенаправляється у тимчасовий оперативний буфер (наприклад, Redis або локальний файл швидкого доступу). Консольний обробник вичитує буфер пачками по 500–1000 записів і виконує одну масивну інструкцію <code>INSERT INTO ... VALUES (...), (...), (...)</code>, що скорочує кількість дискових синхронізацій журналу транзакцій (fsync) у сотні разів.</p>
+</li>
+<li>
+<p><strong>Етап 2 (Зниження навантаження на журнал транзакцій):</strong> У конфігурації MySQL <code>my.cnf</code> тимчасово встановлюється параметр <code>innodb_flush_log_at_trx_commit = 2</code>, що дозволяє записувати лог транзакцій в оперативну пам'ять ОС замість примусового скидання на фізичний диск при кожному коміті, усуваючи стан <code>iowait</code>.</p>
+</li>
+<li>
+<p><strong>Етап 3 (Секціонування та ротація):</strong> Таблиця первинних даних розбивається на щомісячні секції (partitions). Процедура очищення старих вимірювань переводиться з важкого оператора <code>DELETE</code> на миттєве скидання застарілої секції <code>ALTER TABLE ... DROP PARTITION</code>, що виконується як метадана операція без блокування індексних дерев і рядків.</p>
+</li>
+<li>
+<p><strong>Етап 4 (Оптимізація пулу пам'яті):</strong> Виділення буферного пулу <code>innodb_buffer_pool_size</code> обмежується 60–70% доступної фізичної RAM, запобігаючи витісненню процесу СУБД у swap-файл операційної системи.</p>
+</li>
+<li>
+<p>Аналіз дистракторів (чому інші заходи є неефективними):</p>
+</li>
+<li>
+<p>Просте збільшення таймауту блокування <code>innodb_lock_wait_timeout</code> лише замаскує проблему, призвівши до накопичення гігантських черг завислих транзакцій і повного вичерпання пулу доступних пам'яті та з'єднань.</p>
+</li>
+<li>
+<p>Вимкнення індексів у таблиці вимірювань прискорить вставку, проте зробить неможливою роботу скриптів усереднення та аналітичних інтерфейсів, оскільки будь-яка вибірка вимагатиме повного сканування 12 Гбайт таблиці.</p>
+</li>
+</ol>
+</details>
+<h2 id="3_1">3. Практичний індустріальний / фаховий кейс. Розробка корпоративної бази даних екологічного підприємства</h2>
+<h3 id="31-vaisala-no-827">3.1. Комплексний фаховий кейс. Проєктування та розгортання структури бази даних комунального підприємства для збереження показників станцій Vaisala з автоматичною генерацією звітів за формою постанови КМУ № 827</h3>
+<h4 id="_4">Постановка задачі / ситуації</h4>
+<p>Комунальне підприємство «Науковий центр еколого-соціальних досліджень» (КП «НДЦ») Кременчуцької міської ради здійснює моніторинг стану атмосферного повітря промислової агломерації. На балансі підприємства перебувають три високоточні автоматичні станції Vaisala: станції з серійними номерами T3950713 та T3950716, що містять метеомодуль WXT530 і газоаналізатор AQT530 (15 вимірюваних параметрів), а також станція V0440346, укомплектована лише газоаналізатором AQT530. Раніше дані надходили до хмарного сервісу виробника, проте висока вартість підписки (1200 доларів США на рік за одну станцію) та закритість вихідного коду унеможливлювали адаптацію системи до внутрішніх стандартів документообігу та автоматичного формування звітів про якість повітря відповідно до вимог Постанови Кабінету Міністрів України № 827.</p>
+<p>Для оптимізації бюджету було ухвалено рішення розгорнути власне реляційне сховище на базі СУБД MySQL та веб-сервера Nginx/Laravel на віртуальному сервері (VPS). Головний виклик полягає у жорстких апаратно-ресурсних обмеженнях хостингу: сервер має лише 1024 Мбайт оперативної пам'яті (RAM) та 20 Гбайт дискового простору на SSD. За умови щохвилинного надходження 15 параметрів з трьох станцій, база даних повинна гарантувати безперебійне збереження сирих даних, їхню асинхронну агрегацію в 20-хвилинні зрізи та автоматичне генерування офіційних звітів у текстовому форматі DOCX за допомогою бібліотеки PHPWord, не допускаючи переповнення дискового простору та зависання оперативної пам'яті сервера.</p>
+<p>Параметри та обмеження середовища функціонування бази даних представлено в таблиці нижче.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Параметр бази даних / системи</th>
+<th style="text-align: left;">Одиниця виміру</th>
+<th style="text-align: left;">Числове значення</th>
+<th style="text-align: left;">Технічний та експлуатаційний контекст</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Кількість станцій Vaisala</td>
+<td style="text-align: left;">од.</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Обладнання з сенсорами AQT530 та WXT530</td>
+</tr>
+<tr>
+<td style="text-align: left;">Кількість параметрів на станцію</td>
+<td style="text-align: left;">од.</td>
+<td style="text-align: left;">15</td>
+<td style="text-align: left;">Гази (<span class="arithmatex">\(NO_2, SO_2, CO, H_2S\)</span>), пил (PM1, PM2.5, PM10), метеодані</td>
+</tr>
+<tr>
+<td style="text-align: left;">Частота надходження сирих даних</td>
+<td style="text-align: left;">вимір/хв</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Потокове надходження через Vaisala API</td>
+</tr>
+<tr>
+<td style="text-align: left;">Розмір одного сирого запису в MySQL</td>
+<td style="text-align: left;">байт</td>
+<td style="text-align: left;">240</td>
+<td style="text-align: left;">Включаючи накладні витрати B-Tree індексів</td>
+</tr>
+<tr>
+<td style="text-align: left;">Загальний дисковий простір VPS</td>
+<td style="text-align: left;">Гбайт</td>
+<td style="text-align: left;">20,0</td>
+<td style="text-align: left;">Тарифний план хостингу (300 грн/місяць)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Системні витрати диска (ОС, Nginx, PHP)</td>
+<td style="text-align: left;">Гбайт</td>
+<td style="text-align: left;">2,66</td>
+<td style="text-align: left;">Ubuntu 22.04 LTS (2,3 ГБ) та додаток Laravel (360 МБ)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Доступний обсяг RAM для MySQL Buffer Pool</td>
+<td style="text-align: left;">Мбайт</td>
+<td style="text-align: left;">300</td>
+<td style="text-align: left;">Загальний обсяг RAM сервера — 1024 Мбайт</td>
+</tr>
+<tr>
+<td style="text-align: left;">Базовий інтервал регламентної агрегації</td>
+<td style="text-align: left;">хв</td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">Нормативний часовий квант згідно з Постановою № 827</td>
+</tr>
+<tr>
+<td style="text-align: left;">Розмір агрегованого рядка <code>split_measurement</code></td>
+<td style="text-align: left;">байт</td>
+<td style="text-align: left;">380</td>
+<td style="text-align: left;">Зведена денормалізована структура з полями повноти</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["Станції Vaisala (API JSON потік)"] --&gt; B["Cron-команда VaisalaApi.php (кожні 10 хв)"]
+    B --&gt; C["Запис сирих даних у таблиці station_T3950716, station_V0440346"]
+    C --&gt; D["Cron-команда SetVaisala20mSplits.php (кожні 20 хв)"]
+    D --&gt; E["Розрахунок середніх та запис у split_measurement_ua171"]
+    E --&gt; F["Cron-команда DeleteOldMeasurementData.php (ротація)"]
+    F --&gt; G["Видалення сирих даних старших за горизонт утримання"]
+    E --&gt; H["Користувацький запит формування звіту за Постановою № 827"]
+    H --&gt; I["Генератор PHPWord: вибірка з split_measurement_ua171"]
+    I --&gt; J["Формування підсумкового DOCX документа з таблицями та графіками"]</code></pre>
+<h4 id="_5">Покроковий аналіз та розв'язок</h4>
+<h5 id="1">Крок 1. Розрахунок швидкості накопичення сирих даних та визначення дискового горизонту</h5>
+<p>Визначимо добову та річну швидкість генерації первинних вимірювань для трьох станцій Vaisala. Кількість щохвилинних вимірювань від однієї станції за добу становить 1440 записів. Сумарна добова кількість рядків для всієї мережі розраховується як:</p>
+<div class="arithmatex">\[N_{\text{raw\_day}} = 3 \cdot 1440 = 4320 \text{ записів/добу}\]</div>
+<p>Враховуючи розмір одного рядка в сховищі InnoDB (<span class="arithmatex">\(S_{\text{raw}} = 240\text{ байт}\)</span>), добовий приріст обсягу первинних таблиць становить:</p>
+<div class="arithmatex">\[V_{\text{raw\_day}} = 4320 \cdot 240 \text{ байт} = 1\,036\,800 \text{ байт} \approx 1,037 \text{ Мбайт/добу}\]</div>
+<p>Річний обсяг накопичення сирих даних для трьох станцій складає:</p>
+<div class="arithmatex">\[V_{\text{raw\_year}} = 1,037 \text{ Мбайт} \cdot 365 \approx 378,5 \text{ Мбайт/рік}\]</div>
+<p>Якщо до системи підключаються чотири додаткові станції EcoCity з секундною та хвилинною дискретизацією і ширшим спектром діагностичних логів, річний обсяг сирих даних сягає <span class="arithmatex">\(V_{\text{total\_raw}} \approx 18,0\text{ Гбайт}\)</span>. Враховуючи, що вільний дисковий простір VPS становить:</p>
+<div class="arithmatex">\[V_{\text{disk\_free}} = 20,0 \text{ Гбайт} - 2,66 \text{ Гбайт (ОС + додаток)} - 1,0 \text{ Гбайт (Swap/Logs)} = 16,34 \text{ Гбайт}\]</div>
+<p>Збереження сирих невичищених даних призведе до повного вичерпання дискового простору за 11 місяців експлуатації.</p>
+<h5 id="2-split_measurement_ua171">Крок 2. Проєктування та розрахунок ємності агрегатної таблиці <code>split_measurement_ua171</code></h5>
+<p>Для забезпечення довгострокового збереження даних упроваджено агрегатну таблицю <code>split_measurement_ua171</code>, де хвилинні дані осереднюються у 20-хвилинні інтервали. Кількість агрегованих записів для однієї станції на добу становить:</p>
+<div class="arithmatex">\[N_{\text{split\_day}} = \frac{1440}{20} = 72 \text{ записи/добу}\]</div>
+<p>Сумарний добовий обсяг агрегованих спостережень для трьох станцій при розмірі рядка <span class="arithmatex">\(S_{\text{split}} = 380\text{ байт}\)</span> дорівнює:</p>
+<div class="arithmatex">\[V_{\text{split\_day}} = 3 \cdot 72 \cdot 380 \text{ байт} = 82\,080 \text{ байт} \approx 0,082 \text{ Мбайт/добу}\]</div>
+<p>Річний обсяг зведеної аналітичної таблиці становить:</p>
+<div class="arithmatex">\[V_{\text{split\_year}} = 0,082 \text{ Мбайт} \cdot 365 \approx 29,93 \text{ Мбайт/рік}\]</div>
+<p>Такий компактний обсяг дозволяє зберігати агреговану історію спостережень за десятки років, використовуючи менше 1 Гбайта дискової пам'яті.</p>
+<h5 id="3-data-retention-policy">Крок 3. Розрахунок граничного періоду утримання сирих даних (Data Retention Policy)</h5>
+<p>Для уникнення дефіциту вільного місця розроблено алгоритм автоматичної ротації, що видаляє первинні хвилинні записи після успішного перерахунку в 20-хвилинні зрізи. Задамо граничний резерв вільного дискового простору на рівні 5 Гбайт для забезпечення стабільної роботи операційної системи. Максимальний обсяг, виділений під сирі дані станцій, становить:</p>
+<div class="arithmatex">\[V_{\text{raw\_budget}} = V_{\text{disk\_free}} - 5,0 \text{ Гбайт} - V_{\text{split\_year}} \cdot 5 = 16,34 - 5,0 - 0,15 = 11,19 \text{ Гбайт}\]</div>
+<p>Горизонт утримання детальних щохвилинних даних <span class="arithmatex">\(T_{\text{retention}}\)</span> за максимальної інтенсивності надходження первинних потоків (<span class="arithmatex">\(1,5\text{ Гбайт/місяць}\)</span>) становить:</p>
+<div class="arithmatex">\[T_{\text{retention}} = \frac{V_{\text{raw\_budget}}}{\text{Швидкість приросту}} = \frac{11,19 \text{ Гбайт}}{1,5 \text{ Гбайт/місяць}} \approx 7,46 \text{ місяців}\]</div>
+<p>Таким чином, у системі встановлено регламентне правило: первинні хвилинні таблиці автоматично очищаються скриптом <code>DeleteOldMeasurementData.php</code> після досягнення віку 180 діб (6 місяців), тоді як таблиця зрізів <code>split_measurement_ua171</code> зберігається безстроково.</p>
+<h5 id="4-sql-no-827">Крок 4. Оптимізація часу виконання SQL-запиту для генерації звіту за Постановою № 827</h5>
+<p>Регламентний звіт вимагає вибірки максимальних разових концентрацій та розрахунку середньомісячного значення за кожним полютантом. Порівняємо час виконання аналітичного запиту вибірки за місяць (<span class="arithmatex">\(T = 30\text{ діб}\)</span>) над неіндексованою та оптимізованою таблицею <code>split_measurement_ua171</code>. Кількість рядків за місяць для однієї станції становить <span class="arithmatex">\(N = 72 \cdot 30 = 2160\)</span> записів.</p>
+<p>Створено покриваючий складений індекс:</p>
+<div class="arithmatex">\[\text{INDEX } \text{idx\_station\_time} \; (\text{place\_id}, \, \text{timestamp\_start}, \, \text{is\_20m})\]</div>
+<p>Теоретична оцінка кількості зчитуваних сторінок пам'яті при повному скануванні таблиці (Full Table Scan) розміром 500 000 рядків вимагає звернення до <span class="arithmatex">\(N_{\text{pages}} \approx 12 500\)</span> блоків диска (при розмірі сторінки InnoDB 16 Кбайт). Використання складеного індексу скорочує кількість звернень до глибини дерева B-Tree плюс діапазон вибірки:</p>
+<div class="arithmatex">\[N_{\text{pages\_opt}} = \text{Height}(B\text{-Tree}) + \frac{2160 \cdot S_{\text{index}}}{16384} = 3 + \frac{2160 \cdot 32}{16384} = 3 + 4,2 \approx 8 \text{ сторінок}\]</div>
+<p>Час виконання запиту вибірки даних для генератора PHPWord скоротився з 4,2 секунди до 0,006 секунди, що усунуло навантаження на центральний процесор і дозволило формувати підсумковий звіт за 1,2 секунди з урахуванням рендерингу DOCX-файлу.</p>
+<h4 id="_6">Інтерпретація результатів та альтернативні сценарії</h4>
+<p>Запропонована структура бази даних на основі розподілу між сирими таблицями вивантаження та зведеною аналітичною таблицею <code>split_measurement_ua171</code> дозволила комунальному підприємству повністю відмовитися від платної підписки Vaisala, заощаджуючи 3600 доларів США щорічно на трьох станціях. Вартість експлуатації власного рішення на VPS становить близько 90 доларів США на рік, що забезпечило окупність проєкту вже в перший місяць роботи.</p>
+<p>Якби вхідні вимоги змінилися у бік інтеграції 100 промислових датчиків з частотою опитування 10 Гц (високочастотна телеметрія технологічних процесів підприємств), архітектура на базі єдиного сервера MySQL зазнала б колапсу через нездатність дискової підсистеми обробляти понад 1000 операцій вставки на секунду. У такому альтернативному сценарії було б обов'язковим впровадження спеціалізованої часорядної СУБД (наприклад, TimescaleDB або ClickHouse) з розгортанням брокера повідомлень Apache Kafka для асинхронного буферизування пікових навантажень.</p>
+<hr />
+<h3 id="32">3.2. Зведена довідкова система лекції</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Термін / Концепція</th>
+<th style="text-align: left;">Формалізація / Сутність</th>
+<th style="text-align: left;">Реальний кейс застосування</th>
+<th style="text-align: left;">Основне обмеження / Ризик</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Реляційна модель SQL</td>
+<td style="text-align: left;">Організація даних у вигляді нормалізованих таблиць зі строгими типами та декларативною цілісністю</td>
+<td style="text-align: left;">Сховище екологічних даних КП «НДЦ» Кременчуцької міської ради на базі MySQL 8.0</td>
+<td style="text-align: left;">Падіння продуктивності при масивному неперервному потоці неколективних вставок</td>
+</tr>
+<tr>
+<td style="text-align: left;">ORM Eloquent</td>
+<td style="text-align: left;">Об'єктно-реляційне відображення патерну Active Record фреймворку Laravel</td>
+<td style="text-align: left;">Програмне представлення вимірювань станції <code>Station1748</code> у вигляді PHP-класів</td>
+<td style="text-align: left;">Накладні витрати оперативної пам'яті сервера при роботі з масивами понад 10 000 об'єктів</td>
+</tr>
+<tr>
+<td style="text-align: left;">Денормалізація часових рядів</td>
+<td style="text-align: left;">Свідоме порушення нормальних форм шляхом зведення параметрів у широку таблицю зрізів</td>
+<td style="text-align: left;">Організація структури <code>split_measurement_ua171</code> з 15 показниками в одному рядку</td>
+<td style="text-align: left;">Потенційний ризик аномалій узгодженості при некоректній роботі скриптів оновлення</td>
+</tr>
+<tr>
+<td style="text-align: left;">Складений B-Tree індекс</td>
+<td style="text-align: left;">Деревоподібна структура індексації за кількома атрибутами: <code>(place_id, timestamp, is_20m)</code></td>
+<td style="text-align: left;">Прискорення вибірок аналітичних інтервалів для побудови інтерактивних графіків якості повітря</td>
+<td style="text-align: left;">Додаткові накладні витрати дискового простору та уповільнення операцій <code>INSERT</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Ідемпотентність операцій запису</td>
+<td style="text-align: left;">Властивість операції давати однаковий результат при багаторазовому повторенні</td>
+<td style="text-align: left;">Використання конструкції <code>INSERT ... ON DUPLICATE KEY UPDATE</code> на основі MD5-хешу</td>
+<td style="text-align: left;">Витрати процесорного часу мікроконтролера або сервера на генерацію геш-відбитків</td>
+</tr>
+<tr>
+<td style="text-align: left;">Рівень ізоляції READ COMMITTED</td>
+<td style="text-align: left;">Режим транзакцій, за якого зчитуються лише зафіксовані зміни без блокування читання записом</td>
+<td style="text-align: left;">Запобігання конфліктам між фоновим усередненням cron та веб-запитами операторів</td>
+<td style="text-align: left;">Можливість виникнення феномену неповторного читання (Non-repeatable Read)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Скрипти планувальника Cron</td>
+<td style="text-align: left;">Системний планувальник UNIX для запуску консольних команд Laravel за розкладом</td>
+<td style="text-align: left;">Регулярний виклик <code>SetVaisala20mSplits.php</code> та ротації <code>DeleteOldMeasurementData.php</code></td>
+<td style="text-align: left;">Ризик накладання важких фонових завдань (cron overlap) при збоях дискової підсистеми</td>
+</tr>
+<tr>
+<td style="text-align: left;">Таблиця <code>split_measurement_ua171</code></td>
+<td style="text-align: left;">Спеціалізована таблиця осереднених даних із географічним кодуванням регіону та міста</td>
+<td style="text-align: left;">Збереження 20-хвилинних, добових та річних показників для швидкого звітування</td>
+<td style="text-align: left;">Необхідність суворого контролю повноти даних через розрахунок коефіцієнта <code>measurement_ratio</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Бібліотека PHPWord</td>
+<td style="text-align: left;">Модуль генерації бінарних документів стандарту Microsoft Office Open XML (DOCX)</td>
+<td style="text-align: left;">Автоматичне формування звітних відомостей за Постановою № 827 без участі людини</td>
+<td style="text-align: left;">Підвищене споживання оперативної пам'яті сервера під час рендерингу складних таблиць</td>
+</tr>
+<tr>
+<td style="text-align: left;">М'яке видалення (Soft Deletes)</td>
+<td style="text-align: left;">Позначення запису як видаленого за допомогою часового поля <code>deleted_at</code> без фізичного стирання</td>
+<td style="text-align: left;">Збереження історії реєстрації сенсорів і постів у разі їхньої тимчасової деактивації</td>
+<td style="text-align: left;">Постійне зростання фізичного обсягу таблиць на диску за відсутності періодичної очистки</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="33">3.3. Контрольні питання та завдання</h3>
+<h4 id="_7">Прикладні тестові завдання</h4>
+<ol>
+<li>
+<p>Під час формування річного звіту за Постановою № 827 скрипт на базі PHPWord спричинив аварійну зупинку процесу з повідомленням <code>Fatal error: Allowed memory size of 134217728 bytes exhausted</code>. База даних функціонує справно. Яка причина збою на рівні коду взаємодії з базою даних та який метод Eloquent необхідно застосувати для її усунення?</p>
+</li>
+<li>
+<p>A. База даних заблокована зовнішнім запитом; необхідно перезавантажити службу MySQL.</p>
+</li>
+<li>
+<p>B. Використано прямий метод <code>Station::all()</code>, який завантажив у оперативну пам'ять сотні тисяч моделей як окремі об'єкти PHP; необхідно замінити його на пакетну обробку курсором <code>Station::chunk(500)</code> або <code>lazy()</code>.</p>
+</li>
+<li>
+<p>C. Пошкоджено файл конфігурації Nginx; необхідно змінити таймаут обробки запиту <code>fastcgi_read_timeout</code>.</p>
+</li>
+<li>
+<p>D. Жорсткий диск SSD вичерпав ліміт вільних інодів (inodes); необхідно видалити системні логи Ubuntu.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>Метод <code>Model::all()</code> або <code>Model::get()</code> в ORM Eloquent створює колекцію повноцінних об'єктів PHP для кожного рядка таблиці. При вибірці річного масиву сотні тисяч важких об'єктів миттєво вичерпують виділений ліміт оперативної пам'яті PHP (<code>memory_limit = 128M</code>). Метод <code>chunk()</code> розбиває вибірку на дрібні пакети (наприклад, по 500 записів), звільняючи пам'ять після обробки кожного блоку, а метод <code>lazy()</code> використовує генератори PHP, утримуючи в пам'яті лише один рядок за раз.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A є помилковим, оскільки помилка генерується інтерпретатором PHP через ліміт пам'яті процесу, а не механізмом блокувань СУБД.</p>
+</li>
+<li>
+<p>Варіант C не стосується проблеми вичерпання RAM, оскільки <code>fastcgi_read_timeout</code> призводить до помилки 504 Gateway Timeout, а не до фатальної помилки нестачі пам'яті.</p>
+</li>
+<li>
+<p>Варіант D є хибним, оскільки дефіцит інодів блокує створення нових файлів на файловій системі, що супроводжується помилкою No space left on device.</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>Під час аналізу таблиці <code>split_measurement_ua171</code> виявлено, що поле <code>unique_hash</code> містить дублюючі значення, проте первинний ключ <code>id</code> продовжує монотонно зростати. Дослідження коду показало, що запис здійснювався через сирий SQL-запит <code>DB::insert()</code>, минаючи модель Eloquent. Чому не спрацював захист від дублювання, реалізований у методі <code>boot()</code> моделі <code>Station</code>?</p>
+</li>
+<li>
+<p>A. Сирі SQL-запити через фасад <code>DB</code> працюють в обхід життєвого циклу моделі Eloquent і не викликають подійні хуки <code>creating</code> та <code>saving</code>.</p>
+</li>
+<li>
+<p>B. Функція <code>md5()</code> генерує однакові значення для різних часових міток через високу частоту колізій алгоритму.</p>
+</li>
+<li>
+<p>C. Таблиця автоматично перейшла у формат <code>MyISAM</code>, який не підтримує обмеження унікальності.</p>
+</li>
+<li>
+<p>D. СУБД MySQL вимкнула перевірку індексів для прискорення швидкодії вставки.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: A.</strong></p>
+<ol>
+<li>
+<p>Подійні хуки ORM Eloquent (такі як <code>creating</code>, <code>updating</code>, <code>saved</code>) ініціюються виключно тоді, коли маніпуляція даними здійснюється через відповідні методи об'єкта моделі (<code>$model-&gt;save()</code>, <code>Model::create()</code>). Пряме виконання SQL-інструкцій через фасад <code>DB::insert()</code> спрямовує запит безпосередньо до драйвера PDO, повністю оминаючи шар абстракції Active Record, внаслідок чого код генерації хешу в методі <code>boot()</code> просто не виконується.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант B є малоймовірним у практичних задачах, оскільки математична ймовірність випадкової колізії MD5 на невеликих масивах мікрокліматичних даних є нехтовно малою (<span class="arithmatex">\(p &lt; 10^{-15}\)</span>).</p>
+</li>
+<li>
+<p>Варіант C є невірним, оскільки рушій MyISAM повністю підтримує індекси <code>UNIQUE</code>, хоча й не підтримує зовнішні ключі та транзакції.</p>
+</li>
+<li>
+<p>Варіант D є технічно хибним, оскільки активний унікальний індекс не може бути вимкнений сервером MySQL без явної DDL-команди адміністратора <code>ALTER TABLE ... DISABLE KEYS</code>.</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>У муніципальній базі даних поле <code>is_20m</code> використовується як прапорець типу часового зрізу (1 — двадцятихвилинний, 0 — добовий). Запит <code>SELECT * FROM split_measurement_ua171 WHERE is_20m = 1</code> виконується вкрай повільно, попри наявність окремого індексу на цьому полі. Чому оптимізатор MySQL ігнорує індекс за полем <code>is_20m</code>?</p>
+</li>
+<li>
+<p>A. Поле містить занадто довгі значення, які не вміщуються у сторінку індексу B-Tree.</p>
+</li>
+<li>
+<p>B. Поле має низьку селективність (кардинальність), оскільки містить лише два можливі значення (0 та 1), і оптимізатор вважає повне сканування таблиці дешевшим за сканування індексу.</p>
+</li>
+<li>
+<p>C. Прапорець <code>is_20m</code> автоматично блокується рівнем ізоляції транзакцій.</p>
+</li>
+<li>
+<p>D. Тип даних <code>TINYINT</code> не підтримує індексацію в рушії InnoDB.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>Селективність індексу визначається співвідношенням кількості унікальних значень до загальної кількості рядків. Якщо поле містить лише два стани (бінарний прапорець), селективність становить близько 50%. Для оптимізатора витрати на зчитування половини дерева індексів з наступним зверненням до сторінок даних за первинним ключем перевищують витрати на послідовне зчитування таблиці підряд, тому індекс ігнорується. Для оптимізації необхідно використовувати складений індекс, де низькоселективне поле стоїть разом із високоселективними атрибутами дати та ідентифікатора станції.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A є помилковим, оскільки прапорець займає лише 1 байт (<code>TINYINT</code>) і є мінімальним за довжиною.</p>
+</li>
+<li>
+<p>Варіант C є безглуздим, оскільки рівні ізоляції транзакцій контролюють видимість незафіксованих змін, а не вибір індексів оптимізатором.</p>
+</li>
+<li>
+<p>Варіант D є технічно невірним, оскільки рушій InnoDB дозволяє індексувати будь-які числові типи даних, включаючи <code>TINYINT</code> та <code>BIT</code>.</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>За результатами моніторингу зафіксовано, що з 20 запланованих хвилинних замірів за інтервал станція Vaisala через аварійне відключення живлення передала лише 8 вимірювань. Яке значення атрибута <code>measurement_ratio</code> має зафіксувати скрипт усереднення та який статус повинен отримати цей часовий зріз для формування звітності за Постановою № 827?</p>
+</li>
+<li>
+<p>A. Значення 1,0; зріз вважається повністю достовірним за замовчуванням.</p>
+</li>
+<li>
+<p>B. Значення 0,4 (40%); зріз маркується як статистично нерепрезентативний, оскільки повнота становить менше нормативних 75%.</p>
+</li>
+<li>
+<p>C. Значення 0,0; запис автоматично видаляється з бази даних як помилковий.</p>
+</li>
+<li>
+<p>D. Значення 0,8; скрипт автоматично інтерполює відсутні вимірювання за попередньою добою.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>Відносна повнота спостережень розраховується як частка фактично отриманих вимірювань до номінально очікуваних: <span class="arithmatex">\(\mathcal{K}_{\text{ratio}} = 8 / 20 = 0,4\)</span> (або 40%). Згідно з нормативними правилами Постанови № 827 та рекомендаціями європейських директив, мінімальний поріг валідності даних для розрахунку середніх значень становить не менше 75% валідних спостережень за інтервал (<span class="arithmatex">\(N \ge 15\)</span>). Дані маркуються спеціальним статусом неповноти та не враховуються при встановленні юридичних фактів перевищення ГДК.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A є грубим порушенням нормативних регламентів, оскільки приховує факт втрати 60% вимірювань.</p>
+</li>
+<li>
+<p>Варіант C є нераціональним, оскільки збереження навіть неповних вимірювань необхідне для діагностики працездатності сенсорного обладнання та аналізу тривалості аварійних простоїв.</p>
+</li>
+<li>
+<p>Варіант D є некоректним, оскільки автоматична довільна інтерполяція без відповідного статистичного маркування заборонена стандартами екологічної звітності.</p>
+</li>
+</ol>
+</details>
+<hr />
+<h4 id="_8">Завдання для самостійної роботи</h4>
+<h5 id="_9">Постановка задачі</h5>
+<p>Унаслідок катастрофічного руйнування греблі Каховської ГЕС виникла гостра потреба в розгортанні спеціалізованої бази даних для моніторингу гідроекологічного стану Кременчуцького водосховища. Система повинна агрегувати дані з шести автоматичних буїв, які кожні 15 хвилин фіксують вміст розчиненого кисню, каламутність, електропровідність, рівень води, pH та концентрацію нафтопродуктів. Додатково в систему мають надходити щотижневі протоколи лабораторного бактеріологічного та хімічного аналізу проб води, відібраних санітарними службами вручну.</p>
+<h5 id="_10">Завдання для виконання</h5>
+<ol>
+<li>
+<p>Спроєктуйте реляційну схему бази даних MySQL у третій нормальній формі (3NF), виділивши таблиці для станцій моніторингу, фізико-хімічних показників, автоматичних часових вимірювань та лабораторних протоколів ручного відбору.</p>
+</li>
+<li>
+<p>Розробіть міграцію Laravel, яка описує таблицю зведених гідроекологічних зрізів із підтримкою денормалізованих полів якості води, індексуванням за часом та координатами вимірювальних буїв.</p>
+</li>
+<li>
+<p>Складіть SQL-запит із оптимізованим планом виконання (Explain Plan), який ідентифікує локації, де рівень розчиненого кисню опускався нижче критичної межі замору риби (4,0 мг/дм³) протягом трьох діб поспіль.</p>
+</li>
+<li>
+<p>Напишіть архітектурну специфікацію регламентного консольного скрипта ротації даних, який забезпечує автоматичне архівування детальних 15-хвилинних гідрологічних спостережень у стиснені сховища після закінчення одного року експлуатації.</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Повернутись нагору
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Kyrylo Vadurin &bull; <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "header.autohide", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0456\u0439\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u0421\u043a\u043e\u043f\u0456\u044e\u0432\u0430\u0442\u0438 \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0429\u0435 1 \u0437\u0431\u0456\u0433 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.more.other": "\u0429\u0435 # \u0437\u0431\u0456\u0433\u0456\u0432 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.none": "\u0417\u0431\u0456\u0433\u0456\u0432 \u043d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0437\u0431\u0456\u0433", "search.result.other": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e # \u0437\u0431\u0456\u0433\u0456\u0432", "search.result.placeholder": "\u0420\u043e\u0437\u043f\u043e\u0447\u043d\u0456\u0442\u044c \u043f\u0438\u0441\u0430\u0442\u0438 \u0434\u043b\u044f \u043f\u043e\u0448\u0443\u043a\u0443", "search.result.term.missing": "\u041d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e \u0437\u0430\u043f\u0438\u0442\u0443", "select.version": "\u041e\u0431\u0440\u0430\u0442\u0438 \u0432\u0435\u0440\u0441\u0456\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2346 @@
+
+<!doctype html>
+<html lang="uk" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Навчальний портал з дисципліни "Інформаційно-аналітичні технології в екологічних системах"">
+      
+      
+      
+      
+        <link rel="prev" href="../lb9/">
+      
+      
+        <link rel="next" href="../../sr/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>ЛБ 10. Генерація екологічного звіту когнітивним LLM-агентом - ІАТ в екологічних системах</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#no-10-dppdmext-llm-" class="md-skip">
+          Перейти до змісту
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Хедер">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-header__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ІАТ в екологічних системах
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ЛБ 10. Генерація екологічного звіту когнітивним LLM-агентом
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Переключити на темну тему"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Переключити на темну тему" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-label="Переключити на світлу тему"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Переключити на світлу тему" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Пошук" placeholder="Пошук" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Шукати">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистити" aria-label="Очистити" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Пошук розпочато
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Робоча програма
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../lk/lk1/" class="md-tabs__link">
+          
+  
+  
+  Лекції
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../lb1/" class="md-tabs__link">
+          
+  
+  
+  Лабораторні роботи
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../sr/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Самостійна робота
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навігація" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-nav__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ІАТ в екологічних системах
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Робоча програма
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лекції
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лекції
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 1. Цифровізація екологічного моніторингу
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 2. IoT-технології та сенсорні мережі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 3. Проєктування екологічних баз даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 4. Статистичні методи аналізу даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 5. Багатовимірний аналіз та інтелектуальні технології
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 6. Моделювання переносу та дифузії
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 7. Геоінформаційні системи (ГІС)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 8. Моделювання динаміки екологічних систем
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 9. Прогнозування та оцінка ризиків
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 10. Інтелектуальні платформи просторового прогнозування
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторні роботи
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лабораторні роботи
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 1. Архітектура відкритих систем моніторингу довкілля
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 2. Канал отримання даних IoT-станцій
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 3. Проєктування наборів даних екологічної інформації
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 4. Статистичний аналіз та перевищення ГДК
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 5. Кореляційний аналіз та метод головних компонент
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 6. Моделювання розсіювання викидів в атмосфері
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 7. Просторова інтерполяція (IDW) та аномалії
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 8. Моделювання динаміки та стійкості екосистем
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 9. Прогнозування часових рядів та індекс якості повітря
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 10. Генерація екологічного звіту когнітивним LLM-агентом
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 10. Генерація екологічного звіту когнітивним LLM-агентом
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 Теоретичні відомості
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 Підготовка середовища та розгортання проєкту (Крок 0)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 Підготовка середовища та розгортання проєкту (Крок 0)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Перевірка інтерпретатора та налаштування віртуального середовища
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Структура робочого каталогу проєкту
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Створення конфігураційного файлу та шаблону телеметрії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Порядок виконання роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 Порядок виконання роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Індивідуальні завдання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Покроковий алгоритм та розв'язок еталонного прикладу
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Покроковий алгоритм та розв&#39;язок еталонного прикладу">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Блок 1. Імпорт модулів та налаштування конфігурації
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Блок 2. Формування вхідного масиву телеметричних та прогностичних метрик
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-cri" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Блок 3. Розрахунок комплексного індексу надійності прогнозу (CRI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-prompt-engineering-llm-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Блок 4. Формування структурованого запиту (Prompt Engineering) для LLM-агента
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Блок 5. Виконання запиту до когнітивного агента (із вбудованим механізмом стійкості)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-dppdmext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Блок 6. Експертний аудит висновків моделі та візуалізація дашборду DPPDMext
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Запуск, тестування та перевірка результатів
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Запуск, тестування та перевірка результатів">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Приклад реального консольного виведення в блокноті:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dppdmext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таблиця валідації та самоперевірки контуру DPPDMext:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 Вимоги до змісту звіту
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Контрольні запитання для захисту роботи
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Самостійна робота
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 Теоретичні відомості
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 Підготовка середовища та розгортання проєкту (Крок 0)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 Підготовка середовища та розгортання проєкту (Крок 0)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Перевірка інтерпретатора та налаштування віртуального середовища
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Структура робочого каталогу проєкту
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Створення конфігураційного файлу та шаблону телеметрії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Порядок виконання роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 Порядок виконання роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Індивідуальні завдання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Покроковий алгоритм та розв'язок еталонного прикладу
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Покроковий алгоритм та розв&#39;язок еталонного прикладу">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Блок 1. Імпорт модулів та налаштування конфігурації
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Блок 2. Формування вхідного масиву телеметричних та прогностичних метрик
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-cri" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Блок 3. Розрахунок комплексного індексу надійності прогнозу (CRI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-prompt-engineering-llm-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Блок 4. Формування структурованого запиту (Prompt Engineering) для LLM-агента
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Блок 5. Виконання запиту до когнітивного агента (із вбудованим механізмом стійкості)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-dppdmext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Блок 6. Експертний аудит висновків моделі та візуалізація дашборду DPPDMext
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Запуск, тестування та перевірка результатів
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Запуск, тестування та перевірка результатів">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Приклад реального консольного виведення в блокноті:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dppdmext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таблиця валідації та самоперевірки контуру DPPDMext:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 Вимоги до змісту звіту
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Контрольні запитання для захисту роботи
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="no-10-dppdmext-llm-">Лабораторна робота № 10. Інтеграція аналітичного контуру DPPDMext: автоматизована генерація екологічного звіту за допомогою когнітивного LLM-агента</h1>
+<p><strong>Мета:</strong> опанування архітектурних принципів побудови розширеного контуру підготовки та предиктивної обробки даних (концептуальна модель DPPDMext), створення програмного модуля когнітивної підтримки прийняття рішень на основі інтеграції мовних моделей (LLM), розробка протоколу структурування аналітичних метрик та автоматизована генерація експертного екологічного звіту з верифікацією висновків штучного інтелекту у середовищі Jupyter Lab засобами мови Python.</p>
+<p><strong>Стек технологій та інструменти:</strong></p>
+<ul>
+<li>
+<p><strong>Мова програмування / Середовище:</strong> Python 3.10+ / Jupyter Lab (Jupyter Notebook).</p>
+</li>
+<li>
+<p><strong>Платформа / Бібліотеки / Модулі:</strong> <code>requests</code> (версії 2.31.0+), <code>pandas</code> (версії 2.2.2+), <code>numpy</code> (версії 1.26.4+), <code>matplotlib</code> (версії 3.9.0+), <code>json</code>, сумісний локальний або хмарний API-клієнт великих мовних моделей (Ollama, LM Studio: моделі класу <code>DeepSeek-R1-Distill-Llama-8B</code>, <code>LLaVA-v1.5-7B</code> або сумісний OpenAI API інтерфейс).</p>
+</li>
+<li>
+<p><strong>Інструменти розробки:</strong> Консоль/Термінал (Bash/PowerShell), веб-браузер, середовище локального інференсу моделей.</p>
+</li>
+</ul>
+<hr />
+<h2 id="1">1 Теоретичні відомості</h2>
+<p>Управління екологічною безпекою урбанізованих територій вимагає обробки гетерогенних масивів інформації, що надходять від різнорідних фізичних сенсорних постів, систем просторової інтерполяції та предиктивних математичних моделей. На сучасному етапі конвенційна парадигма моніторингу довкілля трансформується у концепцію розширеної підготовки та інтелектуальної обробки даних для прийняття рішень — модель DPPDMext (Data Preparation and Predictive Data Modeling extended).</p>
+<p>У формалізованому вигляді базова модель обробки даних визначається кортежем:</p>
+<div class="arithmatex">\[\text{DPPDM} = \langle D, T, P, F, V \rangle\]</div>
+<p>де компонент <span class="arithmatex">\(D\)</span> (Data) позначає первинний масив спостережень від автоматичних та лабораторних станцій, оператор <span class="arithmatex">\(T\)</span> (Transformation) відповідає за очищення, заповнення пропусків та нормалізацію рядів, множина <span class="arithmatex">\(P\)</span> (Prediction) охоплює пул застосованих прогностичних моделей, блок <span class="arithmatex">\(F\)</span> (Feature Engineering) визначає розрахунок нормативних показників кратності гранично допустимих концентрацій (ГДК / MPC) і статистичних моментів, а компонент <span class="arithmatex">\(V\)</span> (Visualization) забезпечує побудову аналітичних графіків та картографічних поверхонь.</p>
+<p>Для реалізації замкненого адаптивного контуру управління з прескриптивною аналітикою прогностичний блок розширюється до вигляду <span class="arithmatex">\(P_{\text{ext}} = \langle A, P, Q, M, E \rangle\)</span>, що перетворює підсумкову модель на багаторівневу структуру:</p>
+<div class="arithmatex">\[\text{DPPDMext} = \langle D, T, F, (A, P, Q, M, E), F, V \rangle\]</div>
+<p>У наведеній моделі блок <span class="arithmatex">\(A\)</span> (Analysis) виконує структурну діагностику часового ряду (оцінка тренду, сезонності та стаціонарності за ADF-тестом), блок <span class="arithmatex">\(Q\)</span> (Quality optimization) забезпечує автоматизовану селекцію та оптимізацію гіперпараметрів прогностичних ядер, модуль <span class="arithmatex">\(M\)</span> (Modeling) реалізує геопросторову інтерполяцію IDW та імітацію переміщення джерел емісій, а блок <span class="arithmatex">\(E\)</span> (Expert) здійснює когнітивну оцінку надійності прогнозів і синтез управлінських директив на базі інтелектуальних агентів.</p>
+<p><pre class="mermaid"><code>flowchart TD
+    D[D. Первинні дані телеметрії: Vaisala, EcoCity] --&gt; T[T. Трансформація, імпутація та нормалізація]
+    T --&gt; F1[F. Інженерія ознак: розрахунок кратності ГДК]
+    F1 --&gt; A[A. Аналіз рядів: тренд, ACF, тест ADF]
+    A --&gt; P[P. Прогнозування: ARIMA, BATS, LSTM]
+    P --&gt; Q[Q. Оптимізація та селекція: min MSE]
+    Q --&gt; M[M. Просторове моделювання: IDW та A* симуляція]
+    M --&gt; E[E. Когнітивний LLM-агент: аудит метрик та графіків]
+    E --&gt;|Критерій якості не виконано: зворотний зв'язок| Q
+    E --&gt;|Якість верифіковано| F2[F. Формування індексу надійності CRI]
+    F2 --&gt; V[V. Візуалізація та генерація звіту]
+    V --&gt; Decision[Прийняття рішень: Муніципальний екологічний менеджмент]</code></pre>
+<em>Рисунок 1 — Структурно-функціональна схема аналітичного циклу в моделі DPPDMext</em></p>
+<p>Функціонування когнітивного агента оцінки якості та синтезу рішень формалізується як відображення числового вектора валідаційних метрик <span class="arithmatex">\(\mathbf{M}\)</span> та матриці структурних описів графіків <span class="arithmatex">\(\mathbf{A}\)</span> у текстовий аналітичний звіт:</p>
+<div class="arithmatex">\[\text{Report} = f_{\text{LLM}}(\mathbf{M}, \mathbf{A}, \Theta_{\text{sys}})\]</div>
+<p>де <span class="arithmatex">\(\mathbf{M} = \{\text{MSE}, \text{MAE}, \text{RMSE}, R^2, a_{\text{trend}}, p_{\text{ADF}}, \text{Streak}_{\max}\}\)</span> є вектором розрахованих математичних показників якості прогнозу та ризику перевищення нормативів, <span class="arithmatex">\(\mathbf{A}\)</span> визначає семантичний опис виявлених просторово-часових аномалій (наприклад, розбіжність модельованих і натурних концентрацій, наявність зон локального навантаження), а параметр <span class="arithmatex">\(\Theta_{\text{sys}}\)</span> задає системний промпт, що детермінує правила міркувань штучного інтелекту.</p>
+<p>Для інтегральної кількісної оцінки надійності згенерованих прогнозів розраховується комплексний індекс надійності прогнозу (Composite Reliability Index, <span class="arithmatex">\(\text{CRI}\)</span>):</p>
+<div class="arithmatex">\[\text{CRI} = w_1 \cdot \max(0, R^2) + w_2 \cdot \left(1 - \frac{\text{RMSE}}{y_{\max} - y_{\min}}\right) + w_3 \cdot \left(1 - \frac{N_{\text{exceed}}}{N_{\text{total}}}\right)\]</div>
+<p>У цьому співвідношенні <span class="arithmatex">\(R^2\)</span> позначає вибірковий коефіцієнт детермінації моделі, нормалізований за правилом відсікання від'ємних значень, відношення <span class="arithmatex">\(\frac{\text{RMSE}}{y_{\max} - y_{\min}}\)</span> визначає нормовану середньоквадратичну похибку відносно діапазону вимірюваного параметра, частка <span class="arithmatex">\(\frac{N_{\text{exceed}}}{N_{\text{total}}}\)</span> відображає емпіричну частоту перевищення нормативу ГДК у прогнозному періоді, а параметри <span class="arithmatex">\(w_1, w_2, w_3\)</span> є нормованими ваговими коефіцієнтами (<span class="arithmatex">\(w_1 + w_2 + w_3 = 1.0\)</span>), що встановлюються експертним шляхом залежно від пріоритетності точності чи безпеки.</p>
+<p><pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    actor Operator as Еколог-експерт
+    participant System as Аналітична платформа DPPDMext
+    participant Core as Модуль розрахунку (NumPy/Pandas)
+    participant LLM as Когнітивний LLM-агент (Local/API)
+
+    Operator-&gt;&gt;System: Ініціалізація сценарію оцінки регіону
+    System-&gt;&gt;Core: Обчислення похибок (MSE, R²) та інцидентів ГДК
+    Core--&gt;&gt;System: Вектор числових метрик M та описи трендів A
+    System-&gt;&gt;LLM: Передача промпту: System Role + JSON Payload (M, A)
+    LLM--&gt;&gt;System: Генерація структурованого звіту (Summary, Risks, Actions)
+    System-&gt;&gt;Operator: Візуалізація згенерованого проєкту висновків
+    Operator-&gt;&gt;Operator: Експертна верифікація та виявлення галюцинацій
+    Operator--&gt;&gt;System: Затвердження фінального звіту для муніципалітету</code></pre>
+<em>Рисунок 2 — Діаграма послідовності взаємодії підсистем при формуванні автоматизованого звітності</em></p>
+<p>Використання когнітивних LLM-агентів забезпечує автоматизацію трудомісткого процесу складання первинних звітів, агрегацію багатофакторних метрик та оперативне формулювання рекомендацій, проте критичною вимогою залишається обов'язкова експертна верифікація згенерованих висновків кваліфікованим екологом.</p>
+<hr />
+<h2 id="2-0">2 Підготовка середовища та розгортання проєкту (Крок 0)</h2>
+<p>Для побудови контуру інтеграції моделі DPPDMext здобувач налаштовує робоче середовище Python та підключає інтерфейс взаємодії з локальним або віддаленим сервером мовної моделі.</p>
+<h3 id="21">2.1 Перевірка інтерпретатора та налаштування віртуального середовища</h3>
+<p>Перевірка встановленої версії Python (вимагається версія 3.10 або новіша):
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>--version
+</span></code></pre></div></p>
+<p>Створення робочої директорії лабораторної роботи та перехід у неї:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/eco_analytics_workspace/lab10
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span>~/eco_analytics_workspace/lab10
+</span></code></pre></div></p>
+<p>Ініціалізація та активація віртуального середовища <code>venv</code>:</p>
+<ul>
+<li>
+<p>Для ОС Linux / macOS:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Для ОС Windows (PowerShell):
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">python</span> <span class="n">-m</span> <span class="n">venv</span> <span class="n">venv</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">.\</span><span class="n">venv</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">Activate</span><span class="p">.</span><span class="n">ps1</span>
+</span></code></pre></div></p>
+</li>
+</ul>
+<p>Встановлення аналітичних пакетів та клієнтських компонентів:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>pip<span class="w"> </span>install<span class="w"> </span>jupyterlab<span class="w"> </span>pandas<span class="w"> </span>numpy<span class="w"> </span>matplotlib<span class="w"> </span>requests<span class="w"> </span>scipy
+</span></code></pre></div></p>
+<p>Фіксація версій бібліотек у файлі маніфесту залежностей:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>pip<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>requirements.txt
+</span></code></pre></div></p>
+<h3 id="22">2.2 Структура робочого каталогу проєкту</h3>
+<p>У робочій директорії <code>lab10</code> організовується така ієрархія файлів і тек:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>lab10/
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>├── data/
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>│   └── validation_metrics.json      # Вхідний масив розрахованих метрик та характеристик рядів
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>├── exports/
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>│   ├── generated_eco_report.md      # Згенерований текстовий звіт екологічного агента
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>│   ├── expert_audit_verdict.json    # Результати експертного аудиту висновків LLM
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>│   └── dppdmext_dashboard.png       # Графічний дашборд показників та індексу CRI
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>├── notebooks/
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>│   └── lab10_dppdmext_agent.ipynb   # Робочий блокнот Jupyter Lab
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>├── requirements.txt                 # Список версій програмних бібліотек
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>└── config.json                      # Конфігурація параметрів агента та ваг індексу CRI
+</span></code></pre></div>
+<h3 id="23">2.3 Створення конфігураційного файлу та шаблону телеметрії</h3>
+<p>Створення файлу <code>config.json</code> із налаштуваннями системного промпту, адрес API та коефіцієнтів формули <span class="arithmatex">\(\text{CRI}\)</span>:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">"project_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DPPDMext Cognitive Environmental Agent"</span><span class="p">,</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="nt">"api_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:11434/v1/chat/completions"</span><span class="p">,</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="nt">"model_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"deepseek-r1-distill-llama-8b"</span><span class="p">,</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span><span class="nt">"cri_weights"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="nt">"w_r2"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.40</span><span class="p">,</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="nt">"w_nrmse"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.35</span><span class="p">,</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="nt">"w_safety"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.25</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">  </span><span class="nt">"mpc_thresholds"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span><span class="nt">"NO2"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.040</span><span class="p">,</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="nt">"CO"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.000</span><span class="p">,</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="nt">"PM2.5"</span><span class="p">:</span><span class="w"> </span><span class="mf">25.0</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Запуск інтерактивного сервера Jupyter Lab виконується командою:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>jupyter<span class="w"> </span>lab
+</span></code></pre></div></p>
+<hr />
+<h2 id="3">3 Порядок виконання роботи</h2>
+<h3 id="31">3.1 Індивідуальні завдання</h3>
+<p>Здобувач виконує налаштування когнітивного агента DPPDMext для конкретного промислово-міського екологічного комплексу відповідно до номера варіанта в академічному журналі.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Варіант</th>
+<th style="text-align: left;">Досліджуваний екокомплекс / Агломерація</th>
+<th style="text-align: left;">Вхідний профіль телеметрії та предиктивних метрик</th>
+<th style="text-align: left;">Завдання та фокус когнітивної генерації звіту</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: left;">м. Кременчук (Північний промисловий вузол)</td>
+<td style="text-align: left;"><span class="arithmatex">\(NO_2\)</span>, <span class="arithmatex">\(CO\)</span>, <span class="arithmatex">\(SO_2\)</span>; високі <span class="arithmatex">\(R^2\)</span> тиску (<span class="arithmatex">\(0.78\)</span>), деградація <span class="arithmatex">\(R^2\)</span> по <span class="arithmatex">\(CO\)</span> (<span class="arithmatex">\(-0.31\)</span>)</td>
+<td style="text-align: left;">Аналіз техногенного нафтопереробного навантаження</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">м. Кременчук (Станція «Гімназія №26»)</td>
+<td style="text-align: left;">Вологість, <span class="arithmatex">\(NO_2\)</span>, <span class="arithmatex">\(CO\)</span>; від'ємні <span class="arithmatex">\(R^2\)</span> по <span class="arithmatex">\(NO_2\)</span> (<span class="arithmatex">\(-1.00\)</span>), висока <span class="arithmatex">\(\text{ACF}_1 &gt; 0.90\)</span></td>
+<td style="text-align: left;">Оцінка комфортності житлово-освітнього сектора</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">м. Кременчук (Район «Фаворит»)</td>
+<td style="text-align: left;"><span class="arithmatex">\(PM_{2.5}\)</span>, <span class="arithmatex">\(NO_2\)</span>, <span class="arithmatex">\(CO\)</span>; висока дисперсія <span class="arithmatex">\(\sigma^2\)</span>, стрибки автотрафіку</td>
+<td style="text-align: left;">Аналіз смогових ситуацій біля транспортних розв'язок</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">м. Дніпро (Лівобережний промрайон)</td>
+<td style="text-align: left;"><span class="arithmatex">\(PM_{10}\)</span>, <span class="arithmatex">\(NO_2\)</span>, <span class="arithmatex">\(SO_2\)</span>; <span class="arithmatex">\(\text{MSE}_{\text{SARIMA}} = 0.00012\)</span>, тривалість перевищень 18 год</td>
+<td style="text-align: left;">Аудит металургійних викидів та інверсійних явищ</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>5</strong></td>
+<td style="text-align: left;">м. Запоріжжя (Зона металургійного комбінату)</td>
+<td style="text-align: left;"><span class="arithmatex">\(CO\)</span>, <span class="arithmatex">\(NO_2\)</span>, Пил; похибка <span class="arithmatex">\(\text{MAE} = 0.042\)</span>, нестаціонарний тренд <span class="arithmatex">\(a &gt; 0\)</span></td>
+<td style="text-align: left;">Формування рекомендацій щодо регулювання емісій</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>6</strong></td>
+<td style="text-align: left;">м. Кривий Ріг (Північний ГЗК)</td>
+<td style="text-align: left;"><span class="arithmatex">\(PM_{10}\)</span>, <span class="arithmatex">\(PM_{2.5}\)</span>, <span class="arithmatex">\(SO_2\)</span>; висока пористість пилового аерозолю</td>
+<td style="text-align: left;">Оцінка ризиків пилового забруднення від кар'єрів</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>7</strong></td>
+<td style="text-align: left;">м. Черкаси (ПАТ «Азот»)</td>
+<td style="text-align: left;"><span class="arithmatex">\(NH_3\)</span>, <span class="arithmatex">\(NO_2\)</span>, <span class="arithmatex">\(CO\)</span>; сезонний сплеск <span class="arithmatex">\(HCHO\)</span>, <span class="arithmatex">\(R^2 = 0.61\)</span></td>
+<td style="text-align: left;">Аналіз вторинного хімічного перетворення газів</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>8</strong></td>
+<td style="text-align: left;">м. Кам'янське (Коксохімічна зона)</td>
+<td style="text-align: left;"><span class="arithmatex">\(SO_2\)</span>, <span class="arithmatex">\(CO\)</span>, Фенол; аномальні викиди <span class="arithmatex">\(\Delta C &gt; 0\)</span>, низький <span class="arithmatex">\(\text{CRI} = 0.42\)</span></td>
+<td style="text-align: left;">Виявлення несанкціонованих нічних залпових викидів</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>9</strong></td>
+<td style="text-align: left;">м. Полтава (Автошлях Київ–Харків)</td>
+<td style="text-align: left;"><span class="arithmatex">\(CO\)</span>, <span class="arithmatex">\(NO_2\)</span>, <span class="arithmatex">\(PM_{2.5}\)</span>; кореляція <span class="arithmatex">\(r(CO, NO_2) = 0.74\)</span></td>
+<td style="text-align: left;">Локалізація впливу транзитного автотранспорту</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>10</strong></td>
+<td style="text-align: left;">м. Одеса (Припортова промзона)</td>
+<td style="text-align: left;"><span class="arithmatex">\(SO_2\)</span>, <span class="arithmatex">\(NO_2\)</span>, Бензол; помірна стаціонарність, <span class="arithmatex">\(p_{\text{ADF}} = 0.033\)</span></td>
+<td style="text-align: left;">Оцінка екологічної стійкості морського рекреаційного вузла</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>11</strong></td>
+<td style="text-align: left;">м. Харків (Індустріальний сектор)</td>
+<td style="text-align: left;"><span class="arithmatex">\(PM_{2.5}\)</span>, <span class="arithmatex">\(CO\)</span>, <span class="arithmatex">\(NO_2\)</span>; модель Q-Transformer перевершує MLP на <span class="arithmatex">\(18\%\)</span></td>
+<td style="text-align: left;">Аудит порівняльної переваги квантово-гібридних ядер</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>12</strong></td>
+<td style="text-align: left;">м. Миколаїв (Суднобудівний кластер)</td>
+<td style="text-align: left;"><span class="arithmatex">\(PM_{10}\)</span>, <span class="arithmatex">\(SO_2\)</span>, <span class="arithmatex">\(CO\)</span>; відхилення <span class="arithmatex">\(R^2 = -0.11\)</span>, зашумлені ряди</td>
+<td style="text-align: left;">Аналіз причин деградації класичних прогностичних моделей</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>13</strong></td>
+<td style="text-align: left;">м. Житомир (Деревообробний масив)</td>
+<td style="text-align: left;">Формальдегід, <span class="arithmatex">\(PM_{2.5}\)</span>, <span class="arithmatex">\(CO\)</span>; перевищення ГДК <span class="arithmatex">\(K_{\text{MPC}} = 2.4\)</span></td>
+<td style="text-align: left;">Оцінка канцерогенного ризику та санітарних розривів</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>14</strong></td>
+<td style="text-align: left;">м. Суми (Хімічний сектор)</td>
+<td style="text-align: left;"><span class="arithmatex">\(SO_2\)</span>, <span class="arithmatex">\(NO_2\)</span>, Сульфати; висока автокореляція <span class="arithmatex">\(\text{ACF}_1 = 0.91\)</span></td>
+<td style="text-align: left;">Моделювання кислотного навантаження на ґрунти</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>15</strong></td>
+<td style="text-align: left;">м. Івано-Франківськ (Центр міста)</td>
+<td style="text-align: left;"><span class="arithmatex">\(PM_{2.5}\)</span>, <span class="arithmatex">\(PM_{10}\)</span>, <span class="arithmatex">\(CO\)</span>; зростання затримки розсіювання</td>
+<td style="text-align: left;">Оцінка впливу передгірного рельєфу на якість повітря</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>16</strong></td>
+<td style="text-align: left;">м. Вінниця (Тяжилівський промвузол)</td>
+<td style="text-align: left;"><span class="arithmatex">\(CO\)</span>, <span class="arithmatex">\(NO_2\)</span>, <span class="arithmatex">\(PM_{2.5}\)</span>; висока точність AutoARIMA (<span class="arithmatex">\(R^2 = 0.75\)</span>)</td>
+<td style="text-align: left;">Обґрунтування достатності класичних моделей</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>17</strong></td>
+<td style="text-align: left;">м. Рівне (Північний хімічний вузол)</td>
+<td style="text-align: left;"><span class="arithmatex">\(NH_3\)</span>, <span class="arithmatex">\(NO_2\)</span>, <span class="arithmatex">\(SO_2\)</span>; висока волатильність за низької вибірки</td>
+<td style="text-align: left;">Дослідження ризику перенавчання на малих даних</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>18</strong></td>
+<td style="text-align: left;">м. Луцьк (Логістичний вузол)</td>
+<td style="text-align: left;"><span class="arithmatex">\(NO_2\)</span>, <span class="arithmatex">\(CO\)</span>, <span class="arithmatex">\(PM_{2.5}\)</span>; циклічність <span class="arithmatex">\(S=12\)</span>, піки вихідних днів</td>
+<td style="text-align: left;">Аналіз тижневої ритміки транспортного навантаження</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>19</strong></td>
+<td style="text-align: left;">м. Кропивницький (Ливарний комплекс)</td>
+<td style="text-align: left;"><span class="arithmatex">\(PM_{10}\)</span>, <span class="arithmatex">\(CO\)</span>, Фенол; стаціонарний ряд, <span class="arithmatex">\(p_{\text{ADF}} = 0.018\)</span></td>
+<td style="text-align: left;">Аудит відповідності технологічного регламенту підприємства</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>20</strong></td>
+<td style="text-align: left;">м. Горішні Плавні (Зона відвалів ГЗК)</td>
+<td style="text-align: left;"><span class="arithmatex">\(PM_{10}\)</span>, <span class="arithmatex">\(SO_2\)</span>, <span class="arithmatex">\(NO_2\)</span>; різниця цільової та фонової точок <span class="arithmatex">\(\Delta C = 1.45\)</span></td>
+<td style="text-align: left;">Обґрунтування встановлення додаткового поста моніторингу</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="32">3.2 Покроковий алгоритм та розв'язок еталонного прикладу</h3>
+<p>Як базовий приклад розглядається зведений моніторинговий контур міської агломерації (Кременчуцький промисловий вузол), що містить розрахункові метрики прогнозів моделей (AutoARIMA, LSTM, Q-Transformer), дані аналізу рядів (тренд, стаціонарність), частоту інцидентів перевищення ГДК та просторову аномалію в районі мостового переходу. Сценарій реалізується у файлі <code>notebooks/lab10_dppdmext_agent.ipynb</code>.</p>
+<h4 id="1_1">Блок 1. Імпорт модулів та налаштування конфігурації</h4>
+<p>У першій комірці блокнота виконується підключення базових бібліотек обробки даних, генерації графіків та мережевої взаємодії з мовною моделлю.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="c1"># Налаштування стилю наукової графіки</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">'seaborn-v0_8-whitegrid'</span> <span class="k">if</span> <span class="s1">'seaborn-v0_8-whitegrid'</span> <span class="ow">in</span> <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">available</span> <span class="k">else</span> <span class="s1">'default'</span><span class="p">)</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">'font.size'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">'figure.dpi'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">150</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Аналітичне середовище контуру DPPDMext успішно ініціалізовано."</span><span class="p">)</span>
+</span></code></pre></div>
+<h4 id="2">Блок 2. Формування вхідного масиву телеметричних та прогностичних метрик</h4>
+<p>Модуль формує структурований JSON-масив валідаційних результатів, що включає показники похибок моделей (<span class="arithmatex">\(\text{MSE}\)</span>, <span class="arithmatex">\(\text{MAE}\)</span>, <span class="arithmatex">\(R^2\)</span>), параметри рядів (ADF <span class="arithmatex">\(p\text{-value}\)</span>, тренд), кратність перевищення ГДК та виявлені просторові розбіжності.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Формування тестового пакета аналітичних даних контуру DPPDMext</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">validation_data</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="s2">"location"</span><span class="p">:</span> <span class="s2">"м. Кременчук (Північний промисловий вузол та Крюківський міст)"</span><span class="p">,</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="s2">"monitoring_period_months"</span><span class="p">:</span> <span class="mi">35</span><span class="p">,</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="s2">"parameters_evaluated"</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>        <span class="s2">"NO2"</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>            <span class="s2">"mean_concentration_mg_m3"</span><span class="p">:</span> <span class="mf">0.040</span><span class="p">,</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>            <span class="s2">"mpc_standard_mg_m3"</span><span class="p">:</span> <span class="mf">0.040</span><span class="p">,</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>            <span class="s2">"max_recorded_mg_m3"</span><span class="p">:</span> <span class="mf">0.098</span><span class="p">,</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>            <span class="s2">"trend_slope"</span><span class="p">:</span> <span class="mf">0.0005</span><span class="p">,</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>            <span class="s2">"adf_p_value"</span><span class="p">:</span> <span class="mf">0.988</span><span class="p">,</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>            <span class="s2">"autocorrelation_lag1"</span><span class="p">:</span> <span class="mf">0.915</span><span class="p">,</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>            <span class="s2">"best_classical_model"</span><span class="p">:</span> <span class="s2">"GRU"</span><span class="p">,</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>            <span class="s2">"classical_mse"</span><span class="p">:</span> <span class="mf">0.00007</span><span class="p">,</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>            <span class="s2">"classical_r2"</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.00</span><span class="p">,</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>            <span class="s2">"best_quantum_model"</span><span class="p">:</span> <span class="s2">"Q-Transformer"</span><span class="p">,</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>            <span class="s2">"quantum_mse"</span><span class="p">:</span> <span class="mf">0.00003</span><span class="p">,</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>            <span class="s2">"quantum_r2"</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.02</span><span class="p">,</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>            <span class="s2">"mse_improvement_pct"</span><span class="p">:</span> <span class="mf">49.23</span><span class="p">,</span>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>            <span class="s2">"exceedance_hours_count"</span><span class="p">:</span> <span class="mi">142</span>
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>        <span class="p">},</span>
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>        <span class="s2">"CO"</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>            <span class="s2">"mean_concentration_mg_m3"</span><span class="p">:</span> <span class="mf">0.51</span><span class="p">,</span>
+</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>            <span class="s2">"mpc_standard_mg_m3"</span><span class="p">:</span> <span class="mf">3.00</span><span class="p">,</span>
+</span><span id="__span-10-25"><a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>            <span class="s2">"max_recorded_mg_m3"</span><span class="p">:</span> <span class="mf">3.85</span><span class="p">,</span>
+</span><span id="__span-10-26"><a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>            <span class="s2">"trend_slope"</span><span class="p">:</span> <span class="mf">0.003</span><span class="p">,</span>
+</span><span id="__span-10-27"><a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a>            <span class="s2">"adf_p_value"</span><span class="p">:</span> <span class="mf">0.990</span><span class="p">,</span>
+</span><span id="__span-10-28"><a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>            <span class="s2">"autocorrelation_lag1"</span><span class="p">:</span> <span class="mf">0.853</span><span class="p">,</span>
+</span><span id="__span-10-29"><a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a>            <span class="s2">"best_classical_model"</span><span class="p">:</span> <span class="s2">"LSTM"</span><span class="p">,</span>
+</span><span id="__span-10-30"><a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a>            <span class="s2">"classical_mse"</span><span class="p">:</span> <span class="mf">0.00053</span><span class="p">,</span>
+</span><span id="__span-10-31"><a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a>            <span class="s2">"classical_r2"</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.31</span><span class="p">,</span>
+</span><span id="__span-10-32"><a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a>            <span class="s2">"best_quantum_model"</span><span class="p">:</span> <span class="s2">"Q-Transformer"</span><span class="p">,</span>
+</span><span id="__span-10-33"><a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a>            <span class="s2">"quantum_mse"</span><span class="p">:</span> <span class="mf">0.00044</span><span class="p">,</span>
+</span><span id="__span-10-34"><a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a>            <span class="s2">"quantum_r2"</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.10</span><span class="p">,</span>
+</span><span id="__span-10-35"><a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a>            <span class="s2">"mse_improvement_pct"</span><span class="p">:</span> <span class="mf">16.80</span><span class="p">,</span>
+</span><span id="__span-10-36"><a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a>            <span class="s2">"exceedance_hours_count"</span><span class="p">:</span> <span class="mi">28</span>
+</span><span id="__span-10-37"><a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a>        <span class="p">},</span>
+</span><span id="__span-10-38"><a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a>        <span class="s2">"Atmospheric_Pressure"</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-10-39"><a id="__codelineno-10-39" name="__codelineno-10-39" href="#__codelineno-10-39"></a>            <span class="s2">"mean_value_gpa"</span><span class="p">:</span> <span class="mf">101.3</span><span class="p">,</span>
+</span><span id="__span-10-40"><a id="__codelineno-10-40" name="__codelineno-10-40" href="#__codelineno-10-40"></a>            <span class="s2">"trend_slope"</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.015</span><span class="p">,</span>
+</span><span id="__span-10-41"><a id="__codelineno-10-41" name="__codelineno-10-41" href="#__codelineno-10-41"></a>            <span class="s2">"adf_p_value"</span><span class="p">:</span> <span class="mf">0.345</span><span class="p">,</span>
+</span><span id="__span-10-42"><a id="__codelineno-10-42" name="__codelineno-10-42" href="#__codelineno-10-42"></a>            <span class="s2">"autocorrelation_lag1"</span><span class="p">:</span> <span class="mf">0.145</span><span class="p">,</span>
+</span><span id="__span-10-43"><a id="__codelineno-10-43" name="__codelineno-10-43" href="#__codelineno-10-43"></a>            <span class="s2">"best_classical_model"</span><span class="p">:</span> <span class="s2">"AutoARIMA"</span><span class="p">,</span>
+</span><span id="__span-10-44"><a id="__codelineno-10-44" name="__codelineno-10-44" href="#__codelineno-10-44"></a>            <span class="s2">"classical_mse"</span><span class="p">:</span> <span class="mf">4.25</span><span class="p">,</span>
+</span><span id="__span-10-45"><a id="__codelineno-10-45" name="__codelineno-10-45" href="#__codelineno-10-45"></a>            <span class="s2">"classical_r2"</span><span class="p">:</span> <span class="mf">0.11</span><span class="p">,</span>
+</span><span id="__span-10-46"><a id="__codelineno-10-46" name="__codelineno-10-46" href="#__codelineno-10-46"></a>            <span class="s2">"best_quantum_model"</span><span class="p">:</span> <span class="s2">"Q-Transformer"</span><span class="p">,</span>
+</span><span id="__span-10-47"><a id="__codelineno-10-47" name="__codelineno-10-47" href="#__codelineno-10-47"></a>            <span class="s2">"quantum_mse"</span><span class="p">:</span> <span class="mf">1.07</span><span class="p">,</span>
+</span><span id="__span-10-48"><a id="__codelineno-10-48" name="__codelineno-10-48" href="#__codelineno-10-48"></a>            <span class="s2">"quantum_r2"</span><span class="p">:</span> <span class="mf">0.78</span><span class="p">,</span>
+</span><span id="__span-10-49"><a id="__codelineno-10-49" name="__codelineno-10-49" href="#__codelineno-10-49"></a>            <span class="s2">"mse_improvement_pct"</span><span class="p">:</span> <span class="mf">74.74</span><span class="p">,</span>
+</span><span id="__span-10-50"><a id="__codelineno-10-50" name="__codelineno-10-50" href="#__codelineno-10-50"></a>            <span class="s2">"exceedance_hours_count"</span><span class="p">:</span> <span class="mi">0</span>
+</span><span id="__span-10-51"><a id="__codelineno-10-51" name="__codelineno-10-51" href="#__codelineno-10-51"></a>        <span class="p">},</span>
+</span><span id="__span-10-52"><a id="__codelineno-10-52" name="__codelineno-10-52" href="#__codelineno-10-52"></a>        <span class="s2">"Temperature"</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-10-53"><a id="__codelineno-10-53" name="__codelineno-10-53" href="#__codelineno-10-53"></a>            <span class="s2">"mean_value_c"</span><span class="p">:</span> <span class="mf">15.90</span><span class="p">,</span>
+</span><span id="__span-10-54"><a id="__codelineno-10-54" name="__codelineno-10-54" href="#__codelineno-10-54"></a>            <span class="s2">"variance"</span><span class="p">:</span> <span class="mf">85.10</span><span class="p">,</span>
+</span><span id="__span-10-55"><a id="__codelineno-10-55" name="__codelineno-10-55" href="#__codelineno-10-55"></a>            <span class="s2">"adf_p_value"</span><span class="p">:</span> <span class="mf">0.189</span><span class="p">,</span>
+</span><span id="__span-10-56"><a id="__codelineno-10-56" name="__codelineno-10-56" href="#__codelineno-10-56"></a>            <span class="s2">"autocorrelation_lag1"</span><span class="p">:</span> <span class="mf">0.846</span><span class="p">,</span>
+</span><span id="__span-10-57"><a id="__codelineno-10-57" name="__codelineno-10-57" href="#__codelineno-10-57"></a>            <span class="s2">"best_classical_model"</span><span class="p">:</span> <span class="s2">"AutoARIMA"</span><span class="p">,</span>
+</span><span id="__span-10-58"><a id="__codelineno-10-58" name="__codelineno-10-58" href="#__codelineno-10-58"></a>            <span class="s2">"classical_mse"</span><span class="p">:</span> <span class="mf">22.45</span><span class="p">,</span>
+</span><span id="__span-10-59"><a id="__codelineno-10-59" name="__codelineno-10-59" href="#__codelineno-10-59"></a>            <span class="s2">"classical_r2"</span><span class="p">:</span> <span class="mf">0.62</span><span class="p">,</span>
+</span><span id="__span-10-60"><a id="__codelineno-10-60" name="__codelineno-10-60" href="#__codelineno-10-60"></a>            <span class="s2">"best_quantum_model"</span><span class="p">:</span> <span class="s2">"Q-AutoETS"</span><span class="p">,</span>
+</span><span id="__span-10-61"><a id="__codelineno-10-61" name="__codelineno-10-61" href="#__codelineno-10-61"></a>            <span class="s2">"quantum_mse"</span><span class="p">:</span> <span class="mf">48.75</span><span class="p">,</span>
+</span><span id="__span-10-62"><a id="__codelineno-10-62" name="__codelineno-10-62" href="#__codelineno-10-62"></a>            <span class="s2">"quantum_r2"</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.18</span><span class="p">,</span>
+</span><span id="__span-10-63"><a id="__codelineno-10-63" name="__codelineno-10-63" href="#__codelineno-10-63"></a>            <span class="s2">"mse_improvement_pct"</span><span class="p">:</span> <span class="o">-</span><span class="mf">117.20</span><span class="p">,</span>
+</span><span id="__span-10-64"><a id="__codelineno-10-64" name="__codelineno-10-64" href="#__codelineno-10-64"></a>            <span class="s2">"exceedance_hours_count"</span><span class="p">:</span> <span class="mi">0</span>
+</span><span id="__span-10-65"><a id="__codelineno-10-65" name="__codelineno-10-65" href="#__codelineno-10-65"></a>        <span class="p">}</span>
+</span><span id="__span-10-66"><a id="__codelineno-10-66" name="__codelineno-10-66" href="#__codelineno-10-66"></a>    <span class="p">},</span>
+</span><span id="__span-10-67"><a id="__codelineno-10-67" name="__codelineno-10-67" href="#__codelineno-10-67"></a>    <span class="s2">"spatial_simulation_findings"</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-10-68"><a id="__codelineno-10-68" name="__codelineno-10-68" href="#__codelineno-10-68"></a>        <span class="s2">"target_point"</span><span class="p">:</span> <span class="s2">"Крюківський міст (інтенсивний трафік)"</span><span class="p">,</span>
+</span><span id="__span-10-69"><a id="__codelineno-10-69" name="__codelineno-10-69" href="#__codelineno-10-69"></a>        <span class="s2">"background_point"</span><span class="p">:</span> <span class="s2">"Стаціонарний пост Крюківського району"</span><span class="p">,</span>
+</span><span id="__span-10-70"><a id="__codelineno-10-70" name="__codelineno-10-70" href="#__codelineno-10-70"></a>        <span class="s2">"delta_concentration_no2"</span><span class="p">:</span> <span class="mf">0.038</span><span class="p">,</span>
+</span><span id="__span-10-71"><a id="__codelineno-10-71" name="__codelineno-10-71" href="#__codelineno-10-71"></a>        <span class="s2">"traffic_simulation_anomaly_detected"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-10-72"><a id="__codelineno-10-72" name="__codelineno-10-72" href="#__codelineno-10-72"></a>        <span class="s2">"blind_spot_identified"</span><span class="p">:</span> <span class="s2">"Правобережний з'їзд мосту не охоплений фізичними датчиками"</span>
+</span><span id="__span-10-73"><a id="__codelineno-10-73" name="__codelineno-10-73" href="#__codelineno-10-73"></a>    <span class="p">}</span>
+</span><span id="__span-10-74"><a id="__codelineno-10-74" name="__codelineno-10-74" href="#__codelineno-10-74"></a><span class="p">}</span>
+</span><span id="__span-10-75"><a id="__codelineno-10-75" name="__codelineno-10-75" href="#__codelineno-10-75"></a>
+</span><span id="__span-10-76"><a id="__codelineno-10-76" name="__codelineno-10-76" href="#__codelineno-10-76"></a><span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">"../data"</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-10-77"><a id="__codelineno-10-77" name="__codelineno-10-77" href="#__codelineno-10-77"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../data/validation_metrics.json"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span><span id="__span-10-78"><a id="__codelineno-10-78" name="__codelineno-10-78" href="#__codelineno-10-78"></a>    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">validation_data</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-10-79"><a id="__codelineno-10-79" name="__codelineno-10-79" href="#__codelineno-10-79"></a>
+</span><span id="__span-10-80"><a id="__codelineno-10-80" name="__codelineno-10-80" href="#__codelineno-10-80"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Вхідний пакет метрик валідації успішно збережено у каталозі data/."</span><span class="p">)</span>
+</span></code></pre></div>
+<h4 id="3-cri">Блок 3. Розрахунок комплексного індексу надійності прогнозу (CRI)</h4>
+<p>Модуль обчислює значення <span class="arithmatex">\(\text{CRI}\)</span> для кожного досліджуваного параметра на основі точності прогностичного ядра, нормованої похибки та ризику перевищення санітарних норм.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">compute_cri_scores</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="p">(</span><span class="mf">0.40</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">)):</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="n">w_r2</span><span class="p">,</span> <span class="n">w_nrmse</span><span class="p">,</span> <span class="n">w_safe</span> <span class="o">=</span> <span class="n">weights</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="n">cri_results</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="k">for</span> <span class="n">param</span><span class="p">,</span> <span class="n">metrics</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s2">"parameters_evaluated"</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>        <span class="c1"># 1. Нормалізація R2 (відсікання значень менше 0)</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>        <span class="n">raw_r2</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"quantum_r2"</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">metrics</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"classical_r2"</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>        <span class="n">r2_norm</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">raw_r2</span><span class="p">)</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>        <span class="c1"># 2. Нормована похибка NRMSE (використовуємо MSE найкращої моделі)</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>        <span class="n">min_mse</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"quantum_mse"</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="n">metrics</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"classical_mse"</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">))</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>        <span class="n">rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">min_mse</span><span class="p">)</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>        <span class="c1"># Оцінка діапазону значень (розмах)</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>        <span class="n">val_range</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"max_recorded_mg_m3"</span><span class="p">,</span> <span class="n">metrics</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"mean_value_c"</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">))</span> <span class="o">*</span> <span class="mf">0.8</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>        <span class="n">nrmse</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">rmse</span> <span class="o">/</span> <span class="p">(</span><span class="n">val_range</span> <span class="o">+</span> <span class="mf">1e-6</span><span class="p">))</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>        <span class="c1"># 3. Показник безпеки щодо відсутності перевищень ГДК</span>
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>        <span class="n">exceed_hours</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"exceedance_hours_count"</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>        <span class="n">total_hours</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">"monitoring_period_months"</span><span class="p">]</span> <span class="o">*</span> <span class="mi">30</span> <span class="o">*</span> <span class="mi">24</span>
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>        <span class="n">safety_score</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span> <span class="o">-</span> <span class="p">(</span><span class="n">exceed_hours</span> <span class="o">/</span> <span class="mf">200.0</span><span class="p">))</span>
+</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>
+</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>        <span class="c1"># Розрахунок інтегрального індексу CRI</span>
+</span><span id="__span-11-23"><a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>        <span class="n">cri_value</span> <span class="o">=</span> <span class="n">w_r2</span> <span class="o">*</span> <span class="n">r2_norm</span> <span class="o">+</span> <span class="n">w_nrmse</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">nrmse</span><span class="p">)</span> <span class="o">+</span> <span class="n">w_safe</span> <span class="o">*</span> <span class="n">safety_score</span>
+</span><span id="__span-11-24"><a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>
+</span><span id="__span-11-25"><a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>        <span class="n">cri_results</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+</span><span id="__span-11-26"><a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a>            <span class="s2">"Параметр"</span><span class="p">:</span> <span class="n">param</span><span class="p">,</span>
+</span><span id="__span-11-27"><a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a>            <span class="s2">"Найкраща модель"</span><span class="p">:</span> <span class="n">metrics</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"best_quantum_model"</span><span class="p">)</span> <span class="k">if</span> <span class="n">metrics</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"mse_improvement_pct"</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">metrics</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"best_classical_model"</span><span class="p">),</span>
+</span><span id="__span-11-28"><a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a>            <span class="s2">"Виграш MSE, %"</span><span class="p">:</span> <span class="n">metrics</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"mse_improvement_pct"</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span>
+</span><span id="__span-11-29"><a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a>            <span class="s2">"Нормований R²"</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">r2_norm</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+</span><span id="__span-11-30"><a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a>            <span class="s2">"Безпековий бал"</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">safety_score</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+</span><span id="__span-11-31"><a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a>            <span class="s2">"Індекс CRI"</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">cri_value</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</span><span id="__span-11-32"><a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a>        <span class="p">})</span>
+</span><span id="__span-11-33"><a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a>
+</span><span id="__span-11-34"><a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a>    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">cri_results</span><span class="p">)</span>
+</span><span id="__span-11-35"><a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a>
+</span><span id="__span-11-36"><a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a><span class="n">df_cri</span> <span class="o">=</span> <span class="n">compute_cri_scores</span><span class="p">(</span><span class="n">validation_data</span><span class="p">)</span>
+</span><span id="__span-11-37"><a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Розраховані індекси надійності прогнозів (CRI):"</span><span class="p">)</span>
+</span><span id="__span-11-38"><a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a><span class="n">df_cri</span>
+</span></code></pre></div>
+<h4 id="4-prompt-engineering-llm-">Блок 4. Формування структурованого запиту (Prompt Engineering) для LLM-агента</h4>
+<p>У цьому блоці створюється системна інструкція, яка регламентує роль екологічного експерта, правила детекції причин погіршення точності та формат генерації звіту.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">build_expert_agent_prompt</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">cri_table</span><span class="p">):</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="n">system_instruction</span> <span class="o">=</span> <span class="p">(</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>        <span class="s2">"Ти — провідний експерт із системного аналізу екологічної безпеки та когнітивного аудиту моделей штучного інтелекту. "</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>        <span class="s2">"Твоє завдання — на основі наданих числових метрик, результатів валідації та просторового моделювання скласти "</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>        <span class="s2">"академічно довершений, критичний екологічний звіт для муніципалітету. "</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>        <span class="s2">"Вимоги до звіту:</span><span class="se">\n</span><span class="s2">"</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>        <span class="s2">"1. Чітко розділити аналіз на розділи: 'Загальний стан атмосфери', 'Аудит якості моделей прогнозування', "</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>        <span class="s2">"'Оцінка просторових аномалій та джерел викидів', 'Рекомендації для прийняття управлінських рішень'.</span><span class="se">\n</span><span class="s2">"</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>        <span class="s2">"2. Обов'язково пояснити фізичні причини від'ємного коефіцієнта R² (нестаціонарність, мала вибірка, стохастичні викиди автотрафіку).</span><span class="se">\n</span><span class="s2">"</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>        <span class="s2">"3. Вказати, для яких параметрів квантово-гібридний підхід дав виграш (тиск, вологість), а де зазнав невдачі (температура, CO).</span><span class="se">\n</span><span class="s2">"</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>        <span class="s2">"4. Сформулювати рекомендації щодо ліквідації інформаційних 'сліпих зон' на основі моделювання Крюківського мосту."</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>    <span class="p">)</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>    <span class="n">user_payload</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>        <span class="s2">"region_context"</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">"location"</span><span class="p">],</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>        <span class="s2">"observation_history_months"</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">"monitoring_period_months"</span><span class="p">],</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>        <span class="s2">"parameters_metrics"</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">"parameters_evaluated"</span><span class="p">],</span>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>        <span class="s2">"spatial_simulation"</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">"spatial_simulation_findings"</span><span class="p">],</span>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>        <span class="s2">"composite_reliability_table"</span><span class="p">:</span> <span class="n">cri_table</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s2">"records"</span><span class="p">)</span>
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>    <span class="p">}</span>
+</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>
+</span><span id="__span-12-22"><a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a>    <span class="n">full_prompt</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-12-23"><a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a>        <span class="s2">"system"</span><span class="p">:</span> <span class="n">system_instruction</span><span class="p">,</span>
+</span><span id="__span-12-24"><a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a>        <span class="s2">"payload"</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">user_payload</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-12-25"><a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a>    <span class="p">}</span>
+</span><span id="__span-12-26"><a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a>    <span class="k">return</span> <span class="n">full_prompt</span>
+</span><span id="__span-12-27"><a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a>
+</span><span id="__span-12-28"><a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a><span class="n">prompt_package</span> <span class="o">=</span> <span class="n">build_expert_agent_prompt</span><span class="p">(</span><span class="n">validation_data</span><span class="p">,</span> <span class="n">df_cri</span><span class="p">)</span>
+</span><span id="__span-12-29"><a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Системний промпт та JSON-навантаження успішно згенеровано."</span><span class="p">)</span>
+</span></code></pre></div>
+<h4 id="5">Блок 5. Виконання запиту до когнітивного агента (із вбудованим механізмом стійкості)</h4>
+<p>Модуль відправляє сформований промпт до локального сервера LLM (LM Studio / Ollama через OpenAI-сумісний HTTP API). У разі відсутності підключеного сервера автоматично активується вбудований детермінований генератор еталонної відповіді моделі <code>deepseek-r1-distill-llama-8b</code>, що забезпечує 100% виконання програми за будь-яких умов.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">query_cognitive_agent</span><span class="p">(</span><span class="n">prompt_data</span><span class="p">,</span> <span class="n">api_url</span><span class="o">=</span><span class="s2">"http://localhost:11434/v1/chat/completions"</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">"deepseek-r1-distill-llama-8b"</span><span class="p">):</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"Content-Type"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">}</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="n">body</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>        <span class="s2">"model"</span><span class="p">:</span> <span class="n">model</span><span class="p">,</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>        <span class="s2">"messages"</span><span class="p">:</span> <span class="p">[</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>            <span class="p">{</span><span class="s2">"role"</span><span class="p">:</span> <span class="s2">"system"</span><span class="p">,</span> <span class="s2">"content"</span><span class="p">:</span> <span class="n">prompt_data</span><span class="p">[</span><span class="s2">"system"</span><span class="p">]},</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>            <span class="p">{</span><span class="s2">"role"</span><span class="p">:</span> <span class="s2">"user"</span><span class="p">,</span> <span class="s2">"content"</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"Проаналізуй дані та сформуй експертний звіт:</span><span class="se">\n</span><span class="si">{</span><span class="n">prompt_data</span><span class="p">[</span><span class="s1">'payload'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">}</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>        <span class="p">],</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>        <span class="s2">"temperature"</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>        <span class="s2">"max_tokens"</span><span class="p">:</span> <span class="mi">1500</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>    <span class="p">}</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>    <span class="k">try</span><span class="p">:</span>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">api_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">body</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>            <span class="n">result</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>            <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="s2">"choices"</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">"message"</span><span class="p">][</span><span class="s2">"content"</span><span class="p">]</span>
+</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>        <span class="k">pass</span>
+</span><span id="__span-13-20"><a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>
+</span><span id="__span-13-21"><a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>    <span class="c1"># Еталонна відповідь моделі DeepSeek-R1-Distill-Llama-8B для автономного режиму</span>
+</span><span id="__span-13-22"><a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a>    <span class="n">simulated_expert_response</span> <span class="o">=</span> <span class="p">(</span>
+</span><span id="__span-13-23"><a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a>        <span class="s2">"### ЕКСПЕРТНИЙ АНАЛІТИЧНИЙ ЗВІТ ЩОДО ОЦІНКИ ЕКОЛОГІЧНОЇ БЕЗПЕКИ ТА ПРЕДИКТИВНОГО МОДЕЛЮВАННЯ</span><span class="se">\n\n</span><span class="s2">"</span>
+</span><span id="__span-13-24"><a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>        <span class="s2">"**1. Загальний стан атмосферного повітря та оцінка екологічних загроз**</span><span class="se">\n</span><span class="s2">"</span>
+</span><span id="__span-13-25"><a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a>        <span class="s2">"За результатами 35-місячного моніторингу у Північному промисловому вузлі зафіксовано стабільно високий рівень "</span>
+</span><span id="__span-13-26"><a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a>        <span class="s2">"забруднення діоксидом азоту (NO₂) із 142 годинами перевищення гранично допустимої концентрації (ГДК = 0.040 мг/м³). "</span>
+</span><span id="__span-13-27"><a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a>        <span class="s2">"Концентрації оксиду вуглецю (CO) характеризуються вираженим зростаючим трендом (коефіцієнт нахилу a = 0.003) та високою "</span>
+</span><span id="__span-13-28"><a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a>        <span class="s2">"стохастичною волатильністю, що свідчить про інтенсивний антропогенний тиск.</span><span class="se">\n\n</span><span class="s2">"</span>
+</span><span id="__span-13-29"><a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a>        <span class="s2">"**2. Аудит прогностичних моделей та причин деградації метрик**</span><span class="se">\n</span><span class="s2">"</span>
+</span><span id="__span-13-30"><a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a>        <span class="s2">"Аналіз результатів предиктивного ядра виявив чітку дихотомію ефективності:</span><span class="se">\n</span><span class="s2">"</span>
+</span><span id="__span-13-31"><a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a>        <span class="s2">"- Для стабільних фізичних параметрів (атмосферний тиск) квантово-гібридна модель Q-Transformer продемонструвала "</span>
+</span><span id="__span-13-32"><a id="__codelineno-13-32" name="__codelineno-13-32" href="#__codelineno-13-32"></a>        <span class="s2">"високу точність із виграшем по MSE у 74.74% та R² = 0.78 проти R² = 0.11 у класичної AutoARIMA.</span><span class="se">\n</span><span class="s2">"</span>
+</span><span id="__span-13-33"><a id="__codelineno-13-33" name="__codelineno-13-33" href="#__codelineno-13-33"></a>        <span class="s2">"- Для параметрів зі значною дисперсією та короткою вибіркою (температура, CO) спостерігається деградація квантових моделей "</span>
+</span><span id="__span-13-34"><a id="__codelineno-13-34" name="__codelineno-13-34" href="#__codelineno-13-34"></a>        <span class="s2">"(зростання MSE на 117.20% для температури) та поява від'ємних значень R² (-1.00 для класичної моделі NO₂).</span><span class="se">\n</span><span class="s2">"</span>
+</span><span id="__span-13-35"><a id="__codelineno-13-35" name="__codelineno-13-35" href="#__codelineno-13-35"></a>        <span class="s2">"- Фізична причина від'ємного R² полягає у вираженій нестаціонарності часового ряду (тест ADF p-value = 0.988 &gt; 0.05) та "</span>
+</span><span id="__span-13-36"><a id="__codelineno-13-36" name="__codelineno-13-36" href="#__codelineno-13-36"></a>        <span class="s2">"високому апаратному шумі малих вибірок, за яких дисперсія помилок моделі перевищує дисперсію вихідного ряду навколо середнього.</span><span class="se">\n\n</span><span class="s2">"</span>
+</span><span id="__span-13-37"><a id="__codelineno-13-37" name="__codelineno-13-37" href="#__codelineno-13-37"></a>        <span class="s2">"**3. Оцінка просторових аномалій та ідентифікація джерел емісій**</span><span class="se">\n</span><span class="s2">"</span>
+</span><span id="__span-13-38"><a id="__codelineno-13-38" name="__codelineno-13-38" href="#__codelineno-13-38"></a>        <span class="s2">"Зіставлення геопросторової інтерполяції IDW із результатами A*-симулятора виявило критичну просторову розбіжність "</span>
+</span><span id="__span-13-39"><a id="__codelineno-13-39" name="__codelineno-13-39" href="#__codelineno-13-39"></a>        <span class="s2">"в районі Крюківського мосту (ΔC = 0.038 мг/м³ NO₂ відносно фонового рівня). Імітація підтверджує, що щільний "</span>
+</span><span id="__span-13-40"><a id="__codelineno-13-40" name="__codelineno-13-40" href="#__codelineno-13-40"></a>        <span class="s2">"автотранспортний потік формує неврахований локальний епіцентр емісій. Виявлено 'сліпу пляму' системи фізичного моніторингу: "</span>
+</span><span id="__span-13-41"><a id="__codelineno-13-41" name="__codelineno-13-41" href="#__codelineno-13-41"></a>        <span class="s2">"відсутність стаціонарного поста на правобережному з'їзді мосту викривляє загальну оцінку муніципального забруднення.</span><span class="se">\n\n</span><span class="s2">"</span>
+</span><span id="__span-13-42"><a id="__codelineno-13-42" name="__codelineno-13-42" href="#__codelineno-13-42"></a>        <span class="s2">"**4. Прескриптивні рекомендації для муніципальних органів влади**</span><span class="se">\n</span><span class="s2">"</span>
+</span><span id="__span-13-43"><a id="__codelineno-13-43" name="__codelineno-13-43" href="#__codelineno-13-43"></a>        <span class="s2">"1. Встановити додатковий автоматичний пост вимірювання NO₂ та PM2.5 на правобережному підході до Крюківського мосту.</span><span class="se">\n</span><span class="s2">"</span>
+</span><span id="__span-13-44"><a id="__codelineno-13-44" name="__codelineno-13-44" href="#__codelineno-13-44"></a>        <span class="s2">"2. Застосовувати квантово-гібридні моделі (Q-Transformer) виключно для стабільних циклічних процесів (тиск, вологість), "</span>
+</span><span id="__span-13-45"><a id="__codelineno-13-45" name="__codelineno-13-45" href="#__codelineno-13-45"></a>        <span class="s2">"тоді як для параметрів з високою волатильністю (температура) використовувати класичну AutoARIMA з обов'язковим диференціюванням.</span><span class="se">\n</span><span class="s2">"</span>
+</span><span id="__span-13-46"><a id="__codelineno-13-46" name="__codelineno-13-46" href="#__codelineno-13-46"></a>        <span class="s2">"3. Впровадити алгоритмічне обмеження ReLU на виходах усіх моделей для виключення фізично неможливих від'ємних концентрацій."</span>
+</span><span id="__span-13-47"><a id="__codelineno-13-47" name="__codelineno-13-47" href="#__codelineno-13-47"></a>    <span class="p">)</span>
+</span><span id="__span-13-48"><a id="__codelineno-13-48" name="__codelineno-13-48" href="#__codelineno-13-48"></a>    <span class="k">return</span> <span class="n">simulated_expert_response</span>
+</span><span id="__span-13-49"><a id="__codelineno-13-49" name="__codelineno-13-49" href="#__codelineno-13-49"></a>
+</span><span id="__span-13-50"><a id="__codelineno-13-50" name="__codelineno-13-50" href="#__codelineno-13-50"></a><span class="n">generated_report</span> <span class="o">=</span> <span class="n">query_cognitive_agent</span><span class="p">(</span><span class="n">prompt_package</span><span class="p">)</span>
+</span><span id="__span-13-51"><a id="__codelineno-13-51" name="__codelineno-13-51" href="#__codelineno-13-51"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Експертний звіт успішно сформовано когнітивним агентом."</span><span class="p">)</span>
+</span></code></pre></div>
+<h4 id="6-dppdmext">Блок 6. Експертний аудит висновків моделі та візуалізація дашборду DPPDMext</h4>
+<p>У цьому блоці виконується програмна верифікація згенерованого звіту (перевірка наявності пояснення від'ємного <span class="arithmatex">\(R^2\)</span> та просторової розбіжності), розрахунок підсумкових показників і побудова графічного дашборду.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Програмна перевірка повноти та фізичної адекватності звіту LLM</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">audit_checks</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    <span class="s2">"Пояснення від'ємного R²"</span><span class="p">:</span> <span class="p">(</span><span class="s2">"R²"</span> <span class="ow">in</span> <span class="n">generated_report</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="s2">"нестаціонарн"</span> <span class="ow">in</span> <span class="n">generated_report</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">or</span> <span class="s2">"дисперсі"</span> <span class="ow">in</span> <span class="n">generated_report</span><span class="o">.</span><span class="n">lower</span><span class="p">()),</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    <span class="s2">"Ідентифікація аномалії Крюківського мосту"</span><span class="p">:</span> <span class="s2">"крюківськ"</span> <span class="ow">in</span> <span class="n">generated_report</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    <span class="s2">"Визначення переваги квантових моделей для тиску"</span><span class="p">:</span> <span class="s2">"74.74"</span> <span class="ow">in</span> <span class="n">generated_report</span> <span class="ow">or</span> <span class="s2">"тиск"</span> <span class="ow">in</span> <span class="n">generated_report</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>    <span class="s2">"Рекомендації щодо встановлення нових датчиків"</span><span class="p">:</span> <span class="s2">"додатков"</span> <span class="ow">in</span> <span class="n">generated_report</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">and</span> <span class="s2">"пост"</span> <span class="ow">in</span> <span class="n">generated_report</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="p">}</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="n">df_audit</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">audit_checks</span><span class="o">.</span><span class="n">items</span><span class="p">()),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">"Критерій аудиту"</span><span class="p">,</span> <span class="s2">"Статус перевірки"</span><span class="p">])</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="c1"># Збереження текстового звіту та аудиту</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">"../exports"</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../exports/generated_eco_report.md"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">generated_report</span><span class="p">)</span>
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="n">df_audit</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="s2">"../exports/expert_audit_verdict.json"</span><span class="p">,</span> <span class="n">force_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>
+</span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="c1"># Побудова зведеного аналітичного дашборду</span>
+</span><span id="__span-14-19"><a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</span><span id="__span-14-20"><a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>
+</span><span id="__span-14-21"><a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a><span class="c1"># Графік 1: Порівняння індексів надійності прогнозів CRI</span>
+</span><span id="__span-14-22"><a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a><span class="n">colors_cri</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'#2ca02c'</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mf">0.7</span> <span class="k">else</span> <span class="s1">'#ff7f0e'</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mf">0.5</span> <span class="k">else</span> <span class="s1">'#d62728'</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df_cri</span><span class="p">[</span><span class="s1">'Індекс CRI'</span><span class="p">]]</span>
+</span><span id="__span-14-23"><a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df_cri</span><span class="p">[</span><span class="s1">'Параметр'</span><span class="p">],</span> <span class="n">df_cri</span><span class="p">[</span><span class="s1">'Індекс CRI'</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">colors_cri</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.85</span><span class="p">)</span>
+</span><span id="__span-14-24"><a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">0.70</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'green'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Поріг високої надійності (CRI &gt;= 0.70)'</span><span class="p">)</span>
+</span><span id="__span-14-25"><a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">0.50</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">':'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Критичний поріг (CRI = 0.50)'</span><span class="p">)</span>
+</span><span id="__span-14-26"><a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'Комплексний індекс CRI'</span><span class="p">)</span>
+</span><span id="__span-14-27"><a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Оцінка надійності прогностичних моделей за параметрами'</span><span class="p">)</span>
+</span><span id="__span-14-28"><a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+</span><span id="__span-14-29"><a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">'lower left'</span><span class="p">)</span>
+</span><span id="__span-14-30"><a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">':'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+</span><span id="__span-14-31"><a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a>
+</span><span id="__span-14-32"><a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a><span class="c1"># Графік 2: Виграш або деградація точності при переході до квантових моделей</span>
+</span><span id="__span-14-33"><a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a><span class="n">bars</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">df_cri</span><span class="p">[</span><span class="s1">'Параметр'</span><span class="p">],</span> <span class="n">df_cri</span><span class="p">[</span><span class="s1">'Виграш MSE, %'</span><span class="p">],</span> 
+</span><span id="__span-14-34"><a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a>                   <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">'#2ca02c'</span> <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s1">'#d62728'</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">df_cri</span><span class="p">[</span><span class="s1">'Виграш MSE, %'</span><span class="p">]],</span> 
+</span><span id="__span-14-35"><a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a>                   <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.85</span><span class="p">)</span>
+</span><span id="__span-14-36"><a id="__codelineno-14-36" name="__codelineno-14-36" href="#__codelineno-14-36"></a><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+</span><span id="__span-14-37"><a id="__codelineno-14-37" name="__codelineno-14-37" href="#__codelineno-14-37"></a><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'Зміна похибки MSE (позитивні значення — перевага Quantum)'</span><span class="p">)</span>
+</span><span id="__span-14-38"><a id="__codelineno-14-38" name="__codelineno-14-38" href="#__codelineno-14-38"></a><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Відносний виграш квантово-гібридних моделей (ΔMSE %)'</span><span class="p">)</span>
+</span><span id="__span-14-39"><a id="__codelineno-14-39" name="__codelineno-14-39" href="#__codelineno-14-39"></a><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">':'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+</span><span id="__span-14-40"><a id="__codelineno-14-40" name="__codelineno-14-40" href="#__codelineno-14-40"></a>
+</span><span id="__span-14-41"><a id="__codelineno-14-41" name="__codelineno-14-41" href="#__codelineno-14-41"></a><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-14-42"><a id="__codelineno-14-42" name="__codelineno-14-42" href="#__codelineno-14-42"></a><span class="n">dashboard_path</span> <span class="o">=</span> <span class="s1">'../exports/dppdmext_dashboard.png'</span>
+</span><span id="__span-14-43"><a id="__codelineno-14-43" name="__codelineno-14-43" href="#__codelineno-14-43"></a><span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">dashboard_path</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+</span><span id="__span-14-44"><a id="__codelineno-14-44" name="__codelineno-14-44" href="#__codelineno-14-44"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Аналітичний дашборд збережено у: </span><span class="si">{</span><span class="n">dashboard_path</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-14-45"><a id="__codelineno-14-45" name="__codelineno-14-45" href="#__codelineno-14-45"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span><span id="__span-14-46"><a id="__codelineno-14-46" name="__codelineno-14-46" href="#__codelineno-14-46"></a>
+</span><span id="__span-14-47"><a id="__codelineno-14-47" name="__codelineno-14-47" href="#__codelineno-14-47"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Результати верифікації звіту когнітивного агента:"</span><span class="p">)</span>
+</span><span id="__span-14-48"><a id="__codelineno-14-48" name="__codelineno-14-48" href="#__codelineno-14-48"></a><span class="n">df_audit</span>
+</span></code></pre></div>
+<hr />
+<h3 id="33">3.3 Запуск, тестування та перевірка результатів</h3>
+<p>Запуск розробленого блокнота здійснюється в терміналі за допомогою команди:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>jupyter<span class="w"> </span>lab<span class="w"> </span>notebooks/lab10_dppdmext_agent.ipynb
+</span></code></pre></div>
+<h4 id="_1">Приклад реального консольного виведення в блокноті:</h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Аналітичне середовище контуру DPPDMext успішно ініціалізовано.
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>Вхідний пакет метрик валідації успішно збережено у каталозі data/.
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>Розраховані індекси надійності прогнозів (CRI):
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>             Параметр Найкраща модель  Виграш MSE, %  Нормований R²  Безпековий бал  Індекс CRI
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>0                 NO2    Q-Transformer          49.23          0.000           0.290      0.4225
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>1                  CO    Q-Transformer          16.80          0.000           0.860      0.5650
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>2 Atmospheric_Pressure   Q-Transformer          74.74          0.780           1.000      0.9120
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>3         Temperature       AutoARIMA        -117.20          0.620           1.000      0.8480
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>Системний промпт та JSON-навантаження успішно згенеровано.
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>Експертний звіт успішно сформовано когнітивним агентом.
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>Аналітичний дашборд збережено у: ../exports/dppdmext_dashboard.png
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>
+</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>Результати верифікації звіту когнітивного агента:
+</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>                              Критерій аудиту  Статус перевірки
+</span><span id="__span-16-17"><a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a>0                    Пояснення від'ємного R²              True
+</span><span id="__span-16-18"><a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a>1  Ідентифікація аномалії Крюківського мосту              True
+</span><span id="__span-16-19"><a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a>2 Визначення переваги квантових моделей...              True
+</span><span id="__span-16-20"><a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a>3 Рекомендації щодо встановлення нових...              True
+</span></code></pre></div>
+<h4 id="dppdmext">Таблиця валідації та самоперевірки контуру DPPDMext:</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Контрольний етап</th>
+<th style="text-align: left;">Очікуваний результат</th>
+<th style="text-align: left;">Діагностика у разі помилки</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Коректність розрахунку індексу CRI</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{CRI}(\text{Pressure}) &gt; 0.90\)</span>, <span class="arithmatex">\(\text{CRI}(\text{NO}_2) &lt; 0.50\)</span></td>
+<td style="text-align: left;">Перевірити формулу зважування та вагові коефіцієнти в конфігураторі</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Формування JSON Payload</strong></td>
+<td style="text-align: left;">Відсутність помилок серіалізації типів NumPy (<code>float</code>/<code>int</code>)</td>
+<td style="text-align: left;">Застосувати явне приведення числових значень через <code>float()</code> або <code>round()</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Стійкість каналу API</strong></td>
+<td style="text-align: left;">Генерація звіту навіть за відсутності з'єднання з LLM</td>
+<td style="text-align: left;">Перевірити роботу блоку перехоплення винятків <code>try...except</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Експертна верифікація</strong></td>
+<td style="text-align: left;">Усі 4 критерії аудиту мають значення <code>True</code></td>
+<td style="text-align: left;">Перевірити повноту системного промпту та обов'язкові ключові слова</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Експорт артефактів</strong></td>
+<td style="text-align: left;">Файли <code>.md</code>, <code>.json</code> та <code>.png</code> у каталозі <code>exports/</code></td>
+<td style="text-align: left;">Перевірити створення папки <code>exports/</code> та коректність шляхів збереження</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4">4 Вимоги до змісту звіту</h2>
+<p>Звіт про виконання лабораторної роботи оформлюється у форматі PDF відповідно до стандартів НАЗЯВО та повинен містити такі обов'язкові структурні елементи:</p>
+<ol>
+<li>
+<p>Титульна сторінка встановленого зразка із зазначенням ЗВО, кафедри, дисципліни, номера лабораторної роботи, теми, індивідуального варіанта, а також даних про здобувача та викладача.</p>
+</li>
+<li>
+<p>Мета роботи, теоретичне обґрунтування розширеної концептуальної моделі DPPDMext та індивідуальна постановка завдання згідно з обраним варіантом.</p>
+</li>
+<li>
+<p>Розрахункова частина з математичним формулюванням індексу надійності <span class="arithmatex">\(\text{CRI}\)</span>, формалізацією функцій когнітивного агента <span class="arithmatex">\(f_{\text{LLM}}\)</span> та описом структури системного промпту.</p>
+</li>
+<li>
+<p>Повний та структурований вихідний код програми у форматі комірок блокнота Jupyter Notebook (<code>.ipynb</code>) із детальними поблочними коментарями логіки виконання.</p>
+</li>
+<li>
+<p>Скріншоти та графічні артефакти виконання роботи, зокрема згенерований текст експертного звіту у форматі Markdown, таблиця верифікації аудиту та фінальний графічний дашборд показників <span class="arithmatex">\(\text{CRI}\)</span> і <span class="arithmatex">\(\Delta\text{MSE}\)</span>.</p>
+</li>
+<li>
+<p>Науково обґрунтовані аналітичні висновки, у яких проведено критичну оцінку здатності мовної моделі формулювати причинно-наслідкові зв'язки в екологічних дослідженнях, визначено межі застосовності когнітивних агентів та обґрунтовано необхідність людської експертної верифікації прийнятих рішень.</p>
+</li>
+</ol>
+<hr />
+<h2 id="5_1">5 Контрольні запитання для захисту роботи</h2>
+<ol>
+<li>
+<p>У чому полягає принципова різниця між базовою моделлю підготовки даних DPPDM та розширеною концептуальною структурою DPPDMext у задачах муніципального екологічного моніторингу?</p>
+</li>
+<li>
+<p>Які фізико-математичні причини зумовлюють виникнення від'ємних значень коефіцієнта детермінації (<span class="arithmatex">\(R^2\)</span>) при прогнозуванні екологічних часових рядів із високою волатильністю?</p>
+</li>
+<li>
+<p>Чому квантово-гібридні моделі типу Q-Transformer демонструють значний виграш у точності на стабільних метеорологічних параметрах (атмосферний тиск, вологість), але програють класичним статистичним моделям на високозашумлених рядах температури та оксиду вуглецю?</p>
+</li>
+<li>
+<p>Яким чином інформаційна неузгодженість між результатами просторової інтерполяції IDW та імітаційного моделювання трафіку (A*-симуляція) дозволяє виявляти «сліпі зони» у фізичній мережі постів спостереження?</p>
+</li>
+<li>
+<p>Яку функціональну роль відіграє системний промпт (<span class="arithmatex">\(\Theta_{\text{sys}}\)</span>) у запобіганні галюцинаціям мовної моделі при генерації експертних екологічних висновків?</p>
+</li>
+<li>
+<p>За якими математичними та логічними критеріями розраховується комплексний індекс надійності прогнозу (<span class="arithmatex">\(\text{CRI}\)</span>), і як його значення впливає на прийняття управлінських рішень у концепції «розумного міста»?</p>
+</li>
+<li>
+<p>Чому сучасні великі мовні моделі (LLM/VLM) не можуть повністю замінити людину-експерта в екологічному менеджменті, залишаючись інструментом доповненого інтелекту (Augmented Intelligence)?</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Повернутись нагору
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Kyrylo Vadurin &bull; <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "header.autohide", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0456\u0439\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u0421\u043a\u043e\u043f\u0456\u044e\u0432\u0430\u0442\u0438 \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0429\u0435 1 \u0437\u0431\u0456\u0433 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.more.other": "\u0429\u0435 # \u0437\u0431\u0456\u0433\u0456\u0432 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.none": "\u0417\u0431\u0456\u0433\u0456\u0432 \u043d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0437\u0431\u0456\u0433", "search.result.other": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e # \u0437\u0431\u0456\u0433\u0456\u0432", "search.result.placeholder": "\u0420\u043e\u0437\u043f\u043e\u0447\u043d\u0456\u0442\u044c \u043f\u0438\u0441\u0430\u0442\u0438 \u0434\u043b\u044f \u043f\u043e\u0448\u0443\u043a\u0443", "search.result.term.missing": "\u041d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e \u0437\u0430\u043f\u0438\u0442\u0443", "select.version": "\u041e\u0431\u0440\u0430\u0442\u0438 \u0432\u0435\u0440\u0441\u0456\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

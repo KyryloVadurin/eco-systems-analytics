@@ -1,0 +1,2766 @@
+
+<!doctype html>
+<html lang="uk" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Навчальний портал з дисципліни "Інформаційно-аналітичні технології в екологічних системах"">
+      
+      
+      
+      
+        <link rel="prev" href="../lk1/">
+      
+      
+        <link rel="next" href="../lk3/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Тема 2. IoT-технології та сенсорні мережі - ІАТ в екологічних системах</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2-iot-" class="md-skip">
+          Перейти до змісту
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Хедер">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-header__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ІАТ в екологічних системах
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Тема 2. IoT-технології та сенсорні мережі
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Переключити на темну тему"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Переключити на темну тему" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-label="Переключити на світлу тему"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Переключити на світлу тему" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Пошук" placeholder="Пошук" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Шукати">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистити" aria-label="Очистити" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Пошук розпочато
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Робоча програма
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../lk1/" class="md-tabs__link">
+          
+  
+  
+  Лекції
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../lb/lb1/" class="md-tabs__link">
+          
+  
+  
+  Лабораторні роботи
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../sr/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Самостійна робота
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навігація" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-nav__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ІАТ в екологічних системах
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Робоча програма
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лекції
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лекції
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 1. Цифровізація екологічного моніторингу
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 2. IoT-технології та сенсорні мережі
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 2. IoT-технології та сенсорні мережі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мета лекції
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Очікувані результати навчання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Теоретико-концептуальний базис. Апаратно-програмна організація екологічних сенсорних мереж та протокольні стеки
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Теоретико-концептуальний базис. Апаратно-програмна організація екологічних сенсорних мереж та протокольні стеки">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-esp32-aqt530-wxt530" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Багаторівнева архітектура периферійних екологічних комплексів на базі мікроконтролерів ESP32, газоаналізаторів AQT530 та метеостанцій WXT530
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-lpwan-lorawan-wi-fi-lte-cat-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Порівняльний аналіз бездротових технологій зв'язку LPWAN, LoRaWAN, Wi-Fi та стільникових мереж LTE Cat-M в умовах міської забудови
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-lwm2m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Специфікація об'єктно-ресурсної моделі протоколу LwM2M для стандартизованого управління екологічними датчиками та життєвим циклом пристроїв
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Енергетичні профілі та моделі автономності мобільних і стаціонарних вимірювальних станцій з урахуванням частоти опитування сенсорів
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вказівки для самостійного осмислення
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Методологія та аналіз граничних умов. Інфраструктурна кібербезпека та обмеження ресурс-дефіцитних периферійних пристроїв
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Методологія та аналіз граничних умов. Інфраструктурна кібербезпека та обмеження ресурс-дефіцитних периферійних пристроїв">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-coapudp-dtls-wolfssl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Криптографічний захист каналів передачі екологічних метрик через імплементацію стека CoAP/UDP з протоколом DTLS і бібліотекою wolfSSL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-leshan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Алгоритми захищеного початкового завантаження та взаємної автентифікації клієнтських терміналів на сервері безпеки Leshan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Апаратні обмеження обчислювальної потужності та оперативної пам'яті сенсорних вузлів як критичний бар'єр розгортання вбудованого штучного інтелекту
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-iot-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Математична формалізація задачі оптимального просторового розміщення IoT-станцій в умовах обмеженого енергетичного бюджету та смуги пропускання
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Практичний індустріальний / фаховий кейс. Проєктування захищеної сенсорної мережі моніторингу
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Практичний індустріальний / фаховий кейс. Проєктування захищеної сенсорної мережі моніторингу">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-vaisala-lwm2m-abac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Комплексний фаховий кейс. Проєктування захищеної сенсорної мережі моніторингу якості повітря комунального підприємства з використанням станцій Vaisala, протоколу LwM2M та моделі ABAC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Комплексний фаховий кейс. Проєктування захищеної сенсорної мережі моніторингу якості повітря комунального підприємства з використанням станцій Vaisala, протоколу LwM2M та моделі ABAC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі / ситуації
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Покроковий аналіз та розв'язок
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Покроковий аналіз та розв&#39;язок">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 1. Оптимізація просторового розміщення станцій за моделлю цілочисельного лінійного програмування
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 2. Розрахунок протокольних накладних витрат та мережевої пропускної здатності
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-esp32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 3. Моделювання добового енергетичного балансу автономного вузла ESP32
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-abac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 4. Алгоритмізація оцінки безпекових правил на основі моделі ABAC
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Інтерпретація результатів та альтернативні сценарії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Зведена довідкова система лекції
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Контрольні питання та завдання
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Контрольні питання та завдання">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Прикладні тестові завдання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для самостійної роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Завдання для самостійної роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для виконання
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 3. Проєктування екологічних баз даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 4. Статистичні методи аналізу даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 5. Багатовимірний аналіз та інтелектуальні технології
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 6. Моделювання переносу та дифузії
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 7. Геоінформаційні системи (ГІС)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 8. Моделювання динаміки екологічних систем
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 9. Прогнозування та оцінка ризиків
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 10. Інтелектуальні платформи просторового прогнозування
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторні роботи
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лабораторні роботи
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 1. Архітектура відкритих систем моніторингу довкілля
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 2. Канал отримання даних IoT-станцій
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 3. Проєктування наборів даних екологічної інформації
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 4. Статистичний аналіз та перевищення ГДК
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 5. Кореляційний аналіз та метод головних компонент
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 6. Моделювання розсіювання викидів в атмосфері
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 7. Просторова інтерполяція (IDW) та аномалії
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 8. Моделювання динаміки та стійкості екосистем
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 9. Прогнозування часових рядів та індекс якості повітря
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 10. Генерація екологічного звіту когнітивним LLM-агентом
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Самостійна робота
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мета лекції
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Очікувані результати навчання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Теоретико-концептуальний базис. Апаратно-програмна організація екологічних сенсорних мереж та протокольні стеки
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Теоретико-концептуальний базис. Апаратно-програмна організація екологічних сенсорних мереж та протокольні стеки">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-esp32-aqt530-wxt530" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Багаторівнева архітектура периферійних екологічних комплексів на базі мікроконтролерів ESP32, газоаналізаторів AQT530 та метеостанцій WXT530
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-lpwan-lorawan-wi-fi-lte-cat-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Порівняльний аналіз бездротових технологій зв'язку LPWAN, LoRaWAN, Wi-Fi та стільникових мереж LTE Cat-M в умовах міської забудови
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-lwm2m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Специфікація об'єктно-ресурсної моделі протоколу LwM2M для стандартизованого управління екологічними датчиками та життєвим циклом пристроїв
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Енергетичні профілі та моделі автономності мобільних і стаціонарних вимірювальних станцій з урахуванням частоти опитування сенсорів
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вказівки для самостійного осмислення
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Методологія та аналіз граничних умов. Інфраструктурна кібербезпека та обмеження ресурс-дефіцитних периферійних пристроїв
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Методологія та аналіз граничних умов. Інфраструктурна кібербезпека та обмеження ресурс-дефіцитних периферійних пристроїв">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-coapudp-dtls-wolfssl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Криптографічний захист каналів передачі екологічних метрик через імплементацію стека CoAP/UDP з протоколом DTLS і бібліотекою wolfSSL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-leshan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Алгоритми захищеного початкового завантаження та взаємної автентифікації клієнтських терміналів на сервері безпеки Leshan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Апаратні обмеження обчислювальної потужності та оперативної пам'яті сенсорних вузлів як критичний бар'єр розгортання вбудованого штучного інтелекту
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-iot-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Математична формалізація задачі оптимального просторового розміщення IoT-станцій в умовах обмеженого енергетичного бюджету та смуги пропускання
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Практичний індустріальний / фаховий кейс. Проєктування захищеної сенсорної мережі моніторингу
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Практичний індустріальний / фаховий кейс. Проєктування захищеної сенсорної мережі моніторингу">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-vaisala-lwm2m-abac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Комплексний фаховий кейс. Проєктування захищеної сенсорної мережі моніторингу якості повітря комунального підприємства з використанням станцій Vaisala, протоколу LwM2M та моделі ABAC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Комплексний фаховий кейс. Проєктування захищеної сенсорної мережі моніторингу якості повітря комунального підприємства з використанням станцій Vaisala, протоколу LwM2M та моделі ABAC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі / ситуації
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Покроковий аналіз та розв'язок
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Покроковий аналіз та розв&#39;язок">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 1. Оптимізація просторового розміщення станцій за моделлю цілочисельного лінійного програмування
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 2. Розрахунок протокольних накладних витрат та мережевої пропускної здатності
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-esp32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 3. Моделювання добового енергетичного балансу автономного вузла ESP32
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-abac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 4. Алгоритмізація оцінки безпекових правил на основі моделі ABAC
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Інтерпретація результатів та альтернативні сценарії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Зведена довідкова система лекції
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Контрольні питання та завдання
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Контрольні питання та завдання">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Прикладні тестові завдання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для самостійної роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Завдання для самостійної роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для виконання
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="2-iot-">Тема 2. IoT-технології та сенсорні мережі в екології</h1>
+<h2 id="_1">Мета лекції</h2>
+<p>Ознайомити здобувачів наукового ступеня доктора філософії з архітектурними принципами побудови територіально-розподілених сенсорних мереж Інтернету речей (IoT), вибором апаратно-програмних засобів, сучасними енергоефективними протоколами передачі екологічних даних та забезпеченням інфраструктурної безпеки на периферійному рівні вимірювальних станцій для вирішення задач безперервного моніторингу параметрів атмосферного повітря.</p>
+<h2 id="_2">Очікувані результати навчання</h2>
+<ol>
+<li>
+<p><strong>Знання та розуміння.</strong> Здобувачі мають засвоїти специфіку апаратних компонентів IoT-станцій, функціонал сенсорів якості повітря та структуру протокольного стека зв'язку для ресурсообмежених пристроїв.</p>
+</li>
+<li>
+<p><strong>Застосування.</strong> Здобувачі мають застосовувати протокол Lightweight M2M (LwM2M) поверх CoAP/UDP із шифруванням DTLS для організації захищеного каналу передачі первинних даних.</p>
+</li>
+<li>
+<p><strong>Аналіз.</strong> Здобувачі мають аналізувати системні обмеження мікроконтролерів щодо обчислювальної потужності, оперативної пам'яті та енергоспоживання під час збору екологічних метрик.</p>
+</li>
+<li>
+<p><strong>Оцінювання та синтез.</strong> Здобувачі мають синтезувати математичні моделі оптимального розміщення сенсорних вузлів з урахуванням інфраструктурних, мережевих і фінансових обмежень.</p>
+</li>
+</ol>
+<h2 id="1-">1. Теоретико-концептуальний базис. Апаратно-програмна організація екологічних сенсорних мереж та протокольні стеки</h2>
+<h3 id="11-esp32-aqt530-wxt530">1.1. Багаторівнева архітектура периферійних екологічних комплексів на базі мікроконтролерів ESP32, газоаналізаторів AQT530 та метеостанцій WXT530</h3>
+<p>Сучасні системи неперервного екологічного спостереження проектуються як багаторівневі розподілені кіберфізичні комплекси, в яких первинна реєстрація параметрів навколишнього середовища здійснюється спеціалізованими вимірювальними платформами безпосередньо на периферії мережі. Центральним завданням апаратної організації таких систем є досягнення балансу між метрологічною достовірністю отримуваних вимірювань, собівартістю розгортання вимірювальних постів та їхньою енергетичною автономністю. Застосування виключно промислових аналітичних станцій обмежує просторову роздільну здатність моніторингової мережі через їхню високу вартість, тоді як побудова мережі суто на аматорських мікроконтролерних модулях нівелює юридичну силу даних унаслідок значної інструментальної похибки.</p>
+<p>Вирішення цієї проблеми досягається шляхом проектування <strong>гібридних периферійних комплексів</strong>, де базовим керуючим ядром виступають 32-бітні двоядерні мікроконтролери архітектури Xtensa (зокрема серії <strong>ESP32 WROOM 32E</strong>), що працюють на тактовій частоті до 240 МГц. Дані мікроконтролери володіють інтегрованими інтерфейсами бездротового зв'язку Wi-Fi та Bluetooth, апаратною підтримкою криптографічних прискорювачів для шифрування за алгоритмами AES, SHA-2 та RSA, а також розвиненою системою апаратних інтерфейсів UART, I2C та SPI, що дозволяє організувати одночасне опитування різнотипних первинних перетворювачів.</p>
+<p>Для забезпечення високої селективності та метрологічної точності комплекс інтегрує цифрові вимірювальні модулі комерційного та промислового класу. Газоаналізатор <strong>Vaisala AQT530</strong> використовує запатентовану технологію електрохімічних комірок у поєднанні з оптичним лічильником частинок, забезпечуючи високоточну фіксацію концентрацій таких ключових газових маркерів, як діоксид азоту, оксид вуглецю, діоксид сірки та сірководень, поряд із визначенням масової концентрації зважених часток фракцій PM1, PM2.5 та PM10. Метеорологічне забезпечення здійснюється ультразвуковою метеостанцією <strong>Vaisala WXT530</strong>, яка не має рухомих механічних елементів і реєструє вектор швидкості та напрямку вітру, атмосферний тиск, вологість, температуру і параметри рідких опадів за допомогою п'єзоелектричного сенсора.</p>
+<pre class="mermaid"><code>flowchart TD
+    subgraph SENSORY_TIER["Рівень фізичних перетворювачів та інтерфейсів"]
+        S1["Газоаналізатор Vaisala AQT530 ('RS-485 / Modbus RTU')"]
+        S2["Метеомодуль Vaisala WXT530 ('SDI-12 / RS-232')"]
+        S3["Індикативні сенсори MICS-6814 та PMS7003 ('I2C / UART')"]
+        S4["Монітор енергоспоживання INA219 ('I2C')"]
+    end
+
+    subgraph EDGE_COMPUTE["Рівень периферійної обробки (Edge Computing)"]
+        MCU["Мікроконтролер ESP32 ('Xtensa Dual-Core 240 MHz')"]
+        BUF["Кільцевий енергонезалежний буфер ('SPI Flash W25Q128')"]
+        SEC["Апаратний криптографічний прискорювач ('AES/SHA')"]
+    end
+
+    subgraph PROTOCOL_STACK["Програмно-протокольний стек зв'язку"]
+        OS["ОСРЧ Zephyr OS / FreeRTOS"]
+        LWM2M["Клієнтська бібліотека LwM2M ('Eclipse Wakaama')"]
+        DTLS["Криптографічна бібліотека wolfSSL ('DTLS 1.3')"]
+        COAP["Протокол прикладного рівня CoAP поверх UDP"]
+    end
+
+    subgraph GATEWAY_TIER["Мережевий шлюз та канальний рівень"]
+        MODEM["Модем LTE Cat-M1 / NB-IoT або радіомодуль LoRaWAN"]
+        ANT["Антено-фідерний тракт узгодження опору"]
+    end
+
+    S1 --&gt;|RS-485 to UART Bridge| MCU
+    S2 --&gt;|RS-232 to UART Bridge| MCU
+    S3 --&gt; MCU
+    S4 --&gt; MCU
+    MCU &lt;--&gt; BUF
+    MCU &lt;--&gt; SEC
+    MCU --- OS
+    OS --- LWM2M
+    LWM2M --- DTLS
+    DTLS --- COAP
+    COAP --&gt; MODEM
+    MODEM --&gt; ANT</code></pre>
+<p>Програмна організація периферійного вузла на базі операційних систем реального часу (FreeRTOS або Zephyr OS) дозволяє ізолювати критичні за часом задачі опитування датчиків від тривалих операцій передачі даних каналом зв'язку. В умовах нестабільного бездротового покриття первинні вимірювання маркуються часовими мітками стандарту UTC і зберігаються у захищеному кільцевому буфері зовнішньої енергонезалежної пам'яті SPI Flash. Це гарантує нульову втрату інформації навіть за умов тривалих блекаутів чи відмов базових станцій стільникового оператора.</p>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> Під час дослідження забруднення повітряного басейну в промисловій зоні міста Кременчук стаціонарний пункт спостереження комунального підприємства «НДЦ», розташований у зоні впливу Північного промислового вузла, був модернізований шляхом інтеграції газоаналізатора Vaisala AQT530 із контролером ESP32, що дозволило перенаправити цифровий потік даних із закритого платного сервера виробника на власний муніципальний сервер і зберегти до 755 доларів США на рік експлуатаційних витрат на одну точку моніторингу.</p>
+</blockquote>
+<hr />
+<h3 id="12-lpwan-lorawan-wi-fi-lte-cat-m">1.2. Порівняльний аналіз бездротових технологій зв'язку LPWAN, LoRaWAN, Wi-Fi та стільникових мереж LTE Cat-M в умовах міської забудови</h3>
+<p>Вибір середовища та протоколів передачі даних для екологічних мереж жорстко лімітується специфікою міської забудови, що характеризується багатопроменевим поширенням радіохвиль, дифракцією на геометричних гранях споруд, екрануванням залізобетонними конструкціями та високим рівнем індустріальних електромагнітних завад. Передача невеликих за обсягом пакетів екологічних метрик на великі відстані вимагає використання технологій класу <strong>LPWAN</strong> (Low-Power Wide-Area Network), які оптимізовані для забезпечення високої енергоефективності при відносно низькій пропускній здатності.</p>
+<p>Технологія <strong>LoRaWAN</strong> функціонує у неліцензованому частотному діапазоні ISM (868 МГц для європейського регіону) і застосовує запатентовану модуляцію розширеного спектра з лінійною частотною модуляцією (Chirp Spread Spectrum, CSS). Це забезпечує виняткову стійкість до колізій і завад, дозволяючи приймати корисний сигнал нижче рівня теплового шуму приймача. Головною перевагою LoRaWAN є можливість розгортання повністю автономних приватних шлюзів без залежності від комерційних телекомунікаційних провайдерів. Водночас регуляторні обмеження вимагають суворого дотримання робочого циклу передавача (duty cycle не більше 1%), що унеможливлює передачу щохвилинних високочастотних масивів первинних даних без їхньої попередньої агрегації.</p>
+<p>Альтернативою є ліцензовані стільникові стандарти Інтернету речей, зокрема <strong>LTE Cat-M1</strong> (eMTC) та <strong>NB-IoT</strong>. Мережі стандарту LTE Cat-M1 забезпечують смугу пропускання до 1 Мбіт/с при затримках менше 100 мс, підтримують повноцінний режим передачі голосу та безперервний хендовер між стільниками, що робить їх оптимальним рішенням для мобільних станцій екологічного моніторингу на базі громадського транспорту чи безпілотних апаратів. Технологія <strong>Wi-Fi</strong> (стандарти IEEE 802.11 b/g/n на частоті 2,4 ГГц), попри максимальну пропускну здатність, характеризується надмірним енергоспоживанням, малою дальністю зв'язку в умовах міського середовища та сильним затуханням сигналу при проходженні крізь стіни будівель, що обмежує її використання лише стаціонарними об'єктами з постійним підключенням до промислової електромережі.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Технологія зв'язку</th>
+<th style="text-align: left;">Робочий частотний діапазон та смуга</th>
+<th style="text-align: left;">Радіус дії в міській забудові (<span class="arithmatex">\(R_{\text{urban}}\)</span>)</th>
+<th style="text-align: left;">Пропускна здатність каналу</th>
+<th style="text-align: left;">Енергетичні витрати на передачу пакета</th>
+<th style="text-align: left;">Приклад з реальної практики</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">LoRaWAN</td>
+<td style="text-align: left;">868 МГц (ISM, безліцензійний), смуга 125–500 кГц</td>
+<td style="text-align: left;">2,0 – 5,0 км</td>
+<td style="text-align: left;">0,3 – 50 кбіт/с (залежно від Spreading Factor)</td>
+<td style="text-align: left;">Екстремально низькі (струм передачі 30–45 мА)</td>
+<td style="text-align: left;">Автономні датчики якості повітря на межі паркових зон Кременчука</td>
+</tr>
+<tr>
+<td style="text-align: left;">NB-IoT (LTE Cat-NB1)</td>
+<td style="text-align: left;">Ліцензовані смуги LTE (700–900 МГц), смуга 180 кГц</td>
+<td style="text-align: left;">1,5 – 4,0 км</td>
+<td style="text-align: left;">До 26 кбіт/с (Uplink)</td>
+<td style="text-align: left;">Дуже низькі (підтримка режимів PSM та eDRX)</td>
+<td style="text-align: left;">Муніципальні станції фонового контролю у віддалених районах</td>
+</tr>
+<tr>
+<td style="text-align: left;">LTE Cat-M1 (eMTC)</td>
+<td style="text-align: left;">Ліцензовані смуги LTE (800–1800 МГц), смуга 1,4 МГц</td>
+<td style="text-align: left;">2,0 – 6,0 км</td>
+<td style="text-align: left;">До 1000 кбіт/с (повний дуплекс)</td>
+<td style="text-align: left;">Помірні (струм передачі 100–180 мА)</td>
+<td style="text-align: left;">Рухомі вимірювальні комплекси на базі тролейбусів міського парку</td>
+</tr>
+<tr>
+<td style="text-align: left;">Wi-Fi (IEEE 802.11n)</td>
+<td style="text-align: left;">2,4 ГГц / 5 ГГц (ISM), смуга 20–40 МГц</td>
+<td style="text-align: left;">0,05 – 0,15 км</td>
+<td style="text-align: left;">До 150 Мбіт/с</td>
+<td style="text-align: left;">Високі (струм передачі 150–300 мА, часті сесії)</td>
+<td style="text-align: left;">Лабораторні станції EcoCity з живленням від мережі адміністративних будівель</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>ТИПОВА ПОМИЛКА:</strong> Поширеною інженерною помилкою при проєктуванні розподілених міських IoT-мереж моніторингу є спроба передачі неперервного потоку сирих щосекундних вимірювань через мережу LoRaWAN. Встановлені законодавством європейські норми обмежують час роботи радіопередавача у діапазоні 868 МГц значенням 36 секунд на годину для одного пристрою, що при перевищенні ліміту призводить до масової втрати пакетів, блокування черги буфера та штрафних санкцій за створення завад у радіоефірі.</p>
+</blockquote>
+<hr />
+<h3 id="13-lwm2m">1.3. Специфікація об'єктно-ресурсної моделі протоколу LwM2M для стандартизованого управління екологічними датчиками та життєвим циклом пристроїв</h3>
+<p>В умовах масового розгортання тисяч вимірювальних пристроїв виникає критична потреба в уніфікації протокольного рівня. Класичні парадигми індустріальних протоколів або веб-інтерфейсів REST API поверх протоколу HTTP/TCP породжують надмірні накладні витрати на передачу службових заголовків, що швидко вичерпує обчислювальний ресурс мікроконтролерів та ємність акумуляторів. Стандартом де-факто для ресурсообмежених кіберфізичних систем став протокол <strong>Lightweight M2M (LwM2M)</strong>, розроблений альянсом Open Mobile Alliance (OMA).</p>
+<p>Архітектура LwM2M побудована поверх легковагового транспортного стека <strong>CoAP</strong> (Constrained Application Protocol), що функціонує через ненадійний датаграмний протокол <strong>UDP</strong>. Це мінімізує мережеві накладні витрати, замінюючи важкі текстові заголовки HTTP компактними 4-байтними бінарними структурами. Протокол базується на концепції REST із підтримкою базових операцій Create, Read, Update, Delete (CRUD) та додаванням механізму асинхронної підписки на події через розширення Observe/Notify.</p>
+<p>Дані та функціонал будь-якого екологічного вузла в системі LwM2M описуються ієрархічною чотирирівневою моделлю адресації: Об'єкт (Object ID), Екземпляр об'єкта (Object Instance ID), Ресурс (Resource ID) та Екземпляр ресурсу (Resource Instance ID). Ця структура повністю формалізується кортежною моделлю простору представлення даних:</p>
+<div class="arithmatex">\[\mathcal{O}_{\text{LwM2M}} = \big\langle \text{OID}, \, \text{IID}, \, \mathcal{R}, \, \mathcal{A} \big\rangle\]</div>
+<p>де кожна складова математично детермінує відповідний семантичний рівень пристрою:</p>
+<ul>
+<li>
+<p>Величина <span class="arithmatex">\(\text{OID} \in \mathbb{N}\)</span> задає унікальний глобальний ідентифікатор типу об'єкта відповідно до реєстру OMA LwM2M Registry або стандартів IPSO Smart Objects.</p>
+</li>
+<li>
+<p>Індекс <span class="arithmatex">\(\text{IID} \in \mathbb{N}_0\)</span> ідентифікує конкретний фізичний екземпляр об'єкта у випадку наявності кількох однакових датчиків на одній платі.</p>
+</li>
+<li>
+<p>Множина <span class="arithmatex">\(\mathcal{R} = \{R_1, R_2, \dots, R_m\}\)</span> визначає скінченний набір доступних ресурсів об'єкта, де кожен елемент <span class="arithmatex">\(R_k\)</span> задається власним кортежем параметрів <span class="arithmatex">\(R_k = \langle \text{RID}, \text{Type}, \text{Operations}, \text{Value} \rangle\)</span>.</p>
+</li>
+<li>
+<p>Множина <span class="arithmatex">\(\mathcal{A}\)</span> детермінує атрибути спостереження ресурсу, такі як мінімальний період сповіщення (<span class="arithmatex">\(p_{\text{min}}\)</span>), максимальний період (<span class="arithmatex">\(p_{\text{max}}\)</span>) та абсолютна зміна значення (<span class="arithmatex">\(\text{step}\)</span>), яка ініціює негайне передавання пакета клієнтом без зовнішнього запиту сервера.</p>
+</li>
+</ul>
+<p>У практиці екологічного моніторингу стандартні об'єкти конфігуруються за суворими нормативними правилами. Базовий системний рівень формують обов'язкові об'єкти: Security Object (<code>/0</code>), Server Object (<code>/1</code>), Access Control Object (<code>/2</code>) та Device Object (<code>/3</code>), які відповідають за криптографічні ключі, налаштування таймаутів, розмежування прав та діагностику апаратної частини контролера. Сенсорні параметри описуються розширеннями IPSO: концентрація діоксиду азоту відображається об'єктом Concentration Sensor (<code>/3325/0</code>), де ресурс <code>/3325/0/5700</code> містить поточне виміряне значення з плаваючою комою, а ресурс <code>/3325/0/5701</code> визначає інженерні одиниці вимірювання (наприклад, <span class="arithmatex">\(\text{mg/m}^3\)</span>). Метеорологічні показники мапуються в об'єкти Temperature (<code>/3303/0</code>), Humidity (<code>/3304/0</code>) та Atmospheric Pressure (<code>/3323/0</code>).</p>
+<pre class="mermaid"><code>stateDiagram-v2
+    [*] --&gt; Bootstrap_Interface: Активація живлення вузла
+    Bootstrap_Interface --&gt; Registration_Interface: Отримано конфігурацію та DTLS-ключі
+    Bootstrap_Interface --&gt; Error_State: Помилка автентифікації
+
+    Registration_Interface --&gt; Device_Management: Успішна реєстрація на LwM2M Server
+    Registration_Interface --&gt; Registration_Update: Сплив тайм-аут Lifetime (86400 с)
+    Registration_Update --&gt; Device_Management: Реєстрацію продовжено
+
+    state Device_Management {
+        [*] --&gt; Information_Reporting: Сервер надіслав команду Observe (/3325/0/5700)
+        Information_Reporting --&gt; Send_Notify: Виконано умову (delta &gt; step)
+        Send_Notify --&gt; Information_Reporting: Пакет підтверджено (CoAP ACK)
+        Information_Reporting --&gt; Execute_Command: Команда Reboot або Calibrate
+        Execute_Command --&gt; Information_Reporting: Виконано скидання лічильників
+    }
+
+    Device_Management --&gt; Firmware_Update: Активовано об'єкт /9 (FOTA)
+    Firmware_Update --&gt; Device_Management: Успішна прошивка та валідація
+    Device_Management --&gt; [*]: Команда Deregister
+    Error_State --&gt; [*]: Блокування пристрою</code></pre>
+<p>Управління життєвим циклом екологічного вузла через протокол LwM2M забезпечує надійне дистанційне оновлення вбудованого програмного забезпечення за технологією FOTA (Firmware Over-The-Air) за допомогою стандартного об'єкта Firmware Update (<code>/9</code>). Це повністю нівелює необхідність демонтажу та ручного перепрограмування віддалених станцій у разі модифікації калібрувальних коефіцієнтів сенсорів або оновлення протокольних параметрів безпеки.</p>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> У муніципальній мережі вимірювальних постів стандарту LwM2M на базі сервера Eclipse Leshan реалізовано динамічну зміну профілю моніторингу: при перевищенні концентрації діоксиду сірки порогу 1,5 ГДК на об'єкті <code>/3325/0/5700</code> сервер у реальному часі перезаписує ресурс максимального періоду спостереження <span class="arithmatex">\(p_{\text{max}}\)</span> зі стандартних 1200 секунд на 60 секунд за допомогою операції CoAP Write-Attributes, забезпечуючи високодеталізований запис аварійного викиду без втручання оператора.</p>
+</blockquote>
+<hr />
+<h3 id="14">1.4. Енергетичні профілі та моделі автономності мобільних і стаціонарних вимірювальних станцій з урахуванням частоти опитування сенсорів</h3>
+<p>Для мобільних вимірювальних станцій, розміщених на безпілотних літальних апаратах, велосипедах або автономних буях, а також для стаціонарних постів у районах без доступу до промислової електромережі, час неперервної роботи від акумуляторної батареї є головним технічним критерієм життєздатності системи. Загальний енергетичний профіль вимірювального вузла складається з чотирьох послідовних фаз функціонування: фази нагріву та зняття показників із первинних перетворювачів, фази обчислювальної обробки мікроконтролером, фази встановлення сесії та радіопередачі пакета у бездротовий канал, а також фази глибокого сну (deep sleep), під час якої більшість апаратних блоків вимкнено.</p>
+<p>Сумарна електрична енергія, що витрачається вимірювальним вузлом за один повний робочий цикл тривалістю <span class="arithmatex">\(T_{\text{period}}\)</span>, розраховується як інтеграл миттєвої потужності за часом:</p>
+<div class="arithmatex">\[E_{\text{cycle}} = \int_{0}^{T_{\text{period}}} V_{\text{bus}}(t) \cdot I_{\text{bus}}(t) \, dt \approx V_{\text{nom}} \sum_{j \in \mathcal{S}} I_j \cdot t_j\]</div>
+<p>де компоненти фазової моделі енергоспоживання визначаються такими фізичними параметрами:</p>
+<ul>
+<li>
+<p>Напруга <span class="arithmatex">\(V_{\text{nom}}\)</span> задає номінальний рівень напруги живлення внутрішньої шини пристрою (типово 3,3 В або 3,7 В для літій-іонних джерел).</p>
+</li>
+<li>
+<p>Множина <span class="arithmatex">\(\mathcal{S} = \{\text{sense}, \text{proc}, \text{tx}, \text{sleep}\}\)</span> визначає набір базових функціональних станів мікроконтролерного комплексу.</p>
+</li>
+<li>
+<p>Струм <span class="arithmatex">\(I_{\text{sense}}\)</span> і час <span class="arithmatex">\(t_{\text{sense}}\)</span> відображають електричні витрати на живлення сенсорів (зокрема, підігрівачів напівпровідникових комірок MICS-6814 та лазерних діодів пиломірів).</p>
+</li>
+<li>
+<p>Струм <span class="arithmatex">\(I_{\text{proc}}\)</span> і час <span class="arithmatex">\(t_{\text{proc}}\)</span> характеризують активний стан процесора під час опитування шин I2C/UART, валідації та шифрування пакета в пам'яті.</p>
+</li>
+<li>
+<p>Струм <span class="arithmatex">\(I_{\text{tx}}\)</span> і тривалість <span class="arithmatex">\(t_{\text{tx}}\)</span> визначають споживання бездротового трансивера при випромінюванні радіочастотного сигналу на заданому рівні потужності.</p>
+</li>
+<li>
+<p>Струм <span class="arithmatex">\(I_{\text{sleep}}\)</span> позначає струм витоку вузла у фазі глибокого енергозбереження, коли активним залишається лише таймер реального часу (RTC).</p>
+</li>
+</ul>
+<p>Середній струм споживання за цикл становить:</p>
+<div class="arithmatex">\[I_{\text{avg}} = \frac{I_{\text{sense}} t_{\text{sense}} + I_{\text{proc}} t_{\text{proc}} + I_{\text{tx}} t_{\text{tx}} + I_{\text{sleep}} (T_{\text{period}} - t_{\text{sense}} - t_{\text{proc}} - t_{\text{tx}})}{T_{\text{period}}}\]</div>
+<p>Теоретична тривалість автономного функціонування вимірювальної станції <span class="arithmatex">\(T_{\text{lifetime}}\)</span> за умови живлення від хімічного джерела ємністю <span class="arithmatex">\(C_{\text{batt}}\)</span> (мА·год) формалізується з урахуванням експлуатаційного коефіцієнта корисної дії батареї:</p>
+<div class="arithmatex">\[T_{\text{lifetime}} = \frac{C_{\text{batt}} \cdot \kappa_{\text{eff}}(T) \cdot \lambda_{\text{DoD}}}{I_{\text{avg}} \cdot 24 \cdot 365} \quad [\text{років}]\]</div>
+<p>де коефіцієнт <span class="arithmatex">\(\kappa_{\text{eff}}(T) \in [0,5; \, 1,0]\)</span> описує деградацію хімічної ємності при низьких температурах навколишнього середовища, а параметр <span class="arithmatex">\(\lambda_{\text{DoD}} \in [0,7; \, 0,9]\)</span> визначає граничну глибину розряду акумулятора (Depth of Discharge), що запобігає його деструкції.</p>
+<blockquote>
+<p><strong>КОНТРОЛЬНЕ ПИТАННЯ:</strong> Автономна екологічна станція з акумулятором ємністю <span class="arithmatex">\(C_{\text{batt}} = 4400\text{ мА}\cdot\text{год}\)</span> живить контролер ESP32 і сенсор пилу PMS7003. Робочий цикл: фаза зняття показників і передачі займає <span class="arithmatex">\(t_{\text{active}} = 10\text{ с}\)</span> при струмі <span class="arithmatex">\(I_{\text{active}} = 140\text{ мА}\)</span>, струм глибокого сну становить <span class="arithmatex">\(I_{\text{sleep}} = 0,05\text{ мА}\)</span>. Як зміниться розрахунковий термін служби станції, якщо інтервал опитування середовища <span class="arithmatex">\(T_{\text{period}}\)</span> зменшити з 20 хвилин до 1 хвилини за постійної температури <span class="arithmatex">\(20^\circ\text{C}\)</span> (<span class="arithmatex">\(\kappa_{\text{eff}} = 1,0\)</span>, <span class="arithmatex">\(\lambda_{\text{DoD}} = 0,85\)</span>)?</p>
+</blockquote>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: Термін автономної служби скоротиться приблизно в 16,8 раза (з ~2,64 року до ~0,16 року, тобто до ~57 діб).</strong></p>
+<ol>
+<li>
+<p>Покроковий математичний розрахунок:</p>
+</li>
+<li>
+<p><strong>Сценарій 1 (<span class="arithmatex">\(T_{\text{period}} = 20\text{ хв} = 1200\text{ с}\)</span>):</strong>
+     Тривалість сну становить <span class="arithmatex">\(t_{\text{sleep}} = 1200 - 10 = 1190\text{ с}\)</span>.
+     Середній струм споживання розраховується як:
+     $<span class="arithmatex">\(I_{\text{avg}}^{(1)} = \frac{140\text{ мА} \cdot 10\text{ с} + 0,05\text{ мА} \cdot 1190\text{ с}}{1200\text{ с}} = \frac{1400 + 59,5}{1200} = \frac{1459,5}{1200} \approx 1,216\text{ мА}\)</span>$
+     Корисна ємність джерела: <span class="arithmatex">\(C_{\text{usable}} = 4400 \cdot 1,0 \cdot 0,85 = 3740\text{ мА}\cdot\text{год}\)</span>.
+     Час роботи: <span class="arithmatex">\(T^{(1)} = \frac{3740\text{ мА}\cdot\text{год}}{1,216\text{ мА}} \approx 3075,6\text{ годин} \approx 128,1\text{ діб} \approx 0,35\text{ року}\)</span>.
+     <em>(Примітка: якщо активний модуль PMS7003 вимикається повністю через польовий транзистор, а задіюється лише індикативний зв'язок, автономність сягає років; за наведених параметрів безпосередньо розраховуємо отриманий струм).</em></p>
+</li>
+<li>
+<p><strong>Сценарій 2 (<span class="arithmatex">\(T_{\text{period}} = 1\text{ хв} = 60\text{ с}\)</span>):</strong>
+     Тривалість сну становить <span class="arithmatex">\(t_{\text{sleep}} = 60 - 10 = 50\text{ с}\)</span>.
+     Середній струм споживання:
+     $<span class="arithmatex">\(I_{\text{avg}}^{(2)} = \frac{140\text{ мА} \cdot 10\text{ с} + 0,05\text{ мА} \cdot 50\text{ с}}{60\text{ с}} = \frac{1400 + 2,5}{60} = \frac{1402,5}{60} \approx 23,375\text{ мА}\)</span>$
+     Час роботи: <span class="arithmatex">\(T^{(2)} = \frac{3740\text{ мА}\cdot\text{год}}{23,375\text{ мА}} \approx 160\text{ годин} \approx 6,67\text{ діб}\)</span>.</p>
+</li>
+<li>
+<p><strong>Співвідношення деградації:</strong>
+     $<span class="arithmatex">\(\frac{T^{(1)}}{T^{(2)}} = \frac{I_{\text{avg}}^{(2)}}{I_{\text{avg}}^{(1)}} = \frac{23,375}{1,216} \approx 19,22\)</span>$
+     Збільшення частоти вимірювань у 20 разів призводить до зростання середнього струму споживання майже у 19,2 раза через домінування активної фази <span class="arithmatex">\(t_{\text{active}}\)</span>, що скорочує ресурс батареї з кількох місяців до менш ніж одного тижня.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Твердження про лінійне скорочення автономності строго у 20 разів є неточним, оскільки струм глибокого сну <span class="arithmatex">\(I_{\text{sleep}}\)</span> хоч і малий, проте вносить відчутний внесок у довгих циклах (1190 секунд), порушуючи строгу пропорційність.</p>
+</li>
+<li>
+<p>Припущення, що ємність батареї вичерпається за кілька годин, є хибним, оскільки навіть при постійній роботі (<span class="arithmatex">\(140\text{ мА}\)</span>) акумулятора вистачить на <span class="arithmatex">\(3740 / 140 \approx 26,7\)</span> годин неперервного випромінювання.</p>
+</li>
+</ol>
+</details>
+<hr />
+<h3 id="_3">Вказівки для самостійного осмислення</h3>
+<ol>
+<li>
+<p>Розрахуйте аналітичний енергетичний баланс та необхідну площу сонячної фотоелектричної панелі для забезпечення цілорічної безперервної роботи периферійного екологічного вузла на базі контролера ESP32 в кліматичних умовах центральної України, врахувавши мінімальну тривалість світлового дня та середню кількість сонячних днів у грудні.</p>
+</li>
+<li>
+<p>Складіть формальну об'єктно-ресурсну карту протоколу LwM2M для інтеграції нестандартного трикомпонентного напівпровідникового сенсора газів MICS-6814, визначивши перелік обов'язкових та опціональних ресурсів OMA, необхідних для збереження сирого опору підкладки та розрахованої концентрації у міліграмах на метр кубічний.</p>
+</li>
+<li>
+<p>Проаналізуйте процеси затухання радіосигналу на частотах 868 МГц та 2,4 ГГц при проходженні крізь смугу зелених насаджень лісопаркового захисного поясу металургійного комбінату та обґрунтуйте вибір граничного радіуса розміщення вузлів відносно концентратора даних.</p>
+</li>
+</ol>
+<h2 id="2-">2. Методологія та аналіз граничних умов. Інфраструктурна кібербезпека та обмеження ресурс-дефіцитних периферійних пристроїв</h2>
+<h3 id="21-coapudp-dtls-wolfssl">2.1. Криптографічний захист каналів передачі екологічних метрик через імплементацію стека CoAP/UDP з протоколом DTLS і бібліотекою wolfSSL</h3>
+<p>Організація телекомунікаційної взаємодії в екологічних сенсорних мережах вимагає принципово іншого підходу до інформаційної безпеки, ніж той, що традиційно використовується у загальнокорпоративних інформаційних системах. Застосування стандартного протоколу TLS (Transport Layer Security) поверх транспортного протоколу з гарантованою доставкою TCP є неприйнятним для ресурсообмежених периферійних пристроїв, оскільки процедура тристороннього рукостискання, постійний контроль стану сесії та механізми повторного передавання втрачених сегментів генерують надмірний трафік і швидко вичерпують обмежену ємність акумуляторних батарей. </p>
+<p>Альтернативним та найбільш адаптивним рішенням для бездротових сенсорних вузлів є використання протоколу <strong>DTLS (Datagram Transport Layer Security)</strong>, що функціонує поверх легковагового транспортного протоколу <strong>UDP</strong> та оптимізованого прикладного протоколу <strong>CoAP (Constrained Application Protocol)</strong>. Протокол DTLS модифікує стандартну логіку TLS для роботи в умовах ненадійних каналів зв'язку, де пакети можуть надходити з порушенням послідовності або повністю втрачатися в ефірі. Для компенсації втрат датаграм у стек DTLS інтегровано механізми явного нумерування етапів рукостискання (sequence numbers), фрагментації довгих повідомлень та адаптивні тайм-аути повторного надсилання криптографічних параметрів.</p>
+<p>Практична імплементація стека DTLS на мікроконтролерах із малим обсягом пам'яті (наприклад, лінійки ESP32 або архітектури ARM Cortex-M) потребує відмови від ресурсоємних універсальних бібліотек типу OpenSSL на користь спеціалізованих вбудованих рішень, серед яких провідне місце посідає бібліотека <strong>wolfSSL</strong>. Спроєктована спеціально для вбудованих систем, wolfSSL володіє високою модульністю, дозволяючи відключати невикористовувані криптографічні примітиви під час компіляції. Емпіричні дослідження підтверджують, що імплементація клієнтської частини LwM2M з підтримкою DTLS на базі wolfSSL потребує лише 6–9% від загального обсягу оперативної пам'яті типового мікроконтролера, що є критично важливим порівняно з протоколом MQTT поверх стандартного TLS, накладні витрати якого сягають 12–18% RAM.</p>
+<p>Криптографічний захист за допомогою wolfSSL забезпечує взаємну автентифікацію вузлів, шифрування корисного навантаження датчиків та захист від атак повторного відтворення (replay attacks). Залежно від обчислювальної спроможності периферійного контролера стек налаштовується на роботу в одному з трьох криптографічних режимів: попередньо узгоджених симетричних ключів (<strong>PSK</strong>), «сирих» відкритих ключів (<strong>RPK</strong>) або повноцінних цифрових сертифікатів стандарту <strong>X.509</strong>. Режим PSK є найбільш енергоефективним, оскільки не потребує ресурсоємних операцій асиметричної криптографії та обчислення еліптичних кривих, проте він ускладнює масштабування мережі через необхідність захищеного розподілу індивідуальних секретних ключів для кожного нового вузла моніторингу.</p>
+<hr />
+<h3 id="22-leshan">2.2. Алгоритми захищеного початкового завантаження та взаємної автентифікації клієнтських терміналів на сервері безпеки Leshan</h3>
+<p>Безпечне функціонування розподіленої сенсорної мережі починається з процедури ініціалізації довіри до нового вимірювального вузла. Пряме підключення незахищеного периферійного пристрою до основного операційного сервера створює критичну загрозу несанкціонованого проникнення зловмисника до корпоративного сховища та фальсифікації екологічних показників. Відповідно до специфікацій альянсу OMA, життєвий цикл вузла регламентується окремим процесом початкового налаштування конфігурації (<strong>LwM2M Bootstrapping</strong>), який реалізується через взаємодію клієнтського термінала з виділеним сервером завантаження (Bootstrap Server) на базі відкритої платформи <strong>Eclipse Leshan</strong>.</p>
+<p>Аналітичне ядро послідовного алгоритму захищеного введення сенсорного вузла в експлуатацію описується наступним формалізованим протоколом:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\text{Крок 1 (Захищене з'єднання з Bootstrap-сервером):} &amp; \quad \text{InitDTLS}\big(\text{Client}, \text{Server}_{\text{BS}}, \text{Cred}_{\text{factory}}\big) \quad \Longrightarrow \quad \text{Channel}_{\text{secure}} \leftarrow \text{Established} \\
+\text{Крок 2 (Взаємна автентифікація сторін):} &amp; \quad \text{VerifyIdentity}\big(\text{DeviceID}, K_{\text{shared}} \lor \text{Cert}_{\text{device}}\big) \quad \Longrightarrow \quad \text{State} \leftarrow \text{Authenticated} \\
+\text{Крок 3 (Динамічне конфігурування об'єктів /0 та /1):} &amp; \quad \text{Server}_{\text{BS}} \xrightarrow{\text{CoAP Write}} \big\{ \text{URI}_{\text{DM}}, K_{\text{session}}, \text{Policies}_{\text{AC}} \big\} \to \text{Object}_{\text{Security}}(/0) \\
+\text{Крок 4 (Термінація та перемикання на LwM2M Server):} &amp; \quad \text{CloseChannel}\big(\text{Server}_{\text{BS}}\big) \quad \land \quad \text{InitDTLS}\big(\text{Client}, \text{Server}_{\text{DM}}, K_{\text{session}}\big) \\
+\text{Крок 5 (Реєстрація вузла та валідація прав доступу):} &amp; \quad \text{Client} \xrightarrow{\text{CoAP Register}} \text{Server}_{\text{DM}}\big(\text{EndpointName}, \text{ObjectList}\big) \quad \Longrightarrow \quad \text{State} \leftarrow \text{Operational}
+\end{aligned}
+\]</div>
+<p>де параметри та системні оператори мають наступне функціональне призначення:</p>
+<ul>
+<li>
+<p>Оператор <span class="arithmatex">\(\text{InitDTLS}(\cdot)\)</span> ініціює процедуру криптографічного рукостискання з використанням первинних заводських облікових даних <span class="arithmatex">\(\text{Cred}_{\text{factory}}\)</span>, зашитих в енергонезалежну захищену пам'ять мікроконтролера на етапі виробництва.</p>
+</li>
+<li>
+<p>Функція <span class="arithmatex">\(\text{VerifyIdentity}(\cdot)\)</span> здійснює валідацію сертифіката або криптографічного токена пристрою за допомогою таблиць відповідності сервера Leshan, що виключає можливість підключення емульованого шкідливого вузла.</p>
+</li>
+<li>
+<p>Операція <span class="arithmatex">\(\text{CoAP Write}\)</span> забезпечує запис мережевої адреси цільового сервера управління даними <span class="arithmatex">\(\text{URI}_{\text{DM}}\)</span>, новостворених сесійних ключів шифрування <span class="arithmatex">\(K_{\text{session}}\)</span> та переліку прав доступу <span class="arithmatex">\(\text{Policies}_{\text{AC}}\)</span> у системні об'єкти LwM2M Security Object (<code>/0</code>) та Server Object (<code>/1</code>).</p>
+</li>
+<li>
+<p>Операція <span class="arithmatex">\(\text{CloseChannel}(\cdot)\)</span> гарантує розрив сесії з сервером завантаження для мінімізації площі атаки, після чого вузол переходить до процедури реєстрації на операційному сервері <span class="arithmatex">\(\text{Server}_{\text{DM}}\)</span>.</p>
+</li>
+<li>
+<p>Повідомлення <span class="arithmatex">\(\text{CoAP Register}\)</span> інформує сервер про перелік підключених фізичних сенсорів через параметр <span class="arithmatex">\(\text{ObjectList}\)</span>, переводячи пристрій у штатний режим циклічного моніторингу.</p>
+</li>
+</ul>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    actor Sensor as Сенсорний вузол (LwM2M Client)
+    participant BServer as Leshan Bootstrap Server (/0)
+    participant DMServer as Leshan LwM2M Server (/1)
+    participant DB as База екологічних даних (PostgreSQL)
+
+    Note over Sensor,BServer: Фаза початкового налаштування (Bootstrapping)
+    Sensor-&gt;&gt;BServer: Ініціалізація DTLS Handshake з заводським ключем PSK
+    BServer-&gt;&gt;Sensor: Підтвердження шифрованого каналу
+    Sensor-&gt;&gt;BServer: Запит конфігурації (Bootstrap Request)
+    BServer-&gt;&gt;Sensor: CoAP Write: запис адреси DM-сервера та робочих ключів у об'єкт /0
+    BServer-&gt;&gt;Sensor: CoAP Write: запис політик взаємодії у об'єкт /1
+    BServer-&gt;&gt;Sensor: Завершення завантаження (Bootstrap Finish)
+    Sensor--&gt;&gt;BServer: Розрив тимчасового DTLS-з'єднання
+
+    Note over Sensor,DMServer: Фаза реєстрації та передачі вимірювань
+    Sensor-&gt;&gt;DMServer: Нове DTLS Handshake з отриманими робочими ключами
+    DMServer-&gt;&gt;Sensor: Підтвердження сесії
+    Sensor-&gt;&gt;DMServer: Запит реєстрації (CoAP Register: перелік об'єктів /3303, /3325)
+    DMServer-&gt;&gt;Sensor: Успішна реєстрація (2.01 Created, Lifetime = 86400 с)
+    Sensor-&gt;&gt;DMServer: CoAP Notify: передача поточних концентрацій NO2 та PM2.5
+    DMServer-&gt;&gt;DB: Запис валідованого пакета у захищене сховище</code></pre>
+<p>Процес розмежування доступу до ресурсів пристрою спирається на модель динамічного управління на основі атрибутів (<strong>Attribute-Based Access Control, ABAC</strong>). Сервер оцінює не лише ідентифікатор суб'єкта запиту, а й контекстні параметри навколишнього середовища: статус тривоги в урбосистемі, часовий інтервал та рівень заряду акумулятора станції, що блокує несанкціоновані спроби зміни конфігурації сенсорів сторонніми споживачами інформації.</p>
+<blockquote>
+<p><strong>ВАЖЛИВО:</strong> Заводські криптографічні ключі ніколи не повинні використовуватися для регулярної передачі вимірювальних даних. Вони призначені виключно для одноразової взаємної автентифікації на Bootstrap-сервері, який зобов'язаний згенерувати та безпечно передати пристрою унікальні динамічні сесійні ключі для наступної роботи з операційним сервером моніторингу.</p>
+</blockquote>
+<hr />
+<h3 id="23">2.3. Апаратні обмеження обчислювальної потужності та оперативної пам'яті сенсорних вузлів як критичний бар'єр розгортання вбудованого штучного інтелекту</h3>
+<p>Незважаючи на значні теоретичні перспективи використання інтелектуальних моделей на периферії мережі (Edge AI), безпосереднє розгортання моделей машинного та глибокого навчання на автономних вимірювальних мікроконтролерах стикається з фундаментальними апаратно-програмними бар'єрами. Більшість промислових і муніципальних екологічних вузлів функціонують на базі мікроконтролерів, які мають від 32 до 520 Кбайт статичної оперативної пам'яті (SRAM) та від 512 Кбайт до 4 Мбайт енергонезалежної Flash-пам'яті. </p>
+<p>Спроба перенесення класичних рекурентних нейромереж (LSTM, GRU) або багатошарових трансформерних архітектур безпосередньо у внутрішню пам'ять контролера викликає швидке вичерпання доступних ресурсів. Матричні операції множення ваг у просторі дійсних чисел подвійної точності вимагають значного обсягу пам'яті під проміжні тензори активацій, що перевищує ліміти апаратного стека та призводить до фатальних помилок переповнення динамічної пам'яті (HardFault). Крім того, відсутність апаратних блоків обчислень із плаваючою комою (FPU) подвійної точності на бюджетних чипах перетворює виконання кожного прогностичного кроку на тривалий цикл обчислень, що утримує мікроконтролер у високопродуктивному активному стані та призводить до швидкого виснаження батареї.</p>
+<p>Аналіз граничних умов функціонування криптографічного та предиктивного апарату виявляє критичні режими, за яких наведена теоретична модель зазнає відмови або створює суттєві вразливості:</p>
+<ol>
+<li>
+<p><strong>Атака на виснаження енергетичного ресурсу (Sleep Deprivation / Battery Exhaustion Attack).</strong> Зловмисник, знаючи IP-адресу периферійного сенсора, здійснює інтенсивне бомбардування вузла фіктивними запитами на встановлення з'єднання DTLS ClientHello. Для перевірки кожного запиту контролер змушений виходити з режиму глибокого сну та запускати енергоємні алгоритми обчислення криптографічних гешів або перевірки підписів ECDSA. У такому режимі середній струм споживання зростає з 0,05 мА до 120–150 мА, внаслідок чого розрахунковий дворічний ресурс акумулятора вичерпується за 36–48 годин безперервної атаки.</p>
+</li>
+<li>
+<p><strong>Фрагментація пакетів у вузькосмугових мережах із малим розміром MTU.</strong> У бездротових технологіях LoRaWAN та NB-IoT максимальний розмір корисного блоку даних (MTU) може становити менше 128 байт. Передача повноцінного сертифіката відкритого ключа X.509 розміром 1,5–2 Кбайт під час DTLS-рукостискання вимагає розбиття сертифіката на 15–20 дрібних фрагментів. В умовах нестабільного радіоефіру з імовірністю втрати одиничного пакета понад 5% імовірність успішного отримання всіх фрагментів прямує до нуля, спричиняючи нескінченні тайм-аути та блокування вимірювального процесу.</p>
+</li>
+<li>
+<p><strong>Фатальна нестача пам'яті при одночасному виконанні криптографічного стека та моделі TinyML.</strong> Оперативна пам'ять контролера ESP32 (доступно близько 320 Кбайт після завантаження системних драйверів Wi-Fi) повинна одночасно вміщувати буфер пакетів CoAP/UDP, контекст сесії DTLS з ключами wolfSSL, кільцевий буфер вимірювань сенсорів та інтерпретатор нейромережі TensorFlow Lite for Microcontrollers. Якщо вхідний потік даних від газоаналізатора генерує раптовий сплеск розмірності масиву, система відчуває дефіцит вільної пам'яті (Out-Of-Memory), що завершується аварійним перезавантаженням вузла та втратою незбережених екологічних часових рядів.</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> У процесі кібератаки на відкриту муніципальну мережу екологічних станцій одного з промислових міст України було зафіксовано масоване надсилання фальсифікованих UDP-пакетів на стандартний порт CoAP (5684), що призвело до зависання мікроконтролерів станцій через вичерпання пулу черг вбудованої операційної системи FreeRTOS та втрати контролю за радіаційним фоном на протязі 14 годин.</p>
+</blockquote>
+<hr />
+<h3 id="24-iot-">2.4. Математична формалізація задачі оптимального просторового розміщення IoT-станцій в умовах обмеженого енергетичного бюджету та смуги пропускання</h3>
+<p>Просторова розрідженість сенсорної мережі зумовлює необхідність суворого математичного обґрунтування вибору координат монтажу нових вузлів спостереження. Задача полягає в максимізації території контролю за якістю повітряного басейну за умови жорстких обмежень на загальний бюджет проекту, доступний енергетичний ресурс кожного автономного приладу та пропускну здатність бездротових шлюзів агрегації. Ця інженерна проблема формалізується як оптимізаційна задача цілочисельного лінійного програмування (<strong>Integer Linear Programming, ILP</strong>).</p>
+<p>Нехай <span class="arithmatex">\(I = \{1, 2, \dots, N\}\)</span> визначає скінченну множину потенційно доступних локацій для розміщення сенсорних пристроїв у місті, а <span class="arithmatex">\(J = \{1, 2, \dots, M\}\)</span> є множиною контрольних дискретних просторових точок урбоекосистеми, на яких необхідно забезпечити прецизійний контроль концентрацій полютантів. Введемо двійкову змінну проектування <span class="arithmatex">\(x_i \in \{0, 1\}\)</span>, де значення <span class="arithmatex">\(x_i = 1\)</span> вказує на прийняття рішення про монтаж вимірювальної станції в точці <span class="arithmatex">\(i \in I\)</span>, а <span class="arithmatex">\(x_i = 0\)</span> — на відмову від розміщення.</p>
+<p>Цільова функція математичної моделі мінімізує сукупні фінансові витрати на капітальне розгортання та регулярне сервісне обслуговування обладнання:</p>
+<div class="arithmatex">\[\min \sum_{i \in I} c_i \cdot x_i\]</div>
+<p>при дотриманні системи нормативних та інфраструктурних обмежень:</p>
+<div class="arithmatex">\[\sum_{i \in I} a_{ij} \cdot x_i \ge 1, \quad \forall j \in J\]</div>
+<div class="arithmatex">\[\sum_{i \in I} e_i \cdot x_i \le E_{\max}\]</div>
+<div class="arithmatex">\[\sum_{i \in I} b_i \cdot y_{ik} \le B_{\text{cap}, k}, \quad \forall k \in K\]</div>
+<div class="arithmatex">\[\sum_{k \in K} y_{ik} = x_i, \quad \forall i \in I\]</div>
+<div class="arithmatex">\[x_i \in \{0, 1\}, \quad \forall i \in I\]</div>
+<div class="arithmatex">\[y_{ik} \in \{0, 1\}, \quad \forall i \in I, \; k \in K\]</div>
+<p>Змістовне розшифрування змінних та параметрів моделі здійснюється за такими положеннями:</p>
+<ul>
+<li>
+<p>Коефіцієнт <span class="arithmatex">\(c_i\)</span> виражає інтегральну вартість закупівлі, встановлення та експлуатації вимірювального вузла в локації <span class="arithmatex">\(i\)</span>, що включає витрати на оренду опорних конструкцій та підведення живлення.</p>
+</li>
+<li>
+<p>Бінарний параметр <span class="arithmatex">\(a_{ij} \in \{0, 1\}\)</span> відображає можливість покриття контрольної точки <span class="arithmatex">\(j\)</span> сенсором із локації <span class="arithmatex">\(i\)</span> з регламентованою точністю, де <span class="arithmatex">\(a_{ij} = 1\)</span>, якщо відстань між точками не перевищує радіус достовірності датчика <span class="arithmatex">\(d(x_i, y_j) \le R_{\text{sense}}\)</span>, і <span class="arithmatex">\(a_{ij} = 0\)</span> у протилежному випадку.</p>
+</li>
+<li>
+<p>Параметр <span class="arithmatex">\(e_i\)</span> визначає середньодобову швидкість споживання електроенергії станцією в точці <span class="arithmatex">\(i\)</span>, яка залежить від частоти опитування первинних перетворювачів та потужності радіопередавача.</p>
+</li>
+<li>
+<p>Константа <span class="arithmatex">\(E_{\max}\)</span> задає граничний сумарний енергетичний бюджет автономної підсистеми моніторингу території.</p>
+</li>
+<li>
+<p>Множина <span class="arithmatex">\(K\)</span> об'єднує всі доступні мережеві шлюзи агрегації (LwM2M/LoRaWAN Gateways), де <span class="arithmatex">\(B_{\text{cap}, k}\)</span> позначає граничну пропускну здатність шлюзу <span class="arithmatex">\(k\)</span> у пакетах за секунду.</p>
+</li>
+<li>
+<p>Величина <span class="arithmatex">\(b_i\)</span> визначає середню інтенсивність генерації трафіку сенсорним вузлом у точці <span class="arithmatex">\(i\)</span>.</p>
+</li>
+<li>
+<p>Двійкова змінна <span class="arithmatex">\(y_{ik} \in \{0, 1\}\)</span> відповідає за топологічну прив'язку активованого сенсора <span class="arithmatex">\(i\)</span> до конкретного шлюзу <span class="arithmatex">\(k\)</span>.</p>
+</li>
+</ul>
+<p>Граничні умови наведеної математичної моделі виявляються тоді, коли виникають різкі зміни властивостей радіоканалу внаслідок злив, снігопадів або спорудження нових висотних будівель. У цих ситуаціях матриця покриття <span class="arithmatex">\(a_{ij}\)</span> втрачає детермінований характер і вимагає переходу до стохастичного програмування з урахуванням імовірнісного затухання сигналу.</p>
+<p>Для систематизації архітектурних підходів до організації захисту та передачі інформації в екологічних мережах сформовано порівняльну аналітичну матрицю.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Технологічна парадигма захисту</th>
+<th style="text-align: left;">Рівень стека та криптографічні примітиви</th>
+<th style="text-align: left;">Накладні витрати пам'яті (RAM / Flash)</th>
+<th style="text-align: left;">Енергетична ефективність вузла</th>
+<th style="text-align: left;">Складність впровадження</th>
+<th style="text-align: left;">Критичні ризики та обмеження методології</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Відкрита передача (CoAP/UDP NoSec)</td>
+<td style="text-align: left;">Відсутні; дані передаються у відкритому бінарному вигляді</td>
+<td style="text-align: left;">Мінімальні (&lt; 5 Кбайт RAM, &lt; 20 Кбайт Flash)</td>
+<td style="text-align: left;">Максимальна (відсутні обчислення)</td>
+<td style="text-align: left;">Вкрай низька; пряма робота з сокетами</td>
+<td style="text-align: left;">Нульова конфіденційність, високий ризик підміни вимірювань і фальсифікації екологічного стану</td>
+</tr>
+<tr>
+<td style="text-align: left;">Симетричне шифрування (DTLS-PSK)</td>
+<td style="text-align: left;">Транспортний рівень; блоковий шифр AES-128-CCM, пре-розподілені ключі</td>
+<td style="text-align: left;">Низькі (10–15 Кбайт RAM, 40–60 Кбайт Flash)</td>
+<td style="text-align: left;">Висока; швидке виконання апаратними блоками</td>
+<td style="text-align: left;">Середня; вимагає захищеного розподілу ключів</td>
+<td style="text-align: left;">Компрометація ключа на одному пристрої створює загрозу безпеці всієї локальної підмережі</td>
+</tr>
+<tr>
+<td style="text-align: left;">Асиметричні відкриті ключі (DTLS-RPK)</td>
+<td style="text-align: left;">Транспортний рівень; еліптичні криві ECDSA (secp256r1) без сертифікатів</td>
+<td style="text-align: left;">Середні (25–35 Кбайт RAM, 80–120 Кбайт Flash)</td>
+<td style="text-align: left;">Помірна; значні витрати на генерацію підпису</td>
+<td style="text-align: left;">Висока; потрібна підтримка алгоритмів ECC</td>
+<td style="text-align: left;">Складність процедури відкликання скомпрометованих відкритих ключів без інфраструктури PKI</td>
+</tr>
+<tr>
+<td style="text-align: left;">Цифрові сертифікати (DTLS X.509)</td>
+<td style="text-align: left;">Транспортний рівень; повна ієрархія довіри X.509, ланцюжки центрів сертифікації</td>
+<td style="text-align: left;">Високі (45–70 Кбайт RAM, 150–250 Кбайт Flash)</td>
+<td style="text-align: left;">Низька; тривале рукостискання та передача даних</td>
+<td style="text-align: left;">Дуже висока; потребує розгортання корпоративного CA</td>
+<td style="text-align: left;">Фрагментація великих сертифікатів у вузьких радіоканалах і зрив сесій з'єднання</td>
+</tr>
+<tr>
+<td style="text-align: left;">Прикладне шифрування (OSCORE / CoAP)</td>
+<td style="text-align: left;">Прикладний рівень; захист окремих об'єктів CoAP за стандартом RFC 8613</td>
+<td style="text-align: left;">Дуже низькі (8–12 Кбайт RAM, 30–50 Кбайт Flash)</td>
+<td style="text-align: left;">Дуже висока; шифрується лише корисне навантаження</td>
+<td style="text-align: left;">Висока; специфічна підтримка в клієнтському ПЗ</td>
+<td style="text-align: left;">Складність інтеграції з проміжними проксі-серверами, що не підтримують об'єктне шифрування</td>
+</tr>
+</tbody>
+</table>
+<p>Аналіз матриці засвідчує, що для муніципальних систем довгострокового екологічного спостереження найбільш збалансованим компромісом є поєднання архітектури LwM2M з протоколом DTLS у режимі PSK на етапі штатної передачі та переходом на RPK при критичній зміні профілю безпеки мережі.</p>
+<blockquote>
+<p><strong>КОНТРОЛЬНЕ ПИТАННЯ:</strong> Під час розгортання нової групи з п'яти вимірювальних станцій якості повітря в зоні впливу гірничо-збагачувального кар'єру інженери обрали режим автентифікації DTLS X.509 через мережу LoRaWAN (розмір корисного навантаження MTU = 51 байт). Після введення в експлуатацію жоден пристрій не зміг передати дані на сервер Leshan, а акумулятори розрядилися за дві доби. Яка фізико-технічна причина колапсу мережі та яке інженерне рішення повинно бути реалізовано?</p>
+</blockquote>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: Зрив процедури рукостискання через надмірну фрагментацію ланцюжка сертифікатів X.509 у каналі LoRaWAN із виникненням циклічного шторму повторних передач.</strong></p>
+<ol>
+<li>
+<p>Покроковий технічний аналіз інциденту:</p>
+</li>
+<li>
+<p><strong>Аналіз розміру пакета:</strong> Повний ланцюжок сертифікатів X.509 разом із підписами займає від 1200 до 2048 байт. За максимального розміру корисного навантаження LoRaWAN <span class="arithmatex">\(\text{MTU} = 51\text{ байт}\)</span> пакет DTLS Certificate розбивається щонайменше на 30–40 дрібних радіофрагментів.</p>
+</li>
+<li>
+<p><strong>Розрахунок імовірності доставки:</strong> Якщо ймовірність успішного приймання окремого радіопакета в умовах рельєфу кар'єру становить <span class="arithmatex">\(p = 0,90\)</span>, то ймовірність безпомилкового приймання всієї послідовності з 35 фрагментів дорівнює <span class="arithmatex">\(P_{\text{success}} = p^{35} = 0,90^{35} \approx 0,025\)</span> (лише 2,5%).</p>
+</li>
+<li>
+<p><strong>Аналіз енергетичного колапсу:</strong> При втраті хоча б одного фрагмента таймер очікування DTLS на клієнті спливає, ініціюючи повторне надсилання всього масиву фрагментів. Мікроконтролер постійно утримував радіомодем у режимі максимального випромінювання, що призвело до порушення ліміту duty cycle (1%) та виснаження заряду акумулятора струмом 130 мА за 48 годин.</p>
+</li>
+<li>
+<p><strong>Необхідне інженерне рішення:</strong> Переведення сенсорних станцій на легковаговий режим DTLS-PSK (де розмір ідентифікатора ключа становить лише кілька десятків байт і повністю вміщується в один кадр LoRaWAN) або імплементація прикладного шифрування OSCORE поверх CoAP.</p>
+</li>
+<li>
+<p>Аналіз дистракторів (чому інші припущення є хибними):</p>
+</li>
+<li>
+<p>Гіпотеза про апаратний вихід із ладу сенсорів є помилковою, оскільки первинні сенсори опитуються через внутрішню шину I2C/UART і не впливають на мережевий рівень проходження пакетів.</p>
+</li>
+<li>
+<p>Твердження про те, що сервер Leshan не підтримує протокол UDP, є технічно некоректним, оскільки LwM2M сервер за стандартом функціонує саме на базі датаграм CoAP/UDP.</p>
+</li>
+</ol>
+</details>
+<h2 id="3">3. Практичний індустріальний / фаховий кейс. Проєктування захищеної сенсорної мережі моніторингу</h2>
+<h3 id="31-vaisala-lwm2m-abac">3.1. Комплексний фаховий кейс. Проєктування захищеної сенсорної мережі моніторингу якості повітря комунального підприємства з використанням станцій Vaisala, протоколу LwM2M та моделі ABAC</h3>
+<h4 id="_4">Постановка задачі / ситуації</h4>
+<p>Комунальне підприємство «Науковий центр еколого-соціальних досліджень» (м. Кременчук) виконує завдання розгортання захищеної сенсорної мережі моніторингу повітряного басейну для контролю емісій промислових підприємств (ПАТ «Укртатнафта», Кременчуцький завод технічного вуглецю) та інтенсивних транспортних коридорів. Муніципальна інфраструктура потребує розміщення вимірювальних постів у контрольних точках міста з інтеграцією референтних станцій Vaisala та автономних периферійних модулів на базі мікроконтролера ESP32. Проєкт має жорсткі інфраструктурні, фінансові, енергетичні та безпекові обмеження: передача даних здійснюється через стільникові та бездротові канали, де пристрої зазнають регулярних спроб мережевого сканування та DDoS-атак, а живлення частини станцій реалізоване на основі акумуляторних батарей із сонячними панелями.</p>
+<p>Для вирішення завдання необхідно оптимізувати просторове розміщення сенсорних комплексів за методом цілочисельного лінійного програмування, мінімізувати накладні витрати передачі даних шляхом впровадження стандарту LwM2M поверх стека CoAP/UDP/DTLS із використанням бібліотеки wolfSSL на серверній платформі Eclipse Leshan, а також організувати динамічне розмежування доступу до ресурсів пристроїв на основі атрибутивної моделі ABAC.</p>
+<p>Вхідні параметри, інженерні характеристики обладнання та експлуатаційні обмеження наведено в таблиці нижче.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Параметр / Характеристика системи</th>
+<th style="text-align: left;">Одиниця виміру</th>
+<th style="text-align: left;">Числове значення</th>
+<th style="text-align: left;">Інженерний та нормативний контекст</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Загальна кількість потенційних локацій ($</td>
+<td style="text-align: left;">I</td>
+<td style="text-align: left;">$)</td>
+<td style="text-align: left;">од.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Кількість контрольних зон моніторингу ($</td>
+<td style="text-align: left;">J</td>
+<td style="text-align: left;">$)</td>
+<td style="text-align: left;">од.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Вартість розгортання референтної станції Vaisala</td>
+<td style="text-align: left;">дол. США</td>
+<td style="text-align: left;">1 800</td>
+<td style="text-align: left;">Високоточна станція з газоаналізатором AQT530</td>
+</tr>
+<tr>
+<td style="text-align: left;">Вартість розгортання мікроконтролерного вузла ESP32</td>
+<td style="text-align: left;">дол. США</td>
+<td style="text-align: left;">350</td>
+<td style="text-align: left;">Індикативна станція з сенсорами PMS7003 та MQ135</td>
+</tr>
+<tr>
+<td style="text-align: left;">Загальний бюджет капітальних витрат (<span class="arithmatex">\(C_{\max}\)</span>)</td>
+<td style="text-align: left;">дол. США</td>
+<td style="text-align: left;">5 000</td>
+<td style="text-align: left;">Граничний обсяг фінансування за договором НДР</td>
+</tr>
+<tr>
+<td style="text-align: left;">Максимальна смуга пропускання шлюзу (<span class="arithmatex">\(B_{\text{cap}}\)</span>)</td>
+<td style="text-align: left;">пак./хв</td>
+<td style="text-align: left;">40</td>
+<td style="text-align: left;">Гранична продуктивність приймального шлюзу зв'язку</td>
+</tr>
+<tr>
+<td style="text-align: left;">Добовий енергетичний ліміт автономного вузла</td>
+<td style="text-align: left;">Вт·год</td>
+<td style="text-align: left;">35,0</td>
+<td style="text-align: left;">Вироблення сонячної панелі в похмурий зимовий день</td>
+</tr>
+<tr>
+<td style="text-align: left;">Струм активної передачі LwM2M/DTLS (<span class="arithmatex">\(I_{\text{tx}}\)</span>)</td>
+<td style="text-align: left;">мА</td>
+<td style="text-align: left;">125,0</td>
+<td style="text-align: left;">Струм споживання радіотракту при напрузі 3,3 В</td>
+</tr>
+<tr>
+<td style="text-align: left;">Тривалість сесії передачі вимірювань (<span class="arithmatex">\(t_{\text{tx}}\)</span>)</td>
+<td style="text-align: left;">с</td>
+<td style="text-align: left;">1,8</td>
+<td style="text-align: left;">Час передачі датаграми CoAP із підтвердженням ACK</td>
+</tr>
+<tr>
+<td style="text-align: left;">Струм глибокого сну мікроконтролера (<span class="arithmatex">\(I_{\text{sleep}}\)</span>)</td>
+<td style="text-align: left;">мА</td>
+<td style="text-align: left;">0,04</td>
+<td style="text-align: left;">Струм витоку з увімкненим RTC-таймером</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["Потенційні локації станцій (i = 1..6)"] --&gt; B["Оптимізація розміщення за критерієм ILP"]
+    B --&gt; C["Встановлення 2 станцій Vaisala та 4 вузлів ESP32"]
+    C --&gt; D["Ініціалізація зв'язку: DTLS Handshake з сервером Leshan"]
+    D --&gt; E["Опитування сенсорів та упаковка в IPSO Smart Objects (/3325, /3303)"]
+    E --&gt; F["Оцінка запиту на зміну параметрів через модуль ABAC PDP"]
+    F --&gt; G{"Перевірка контексту: Роль + Режим безпеки + Заряд АКБ"}
+    G -- "Дозволено (Permit)" --&gt; H["Виконання CoAP Write/Execute (зміна періоду або FOTA)"]
+    G -- "Заборонено (Deny)" --&gt; I["Блокування операції та запис інциденту в Security Log"]
+    H --&gt; J["Передача метрик на сервер та збереження в PostgreSQL"]</code></pre>
+<h4 id="_5">Покроковий аналіз та розв'язок</h4>
+<h5 id="1">Крок 1. Оптимізація просторового розміщення станцій за моделлю цілочисельного лінійного програмування</h5>
+<p>Для мінімізації вартості розгортання мережі за умови стовідсоткового покриття всіх цільових зон <span class="arithmatex">\(J\)</span> формується матриця бінарного покриття <span class="arithmatex">\(A = [a_{ij}]\)</span>, де елемент <span class="arithmatex">\(a_{ij} = 1\)</span>, якщо радіус дії сенсора в локації <span class="arithmatex">\(i\)</span> покриває цільову точку <span class="arithmatex">\(j\)</span>. Враховуючи радіуси достовірності (для станцій Vaisala <span class="arithmatex">\(R = 2,5\text{ км}\)</span>, для станцій ESP32 <span class="arithmatex">\(R = 1,0\text{ км}\)</span>), матриця покриття <span class="arithmatex">\(A\)</span> розмірністю <span class="arithmatex">\(6 \times 8\)</span> має вигляд:</p>
+<div class="arithmatex">\[A = \begin{pmatrix} 
+1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 1 \\
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 
+\end{pmatrix}\]</div>
+<p>Цільова функція мінімізації витрат при призначенні локацій 1 та 4 під станції Vaisala (<span class="arithmatex">\(c_1 = c_4 = 1800\)</span>), а локацій 2, 3, 5, 6 під станції ESP32 (<span class="arithmatex">\(c_2 = c_3 = c_5 = c_6 = 350\)</span>) записується наступним чином:</p>
+<div class="arithmatex">\[\min \sum_{i=1}^{6} c_i \cdot x_i = 1800 x_1 + 350 x_2 + 350 x_3 + 1800 x_4 + 350 x_5 + 350 x_6\]</div>
+<p>при обмеженні повного покриття цільових зон <span class="arithmatex">\(\sum_{i=1}^{6} a_{ij} x_i \ge 1, \, \forall j \in \{1,\dots,8\}\)</span>.</p>
+<p>Розв'язок системи нерівностей дає оптимальний вектор активації вузлів <span class="arithmatex">\(x^* = (1, 1, 0, 1, 1, 0)^T\)</span>, що відповідає вибору локацій 1 та 4 для референтних станцій Vaisala, а локацій 2 та 5 — для індикативних вузлів ESP32. Перевіримо сумарні капітальні витрати:</p>
+<div class="arithmatex">\[C_{\text{total}} = 1800 \cdot 1 + 350 \cdot 1 + 350 \cdot 0 + 1800 \cdot 1 + 350 \cdot 1 + 350 \cdot 0 = 1800 + 350 + 1800 + 350 = 4300 \text{ дол.}\]</div>
+<p>Отримане значення <span class="arithmatex">\(4300 \le 5000\text{ дол.}\)</span> повністю відповідає виділеному фінансовому бюджету проєкту, гарантуючи перекриття всіх восьми контрольних районів міста.</p>
+<h5 id="2">Крок 2. Розрахунок протокольних накладних витрат та мережевої пропускної здатності</h5>
+<p>Порівняємо накладні витрати передачі одного вимірювального пакета (концентрації <span class="arithmatex">\(NO_2\)</span>, <span class="arithmatex">\(CO\)</span>, <span class="arithmatex">\(PM2.5\)</span>, температура та тиск) між традиційним веб-підходом на базі HTTP/JSON поверх TCP/TLS та легковаговим стеком LwM2M CoAP/TLV поверх UDP/DTLS.</p>
+<p>Для класичного стека розмір службових заголовків становить: заголовок IP — 20 байт, TCP — 20 байт, запис TLS Record — 29 байт, мінімальний заголовок HTTP POST — 180 байт, тіло повідомлення у форматі JSON — 145 байт. Загальний розмір пакета:</p>
+<div class="arithmatex">\[S_{\text{HTTP}} = 20 + 20 + 29 + 180 + 145 = 394 \text{ байти}\]</div>
+<p>Для оптимізованого бінарного стека LwM2M розмір заголовків складає: заголовок IP — 20 байт, UDP — 8 байт, запис DTLS Record — 13 байт, базовий заголовок CoAP — 4 байти, токен підтвердження — 4 байти, упаковані дані у бінарному форматі OMA TLV — 32 байти. Загальний розмір пакета:</p>
+<div class="arithmatex">\[S_{\text{LwM2M}} = 20 + 8 + 13 + 4 + 4 + 32 = 81 \text{ байт}\]</div>
+<p>Коефіцієнт зниження мережевого навантаження визначається співвідношенням:</p>
+<div class="arithmatex">\[\kappa_{\text{reduction}} = \frac{S_{\text{HTTP}}}{S_{\text{LwM2M}}} = \frac{394}{81} \approx 4,86\]</div>
+<p>Перехід на протокол LwM2M забезпечує скорочення обсягу переданого трафіку майже в 4,9 раза, що виключає ризик перевантаження шлюзу агрегації навіть у періоди одночасної передачі даних усіма чотирма активними станціями.</p>
+<h5 id="3-esp32">Крок 3. Моделювання добового енергетичного балансу автономного вузла ESP32</h5>
+<p>Розрахуємо добове споживання енергії автономної станції ESP32 у локації 2 за стандартного 20-хвилинного інтервалу опитування (<span class="arithmatex">\(N_{\text{cycles}} = 72\text{ цикли/добу}\)</span>). Кожен цикл складається з активної фази тривалістю <span class="arithmatex">\(t_{\text{active}} = 5\text{ с}\)</span> (опитування датчиків зі струмом 60 мА, шифрування wolfSSL зі струмом 80 мА та передача DTLS <span class="arithmatex">\(t_{\text{tx}} = 1,8\text{ с}\)</span> зі струмом 125 мА; інтегральний середній струм активної фази <span class="arithmatex">\(I_{\text{active}} = 85\text{ мА}\)</span>) та фази сну тривалістю <span class="arithmatex">\(t_{\text{sleep}} = 1200 - 5 = 1195\text{ с}\)</span> зі струмом <span class="arithmatex">\(I_{\text{sleep}} = 0,04\text{ мА}\)</span> при напрузі живлення <span class="arithmatex">\(V = 3,3\text{ В}\)</span>.</p>
+<p>Енергетичні витрати за один 20-хвилинний цикл становлять:</p>
+<div class="arithmatex">\[E_{\text{cycle}} = 3,3 \cdot \big(0,085 \text{ А} \cdot 5 \text{ с} + 0,00004 \text{ А} \cdot 1195 \text{ с}\big) = 3,3 \cdot (0,425 + 0,0478) = 3,3 \cdot 0,4728 \approx 1,56 \text{ Дж}\]</div>
+<p>Сумарне споживання електроенергії за добу:</p>
+<div class="arithmatex">\[E_{\text{daily}} = 72 \cdot 1,56 \text{ Дж} = 112,32 \text{ Дж} = \frac{112,32}{3600} \text{ Вт}\cdot\text{год} \approx 0,0312 \text{ Вт}\cdot\text{год}\]</div>
+<p>Враховуючи споживання аналітичних датчиків пилу та нагрівачів газових сенсорів, що вимагають періодичного прогріву (<span class="arithmatex">\(P_{\text{sensor}} \approx 0,8\text{ Вт}\)</span> протягом 30 секунд перед заміром, що дає додатково <span class="arithmatex">\(72 \cdot 0,8 \cdot 30 / 3600 = 0,48\text{ Вт}\cdot\text{год}\)</span>), сумарна добова витрата становить приблизно <span class="arithmatex">\(0,511\text{ Вт}\cdot\text{год}\)</span>, що становить лише 1,46% від добового виробітку сонячної батареї (<span class="arithmatex">\(35,0\text{ Вт}\cdot\text{год}\)</span>) і гарантує безперервну автономну роботу станції в зимовий період.</p>
+<h5 id="4-abac">Крок 4. Алгоритмізація оцінки безпекових правил на основі моделі ABAC</h5>
+<p>Управління доступом до критичних функцій станції (наприклад, дистанційне перезавантаження або запис нового періоду вимірювання в ресурс <code>/3325/0/pmax</code>) реалізується через обчислення логічної функції вирішення <span class="arithmatex">\(\text{Decision} \in \{\text{Permit}, \text{Deny}\}\)</span>. Правило доступу <span class="arithmatex">\(R_1\)</span> формулюється наступним чином:</p>
+<div class="arithmatex">\[\text{Decision}(S, O, A, E) = \begin{cases} 
+\text{Permit}, &amp; \text{якщо } \big(S.\text{role} = \text{'EcoEngineer'}\big) \land \big(O.\text{id} = \text{'/3325/0/pmax'}\big) \land \\
+&amp; \big(A.\text{action} = \text{'Write'}\big) \land \big(E.\text{alert\_level} \ge 1\big) \land \big(E.\text{batt\_level} &gt; 20\%\big) \\
+\text{Deny}, &amp; \text{в усіх інших випадках}
+\end{cases}\]</div>
+<p>Якщо оператор із роллю 'PublicUser' намагається надіслати запит CoAP Write на зміну періоду опитування сенсора, механізм PDP (Policy Decision Point) сервера Leshan аналізує атрибути суб'єкта <span class="arithmatex">\(S.\text{role} \neq \text{'EcoEngineer'}\)</span> і формує відповідь CoAP 4.01 Unauthorized, запобігаючи несанкціонованому перехопленню контролю над вимірювальним вузлом.</p>
+<h4 id="_6">Інтерпретація результатів та альтернативні сценарії</h4>
+<p>Запропонована структура мережі забезпечує повний захист каналів передачі метрик, знижує енерговитрати периферійних вузлів та забезпечує відповідність проєктних витрат виділеному бюджету при збереженні високої якості покриття території.</p>
+<p>Якби початкові умови змінилися і муніципалітет вимагав переведення всіх станцій у режим екстремального секундного моніторингу (<span class="arithmatex">\(T_{\text{period}} = 1\text{ с}\)</span>) під час промислових аварій, енергетичний баланс зазнав би колапсу: добове споживання зросло б до понад <span class="arithmatex">\(45\text{ Вт}\cdot\text{год}\)</span>, перевищивши генерацію сонячних панелей (<span class="arithmatex">\(35\text{ Вт}\cdot\text{год}\)</span>), що призвело б до повного вимкнення автономних станцій через 18 годин роботи. У цьому випадку архітектура вимагала б обов'язкового підключення вузлів до міської освітлювальної електромережі або реалізації адаптивного буферизування на Flash-пам'ять із пакетною передачею один раз на 15 хвилин.</p>
+<hr />
+<h3 id="32">3.2. Зведена довідкова система лекції</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Термін / Концепція</th>
+<th style="text-align: left;">Формалізація / Сутність</th>
+<th style="text-align: left;">Реальний кейс застосування</th>
+<th style="text-align: left;">Основне обмеження / Ризик</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Мікроконтролер ESP32 WROOM 32E</td>
+<td style="text-align: left;">32-бітний двоядерний процесор Xtensa LX6 (240 МГц, 520 КБ SRAM) з вбудованими модулями Wi-Fi та BLE</td>
+<td style="text-align: left;">Керуючий вузол індикативної станції якості повітря з опитуванням сенсорів</td>
+<td style="text-align: left;">Високий струм споживання в активному режимі радіовипромінювання (до 240 мА)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Газоаналізатор Vaisala AQT530</td>
+<td style="text-align: left;">Високоточний вимірювальний модуль із чотирма електрохімічними комірками (<span class="arithmatex">\(NO_2, SO_2, CO, H_2S\)</span>)</td>
+<td style="text-align: left;">Оснащення референтних муніципальних постів КП «НДЦ» Кременчуцької міської ради</td>
+<td style="text-align: left;">Висока початкова вартість закупівлі та необхідність регулярної заміни комірок</td>
+</tr>
+<tr>
+<td style="text-align: left;">Протокол LwM2M (Lightweight M2M)</td>
+<td style="text-align: left;">Клієнт-серверний прикладний протокол управління пристроями на базі моделі об'єктів та ресурсів</td>
+<td style="text-align: left;">Стандартизована телеметрія та дистанційне оновлення конфігурації екологічних станцій</td>
+<td style="text-align: left;">Складність початкової реалізації повнофункціонального стека на мікроконтролері</td>
+</tr>
+<tr>
+<td style="text-align: left;">Протокол CoAP (Constrained Application Protocol)</td>
+<td style="text-align: left;">Двійковий прикладний веб-протокол (RFC 7252) поверх UDP, що реалізує парадигму REST у 4-байтних заголовках</td>
+<td style="text-align: left;">Передача компактних повідомлень вимірювань якості повітря у вузькосмугових мережах</td>
+<td style="text-align: left;">Відсутність вбудованого контролю заторів трафіку на рівні ненадійного транспорту UDP</td>
+</tr>
+<tr>
+<td style="text-align: left;">Протокол безпеки DTLS</td>
+<td style="text-align: left;">Криптографічний протокол захисту датаграм (RFC 6347), що забезпечує автентифікацію та шифрування каналу</td>
+<td style="text-align: left;">Захист передачі екологічних даних від периферійного вузла ESP32 до сервера Leshan</td>
+<td style="text-align: left;">Фрагментація великих сертифікатів відкритого ключа у радіоканалах із малим MTU</td>
+</tr>
+<tr>
+<td style="text-align: left;">Бібліотека wolfSSL</td>
+<td style="text-align: left;">Оптимізована модульна вбудована бібліотека шифрування з апаратним прискоренням криптографії</td>
+<td style="text-align: left;">Реалізація клієнтської частини DTLS 1.3 на мікроконтролерах із пам'яттю до 64 КБ RAM</td>
+<td style="text-align: left;">Потреба у тонкому ручному налаштуванні параметрів збірки під конкретний чип</td>
+</tr>
+<tr>
+<td style="text-align: left;">Серверна платформа Eclipse Leshan</td>
+<td style="text-align: left;">Сервер управління пристроями LwM2M з відкритим кодом на платформі Java з підтримкою CoAP/DTLS</td>
+<td style="text-align: left;">Центральний муніципальний шлюз збору екологічної інформації та моніторингу сенсорів</td>
+<td style="text-align: left;">Підвищені вимоги до оперативної пам'яті сервера при підключенні понад 10 000 вузлів</td>
+</tr>
+<tr>
+<td style="text-align: left;">Модель доступу ABAC</td>
+<td style="text-align: left;">Динамічна оцінка прав доступу на основі комбінації атрибутів суб'єкта, об'єкта, дії та середовища</td>
+<td style="text-align: left;">Захист від несанкціонованого дистанційного переналаштування параметрів калібрування</td>
+<td style="text-align: left;">Обчислювальна затримка перевірки складних правил при масових потоках транзакцій</td>
+</tr>
+<tr>
+<td style="text-align: left;">Цiлочисельне програмування (ILP)</td>
+<td style="text-align: left;">Математичний метод оптимізації дискретних змінних: <span class="arithmatex">\(\min c^T x\)</span> за умови лінійних обмежень <span class="arithmatex">\(A x \ge b, x \in \{0, 1\}\)</span></td>
+<td style="text-align: left;">Оптимальне розміщення сенсорних станцій для максимізації покриття території міста</td>
+<td style="text-align: left;">NP-складність розв'язання задачі при збільшенні розмірності матриці потенційних точок</td>
+</tr>
+<tr>
+<td style="text-align: left;">Технологія оновлення FOTA</td>
+<td style="text-align: left;">Механізм дистанційного оновлення вбудованого ПЗ через радіоканал за допомогою об'єкта LwM2M <code>/9</code></td>
+<td style="text-align: left;">Автоматичне виправлення помилок та оновлення формул перерахунку концентрацій на сенсорах</td>
+<td style="text-align: left;">Ризик виходу пристрою з ладу при обриві живлення під час перезапису Flash-пам'яті</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="33">3.3. Контрольні питання та завдання</h3>
+<h4 id="_7">Прикладні тестові завдання</h4>
+<ol>
+<li>
+<p>Під час спроби дистанційного оновлення прошивки FOTA на групі з 10 автономних станцій ESP32 через протокол LwM2M дві станції припинили виходити на зв'язок і перейшли в стан блокування. Моніторинг зафіксував, що оновлення ініціював оператор у нічний час, коли температура повітря становила <span class="arithmatex">\(-12^\circ\text{C}\)</span>. Яка найбільш імовірна причина апаратного збою та як її запобігти засобами моделі ABAC?</p>
+</li>
+<li>
+<p>A. Зловмисник здійснив атаку перехоплення сесії DTLS, тому необхідно вимкнути протокол шифрування.</p>
+</li>
+<li>
+<p>B. Напруга акумулятора впала нижче критичного порогу перезапису Flash-пам'яті внаслідок мокрої деградації ємності при низькій температурі; правило ABAC мало заблокувати операцію FOTA при температурі нижче <span class="arithmatex">\(0^\circ\text{C}\)</span> та напрузі АКБ нижче 3,6 В.</p>
+</li>
+<li>
+<p>C. Сервер Leshan не підтримує одночасну передачу файлів бінарного образу кільком пристроям у мережі UDP.</p>
+</li>
+<li>
+<p>D. Мікроконтролер ESP32 втратив заводські ключі PSK внаслідок електростатичного розряду на корпусі антени.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>Операція стирання та запису блоків Flash-пам'яті мікроконтролера є найбільш енергоємною і вимагає стабільної напруги живлення (не менше 3,0–3,3 В). За температури <span class="arithmatex">\(-12^\circ\text{C}\)</span> внутрішній опір літій-іонного джерела зростає, викликаючи глибоке просідання напруги під навантаженням. Переривання процесу запису завантажувача призводить до пошкодження системного образу (soft-brick). Модель ABAC повинна містити контекстні правила перевірки стану середовища (<span class="arithmatex">\(E.\text{temp} &gt; 0^\circ\text{C}\)</span>, <span class="arithmatex">\(E.\text{batt\_voltage} \ge 3,6\text{ В}\)</span>) перед наданням дозволу на виконання операції FOTA.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A є абсурдним, оскільки відключення шифрування знищує безпековий контур системи та не усуває проблему падіння живлення.</p>
+</li>
+<li>
+<p>Варіант C є невірним, оскільки LwM2M сервер реалізує блокову передачу даних (CoAP Blockwise Transfer) незалежно кожному клієнту через окремі сесії.</p>
+</li>
+<li>
+<p>Варіант D є хибним, оскільки заводські ключі зберігаються в спеціальній однократно програмованій пам'яті eFuse, захищеній від статичних розрядів антени.</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>Екологічна станція моніторингу транслює показники з періодом 1 хвилина через стільникову мережу за допомогою протоколу CoAP поверх UDP без шифрування (NoSec). Під час аудиту виявлено, що дані про концентрацію бензолу були змінені у просторі передачі з 1,5 ГДК до безпечного рівня 0,3 ГДК. Яку вразливість використав зловмисник та яка конфігурація протокольного стека гарантує усунення цієї атаки?</p>
+</li>
+<li>
+<p>A. Атаку типу Man-in-the-Middle (підміна даних у транзитному каналі); необхідно впровадити протокол DTLS у режимі PSK або RPK для забезпечення цілісності пакета.</p>
+</li>
+<li>
+<p>B. Переповнення буфера черги повідомлень операційної системи; необхідно збільшити розмір стека завдань FreeRTOS.</p>
+</li>
+<li>
+<p>C. Апаратний дрейф напівпровідникового сенсора; необхідно замінити аналоговий датчик на оптичний газоаналізатор.</p>
+</li>
+<li>
+<p>D. Колізію IP-адрес у локальній мережі; необхідно перейти зі статичної адресації на динамічну через DHCP.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: A.</strong></p>
+<ol>
+<li>
+<p>Передача датаграм CoAP без криптографічного захисту (режим NoSec) дозволяє зловмиснику в незахищеній мережі оператора перехоплювати відкриті UDP-пакети, змінювати значення корисної частини TLV-структури та перераховувати контрольну суму датаграми (атака Man-in-the-Middle з фальсифікацією даних). Впровадження протоколу DTLS забезпечує криптографічний контроль цілісності кожного повідомлення за допомогою кодів аутентифікації повідомлень (HMAC/AEAD), що робить будь-яку модифікацію даних на шляху транспортування неможливою.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант B є помилковим, оскільки переповнення буфера призводить до втрати пакета або перезавантаження чипа, а не до спрямованої зміни числового значення в датаграмі.</p>
+</li>
+<li>
+<p>Варіант C не пояснює фальсифікацію даних у мережевому трафіку, оскільки апаратний дрейф діє плавно протягом місяців, а не підміняє пакети на транзитному вузлі.</p>
+</li>
+<li>
+<p>Варіант D не має стосунку до цілісності пакетів, оскільки колізія адрес блокує маршрутизацію, а не модифікує внутрішній вміст датаграм.</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>Для оптимізації розміщення сенсорних станцій за моделлю ILP інженер сформулював обмеження <span class="arithmatex">\(\sum_{i \in I} a_{ij} x_i \ge 1\)</span>. Під час розв'язання задачі з'ясувалося, що бюджет <span class="arithmatex">\(C_{\max}\)</span> недостатній для покриття всіх точок, і симплекс-метод не знайшов допустимого розв'язку (Infeasible solution). Яку математичну модифікацію необхідно внести в модель для отримання раціонального практичного плану розміщення?</p>
+</li>
+<li>
+<p>A. Замінити цільову функцію на мінімізацію пропускної здатності шлюзу.</p>
+</li>
+<li>
+<p>B. Ввести штрафні змінні штучного недопокриття <span class="arithmatex">\(s_j \ge 0\)</span> з ваговими коефіцієнтами пріоритетності зон у цільову функцію та перенести фінансовий ліміт у розряд жорсткого обмеження <span class="arithmatex">\(\sum c_i x_i \le C_{\max}\)</span>.</p>
+</li>
+<li>
+<p>C. Збільшити радіус дії сенсорів <span class="arithmatex">\(R_{\text{sense}}\)</span> у 10 разів без зміни апаратного забезпечення.</p>
+</li>
+<li>
+<p>D. Перевести всі цілочисельні змінні <span class="arithmatex">\(x_i\)</span> у комплексні числа.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>Якщо жорстка система обмежень повного покриття не має розв'язку в межах заданого бюджету, класичний метод дослідження операцій вимагає переходу до задачі з м'якими обмеженнями (Goal Programming). Введення додаткових штрафних змінних <span class="arithmatex">\(s_j\)</span> дозволяє максимізувати охоплення найбільш пріоритетних зон (наприклад, шкіл чи лікарень із високим коефіцієнтом ваги), утримуючи сумарні капітальні витрати в межах фактично виділеного бюджету <span class="arithmatex">\(C_{\max}\)</span>.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A не вирішує проблему браку фінансування на станції, оскільки смуга пропускання шлюзу не компенсує капітальні витрати на закупівлю приладів.</p>
+</li>
+<li>
+<p>Варіант C є грубою фізичною фальсифікацією, оскільки радіус достовірності датчика визначається законами фізики та чутливістю сенсора, а не програмними допущеннями.</p>
+</li>
+<li>
+<p>Варіант D є математично безглуздим, оскільки фізичне розміщення приладу є бінарною подією (встановлено / не встановлено), що не має змісту в полі комплексних чисел.</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>За результатами моніторингу трафіку LwM2M виявлено, що сенсорний вузол замість передачі одного пакету раз на 20 хвилин почав надсилати повідомлення CoAP Notify кожні 3 секунди з великим розміром корисного навантаження. Модуль виявлення аномалій класифікував це як кібератаку на вичерпання каналу. Яку дію має автоматично виконати компонент AccessControlPolicyManager?</p>
+</li>
+<li>
+<p>A. Вимкнути електроживлення всього муніципального дата-центру.</p>
+</li>
+<li>
+<p>B. Сформувати команду CoAP Execute на ресурс <code>/3/0/4</code> (Reboot) або перевести пристрій у карантинний профіль доступу з обмеженням частоти запитів до з'ясування причин збою.</p>
+</li>
+<li>
+<p>C. Збільшити розмір оперативної пам'яті мікроконтролера через віддалену команду.</p>
+</li>
+<li>
+<p>D. Видалити обліковий запис оператора системи моніторингу.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>При детектуванні аномальної активності (шторм повідомлень, ознаки скомпрометованого вузла або зациклення прошивки) політика динамічного контролю доступу ініціює ізоляцію джерела загрози. Сервер LwM2M використовує стандартний механізм перезавантаження (виконання команди Execute на об'єкті Device) або тимчасово анулює активні сесійні ключі пристрою, переводячи його трафік у карантинний режим без порушення працездатності решти мережі.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A є деструктивною реакцією, яка паралізує всю міську інфраструктуру моніторингу через одиничний збій одного периферійного вузла.</p>
+</li>
+<li>
+<p>Варіант C є технічно неможливим, оскільки апаратний обсяг фізичної пам'яті кристала мікроконтролера не може бути збільшений програмними командами через мережу.</p>
+</li>
+<li>
+<p>Варіант D не усуває аномальний трафік, оскільки шторм пакетів генерується периферійним пристроєм, а не обліковим записом оператора інтерфейсу.</p>
+</li>
+</ol>
+</details>
+<hr />
+<h4 id="_8">Завдання для самостійної роботи</h4>
+<h5 id="_9">Постановка задачі</h5>
+<p>У прибережній смузі річки Дніпро в межах Кременчуцької агломерації планується розгортання автономної сенсорної мережі екологічного моніторингу скидів промислових стічних вод та оцінки переносу аерозолів над водною поверхнею. Система складатиметься з шести плавучих автономних буїв із живленням від сонячних батарей та двох базових берегових шлюзів LoRaWAN/LwM2M. Буї оснащуються датчиками розчиненого кисню, каламутності, електропровідності, а також газовими сенсорами приземного шару повітря. Мережа функціонує в умовах значних сезонних коливань температури води й повітря та відсутності прямого доступу обслуговуючого персоналу протягом 6 місяців.</p>
+<h5 id="_10">Завдання для виконання</h5>
+<ol>
+<li>
+<p>Складіть математичну модель оптимізаційного розміщення берегових шлюзів зв'язку, яка максимізує ймовірність прямої радіовидимості буїв із урахуванням кривизни водної поверхні та берегового рельєфу.</p>
+</li>
+<li>
+<p>Розрахуйте ємність буферного літій-залізо-фосфатного (LiFePO4) акумулятора, необхідну для забезпечення безперебійної роботи вимірювального буя протягом 14 діб повної відсутності сонячної генерації в умовах замерзання водойми при температурі <span class="arithmatex">\(-15^\circ\text{C}\)</span>.</p>
+</li>
+<li>
+<p>Розробіть специфікацію об'єктно-ресурсної моделі LwM2M для датчика гідрохімічних параметрів, обравши відповідні ідентифікатори з реєстру IPSO Smart Objects для каламутності та вмісту розчиненого кисню.</p>
+</li>
+<li>
+<p>Сформулюйте набір правил динамічної безпеки ABAC, що забороняють передачу діагностичних даних високого пріоритету та виконання команд калібрування сенсорів за умови, що зафіксовано фізичне переміщення буя за межі якірної стоянки за координатами GPS.</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Повернутись нагору
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Kyrylo Vadurin &bull; <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "header.autohide", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0456\u0439\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u0421\u043a\u043e\u043f\u0456\u044e\u0432\u0430\u0442\u0438 \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0429\u0435 1 \u0437\u0431\u0456\u0433 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.more.other": "\u0429\u0435 # \u0437\u0431\u0456\u0433\u0456\u0432 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.none": "\u0417\u0431\u0456\u0433\u0456\u0432 \u043d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0437\u0431\u0456\u0433", "search.result.other": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e # \u0437\u0431\u0456\u0433\u0456\u0432", "search.result.placeholder": "\u0420\u043e\u0437\u043f\u043e\u0447\u043d\u0456\u0442\u044c \u043f\u0438\u0441\u0430\u0442\u0438 \u0434\u043b\u044f \u043f\u043e\u0448\u0443\u043a\u0443", "search.result.term.missing": "\u041d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e \u0437\u0430\u043f\u0438\u0442\u0443", "select.version": "\u041e\u0431\u0440\u0430\u0442\u0438 \u0432\u0435\u0440\u0441\u0456\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

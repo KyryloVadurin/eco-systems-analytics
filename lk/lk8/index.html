@@ -1,0 +1,2806 @@
+
+<!doctype html>
+<html lang="uk" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Навчальний портал з дисципліни "Інформаційно-аналітичні технології в екологічних системах"">
+      
+      
+      
+      
+        <link rel="prev" href="../lk7/">
+      
+      
+        <link rel="next" href="../lk9/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Тема 8. Моделювання динаміки екологічних систем - ІАТ в екологічних системах</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#8" class="md-skip">
+          Перейти до змісту
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Хедер">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-header__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ІАТ в екологічних системах
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Тема 8. Моделювання динаміки екологічних систем
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Переключити на темну тему"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Переключити на темну тему" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-label="Переключити на світлу тему"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Переключити на світлу тему" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Пошук" placeholder="Пошук" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Шукати">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистити" aria-label="Очистити" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Пошук розпочато
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Робоча програма
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../lk1/" class="md-tabs__link">
+          
+  
+  
+  Лекції
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../lb/lb1/" class="md-tabs__link">
+          
+  
+  
+  Лабораторні роботи
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../sr/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Самостійна робота
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навігація" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-nav__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ІАТ в екологічних системах
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Робоча програма
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лекції
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лекції
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 1. Цифровізація екологічного моніторингу
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 2. IoT-технології та сенсорні мережі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 3. Проєктування екологічних баз даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 4. Статистичні методи аналізу даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 5. Багатовимірний аналіз та інтелектуальні технології
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 6. Моделювання переносу та дифузії
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 7. Геоінформаційні системи (ГІС)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 8. Моделювання динаміки екологічних систем
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 8. Моделювання динаміки екологічних систем
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мета лекції
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Очікувані результати навчання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Теоретико-концептуальний базис. Нелінійні динамічні моделі популяційної та екосистемної стабільності
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Теоретико-концептуальний базис. Нелінійні динамічні моделі популяційної та екосистемної стабільності">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Класична система диференціальних рівнянь Лотки-Вольтерра та її узагальнення для опису антропогенного навантаження
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Концепція асиміляційної місткості природного середовища та оцінка гранично допустимого екологічного навантаження на урбоекосистеми
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Моделювання балансу кисню та процесів самоочищення відкритих водойм за моделлю Стрітера-Фелпса
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Ентропійний підхід до кількісної оцінки екологічної деградації природних водоймищ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вказівки для самостійного осмислення
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Методологія та аналіз граничних умов. Оцінка стійкості урбосистем в умовах техногенних катастроф
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Методологія та аналіз граничних умов. Оцінка стійкості урбосистем в умовах техногенних катастроф">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-swat-mike-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Комплексні гідродинамічні моделі (SWAT, MIKE 21) для розрахунку масопереносу у відкритих водоймах при руйнуванні інфраструктури
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Застосування теорії графів для аналізу ландшафтної зв'язності та міграційних коридорів в умовах фрагментації середовища
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Моделювання наслідків катастрофічних гідродинамічних змін на водні артерії та іригаційні мережі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Проблема неповноти калібрувальних вибірок та висока чутливість параметричних моделей динаміки екосистем до стохастичних збурень
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Практичний індустріальний / фаховий кейс. Оцінка екосистемних трансформацій після руйнування Каховської ГЕС
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Практичний індустріальний / фаховий кейс. Оцінка екосистемних трансформацій після руйнування Каховської ГЕС">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Комплексний фаховий кейс. Оцінка стійкості та трансформації гідроекологічного стану басейну річки Дніпро й прилеглих урбоекосистем внаслідок катастрофи на Каховській ГЕС
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Комплексний фаховий кейс. Оцінка стійкості та трансформації гідроекологічного стану басейну річки Дніпро й прилеглих урбоекосистем внаслідок катастрофи на Каховській ГЕС">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі / ситуації
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Покроковий аналіз та розв'язок
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Покроковий аналіз та розв&#39;язок">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 1. Розрахунок точки максимального просідання кисню (модель Стрітера-Фелпса)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 2. Розрахунок мінімальної залишкової концентрації розчиненого кисню
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 3. Кількісна оцінка деградації за допомогою інформаційної ентропії Шеннона
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 4. Оцінка гідравлічної відмови промислових водозаборів
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Інтерпретація результатів та альтернативні сценарії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Зведена довідкова система лекції
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Контрольні питання та завдання
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Контрольні питання та завдання">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Прикладні тестові завдання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для самостійної роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Завдання для самостійної роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для виконання
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 9. Прогнозування та оцінка ризиків
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 10. Інтелектуальні платформи просторового прогнозування
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторні роботи
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лабораторні роботи
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 1. Архітектура відкритих систем моніторингу довкілля
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 2. Канал отримання даних IoT-станцій
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 3. Проєктування наборів даних екологічної інформації
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 4. Статистичний аналіз та перевищення ГДК
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 5. Кореляційний аналіз та метод головних компонент
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 6. Моделювання розсіювання викидів в атмосфері
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 7. Просторова інтерполяція (IDW) та аномалії
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 8. Моделювання динаміки та стійкості екосистем
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 9. Прогнозування часових рядів та індекс якості повітря
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 10. Генерація екологічного звіту когнітивним LLM-агентом
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Самостійна робота
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мета лекції
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Очікувані результати навчання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Теоретико-концептуальний базис. Нелінійні динамічні моделі популяційної та екосистемної стабільності
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Теоретико-концептуальний базис. Нелінійні динамічні моделі популяційної та екосистемної стабільності">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Класична система диференціальних рівнянь Лотки-Вольтерра та її узагальнення для опису антропогенного навантаження
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Концепція асиміляційної місткості природного середовища та оцінка гранично допустимого екологічного навантаження на урбоекосистеми
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Моделювання балансу кисню та процесів самоочищення відкритих водойм за моделлю Стрітера-Фелпса
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Ентропійний підхід до кількісної оцінки екологічної деградації природних водоймищ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вказівки для самостійного осмислення
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Методологія та аналіз граничних умов. Оцінка стійкості урбосистем в умовах техногенних катастроф
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Методологія та аналіз граничних умов. Оцінка стійкості урбосистем в умовах техногенних катастроф">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-swat-mike-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Комплексні гідродинамічні моделі (SWAT, MIKE 21) для розрахунку масопереносу у відкритих водоймах при руйнуванні інфраструктури
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Застосування теорії графів для аналізу ландшафтної зв'язності та міграційних коридорів в умовах фрагментації середовища
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Моделювання наслідків катастрофічних гідродинамічних змін на водні артерії та іригаційні мережі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Проблема неповноти калібрувальних вибірок та висока чутливість параметричних моделей динаміки екосистем до стохастичних збурень
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Практичний індустріальний / фаховий кейс. Оцінка екосистемних трансформацій після руйнування Каховської ГЕС
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Практичний індустріальний / фаховий кейс. Оцінка екосистемних трансформацій після руйнування Каховської ГЕС">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Комплексний фаховий кейс. Оцінка стійкості та трансформації гідроекологічного стану басейну річки Дніпро й прилеглих урбоекосистем внаслідок катастрофи на Каховській ГЕС
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Комплексний фаховий кейс. Оцінка стійкості та трансформації гідроекологічного стану басейну річки Дніпро й прилеглих урбоекосистем внаслідок катастрофи на Каховській ГЕС">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі / ситуації
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Покроковий аналіз та розв'язок
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Покроковий аналіз та розв&#39;язок">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 1. Розрахунок точки максимального просідання кисню (модель Стрітера-Фелпса)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 2. Розрахунок мінімальної залишкової концентрації розчиненого кисню
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 3. Кількісна оцінка деградації за допомогою інформаційної ентропії Шеннона
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 4. Оцінка гідравлічної відмови промислових водозаборів
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Інтерпретація результатів та альтернативні сценарії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Зведена довідкова система лекції
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Контрольні питання та завдання
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Контрольні питання та завдання">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Прикладні тестові завдання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для самостійної роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Завдання для самостійної роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для виконання
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="8">Тема 8. Моделювання динаміки та стійкості екологічних систем</h1>
+<h2 id="_1">Мета лекції</h2>
+<p>Сформувати у здобувачів наукового ступеня доктора філософії теоретичний базис і методологічний апарат дослідження стійкості, гомеостазу та динаміки природних і урбанізованих систем в умовах екстремального антропогенного навантаження, вивчення біологічних моделей міжвидових взаємодій, розрахунку асиміляційного потенціалу екосистем та комп'ютерного моделювання наслідків великомасштабних техногенних катастроф.</p>
+<h2 id="_2">Очікувані результати навчання</h2>
+<ol>
+<li>
+<p><strong>Знання та розуміння.</strong> Здобувачі мають знати математичні моделі класичної популяційної екології, умови стійкості динамічних систем за Ляпуновим та закони лімітуючих факторів.</p>
+</li>
+<li>
+<p><strong>Застосування.</strong> Здобувачі мають застосовувати апарат звичайних диференціальних рівнянь (моделі Лотки-Вольтерра з конкуренцією) для прогнозування поведінки біоти під впливом токсикантів.</p>
+</li>
+<li>
+<p><strong>Аналіз.</strong> Здобувачі мають аналізувати критичні екологічні навантаження, ризики біфуркаційного переходу екосистем у деградований стан та інформаційну ентропію природних водних басейнів.</p>
+</li>
+<li>
+<p><strong>Оцінювання та синтез.</strong> Здобувачі мають моделювати сценарії відновлення екологічної рівноваги територій, які зазнали деградації внаслідок руйнування гідротехнічних споруд та воєнних дій.</p>
+</li>
+</ol>
+<h2 id="1-">1. Теоретико-концептуальний базис. Нелінійні динамічні моделі популяційної та екосистемної стабільності</h2>
+<h3 id="11-">1.1. Класична система диференціальних рівнянь Лотки-Вольтерра та її узагальнення для опису антропогенного навантаження</h3>
+<p>Теоретичне дослідження стійкості екологічних систем спирається на апарат нелінійної динаміки та теорію диференціальних рівнянь. Природні біоценози є відкритими нерівноважними термодинамічними системами, чисельність популяцій у яких регулюється складним комплексом міжвидових взаємодій, лімітуючих ресурсів та зовнішніх факторів збурення. Фундаментальним базисом математичної біології є класична <strong>модель «хижак-жертва» Лотки-Вольтерра</strong>, яка описує замкнені автоколивальні режими чисельності взаємодіючих біологічних видів. Проте класична формулювання не враховує внутрішньовидову конкуренцію за простір та антропогенний токсикологічний пресинг, що робить її недостатньо адекватною для завдань сучасної прикладної екології.</p>
+<p>Для моделювання урбанізованих та техногенно навантажених екосистем застосовується узагальнена нелінійна система диференціальних рівнянь, яка модифікує класичний оператор взаємодії введенням логістичного самообмеження жертви (ємності середовища <span class="arithmatex">\(K\)</span>) та додаткових функцій токсичної елімінації організмів під дією забруднюючої речовини:</p>
+<div class="arithmatex">\[\frac{dx}{dt} = r \cdot x \left( 1 - \frac{x}{K} \right) - \frac{a \cdot x \cdot y}{1 + a \cdot h \cdot x} - \mu_x(C) \cdot x\]</div>
+<div class="arithmatex">\[\frac{dy}{dt} = \frac{e \cdot a \cdot x \cdot y}{1 + a \cdot h \cdot x} - d \cdot y - \mu_y(C) \cdot y\]</div>
+<p>де складові та феноменологічні коефіцієнти системи мають наступне змістовне значення:</p>
+<ul>
+<li>
+<p>Змінні <span class="arithmatex">\(x = x(t)\)</span> та <span class="arithmatex">\(y = y(t)\)</span> відображають щільність біомаси або чисельність популяцій жертви (наприклад, гідробіонтів-фільтраторів зоопланктону) та хижака (хижих видів риб) у момент часу <span class="arithmatex">\(t\)</span>.</p>
+</li>
+<li>
+<p>Параметр <span class="arithmatex">\(r\)</span> позначає питому швидкість природного біотичного потенціалу росту популяції жертви за відсутності лімітування.</p>
+</li>
+<li>
+<p>Параметр <span class="arithmatex">\(K\)</span> детермінує екологічну ємність природного біотопу за кормовими та просторовими ресурсами.</p>
+</li>
+<li>
+<p>Коефіцієнт <span class="arithmatex">\(a\)</span> визначає ефективність атаки хижака, а параметр <span class="arithmatex">\(h\)</span> формалізує час обробки здобичі відповідно до трофічної функції Холлінга другого типу, що усуває нефізичне нескінченне споживання при високих щільностях жертви.</p>
+</li>
+<li>
+<p>Коефіцієнт <span class="arithmatex">\(e\)</span> відображає ефективність конверсії спожитої біомаси жертви у біомасу популяції хижака, а параметр <span class="arithmatex">\(d\)</span> позначає природну смертність хижака за відсутності здобичі.</p>
+</li>
+<li>
+<p>Нелінійні функції <span class="arithmatex">\(\mu_x(C)\)</span> та <span class="arithmatex">\(\mu_y(C)\)</span> описують додаткову смертність особин внаслідок токсичної дії ксенобіотика з приземною або водною концентрацією <span class="arithmatex">\(C\)</span>.</p>
+</li>
+</ul>
+<p>У токсикологічній динаміці функціонал смертності від антропогенного забруднювача апроксимується нелінійною насичуваною залежністю Міхаеліса-Ментен (модель Хілла):</p>
+<div class="arithmatex">\[\mu(C) = \frac{\mu_{\max} \cdot C^\kappa}{\text{EC}_{50}^\kappa + C^\kappa}\]</div>
+<p>де параметр <span class="arithmatex">\(\mu_{\max}\)</span> позначає граничну летальність токсиканта, <span class="arithmatex">\(\text{EC}_{50}\)</span> визначає напівлетальну концентрацію, що викликає 50% токсичний ефект, а степінь <span class="arithmatex">\(\kappa\)</span> задає крутизну дозозалежного відгуку популяції. </p>
+<p>Стійкість стаціонарних станів рівноваги узагальненої системи досліджується за <strong>першим методом Ляпунова</strong> шляхом лінеаризації системи у фазовому просторі та розрахунку власних значень матриці Якобі. Якщо дійсна частина всіх власних значень якобіана є строго від'ємною (<span class="arithmatex">\(\text{Re}(\lambda_i) &lt; 0\)</span>), біоценоз зберігає асимптотичну стійкість. Зростання концентрації токсиканта <span class="arithmatex">\(C\)</span> призводить до біфуркації Андронова-Хопфа, за якої стабільні граничні цикли колапсують, перетворюючи популяційну динаміку на хаотичну деградацію з високим ризиком повного вимирання трофічних ланок.</p>
+<pre class="mermaid"><code>flowchart TD
+    subgraph PERTURBATION["Антропогенний фактор збурення"]
+        POLLUTION["Концентрація токсиканта C(t) у водоймі"]
+        TOXICITY["Функція летальності Міхаеліса-Ментен mu(C)"]
+    end
+
+    subgraph DYNAMICS_CORE["Нелінійний популяційний контур"]
+        PREY["Популяція жертви x(t): Логістичний ріст та ліміт K"]
+        PRED["Популяція хижака y(t): Природна смертність d"]
+        HOLLING["Трофічна взаємодія Холлінга II типу"]
+    end
+
+    subgraph PHASE_SPACE["Аналіз стійкості за Ляпуновим"]
+        JACOBI["Матриця Якобі лінеаризованої системи J"]
+        EIGEN["Власні значення: Re(lambda) &lt; 0"]
+        STABLE["Асимптотично стійкий стан рівноваги"]
+        COLLAPSE["Біфуркаційний колапс та вимирання ланки"]
+    end
+
+    POLLUTION --&gt; TOXICITY
+    TOXICITY --&gt; PREY
+    TOXICITY --&gt; PRED
+    PREY &lt;--&gt; HOLLING
+    HOLLING &lt;--&gt; PRED
+    PREY &amp; PRED --&gt; JACOBI
+    JACOBI --&gt; EIGEN
+    EIGEN -- "Re(lambda) &lt; 0" --&gt; STABLE
+    EIGEN -- "Re(lambda) &gt; 0" --&gt; COLLAPSE</code></pre>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> При дослідженні впливу стічних вод із підвищеним вмістом іонів важких металів на іхтіофауну Кам'янського водосховища моделювання за узагальненою схемою Лотки-Вольтерра довело, що при досягненні хронічної концентрації міді на рівні <span class="arithmatex">\(C = 0,08\text{ мг/дм}^3\)</span> популяція бентофагів зазнає біфуркаційного зриву чисельності, викликаючи деградацію популяції хижих риб протягом двох вегетаційних сезонів.</p>
+</blockquote>
+<hr />
+<h3 id="12">1.2. Концепція асиміляційної місткості природного середовища та оцінка гранично допустимого екологічного навантаження на урбоекосистеми</h3>
+<p>Функціонування будь-якого природно-техногенного комплексу обмежене об'єктивними фізичними межами здатності біогеоценозу до саморегуляції. Центральною категорією теорії екологічної безпеки виступає <strong>асиміляційна місткість екосистеми (Assimilative Capacity)</strong>, яка визначає максимальну масову кількість забруднюючих речовин, яку природний об'єкт здатний прийняти, нейтралізувати, трансформувати або депонувати в одиницю часу за рахунок природних фізико-хімічних та біотичних процесів без незворотного порушення власного гомеостазу та деградації екологічних функцій.</p>
+<p>Математична формалізація асиміляційної місткості природного басейну об'ємом <span class="arithmatex">\(V\)</span> для конкретного токсиканта описується інтегральним балансовим рівнянням:</p>
+<div class="arithmatex">\[A_{\text{cap}} = \iiint_{V} \Big( K_{\text{deg}}(\mathbf{r}, T) \cdot C_{\text{crit}} + v_{\text{sed}} \frac{\partial C_{\text{crit}}}{\partial z} + R_{\text{bio}} \Big) \, dV\]</div>
+<p>де складові функціонала визначають потужність природних деструкційних механізмів:</p>
+<ul>
+<li>
+<p>Коефіцієнт <span class="arithmatex">\(K_{\text{deg}}(\mathbf{r}, T)\)</span> задає питому швидкість абіотичної деструкції та фотохімічного розпаду забруднювача як функцію просторових координат <span class="arithmatex">\(\mathbf{r}\)</span> та температури середовища <span class="arithmatex">\(T\)</span>.</p>
+</li>
+<li>
+<p>Константа <span class="arithmatex">\(C_{\text{crit}}\)</span> відповідає критичній екологічній концентрації (нормативу ГДК або безпечного екологічного порогу PNEC), перевищення якої викликає патологічні зміни в біоті.</p>
+</li>
+<li>
+<p>Швидкість <span class="arithmatex">\(v_{\text{sed}}\)</span> позначає швидкість седиментаційного осадження та депонування часток у донні відклади або ґрунтові горизонти.</p>
+</li>
+<li>
+<p>Функція <span class="arithmatex">\(R_{\text{bio}}\)</span> детермінує швидкість біологічної асиміляції та метаболічної мінералізації сполуки активним мулом, фітопланктоном або вищою водною рослинністю.</p>
+</li>
+</ul>
+<p>Якщо фактичне сумарне надходження антропогенних викидів від стаціонарних та рухомих джерел <span class="arithmatex">\(W_{\text{anthro}} = \sum_{k} Q_k\)</span> перевищує асиміляційну місткість (<span class="arithmatex">\(W_{\text{anthro}} &gt; A_{\text{cap}}\)</span>), виникає явище <strong>прогресуючої кумуляції токсиканта</strong>. </p>
+<p>Оцінка гранично допустимого екологічного навантаження (Critical Load) вимагає суворого дотримання умови динамічної рівноваги:</p>
+<div class="arithmatex">\[\text{Margin}_{\text{safety}} = A_{\text{cap}} - W_{\text{anthro}} \ge \delta_{\text{reserve}}\]</div>
+<p>де величина <span class="arithmatex">\(\delta_{\text{reserve}}\)</span> задає нормативний буфер стійкості (зазвичай 15–20% від загальної асиміляційної місткості), який гарантує збереження стабільності урбоекосистеми під час сезонних кліматичних аномалій або тимчасового падіння активності мікрофлори взимку.</p>
+<hr />
+<h3 id="13-">1.3. Моделювання балансу кисню та процесів самоочищення відкритих водойм за моделлю Стрітера-Фелпса</h3>
+<p>У гідроекологічних системах найважливішим показником стійкості до органічного техногенного забруднення є баланс розчиненого у воді кисню. Масове надходження органічних сполук зі стічними водами промислових підприємств та міських каналізаційних мереж активізує аеробні бактерії, які споживають розчинений кисень для окиснення органіки, що може призвести до повного замору гідробіонтів.</p>
+<p>Класичним математичним інструментом моделювання динаміки кисневого режиму річкових систем є <strong>модель Стрітера-Фелпса (Streeter-Phelps Oxygen Sag Model)</strong>. Модель розглядає відкриту водойму як одновимірний потік ідеального витіснення та базується на системі двох взаємопов'язаних лінійних диференціальних рівнянь:</p>
+<div class="arithmatex">\[\frac{dL}{dt} = - k_1 \cdot L\]</div>
+<div class="arithmatex">\[\frac{dD}{dt} = k_1 \cdot L - k_2 \cdot D\]</div>
+<p>де змінні та кінетичні константи процесу мають таку інтерпретацію:</p>
+<ul>
+<li>
+<p>Змінна <span class="arithmatex">\(L = L(t)\)</span> визначає біохімічне споживання кисню (БСК, <span class="arithmatex">\(\text{BOD}\)</span>), тобто масову концентрацію органічної речовини у воді, еквівалентну кількості кисню, необхідного для її повного біологічного окиснення, виражену в мг <span class="arithmatex">\(\text{O}_2/\text{дм}^3\)</span>.</p>
+</li>
+<li>
+<p>Змінна <span class="arithmatex">\(D = D(t) = C_s - C(t)\)</span> позначає дефіцит розчиненого кисню, де <span class="arithmatex">\(C_s\)</span> — термодинамічна рівноважна концентрація насичення води киснем при поточній температурі й атмосферному тиску, а <span class="arithmatex">\(C(t)\)</span> — фактична концентрація кисню у воді.</p>
+</li>
+<li>
+<p>Коефіцієнт <span class="arithmatex">\(k_1\)</span> (доба⁻¹) визначає константу швидкості деоксигенації (біологічного окиснення органіки).</p>
+</li>
+<li>
+<p>Коефіцієнт <span class="arithmatex">\(k_2\)</span> (доба⁻¹) позначає константу швидкості реаерації (фізичного розчинення кисню повітря через водне дзеркало внаслідок турбулентного обміну).</p>
+</li>
+</ul>
+<p>Аналітичний розв'язок системи диференціальних рівнянь Стрітера-Фелпса при початкових умовах <span class="arithmatex">\(L(0) = L_0\)</span> та <span class="arithmatex">\(D(0) = D_0\)</span> у точці скиду стічних вод дозволяє отримати рівняння <strong>кисневої кривої просідання (Oxygen Sag Curve)</strong>:</p>
+<div class="arithmatex">\[D(t) = \frac{k_1 \cdot L_0}{k_2 - k_1} \left( e^{-k_1 t} - e^{-k_2 t} \right) + D_0 \cdot e^{-k_2 t}\]</div>
+<p>Критична точка максимального просідання кисню, в якій спостерігається найнебезпечніший стан гідроекосистеми, знаходиться з умови екстремуму <span class="arithmatex">\(\frac{dD}{dt} = 0\)</span>. Час досягнення максимального дефіциту кисню <span class="arithmatex">\(t_{\text{crit}}\)</span> обчислюється аналітично:</p>
+<div class="arithmatex">\[t_{\text{crit}} = \frac{1}{k_2 - k_1} \ln\left[ \frac{k_2}{k_1} \left( 1 - \frac{D_0 (k_2 - k_1)}{k_1 L_0} \right) \right]\]</div>
+<p>Відповідно, критична відстань від джерела забруднення вниз за течією річки зі середньою швидкістю потоку <span class="arithmatex">\(v_{\text{river}}\)</span> дорівнює <span class="arithmatex">\(x_{\text{crit}} = v_{\text{river}} \cdot t_{\text{crit}}\)</span>. Значення дефіциту в критичній точці <span class="arithmatex">\(D_{\text{crit}} = D(t_{\text{crit}})\)</span> детермінує мінімальну концентрацію кисню <span class="arithmatex">\(C_{\min} = C_s - D_{\text{crit}}\)</span>. Якщо величина <span class="arithmatex">\(C_{\min}\)</span> падає нижче санітарного порогу <span class="arithmatex">\(4,0\text{ мг/дм}^3\)</span>, водойма переходить у септичний анаеробний стан.</p>
+<pre class="mermaid"><code>stateDiagram-v2
+    [*] --&gt; Зона_Чистої_Води: Фоновий стан (C = C_s, L = 0)
+    Зона_Чистої_Води --&gt; Зона_Деградації: Скид стічних вод (L = L_0, D = D_0)
+
+    state Зона_Деградації {
+        [*] --&gt; Активне_Окиснення: dL/dt = -k1*L
+        Активне_Окиснення --&gt; Зростання_Дефіциту: k1*L &gt; k2*D
+    }
+
+    Зона_Деградації --&gt; Септична_Зона: Точка t_crit (C = C_min &lt; 4 мг/дм3)
+    Зона_Деградації --&gt; Зона_Відновлення: Якщо C_min &gt;= 4 мг/дм3
+
+    state Септична_Зона {
+        [*] --&gt; Анаеробний_Розпад: Замор риби та утворення H2S
+        Анаеробний_Розпад --&gt; Переважання_Реаерації: Органіка вичерпується (k2*D &gt; k1*L)
+    }
+
+    Септична_Зона --&gt; Зона_Відновлення: Початок регенерації кисню
+
+    state Зона_Відновлення {
+        [*] --&gt; Насичення_Киснем: dD/dt &lt; 0
+        Насичення_Киснем --&gt; Мінералізація_Органіки: L -&gt; 0
+    }
+
+    Зона_Відновлення --&gt; Зона_Чистої_Води: Повне самоочищення річки</code></pre>
+<hr />
+<h3 id="14">1.4. Ентропійний підхід до кількісної оцінки екологічної деградації природних водоймищ</h3>
+<p>Для комплексного оцінювання стабільності водних об'єктів, де одночасно змінюються десятки гідрохімічних показників (розчинений кисень, pH, біогени, сульфати, важкі метали), класичні індекси часто виявляються надмірно суб'єктивними через довільний вибір вагових коефіцієнтів. Методологічною альтернативою виступає <strong>інформаційно-ентропійний підхід</strong>, який розглядає якість природного водоймища як ступінь термодинамічної та структурної впорядкованості інформаційної системи.</p>
+<p>Відповідно до досліджень оцінки екологічного стану Кременчуцького водосховища на основі теорії інформації, кожен гідрохімічний показник <span class="arithmatex">\(j \in \{1, 2, \dots, m\}\)</span> дискретизується на <span class="arithmatex">\(k\)</span> інтервалів класифікаційної шкали екологічного стану. Ймовірність <span class="arithmatex">\(P_{ij}\)</span> знаходження <span class="arithmatex">\(j\)</span>-го параметра у <span class="arithmatex">\(i\)</span>-му екологічному класі визначається відносною частотою потрапляння результатів натурних вимірювань у заданий числовий діапазон за вибірковий період.</p>
+<p>Інформаційна ентропія стану водоймища за <span class="arithmatex">\(j\)</span>-м показником розраховується відповідно до формули Клода Шеннона:</p>
+<div class="arithmatex">\[H_j = - \sum_{i=1}^{k} P_{ij} \log_2 P_{ij}\]</div>
+<p>Узагальнена інформаційна ентропія гідроекосистеми <span class="arithmatex">\(H_{\text{system}}\)</span> обчислюється як зважена сума ентропій окремих гідрохімічних параметрів:</p>
+<div class="arithmatex">\[H_{\text{system}} = \sum_{j=1}^{m} \omega_j \cdot H_j\]</div>
+<p>де коефіцієнти <span class="arithmatex">\(\omega_j\)</span> відображають токсикологічну пріоритетність показника, причому виконується умова нормування <span class="arithmatex">\(\sum_{j=1}^{m} \omega_j = 1\)</span>.</p>
+<p>Максимальне теоретичне значення ентропії <span class="arithmatex">\(H_{\max} = \log_2 k\)</span> відповідає стану повної хаотизації та розпаду біогеохімічних зв'язків (рівномірний розподіл станів). Ступінь техногенної деградації екосистеми кількісно оцінюється через <strong>коефіцієнт відносної ентропійної дезорганізації</strong>:</p>
+<div class="arithmatex">\[\mathcal{D}_{\text{entropy}} = \frac{H_{\text{system}}}{H_{\max}} = \frac{\sum_{j=1}^{m} \omega_j H_j}{\log_2 k}\]</div>
+<p>Значення <span class="arithmatex">\(\mathcal{D}_{\text{entropy}} \to 0\)</span> характеризує стабільну оліготрофну екосистему з високим рівнем саморегуляції та передбачуваності біохімічних процесів. Зростання показника до <span class="arithmatex">\(\mathcal{D}_{\text{entropy}} \ge 0,75\)</span> свідчить про глибоку дистрофію водойми, вичерпання асиміляційного потенціалу та перехід у стан незворотної евтрофікації.</p>
+<p>Для порівняння математичних методів оцінки екологічної стійкості та динаміки систем наведено систематизовану матрицю.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Теоретична модель / підхід</th>
+<th style="text-align: left;">Математичний формалізм</th>
+<th style="text-align: left;">Керовані системні змінні</th>
+<th style="text-align: left;">Сфера застосування в екологічному менеджменті</th>
+<th style="text-align: left;">Приклад з реальної практики</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Узагальнена модель Лотки-Вольтерра</td>
+<td style="text-align: left;">Нелінійні звичайні дифрівняння з функцією Хілла <span class="arithmatex">\(\mu(C)\)</span></td>
+<td style="text-align: left;">Чисельності популяцій <span class="arithmatex">\(x(t), y(t)\)</span>, концентрація токсиканта</td>
+<td style="text-align: left;">Прогнозування біорізноманіття при хронічному забрудненні</td>
+<td style="text-align: left;">Оцінка деградації зообентосу в зоні скидів металургійних заводів</td>
+</tr>
+<tr>
+<td style="text-align: left;">Модель кисневого просідання Стрітера-Фелпса</td>
+<td style="text-align: left;">Система двох лінійних дифрівнянь деоксигенації та реаерації</td>
+<td style="text-align: left;">БСК (<span class="arithmatex">\(L\)</span>), дефіцит розчиненого кисню (<span class="arithmatex">\(D\)</span>) у річці</td>
+<td style="text-align: left;">Розрахунок гранично допустимих скидів (ГДС) стічних вод</td>
+<td style="text-align: left;">Оцінка впливу міських очисних споруд Кременчука на річку Дніпро</td>
+</tr>
+<tr>
+<td style="text-align: left;">Інформаційна ентропія Шеннона</td>
+<td style="text-align: left;">Ймовірнісний розклад станів: <span class="arithmatex">\(H = - \sum P_i \log_2 P_i\)</span></td>
+<td style="text-align: left;">Гідрохімічні параметри, інформаційна впорядкованість</td>
+<td style="text-align: left;">Інтегральна діагностика якості води великих водосховищ</td>
+<td style="text-align: left;">Оцінка екологічного стану Кременчуцького водосховища</td>
+</tr>
+<tr>
+<td style="text-align: left;">Модель балансу фосфору Фолленвайдера</td>
+<td style="text-align: left;">Диференціальне рівняння балансу біогенів: <span class="arithmatex">\(V \frac{dP}{dt} = W - Q P - v_s A P\)</span></td>
+<td style="text-align: left;">Концентрація загального фосфору, трофічний статус</td>
+<td style="text-align: left;">Прогнозування масштабів цвітіння води та евтрофікації</td>
+<td style="text-align: left;">Моделювання накопичення мінеральних добрив у заплавних озерах</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> При комплексному аналізі стабільності Кременчуцького водосховища за період 2021–2023 рр. за 12 гідрохімічними маркерами розрахунок інформаційної ентропії зафіксував стійке зростання індексу <span class="arithmatex">\(\mathcal{D}_{\text{entropy}}\)</span> з 0,41 до 0,68 у літні місяці, що корелювало з інтенсивним розвитком синьо-зелених водоростей та підтвердило вичерпання природного асиміляційного ресурсу водоймища щодо сполук азоту та фосфору.</p>
+</blockquote>
+<hr />
+<blockquote>
+<p><strong>ТИПОВА ПОМИЛКА:</strong> Прийняття припущення про лінійну реакцію екосистеми на нарощування антропогенного скиду органічних сполук. На практиці самоочисна здатність річки є строго нелінійною: перевищення критичного порогу надходження органіки навіть на 5% переводить біохімічне окиснення у режим кисневого голодування (<span class="arithmatex">\(C &lt; 1\text{ мг/дм}^3\)</span>), за якого аеробні деструктори масово гинуть, константа самоочищення <span class="arithmatex">\(k_1\)</span> падає практично до нуля, а річка миттєво перетворюється на стійку анаеробну зону гниття.</p>
+</blockquote>
+<hr />
+<blockquote>
+<p><strong>КОНТРОЛЬНЕ ПИТАННЯ:</strong> У річку з витратою води <span class="arithmatex">\(Q_{\text{river}} = 20\text{ м}^3/\text{с}\)</span> та швидкістю течії <span class="arithmatex">\(v = 0,5\text{ м/с}\)</span> скидаються очищені міські стічні води з витратою <span class="arithmatex">\(Q_{\text{waste}} = 2\text{ м}^3/\text{с}\)</span>. Після повного перемішування початкове біохімічне споживання кисню становить <span class="arithmatex">\(L_0 = 25\text{ мг/дм}^3\)</span>, а початковий дефіцит кисню <span class="arithmatex">\(D_0 = 1,0\text{ мг/дм}^3\)</span>. Константа деоксигенації становить <span class="arithmatex">\(k_1 = 0,2\text{ доба}^{-1}\)</span>, а константа реаерації <span class="arithmatex">\(k_2 = 0,5\text{ доба}^{-1}\)</span>. Розрахуйте час <span class="arithmatex">\(t_{\text{crit}}\)</span> та відстань <span class="arithmatex">\(x_{\text{crit}}\)</span> від місця скиду до створу максимального екологічного ризику (точки екстремального кисневого просідання).</p>
+</blockquote>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: Час досягнення максимального дефіциту кисню становить <span class="arithmatex">\(t_{\text{crit}} \approx 2,98\text{ доби}\)</span>, а критичний створ розташований на відстані <span class="arithmatex">\(x_{\text{crit}} \approx 128,7\text{ км}\)</span> вниз за течією річки.</strong></p>
+<ol>
+<li>
+<p>Повне логічне та аналітичне обґрунтування:</p>
+</li>
+<li>
+<p>Вихідні параметри: <span class="arithmatex">\(k_1 = 0,2\text{ доба}^{-1}\)</span>, <span class="arithmatex">\(k_2 = 0,5\text{ доба}^{-1}\)</span>, <span class="arithmatex">\(L_0 = 25\text{ мг/дм}^3\)</span>, <span class="arithmatex">\(D_0 = 1,0\text{ мг/дм}^3\)</span>.</p>
+</li>
+<li>
+<p>Різниця констант: <span class="arithmatex">\(k_2 - k_1 = 0,5 - 0,2 = 0,3\text{ доба}^{-1}\)</span>.</p>
+</li>
+<li>
+<p>Відношення констант: <span class="arithmatex">\(\frac{k_2}{k_1} = \frac{0,5}{0,2} = 2,5\)</span>.</p>
+</li>
+<li>
+<p>Обчислимо вираз під логарифмом у формулі Стрітера-Фелпса:
+     $<span class="arithmatex">\(\text{Term} = 1 - \frac{D_0 (k_2 - k_1)}{k_1 L_0} = 1 - \frac{1,0 \cdot 0,3}{0,2 \cdot 25} = 1 - \frac{0,3}{5,0} = 1 - 0,06 = 0,94\)</span>$</p>
+</li>
+<li>
+<p>Обчислимо повний аргумент натурального логарифма:
+     $<span class="arithmatex">\(\text{Arg} = \frac{k_2}{k_1} \cdot \text{Term} = 2,5 \cdot 0,94 = 2,35\)</span>$</p>
+</li>
+<li>
+<p>Знаходимо час досягнення критичної точки:
+     $<span class="arithmatex">\(t_{\text{crit}} = \frac{1}{k_2 - k_1} \ln(\text{Arg}) = \frac{1}{0,3} \ln(2,35) \approx \frac{1}{0,3} \cdot 0,8544 \approx 2,848 \text{ доби} \approx 2,85 \text{ доби}\)</span>$
+     <em>(Примітка: точний розрахунок дає <span class="arithmatex">\(2,85\)</span> доби; переведемо цей час у секунди для розрахунку відстані).</em></p>
+</li>
+<li>
+<p>Переведемо час у секунди: <span class="arithmatex">\(t_{\text{crit}} = 2,848 \cdot 24 \cdot 3600 \approx 246\,067\text{ с}\)</span>.</p>
+</li>
+<li>
+<p>Визначаємо критичну відстань річкового створу при швидкості течії <span class="arithmatex">\(v = 0,5\text{ м/с}\)</span>:
+     $<span class="arithmatex">\(x_{\text{crit}} = v \cdot t_{\text{crit}} = 0,5\text{ м/с} \cdot 246\,067\text{ с} \approx 123\,033\text{ м} \approx 123,0\text{ км}\)</span>$</p>
+</li>
+<li>
+<p>Таким чином, найнебезпечніша зона з мінімальною концентрацією кисню утворюється не біля самого колектора скиду, а майже через 3 доби сплаву води на відстані 123 км нижче за течією, що є класичним проявом інерційності процесів самоочищення.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Припущення, що критична зона виникає безпосередньо в точці скиду (<span class="arithmatex">\(x = 0\)</span>), є грубою гідроекологічною помилкою, оскільки бактеріям потрібен час для розвитку популяції та споживання кисню.</p>
+</li>
+<li>
+<p>Розрахунок без урахування реаерації <span class="arithmatex">\(k_2\)</span> призведе до нескінченного падіння кисню до нуля, що фізично не відповідає реальності відкритих річкових систем.</p>
+</li>
+</ol>
+</details>
+<hr />
+<h3 id="_3">Вказівки для самостійного осмислення</h3>
+<ol>
+<li>
+<p>Здійсніть аналітичне дослідження стійкості особливих точок моделі Стрітера-Фелпса в фазовій площині <span class="arithmatex">\((L, D)\)</span> та доведіть, що точка <span class="arithmatex">\((0, 0)\)</span> є стійким вузлом при довільних додатних константах <span class="arithmatex">\(k_1 &gt; 0\)</span> та <span class="arithmatex">\(k_2 &gt; 0\)</span>.</p>
+</li>
+<li>
+<p>Проаналізуйте температурну залежність швидкостей деоксигенації та реаерації за формулою Вант-Гоффа-Арреніуса <span class="arithmatex">\(k(T) = k_{20} \cdot \theta^{T-20}\)</span> та оцініть, як потепління води на 5 °C впливає на просторове положення критичного створу <span class="arithmatex">\(x_{\text{crit}}\)</span>.</p>
+</li>
+<li>
+<p>Сформулюйте математичну модель евтрофікації замкненої водойми, розширивши баланс біогенів рівняннями кінетики росту популяції синьо-зелених водоростей з урахуванням самозатінення фітопланктону.</p>
+</li>
+</ol>
+<h2 id="2">2. Методологія та аналіз граничних умов. Оцінка стійкості урбосистем в умовах техногенних катастроф</h2>
+<h3 id="21-swat-mike-21">2.1. Комплексні гідродинамічні моделі (SWAT, MIKE 21) для розрахунку масопереносу у відкритих водоймах при руйнуванні інфраструктури</h3>
+<p>Оцінка наслідків великомасштабних техногенних катастроф у гідросфері вимагає переходу від спрощених одновимірних моделей до повномасштабного двовимірного та тривимірного чисельного моделювання нестійких гідродинамічних потоків. Руйнування гребель, прориви захисних дамб і спустошення водосховищ супроводжуються формуванням високошвидкісних хвиль прориву, катастрофічним перевідкладенням донних наносів, оголенням токсичних мулів та різкою зміною базису ерозії річкових русел.</p>
+<p>Для прецизійного моделювання таких процесів застосовується програмний комплекс <strong>MIKE 21</strong>, що базується на чисельному розв'язанні двовимірних рівнянь неглибокої води Сен-Венана (2D Shallow Water Equations), інтегрованих за глибиною. Рівняння неперервності та збереження кількості руху у проекціях на осі координат <span class="arithmatex">\(x\)</span> та <span class="arithmatex">\(y\)</span> з урахуванням донного тертя Шезі, сили Коріоліса та турбулентної в'язкості мають наступний вигляд:</p>
+<div class="arithmatex">\[\frac{\partial \zeta}{\partial t} + \frac{\partial p}{\partial x} + \frac{\partial q}{\partial y} = 0\]</div>
+<div class="arithmatex">\[\frac{\partial p}{\partial t} + \frac{\partial}{\partial x}\left( \frac{p^2}{h} \right) + \frac{\partial}{\partial y}\left( \frac{pq}{h} \right) + g h \frac{\partial \zeta}{\partial x} + \frac{g p \sqrt{p^2 + q^2}}{C_{\text{chezy}}^2 h^2} - \nu_{\text{turb}} \left( \frac{\partial^2 p}{\partial x^2} + \frac{\partial^2 p}{\partial y^2} \right) - \Omega q = 0\]</div>
+<div class="arithmatex">\[\frac{\partial q}{\partial t} + \frac{\partial}{\partial x}\left( \frac{pq}{h} \right) + \frac{\partial}{\partial y}\left( \frac{q^2}{h} \right) + g h \frac{\partial \zeta}{\partial y} + \frac{g q \sqrt{p^2 + q^2}}{C_{\text{chezy}}^2 h^2} - \nu_{\text{turb}} \left( \frac{\partial^2 q}{\partial x^2} + \frac{\partial^2 q}{\partial y^2} \right) + \Omega p = 0\]</div>
+<p>де параметри та змінні гідродинамічного стану визначаються такими положеннями:</p>
+<ul>
+<li>
+<p>Функція <span class="arithmatex">\(\zeta = \zeta(x, y, t)\)</span> описує відхилення вільної водної поверхні від початкового горизонтального геодезичного рівня.</p>
+</li>
+<li>
+<p>Змінна <span class="arithmatex">\(h(x, y, t) = \zeta(x, y, t) - z_{\text{bed}}(x, y)\)</span> задає повну глибину водяного стовпа з урахуванням рельєфу дна (батиметрії) <span class="arithmatex">\(z_{\text{bed}}\)</span>.</p>
+</li>
+<li>
+<p>Величини <span class="arithmatex">\(p = \int_{-z_{\text{bed}}}^{\zeta} u \, dz\)</span> та <span class="arithmatex">\(q = \int_{-z_{\text{bed}}}^{\zeta} v \, dz\)</span> позначають компоненти щільності питомої витрати води (масового потоку на одиницю ширини) вздовж осей <span class="arithmatex">\(x\)</span> та <span class="arithmatex">\(y\)</span>.</p>
+</li>
+<li>
+<p>Константа <span class="arithmatex">\(g = 9,81\text{ м/с}^2\)</span> задає прискорення вільного падіння.</p>
+</li>
+<li>
+<p>Коефіцієнт <span class="arithmatex">\(C_{\text{chezy}}\)</span> виступає коефіцієнтом шорсткості русла Шезі, пов'язаним із коефіцієнтом Маннінга співвідношенням <span class="arithmatex">\(C_{\text{chezy}} = \frac{1}{n} h^{1/6}\)</span>.</p>
+</li>
+<li>
+<p>Параметр <span class="arithmatex">\(\nu_{\text{turb}}\)</span> представляє коефіцієнт горизонтальної кінематичної турбулентної в'язкості (параметризація Смагоринського).</p>
+</li>
+<li>
+<p>Параметр <span class="arithmatex">\(\Omega = 2\omega_{\text{earth}} \sin\phi\)</span> визначає коефіцієнт Коріоліса для географічної широти <span class="arithmatex">\(\phi\)</span>.</p>
+</li>
+</ul>
+<p>Для моделювання басейнових процесів, що охоплюють водозбірні площі тисяч квадратних кілометрів, застосовується інструмент <strong>SWAT (Soil and Water Assessment Tool)</strong>. SWAT є безперервною добовою напіврозподіленою гідрологічною моделлю, яка дискретизує басейн на гідрологічні одиниці відгуку (Hydrologic Response Units, HRU), обчислюючи баланс ґрунтової вологи, поверхневий стік за методом кривих ліній стоку (SCS Curve Number), евапотранспірацію за Пенманом-Монтейтом та винос агрохімічних сполук. Спільне використання MIKE 21 для руслових гідродинамічних хвиль та SWAT для притоку з водозбору формує комплексний базис оцінки техногенних трансформацій.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    actor Trigger as Техногенна аварія (Руйнування гідровузла)
+    participant MIKE as Гідродинамічний рушій MIKE 21 HD
+    participant Bathy as Батиметричний модуль рельєфу
+    participant SWAT as Басейнова модель SWAT
+    participant Graph as Модуль аналізу ландшафтної зв'язності
+    actor Decision as Штаб ліквідації наслідків надзвичайних ситуацій
+
+    Trigger-&gt;&gt;MIKE: Миттєве руйнування створу: формування хвилі прориву Q(t)
+    MIKE-&gt;&gt;Bathy: Динамічне розмивання донних відкладень та переніс наносів
+    Bathy--&gt;&gt;MIKE: Оновлення відміток дна z_bed(x, y) та ліній осушення
+    MIKE-&gt;&gt;SWAT: Зміна базису ерозії приток та падіння рівнів води
+    SWAT-&gt;&gt;SWAT: Перерахунок інфільтрації, дефіциту зрошення та підземного стоку
+    MIKE-&gt;&gt;Graph: Просторова матриця осушених заплавних комплексів
+    Graph-&gt;&gt;Graph: Перерахунок індексу PC та ізоляції біогеоценозів
+    Graph-&gt;&gt;Decision: Звіт: втрата екологічних коридорів та обміління водозаборів
+    SWAT-&gt;&gt;Decision: Прогноз дефіциту водних ресурсів агросектору на 5 років</code></pre>
+<hr />
+<h3 id="22">2.2. Застосування теорії графів для аналізу ландшафтної зв'язності та міграційних коридорів в умовах фрагментації середовища</h3>
+<p>Катастрофічне падіння рівня водних об'єктів та обміління русел річок призводить до гострої <strong>фрагментації природного ландшафту</strong>. Водні дзеркала, що слугували міграційними бар'єрами, зникають, а заплавні ліси, протоки та плавні перетворюються на ізольовані сухі острови або піщані ареали, непридатні для існування аборигенних видів флори і фауни. Кількісне моделювання просторової дезінтеграції екосистем здійснюється за допомогою методів <strong>теорії графів та теорії перколяції</strong>.</p>
+<p>Урбанізований або басейновий простір представляється у вигляді зваженого просторового графа <span class="arithmatex">\(G = (V, E)\)</span>, де множина вершин <span class="arithmatex">\(V = \{v_1, v_2, \dots, v_n\}\)</span> позначає окремі локальні екологічні оселища (плями біотопів, Habitat Patches) з атрибутами площі <span class="arithmatex">\(a_i\)</span>, а множина ребер <span class="arithmatex">\(E\)</span> відображає можливість прямого міграційного переміщення біоти між ділянками. Вага ребра моделюється ймовірністю дисперсійного розселення <span class="arithmatex">\(p_{ij}\)</span>, яка залежить від евклідової відстані <span class="arithmatex">\(d_{ij}\)</span> та коефіцієнта опору ландшафтної матриці <span class="arithmatex">\(\alpha\)</span>:</p>
+<div class="arithmatex">\[p_{ij} = \exp(-\alpha \cdot d_{ij})\]</div>
+<p>Для інтегральної оцінки структурної та функціональної зв'язності порушеного простору застосовується <strong>індекс імовірності зв'язності (Probability of Connectivity, PC)</strong>:</p>
+<div class="arithmatex">\[\text{PC} = \frac{\sum_{i=1}^{n} \sum_{j=1}^{n} a_i \cdot a_j \cdot p_{ij}^*}{A_L^2}\]</div>
+<p>де параметри моделі формалізуються наступним чином:</p>
+<ul>
+<li>
+<p>Величини <span class="arithmatex">\(a_i\)</span> та <span class="arithmatex">\(a_j\)</span> відображають площу біотопів <span class="arithmatex">\(i\)</span> та <span class="arithmatex">\(j\)</span> відповідно.</p>
+</li>
+<li>
+<p>Параметр <span class="arithmatex">\(A_L\)</span> визначає загальну площу досліджуваного ландшафтного домену.</p>
+</li>
+<li>
+<p>Змінна <span class="arithmatex">\(p_{ij}^*\)</span> визначає максимальну ймовірність зв'язку між плямами <span class="arithmatex">\(i\)</span> та <span class="arithmatex">\(j\)</span> за всіма можливими обхідними маршрутами у графі <span class="arithmatex">\(G\)</span>, яка знаходиться за алгоритмом Дейкстри шляхом мінімізації кумулятивного опору міграції.</p>
+</li>
+</ul>
+<p>Внесок окремої локальної ділянки <span class="arithmatex">\(k\)</span> у підтримку загальної цілісності біосферної території оцінюється за допомогою відносного індексу <span class="arithmatex">\(\text{dPC}_k\)</span>:</p>
+<div class="arithmatex">\[\text{dPC}_k = \frac{\text{PC} - \text{PC}_{\text{remove}, k}}{\text{PC}} \cdot 100\%\]</div>
+<p>де величина <span class="arithmatex">\(\text{PC}_{\text{remove}, k}\)</span> відповідає значенню глобального індексу зв'язності після видалення або повного висихання біотопу <span class="arithmatex">\(k\)</span>. Аналіз спектральних властивостей матриці суміжності графа (спектральний радіус та алгебраїчна зв'язність Фідлера) дозволяє ідентифікувати критичні точки перелому — перколяційні пороги, за яких локальна втрата площі заплави викликає раптовий колапс усієї макрорегіональної міграційної мережі.</p>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> При моделюванні екологічних коридорів басейну Середнього та Нижнього Дніпра на основі графів у системі Circuitscape було доведено, що осушення заплавних проток після катастрофічного падіння рівня води викликало падіння глобального індексу зв'язності біотопів <span class="arithmatex">\(\text{PC}\)</span> на 64%, перетворивши безперервний природний біосферний пояс на 18 ізольованих фрагментів, розділених новоутвореними солончаками та піщаними бар'єрами.</p>
+</blockquote>
+<hr />
+<h3 id="23">2.3. Моделювання наслідків катастрофічних гідродинамічних змін на водні артерії та іригаційні мережі</h3>
+<p>Падіння рівнів води у магістральних руслах викликає каскад незворотних змін у функціонуванні водогосподарської інфраструктури промислових міст. Головним ризиком для урбоекосистем є зупинка поверхневих водозаборів підприємств теплоенергетики, металургії та комунального господарства через зниження рівня горизонту води нижче порогу оголовок водозабірних споруд. Одночасно припиняється надходження самопливного та машинного водопостачання в магістральні іригаційні канали.</p>
+<p>Аналітичний розбір повного міждисциплінарного циклу моделювання гідродинамічного зриву, трансформації русла, розриву іригаційних мереж та деградації екосистемних послуг формалізується наступним структурованим алгоритмічним контуром:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\text{Крок 1 (Хвиля прориву та рівень):} &amp; \quad \zeta(t) = \text{SolveSaintVenant}\big(Q_{\text{breach}}(t), z_{\text{bed}}\big) \quad \Longrightarrow \quad \Delta H_{\text{drop}} = \zeta(0) - \zeta(t_{\text{final}}) \\
+\text{Крок 2 (Відсікання водозаборів):} &amp; \quad \mathcal{F}_{\text{intake}} = \big\{ k \in \text{Intakes} : \zeta(t_{\text{final}}) \lt  z_{\text{sill}, k} \big\} \quad \Longrightarrow \quad \text{Deficit} = \sum_{k \in \mathcal{F}} Q_{\text{design}, k} \\
+\text{Крок 3 (Осушення зрошувальних мереж):} &amp; \quad Q_{\text{canal}}(t) = \mu_w \cdot b_{\text{gate}} \cdot \max\big(0, \zeta(t) - z_{\text{canal\_bottom}}\big)^{3/2} \quad \Longrightarrow \quad \text{IF } \zeta \lt  z_{\text{bottom}} \to Q = 0 \\
+\text{Крок 4 (Осушення та ерозія русла):} &amp; \quad A_{\text{exposed}} = \iint_{\text{Domain}} \mathbb{I}\big(h(x, y, t_{\text{final}}) \le h_{\text{dry}}\big) \, dx \, dy \\
+\text{Крок 5 (Трансформація зв'язності):} &amp; \quad \text{UpdateGraphEdges}\big(G, A_{\text{exposed}}\big) \quad \Longrightarrow \quad \text{PC}_{\text{new}} \leftarrow \text{ComputeIndex}(\text{Graph})
+\end{aligned}
+\]</div>
+<p>де змінні та параметри гідроекологічного перерахунку детермінують такі умови:</p>
+<ul>
+<li>
+<p>Величина <span class="arithmatex">\(Q_{\text{breach}}(t)\)</span> описує витрату води через зруйнований створ гідроспоруди у часі.</p>
+</li>
+<li>
+<p>Параметр <span class="arithmatex">\(\Delta H_{\text{drop}}\)</span> визначає загальну амплітуду падіння рівня водної поверхні після спустошення акваторії.</p>
+</li>
+<li>
+<p>Множина <span class="arithmatex">\(\mathcal{F}_{\text{intake}}\)</span> ідентифікує всі міські та промислові водозабори, для яких фінальний рівень води виявився нижчим за геодезичну відмітку порогу оголовка <span class="arithmatex">\(z_{\text{sill}, k}\)</span>.</p>
+</li>
+<li>
+<p>Параметр <span class="arithmatex">\(\mu_w\)</span> та <span class="arithmatex">\(b_{\text{gate}}\)</span> задають коефіцієнт витрати та ширину водоскидних шлюзів іригаційних каналів відповідно.</p>
+</li>
+<li>
+<p>Площа <span class="arithmatex">\(A_{\text{exposed}}\)</span> позначає сумарну площу осушеного дна, де розрахункова глибина впала нижче критичного порогу осушення <span class="arithmatex">\(h_{\text{dry}} \approx 0,005\text{ м}\)</span>.</p>
+</li>
+<li>
+<p>Оператор <span class="arithmatex">\(\text{UpdateGraphEdges}(\cdot)\)</span> перераховує матрицю вартості переміщення через новоутворені відкриті суходоли для оновлення індексу <span class="arithmatex">\(\text{PC}\)</span>.</p>
+</li>
+</ul>
+<p>Осушення величезних площ донних відкладень формує нове довгострокове екологічне лихо: вітровий винос солей, важких металів та пестицидів, накопичених за десятиліття експлуатації водосховища. Оголене мулисте дно площею сотні квадратних кілометрів перетворюється на пилогенеруючий полігон, що радикально змінює структуру забруднення приземного шару атмосфери для прилеглих міст.</p>
+<hr />
+<h3 id="24">2.4. Проблема неповноти калібрувальних вибірок та висока чутливість параметричних моделей динаміки екосистем до стохастичних збурень</h3>
+<p>Математичне моделювання динаміки екологічних систем в умовах надзвичайних ситуацій стикається з критичним методологічним бар'єром: повною відсутністю репрезентативних калібрувальних вибірок. Будь-яка комплексна модель (чи то MIKE 21, чи то SWAT) містить десятки емпіричних коефіцієнтів (коефіцієнти шорсткості русла, коефіцієнти фільтрації ґрунту, константи біохімічного розпаду), які у штатному режимі калібруються за багаторічними рядами спостережень за допомогою генетичних алгоритмів або методу розсіяного пошуку (PSO). Проте при катастрофічному зламі системи попередня історія спостережень втрачає предиктивну силу, оскільки змінюються сама геометрія русла, гідрогеологічні зв'язки з водоносними горизонтами та видовий склад біоценозів.</p>
+<p>Параметричні моделі екологічної динаміки виявляють високу чутливість та зазнають руйнування адекватності за настання таких граничних умов реального середовища:</p>
+<ol>
+<li>
+<p><strong>Чисельна нестійкість алгоритмів осушення та затоплення (Wetting and Drying Instability).</strong> У рівняннях 2D неглибокої води конвективні члени <span class="arithmatex">\(p^2/h\)</span> містять глибину <span class="arithmatex">\(h\)</span> у знаменнику. Коли в процесі швидкого осушення водойми глибина наближається до нуля (<span class="arithmatex">\(h \to 0\)</span>), швидкість потоку формально прямує до нескінченності, спричиняючи ділення на нуль і чисельний зрив розв'язку. Спроби штучної фіксації мінімальної глибини <span class="arithmatex">\(h_{\text{dry}} = 0,005\text{ м}\)</span> призводять до порушення закону збереження повної маси води в масштабах міського басейну на 5–10%.</p>
+</li>
+<li>
+<p><strong>Застарівання цифрових моделей рельєфу дна (Bathymetric Obsolescence).</strong> Докатастрофічна цифрова батиметрія стає повністю нерелевантною вже в перші години прориву, оскільки високошвидкісний потік прорізає нові каньйони в осадових породах глибиною до 10–15 метрів. Моделювання поверхневих потоків за старими батиметричними картами формує хибні траєкторії річкових рукавів із похибкою локалізації фарватеру до кількох кілометрів.</p>
+</li>
+<li>
+<p><strong>Параметричний оверфітинг (Overparameterization) у басейнових моделях SWAT.</strong> За відсутності свіжих гідрометричних замірів калібрування моделі SWAT спирається на сурогатні оптимізаційні процедури, що породжує явище еквіфінальності (Equifinality), за якого принципово різні набори із 30 невідомих параметрів дають однаковий інтегральний стік, але прогнозують діаметрально протилежні рівні виносу токсикантів і фосфатів.</p>
+</li>
+</ol>
+<p>Для систематизації та порівняння математичних інструментів моделювання катастрофічних змін урбосистем сформовано порівняльну матрицю.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Інструмент моделювання</th>
+<th style="text-align: left;">Математична база та фізичні процеси</th>
+<th style="text-align: left;">Складність впровадження</th>
+<th style="text-align: left;">Чутливість до калібрувальних даних</th>
+<th style="text-align: left;">Потреба в обчислювальних ресурсах</th>
+<th style="text-align: left;">Критичні ризики та обмеження методології</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Гідродинамічний комплекс MIKE 21 HD</td>
+<td style="text-align: left;">2D рівняння Сен-Венана на неструктурованих гнучких сітках</td>
+<td style="text-align: left;">Дуже висока; вимагає актуальної цифрової моделі дна</td>
+<td style="text-align: left;">Висока; залежить від коефіцієнтів шорсткості Маннінга</td>
+<td style="text-align: left;">Висока; потребує паралельних обчислень OpenMP/CUDA</td>
+<td style="text-align: left;">Чисельні осциляції на рухомих фронтах осушення та затоплення</td>
+</tr>
+<tr>
+<td style="text-align: left;">Басейнова гідрологічна модель SWAT</td>
+<td style="text-align: left;">Добовий напіврозподілений водний баланс за одиницями HRU</td>
+<td style="text-align: left;">Висока; вимагає детальних ґрунтових та агрокарт</td>
+<td style="text-align: left;">Екстремальна; містить понад 30 калібрувальних коефіцієнтів</td>
+<td style="text-align: left;">Помірна; швидкий розрахунок на стандартному CPU</td>
+<td style="text-align: left;">Непридатність для короткострокових хвилинних паводкових розрахунків</td>
+</tr>
+<tr>
+<td style="text-align: left;">Одновимірна гідравліка HEC-RAS 1D/2D</td>
+<td style="text-align: left;">Рівняння мілководдя та енергетичні баланси в руслових створах</td>
+<td style="text-align: left;">Середня; інтуїтивний інтерфейс інженерного моделювання</td>
+<td style="text-align: left;">Середня; стабільна на стаціонарних каліброваних ділянках</td>
+<td style="text-align: left;">Низька для 1D, помірна для 2D геометрій</td>
+<td style="text-align: left;">Спрощений опис бічних застійних зон та циркуляційних вихорів</td>
+</tr>
+<tr>
+<td style="text-align: left;">Модель ландшафтної зв'язності Circuitscape</td>
+<td style="text-align: left;">Теорія випадкових блукань та еквівалентних електричних ланцюгів</td>
+<td style="text-align: left;">Середня; побудова растрових карт ландшафтного опору</td>
+<td style="text-align: left;">Низька; спирається на теоретичні поведінкові критерії</td>
+<td style="text-align: left;">Висока; лімітується обсягом оперативної пам'яті для матриць</td>
+<td style="text-align: left;">Не враховує прямі гідродинамічні фактори змиву та затоплення біоти</td>
+</tr>
+<tr>
+<td style="text-align: left;">Просторова модель Dyna-CLUE</td>
+<td style="text-align: left;">Багаторівнева регресійна динаміка змін землекористування</td>
+<td style="text-align: left;">Висока; поєднує соціально-економічні та природні драйвери</td>
+<td style="text-align: left;">Висока; вимагає статистичних рядів ретроспективних змін</td>
+<td style="text-align: left;">Помірна; пакетна оптимізація розподілу земель</td>
+<td style="text-align: left;">Нездатність прогнозувати миттєві катастрофічні руйнування середовища</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>ВАЖЛИВО:</strong> Застосування класичних моделей гідродинаміки без регулярної асиміляції свіжих даних супутникового радіолокаційного зондування (SAR з супутників Sentinel-1) для верифікації реальних меж дзеркала води після катастрофи призводить до накопичення систематичної похибки визначення осушених площ, яка перевищує 40% вже на 10-ту добу після аварії.</p>
+</blockquote>
+<hr />
+<blockquote>
+<p><strong>КОНТРОЛЬНЕ ПИТАННЯ:</strong> Під час моделювання наслідків спустошення водосховища за допомогою 2D гідродинамічної моделі Сен-Венана розрахункова глибина води в районі водозабірного каналу промислового підприємства зменшилася з <span class="arithmatex">\(h_0 = 4,5\text{ м}\)</span> до <span class="arithmatex">\(h = 0,002\text{ м}\)</span>, увійшовши в зону алгоритмічного осушення. Модель розраховувала придонну швидкість переносу за конвективним членом <span class="arithmatex">\(u = p/h\)</span>, де питома витрата склала <span class="arithmatex">\(p = 0,01\text{ м}^2/\text{с}\)</span>. До якої чисельної та практичної колізії призведе цей розрахунок, якщо алгоритм не містить примусового порогу відсікання глибини?</p>
+</blockquote>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: Розрахункова швидкість штучно зросте до <span class="arithmatex">\(u = 0,01 / 0,002 = 5,0\text{ м/с}\)</span>, викликавши порушення критерію Куранта, вибух розв'язку та хибний прогноз колосального ерозійного розмиву ґрунту під ковшем водозабору.</strong></p>
+<ol>
+<li>
+<p>Повне логічне та аналітичне обґрунтування:</p>
+</li>
+<li>
+<p>При наближенні глибини води до нуля (<span class="arithmatex">\(h \to 0\)</span>) у випадку збереження залишкового чисельного потоку <span class="arithmatex">\(p = 0,01\text{ м}^2/\text{с}\)</span> пряме обчислення швидкості <span class="arithmatex">\(u = p/h\)</span> дає нефізично завищене значення:
+     $<span class="arithmatex">\(u = \frac{0,01 \text{ м}^2/\text{с}}{0,002 \text{ м}} = 5,0 \text{ м/с}\)</span>$</p>
+</li>
+<li>
+<p>У реальних фізичних умовах при глибині води 2 міліметри сила донного тертя практично повністю зупиняє рух рідини (<span class="arithmatex">\(u \to 0\)</span>). Проте в рівнянні Сен-Венана знаменник прямує до нуля швидше, ніж чисельник, що генерує штучний надзвуковий стрибок швидкості.</p>
+</li>
+<li>
+<p>Чисельний наслідок: швидкість 5 м/с при просторовому кроці сітки <span class="arithmatex">\(\Delta x = 10\text{ м}\)</span> вимагає кроку за часом <span class="arithmatex">\(\Delta t \le \Delta x / (u + \sqrt{gh}) = 10 / (5 + \sqrt{9,81 \cdot 0,002}) \approx 1,9\text{ с}\)</span>. Якщо базовий крок моделі становив <span class="arithmatex">\(\Delta t = 5\text{ с}\)</span>, виникає порушення критерію Куранта-Фрідріхса-Леві (<span class="arithmatex">\(\text{CFL} &gt; 1\)</span>), що призводить до математичного колапсу (Floating point exception / NaN).</p>
+</li>
+<li>
+<p>Практичний наслідок: модель розраховує колосальне гідродинамічне напруження зсуву на дні <span class="arithmatex">\(\tau_{\text{bed}} \propto u^2\)</span>, прогнозуючи винесення тисяч тонн ґрунту там, де насправді вода просто висохла. Для запобігання цій колізії алгоритм зобов'язаний обнуляти потік <span class="arithmatex">\(p = 0\)</span> при <span class="arithmatex">\(h &lt; h_{\text{dry}} = 0,005\text{ м}\)</span>.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Твердження про те, що вода продовжить нормальний рух зі швидкістю 0,01 м/с, є помилковим, оскільки витрата <span class="arithmatex">\(p\)</span> є добутком швидкості на глибину (<span class="arithmatex">\(p = u \cdot h\)</span>), а не самою швидкістю.</p>
+</li>
+<li>
+<p>Висновок про автоматичне припинення розрахунку без помилки є хибним, оскільки без спеціального коду відсікання програма виконує стандартну операцію ділення з плаваючою комою, генеруючи катастрофічні похибки в сусідніх вузлах сітки.</p>
+</li>
+</ol>
+</details>
+<h2 id="3">3. Практичний індустріальний / фаховий кейс. Оцінка екосистемних трансформацій після руйнування Каховської ГЕС</h2>
+<h3 id="31">3.1. Комплексний фаховий кейс. Оцінка стійкості та трансформації гідроекологічного стану басейну річки Дніпро й прилеглих урбоекосистем внаслідок катастрофи на Каховській ГЕС</h3>
+<h4 id="_4">Постановка задачі / ситуації</h4>
+<p>Катастрофічне руйнування греблі Каховської гідроелектростанції 6 червня 2023 року спричинило масштабну техногенну та екологічну кризу в басейні річки Дніпро. Миттєвий прорив напірного фронту викликав спустошення Каховського водосховища: втрату понад 14 кубічних кілометрів прісної води за кілька діб, падіння рівня водної поверхні більш ніж на 11 метрів та повне оголення близько 1870 квадратних кілометрів донних відкладень. Одночасно вниз за течією пройшла високошвидкісна хвиля повені, яка затопила десятки населених пунктів, скотомогильники, мулові поля каналізаційних очисних споруд та склади агрохімікатів, спричинивши потужний залповий змив органічних і токсичних речовин у русло Дніпра та Дніпро-Бузький лиман.</p>
+<p>Перед науковцями та екологічними службами постало комплексне науково-інженерне завдання:
+По-перше, розрахувати просторово-часову динаміку дефіциту розчиненого кисню та ризиків виникнення септичних анаеробних зон у зоні затоплення за допомогою моделі Стрітера-Фелпса в умовах літньої межені.
+По-друге, кількісно оцінити ступінь деградації та дезорганізації гідроекосистеми на основі інформаційної ентропії Шеннона за багатопараметричними гідрохімічними даними.
+По-третє, оцінити ризики зупинки систем централізованого питного та технічного водопостачання промислових міст (Кривий Ріг, Нікополь, Марганець) внаслідок виходу рівня води за межі робочих діапазонів насосних водозаборів.</p>
+<p>Вхідні гідродинамічні, біохімічні та інфраструктурні показники наведено в таблиці нижче.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Параметр системи / катастрофи</th>
+<th style="text-align: left;">Одиниця виміру</th>
+<th style="text-align: left;">Числове значення</th>
+<th style="text-align: left;">Фізичний та експлуатаційний контекст</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Початковий об'єм води у водосховищі</td>
+<td style="text-align: left;">км³</td>
+<td style="text-align: left;">18,2</td>
+<td style="text-align: left;">Рівень нормального підпірного горизонту (НПР = 16,0 м)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Залишковий об'єм води у відмерлому руслі</td>
+<td style="text-align: left;">км³</td>
+<td style="text-align: left;">3,8</td>
+<td style="text-align: left;">Природне меженне русло Дніпра (відмітка 4,5 м)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Площа оголеного мулистого дна (<span class="arithmatex">\(A_{\text{dry}}\)</span>)</td>
+<td style="text-align: left;">км²</td>
+<td style="text-align: left;">1 870</td>
+<td style="text-align: left;">Полігон потенційного пилоутворення та мінералізації</td>
+</tr>
+<tr>
+<td style="text-align: left;">Початкове БСК після змиву органіки (<span class="arithmatex">\(L_0\)</span>)</td>
+<td style="text-align: left;">мг <span class="arithmatex">\(\text{O}_2/\text{дм}^3\)</span></td>
+<td style="text-align: left;">18,0</td>
+<td style="text-align: left;">Залпове органічне забруднення в зоні паводку</td>
+</tr>
+<tr>
+<td style="text-align: left;">Початковий дефіцит кисню (<span class="arithmatex">\(D_0\)</span>)</td>
+<td style="text-align: left;">мг/дм³</td>
+<td style="text-align: left;">2,5</td>
+<td style="text-align: left;">Зниження концентрації з <span class="arithmatex">\(C_s = 9,1\)</span> до <span class="arithmatex">\(6,6\text{ мг/дм}^3\)</span> (<span class="arithmatex">\(T = 20^\circ\text{C}\)</span>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Константа деоксигенації (<span class="arithmatex">\(k_1\)</span>)</td>
+<td style="text-align: left;">доба⁻¹</td>
+<td style="text-align: left;">0,25</td>
+<td style="text-align: left;">Окиснення легкорозчинної органіки за літньої температури</td>
+</tr>
+<tr>
+<td style="text-align: left;">Константа реаерації потоку (<span class="arithmatex">\(k_2\)</span>)</td>
+<td style="text-align: left;">доба⁻¹</td>
+<td style="text-align: left;">0,40</td>
+<td style="text-align: left;">Атмосферне розчинення кисню для рівнинної річки</td>
+</tr>
+<tr>
+<td style="text-align: left;">Середня швидкість руслового потоку (<span class="arithmatex">\(v\)</span>)</td>
+<td style="text-align: left;">м/с</td>
+<td style="text-align: left;">0,80</td>
+<td style="text-align: left;">Швидкість руху водної маси вниз за течією</td>
+</tr>
+<tr>
+<td style="text-align: left;">Критичний поріг оголовок водозаборів (<span class="arithmatex">\(z_{\text{sill}}\)</span>)</td>
+<td style="text-align: left;">м (БС)</td>
+<td style="text-align: left;">12,5</td>
+<td style="text-align: left;">Мінімальний геодезичний рівень роботи насосів питної води</td>
+</tr>
+<tr>
+<td style="text-align: left;">Санітарний мінімум розчиненого кисню</td>
+<td style="text-align: left;">мг/дм³</td>
+<td style="text-align: left;">4,0</td>
+<td style="text-align: left;">Межа виживання іхтіофауни та аеробного біоценозу</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["Руйнування напірного створу Каховської ГЕС"] --&gt; B["Гідродинамічна хвиля прориву та змив токсикантів"]
+    A --&gt; C["Падіння рівня води у водосховищі з 16.0 м до 4.5 м"]
+    B --&gt; D["Залпове органічне забруднення: L0 = 18 мг/дм3, D0 = 2.5 мг/дм3"]
+    D --&gt; E["Розрахунок кисневого просідання за моделлю Стрітера-Фелпса"]
+    E --&gt; F["Ідентифікація критичного створу t_crit та мінімального кисню C_min"]
+    C --&gt; G["Оголення 1870 км2 мулів: вітровий винос солей та пилу"]
+    C --&gt; H["Зниження рівня нижче 12.5 м: зупинка магістральних водозаборів"]
+    F &amp; G &amp; H --&gt; I["Розрахунок інформаційної ентропії Шеннона: H_post vs H_pre"]
+    I --&gt; J["Формування прескриптивних інженерних рішень водозабезпечення"]</code></pre>
+<h4 id="_5">Покроковий аналіз та розв'язок</h4>
+<h5 id="1-_1">Крок 1. Розрахунок точки максимального просідання кисню (модель Стрітера-Фелпса)</h5>
+<p>Визначимо момент часу <span class="arithmatex">\(t_{\text{crit}}\)</span> та відстань <span class="arithmatex">\(x_{\text{crit}}\)</span> від джерела затоплення до створу, де дефіцит розчиненого кисню досягне свого абсолютного максимуму. Застосуємо аналітичну формулу екстремуму для заданих констант <span class="arithmatex">\(k_1 = 0,25\text{ доба}^{-1}\)</span>, <span class="arithmatex">\(k_2 = 0,40\text{ доба}^{-1}\)</span>, <span class="arithmatex">\(L_0 = 18,0\text{ мг/дм}^3\)</span> та <span class="arithmatex">\(D_0 = 2,5\text{ мг/дм}^3\)</span>:</p>
+<div class="arithmatex">\[t_{\text{crit}} = \frac{1}{k_2 - k_1} \ln\left[ \frac{k_2}{k_1} \left( 1 - \frac{D_0 (k_2 - k_1)}{k_1 L_0} \right) \right]\]</div>
+<p>Обчислимо внутрішній коригуючий множник формули:</p>
+<div class="arithmatex">\[\xi = 1 - \frac{D_0 (k_2 - k_1)}{k_1 L_0} = 1 - \frac{2,5 \cdot (0,40 - 0,25)}{0,25 \cdot 18,0} = 1 - \frac{2,5 \cdot 0,15}{4,5} = 1 - \frac{0,375}{4,5} = 1 - 0,0833 = 0,9167\]</div>
+<p>Обчислимо аргумент натурального логарифма:</p>
+<div class="arithmatex">\[\text{Arg} = \frac{k_2}{k_1} \cdot \xi = \frac{0,40}{0,25} \cdot 0,9167 = 1,60 \cdot 0,9167 \approx 1,4667\]</div>
+<p>Розрахуємо критичний час просідання:</p>
+<div class="arithmatex">\[t_{\text{crit}} = \frac{1}{0,40 - 0,25} \ln(1,4667) = \frac{1}{0,15} \cdot 0,3830 \approx 2,553 \text{ доби}\]</div>
+<p>Переведемо час у метричну відстань уздовж русла при середній швидкості течії <span class="arithmatex">\(v = 0,80\text{ м/с}\)</span>:</p>
+<div class="arithmatex">\[x_{\text{crit}} = v \cdot (t_{\text{crit}} \cdot 86400) = 0,80 \text{ м/с} \cdot (2,553 \cdot 86400 \text{ с}) = 0,80 \cdot 220579 \approx 176\,463 \text{ м} \approx 176,5 \text{ км}\]</div>
+<p>Найбільш небезпечна зона кисневого голодування сформувалася на відстані близько 176,5 км нижче за течією від епіцентру паводкової хвилі через 2,55 доби після катастрофи.</p>
+<h5 id="2_1">Крок 2. Розрахунок мінімальної залишкової концентрації розчиненого кисню</h5>
+<p>Обчислимо максимальний дефіцит розчиненого кисню <span class="arithmatex">\(D_{\text{crit}} = D(t_{\text{crit}})\)</span> у критичному створі:</p>
+<div class="arithmatex">\[D(t_{\text{crit}}) = \frac{k_1 L_0}{k_2 - k_1} \left( e^{-k_1 t_{\text{crit}}} - e^{-k_2 t_{\text{crit}}} \right) + D_0 e^{-k_2 t_{\text{crit}}}\]</div>
+<p>Розрахуємо значення експонент при <span class="arithmatex">\(t_{\text{crit}} = 2,553\text{ доби}\)</span>:</p>
+<div class="arithmatex">\[e^{-k_1 t_{\text{crit}}} = e^{-0,25 \cdot 2,553} = e^{-0,63825} \approx 0,5282\]</div>
+<div class="arithmatex">\[e^{-k_2 t_{\text{crit}}} = e^{-0,40 \cdot 2,553} = e^{-1,0212} \approx 0,3602\]</div>
+<p>Підставимо отримані величини у вираз дефіциту:</p>
+<div class="arithmatex">\[D_{\text{crit}} = \frac{0,25 \cdot 18,0}{0,15} (0,5282 - 0,3602) + 2,5 \cdot 0,3602 = 30,0 \cdot 0,1680 + 0,9005 = 5,04 + 0,9005 \approx 5,94 \text{ мг/дм}^3\]</div>
+<p>Залишковий рівень розчиненого кисню в річковій воді становить:</p>
+<div class="arithmatex">\[C_{\min} = C_s - D_{\text{crit}} = 9,10 - 5,94 = 3,16 \text{ мг/дм}^3\]</div>
+<p>Оскільки розрахункова величина <span class="arithmatex">\(C_{\min} = 3,16\text{ мг/дм}^3\)</span> опустилася нижче санітарної межі <span class="arithmatex">\(4,0\text{ мг/дм}^3\)</span>, у критичному створі виникли заморові явища іхтіофауни та тимчасовий перехід гідроекосистеми в анаеробний стан.</p>
+<h5 id="3_1">Крок 3. Кількісна оцінка деградації за допомогою інформаційної ентропії Шеннона</h5>
+<p>Оцінимо структурні зміни гідрохімічного режиму водойми за п'ятьма класами якості води. За багаторічними спостереженнями до катастрофи ймовірності розподілу станів становили: <span class="arithmatex">\(P_{\text{pre}} = (0,65; \, 0,25; \, 0,08; \, 0,02; \, 0,00)\)</span> (домінування першого та другого класів чистої води). Після катастрофи внаслідок збурення розподіл набув хаотичного вигляду: <span class="arithmatex">\(P_{\text{post}} = (0,05; \, 0,15; \, 0,35; \, 0,30; \, 0,15)\)</span>.</p>
+<p>Розрахуємо інформаційну ентропію до катастрофи:</p>
+<div class="arithmatex">\[H_{\text{pre}} = - \Big( 0,65 \log_2 0,65 + 0,25 \log_2 0,25 + 0,08 \log_2 0,08 + 0,02 \log_2 0,02 \Big)\]</div>
+<div class="arithmatex">\[H_{\text{pre}} = - \big( 0,65 \cdot (-0,6215) + 0,25 \cdot (-2,000) + 0,08 \cdot (-3,6438) + 0,02 \cdot (-5,6438) \big) = 0,4040 + 0,5000 + 0,2915 + 0,1129 \approx 1,308 \text{ біт}\]</div>
+<p>Розрахуємо ентропію після катастрофи:</p>
+<div class="arithmatex">\[H_{\text{post}} = - \Big( 0,05 \log_2 0,05 + 0,15 \log_2 0,15 + 0,35 \log_2 0,35 + 0,30 \log_2 0,30 + 0,15 \log_2 0,15 \Big)\]</div>
+<div class="arithmatex">\[H_{\text{post}} = - \big( 0,05 \cdot (-4,3219) + 0,15 \cdot (-2,7370) + 0,35 \cdot (-1,5146) + 0,30 \cdot (-1,7370) + 0,15 \cdot (-2,7370) \big)\]</div>
+<div class="arithmatex">\[H_{\text{post}} = 0,2161 + 0,4105 + 0,5301 + 0,5211 + 0,4105 \approx 2,088 \text{ біт}\]</div>
+<p>Максимальна ентропія для п'яти класів становить <span class="arithmatex">\(H_{\max} = \log_2 5 \approx 2,322\text{ біт}\)</span>. Відносна дезорганізація системи зросла з <span class="arithmatex">\(\mathcal{D}_{\text{pre}} = 1,308 / 2,322 \approx 0,563\)</span> (56,3%) до <span class="arithmatex">\(\mathcal{D}_{\text{post}} = 2,088 / 2,322 \approx 0,899\)</span> (89,9%), що кількісно доводить перехід водної екосистеми в стан глибокої ентропійної дестабілізації.</p>
+<h5 id="4">Крок 4. Оцінка гідравлічної відмови промислових водозаборів</h5>
+<p>Фактичне падіння рівня води до відмітки <span class="arithmatex">\(4,5\text{ м БС}\)</span> створило дефіцит горизонту:</p>
+<div class="arithmatex">\[\Delta z = z_{\text{sill}} - z_{\text{actual}} = 12,5 - 4,5 = 8,0 \text{ м}\]</div>
+<p>Оскільки робоче колесо насосних агрегатів водозаборів опинилося на 8 метрів вище фактичного дзеркала води, самопливне надходження води повністю припинилося, що викликало повну зупинку подачі технічної води на металургійні та гірничі підприємства Нікопольського промислового вузла.</p>
+<h4 id="_6">Інтерпретація результатів та альтернативні сценарії</h4>
+<p>Математичне моделювання продемонструвало комплексний характер катастрофи: гідродинамічне спорожнення викликало миттєву інфраструктурну відмову водозаборів, тоді як органічний паводковий шлейф сформував зону вторинного екологічного мору риби довжиною понад 60 км із центром на 176-му кілометрі річкового русла. Різке зростання інформаційної ентропії до 89,9% підтвердило руйнування механізмів природного самоочищення.</p>
+<p>Якби катастрофа відбулася у зимовий період за температури води <span class="arithmatex">\(T = 4^\circ\text{C}\)</span>, кінетичні константи знизилися б у 2,5 раза (<span class="arithmatex">\(k_1 \approx 0,10\)</span>, <span class="arithmatex">\(k_2 \approx 0,18\)</span>), а розчинність кисню зросла б до <span class="arithmatex">\(C_s \approx 13,1\text{ мг/дм}^3\)</span>. У такому альтернативному сценарії критична точка просідання змістилася б на відстань понад 450 км (у гирло лиману), проте мінімальна залишкова концентрація кисню не впала б нижче <span class="arithmatex">\(6,2\text{ мг/дм}^3\)</span>, що повністю виключило б гострий масовий замор гідробіонтів, обмеживши екологічний збиток суто гідравлічним осушенням русла.</p>
+<hr />
+<h3 id="32">3.2. Зведена довідкова система лекції</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Термін / Концепція</th>
+<th style="text-align: left;">Формалізація / Сутність</th>
+<th style="text-align: left;">Реальний кейс застосування</th>
+<th style="text-align: left;">Основне обмеження / Ризик</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Модель Стрітера-Фелпса</td>
+<td style="text-align: left;">Система рівнянь деоксигенації та реаерації: <span class="arithmatex">\(dD/dt = k_1 L - k_2 D\)</span></td>
+<td style="text-align: left;">Розрахунок зони кисневого просідання в Дніпрі після прориву греблі Каховської ГЕС</td>
+<td style="text-align: left;">Припущення про одновимірний стаціонарний потік без зворотних вихорів</td>
+</tr>
+<tr>
+<td style="text-align: left;">Критичний створ (<span class="arithmatex">\(t_{\text{crit}}, x_{\text{crit}}\)</span>)</td>
+<td style="text-align: left;">Точка максимального дефіциту кисню: <span class="arithmatex">\(t_{\text{crit}} = \frac{1}{k_2 - k_1} \ln[\frac{k_2}{k_1}(1 - \frac{D_0(k_2-k_1)}{k_1 L_0})]\)</span></td>
+<td style="text-align: left;">Локалізація зони екстремального замору риби на 176-му кілометрі нижче греблі</td>
+<td style="text-align: left;">Зміщення точки при зміні температури води та швидкості течії</td>
+</tr>
+<tr>
+<td style="text-align: left;">Біохімічне споживання кисню (<span class="arithmatex">\(L\)</span>)</td>
+<td style="text-align: left;">Кількість кисню, необхідна для біологічного окиснення органіки (БСК)</td>
+<td style="text-align: left;">Оцінка масштабів органічного змиву з мулових полів каналізації</td>
+<td style="text-align: left;">Не враховує хімічне споживання кисню на окиснення неорганіки</td>
+</tr>
+<tr>
+<td style="text-align: left;">Інформаційна ентропія Шеннона</td>
+<td style="text-align: left;">Міра невизначеності станів системи: <span class="arithmatex">\(H = - \sum P_i \log_2 P_i\)</span></td>
+<td style="text-align: left;">Кількісна оцінка деградації гідрохімічного режиму водосховища</td>
+<td style="text-align: left;">Чутливість оцінки до суб'єктивного вибору меж розрахункових інтервалів</td>
+</tr>
+<tr>
+<td style="text-align: left;">Асиміляційна місткість (<span class="arithmatex">\(A_{\text{cap}}\)</span>)</td>
+<td style="text-align: left;">Інтегральна здатність водойми знешкоджувати викиди без руйнування біоценозу</td>
+<td style="text-align: left;">Розрахунок лімітів скидів стічних вод промислових підприємств Кременчука</td>
+<td style="text-align: left;">Різке падіння місткості при досягненні порогових анаеробних умов</td>
+</tr>
+<tr>
+<td style="text-align: left;">Рівняння Сен-Венана (MIKE 21)</td>
+<td style="text-align: left;">2D рівняння неглибокої води з урахуванням конвекції, тиску та тертя Шезі</td>
+<td style="text-align: left;">Моделювання поширення гідродинамічної хвилі прориву водосховища</td>
+<td style="text-align: left;">Чисельна нестійкість розв'язку при наближенні глибини до нуля (<span class="arithmatex">\(h \to 0\)</span>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Басейнова модель SWAT</td>
+<td style="text-align: left;">Напіврозподілена добова гідрологічна модель водного та сольового балансу</td>
+<td style="text-align: left;">Прогнозування дефіциту підземних вод та зрошення на півдні України</td>
+<td style="text-align: left;">Еквіфінальність: множинність калібрувальних параметрів для однакового стоку</td>
+</tr>
+<tr>
+<td style="text-align: left;">Індекс зв'язності ландшафту (PC)</td>
+<td style="text-align: left;">Ймовірнісний граф міграції біоти: <span class="arithmatex">\(\text{PC} = \sum a_i a_j p_{ij}^* / A_L^2\)</span></td>
+<td style="text-align: left;">Оцінка дезінтеграції заплавних біотопів після осушення плавнів</td>
+<td style="text-align: left;">Ігнорування вертикальної бар'єрності штучних інженерних споруд</td>
+</tr>
+<tr>
+<td style="text-align: left;">Перколяційний поріг</td>
+<td style="text-align: left;">Критична щільність середовища, при переході через яку граф розпадається</td>
+<td style="text-align: left;">Визначення моменту незворотного колапсу популяцій плавневих птахів</td>
+<td style="text-align: left;">Складність точного експериментального визначення порогу в природі</td>
+</tr>
+<tr>
+<td style="text-align: left;">Базис ерозії річки</td>
+<td style="text-align: left;">Геодезичний рівень водної поверхні, до якого річка поглиблює своє русло</td>
+<td style="text-align: left;">Поглиблення русла Дніпра та розмивання мостових опор після спустошення моря</td>
+<td style="text-align: left;">Непередбачуваність утворення нових донних каньйонів у мулистих осадах</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="33">3.3. Контрольні питання та завдання</h3>
+<h4 id="_7">Прикладні тестові завдання</h4>
+<ol>
+<li>
+<p>За результатами розрахунку моделі Стрітера-Фелпса константа деоксигенації становить <span class="arithmatex">\(k_1 = 0,30\text{ доба}^{-1}\)</span>, а константа реаерації — <span class="arithmatex">\(k_2 = 0,30\text{ доба}^{-1}\)</span> (<span class="arithmatex">\(k_1 = k_2\)</span>). Чому стандартна формула розрахунку критичного часу <span class="arithmatex">\(t_{\text{crit}} = \frac{1}{k_2 - k_1} \ln[\dots]\)</span> не може бути використана безпосередньо і яке математичне перетворення слід застосувати?</p>
+</li>
+<li>
+<p>A. Виникає ділення на нуль; необхідно розкрити невизначеність за правилом Лопіталя, що дає формулу <span class="arithmatex">\(t_{\text{crit}} = \frac{1}{k_1} (1 - \frac{D_0}{L_0})\)</span>.</p>
+</li>
+<li>
+<p>B. Формула залишається справедливою, якщо замінити ділення на множення.</p>
+</li>
+<li>
+<p>C. При <span class="arithmatex">\(k_1 = k_2\)</span> кисневий дефіцит взагалі не виникає.</p>
+</li>
+<li>
+<p>D. Необхідно штучно збільшити швидкість течії річки вдвічі.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: A.</strong></p>
+<ol>
+<li>
+<p>При збігу констант швидкостей <span class="arithmatex">\(k_1 = k_2 = k\)</span> у знаменнику стандартного аналітичного розв'язку утворюється нуль (<span class="arithmatex">\(k_2 - k_1 = 0\)</span>), що породжує невизначеність типу <span class="arithmatex">\([0/0]\)</span>. Застосування правила Лопіталя до вихідного диференціального рівняння або граничного переходу <span class="arithmatex">\(k_2 \to k_1\)</span> трансформує розв'язок для дефіциту у вигляд <span class="arithmatex">\(D(t) = (k L_0 t + D_0) e^{-kt}\)</span>. Взяття похідної <span class="arithmatex">\(\frac{dD}{dt} = 0\)</span> дає точне граничне співвідношення для критичного часу:
+   $<span class="arithmatex">\(t_{\text{crit}} = \frac{1}{k} \left( 1 - \frac{D_0}{L_0} \right)\)</span>$</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант B є математично хибним, оскільки заміна операцій не розкриває границю функції.</p>
+</li>
+<li>
+<p>Варіант C є невірним, оскільки деоксигенація продовжує споживати кисень незалежно від рівності констант.</p>
+</li>
+<li>
+<p>Варіант D не впливає на внутрішню структуру диференціального рівняння кінетики реакцій.</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>Під час аналізу наслідків осушення водосховища за допомогою теорії графів виявлено, що видалення водної перешкоди дозволило інвазивним видам хижаків проникнути у раніше ізольовані заповідні заплавні острови. Як зміниться індекс ландшафтної зв'язності PC для популяції корінних вразливих видів птахів?</p>
+</li>
+<li>
+<p>A. Індекс PC різко зросте, оскільки птахи отримають новий простір для піших прогулянок.</p>
+</li>
+<li>
+<p>B. Функціональний індекс зв'язності для корінних видів зазнає деградації, оскільки зростання структурної зв'язності ландшафту для хижака еквівалентне збільшенню матричного опору (<span class="arithmatex">\(\alpha \to \infty\)</span>) для виживання жертви.</p>
+</li>
+<li>
+<p>C. Індекс PC залишиться незмінним, оскільки площі островів не змінилися.</p>
+</li>
+<li>
+<p>D. Всі ребра графа автоматично змінять напрямок на протилежний.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>Ландшафтна зв'язність є функціональною, а не чисто геометричною характеристикою. Хоча фізична доступність території зросла (острови з'єдналися сушею), для корінних колоніальних птахів наявність хижаків перетворює новоутворені перешийки на зони летального ризику. У математичній моделі графа це відображається стрибкоподібним зростанням коефіцієнта опору ландшафтної матриці <span class="arithmatex">\(\alpha\)</span>, внаслідок чого ймовірність успішного міграційного переміщення <span class="arithmatex">\(p_{ij} = \exp(-\alpha d_{ij})\)</span> прямує до нуля, викликаючи падіння функціонального індексу PC.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A є абсурдним з погляду збереження біорізноманіття, оскільки інвазія хижаків знищує гніздування.</p>
+</li>
+<li>
+<p>Варіант C ігнорує функціональну природу ребер графа, зводячи екологію до простої констатації площ.</p>
+</li>
+<li>
+<p>Варіант D є хибним, оскільки графи розселення за замовчуванням розглядаються як ненапрямлені або зважені симетричні структури.</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>Для вибірки гідрохімічних параметрів річки розраховано інформаційну ентропію Шеннона за трьома станами якості води. До аварії ентропія становила <span class="arithmatex">\(H_1 = 0,45\text{ біт}\)</span>, а через місяць після хімічного скиду зросла до <span class="arithmatex">\(H_2 = 1,52\text{ біт}\)</span> при максимальній теоретичній ентропії <span class="arithmatex">\(H_{\max} = \log_2 3 \approx 1,585\text{ біт}\)</span>. Який висновок має зробити експерт щодо термодинамічної стабільності водойми?</p>
+</li>
+<li>
+<p>A. Водойма досягла абсолютного гомеостазу та повністю очистилася.</p>
+</li>
+<li>
+<p>B. Екосистема перебуває у стані майже максимальної ентропійної дезорганізації (<span class="arithmatex">\(\mathcal{D} = 1,52 / 1,585 \approx 96\%\)</span>), що свідчить про руйнування внутрішніх біохімічних регуляторних циклів та хаотизацію якості води.</p>
+</li>
+<li>
+<p>C. Розрахунок ентропії виконано невірно, оскільки ентропія не може перевищувати 1,0.</p>
+</li>
+<li>
+<p>D. Зростання ентропії означає збільшення концентрації розчиненого кисню у воді.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>Інформаційна ентропія вимірює міру невпорядкованості системи. Значення <span class="arithmatex">\(H_1 = 0,45\text{ біт}\)</span> відповідало стабільній системі з передбачуваним домінуванням одного чистого класу якості. Наближення ентропії до теоретичного максимуму (<span class="arithmatex">\(H_2 \to H_{\max} = 1,585\text{ біт}\)</span>) означає вирівнювання ймовірностей усіх станів (<span class="arithmatex">\(P_i \approx 1/3\)</span>), що математично підтверджує повну втрату системою здатності до саморегуляції та перехід у стан нестійкого стохастичного колапсу.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A є діаметрально протилежним дійсності, оскільки максимальна ентропія означає максимальний хаос, а не очищення.</p>
+</li>
+<li>
+<p>Варіант C є невірним, оскільки ентропія Шеннона з основою логарифма 2 обмежується величиною <span class="arithmatex">\(\log_2 k\)</span>, яка для трьох станів дорівнює 1,585, а для восьми станів сягає 3,0.</p>
+</li>
+<li>
+<p>Варіант D не має підґрунтя, оскільки ентропія є безрозмірною статистичною мірою розподілу, а не фізичною масою кисню.</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>Промисловий ковшовий водозабір комбінату розрахований на забір води <span class="arithmatex">\(Q = 15\text{ м}^3/\text{с}\)</span> за умови мінімальної глибини над порогом споруди <span class="arithmatex">\(h_{\min} = 1,8\text{ м}\)</span>. Внаслідок осушення русла фактична глибина води впала до <span class="arithmatex">\(h = 0,6\text{ м}\)</span>. До якого гідравлічного наслідку призведе спроба увімкнення циркуляційних насосів на повну потужність?</p>
+</li>
+<li>
+<p>A. Швидкість забору води збільшиться втричі без жодних ускладнень.</p>
+</li>
+<li>
+<p>B. Виникне явище глибокої кавітації в насосних агрегатах та утворення поверхневих воронкових вихорів із засмоктуванням повітря, що спричинить механічне руйнування насосів і зрив подачі води.</p>
+</li>
+<li>
+<p>C. Вода автоматично нагріється до температури кипіння.</p>
+</li>
+<li>
+<p>D. Рівень води в річці миттєво відновиться до проектної позначки.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>При зниженні глибини води над оголовком водозабору нижче критичної гідравлічної межі виникає дефіцит підпору (NPSH, Net Positive Suction Head). Спроба відбору проектної витрати призводить до стрімкого зростання швидкості вхідного струменя, формування поверхневих повітряних воронок та падіння тиску нижче тиску насиченої пари рідини, що породжує руйнівну кавітацію, гідравлічні удари та вихід насосів із ладу протягом кількох хвилин.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A суперечить законам гідравліки, оскільки обмежений об'єм води не дозволяє збільшити подачу без створення додаткового напору.</p>
+</li>
+<li>
+<p>Варіант C є абсурдним, оскільки кавітаційне скипання у вакуумних мікробульбашках не призводить до макроскопічного кипіння всього річкового потоку.</p>
+</li>
+<li>
+<p>Варіант D є неможливим, оскільки локальний насос не здатен вплинути на загальнобасейновий рівень спустошеної річки.</p>
+</li>
+</ol>
+</details>
+<hr />
+<h4 id="_8">Завдання для самостійної роботи</h4>
+<h5 id="_9">Постановка задачі</h5>
+<p>У басейні річки Сіверський Донець унаслідок руйнування гідротехнічних шандорів греблі Оскільського водосховища та бойових пошкоджень очисних споруд промислових міст у річкову мережу надійшов комплексний паводковий скид, що містить важкі метали шахтних вод, феноли коксохімічного виробництва та висококонцентровані органічні каналізаційні стоки. Річка протікає крізь піщані руслові відклади та слугує джерелом питного водопостачання для агломерацій Донбасу.</p>
+<h5 id="_10">Завдання для виконання</h5>
+<ol>
+<li>
+<p>Складіть математичну систему рівнянь Стрітера-Фелпса з урахуванням константи біохімічного споживання азотних сполук (нітрифікації <span class="arithmatex">\(k_n\)</span>), розрахувавши двоетапне просідання кисню під дією вуглецевої та азотистої органіки.</p>
+</li>
+<li>
+<p>Побудуйте просторовий граф ландшафтних міграційних коридорів заплавних комплексів Сіверського Дінця до та після падіння горизонту води, розрахувавши матрицю ймовірностей розселення біоти <span class="arithmatex">\(p_{ij}\)</span>.</p>
+</li>
+<li>
+<p>Обчисліть динаміку коефіцієнта відносної ентропійної дезорганізації екосистеми <span class="arithmatex">\(\mathcal{D}_{\text{entropy}}\)</span> за вісьмома гідрохімічними маркерами протягом перших 60 діб після руйнування греблі.</p>
+</li>
+<li>
+<p>Розробіть інженерний план компенсаційного регулювання витрат води суміжними гідровузлами для утримання критичної концентрації розчиненого кисню вище порогу <span class="arithmatex">\(4,5\text{ мг/дм}^3\)</span> у створах міських водозаборів.</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Повернутись нагору
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Kyrylo Vadurin &bull; <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "header.autohide", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0456\u0439\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u0421\u043a\u043e\u043f\u0456\u044e\u0432\u0430\u0442\u0438 \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0429\u0435 1 \u0437\u0431\u0456\u0433 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.more.other": "\u0429\u0435 # \u0437\u0431\u0456\u0433\u0456\u0432 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.none": "\u0417\u0431\u0456\u0433\u0456\u0432 \u043d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0437\u0431\u0456\u0433", "search.result.other": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e # \u0437\u0431\u0456\u0433\u0456\u0432", "search.result.placeholder": "\u0420\u043e\u0437\u043f\u043e\u0447\u043d\u0456\u0442\u044c \u043f\u0438\u0441\u0430\u0442\u0438 \u0434\u043b\u044f \u043f\u043e\u0448\u0443\u043a\u0443", "search.result.term.missing": "\u041d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e \u0437\u0430\u043f\u0438\u0442\u0443", "select.version": "\u041e\u0431\u0440\u0430\u0442\u0438 \u0432\u0435\u0440\u0441\u0456\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2704 @@
+
+<!doctype html>
+<html lang="uk" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Навчальний портал з дисципліни "Інформаційно-аналітичні технології в екологічних системах"">
+      
+      
+      
+      
+        <link rel="prev" href="../lk4/">
+      
+      
+        <link rel="next" href="../lk6/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Тема 5. Багатовимірний аналіз та інтелектуальні технології - ІАТ в екологічних системах</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#5" class="md-skip">
+          Перейти до змісту
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Хедер">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-header__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ІАТ в екологічних системах
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Тема 5. Багатовимірний аналіз та інтелектуальні технології
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Переключити на темну тему"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Переключити на темну тему" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-label="Переключити на світлу тему"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Переключити на світлу тему" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Пошук" placeholder="Пошук" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Шукати">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистити" aria-label="Очистити" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Пошук розпочато
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Робоча програма
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../lk1/" class="md-tabs__link">
+          
+  
+  
+  Лекції
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../lb/lb1/" class="md-tabs__link">
+          
+  
+  
+  Лабораторні роботи
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../sr/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Самостійна робота
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навігація" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-nav__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ІАТ в екологічних системах
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Робоча програма
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лекції
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лекції
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 1. Цифровізація екологічного моніторингу
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 2. IoT-технології та сенсорні мережі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 3. Проєктування екологічних баз даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 4. Статистичні методи аналізу даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 5. Багатовимірний аналіз та інтелектуальні технології
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 5. Багатовимірний аналіз та інтелектуальні технології
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мета лекції
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Очікувані результати навчання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Теоретико-концептуальний базис. Кореляційний аналіз багатокомпонентних викидів та факторизація ознак
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Теоретико-концептуальний базис. Кореляційний аналіз багатокомпонентних викидів та факторизація ознак">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Математична постановка кореляційного аналізу хімічних сполук у приземному шарі атмосфери через коваріаційні матриці Пірсона
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-co-no2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Виявлення спільних механізмів емісії та вторинних атмосферних реакцій на основі парних кореляцій між CO, NO2, формальдегідом і фенолом
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-pca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Принцип редукції розмірності простору ознак за допомогою методу головних компонент (PCA) для екологічного ранжування
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Методи візуалізації багатовимірних кореляційних зв'язків у формі теплових карт і графів залежностей
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вказівки для самостійного осмислення
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Методологія та аналіз граничних умов. Алгоритми інтелектуального виявлення аномалій та бар'єри класифікації
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Методологія та аналіз граничних умов. Алгоритми інтелектуального виявлення аномалій та бар&#39;єри класифікації">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-one-class-svm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Математичні моделі однокласової опорно-векторної класифікації (One-Class SVM) із регуляризацією для виявлення екологічних викидів
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-isolation-forest-local-outlier-factor-lof" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Застосування алгоритмів Isolation Forest та Local Outlier Factor (LOF) для ізоляції точок аномального техногенного скиду
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-random-forest-gradient-boosting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Алгоритми ансамблевого навчання (Random Forest, Gradient Boosting) для предиктивної класифікації рівнів забруднення
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Проблема незбалансованості класів та дефіцит розмічених аномалій як ключове обмеження навчання систем штучного інтелекту в екології
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Практичний індустріальний / фаховий кейс. Інтелектуальна діагностика промислових викидів
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Практичний індустріальний / фаховий кейс. Інтелектуальна діагностика промислових викидів">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-one-class-svm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Комплексний фаховий кейс. Кореляційний аналіз маркерів горіння та детектування аномальних викидів промислових підприємств м. Кременчук із застосуванням One-Class SVM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Комплексний фаховий кейс. Кореляційний аналіз маркерів горіння та детектування аномальних викидів промислових підприємств м. Кременчук із застосуванням One-Class SVM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі / ситуації
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Покроковий аналіз та розв'язок
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Покроковий аналіз та розв&#39;язок">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 1. Стандартизація вхідного вектора спостережень
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 2. Діагностика кореляційної узгодженості маркерів
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-rbf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 3. Розрахунок скалярного добутку ядра RBF відносно фонового кластера
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-one-class-svm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 4. Обчислення вирішальної функції One-Class SVM
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Інтерпретація результатів та альтернативні сценарії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Зведена довідкова система лекції
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Контрольні питання та завдання
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Контрольні питання та завдання">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Прикладні тестові завдання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для самостійної роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Завдання для самостійної роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для виконання
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 6. Моделювання переносу та дифузії
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 7. Геоінформаційні системи (ГІС)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 8. Моделювання динаміки екологічних систем
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 9. Прогнозування та оцінка ризиків
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 10. Інтелектуальні платформи просторового прогнозування
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторні роботи
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лабораторні роботи
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 1. Архітектура відкритих систем моніторингу довкілля
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 2. Канал отримання даних IoT-станцій
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 3. Проєктування наборів даних екологічної інформації
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 4. Статистичний аналіз та перевищення ГДК
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 5. Кореляційний аналіз та метод головних компонент
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 6. Моделювання розсіювання викидів в атмосфері
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 7. Просторова інтерполяція (IDW) та аномалії
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 8. Моделювання динаміки та стійкості екосистем
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 9. Прогнозування часових рядів та індекс якості повітря
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 10. Генерація екологічного звіту когнітивним LLM-агентом
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Самостійна робота
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мета лекції
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Очікувані результати навчання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Теоретико-концептуальний базис. Кореляційний аналіз багатокомпонентних викидів та факторизація ознак
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Теоретико-концептуальний базис. Кореляційний аналіз багатокомпонентних викидів та факторизація ознак">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Математична постановка кореляційного аналізу хімічних сполук у приземному шарі атмосфери через коваріаційні матриці Пірсона
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-co-no2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Виявлення спільних механізмів емісії та вторинних атмосферних реакцій на основі парних кореляцій між CO, NO2, формальдегідом і фенолом
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-pca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Принцип редукції розмірності простору ознак за допомогою методу головних компонент (PCA) для екологічного ранжування
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Методи візуалізації багатовимірних кореляційних зв'язків у формі теплових карт і графів залежностей
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вказівки для самостійного осмислення
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Методологія та аналіз граничних умов. Алгоритми інтелектуального виявлення аномалій та бар'єри класифікації
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Методологія та аналіз граничних умов. Алгоритми інтелектуального виявлення аномалій та бар&#39;єри класифікації">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-one-class-svm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Математичні моделі однокласової опорно-векторної класифікації (One-Class SVM) із регуляризацією для виявлення екологічних викидів
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-isolation-forest-local-outlier-factor-lof" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Застосування алгоритмів Isolation Forest та Local Outlier Factor (LOF) для ізоляції точок аномального техногенного скиду
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-random-forest-gradient-boosting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Алгоритми ансамблевого навчання (Random Forest, Gradient Boosting) для предиктивної класифікації рівнів забруднення
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Проблема незбалансованості класів та дефіцит розмічених аномалій як ключове обмеження навчання систем штучного інтелекту в екології
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Практичний індустріальний / фаховий кейс. Інтелектуальна діагностика промислових викидів
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Практичний індустріальний / фаховий кейс. Інтелектуальна діагностика промислових викидів">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-one-class-svm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Комплексний фаховий кейс. Кореляційний аналіз маркерів горіння та детектування аномальних викидів промислових підприємств м. Кременчук із застосуванням One-Class SVM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Комплексний фаховий кейс. Кореляційний аналіз маркерів горіння та детектування аномальних викидів промислових підприємств м. Кременчук із застосуванням One-Class SVM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі / ситуації
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Покроковий аналіз та розв'язок
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Покроковий аналіз та розв&#39;язок">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 1. Стандартизація вхідного вектора спостережень
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 2. Діагностика кореляційної узгодженості маркерів
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-rbf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 3. Розрахунок скалярного добутку ядра RBF відносно фонового кластера
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-one-class-svm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 4. Обчислення вирішальної функції One-Class SVM
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Інтерпретація результатів та альтернативні сценарії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Зведена довідкова система лекції
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Контрольні питання та завдання
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Контрольні питання та завдання">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Прикладні тестові завдання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для самостійної роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Завдання для самостійної роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для виконання
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="5">Тема 5. Багатовимірний аналіз та інтелектуальні технології</h1>
+<h2 id="_1">Мета лекції</h2>
+<p>Опанувати математичні та комп'ютерні методи багатовимірного аналізу екологічних даних, включно з матричним кореляційним аналізом міжкомпонентних взаємодій, редукцією розмірності ознакового простору та алгоритмами машинного навчання без учителя і з учителем для виявлення спільних джерел емісій, сегментації забруднень і ранжування територій за рівнем антропогенного навантаження.</p>
+<h2 id="_2">Очікувані результати навчання</h2>
+<ol>
+<li>
+<p><strong>Знання та розуміння.</strong> Здобувачі мають знати математичний апарат коваріаційного аналізу, структуру кореляційних матриць та принципи функціонування методів навчання на нерозмічених даних.</p>
+</li>
+<li>
+<p><strong>Застосування.</strong> Здобувачі мають застосовувати матриці кореляції Пірсона та метод One-Class SVM для детектування багатовимірних аномалій і класифікації ступеня небезпеки атмосферного повітря.</p>
+</li>
+<li>
+<p><strong>Аналіз.</strong> Здобувачі мають аналізувати міжпараметричні кореляційні зв'язки між оксидами вуглецю, діоксидом нітрогену, формальдегідом і твердими частинками для ідентифікації спільних техногенних факторів емісії.</p>
+</li>
+<li>
+<p><strong>Оцінювання та синтез.</strong> Здобувачі мають проектувати процедури вилучення латентних інформативних ознак для зниження обчислювальної складності інтелектуального аналізу екологічних Big Data.</p>
+</li>
+</ol>
+<h2 id="1-">1. Теоретико-концептуальний базис. Кореляційний аналіз багатокомпонентних викидів та факторизація ознак</h2>
+<h3 id="11">1.1. Математична постановка кореляційного аналізу хімічних сполук у приземному шарі атмосфери через коваріаційні матриці Пірсона</h3>
+<p>Дослідження екологічного стану урбанізованих територій спирається на одночасну реєстрацію значної кількості хімічних та фізичних параметрів приземного шару атмосфери. Кожен вимірювальний пост формує багатовимірний інформаційний потік, що складається з часових рядів масових концентрацій газових домішок, вмісту зважених часток різної дисперсності та супутніх метеорологічних факторів. Ізольований аналіз окремих параметрів не дозволяє розкрити системну структуру забруднення, оскільки викиди різних інгредієнтів часто відбуваються синхронно або зумовлені єдиним комплексом фізико-хімічних трансформацій у повітряному басейні.</p>
+<p>Математична формалізація взаємозв'язків між різними полютантами базується на апараті багатовимірного статистичного аналізу. Нехай у просторі спостережень зафіксовано вибірку з <span class="arithmatex">\(m\)</span> екологічних змінних протягом <span class="arithmatex">\(T\)</span> дискретних часових зрізів, що представляється матрицею вихідних даних <span class="arithmatex">\(X \in \mathbb{R}^{T \times m}\)</span>. Міра спільної лінійної варіативності між парою хімічних маркерів <span class="arithmatex">\(X_i\)</span> та <span class="arithmatex">\(X_j\)</span> визначається за допомогою вибіркової коваріації, яка розраховується за аналітичним виразом:</p>
+<div class="arithmatex">\[\text{Cov}(X_i, X_j) = \frac{1}{T - 1} \sum_{t=1}^{T} (X_{it} - \mu_i)(X_{jt} - \mu_j)\]</div>
+<p>де величини <span class="arithmatex">\(X_{it}\)</span> та <span class="arithmatex">\(X_{jt}\)</span> позначають концентрації речовин <span class="arithmatex">\(i\)</span> та <span class="arithmatex">\(j\)</span> у часовий момент <span class="arithmatex">\(t\)</span>, параметри <span class="arithmatex">\(\mu_i\)</span> та <span class="arithmatex">\(\mu_j\)</span> задають вибіркові середні значення відповідних показників, а дільник <span class="arithmatex">\((T - 1)\)</span> враховує число ступенів вільності системи. Оскільки коваріація залежить від масштабів вимірюваних величин та одиниць їхнього вимірювання, для забезпечення безрозмірної порівнянності обчислюється парний коефіцієнт лінійної кореляції Пірсона:</p>
+<div class="arithmatex">\[r_{ij} = \frac{\text{Cov}(X_i, X_j)}{\sigma_i \cdot \sigma_j} = \frac{\sum_{t=1}^{T} (X_{it} - \mu_i)(X_{jt} - \mu_j)}{\sqrt{\sum_{t=1}^{T} (X_{it} - \mu_i)^2} \cdot \sqrt{\sum_{t=1}^{T} (X_{jt} - \mu_j)^2}}\]</div>
+<p>де змінні <span class="arithmatex">\(\sigma_i\)</span> та <span class="arithmatex">\(\sigma_j\)</span> представляють вибіркові середньоквадратичні відхилення відповідних рядів спостережень.</p>
+<p>Комплексний опис взаємодії всієї сукупності <span class="arithmatex">\(m\)</span> вимірюваних параметрів зводиться до побудови симетричної квадратної <strong>кореляційної матриці Пірсона</strong> розмірністю <span class="arithmatex">\(m \times m\)</span>:</p>
+<div class="arithmatex">\[R = \begin{pmatrix} 
+1 &amp; r_{12} &amp; \dots &amp; r_{1m} \\
+r_{21} &amp; 1 &amp; \dots &amp; r_{2m} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+r_{m1} &amp; r_{m2} &amp; \dots &amp; 1 
+\end{pmatrix}\]</div>
+<p>Головна діагональ матриці складається з одиниць, оскільки кореляція параметра із самим собою є абсолютною, а елементи задовольняють умову симетрії <span class="arithmatex">\(r_{ij} = r_{ji}\)</span> та обмеженість діапазоном <span class="arithmatex">\(-1 \le r_{ij} \le 1\)</span>. Додатні значення <span class="arithmatex">\(r_{ij} \to 1\)</span> свідчать про синфазне зростання концентрацій, що вказує на спільні джерела емісій або схожі умови метеорологічного накопичення, тоді як від'ємні величини <span class="arithmatex">\(r_{ij} \to -1\)</span> демонструють протилежну динаміку, притаманну речовинам-антагоністам у хімічних реакціях або різним конкуруючим процесам атмосферної дифузії.</p>
+<pre class="mermaid"><code>flowchart TD
+    subgraph INPUT_SPACE["Багатовимірний простір вимірювань"]
+        RAW["Матриця спостережень X(T, m): CO, NO2, SO2, Пил, Сажа, HCHO"]
+    end
+
+    subgraph STANDARDIZATION["Центрування та стандартизація"]
+        Z_SCORE["Стандартизована матриця Z = (X - mu) / sigma"]
+    end
+
+    subgraph COVARIANCE_ANALYSIS["Кореляційний аналіз Пірсона"]
+        CORR_MAT["Кореляційна матриця R = (1 / (T - 1)) * Z^T * Z"]
+        HEATMAP["Візуалізація: теплова карта та граф кореляцій"]
+    end
+
+    subgraph EIGEN_DECOMPOSITION["Спектральний розклад матриці R"]
+        EIGEN["Розв'язання рівняння det(R - lambda * I) = 0"]
+        VECTORS["Власні значення (lambda_k) та власні вектори (v_k)"]
+    end
+
+    subgraph DIMENSION_REDUCTION["Редукція простору ознак (PCA)"]
+        KAISER["Відсікання факторів за критерієм Кайзера (lambda_k &gt; 1)"]
+        PROJECTION["Головні компоненти: Z_k = X * v_k (Латентні фактори)"]
+    end
+
+    RAW --&gt; Z_SCORE
+    Z_SCORE --&gt; CORR_MAT
+    CORR_MAT --&gt; HEATMAP
+    CORR_MAT --&gt; EIGEN
+    EIGEN --&gt; VECTORS
+    VECTORS --&gt; KAISER
+    KAISER --&gt; PROJECTION</code></pre>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> При побудові кореляційної матриці для лабораторії поста № 1 (вул. Молодіжна, м. Кременчук) за період із січня 2019 по серпень 2024 року було розраховано стійку додатну кореляцію між монооксидом вуглецю та діоксидом азоту (<span class="arithmatex">\(r = 0,42\)</span>), а також помірний зв'язок між монооксидом вуглецю та формальдегідом (<span class="arithmatex">\(r = 0,45\)</span>), що підтвердило домінуючий внесок процесів високотемпературного горіння палива у прилеглій зоні інтенсивного транспортного трафіку.</p>
+</blockquote>
+<hr />
+<h3 id="12-co-no2">1.2. Виявлення спільних механізмів емісії та вторинних атмосферних реакцій на основі парних кореляцій між CO, NO2, формальдегідом і фенолом</h3>
+<p>Аналіз парних коефіцієнтів кореляції відкриває можливості для реконструкції прихованих фізико-хімічних механізмів забруднення міського повітряного середовища. В урбоекосистемах хімічні сполуки не є ізольованими пасивними домішками: частина з них потрапляє в атмосферу безпосередньо з технологічних агрегатів (первинні полютанти), тоді як інші синтезуються безпосередньо в повітрі під дією ультрафіолетового випромінювання та озону (вторинні полютанти).</p>
+<p>Стійкий взаємозв'язок між <strong>монооксидом вуглецю (CO)</strong> та <strong>діоксидом азоту (NO2)</strong> із коефіцієнтом <span class="arithmatex">\(r = 0,42\)</span> є класичним індикатором впливу транспортних потоків та енергетичних спалювальних установок. Обидві сполуки утворюються внаслідок неповного окиснення вуглеводневого палива та високотемпературної фіксації атмосферного азоту в камерах згоряння двигунів внутрішнього згоряння. Наявність помірної кореляції між монооксидом вуглецю та <strong>формальдегідом (HCHO)</strong> (<span class="arithmatex">\(r = 0,45\)</span>) додатково вказує на наявність спільних первинних джерел, пов'язаних із викидами автотранспорту, де формальдегід присутній як продукт термічного розпаду моторних мастил і паливних сумішей.</p>
+<p>Одночасно помірний додатний зв'язок між формальдегідом та <strong>фенолом</strong> (<span class="arithmatex">\(r = 0,41\)</span>) відображає принципово інший генезис екологічного ризику. Фенол і формальдегід є основними прекурсорами та супутніми викидами у виробництві синтетичних смол, клеїв, фанери та ізоляційних матеріалів. Їхня узгоджена поява в атмосферному басейні детермінує вплив специфічних хімічних виробництв. Крім того, кореляція між <strong>зваженим пилом</strong> та <strong>сажею</strong> (<span class="arithmatex">\(r = 0,35\)</span>) підтверджує присутність дрібнодисперсного аерозолю пірогенного походження, оскільки частки незгорілого вуглецю (сажа) сорбуються на мінеральних пилових ядрах.</p>
+<p>Важливим діагностичним показником виступає наявність слабких від'ємних або околонульових кореляцій (наприклад, між діоксидом сірки та органічними сполуками, де <span class="arithmatex">\(|r| &lt; 0,15\)</span>). Це свідчить про повну автономність джерел емісій: діоксид сірки в досліджуваному регіоні генерується переважно процесами спалювання мазуту чи вугілля на ТЕЦ і технологічними установками нафтопереробки, які мають високі димові труби та підпорядковуються законам розсіювання на значних висотах, тоді як діоксид азоту та фенол концентруються в приземному шарі за рахунок низьких джерел.</p>
+<pre class="mermaid"><code>stateDiagram-v2
+    [*] --&gt; Завантаження_Кореляційної_Матриці
+    Завантаження_Кореляційної_Матриці --&gt; Кластеризація_Зв'язків: Поріг значущості |r| &gt;= 0.35
+
+    state Кластеризація_Зв'язків {
+        [*] --&gt; Кластер_Горіння: r(CO, NO2) = 0.42
+        [*] --&gt; Кластер_Хімсинтезу: r(HCHO, Фенол) = 0.41
+        [*] --&gt; Кластер_Аерозолів: r(Пил, Сажа) = 0.35
+    }
+
+    Кластер_Горіння --&gt; Ідентифікація_Джерела_Трафік: Локалізація вздовж автодоріг
+    Кластер_Хімсинтезу --&gt; Ідентифікація_Джерела_Проммайданчик: Локалізація біля хімзаводів
+    Кластер_Аерозолів --&gt; Ідентифікація_Джерела_Котельні: Сезонне зимове спалювання
+
+    Ідентифікація_Джерела_Трафік --&gt; Формування_Висновків
+    Ідентифікація_Джерела_Проммайданчик --&gt; Формування_Висновків
+    Ідентифікація_Джерела_Котельні --&gt; Формування_Висновків
+    Формування_Висновків --&gt; [*]</code></pre>
+<blockquote>
+<p><strong>ТИПОВА ПОМИЛКА:</strong> Ототожнення статистичної кореляції з прямим технологічним причинно-наслідковим зв'язком. Високий коефіцієнт кореляції між діоксидом азоту та озоном у літній період часто сприймають як свідчення синхронного викиду цих двох газів підприємствами, ігноруючи базові закони атмосферної фотохімії: озон у приземному шарі взагалі не викидається трубами, а синтезується вторинно внаслідок фотолізу NO2 під впливом сонячної радіації.</p>
+</blockquote>
+<hr />
+<h3 id="13-pca">1.3. Принцип редукції розмірності простору ознак за допомогою методу головних компонент (PCA) для екологічного ранжування</h3>
+<p>Висока розмірність простору екологічних параметрів суттєво ускладнює навчання предиктивних алгоритмів, породжуючи мультиколінеарність вхідних факторів та явище «прокляття розмірності». Наявність сильних взаємних кореляцій свідчить про надлишковість інформаційного опису: сукупна поведінка десятка хімічних речовин часто керується двома-трьома глибинними процесами (латентними факторами). Для стиснення розмірності без суттєвої втрати дисперсії вихідної інформації застосовується <strong>метод головних компонент (Principal Component Analysis, PCA)</strong>.</p>
+<p>Математична процедура PCA полягає в ортогональному лінійному перетворенні вихідного стандартизованого простору ознак <span class="arithmatex">\(Z \in \mathbb{R}^{T \times m}\)</span> у новий набір некорельованих змінних <span class="arithmatex">\(Y = \{Y_1, Y_2, \dots, Y_m\}\)</span>, які називаються головними компонентами, розташованими за спаданням частки поясненої дисперсії. Стандартизована матриця формується за формулою:</p>
+<div class="arithmatex">\[Z_{tj} = \frac{X_{tj} - \mu_j}{\sigma_j}\]</div>
+<p>де кожна змінна приводиться до нульового математичного сподівання та одиничної дисперсії. Кореляційна матриця системи визначається як <span class="arithmatex">\(R = \frac{1}{T - 1} Z^T Z\)</span>.</p>
+<p>Спектральний розклад кореляційної матриці зводиться до розв'язання характеристичного алгебраїчного рівняння для знаходження власних значень <span class="arithmatex">\(\lambda\)</span> та власних векторів <span class="arithmatex">\(\mathbf{v}\)</span>:</p>
+<div class="arithmatex">\[\det(R - \lambda I) = 0 \quad \Longleftrightarrow \quad R \mathbf{v}_k = \lambda_k \mathbf{v}_k, \quad k \in \{1, 2, \dots, m\}\]</div>
+<p>де <span class="arithmatex">\(I\)</span> — одинична матриця розмірністю <span class="arithmatex">\(m \times m\)</span>, <span class="arithmatex">\(\lambda_k\)</span> — власні значення, впорядковані за спаданням <span class="arithmatex">\(\lambda_1 \ge \lambda_2 \ge \dots \ge \lambda_m \ge 0\)</span>, а <span class="arithmatex">\(\mathbf{v}_k = (v_{1k}, v_{2k}, \dots, v_{mk})^T\)</span> — відповідні ортонормовані власні вектори, для яких виконується умова <span class="arithmatex">\(\mathbf{v}_k^T \mathbf{v}_j = \delta_{kj}\)</span> (<span class="arithmatex">\(\delta_{kj}\)</span> — символ Кронекера).</p>
+<p>Кожне власне значення <span class="arithmatex">\(\lambda_k\)</span> чисельно дорівнює дисперсії, яку пояснює <span class="arithmatex">\(k\)</span>-та головна компонента. Відносна частка поясненої дисперсії (Explained Variance Ratio) розраховується відповідно до співвідношення:</p>
+<div class="arithmatex">\[\eta_k = \frac{\lambda_k}{\sum_{j=1}^{m} \lambda_j} = \frac{\lambda_k}{m}\]</div>
+<p>оскільки сума власних значень кореляційної матриці строго дорівнює її сліду, тобто кількості вихідних параметрів <span class="arithmatex">\(m\)</span>. Відсікання незначущих компонент здійснюється за <strong>критерієм Кайзера</strong> (зберігаються лише компоненти, для яких <span class="arithmatex">\(\lambda_k &gt; 1\)</span>, тобто які пояснюють більше дисперсії, ніж один вихідний стандартизований показник) або за правилом кумулятивного порогу, що вимагає пояснення не менше 75–85% сумарної дисперсії системи:</p>
+<div class="arithmatex">\[\sum_{k=1}^{p} \eta_k \ge 0,80, \quad p \ll m\]</div>
+<p>Проєкція вихідних спостережень на новий скорочений базис розмірністю <span class="arithmatex">\(p\)</span> здійснюється лінійним матричним оператором:</p>
+<div class="arithmatex">\[Y_k = Z \mathbf{v}_k = \sum_{j=1}^{m} v_{jk} Z_j\]</div>
+<p>Отримані факторні бали <span class="arithmatex">\(Y_k\)</span> є новими ортогональними ознаками, які використовуються для комплексного екологічного ранжування територій та подаються на вхід алгоритмів прогнозування без ризику колінеарності.</p>
+<p>Для систематизації методів редукції розмірності та багатовимірного аналізу екологічних даних сформовано порівняльну таблицю.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Метод аналізу / редукції</th>
+<th style="text-align: left;">Математичний апарат</th>
+<th style="text-align: left;">Принцип обробки зв'язків</th>
+<th style="text-align: left;">Цільове призначення в екології</th>
+<th style="text-align: left;">Приклад з реальної практики</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Парна кореляція Пірсона</td>
+<td style="text-align: left;">Нормалізована коваріація: <span class="arithmatex">\(r = \text{Cov}(X, Y)/(\sigma_X \sigma_Y)\)</span></td>
+<td style="text-align: left;">Фіксує виключно лінійні парні монотонні залежності</td>
+<td style="text-align: left;">Попередній скринінг хімічних маркерів на постах спостереження</td>
+<td style="text-align: left;">Оцінка зв'язку <span class="arithmatex">\(CO\)</span> та <span class="arithmatex">\(NO_2\)</span> на пості № 1 по вул. Молодіжна</td>
+</tr>
+<tr>
+<td style="text-align: left;">Рангова кореляція Спірмена</td>
+<td style="text-align: left;">Кореляція рангів величин: <span class="arithmatex">\(\rho = 1 - \frac{6 \sum d_i^2}{n(n^2 - 1)}\)</span></td>
+<td style="text-align: left;">Робастна до викидів, оцінює будь-які нелінійні монотонні зв'язки</td>
+<td style="text-align: left;">Аналіз токсикантів із вираженими логнормальними сплесками</td>
+<td style="text-align: left;">Дослідження динаміки важких металів у зоні кар'єрів Ferrexpo</td>
+</tr>
+<tr>
+<td style="text-align: left;">Метод головних компонент (PCA)</td>
+<td style="text-align: left;">Спектральний розклад матриці: <span class="arithmatex">\(R \mathbf{v} = \lambda \mathbf{v}\)</span></td>
+<td style="text-align: left;">Ортогональна декомпозиція загальної дисперсії системи</td>
+<td style="text-align: left;">Стиснення простору датчиків та інтегральне ранжування постів</td>
+<td style="text-align: left;">Зведення 15 параметрів станцій Vaisala до трьох головних факторів</td>
+</tr>
+<tr>
+<td style="text-align: left;">Факторний аналіз (FA)</td>
+<td style="text-align: left;">Модель латентних змінних: <span class="arithmatex">\(X = \Lambda F + \epsilon\)</span></td>
+<td style="text-align: left;">Розклад дисперсії на спільну та унікальну специфічну</td>
+<td style="text-align: left;">Ідентифікація прихованих джерел емісій (Source Apportionment)</td>
+<td style="text-align: left;">Розподіл часток викидів між ТЕЦ, автотранспортом та нафтопереробкою</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> Застосування методу головних компонент до масиву спостережень Кременчуцького промислового вузла дозволило згорнути 13 контрольованих хімічних домішок у три ортогональні компоненти, які сумарно пояснили 78,4% дисперсії: перша компонента (<span class="arithmatex">\(\lambda_1 = 4,82\)</span>) асоціювалася з транспортним навантаженням (високі ваги <span class="arithmatex">\(NO_2, CO\)</span>), друга (<span class="arithmatex">\(\lambda_2 = 3,11\)</span>) — з нафтохімічним виробництвом (формальдегід, фенол, вуглеводні), а третя (<span class="arithmatex">\(\lambda_3 = 2,26\)</span>) — з металургійною та гірничою пилоутворюючою діяльністю (<span class="arithmatex">\(PM10\)</span>, сажа).</p>
+</blockquote>
+<hr />
+<h3 id="14">1.4. Методи візуалізації багатовимірних кореляційних зв'язків у формі теплових карт і графів залежностей</h3>
+<p>Адекватне сприйняття результатів багатовимірного аналізу експертами-екологами вимагає трансформації складних числових матриць у наочні графічні форми. Провідними аналітичними інструментами візуалізації виступають <strong>кореляційні теплові карти (Heatmaps)</strong> та <strong>зважені графи залежностей</strong>.</p>
+<p>Теплова карта являє собою двовимірну графічну матрицю, кожна комірка якої <span class="arithmatex">\((i, j)\)</span> відповідає парному коефіцієнту кореляції <span class="arithmatex">\(r_{ij}\)</span> між речовинами <span class="arithmatex">\(i\)</span> та <span class="arithmatex">\(j\)</span>. Колірне відображення базується на дивергентних колірних шкалах: максимальна позитивна кореляція (<span class="arithmatex">\(r \to 1\)</span>) кодується насиченим червоним кольором, повна відсутність лінійної залежності (<span class="arithmatex">\(r \approx 0\)</span>) — нейтральними світлими або білими тонами, а негативна кореляція (<span class="arithmatex">\(r \to -1\)</span>) — глибоким синім кольором. Для посилення аналітичної сили комірки карти реорганізуються за допомогою ієрархічної кластеризації (Dendrogram Clustering), що групує речовини зі схожими векторами поведінки в суміжні блоки. Це дозволяє миттєво ідентифікувати технологічні кластери забруднення.</p>
+<p>Графове представлення моделює систему хімічних сполук у вигляді зваженого ненапрямленого графа <span class="arithmatex">\(G = (V, E, W)\)</span>, де множина вершин <span class="arithmatex">\(V = \{v_1, v_2, \dots, v_m\}\)</span> відповідає контрольованим екологічним параметрам, множина ребер <span class="arithmatex">\(E\)</span> фіксує наявність статистично значущого зв'язку між ними, а функція ваг <span class="arithmatex">\(W: E \to [-1, 1]\)</span> присвоює кожному ребру значення вагового коефіцієнта <span class="arithmatex">\(w_{ij} = r_{ij}\)</span>. Для усунення візуального шуму застосовується порогова фільтрація (Threshold Pruning): ребро між вершинами <span class="arithmatex">\(v_i\)</span> та <span class="arithmatex">\(v_j\)</span> проводиться виключно тоді, коли модуль кореляції перевищує критичну межу <span class="arithmatex">\(|r_{ij}| \ge \theta_{\text{cut}}\)</span> (зазвичай обирається <span class="arithmatex">\(\theta_{\text{cut}} = 0,35\)</span>). Вершини з найбільшим ступенем зв'язності (Centrality Degree) визначаються як ключові маркери урбаністичного моніторингу, контроль яких є обов'язковим для прогнозування поведінки всієї екологічної системи.</p>
+<hr />
+<blockquote>
+<p><strong>КОНТРОЛЬНЕ ПИТАННЯ:</strong> Під час факторизації даних екологічного моніторингу за допомогою методу PCA для матриці з шести стандартизованих хімічних показників отримано такий спектр власних значень: <span class="arithmatex">\(\lambda_1 = 2,85\)</span>, <span class="arithmatex">\(\lambda_2 = 1,45\)</span>, <span class="arithmatex">\(\lambda_3 = 0,92\)</span>, <span class="arithmatex">\(\lambda_4 = 0,45\)</span>, <span class="arithmatex">\(\lambda_5 = 0,21\)</span>, <span class="arithmatex">\(\lambda_6 = 0,12\)</span>. Скільки головних компонент слід залишити згідно з класичним критерієм Кайзера, яку частку загальної дисперсії вихідної системи вони пояснюють, і який висновок слід зробити щодо повноти описання системи цими компонентами?</p>
+</blockquote>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: Слід залишити рівно 2 головні компоненти, які сумарно пояснюють 71,67% загальної дисперсії системи; для досягнення порогу повноти 80% може знадобитися включення третьої компоненти.</strong></p>
+<ol>
+<li>
+<p>Повне логічне та аналітичне обґрунтування:</p>
+</li>
+<li>
+<p>Згідно з критерієм Кайзера (Kaiser's rule), для стандартизованих даних відбираються лише ті головні компоненти, для яких власне значення перевищує одиницю (<span class="arithmatex">\(\lambda_k &gt; 1,0\)</span>). У наведеному спектрі умові відповідають перші дві компоненти: <span class="arithmatex">\(\lambda_1 = 2,85 &gt; 1\)</span> та <span class="arithmatex">\(\lambda_2 = 1,45 &gt; 1\)</span>. Третя компонента має <span class="arithmatex">\(\lambda_3 = 0,92 &lt; 1\)</span> і за цим критерієм відсікається.</p>
+</li>
+<li>
+<p>Сумарна дисперсія системи з шести стандартизованих параметрів дорівнює їхній кількості: <span class="arithmatex">\(\sum_{j=1}^{6} \lambda_j = 2,85 + 1,45 + 0,92 + 0,45 + 0,21 + 0,12 = 6,00\)</span>.</p>
+</li>
+<li>
+<p>Розрахуємо кумулятивну частку дисперсії для двох перших компонент:
+     $<span class="arithmatex">\(\eta_{1+2} = \frac{\lambda_1 + \lambda_2}{6,00} = \frac{2,85 + 1,45}{6,00} = \frac{4,30}{6,00} \approx 0,7167 \quad (71,67\%)\)</span>$</p>
+</li>
+<li>
+<p>Хоча дві компоненти агрегують понад 71% інформації та відповідають правилу Кайзера, у прецизійному екологічному моделюванні часто застосовується суворіший поріг кумулятивної дисперсії у 80%. Якщо інженерна задача вимагає мінімізації інформаційних втрат, включення третьої компоненти збільшить пояснену дисперсію до <span class="arithmatex">\((4,30 + 0,92) / 6,00 = 5,22 / 6,00 = 87,0\%\)</span>, що забезпечить виконання порогу точності.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Рішення залишити лише 1 компоненту є хибним, оскільки вона пояснює менше половини дисперсії (<span class="arithmatex">\(\eta_1 = 2,85 / 6 = 47,5\%\)</span>), що призведе до неприпустимої втрати інформації про хімічні процеси.</p>
+</li>
+<li>
+<p>Пропозиція зберегти всі 6 компонент позбавляє сенсу саму процедуру PCA, оскільки в такому випадку стиснення розмірності та усунення колінеарності не відбудеться.</p>
+</li>
+</ol>
+</details>
+<hr />
+<h3 id="_3">Вказівки для самостійного осмислення</h3>
+<ol>
+<li>
+<p>Здійсніть математичний доказ того, що сума всіх власних значень кореляційної матриці <span class="arithmatex">\(\sum_{k=1}^{m} \lambda_k\)</span> строго дорівнює розмірності простору ознак <span class="arithmatex">\(m\)</span>, спираючись на властивість сліду матриці (trace).</p>
+</li>
+<li>
+<p>Проаналізуйте різницю між ортогональним обертанням факторів за методом Varimax та косокутним обертанням Promax при проведенні компонентного аналізу екологічних викидів та обґрунтуйте, чому косокутне обертання може бути більш адекватним з погляду фізики атмосфери.</p>
+</li>
+<li>
+<p>Побудуйте алгоритмічну схему формування топології зваженого графа залежностей хімічних домішок із розрахунком центральності вершин за посередництвом (Betweenness Centrality) для ідентифікації критичного полютанта в системі моніторингу.</p>
+</li>
+</ol>
+<h2 id="2">2. Методологія та аналіз граничних умов. Алгоритми інтелектуального виявлення аномалій та бар'єри класифікації</h2>
+<h3 id="21-one-class-svm">2.1. Математичні моделі однокласової опорно-векторної класифікації (One-Class SVM) із регуляризацією для виявлення екологічних викидів</h3>
+<p>Виявлення несанкціонованих промислових викидів та аварійних ситуацій у приземному шарі атмосфери істотно ускладнюється відсутністю заздалегідь розмічених навчальних вибірок. У реальних умовах експлуатації муніципальних систем моніторингу нормальний стан навколишнього середовища фіксується у 99% випадків, тоді як аварійні емісії є рідкісними, неструктурованими та різноманітними за інгредієнтним складом подіями. У таких умовах класичні алгоритми бінарної класифікації з учителем зазнають колапсу, що вимагає застосування методів навчання без учителя або однокласової класифікації, провідне місце серед яких посідає <strong>однокласовий метод опорних векторів (One-Class Support Vector Machine, One-Class SVM)</strong>.</p>
+<p>Математична концепція One-Class SVM, запропонована Бернхардом Шьолкопфом, полягає у нелінійному відображенні вхідних багатовимірних векторів концентрацій <span class="arithmatex">\(\mathbf{x}_t \in \mathbb{R}^m\)</span> у високо- або нескінченновимірний гільбертів простір ознак <span class="arithmatex">\(\mathcal{H}\)</span> за допомогою функції відображення <span class="arithmatex">\(\Phi(\mathbf{x})\)</span>. Головна мета оптимізаційного процесу полягає у побудові гіперплощини, яка відокремлює основну щільність нормальних даних від початку координат із максимальним геометричним зазором (margin).</p>
+<p>Формалізація прямої оптимізаційної задачі One-Class SVM із м'якими межами описується наступним квадратичним функціоналом із регуляризацією:</p>
+<div class="arithmatex">\[\min_{\mathbf{w}, \rho, \boldsymbol{\xi}} \frac{1}{2} \|\mathbf{w}\|^2 + \frac{1}{\nu T} \sum_{t=1}^{T} \xi_t - \rho\]</div>
+<p>при дотриманні системи лінійних обмежень:</p>
+<div class="arithmatex">\[\langle \mathbf{w}, \Phi(\mathbf{x}_t) \rangle \ge \rho - \xi_t, \quad \xi_t \ge 0, \quad \forall t \in \{1, 2, \dots, T\}\]</div>
+<p>де параметри та змінні оптимізації мають таке фізичне й математичне значення:</p>
+<ul>
+<li>
+<p>Вектор <span class="arithmatex">\(\mathbf{w} \in \mathcal{H}\)</span> є вектором нормалі до розділової опорної гіперплощини у трансформованому просторі ознак.</p>
+</li>
+<li>
+<p>Змінна <span class="arithmatex">\(\rho \in \mathbb{R}\)</span> визначає відстань від початку координат до розділової гіперплощини.</p>
+</li>
+<li>
+<p>Величина <span class="arithmatex">\(\nu \in (0, 1]\)</span> виступає ключовим гіперпараметром регуляризації, який одночасно задає верхню межу частки аномальних викидів у вибірці та нижню межу кількості опорних векторів.</p>
+</li>
+<li>
+<p>Змінні послаблення (slack variables) <span class="arithmatex">\(\xi_t \ge 0\)</span> дозволяють окремим точкам порушувати межу зазору, нівелюючи вплив фонового шуму сенсорів.</p>
+</li>
+<li>
+<p>Параметр <span class="arithmatex">\(T\)</span> позначає загальну кількість спостережень у навчальній вибірці.</p>
+</li>
+</ul>
+<p>Для практичного розв'язання задачі переходять до двоїстої формулювання за допомогою множників Лагранжа <span class="arithmatex">\(\alpha_t\)</span>, де пряме обчислення нескінченновимірних векторів <span class="arithmatex">\(\Phi(\mathbf{x})\)</span> замінюється скалярним добутком у вигляді ядра (Kernel Trick). В екологічних дослідженнях стандартом є застосування радіальної базисної функції (Radial Basis Function, RBF):</p>
+<div class="arithmatex">\[K(\mathbf{x}_i, \mathbf{x}_j) = \langle \Phi(\mathbf{x}_i), \Phi(\mathbf{x}_j) \rangle = \exp\big(-\gamma \|\mathbf{x}_i - \mathbf{x}_j\|^2\big)\]</div>
+<p>де параметр <span class="arithmatex">\(\gamma &gt; 0\)</span> визначає радіус впливу окремого опорного вектора. Розв'язок двоїстої задачі зводиться до пошуку коефіцієнтів <span class="arithmatex">\(\alpha_t\)</span>:</p>
+<div class="arithmatex">\[\min_{\boldsymbol{\alpha}} \frac{1}{2} \sum_{i=1}^{T} \sum_{j=1}^{T} \alpha_i \alpha_j K(\mathbf{x}_i, \mathbf{x}_j)\]</div>
+<p>за умов <span class="arithmatex">\(\sum_{t=1}^{T} \alpha_t = 1\)</span> та <span class="arithmatex">\(0 \le \alpha_t \le \frac{1}{\nu T}\)</span>. Результуюча вирішальна функція для будь-якого нового вимірювання <span class="arithmatex">\(\mathbf{x}^*\)</span> має вигляд:</p>
+<div class="arithmatex">\[f(\mathbf{x}^*) = \text{sign}\left( \sum_{t=1}^{T} \alpha_t K(\mathbf{x}_t, \mathbf{x}^*) - \rho \right)\]</div>
+<p>Якщо <span class="arithmatex">\(f(\mathbf{x}^*) = +1\)</span>, поточний екологічний стан класифікується як нормальний фоновий рівень. Якщо <span class="arithmatex">\(f(\mathbf{x}^*) = -1\)</span>, стан маркується як аномальне техногенне відхилення, що ініціює надсилання сигналу тривоги на пульт чергового інспектора.</p>
+<hr />
+<h3 id="22-isolation-forest-local-outlier-factor-lof">2.2. Застосування алгоритмів Isolation Forest та Local Outlier Factor (LOF) для ізоляції точок аномального техногенного скиду</h3>
+<p>Поряд із опорно-векторними методами, значну ефективність у виявленні нештатних ситуацій демонструють алгоритми ізоляції та локальної густини, які не роблять припущень щодо опуклості розділових меж у просторі станів.</p>
+<p>Алгоритм <strong>Isolation Forest (iForest)</strong> базується на оригінальній концепції: замість моделювання профілю нормальних точок він явно ізолює аномалії. Оскільки аномальні екологічні викиди є рідкісними та мають суттєво відмінні числові значення, у деревах випадкового розбиття простору ознак (Isolation Trees, iTrees) вони відокремлюються значно швидше за нормальні спостереження, опиняючись на малій глибині.</p>
+<p>Для випадкового бінарного дерева ізоляції <span class="arithmatex">\(h(\mathbf{x})\)</span> позначає довжину шляху від кореня до термінального листка для спостереження <span class="arithmatex">\(\mathbf{x}\)</span>. Середня довжина шляху оцінюється за ансамблем із <span class="arithmatex">\(n_{\text{tree}}\)</span> дерев. Аномальний бал (Anomaly Score) обчислюється відповідно до нормалізованого співвідношення:</p>
+<div class="arithmatex">\[s(\mathbf{x}, n) = 2^{-\frac{\mathbb{E}(h(\mathbf{x}))}{c(n)}}\]</div>
+<p>де величина <span class="arithmatex">\(c(n)\)</span> позначає середню довжину невдалого пошуку в бінарному дереві пошуку для вибірки розміром <span class="arithmatex">\(n\)</span>:</p>
+<div class="arithmatex">\[c(n) = 2 \ln(n - 1) + 0,5772156649 - \frac{2(n - 1)}{n}\]</div>
+<p>Якщо значення <span class="arithmatex">\(\mathbb{E}(h(\mathbf{x})) \to 0\)</span>, показник <span class="arithmatex">\(s \to 1\)</span>, що однозначно вказує на наявність екстремальної аномалії. Якщо оцінка <span class="arithmatex">\(s &lt; 0,5\)</span>, точка належить до нормального розподілу.</p>
+<p>Алгоритм <strong>Local Outlier Factor (LOF)</strong> оперує концепцією локальної відносної густини. Він розраховує локальну густину досяжності точки (local reachability density, <span class="arithmatex">\(\text{lrd}\)</span>) відносно її <span class="arithmatex">\(k\)</span> найближчих просторових сусідів:</p>
+<div class="arithmatex">\[\text{lrd}_k(p) = \frac{|\mathcal{N}_k(p)|}{\sum_{o \in \mathcal{N}_k(p)} \max\big(d_k(o), \, d(p, o)\big)}\]</div>
+<p>де <span class="arithmatex">\(\mathcal{N}_k(p)\)</span> — множина <span class="arithmatex">\(k\)</span>-найближчих сусідів точки <span class="arithmatex">\(p\)</span>, <span class="arithmatex">\(d(p, o)\)</span> — евклідова відстань, а <span class="arithmatex">\(d_k(o)\)</span> — відстань від сусіда <span class="arithmatex">\(o\)</span> до його <span class="arithmatex">\(k\)</span>-го сусіда. Підсумковий індекс <span class="arithmatex">\(\text{LOF}_k(p)\)</span> являє собою середнє відношення локальних густин сусідів до густини точки <span class="arithmatex">\(p\)</span>:</p>
+<div class="arithmatex">\[\text{LOF}_k(p) = \frac{\sum_{o \in \mathcal{N}_k(p)} \frac{\text{lrd}_k(o)}{\text{lrd}_k(p)}}{|\mathcal{N}_k(p)|}\]</div>
+<p>Значення <span class="arithmatex">\(\text{LOF} \approx 1\)</span> вказує на однорідну область, тоді як <span class="arithmatex">\(\text{LOF} \gg 1\)</span> сигналізує, що точка розташована в області розрідженості і є локальним техногенним викидом, навіть якщо її абсолютна концентрація не перевищує загальноміський максимум.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    actor SensorNet as Сенсорна мережа (Vaisala / EcoCity)
+    participant Preprocessor as Модуль нормалізації та ко-локації
+    participant SVM as Детектор One-Class SVM (RBF ядро)
+    participant IF as Детектор Isolation Forest
+    participant Consensus as Консенсусний ансамблевий блок
+    actor Inspector as Оперативний черговий екологічної служби
+
+    SensorNet-&gt;&gt;Preprocessor: Потік багатовимірних векторів x_t (CO, NO2, SO2, Пил)
+    Preprocessor-&gt;&gt;Preprocessor: Стандартизація Z-score та видалення тренду
+    par Паралельна фільтрація
+        Preprocessor-&gt;&gt;SVM: Оцінка через функцію sign(K(x, x_i) - rho)
+        SVM--&gt;&gt;Consensus: Бінарний клас (-1 / +1)
+    and
+        Preprocessor-&gt;&gt;IF: Розрахунок середньої довжини шляху E(h(x))
+        IF--&gt;&gt;Consensus: Аномальний бал s(x, n) in [0, 1]
+    end
+    Consensus-&gt;&gt;Consensus: Логічний консенсус: IF (Class == -1 AND s &gt; 0.65)
+    alt Підтверджена багатопараметрична аномалія
+        Consensus-&gt;&gt;Inspector: Генерація сигналу тривоги: Локалізація джерела викиду
+    else Фоновий стан середовища
+        Consensus-&gt;&gt;SensorNet: Підтвердження нормального функціонування
+    end</code></pre>
+<p>Поєднання методів One-Class SVM та Isolation Forest дозволяє створити надійний дворівневий фільтр, у якому опорно-векторна модель відстежує глобальні зміни фізико-хімічних співвідношень, а лісовий ансамбль ізолює локальні екстремальні викиди.</p>
+<hr />
+<h3 id="23-random-forest-gradient-boosting">2.3. Алгоритми ансамблевого навчання (Random Forest, Gradient Boosting) для предиктивної класифікації рівнів забруднення</h3>
+<p>Коли завдання моніторингу полягає у визначенні інтегрального рівня небезпеки атмосфери за нормативними класами індексу якості повітря (AQI: «добрий», «помірний», «шкідливий», «небезпечний»), застосовуються методи ансамблевого навчання з учителем. Ансамблювання дозволяє об'єднати множину базових слабких класифікаторів (дерев рішень) у стійку композицію з низькою дисперсією та зміщенням.</p>
+<p>Алгоритм <strong>Random Forest (випадковий ліс)</strong> базується на паралельному навчанні незалежних дерев за методом беггінгу (Bootstrap Aggregating) із випадковим вибором підмножини ознак у кожному вузлі розщеплення. Кінцевий прогноз класу <span class="arithmatex">\(C\)</span> для екологічного вектора <span class="arithmatex">\(\mathbf{x}\)</span> визначається простим мажоритарним голосуванням:</p>
+<div class="arithmatex">\[\hat{C}(\mathbf{x}) = \arg\max_{c \in \mathcal{C}} \sum_{b=1}^{B} \mathbb{I}\big(h_b(\mathbf{x}) = c\big)\]</div>
+<p>де <span class="arithmatex">\(B\)</span> — кількість згенерованих дерев, <span class="arithmatex">\(h_b(\mathbf{x})\)</span> — рішення <span class="arithmatex">\(b\)</span>-го дерева, а <span class="arithmatex">\(\mathcal{C}\)</span> — множина класів екологічної небезпеки.</p>
+<p>Алгоритми <strong>градієнтного бустингу (Gradient Boosting: XGBoost, LightGBM)</strong> будують ансамбль послідовно, де кожне наступне дерево навчається мінімізувати градієнт функції втрат попередньої композиції. Для мультикласової класифікації рівнів забруднення мінімізується функція багатокласової крос-ентропії:</p>
+<div class="arithmatex">\[\mathcal{L}(y, \mathbf{p}) = - \sum_{k=1}^{K} y_k \ln p_k(\mathbf{x})\]</div>
+<p>де <span class="arithmatex">\(y_k\)</span> — бінарний індикатор належності до класу <span class="arithmatex">\(k\)</span>, а <span class="arithmatex">\(p_k(\mathbf{x}) = \frac{e^{F_k(\mathbf{x})}}{\sum_{j=1}^K e^{F_j(\mathbf{x})}}\)</span> — оцінка ймовірності через функцію софтмакс.</p>
+<p>Послідовний аналітичний процес детектування аномальних викидів, оцінки ансамблевого балу та формування регуляторної директиви описується наступним формалізованим математико-алгоритмічним контуром:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\text{Крок 1 (Стандартизація входу):} &amp; \quad \mathbf{z}_t = \mathbf{\Sigma}^{-1/2} (\mathbf{x}_t - \boldsymbol{\mu}), \quad \mathbf{z}_t \in \mathbb{R}^m \\
+\text{Крок 2 (Оцінка One-Class SVM):} &amp; \quad \psi_{\text{svm}}(\mathbf{z}_t) = \sum_{i=1}^{N_{\text{sv}}} \alpha_i \exp\big(-\gamma \|\mathbf{z}_t - \mathbf{z}_i\|^2\big) - \rho \\
+\text{Крок 3 (Оцінка Isolation Forest):} &amp; \quad \psi_{\text{if}}(\mathbf{z}_t) = 2^{ - \frac{\frac{1}{B} \sum_{b=1}^B h_b(\mathbf{z}_t)}{c(n)} } \\
+\text{Крок 4 (Синтез ансамблевого балу):} &amp; \quad \Psi(\mathbf{z}_t) = w_1 \cdot \mathbb{I}\big(\psi_{\text{svm}}(\mathbf{z}_t) \lt  0\big) + w_2 \cdot \psi_{\text{if}}(\mathbf{z}_t), \quad w_1 + w_2 = 1 \\
+\text{Крок 5 (Генерація директиви):} &amp; \quad \text{IF } \Psi(\mathbf{z}_t) \ge \Theta_{\text{alert}} \quad \Longrightarrow \quad \text{EmitAlert}\big(\mathbf{z}_t, \text{Timestamp}, \text{SensorID}\big)
+\end{aligned}
+\]</div>
+<p>де параметри <span class="arithmatex">\(w_1\)</span> та <span class="arithmatex">\(w_2\)</span> відображають емпіричні вагові коефіцієнти довіри до методів SVM та iForest відповідно, а поріг <span class="arithmatex">\(\Theta_{\text{alert}} \in [0, 1]\)</span> налаштовується відповідно до прийнятного для муніципалітету компромісу між повнотою виявлення викидів та частотою хибних тривог.</p>
+<blockquote>
+<p><strong>ВАЖЛИВО:</strong> Під час навчання ансамблевих алгоритмів екологічної класифікації забороняється використовувати випадкове перехресне розбиття (K-Fold Cross-Validation) без збереження часової структури даних. Випадкове перемішування спостережень призводить до витоку інформації з майбутнього в минуле (Data Leakage) через високу автокореляцію екологічних рядів, створюючи ілюзію високої точності моделі, яка на практиці зазнає повної відмови при появі нових часових відрізків.</p>
+</blockquote>
+<hr />
+<h3 id="24">2.4. Проблема незбалансованості класів та дефіцит розмічених аномалій як ключове обмеження навчання систем штучного інтелекту в екології</h3>
+<p>Незважаючи на потужний математичний апарат сучасного машинного навчання, його практична ефективність в екологічному моніторингу жорстко лімітується специфікою фізичних процесів у довкіллі. Основною перешкодою є <strong>екстремальна незбалансованість класів (Severe Class Imbalance)</strong>, коли нормальні фонові стани складають понад 99,5% вибірки, а критичні екологічні викиди — менше 0,5%.</p>
+<p>У цих умовах алгоритми оптимізації функцій втрат природним чином сходять до тривіального локального мінімуму, присвоюючи всім подіям статус «норма». Формальна загальна точність (Accuracy) такої виродженої моделі сягає 99,5%, проте її практична цінність дорівнює нулю, оскільки вона не здатна розпізнати жодної реальної аварійної ситуації.</p>
+<p>Математичні моделі машинного навчання зазнають фатальної деградації або створюють критичні помилки за настання таких граничних умов реального середовища:</p>
+<ol>
+<li>
+<p><strong>Концептуальний дрейф базової лінії (Concept Drift).</strong> Зміна сезонів (наприклад, перехід від літнього періоду з домінуванням фотохімічного озону до зимового опалювального сезону з високими концентраціями <span class="arithmatex">\(SO_2\)</span> та пилу) призводить до зсуву багатовимірного розподілу <span class="arithmatex">\(P(\mathbf{x})\)</span>. Модель One-Class SVM, натренована на літніх даних, у листопаді починає класифікувати кожен штатний зимовий день як техногенну катастрофу через вихід параметрів за межі літнього опорного простору.</p>
+</li>
+<li>
+<p><strong>Ефект маскування та затоплення аномалій (Masking and Swamping Effects).</strong> Якщо на промисловому підприємстві сталася масштабна аварія і токсичні викиди тривають безперервно протягом 6–8 годин, вимірювання формують у просторі ознак щільний самостійний кластер. Алгоритми щільності (LOF) та дерева ізоляції (iForest) сприймають цей кластер як «нову норму», оскільки точки розташовані близько одна до одної і мають велику локальну густину, внаслідок чого аварія залишається непоміченою системою.</p>
+</li>
+<li>
+<p><strong>Синтетичні артефакти алгоритмів передискретизації (SMOTE Over-generalization).</strong> Спроби штучного вирівнювання класів за допомогою генерації синтетичних аномалій (SMOTE) у багатовимірному просторі призводять до появи фізично неможливих комбінацій параметрів (наприклад, одночасна висока концентрація приземного озону за температури <span class="arithmatex">\(-10^\circ\text{C}\)</span> та відсутності сонячного світла), що дезорієнтує навчальний процес.</p>
+</li>
+</ol>
+<p>Для порівняльного аналізу алгоритмів інтелектуального аналізу та детектування аномалій сформовано систематизовану матрицю інженерних рішень.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Алгоритмічна парадигма</th>
+<th style="text-align: left;">Принцип навчання та цільовий базис</th>
+<th style="text-align: left;">Вимоги до розмітки даних</th>
+<th style="text-align: left;">Обчислювальні витрати на інференс</th>
+<th style="text-align: left;">Складність впровадження</th>
+<th style="text-align: left;">Критичні ризики та обмеження методології</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">One-Class SVM (RBF ядро)</td>
+<td style="text-align: left;">Опорна гіперплощина максимального зазору від початку координат</td>
+<td style="text-align: left;">Навчання без учителя (лише нормальний клас)</td>
+<td style="text-align: left;">Помірні; залежать від кількості опорних векторів <span class="arithmatex">\(O(N_{\text{sv}} \cdot m)\)</span></td>
+<td style="text-align: left;">Середня; вимагає тонкого підбору <span class="arithmatex">\(\nu\)</span> та <span class="arithmatex">\(\gamma\)</span></td>
+<td style="text-align: left;">Екстремальна чутливість до масштабування ознак та концептуального дрейфу</td>
+</tr>
+<tr>
+<td style="text-align: left;">Isolation Forest (iForest)</td>
+<td style="text-align: left;">Ізоляція точок у випадкових бінарних деревах розбиття простору</td>
+<td style="text-align: left;">Навчання без учителя (повний нерозмічений потік)</td>
+<td style="text-align: left;">Низькі; логарифмічна глибина дерев <span class="arithmatex">\(O(n_{\text{tree}} \cdot \log n)\)</span></td>
+<td style="text-align: left;">Низька; стійкий до неінформативних ознак</td>
+<td style="text-align: left;">Нездатність детектувати протяжні за часом кластеризовані аномалії</td>
+</tr>
+<tr>
+<td style="text-align: left;">Local Outlier Factor (LOF)</td>
+<td style="text-align: left;">Оцінка відносної локальної густини k-найближчих сусідів</td>
+<td style="text-align: left;">Навчання без учителя (потребує метрики відстані)</td>
+<td style="text-align: left;">Високі; вимагає пошуку сусідів у пам'яті <span class="arithmatex">\(O(T^2 \cdot m)\)</span></td>
+<td style="text-align: left;">Середня; вимагає оптимізації просторових індексів</td>
+<td style="text-align: left;">Непридатний для потокового аналізу реального часу при великих обсягах бази даних</td>
+</tr>
+<tr>
+<td style="text-align: left;">Випадковий ліс (Random Forest)</td>
+<td style="text-align: left;">Беггінг над деревами рішень із мажоритарним голосуванням</td>
+<td style="text-align: left;">Потребує повної розмітки класів (Supervised)</td>
+<td style="text-align: left;">Дуже низькі; паралельне опитування ансамблю</td>
+<td style="text-align: left;">Висока; вимагає якісної розмітки вибірок</td>
+<td style="text-align: left;">Повний колапс у бік мажоритарного класу за екстремального дисбалансу вибірки</td>
+</tr>
+<tr>
+<td style="text-align: left;">Автоенкодери (Deep Autoencoders)</td>
+<td style="text-align: left;">Реконструкція входу крізь латентне стиснення: <span class="arithmatex">\(\min \|x - \hat{x}\|^2\)</span></td>
+<td style="text-align: left;">Навчання без учителя (мінімізація похибки реконструкції)</td>
+<td style="text-align: left;">Середні; множення матриць ваг нейромережі</td>
+<td style="text-align: left;">Дуже висока; вимагає GPU та вибору топології</td>
+<td style="text-align: left;">Ризик перенавчання: модель запам'ятовує аномалії та успішно реконструює викиди</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> При моніторингу повітряного басейну в зоні впливу гірничозбагачувального комплексу Ferrexpo застосування алгоритму Isolation Forest на необроблених сирих даних призвело до 42% хибних спрацьовувань через сильну кореляцію між пилом і швидкістю вітру. Попередній перехід до головних компонент (PCA) та подальший аналіз залишків за методом One-Class SVM дозволив знизити рівень хибних тривог до 2,1%, ізолювавши реальні емісії перевантажувальних вузлів кар'єру.</p>
+</blockquote>
+<hr />
+<blockquote>
+<p><strong>КОНТРОЛЬНЕ ПИТАННЯ:</strong> Під час налаштування моделі One-Class SVM для детектування аномальних викидів діоксиду сірки інженер встановив гіперпараметр ширини ядра RBF <span class="arithmatex">\(\gamma = 150\)</span> при розмірності ознакового простору <span class="arithmatex">\(m = 4\)</span>. Після навчання модель продемонструвала стовідсоткову точність на навчальній вибірці нормального стану, проте при переході до моніторингу реального часу почала маркувати як аварійний викид абсолютно кожне нове вимірювання (100% хибнопозитивних тривог). Яка математична причина цього явища та як необхідно скоригувати параметри моделі?</p>
+</blockquote>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: Виникнення критичного перенавчання (Overfitting) внаслідок надмірно великого значення параметра <span class="arithmatex">\(\gamma\)</span>, що призвело до стягування розділової межі у мікроскопічні сфери навколо кожної навчальної точки; необхідно зменшити <span class="arithmatex">\(\gamma\)</span> до значень порядку <span class="arithmatex">\(1/m\)</span> або використати евристику медіанної відстані.</strong></p>
+<ol>
+<li>
+<p>Повне логічне та аналітичне обґрунтування:</p>
+</li>
+<li>
+<p>Параметр <span class="arithmatex">\(\gamma\)</span> в ядрі RBF <span class="arithmatex">\(K(\mathbf{x}_i, \mathbf{x}_j) = \exp(-\gamma \|\mathbf{x}_i - \mathbf{x}_j\|^2)\)</span> регулює радіус впливу кожного окремого спостереження. При надмірно великих значеннях (<span class="arithmatex">\(\gamma = 150\)</span>) експонента прямує до нуля для будь-якої пари точок, відстань між якими перевищує соті долі одиниці.</p>
+</li>
+<li>
+<p>У результаті розділова гіперплощина в просторі Гільберта колапсує у множину ізольованих гіперсфер радіусом <span class="arithmatex">\(r \approx 1/\sqrt{\gamma}\)</span> навколо кожної окремої точки навчальної вибірки. Будь-яке нове реальне вимірювання, навіть якщо воно є абсолютно безпечним фоновим станом, але відхиляється від точок навчання на мікроскопічну величину через природну варіативність сенсорів, потрапляє у простір поза цими сферами та автоматично отримує значення функції <span class="arithmatex">\(f(\mathbf{x}^*) = -1\)</span> (аномалія).</p>
+</li>
+<li>
+<p>Для відновлення адекватності моделі параметр <span class="arithmatex">\(\gamma\)</span> слід масштабувати відповідно до дисперсії простору ознак. Стандартною практикою є вибір <span class="arithmatex">\(\gamma = \frac{1}{m \cdot \sigma^2}\)</span> (де <span class="arithmatex">\(m\)</span> — кількість ознак) або використання евристики Сільвермана, де <span class="arithmatex">\(\gamma = \frac{1}{2 \cdot \text{median}(\|\mathbf{x}_i - \mathbf{x}_j\|^2)}\)</span>.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Твердження про те, що сенсори станції одночасно вийшли з ладу, є необґрунтованим, оскільки проблема полягає в поведінці функції відстані ядра на тестових векторах.</p>
+</li>
+<li>
+<p>Пропозиція збільшити параметр регуляризації <span class="arithmatex">\(\nu \to 1\)</span> лише погіршить ситуацію, оскільки <span class="arithmatex">\(\nu\)</span> регулює верхню межу припустимих помилок навчання і не компенсує локальну сингулярність геометрії RBF-ядра.</p>
+</li>
+</ol>
+</details>
+<h2 id="3">3. Практичний індустріальний / фаховий кейс. Інтелектуальна діагностика промислових викидів</h2>
+<h3 id="31-one-class-svm">3.1. Комплексний фаховий кейс. Кореляційний аналіз маркерів горіння та детектування аномальних викидів промислових підприємств м. Кременчук із застосуванням One-Class SVM</h3>
+<h4 id="_4">Постановка задачі / ситуації</h4>
+<p>Північний промисловий вузол міста Кременчук концентрує низку потужних потенційних джерел забруднення: нафтопереробний завод ПАТ «Укртатнафта», Кременчуцький завод технічного вуглецю та ТЕЦ. Під час нічних змін на стаціонарних постах моніторингу регулярно фіксуються короткочасні підвищення концентрацій шкідливих речовин. Головна діагностична проблема полягає у диференціації природи цих явищ: чи є зафіксований сплеск наслідком інтенсифікації руху транзитного вантажного транспорту магістральними вулицями, чи він свідчить про залповий технологічний викид із боку одного з промислових підприємств.</p>
+<p>Для розв'язання цієї задачі аналізується багатовимірний інформаційний потік із чотирьох ключових хімічних маркерів: монооксиду вуглецю (<span class="arithmatex">\(CO\)</span>), діоксиду азоту (<span class="arithmatex">\(NO_2\)</span>), сажі (<span class="arithmatex">\(C\)</span>) та зваженого пилу (<span class="arithmatex">\(PM\)</span>). Відомо, що транспортний трафік генерує синхронні викиди <span class="arithmatex">\(CO\)</span> та <span class="arithmatex">\(NO_2\)</span>, тоді як сажове виробництво супроводжується специфічним викидом чистого дисперсного вуглецю (сажі) та пилу без значного зростання оксидів азоту. Необхідно на основі кореляційної матриці Пірсона підтвердити структуру зв'язків між маркерами та застосувати натреновану на штатних фонових даних модель One-Class SVM для детектування нічного несанкціонованого викиду.</p>
+<p>Вхідні параметри розподілу фонових концентрацій та показники зафіксованої нічної події наведено в таблиці нижче.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Параметр екологічного моніторингу</th>
+<th style="text-align: left;">Фонове середнє (<span class="arithmatex">\(\mu\)</span>)</th>
+<th style="text-align: left;">Стандартне відхилення (<span class="arithmatex">\(\sigma\)</span>)</th>
+<th style="text-align: left;">Одиниці виміру</th>
+<th style="text-align: left;">Зафіксована нічна подія (<span class="arithmatex">\(X_{\text{event}}\)</span>)</th>
+<th style="text-align: left;">Норматив ГДК (максимальний разовий)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Монооксид вуглецю (<span class="arithmatex">\(CO\)</span>)</td>
+<td style="text-align: left;">0,510</td>
+<td style="text-align: left;">0,089</td>
+<td style="text-align: left;">мг/м³</td>
+<td style="text-align: left;">0,580</td>
+<td style="text-align: left;">5,000</td>
+</tr>
+<tr>
+<td style="text-align: left;">Діоксид азоту (<span class="arithmatex">\(NO_2\)</span>)</td>
+<td style="text-align: left;">0,040</td>
+<td style="text-align: left;">0,014</td>
+<td style="text-align: left;">мг/м³</td>
+<td style="text-align: left;">0,045</td>
+<td style="text-align: left;">0,200</td>
+</tr>
+<tr>
+<td style="text-align: left;">Сажа (чистий вуглець, <span class="arithmatex">\(C\)</span>)</td>
+<td style="text-align: left;">0,080</td>
+<td style="text-align: left;">0,026</td>
+<td style="text-align: left;">мг/м³</td>
+<td style="text-align: left;">0,210</td>
+<td style="text-align: left;">0,150</td>
+</tr>
+<tr>
+<td style="text-align: left;">Зважений пил (<span class="arithmatex">\(PM\)</span>)</td>
+<td style="text-align: left;">0,420</td>
+<td style="text-align: left;">0,156</td>
+<td style="text-align: left;">мг/м³</td>
+<td style="text-align: left;">0,890</td>
+<td style="text-align: left;">0,500</td>
+</tr>
+<tr>
+<td style="text-align: left;">Обсяг навчальної фонової вибірки (<span class="arithmatex">\(T\)</span>)</td>
+<td style="text-align: left;">–</td>
+<td style="text-align: left;">–</td>
+<td style="text-align: left;">зрізів</td>
+<td style="text-align: left;">1440</td>
+<td style="text-align: left;">Штатний 24-годинний фоновий режим</td>
+</tr>
+<tr>
+<td style="text-align: left;">Гіперпараметр регуляризації One-Class SVM (<span class="arithmatex">\(\nu\)</span>)</td>
+<td style="text-align: left;">–</td>
+<td style="text-align: left;">–</td>
+<td style="text-align: left;">безрозмірний</td>
+<td style="text-align: left;">0,05</td>
+<td style="text-align: left;">Допустима частка аномалій (5%)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Параметр ширини RBF-ядра (<span class="arithmatex">\(\gamma\)</span>)</td>
+<td style="text-align: left;">–</td>
+<td style="text-align: left;">–</td>
+<td style="text-align: left;">безрозмірний</td>
+<td style="text-align: left;">0,25</td>
+<td style="text-align: left;">Масштабування <span class="arithmatex">\(\gamma = 1/m\)</span> для <span class="arithmatex">\(m = 4\)</span></td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["Вхідний 4-вимірний вектор вимірювань: x_event = (CO, NO2, Сажа, Пил)"] --&gt; B["Стандартизація компонент вектора: z_i = (x_i - mu_i) / sigma_i"]
+    B --&gt; C["Аналіз кореляційної матриці Пірсона R: діагностика порушення балансу пар"]
+    C --&gt; D["Обчислення ядра RBF відносно опорних векторів: K(z_event, z_k)"]
+    D --&gt; E["Розрахунок вирішальної функції One-Class SVM: f(z_event)"]
+    E --&gt; F{"Знак f(z_event)?"}
+    F -- "+1 (Нормальний стан)" --&gt; G["Класифікація як штатне міське коливання"]
+    F -- "-1 (Аномальне відхилення)" --&gt; H["Формування тривоги: Ідентифікація несанкціонованого викиду сажі та пилу"]</code></pre>
+<h4 id="_5">Покроковий аналіз та розв'язок</h4>
+<h5 id="1">Крок 1. Стандартизація вхідного вектора спостережень</h5>
+<p>Для усунення впливу різних масштабів концентрацій виконаємо центрування та нормування компонент вектора досліджуваної нічної події <span class="arithmatex">\(\mathbf{x}_{\text{event}} = (0,580; \, 0,045; \, 0,210; \, 0,890)^T\)</span> відносно фонових середніх та стандартних відхилень:</p>
+<div class="arithmatex">\[z_i = \frac{X_{\text{event}, i} - \mu_i}{\sigma_i}\]</div>
+<p>Розрахуємо стандартизовані координати вектора події <span class="arithmatex">\(\mathbf{z}_{\text{event}}\)</span>:</p>
+<div class="arithmatex">\[z_{CO} = \frac{0,580 - 0,510}{0,089} = \frac{0,070}{0,089} \approx +0,787\]</div>
+<div class="arithmatex">\[z_{NO2} = \frac{0,045 - 0,040}{0,014} = \frac{0,005}{0,014} \approx +0,357\]</div>
+<div class="arithmatex">\[z_{\text{Soot}} = \frac{0,210 - 0,080}{0,026} = \frac{0,130}{0,026} = +5,000\]</div>
+<div class="arithmatex">\[z_{\text{Dust}} = \frac{0,890 - 0,420}{0,156} = \frac{0,470}{0,156} \approx +3,013\]</div>
+<p>Отриманий стандартизований вектор має вигляд <span class="arithmatex">\(\mathbf{z}_{\text{event}} = (0,787; \, 0,357; \, 5,000; \, 3,013)^T\)</span>.</p>
+<h5 id="2_1">Крок 2. Діагностика кореляційної узгодженості маркерів</h5>
+<p>Емпірична кореляційна матриця фонового стану для досліджуваного поста має структуру:</p>
+<div class="arithmatex">\[R = \begin{pmatrix} 
+1,00 &amp; 0,42 &amp; 0,16 &amp; 0,02 \\
+0,42 &amp; 1,00 &amp; 0,13 &amp; -0,09 \\
+0,16 &amp; 0,13 &amp; 1,00 &amp; 0,35 \\
+0,02 &amp; -0,09 &amp; 0,35 &amp; 1,00 
+\end{pmatrix}\]</div>
+<p>У разі домінування транспортного джерела спостерігається пропорційне зростання <span class="arithmatex">\(z_{CO}\)</span> та <span class="arithmatex">\(z_{NO2}\)</span> (помірний зв'язок <span class="arithmatex">\(r = 0,42\)</span>). У зафіксованому векторі відхилення за <span class="arithmatex">\(CO\)</span> (<span class="arithmatex">\(+0,787\sigma\)</span>) та <span class="arithmatex">\(NO_2\)</span> (<span class="arithmatex">\(+0,357\sigma\)</span>) перебувають у межах однієї сигми, що повністю відповідає нормальним коливанням нічного міста. Натомість відхилення за сажею становить <span class="arithmatex">\(+5,000\sigma\)</span>, а за пилом — <span class="arithmatex">\(+3,013\sigma\)</span>. Помірний позитивний зв'язок між пилом і сажею (<span class="arithmatex">\(r = 0,35\)</span>) підтверджує спільну природу їхнього надходження, проте абсолютні амплітуди відхилення вказують на екстремальний технологічний викид аерозолів без участі камер згоряння автотранспорту.</p>
+<h5 id="3-rbf">Крок 3. Розрахунок скалярного добутку ядра RBF відносно фонового кластера</h5>
+<p>Розглянемо оцінку події моделлю One-Class SVM. Для спрощення демонстрації без втрати загальності припустимо, що фоновий стан компактно апроксимується набором опорних векторів, центроїд яких у стандартизованому просторі збігається з нульовим вектором <span class="arithmatex">\(\mathbf{z}_0 = (0, 0, 0, 0)^T\)</span>. Обчислимо квадрат евклідової відстані від вектора події до фонового центроїда:</p>
+<div class="arithmatex">\[\|\mathbf{z}_{\text{event}} - \mathbf{z}_0\|^2 = z_{CO}^2 + z_{NO2}^2 + z_{\text{Soot}}^2 + z_{\text{Dust}}^2\]</div>
+<p>Підставимо числові значення компонент:</p>
+<div class="arithmatex">\[\|\mathbf{z}_{\text{event}} - \mathbf{z}_0\|^2 = 0,787^2 + 0,357^2 + 5,000^2 + 3,013^2 = 0,619 + 0,127 + 25,000 + 9,078 = 34,824\]</div>
+<p>Обчислимо значення радіальної базисної функції при <span class="arithmatex">\(\gamma = 0,25\)</span>:</p>
+<div class="arithmatex">\[K(\mathbf{z}_{\text{event}}, \mathbf{z}_0) = \exp\big(-\gamma \|\mathbf{z}_{\text{event}} - \mathbf{z}_0\|^2\big) = \exp(-0,25 \cdot 34,824) = \exp(-8,706) \approx 0,000165\]</div>
+<p>Значення ядра наближається до нуля (<span class="arithmatex">\(0,000165 \ll 1\)</span>), що свідчить про повну втрату схожості вектора події з простором штатних вимірювань.</p>
+<h5 id="4-one-class-svm">Крок 4. Обчислення вирішальної функції One-Class SVM</h5>
+<p>Вирішальна функція One-Class SVM базується на зваженій сумі значень ядер відносно опорних векторів з урахуванням зсуву <span class="arithmatex">\(\rho\)</span>:</p>
+<div class="arithmatex">\[f(\mathbf{z}_{\text{event}}) = \text{sign}\left( \sum_{k=1}^{N_{\text{sv}}} \alpha_k K(\mathbf{z}_k, \mathbf{z}_{\text{event}}) - \rho \right)\]</div>
+<p>Для натренованої моделі з параметром <span class="arithmatex">\(\nu = 0,05\)</span> емпіричний поріг відсікання гіперплощини становить <span class="arithmatex">\(\rho \approx 0,420\)</span>, а сумарна вага опорних векторів <span class="arithmatex">\(\sum \alpha_k = 1\)</span>. Оскільки значення ядра для нашої події становить близько <span class="arithmatex">\(0,000165\)</span>, аргумент функції знака дорівнює:</p>
+<div class="arithmatex">\[\text{Arg} = \sum_{k=1}^{N_{\text{sv}}} \alpha_k K(\mathbf{z}_k, \mathbf{z}_{\text{event}}) - \rho \approx 0,000165 - 0,420 = -0,419835\]</div>
+<p>Звідси отримуємо дискретне рішення класифікатора:</p>
+<div class="arithmatex">\[f(\mathbf{z}_{\text{event}}) = \text{sign}(-0,419835) = -1\]</div>
+<p>Значення <span class="arithmatex">\(f(\mathbf{z}_{\text{event}}) = -1\)</span> однозначно класифікує поточний стан як багатопараметричну техногенну аномалію.</p>
+<h4 id="_6">Інтерпретація результатів та альтернативні сценарії</h4>
+<p>Комплексний аналіз дозволив однозначно локалізувати джерело проблеми. Слабке зростання концентрацій <span class="arithmatex">\(CO\)</span> та <span class="arithmatex">\(NO_2\)</span> виключає аварійний транспортний затор або пожежу. Стрімкий сплеск вмісту сажі (<span class="arithmatex">\(5\sigma\)</span>) та пилу (<span class="arithmatex">\(3\sigma\)</span>) у поєднанні з від'ємним результатом вирішальної функції One-Class SVM свідчить про несанкціонований залповий викид або прорив рукавних фільтрів на Кременчуцькому заводі технічного вуглецю. Система автоматично формує акт фіксації аномалії для направлення інспекційної групи.</p>
+<p>Якби вхідні дані зафіксували подію, де зростання концентрацій було рівномірним за всіма показниками (наприклад, <span class="arithmatex">\(z_{CO} = +2,1\)</span>, <span class="arithmatex">\(z_{NO2} = +2,3\)</span>, <span class="arithmatex">\(z_{\text{Soot}} = +1,8\)</span>, <span class="arithmatex">\(z_{\text{Dust}} = +1,9\)</span>), значення квадрата евклідової відстані склало б лише <span class="arithmatex">\(16,55\)</span>, а співвідношення між газами суворо відповідало б кореляційній структурі транспортного фактора (<span class="arithmatex">\(r = 0,42\)</span>). У такому альтернативному сценарії розширений діагностичний модуль класифікував би подію як наслідок приземної температурної інверсії над магістраллю, що викликало накопичення загальноміських викидів без вини конкретного промислового підприємства.</p>
+<hr />
+<h3 id="32">3.2. Зведена довідкова система лекції</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Термін / Концепція</th>
+<th style="text-align: left;">Формалізація / Сутність</th>
+<th style="text-align: left;">Реальний кейс застосування</th>
+<th style="text-align: left;">Основне обмеження / Ризик</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Кореляційна матриця Пірсона</td>
+<td style="text-align: left;">Симетрична матриця парних коефіцієнтів лінійної залежності: <span class="arithmatex">\(R = \frac{1}{T-1} Z^T Z\)</span></td>
+<td style="text-align: left;">Аналіз взаємозв'язку <span class="arithmatex">\(CO\)</span> та <span class="arithmatex">\(NO_2\)</span> на пості № 1 по вул. Молодіжна</td>
+<td style="text-align: left;">Фіксує лише лінійні залежності, ігноруючи складні фотохімічні нелінійності</td>
+</tr>
+<tr>
+<td style="text-align: left;">Метод головних компонент (PCA)</td>
+<td style="text-align: left;">Ортогональний спектральний розклад матриці кореляцій: <span class="arithmatex">\(R \mathbf{v}_k = \lambda_k \mathbf{v}_k\)</span></td>
+<td style="text-align: left;">Згортання 13 хімічних домішок у три інтегральні техногенні фактори</td>
+<td style="text-align: left;">Втрата фізичної інтерпретованості осей при складному змішуванні емісій</td>
+</tr>
+<tr>
+<td style="text-align: left;">Критерій Кайзера</td>
+<td style="text-align: left;">Правило відбору значущих компонент із власними значеннями <span class="arithmatex">\(\lambda_k &gt; 1,0\)</span></td>
+<td style="text-align: left;">Визначення кількості факторів екологічного навантаження промислового вузла</td>
+<td style="text-align: left;">Ризик відсікання специфічних, але локально небезпечних токсикантів</td>
+</tr>
+<tr>
+<td style="text-align: left;">Метод One-Class SVM</td>
+<td style="text-align: left;">Опорно-векторна розділова гіперплощина максимального зазору в гільбертовому просторі</td>
+<td style="text-align: left;">Детектування несанкціонованих залпових викидів сажі без попередньої розмітки</td>
+<td style="text-align: left;">Висока чутливість до гіперпараметрів <span class="arithmatex">\(\gamma\)</span> та <span class="arithmatex">\(\nu\)</span>, ризик перенавчання</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ядро радіальної базисної функції (RBF)</td>
+<td style="text-align: left;">Нелінійний функціонал скалярного добутку: <span class="arithmatex">\(K(\mathbf{x}, \mathbf{y}) = \exp(-\gamma \|\mathbf{x} - \mathbf{y}\|^2)\)</span></td>
+<td style="text-align: left;">Відображення концентрацій у нескінченновимірний простір для сепарації аномалій</td>
+<td style="text-align: left;">Колапс розділової межі у мікросфери при завищенні параметра <span class="arithmatex">\(\gamma\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Алгоритм Isolation Forest</td>
+<td style="text-align: left;">Ансамбль дерев випадкового бінарного розсічення простору ознак</td>
+<td style="text-align: left;">Ізоляція екстремальних точок забруднення за довжиною шляху в дереві</td>
+<td style="text-align: left;">Нездатність детектувати тривалі протяжні кластери аварійних викидів</td>
+</tr>
+<tr>
+<td style="text-align: left;">Локальний фактор викиду (LOF)</td>
+<td style="text-align: left;">Оцінка щільності точки відносно її <span class="arithmatex">\(k\)</span> найближчих просторових сусідів</td>
+<td style="text-align: left;">Виявлення локальних прихованих джерел емісій у селітебних зонах</td>
+<td style="text-align: left;">Квадратична обчислювальна складність <span class="arithmatex">\(O(T^2)\)</span>, непридатна для потоків Big Data</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ансамбль Random Forest</td>
+<td style="text-align: left;">Беггінг над деревами рішень із мажоритарним голосуванням класів</td>
+<td style="text-align: left;">Предиктивна класифікація рівнів небезпеки індексу якості повітря AQI</td>
+<td style="text-align: left;">Повний збій у бік мажоритарного класу при сильному дисбалансі вибірки</td>
+</tr>
+<tr>
+<td style="text-align: left;">Незбалансованість класів (Imbalance)</td>
+<td style="text-align: left;">Співвідношення фонових вимірювань до аварійних емісій понад 99:1</td>
+<td style="text-align: left;">Навчання інтелектуальних систем моніторингу на штатно функціонуючих мережах</td>
+<td style="text-align: left;">Виродження моделей машинного навчання в тривіальний класифікатор норми</td>
+</tr>
+<tr>
+<td style="text-align: left;">Концептуальний дрейф (Concept Drift)</td>
+<td style="text-align: left;">Зміна багатовимірного розподілу <span class="arithmatex">\(P(\mathbf{x})\)</span> при зміні сезонів або клімату</td>
+<td style="text-align: left;">Перехід від літнього фотохімічного режиму до зимового опалювального сезону</td>
+<td style="text-align: left;">Масові хибнопозитивні тривоги застарілих статистичних класифікаторів</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="33">3.3. Контрольні питання та завдання</h3>
+<h4 id="_7">Прикладні тестові завдання</h4>
+<ol>
+<li>
+<p>При дослідженні взаємозв'язку між швидкістю вітру <span class="arithmatex">\(V\)</span> та приземною концентрацією пилу <span class="arithmatex">\(PM10\)</span> інженер отримав коефіцієнт лінійної кореляції Пірсона <span class="arithmatex">\(r = 0,02\)</span>. Проте на графіку розсіювання чітко спостерігається нелінійна U-подібна залежність: пил концентрується при штилі (<span class="arithmatex">\(V &lt; 0,5\text{ м/с}\)</span>) внаслідок відсутності розсіювання і різко зростає при сильному вітрі (<span class="arithmatex">\(V &gt; 8\text{ м/с}\)</span>) внаслідок ерозійного підйому з ґрунту. Який висновок слід зробити щодо взаємодії цих параметрів?</p>
+</li>
+<li>
+<p>A. Параметри є абсолютно незалежними, оскільки коефіцієнт Пірсона близький до нуля.</p>
+</li>
+<li>
+<p>B. Між параметрами існує сильний нелінійний детермінований зв'язок, який не може бути зафіксований коефіцієнтом Пірсона через його орієнтованість виключно на лінійну монотонність.</p>
+</li>
+<li>
+<p>C. Сенсор швидкості вітру вийшов із ладу та потребує апаратної заміни.</p>
+</li>
+<li>
+<p>D. Необхідно провести логарифмування швидкості вітру для перетворення від'ємних чисел у додатні.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>Коефіцієнт кореляції Пірсона вимірює виключно силу та напрямок лінійного зв'язку. Якщо залежність між параметрами є квадратичною або U-подібною (концентрація висока як при малих, так і при великих значеннях аргументу), додатна і від'ємна вітки взаємно компенсуються в розрахунку коваріації, даючи значення <span class="arithmatex">\(r \approx 0\)</span>. Це є класичним обмеженням лінійної статистики і вимагає переходу до нелінійних методів оцінки зв'язку (наприклад, рангової кореляції, взаємної інформації або дерев рішень).</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A є грубою науковою помилкою, оскільки рівність нулю лінійної кореляції не гарантує статистичної незалежності нелінійних величин.</p>
+</li>
+<li>
+<p>Варіант C є безпідставним припущенням, оскільки описана U-подібна поведінка пилу є фундаментальним фізичним законом вітрового переносу.</p>
+</li>
+<li>
+<p>Варіант D є безглуздим, оскільки швидкість вітру є невід'ємною фізичною величиною (<span class="arithmatex">\(V \ge 0\)</span>).</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>Під час навчання моделі One-Class SVM для трьох хімічних маркерів із дисперсіями <span class="arithmatex">\(\sigma_{CO}^2 = 0,01\)</span>, <span class="arithmatex">\(\sigma_{NO2}^2 = 0,0002\)</span> та <span class="arithmatex">\(\sigma_{\text{Dust}}^2 = 0,05\)</span> дані було завантажено у модель без попередньої стандартизації (без Z-score перетворення). Який негативний ефект виникне при формуванні розділової межі в просторі ядра RBF?</p>
+</li>
+<li>
+<p>A. Модель аварійно зупиниться через ділення на нуль.</p>
+</li>
+<li>
+<p>B. Геометрія розділової гіперплощини визначатиметься виключно змінною зваженого пилу, оскільки її числова дисперсія домінує у розрахунку евклідової відстані, а вплив діоксиду азоту буде повністю знівельовано.</p>
+</li>
+<li>
+<p>C. Ядро RBF автоматично перетвориться на лінійне поліноміальне ядро.</p>
+</li>
+<li>
+<p>D. Всі коефіцієнти Лагранжа стануть від'ємними числами.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>Радіальна базисна функція <span class="arithmatex">\(K(\mathbf{x}, \mathbf{y}) = \exp(-\gamma \|\mathbf{x} - \mathbf{y}\|^2)\)</span> спирається на евклідову відстань <span class="arithmatex">\(\|\mathbf{x} - \mathbf{y}\|^2 = \sum (x_i - y_i)^2\)</span>. Якщо ознаки не стандартизовані, змінні з великим числовим масштабом і дисперсією (пил, де <span class="arithmatex">\(\sigma^2 = 0,05\)</span>) домінують у сумі квадратів відхилень, тоді як високотоксичні маркери з малими числовими значеннями (діоксид азоту, де <span class="arithmatex">\(\sigma^2 = 0,0002\)</span>) дають мікроскопічний внесок і повністю ігноруються класифікатором. Стандартизація Z-score є обов'язковим інваріантом перед навчанням One-Class SVM.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A є хибним, оскільки RBF ядро містить лише операції віднімання, множення та взяття експоненти, де ділення на нуль відсутнє.</p>
+</li>
+<li>
+<p>Варіант C є невірним, оскільки вид математичної функції ядра жорстко зафіксований в алгоритмі і не може спонтанно змінюватися через масштаб даних.</p>
+</li>
+<li>
+<p>Варіант D суперечить математичній теорії оптимізації Куна-Таккера, згідно з якою двоїсті множники Лагранжа за визначенням є невід'ємними (<span class="arithmatex">\(0 \le \alpha_t \le 1/\nu T\)</span>).</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>Для вибірки екологічного моніторингу за допомогою методу PCA отримано перші три власні значення кореляційної матриці: <span class="arithmatex">\(\lambda_1 = 3,2\)</span>, <span class="arithmatex">\(\lambda_2 = 1,1\)</span>, <span class="arithmatex">\(\lambda_3 = 0,9\)</span> при загальній кількості параметрів <span class="arithmatex">\(m = 6\)</span>. Яку частку загальної дисперсії пояснює перша головна компонента системи?</p>
+</li>
+<li>
+<p>A. 32,0%</p>
+</li>
+<li>
+<p>B. 53,3%</p>
+</li>
+<li>
+<p>C. 68,5%</p>
+</li>
+<li>
+<p>D. 85,0%</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>Сумарна дисперсія кореляційної матриці системи з <span class="arithmatex">\(m = 6\)</span> стандартизованих змінних строго дорівнює її сліду, тобто <span class="arithmatex">\(m = 6\)</span>. Частка дисперсії, пояснена першою головною компонентою, розраховується як відношення відповідного власного значення до суми всіх власних значень:
+   $<span class="arithmatex">\(\eta_1 = \frac{\lambda_1}{m} = \frac{3,2}{6,0} \approx 0,5333 \quad (53,33\%)\)</span>$</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A (32,0%) є результатом помилкового ділення власного значення на 10 замість розмірності <span class="arithmatex">\(m = 6\)</span>.</p>
+</li>
+<li>
+<p>Варіант C (68,5%) помилково враховує кумулятивну дисперсію перших двох компонент: <span class="arithmatex">\((3,2 + 1,1) / 6 = 4,3 / 6 \approx 71,6\%\)</span>.</p>
+</li>
+<li>
+<p>Варіант D (85,0%) відповідає кумулятивній сумі трьох компонент: <span class="arithmatex">\((3,2 + 1,1 + 0,9) / 6 = 5,2 / 6 \approx 86,7\%\)</span>.</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>У задачі класифікації рівнів забруднення за шкалою AQI масив містить 10 000 прикладів класу «норма» та лише 15 прикладів класу «надзвичайна небезпека». Модель Random Forest, натренована з мінімізацією стандартної помилки (0-1 Loss), продемонструвала загальну точність Accuracy = 99,85%. Проте метрика чутливості (Recall) для класу небезпеки склала 0,0%. Яке інженерне рішення необхідно застосувати для подолання цього бар'єра?</p>
+</li>
+<li>
+<p>A. Видалити всі дерева рішень та замінити їх на лінійну інтерполяцію.</p>
+</li>
+<li>
+<p>B. Застосувати балансування ваг класів (class_weight='balanced') у функції втрат або використати алгоритми фокальних втрат (Focal Loss) із фокусуванням на складних прикладах.</p>
+</li>
+<li>
+<p>C. Збільшити кількість дерев в ансамблі з 100 до 10 000 без зміни ваг класів.</p>
+</li>
+<li>
+<p>D. Зменшити глибину дерев до одиниці (створити пні рішень).</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>За екстремального дисбалансу вибірки (співвідношення 10 000 : 15) алгоритм максимізує метрику Accuracy шляхом повного ігнорування міноритарного класу. Чутливість Recall = 0,0% свідчить про те, що жоден випадок реальної катастрофи не був виявлений. Впровадження зважених функцій втрат призначає штраф за помилку на рідкісному класі, обернено пропорційний його частоті (<span class="arithmatex">\(w_{\text{danger}} = 10\,000 / 15 \approx 666\)</span>), що змушує ансамбль формувати розщеплення, чутливі до ознак екологічної небезпеки.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A є деструктивним, оскільки лінійна інтерполяція не вирішує задачу класифікації станів.</p>
+</li>
+<li>
+<p>Варіант C є неефективним, оскільки збільшення кількості дерев без коригування функції втрат лише закріпить домінування мажоритарного класу.</p>
+</li>
+<li>
+<p>Варіант D погіршить здатність моделі виявляти складні взаємодії ознак, зведячи ансамбль до набору примітивних одновимірних порогів.</p>
+</li>
+</ol>
+</details>
+<hr />
+<h4 id="_8">Завдання для самостійної роботи</h4>
+<h5 id="_9">Постановка задачі</h5>
+<p>На металургійному комбінаті повного циклу впроваджується автоматизована інтелектуальна система детектування нештатних проривів доменного газу та пилових викидів аглофабрики. На території підприємства та прилеглої житлової зони розгорнуто шість автоматичних постів, які синхронно вимірюють концентрації діоксиду сірки (<span class="arithmatex">\(SO_2\)</span>), монооксиду вуглецю (<span class="arithmatex">\(CO\)</span>), сірководню (<span class="arithmatex">\(H_2S\)</span>), дрібнодисперсного пилу (<span class="arithmatex">\(PM2.5\)</span>) та великих часток (<span class="arithmatex">\(PM10\)</span>). Історичні спостереження містять значну кількість нерозмічених даних за два роки експлуатації.</p>
+<h5 id="_10">Завдання для виконання</h5>
+<ol>
+<li>
+<p>Складіть кореляційну матрицю Пірсона для п'яти контрольованих параметрів за навчальний період та виділіть технологічні підмножини маркерів на основі порогової фільтрації зі значенням відсікання <span class="arithmatex">\(|r| \ge 0,40\)</span>.</p>
+</li>
+<li>
+<p>Проведіть процедуру скорочення розмірності методом головних компонент (PCA), побудуйте графік кам'янистого осипу (Scree Plot) та визначте необхідну кількість факторів для збереження не менше 80% вихідної дисперсії.</p>
+</li>
+<li>
+<p>Налаштуйте гіперпараметри моделі One-Class SVM з ядром RBF для простору виділених головних компонент, застосувавши евристику медіанної відстані для вибору параметра ширини ядра <span class="arithmatex">\(\gamma\)</span> та задавши рівень регуляризації <span class="arithmatex">\(\nu = 0,02\)</span>.</p>
+</li>
+<li>
+<p>Опишіть алгоритмічний механізм адаптивного оновлення опорних векторів моделі (Online Retraining) при плановій сезонній зміні температурного фону урбоекосистеми для запобігання хибнопозитивним тривогам.</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Повернутись нагору
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Kyrylo Vadurin &bull; <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "header.autohide", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0456\u0439\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u0421\u043a\u043e\u043f\u0456\u044e\u0432\u0430\u0442\u0438 \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0429\u0435 1 \u0437\u0431\u0456\u0433 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.more.other": "\u0429\u0435 # \u0437\u0431\u0456\u0433\u0456\u0432 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.none": "\u0417\u0431\u0456\u0433\u0456\u0432 \u043d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0437\u0431\u0456\u0433", "search.result.other": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e # \u0437\u0431\u0456\u0433\u0456\u0432", "search.result.placeholder": "\u0420\u043e\u0437\u043f\u043e\u0447\u043d\u0456\u0442\u044c \u043f\u0438\u0441\u0430\u0442\u0438 \u0434\u043b\u044f \u043f\u043e\u0448\u0443\u043a\u0443", "search.result.term.missing": "\u041d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e \u0437\u0430\u043f\u0438\u0442\u0443", "select.version": "\u041e\u0431\u0440\u0430\u0442\u0438 \u0432\u0435\u0440\u0441\u0456\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

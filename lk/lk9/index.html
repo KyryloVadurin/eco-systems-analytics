@@ -1,0 +1,2779 @@
+
+<!doctype html>
+<html lang="uk" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Навчальний портал з дисципліни "Інформаційно-аналітичні технології в екологічних системах"">
+      
+      
+      
+      
+        <link rel="prev" href="../lk8/">
+      
+      
+        <link rel="next" href="../lk10/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Тема 9. Прогнозування та оцінка ризиків - ІАТ в екологічних системах</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#9" class="md-skip">
+          Перейти до змісту
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Хедер">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-header__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ІАТ в екологічних системах
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Тема 9. Прогнозування та оцінка ризиків
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Переключити на темну тему"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Переключити на темну тему" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-label="Переключити на світлу тему"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Переключити на світлу тему" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Пошук" placeholder="Пошук" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Шукати">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистити" aria-label="Очистити" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Пошук розпочато
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Робоча програма
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../lk1/" class="md-tabs__link">
+          
+  
+  
+  Лекції
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../lb/lb1/" class="md-tabs__link">
+          
+  
+  
+  Лабораторні роботи
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../sr/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Самостійна робота
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навігація" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-nav__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ІАТ в екологічних системах
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Робоча програма
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лекції
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лекції
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 1. Цифровізація екологічного моніторингу
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 2. IoT-технології та сенсорні мережі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 3. Проєктування екологічних баз даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 4. Статистичні методи аналізу даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 5. Багатовимірний аналіз та інтелектуальні технології
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 6. Моделювання переносу та дифузії
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 7. Геоінформаційні системи (ГІС)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 8. Моделювання динаміки екологічних систем
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 9. Прогнозування та оцінка ризиків
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 9. Прогнозування та оцінка ризиків
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мета лекції
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Очікувані результати навчання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-dppdmext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Теоретико-концептуальний базис. Концепція розширеного аналітичного циклу DPPDMext та розрахунок екологічних ризиків
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Теоретико-концептуальний базис. Концепція розширеного аналітичного циклу DPPDMext та розрахунок екологічних ризиків">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-dppdmext-a-q-m-e-p-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Формалізація циклу обробки даних у вигляді розширеного кортежу DPPDMext: синтез функціональних модулів A, Q, M, E, P, F
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-aqi-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Математичний апарат розрахунку національного та міжнародного індексів якості повітря (AQI) за кусочно-лінійними функціями
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-streak-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Алгоритми обліку тривалості та серійності послідовних перевищень гранично допустимих концентрацій (streak analysis)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Процедура оцінки інформаційної безпеки інфраструктури моніторингу та балансування витрат на захист даних
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вказівки для самостійного осмислення
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Методологія та аналіз граничних умов. Автоматизована селекція часових моделей та когнітивна аналітика
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Методологія та аналіз граничних умов. Автоматизована селекція часових моделей та когнітивна аналітика">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-arima-bats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Порівняльний аналіз статистичних моделей ARIMA та BATS з автоматичним підбором параметрів на основі мінімізації похибки прогнозу
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-vision-language-vlm-llm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Архітектура когнітивного експертного агента на базі мультимодальних моделей Vision-Language (VLM) та LLM для експертної оцінки графіків і числових метрик
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Імплементація технології пошуково-доповненої генерації (RAG) для вербального синтезу контекстних управлінських рекомендацій
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-r2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Ризик виникнення галюцинацій мовних моделей, відсутність причинно-наслідкового виводу та проблема інтерпретації від'ємних значень коефіцієнта детермінації R²
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вказівки для самостійного осмислення
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Практичний індустріальний / фаховий кейс. Розробка інтелектуальної платформи оперативного екоменеджменту
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Практичний індустріальний / фаховий кейс. Розробка інтелектуальної платформи оперативного екоменеджменту">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-sktime-rshiny-llm-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Комплексний фаховий кейс. Впровадження автоматизованої системи прогнозування перевищень нормативів якості повітря в Кременчуцькій агломерації з використанням бібліотек Sktime, R/Shiny та когнітивного LLM-агента
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Комплексний фаховий кейс. Впровадження автоматизованої системи прогнозування перевищень нормативів якості повітря в Кременчуцькій агломерації з використанням бібліотек Sktime, R/Shiny та когнітивного LLM-агента">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі / ситуації
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Покроковий аналіз та розв'язок
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Покроковий аналіз та розв&#39;язок">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 1. Бенчмаркінг моделей та автоматична селекція прогностичного ядра
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-streak-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 2. Предиктивний streak-аналіз тривалості перевищень нормативу
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 3. Розрахунок інтегрального індексу екологічного ризику на прогностичному горизонті
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-rag-llm-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 4. RAG-синтез експертного рішення когнітивним LLM-агентом
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Інтерпретація результатів та альтернативні сценарії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Зведена довідкова система лекції
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Контрольні питання та завдання
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Контрольні питання та завдання">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Прикладні тестові завдання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для самостійної роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Завдання для самостійної роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для виконання
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 10. Інтелектуальні платформи просторового прогнозування
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторні роботи
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лабораторні роботи
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 1. Архітектура відкритих систем моніторингу довкілля
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 2. Канал отримання даних IoT-станцій
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 3. Проєктування наборів даних екологічної інформації
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 4. Статистичний аналіз та перевищення ГДК
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 5. Кореляційний аналіз та метод головних компонент
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 6. Моделювання розсіювання викидів в атмосфері
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 7. Просторова інтерполяція (IDW) та аномалії
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 8. Моделювання динаміки та стійкості екосистем
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 9. Прогнозування часових рядів та індекс якості повітря
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 10. Генерація екологічного звіту когнітивним LLM-агентом
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Самостійна робота
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мета лекції
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Очікувані результати навчання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-dppdmext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Теоретико-концептуальний базис. Концепція розширеного аналітичного циклу DPPDMext та розрахунок екологічних ризиків
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Теоретико-концептуальний базис. Концепція розширеного аналітичного циклу DPPDMext та розрахунок екологічних ризиків">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-dppdmext-a-q-m-e-p-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Формалізація циклу обробки даних у вигляді розширеного кортежу DPPDMext: синтез функціональних модулів A, Q, M, E, P, F
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-aqi-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Математичний апарат розрахунку національного та міжнародного індексів якості повітря (AQI) за кусочно-лінійними функціями
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-streak-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Алгоритми обліку тривалості та серійності послідовних перевищень гранично допустимих концентрацій (streak analysis)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Процедура оцінки інформаційної безпеки інфраструктури моніторингу та балансування витрат на захист даних
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вказівки для самостійного осмислення
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Методологія та аналіз граничних умов. Автоматизована селекція часових моделей та когнітивна аналітика
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Методологія та аналіз граничних умов. Автоматизована селекція часових моделей та когнітивна аналітика">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-arima-bats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Порівняльний аналіз статистичних моделей ARIMA та BATS з автоматичним підбором параметрів на основі мінімізації похибки прогнозу
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-vision-language-vlm-llm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Архітектура когнітивного експертного агента на базі мультимодальних моделей Vision-Language (VLM) та LLM для експертної оцінки графіків і числових метрик
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Імплементація технології пошуково-доповненої генерації (RAG) для вербального синтезу контекстних управлінських рекомендацій
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-r2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Ризик виникнення галюцинацій мовних моделей, відсутність причинно-наслідкового виводу та проблема інтерпретації від'ємних значень коефіцієнта детермінації R²
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вказівки для самостійного осмислення
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Практичний індустріальний / фаховий кейс. Розробка інтелектуальної платформи оперативного екоменеджменту
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Практичний індустріальний / фаховий кейс. Розробка інтелектуальної платформи оперативного екоменеджменту">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-sktime-rshiny-llm-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Комплексний фаховий кейс. Впровадження автоматизованої системи прогнозування перевищень нормативів якості повітря в Кременчуцькій агломерації з використанням бібліотек Sktime, R/Shiny та когнітивного LLM-агента
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Комплексний фаховий кейс. Впровадження автоматизованої системи прогнозування перевищень нормативів якості повітря в Кременчуцькій агломерації з використанням бібліотек Sktime, R/Shiny та когнітивного LLM-агента">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі / ситуації
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Покроковий аналіз та розв'язок
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Покроковий аналіз та розв&#39;язок">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 1. Бенчмаркінг моделей та автоматична селекція прогностичного ядра
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-streak-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 2. Предиктивний streak-аналіз тривалості перевищень нормативу
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 3. Розрахунок інтегрального індексу екологічного ризику на прогностичному горизонті
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-rag-llm-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 4. RAG-синтез експертного рішення когнітивним LLM-агентом
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Інтерпретація результатів та альтернативні сценарії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Зведена довідкова система лекції
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Контрольні питання та завдання
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Контрольні питання та завдання">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Прикладні тестові завдання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для самостійної роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Завдання для самостійної роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для виконання
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="9">Тема 9. Інформаційні системи прогнозування та оцінки екологічних ризиків</h1>
+<h2 id="_1">Мета лекції</h2>
+<p>Опанувати концепцію побудови сучасних інтелектуальних систем підтримки прийняття рішень на основі розширеної архітектури DPPDMext, автоматизованої селекції моделей прогнозування часових рядів (ARIMA, BATS), розрахунку індексів екологічного ризику та інтеграції автономних когнітивних LLM-агентів із технологією пошуково-доповненої генерації (RAG) для вербального синтезу прескриптивних управлінських рішень.</p>
+<h2 id="_2">Очікувані результати навчання</h2>
+<ol>
+<li>
+<p><strong>Знання та розуміння.</strong> Здобувачі мають розуміти теоретичні основи інформаційної технології DPPDMext, методику розрахунку інтегральних екологічних індексів (AQI) та алгоритми автоматизованого вибору предиктивних моделей.</p>
+</li>
+<li>
+<p><strong>Застосування.</strong> Здобувачі мають застосовувати моделі ARIMA та BATS у середовищі sktime з автоматичним вибором конфігурації за мінімумом квадратичної похибки MSE для розрахунку прогнозів на 24 місяці.</p>
+</li>
+<li>
+<p><strong>Аналіз.</strong> Здобувачі мають аналізувати прогностичні помилки MAE, RMSE та інформаційний критерій Акаіке (AIC) при зіставленні лінійних авторегресійних та експоненціальних моделей.</p>
+</li>
+<li>
+<p><strong>Оцінювання та синтез.</strong> Здобувачі мають розробляти агентні структури на базі великих мовних моделей (LLM) із RAG-архітектурою для генерації експертних аналітичних звітів без ризику інформаційних галюцинацій.</p>
+</li>
+</ol>
+<h2 id="1-dppdmext">1. Теоретико-концептуальний базис. Концепція розширеного аналітичного циклу DPPDMext та розрахунок екологічних ризиків</h2>
+<h3 id="11-dppdmext-a-q-m-e-p-f">1.1. Формалізація циклу обробки даних у вигляді розширеного кортежу DPPDMext: синтез функціональних модулів A, Q, M, E, P, F</h3>
+<p>Сучасні виклики в галузі муніципального екологічного менеджменту вимагають переходу від розрізнених програмних інструментів до цілісних інформаційних технологій, здатних підтримувати повний аналітичний цикл від збору первинної телеметрії до синтезу управлінських рішень. Традиційні архітектури, орієнтовані на поетапну конвеєрну обробку даних за моделлю підготовки та обробки даних (Data Preparation and Processing for Decision Making, DPPDM), формалізувалися класичним кортежем п'яти базових компонентів:</p>
+<div class="arithmatex">\[\text{DPPDM} = \langle D, T, P, F, V \rangle\]</div>
+<p>де елемент <span class="arithmatex">\(D\)</span> (Data) визначає масив первинних екологічних спостережень, елемент <span class="arithmatex">\(T\)</span> (Transformation) задає процедури нормалізації, фільтрації та просторово-часової агрегації, елемент <span class="arithmatex">\(P\)</span> (Prediction) відповідає за методи прогнозування, елемент <span class="arithmatex">\(F\)</span> (Feature Engineering) детермінує розрахунок нормативних індексів і статистичних характеристик, а елемент <span class="arithmatex">\(V\)</span> (Visualization) представляє результати у вигляді картограм та графіків.</p>
+<p>Проте функціонування моніторингових систем в умовах високої стохастичності міського середовища, інформаційних «сліпих зон» та обмеженого обсягу ретроспективних вибірок виявило принципові недоліки класичного підходу. З метою подолання цих обмежень синтезовано розширену концептуальну парадигму <strong>DPPDMext (Data Preparation and Predictive Data Modeling extended)</strong>. У розширеній моделі предиктивний контур <span class="arithmatex">\(P_{\text{ext}}\)</span> трансформується у багаторівневу адаптивну систему, яка інтегрує глибокий попередній аналіз часових рядів, квантово-адаптивну оптимізацію прогностичного ядра, геопросторове моделювання віртуальних станцій та когнітивну експертну оцінку.</p>
+<p>Математично розширена модель екологічної інформаційної технології описується структурованим кортежем шести функціональних макромодулів:</p>
+<div class="arithmatex">\[\text{DPPDMext} = \langle A, Q, M, E, P, F \rangle\]</div>
+<p>де кожен структурний елемент реалізує спеціалізований етап інтелектуальної обробки:</p>
+<ul>
+<li>
+<p>Модуль <span class="arithmatex">\(A\)</span> (Automatic Analysis) здійснює автоматизований статистичний та спектральний аналіз сирих часових рядів із детектуванням довгострокових трендів, сезонних періодів, оцінкою стаціонарності та ступеня зашумленості.</p>
+</li>
+<li>
+<p>Модуль <span class="arithmatex">\(Q\)</span> (Quantum-Adaptive Selection) реалізує відсистему автоматизованого підбору оптимальної прогностичної архітектури, динамічно перемикаючись між класичними статистичними моделями та квантово-гібридними нейромережами залежно від властивостей вибірки.</p>
+</li>
+<li>
+<p>Модуль <span class="arithmatex">\(M\)</span> (Modeling of Virtual Stations) забезпечує геопросторове моделювання та генерацію віртуальних вимірювальних постів у критичних перетинах міської інфраструктури за допомогою зваженої просторової інтерполяції та симуляції трафіку.</p>
+</li>
+<li>
+<p>Модуль <span class="arithmatex">\(E\)</span> (Expert Evaluation) виконує процедурну експертну оцінку надійності прогнозів через розрахунок комплексного індексу надійності прогнозів (CRI) та аналіз залишків.</p>
+</li>
+<li>
+<p>Модуль <span class="arithmatex">\(P\)</span> (Predictive Core) представляє високопродуктивне обчислювальне ядро прогнозування, що об'єднує класичні алгоритми ARIMA і BATS та варіаційні квантові рекурентні схеми.</p>
+</li>
+<li>
+<p>Модуль <span class="arithmatex">\(F\)</span> (Framework for Decision Support) формує кінцевий людино-машинний інтерфейс когнітивної підтримки рішень, оснащений автономними мовними агентами для вербальної інтерпретації ризиків та формування звітів за формою Постанови № 827.</p>
+</li>
+</ul>
+<pre class="mermaid"><code>flowchart TD
+    subgraph INGESTION["1. Збір та первинна обробка"]
+        D["Первинні вимірювання (Vaisala, EcoCity, ПМЕЛ)"]
+        T["Трансформація: Z-score фільтрація, усунення пропусків"]
+    end
+
+    subgraph DPPDNEXT_CORE["2. Інтелектуальний контур DPPDMext"]
+        A["Модуль A: Статистичний аналіз тренду та стаціонарності"]
+        Q["Модуль Q: Квантово-адаптивний вибір моделі (MSE/AIC)"]
+        M["Модуль M: Імітаційне моделювання віртуальних постів"]
+        P["Модуль P: Предиктивне ядро (ARIMA, BATS, Q-LSTM)"]
+        E["Модуль E: Оцінка надійності прогнозу та метрика CRI"]
+    end
+
+    subgraph DECISION_SUPPORT["3. Прескриптивний рівень підтримки рішень"]
+        F["Модуль F: Розрахунок AQI, streak-аналіз та регуляторні звіти"]
+        AGENT["Автономний когнітивний LLM-агент (RAG аналітика)"]
+        OUT["Управлінські директиви муніципалітету"]
+    end
+
+    D --&gt; T
+    T --&gt; A
+    A --&gt; Q
+    Q --&gt; P
+    M -.-&gt;|Екзогенні фактори| P
+    P --&gt; E
+    E --&gt; F
+    F --&gt; AGENT
+    AGENT --&gt; OUT</code></pre>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> У процесі цифровізації екологічного спостереження Кременчуцької промислової агломерації впровадження контуру DPPDMext дозволило об'єднати 17-річні ретроспективні ряди чотирьох стаціонарних лабораторій із потоковими вимірюваннями трьох нових станцій Vaisala, забезпечивши автоматичний вибір між моделями BATS та ARIMA для 13 контрольованих полютантів без ручного переналаштування параметрів оператором.</p>
+</blockquote>
+<hr />
+<h3 id="12-aqi-">1.2. Математичний апарат розрахунку національного та міжнародного індексів якості повітря (AQI) за кусочно-лінійними функціями</h3>
+<p>Для доведення складної багатокомпонентної інформації про хімічний склад атмосфери до органів місцевого самоврядування та населення застосовується узагальнена безрозмірна шкала — <strong>Індекс якості повітря (Air Quality Index, AQI)</strong>. Використання абсолютних одиниць масової концентрації (мг/м³ або мкг/м³) є малоінформативним для нефахівців, оскільки різні хімічні речовини володіють принципово різною токсичністю, латентними періодами впливу та пороговими рівнями ураження дихальної системи.</p>
+<p>Математичний апарат розрахунку стандартизованого субіндексу <span class="arithmatex">\(I_j\)</span> для окремої забруднюючої речовини <span class="arithmatex">\(j\)</span> базується на кусочно-лінійній інтерполяції між нормативно встановленими граничними концентраціями (концентраційними брейкпоінтами). Якщо фактична виміряна або спрогнозована концентрація речовини становить <span class="arithmatex">\(C_j\)</span>, а нормативна шкала визначає діапазон <span class="arithmatex">\([C_{\text{low}}, \, C_{\text{high}}]\)</span>, всередині якого лежить це значення (<span class="arithmatex">\(C_{\text{low}} \le C_j \le C_{\text{high}}\)</span>), розрахунок субіндексу здійснюється за класичною аналітичною формулою Агентства з охорони довкілля США (US EPA):</p>
+<div class="arithmatex">\[I_j = \frac{I_{\text{high}} - I_{\text{low}}}{C_{\text{high}} - C_{\text{low}}} (C_j - C_{\text{low}}) + I_{\text{low}}\]</div>
+<p>де параметри кусочно-лінійного перетворення детермінуються такими величинами:</p>
+<ul>
+<li>
+<p>Змінна <span class="arithmatex">\(C_j\)</span> відображає поточну виміряну концентрацію <span class="arithmatex">\(j\)</span>-го забруднювача, попередньо осереднену за нормативним часовим вікном (1 година для діоксиду азоту, 8 годин для монооксиду вуглецю та озону, 24 години для дрібнодисперсного пилу PM2.5 та PM10).</p>
+</li>
+<li>
+<p>Константи <span class="arithmatex">\(C_{\text{low}}\)</span> та <span class="arithmatex">\(C_{\text{high}}\)</span> задають нижню та верхню межі діапазону концентрацій брейкпоінта, які призводять до відповідного токсикологічного ефекту на здоров'я.</p>
+</li>
+<li>
+<p>Константи <span class="arithmatex">\(I_{\text{low}}\)</span> та <span class="arithmatex">\(I_{\text{high}}\)</span> позначають нормативні межі індексу якості повітря, що відповідають категорії даного брейкпоінта (наприклад, діапазон 51–100 для категорії «помірний рівень»).</p>
+</li>
+</ul>
+<p>Інтегральний індекс якості повітря для багатокомпонентного стану атмосфери <span class="arithmatex">\(\text{AQI}_{\text{total}}\)</span> не розраховується як середнє арифметичне, а визначається за <strong>принципом найгіршого показника (Maximum Operator)</strong>:</p>
+<div class="arithmatex">\[\text{AQI}_{\text{total}} = \max \big( I_{\text{PM2.5}}, \, I_{\text{PM10}}, \, I_{\text{CO}}, \, I_{\text{SO2}}, \, I_{\text{NO2}}, \, I_{\text{O3}} \big)\]</div>
+<p>Цей математичний принцип гарантує, що якщо концентрація хоча б одного високотоксичного полютанта сягає критичного рівня небезпеки, сукупний індекс міста негайно сигналізуватиме про загрозу життю, навіть якщо вміст решти сполук залишається мінімальним.</p>
+<pre class="mermaid"><code>stateDiagram-v2
+    [*] --&gt; Вимірювання_Концентрацій: Потік C_j за 24 години
+    Вимірювання_Концентрацій --&gt; Пошук_Брейкпоінтів: Визначення C_low та C_high у нормативних таблицях
+    Пошук_Брейкпоінтів --&gt; Розрахунок_Субіндексів: Інтерполяція I_j = ((I_high - I_low)/(C_high - C_low))*(C_j - C_low) + I_low
+
+    state Розрахунок_Субіндексів {
+        [*] --&gt; Оцінка_PM25
+        [*] --&gt; Оцінка_PM10
+        [*] --&gt; Оцінка_NO2
+        [*] --&gt; Оцінка_SO2
+        [*] --&gt; Оцінка_CO
+    }
+
+    Розрахунок_Субіндексів --&gt; Агрегація_Максимуму: AQI = max(I_j)
+
+    state Класифікація_Небезпеки {
+        direction LR
+        Зелений: 0-50 (Добрий)
+        Жовтий: 51-100 (Помірний)
+        Помаранчевий: 101-150 (Шкідливий для чутливих)
+        Червоний: 151-200 (Шкідливий)
+        Фіолетовий: 201-300 (Дуже шкідливий)
+        Бордовий: 301-500 (Небезпечний)
+    }
+
+    Агрегація_Максимуму --&gt; Класифікація_Небезпеки
+    Класифікація_Небезпеки --&gt; Генерація_Рекомендацій
+    Генерація_Рекомендацій --&gt; [*]</code></pre>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> У створеній інформаційно-аналітичній веб-системі на базі мови R та сервісу Shiny модуль розрахунку AQI безперервно опитує вимірювальні канали станцій Vaisala, автоматично здійснюючи інтерполяцію концентрацій за п'ятьма базовими полютантами та виводячи на інтерактивну карту колірний індикатор екологічного ризику зі швидкістю оновлення раз на 10 хвилин.</p>
+</blockquote>
+<hr />
+<h3 id="13-streak-analysis">1.3. Алгоритми обліку тривалості та серійності послідовних перевищень гранично допустимих концентрацій (streak analysis)</h3>
+<p>Оцінка хронічного токсичного навантаження на урбоекосистему вимагає врахування не лише амплітуди перевищення нормативів, а й їхньої часової тривалості. Короткочасний одиничний сплеск концентрації токсиканта, викликаний поривом вітру або локальним маневром вантажівки, активізує адаптивні компенсаторні механізми організму людини. Навпаки, навіть помірне перевищення ГДК, що триває безперервно протягом десятків годин або діб, викликає незворотні патологічні зміни дихальних шляхів та серцево-судинної системи.</p>
+<p>Для математичної фіксації тривалих небезпечних періодів у контурі DPPDMext реалізовано алгоритм <strong>аналізу серійності перевищень (Streak Analysis)</strong>. Нехай часовий ряд концентрацій <span class="arithmatex">\(j\)</span>-ї речовини на <span class="arithmatex">\(i\)</span>-му пості задається послідовністю <span class="arithmatex">\(x_{i, j, t}\)</span>, де <span class="arithmatex">\(t \in \{1, 2, \dots, T\}\)</span>. Перевірка виконання умови порушення гранично допустимої концентрації <span class="arithmatex">\(G_j\)</span> формалізується індикаторною функцією:</p>
+<div class="arithmatex">\[P_{i, j, t} = \begin{cases} 
+1, &amp; \text{якщо } x_{i, j, t} &gt; G_j \\ 
+0, &amp; \text{якщо } x_{i, j, t} \le G_j 
+\end{cases}\]</div>
+<p>Загальна кількість зафіксованих перевищень за досліджуваний період <span class="arithmatex">\(T\)</span> на пості <span class="arithmatex">\(i\)</span> обчислюється простим сумуванням:</p>
+<div class="arithmatex">\[C_{i, j} = \sum_{t=1}^{T} P_{i, j, t}\]</div>
+<p>Алгоритмічна процедура підрахунку кількості тривалих небезпечних серій <span class="arithmatex">\(L_{i, j}\)</span>, довжина яких досягає або перевищує критичний часовий поріг <span class="arithmatex">\(K\)</span> (де <span class="arithmatex">\(K\)</span> — мінімальна кількість послідовних зрізів, наприклад, <span class="arithmatex">\(K = 3\)</span> для 20-хвилинних спостережень, що еквівалентно одній годині), реалізується наступним ітераційним процесом:</p>
+<ol>
+<li>
+<p>Ініціалізація системних лічильників: лічильник серій <span class="arithmatex">\(L_{i, j} = 0\)</span>, поточний накопичувач неперервності <span class="arithmatex">\(\text{streak} = 0\)</span>.</p>
+</li>
+<li>
+<p>Послідовна ітерація за всіма часовими точками <span class="arithmatex">\(t \in \{1, \dots, T\}\)</span> із динамічним оновленням накопичувача:</p>
+</li>
+</ol>
+<div class="arithmatex">\[\text{streak} \leftarrow \begin{cases} 
+\text{streak} + 1, &amp; \text{якщо } P_{i, j, t} = 1 \\ 
+0, &amp; \text{якщо } P_{i, j, t} = 0 
+\end{cases}\]</div>
+<ol>
+<li>Якщо поточне значення накопичувача досягає встановленого порогового критерію <span class="arithmatex">\(\text{streak} \ge K\)</span>, системний лічильник тривалих інцидентів збільшується на одиницю (<span class="arithmatex">\(L_{i, j} \leftarrow L_{i, j} + 1\)</span>), а факт тривалого порушення реєструється в базі даних як екологічний інцидент високого пріоритету.</li>
+</ol>
+<p>Для порівняльної оцінки интегрального екологічного ризику різних міських районів обчислюється середньозважена частота перевищень нормативів <span class="arithmatex">\(R_i\)</span> за всіма <span class="arithmatex">\(M\)</span> контрольованими токсикантами:</p>
+<div class="arithmatex">\[R_i = \sum_{j=1}^{M} \frac{C_{i, j}}{T}\]</div>
+<p>Цей інтегральний коефіцієнт дозволяє ранжувати територію муніципалітету за ступенем екологічної небезпеки та слугує критерієм для першочергового впровадження регуляторних заходів.</p>
+<hr />
+<h3 id="14">1.4. Процедура оцінки інформаційної безпеки інфраструктури моніторингу та балансування витрат на захист даних</h3>
+<p>Екологічні інформаційні системи муніципального рівня керують критично важливою інформацією, яка використовується для прийняття рішень про введення надзвичайних станів, евакуацію населення або зупинку промислових виробництв. Компрометація даних моніторингу внаслідок кібератак (підміна вимірювань, блокування каналів передачі, фальсифікація індексів якості повітря) може паралізувати міське управління та створити пряму загрозу життю людей. </p>
+<p>Математична модель оцінки ризиків інформаційної безпеки розглядає ризик як функцію ймовірності реалізації загрози та тяжкості її наслідків, деталізованих за класичною тріадою конфіденційності, цілісності та доступності (CIA triad). Для кожної ідентифікованої загрози <span class="arithmatex">\(t \in \mathcal{T}\)</span> сукупний збиток <span class="arithmatex">\(I_t\)</span> обчислюється як зважена сума впливів:</p>
+<div class="arithmatex">\[I_t = w_C \cdot I_{t, C} + w_I \cdot I_{t, I} + w_A \cdot I_{t, A}\]</div>
+<p>де коефіцієнти <span class="arithmatex">\(w_C, w_I, w_A\)</span> визначають відносну важливість критеріїв безпеки для конкретної системи при дотриманні умови нормування <span class="arithmatex">\(w_C + w_I + w_A = 1\)</span>, а величини <span class="arithmatex">\(I_{t, C}, I_{t, I}, I_{t, A} \in [0, 1]\)</span> відображають нормалізовані оцінки збитків. В екологічних системах найбільшу вагу має цілісність даних (<span class="arithmatex">\(w_I \approx 0,5\)</span>) та доступність (<span class="arithmatex">\(w_A \approx 0,4\)</span>), тоді як конфіденційність публічних показників має менший пріоритет (<span class="arithmatex">\(w_C \approx 0,1\)</span>).</p>
+<p>Початковий інтегральний ризик системи до впровадження спеціальних засобів захисту формалізується сумою ризиків за всіма актуальними загрозами:</p>
+<div class="arithmatex">\[R^{(0)} = \sum_{t \in \mathcal{T}} P_t \cdot I_t = \sum_{t \in \mathcal{T}} P_t \cdot \big( w_C I_{t, C} + w_I I_{t, I} + w_A I_{t, A} \big)\]</div>
+<p>де <span class="arithmatex">\(P_t \in [0, 1]\)</span> — ймовірність успішної реалізації загрози <span class="arithmatex">\(t\)</span>.</p>
+<p>Впровадження множини захисних заходів <span class="arithmatex">\(M \subseteq \mathcal{S}\)</span> (наприклад, перехід на протокол LwM2M з шифруванням DTLS, впровадження моделі контролю доступу ABAC, розгортання апаратних модулів довіри) знижує ймовірності загроз до <span class="arithmatex">\(P_t^{(M)}\)</span> та їхній потенційний вплив до <span class="arithmatex">\(I_t^{(M)}\)</span>. Залишковий ризик системи <span class="arithmatex">\(R^{(M)}\)</span> визначається як:</p>
+<div class="arithmatex">\[R^{(M)} = \sum_{t \in \mathcal{T}} P_t^{(M)} \cdot \big( w_C I_{t, C}^{(M)} + w_I I_{t, I}^{(M)} + w_A I_{t, A}^{(M)} \big)\]</div>
+<p>Сукупні фінансові витрати на реалізацію комплексу заходів захисту складаються з вартості окремих компонентів:</p>
+<div class="arithmatex">\[C(M) = \sum_{m \in M} C_m\]</div>
+<p>Економічна оптимізація комплексу кіберзахисту зводиться до задачі максимізації зниження ризику на одиницю витрачених ресурсів:</p>
+<div class="arithmatex">\[\max_{M \subseteq \mathcal{S}} \frac{R^{(0)} - R^{(M)}}{C(M)} \quad \text{при } C(M) \le B_{\text{security}}\]</div>
+<p>де константа <span class="arithmatex">\(B_{\text{security}}\)</span> визначає граничний бюджет, виділений муніципалітетом на захист інфраструктури моніторингу.</p>
+<p>Для систематизації моделей розрахунку екологічних індексів та оцінки ризиків сформовано порівняльну аналітичну таблицю.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Методологія / Модель</th>
+<th style="text-align: left;">Математична структура</th>
+<th style="text-align: left;">Цільове призначення в екології</th>
+<th style="text-align: left;">Основні припущення та обмеження</th>
+<th style="text-align: left;">Приклад з реальної практики</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Індекс якості повітря (US EPA AQI)</td>
+<td style="text-align: left;">Кусочно-лінійна інтерполяція брейкпоінтів: <span class="arithmatex">\(I = \frac{\Delta I}{\Delta C}(C - C_l) + I_l\)</span></td>
+<td style="text-align: left;">Оперативне інформування населення про інтегральну якість атмосфери</td>
+<td style="text-align: left;">Ігнорування синергетичного токсичного ефекту одночасної суміші газів</td>
+<td style="text-align: left;">Візуалізація AQI на онлайн-платформі КП «НДЦ» Кременчука</td>
+</tr>
+<tr>
+<td style="text-align: left;">Аналіз серійності (Streak Analysis)</td>
+<td style="text-align: left;">Ітераційний лічильник тривалості перевищень: <span class="arithmatex">\(\sum \mathbb{I}(X_t &gt; G) \ge K\)</span></td>
+<td style="text-align: left;">Виявлення довготривалих хронічних аварійних викидів промисловості</td>
+<td style="text-align: left;">Чутливість результату до вибору порогової довжини серії <span class="arithmatex">\(K\)</span></td>
+<td style="text-align: left;">Фіксація 3-годинного перевищення <span class="arithmatex">\(NO_2\)</span> біля автомагістралей</td>
+</tr>
+<tr>
+<td style="text-align: left;">Інформаційна оцінка кіберризику (CIA)</td>
+<td style="text-align: left;">Багатокритеріальна зважена згортка: <span class="arithmatex">\(R = \sum P_t (w_C I_C + w_I I_I + w_A I_A)\)</span></td>
+<td style="text-align: left;">Оптимізація витрат на криптографічний захист IoT-мережі</td>
+<td style="text-align: left;">Суб'єктивність експертної оцінки апріорних ймовірностей загроз <span class="arithmatex">\(P_t\)</span></td>
+<td style="text-align: left;">Обґрунтування впровадження протоколу LwM2M з DTLS на станціях</td>
+</tr>
+<tr>
+<td style="text-align: left;">Інтегральний індекс надійності (CRI)</td>
+<td style="text-align: left;">Зважена композиція метрик похибки та повноти даних</td>
+<td style="text-align: left;">Оцінка достовірності прогностичних ядер перед генерацією звітів</td>
+<td style="text-align: left;">Потребує наявності валідованих тестових ретроспективних рядів</td>
+<td style="text-align: left;">Верифікація прогнозів формальдегіду моделлю BATS у системі</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<blockquote>
+<p><strong>ТИПОВА ПОМИЛКА:</strong> Розрахунок підсумкового індексу якості повітря як звичайного незваженого середнього арифметичного значення субіндексів окремих забруднювачів: <span class="arithmatex">\(\text{AQI}_{\text{avg}} = \frac{1}{M}\sum I_j\)</span>. За такого підходу смертельно небезпечна концентрація хлору чи діоксиду сірки (<span class="arithmatex">\(I_{\text{SO2}} = 450\)</span>, категорія «катастрофа»), усереднена з чотирма іншими низькими показниками (<span class="arithmatex">\(I = 20\)</span>, категорія «чисте повітря»), дасть інтегральне значення <span class="arithmatex">\(\text{AQI} = (450 + 80)/5 = 106\)</span> («помірне забруднення»), що створить оманливе враження безпеки та призведе до масового токсичного ураження населення.</p>
+</blockquote>
+<hr />
+<blockquote>
+<p><strong>КОНТРОЛЬНЕ ПИТАННЯ:</strong> Під час натурних спостережень автоматична станція зафіксувала середньодобову концентрацію дрібнодисперсного пилу PM2.5 на рівні <span class="arithmatex">\(C_{\text{PM2.5}} = 42,0\text{ мкг/м}^3\)</span> та 1-годинну концентрацію діоксиду азоту <span class="arithmatex">\(C_{\text{NO2}} = 110\text{ мкг/м}^3\)</span>. Відповідно до нормативної шкали брейкпоінтів для PM2.5 діапазону <span class="arithmatex">\([35,5; \, 55,4]\text{ мкг/м}^3\)</span> відповідає шкала індексу <span class="arithmatex">\([101; \, 150]\)</span> (категорія «шкідливий для чутливих груп»). Для NO2 діапазону <span class="arithmatex">\([101; \, 360]\text{ мкг/м}^3\)</span> відповідає шкала <span class="arithmatex">\([101; \, 150]\)</span>. Розрахуйте точні значення субіндексів для обох речовин, визначте інтегральний індекс <span class="arithmatex">\(\text{AQI}_{\text{total}}\)</span> та вкажіть домінуючий забруднювач, що визначає рівень екологічної загрози.</p>
+</blockquote>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: Субіндекс для пилу становить <span class="arithmatex">\(I_{\text{PM2.5}} = 117\)</span>, субіндекс для діоксиду азоту становить <span class="arithmatex">\(I_{\text{NO2}} = 103\)</span>; інтегральний індекс якості повітря дорівнює <span class="arithmatex">\(\text{AQI}_{\text{total}} = 117\)</span>, а домінуючим забруднювачем є дрібнодисперсний пил PM2.5.</strong></p>
+<ol>
+<li>
+<p>Повне логічне та аналітичне обґрунтування:</p>
+</li>
+<li>
+<p>Розрахуємо субіндекс для PM2.5 при <span class="arithmatex">\(C = 42,0\text{ мкг/м}^3\)</span>, де <span class="arithmatex">\(C_{\text{low}} = 35,5\)</span>, <span class="arithmatex">\(C_{\text{high}} = 55,4\)</span>, <span class="arithmatex">\(I_{\text{low}} = 101\)</span>, <span class="arithmatex">\(I_{\text{high}} = 150\)</span>:
+     $<span class="arithmatex">\(I_{\text{PM2.5}} = \frac{150 - 101}{55,4 - 35,5} (42,0 - 35,5) + 101 = \frac{49}{19,9} \cdot 6,5 + 101 = 2,4623 \cdot 6,5 + 101 = 16,0 + 101 = 117\)</span>$</p>
+</li>
+<li>
+<p>Розрахуємо субіндекс для NO2 при <span class="arithmatex">\(C = 110\text{ мкг/м}^3\)</span>, де <span class="arithmatex">\(C_{\text{low}} = 101\)</span>, <span class="arithmatex">\(C_{\text{high}} = 360\)</span>, <span class="arithmatex">\(I_{\text{low}} = 101\)</span>, <span class="arithmatex">\(I_{\text{high}} = 150\)</span>:
+     $<span class="arithmatex">\(I_{\text{NO2}} = \frac{150 - 101}{360 - 101} (110 - 101) + 101 = \frac{49}{259} \cdot 9 + 101 = 0,1892 \cdot 9 + 101 = 1,7 + 101 \approx 103\)</span>$</p>
+</li>
+<li>
+<p>Згідно з математичним принципом визначення інтегрального індексу за максимальним значенням (Maximum Operator):
+     $<span class="arithmatex">\(\text{AQI}_{\text{total}} = \max(I_{\text{PM2.5}}, I_{\text{NO2}}) = \max(117, 103) = 117\)</span>$</p>
+</li>
+<li>
+<p>Отримане значення 117 потрапляє у категорію «Шкідливий для вразливих груп населення» (Unhealthy for Sensitive Groups). Оскільки <span class="arithmatex">\(I_{\text{PM2.5}} &gt; I_{\text{NO2}}\)</span>, саме дрібнодисперсний пил виступає головним лімітуючим фактором екологічного ризику (Responsible Pollutant), для якого система зобов'язана згенерувати цільові медичні попередження.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Розрахунок простого середнього <span class="arithmatex">\((117 + 103)/2 = 110\)</span> хоча й дає схожий числовий результат, є методологічно хибним, оскільки приховує реальний рівень токсичного удару конкретної пилової фракції.</p>
+</li>
+<li>
+<p>Вибір діоксиду азоту як домінуючого полютанта є помилкою, оскільки його концентрація <span class="arithmatex">\(110\text{ мкг/м}^3\)</span> знаходиться на самому початку небезпечного брейкпоінта, тоді як концентрація PM2.5 перебуває глибше всередині діапазону.</p>
+</li>
+</ol>
+</details>
+<hr />
+<h3 id="_3">Вказівки для самостійного осмислення</h3>
+<ol>
+<li>
+<p>Складіть математичну оптимізаційну модель вибору комплексу заходів інформаційної безпеки для муніципальної мережі екологічного моніторингу за методом гілок і меж, сформулювавши цільову функцію мінімізації залишкового ризику при лінійному обмеженні фінансового бюджету.</p>
+</li>
+<li>
+<p>Дослідіть чутливість алгоритму аналізу серійності (streak analysis) до вибору порогової кількості послідовних перевищень <span class="arithmatex">\(K\)</span> в умовах стохастичного шуму різної інтенсивності та визначте ймовірність виникнення хибної екологічної тривоги при виборі <span class="arithmatex">\(K = 2\)</span>.</p>
+</li>
+<li>
+<p>Порівняйте європейську шкалу індексу якості повітря (European Air Quality Index) із системою US EPA AQI та формалізуйте аналітичний алгоритм конвертації показників між цими міжнародними стандартами.</p>
+</li>
+</ol>
+<h2 id="2">2. Методологія та аналіз граничних умов. Автоматизована селекція часових моделей та когнітивна аналітика</h2>
+<h3 id="21-arima-bats">2.1. Порівняльний аналіз статистичних моделей ARIMA та BATS з автоматичним підбором параметрів на основі мінімізації похибки прогнозу</h3>
+<p>Забезпечення високої точності прогностичного ядра в муніципальних системах екологічного моніторингу ускладнюється тим, що різні хімічні домішки демонструють принципово відмінну часову поведінку. Концентрації пилу та оксидів нітрогену володіють вираженою сезонною періодичністю та стійким трендом, тоді як сполуки на кшталт діоксиду сірки чи бензолу мають стохастичну, імпульсну природу з тривалими інтервалами близьконульових фонових значень. Спроба використання єдиного універсального алгоритму для всіх параметрів неминуче призводить до втрати прогностичної сили системи, що актуалізує методологію <strong>автоматизованого вибору моделей (Automated Model Selection)</strong>.</p>
+<p>Класичним статистичним еталоном для короткострокового прогнозування є модель авторегресії інтегрованого ковзного середнього <strong>ARIMA(p, d, q)</strong>. Математична структура моделі описує значення часового ряду <span class="arithmatex">\(y_t\)</span> у момент часу <span class="arithmatex">\(t\)</span> через лінійну комбінацію його попередніх значень (авторегресійна частина порядку <span class="arithmatex">\(p\)</span>) та попередніх помилок прогнозу (частина ковзного середнього порядку <span class="arithmatex">\(q\)</span>):</p>
+<div class="arithmatex">\[y_t = c + \sum_{i=1}^{p} \phi_i y_{t-i} + \varepsilon_t + \sum_{j=1}^{q} \theta_j \varepsilon_{t-j}\]</div>
+<p>де параметр <span class="arithmatex">\(c\)</span> є константою, <span class="arithmatex">\(\phi_i\)</span> представляють коефіцієнти авторегресії, <span class="arithmatex">\(\theta_j\)</span> позначають коефіцієнти ковзного середнього, <span class="arithmatex">\(\varepsilon_t\)</span> є процесом білого шуму з нульовим математичним сподіванням і постійною дисперсією, а параметр <span class="arithmatex">\(d\)</span> визначає кратність взяття різниць для досягнення стаціонарності. Модель ARIMA є обчислювально ефективною для коротких часових рядів, проте її базові конфігурації зазнають труднощів при апроксимації нелінійних патернів та множинної нецілочисельної сезонності.</p>
+<p>Більш гнучкою альтернативою є модель <strong>BATS (Box-Cox transformation, ARMA errors, Trend, and Seasonal components)</strong>, яка інтегрує перетворення Бокса-Кокса для стабілізації нерівномірної дисперсії, модифікований демпфований тренд та тригонометричний гармонійний опис складних сезонних коливань за допомогою рядів Фур'є. Базовий рівень моделі BATS описується простором станів:</p>
+<div class="arithmatex">\[\hat{y}_t^{(\lambda)} = l_{t-1} + \phi b_{t-1} + \sum_{k=1}^{K} s_{t-k} + d_t\]</div>
+<p>де показник <span class="arithmatex">\(\lambda\)</span> задає параметр трансформації Бокса-Кокса, <span class="arithmatex">\(l_{t-1}\)</span> відображає локальний рівень ряду, <span class="arithmatex">\(b_{t-1}\)</span> детермінує тенденцію тренду з коефіцієнтом демпфування <span class="arithmatex">\(\phi \in (0, 1]\)</span>, <span class="arithmatex">\(s_{t-k}\)</span> позначає сезонні тригонометричні гармоніки, а <span class="arithmatex">\(d_t\)</span> моделює помилки як залишковий ARMA-процес. Оцінювання параметрів BATS реалізується в баєсівській парадигмі, що забезпечує адаптацію до невизначеності на малих вибірках.</p>
+<p>Алгоритм автоматичної селекції здійснює паралельне навчання сімейства конфігурацій ARIMA та BATS на навчальній вибірці з подальшим обчисленням критеріїв точності на відкладеному валідаційному інтервалі: середньої абсолютної помилки (MAE), середньоквадратичної помилки (MSE) та інформаційного критерію Акаіке (AIC):</p>
+<div class="arithmatex">\[\text{AIC} = 2k - 2\ln(\hat{L})\]</div>
+<p>де <span class="arithmatex">\(k\)</span> — кількість оцінюваних параметрів моделі, а <span class="arithmatex">\(\hat{L}\)</span> — максимальне значення функції правдоподібності. До прогностичного контуру муніципальної бази даних автоматично призначається та модель, яка мінімізує похибку MSE на валідаційному тесті.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    participant Engine as Модуль Sktime / R
+    participant AutoSelect as Селектор моделей (Model Selector)
+    participant ModelARIMA as Прогностичне ядро ARIMA
+    participant ModelBATS as Прогностичне ядро BATS
+    participant VLM as Когнітивний VLM-агент (LLaVA-v1.5)
+    participant LLM as Експертний LLM-агент (DeepSeek-R1)
+    actor Ecologist as Муніципальний еколог-аналітик
+
+    Engine-&gt;&gt;AutoSelect: Передача стандартизованого ряду токсиканта
+    par Паралельний тренінг моделей
+        AutoSelect-&gt;&gt;ModelARIMA: Оптимізація параметрів (p, d, q) за мінімумом AIC
+        AutoSelect-&gt;&gt;ModelBATS: Баєсівська оптимізація гармонік Фур'є
+    end
+    ModelARIMA--&gt;&gt;AutoSelect: Прогноз на 24 міс. + Похибка MSE_ARIMA
+    ModelBATS--&gt;&gt;AutoSelect: Прогноз на 24 міс. + Похибка MSE_BATS
+    AutoSelect-&gt;&gt;AutoSelect: Порівняння метрик: Model_opt = argmin(MSE)
+    AutoSelect-&gt;&gt;VLM: Передача графіка прогнозу та теплової карти залишків
+    VLM-&gt;&gt;VLM: Мультимодальний аналіз геометричних аномалій графіка
+    VLM-&gt;&gt;LLM: Вектор візуальних патернів + таблиця числових метрик
+    LLM-&gt;&gt;LLM: RAG-синтез експертного висновку за Постановою № 827
+    LLM--&gt;&gt;Ecologist: Готовий вербальний аналітичний звіт та рекомендації</code></pre>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> При порівнянні моделей на 16-річній вибірці Кременчуцької агломерації алгоритм автоматичної селекції визначив модель BATS оптимальною для пилу (MSE 0,0242 проти 0,0354 у ARIMA), монооксиду вуглецю (MSE 0,0062 проти 0,0126) та формальдегіду (MSE 1,4744 проти 7,7984). Водночас для діоксиду сірки кращу точність продемонструвала модель ARIMA (MSE 0,00123 проти 0,00157 у BATS), що підтвердило неможливість застосування єдиного алгоритму та обґрунтувало необхідність динамічного перемикання ядер.</p>
+</blockquote>
+<hr />
+<h3 id="22-vision-language-vlm-llm">2.2. Архітектура когнітивного експертного агента на базі мультимодальних моделей Vision-Language (VLM) та LLM для експертної оцінки графіків і числових метрик</h3>
+<p>Зростання розмірності та частоти надходження екологічних даних формує інформаційне перевантаження диспетчерських служб. Оператор не в змозі вручну аналізувати сотні графіків часових рядів, матриць просторової кореляції та таблиць прогностичних похибок, що надходять від десятків вимірювальних постів. Для автоматизації фахової інтерпретації розроблено архітектуру <strong>когнітивного аналітичного агента</strong>, що поєднує мультимодальну модель комп'ютерного зору (Vision-Language Model, VLM) та велику мовну модель (Large Language Model, LLM).</p>
+<p>Вхідний простір даних агента складається з двох інформаційних доменів: матриці числових метрик похибок <span class="arithmatex">\(\mathcal{M} = \{\text{MAE}, \text{MSE}, \text{RMSE}, R^2\}\)</span> та множини графічних репрезентацій <span class="arithmatex">\(\mathcal{G} = \{g_1, g_2, \dots, g_m\}\)</span>, що включає графіки фактичних і спрогнозованих рядів, гістограми розподілу залишків та картограми інтерпольованих полів.</p>
+<p>Аналітичний процес функціонування когнітивного агента формалізується триетапним математико-алгоритмічним контуром:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\text{Крок 1 (Оцінка числових похибок):} &amp; \quad \mathcal{M}_{\text{eval}} = \Big\langle \frac{1}{n} \sum_{i=1}^n |y_i - \hat{y}_i|, \; \frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2, \; 1 - \frac{\sum (y_i - \hat{y}_i)^2}{\sum (y_i - \bar{y})^2} \Big\rangle \\
+\text{Крок 2 (Мультимодальний аналіз графіка):} &amp; \quad \mathcal{A}_{\text{vis}} = f_{\text{VLM}}\big(g_k, \, \text{Prompt}_{\text{vision}}\big), \quad g_k \in \mathcal{G} \\
+\text{Крок 3 (Експертний RAG-синтез):} &amp; \quad \text{Report} = f_{\text{LLM}}\big(\mathcal{M}_{\text{eval}}, \, \mathcal{A}_{\text{vis}}, \, \mathcal{K}_{\text{retrieved}}(Q)\big)
+\end{aligned}
+\]</div>
+<p>де функціональні складові контуру мають наступне призначення:</p>
+<ul>
+<li>
+<p>Оператор <span class="arithmatex">\(\mathcal{M}_{\text{eval}}\)</span> формує вектор метрик, який оцінює якість збігу моделі з тестовими даними.</p>
+</li>
+<li>
+<p>Функція <span class="arithmatex">\(f_{\text{VLM}}(\cdot)\)</span>, реалізована на базі відкритої мультимодальної моделі <strong>LLaVA-v1.5-7b</strong>, приймає графічні зображення часових рядів <span class="arithmatex">\(g_k\)</span> та текстовий промпт, виконуючи детектування геометричних аномалій: наявності виродження прогнозу в горизонтальну пряму, розходження фаз сезонності або наявності важких хвостів у розподілі похибок.</p>
+</li>
+<li>
+<p>Функція <span class="arithmatex">\(f_{\text{LLM}}(\cdot)\)</span>, реалізована на базі мовної моделі логічного виводу <strong>DeepSeek-R1-distill-llama-8b</strong>, об'єднує числовий вектор, візуальні характеристики <span class="arithmatex">\(\mathcal{A}_{\text{vis}}\)</span> та зовнішні нормативні документи <span class="arithmatex">\(\mathcal{K}_{\text{retrieved}}\)</span>, синтезуючи цілісний структурований висновок із рекомендаціями щодо необхідності коригування параметрів або направлення інспекції.</p>
+</li>
+</ul>
+<hr />
+<h3 id="23-rag">2.3. Імплементація технології пошуково-доповненої генерації (RAG) для вербального синтезу контекстних управлінських рекомендацій</h3>
+<p>Застосування стандартних мовних моделей у критичних інфраструктурних системах стикається з проблемою відсутності актуальних специфічних знань про нормативні регламенти та технологічні особливості конкретного регіону. Крім того, традиційні нейромережі схильні генерувати узагальнені відповіді, позбавлені точних юридичних посилань.</p>
+<p>Методологічним вирішенням є інтеграція архітектури <strong>пошуково-доповненої генерації (Retrieval-Augmented Generation, RAG)</strong>. Сутність підходу полягає в тому, що мовна модель не спирається виключно на власну внутрішню параметричну пам'ять, а перед формуванням відповіді виконує семантичний пошук релевантних фрагментів знань у спеціалізованій векторній базі даних (Vector Database), де проіндексовано текст Постанови КМУ № 827, Директиви ЄС 2024/2881, паспорти викидів підприємств та історичні звіти лабораторій.</p>
+<p>Процес формування рекомендацій за схемою RAG реалізується за такими кроками:</p>
+<ol>
+<li>
+<p>Запит системи <span class="arithmatex">\(Q\)</span>, що містить поточні рівні перевищення ГДК та прогноз на 24 години, перетворюється моделлю ембеддингу (Text Embedding Model) у багатовимірний семантичний вектор <span class="arithmatex">\(\mathbf{e}_Q \in \mathbb{R}^d\)</span>.</p>
+</li>
+<li>
+<p>Векторна СУБД (наприклад, ChromaDB або Milvus) здійснює пошук <span class="arithmatex">\(k\)</span> найбільш релевантних нормативних контекстів за критерієм косинусної схожості:</p>
+</li>
+</ol>
+<div class="arithmatex">\[\text{Sim}(\mathbf{e}_Q, \mathbf{e}_{D_i}) = \frac{\mathbf{e}_Q \cdot \mathbf{e}_{D_i}}{\|\mathbf{e}_Q\| \cdot \|\mathbf{e}_{D_i}\|}\]</div>
+<ol>
+<li>
+<p>Знайдені текстові фрагменти законів та інструкцій підставляються у системний промпт мовної моделі у ролі контекстних обмежень.</p>
+</li>
+<li>
+<p>Модель <span class="arithmatex">\(f_{\text{LLM}}\)</span> генерує фінальний текст управлінського рішення, що містить точні посилання на пункти нормативно-правових актів та конкретні технологічні приписи для підприємств-забруднювачів.</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>ВАЖЛИВО:</strong> Архітектура RAG в екологічних системах повинна використовувати строге правило заборони генерації знань за межами контексту (Zero-Shot Constraint with Grounding). Якщо в наданих нормативних документах відсутній регламент для зафіксованої хімічної сполуки, когнітивний агент зобов'язаний сформувати системну помилку та передати запит експерту-людині, повністю виключаючи генерацію неперевірених юридичних директив.</p>
+</blockquote>
+<hr />
+<h3 id="24-r2">2.4. Ризик виникнення галюцинацій мовних моделей, відсутність причинно-наслідкового виводу та проблема інтерпретації від'ємних значень коефіцієнта детермінації R²</h3>
+<p>Практичне впровадження штучного інтелекту в контури екологічної безпеки виявляє критичні обмеження генеративних моделей. Головним ризиком є явище <strong>нейромережевих галюцинацій (LLM Hallucinations)</strong>, за якого модель формує зовні правдоподібні, але фактологічно хибні або фізично неможливі твердження. Мовні моделі є ймовірнісними генераторами послідовностей токенів, позбавленими глибинного фізичного розуміння законів збереження маси, термодинаміки та атмосферної хімії. Вони здійснюють кореляційне розпізнавання патернів у тексті, але принципово не здатні до самостійного причинно-наслідкового виводу (Causal Inference).</p>
+<p>Яскравим проявом обмежень когнітивних агентів є <strong>проблема інтерпретації від'ємних значень коефіцієнта детермінації (<span class="arithmatex">\(R^2 &lt; 0\)</span>)</strong>. Класична формула коефіцієнта детермінації має вигляд:</p>
+<div class="arithmatex">\[R^2 = 1 - \frac{\sum_{i=1}^n (y_i - \hat{y}_i)^2}{\sum_{i=1}^n (y_i - \bar{y})^2} = 1 - \frac{\text{MSE}}{\text{Var}(y)}\]</div>
+<p>У базових курсах статистики розглядається випадок оцінки лінійної регресії на навчальній вибірці, де значення завжди обмежене діапазоном <span class="arithmatex">\(0 \le R^2 \le 1\)</span>. У реальних експериментах із прогнозування нестаціонарних екологічних рядів оцінка <span class="arithmatex">\(R^2\)</span> виконується на відкладених тестових даних (Out-Of-Sample Validation). Якщо часовий ряд володіє високою волатильністю (наприклад, концентрація діоксиду азоту зі стрибками емісій), прогностична модель із неоптимальними параметрами може згенерувати прогноз, середньоквадратична похибка якого перевищує дисперсію самого тестового ряду (<span class="arithmatex">\(\text{MSE} &gt; \text{Var}(y)\)</span>). У цьому випадку чисельне значення коефіцієнта детермінації стає від'ємним (наприклад, <span class="arithmatex">\(R^2 = -1,85\)</span> або <span class="arithmatex">\(R^2 = -21,45\)</span>).</p>
+<p>Математично від'ємне значення <span class="arithmatex">\(R^2\)</span> має однозначну фізичну інтерпретацію: модель працює гірше, ніж тривіальна константа, що дорівнює історичному середньому значенню ряду. Проте під час тестування відкритої мовної моделі було зафіксовано системну галюцинацію: агент видав експертний висновок про те, що «від'ємне значення <span class="arithmatex">\(R^2\)</span> є математично неможливим і свідчить про критичну помилку програмного коду або збій комп'ютера». Агент описав поверхневий симптом, але виявився нездатним встановити причинно-наслідковий зв'язок між високою дисперсією процесу, нестаціонарністю та якістю налаштування гіперпараметрів моделі.</p>
+<p>Для систематизації та зіставлення методів часового моделювання та когнітивної аналітики сформовано порівняльну матрицю.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Аналітична технологія</th>
+<th style="text-align: left;">Математична база та спосіб інференсу</th>
+<th style="text-align: left;">Потреба в навчальних ресурсах</th>
+<th style="text-align: left;">Рівень інтерпретованості результатів</th>
+<th style="text-align: left;">Складність впровадження</th>
+<th style="text-align: left;">Критичні ризики та обмеження методології</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Авторегресія ARIMA</td>
+<td style="text-align: left;">Лінійна оптимізація коефіцієнтів методом максимальної правдоподібності</td>
+<td style="text-align: left;">Мінімальна; лічені секунди на стандартному CPU</td>
+<td style="text-align: left;">Абсолютна; параметри мають прямий статистичний зміст</td>
+<td style="text-align: left;">Низька; реалізована у всіх статистичних пакетах</td>
+<td style="text-align: left;">Нездатність моделювати складні нелінійні патерни та розриви тренду</td>
+</tr>
+<tr>
+<td style="text-align: left;">Стан-просторова модель BATS</td>
+<td style="text-align: left;">Баєсівська фільтрація, Box-Cox, тригонометричні ряди Фур'є</td>
+<td style="text-align: left;">Середня; вимагає чисельної оптимізації простору станів</td>
+<td style="text-align: left;">Висока; розклад на детерміновані гармоніки</td>
+<td style="text-align: left;">Середня; вимагає попереднього підбору періодів</td>
+<td style="text-align: left;">Схильність до виродження прогнозу в пряму лінію при зашумлених рядах</td>
+</tr>
+<tr>
+<td style="text-align: left;">Прогностична модель Prophet</td>
+<td style="text-align: left;">Адитивна нелінійна регресія з кусочно-лінійними трендами</td>
+<td style="text-align: left;">Помірна; оптимізація алгоритмом L-BFGS у просторі Stan</td>
+<td style="text-align: left;">Висока; візуалізація окремих компонентів тренду</td>
+<td style="text-align: left;">Низька; спрощений прикладний API</td>
+<td style="text-align: left;">Переоцінка регулярності календарних свят у промислових емісіях</td>
+</tr>
+<tr>
+<td style="text-align: left;">Мультимодальний VLM-агент</td>
+<td style="text-align: left;">Нейромережева увага над токенами тексту та растровими патчами графіків</td>
+<td style="text-align: left;">Висока; потребує відеокарти з VRAM від 12–16 Гбайт</td>
+<td style="text-align: left;">Низька («чорна скринька» генеративного ШІ)</td>
+<td style="text-align: left;">Висока; інтеграція пайплайнів LM Studio / Ollama</td>
+<td style="text-align: left;">Поверхневий дескриптивний аналіз без розуміння фізичних законів дисперсії</td>
+</tr>
+<tr>
+<td style="text-align: left;">Мовна система RAG</td>
+<td style="text-align: left;">Векторний пошук у базі нормативів + генеративний синтез LLM</td>
+<td style="text-align: left;">Висока; робота векторної СУБД та ембеддинг-моделей</td>
+<td style="text-align: left;">Висока; прямі посилання на джерела знань</td>
+<td style="text-align: left;">Дуже висока; вимагає якісної попередньої розмітки законів</td>
+<td style="text-align: left;">Ризик семантичного розриву та підстановки нерелевантного юридичного контексту</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> При автоматизованому аналізі 24-місячного прогнозу формальдегіду для поста № 1 (вул. Молодіжна, м. Кременчук) модель ARIMA згенерувала прогноз у вигляді строго горизонтальної прямої лінії з похибкою MSE = 0,95. Мультимодальний агент на базі LLaVA-v1.5 успішно детектував цей графічний патерн як «стабілізацію процесу», проте інтегрована модель DeepSeek-R1 за допомогою RAG-верифікації сформувала критичне попередження про те, що пряма лінія є артефактом згасання авторегресійних коефіцієнтів за відсутності виділеного тренду, порекомендувавши перехід на модель BATS.</p>
+</blockquote>
+<hr />
+<blockquote>
+<p><strong>КОНТРОЛЬНЕ ПИТАННЯ:</strong> Під час тестування моделі прогнозування вмісту оксиду вуглецю на 7-місячній відкладеній вибірці отримано такі статистичні показники: вибіркова дисперсія тестового ряду становить <span class="arithmatex">\(\text{Var}(y_{\text{test}}) = 0,0008\text{ (мг/м}^3)^2\)</span>, а середньоквадратична помилка моделі склала <span class="arithmatex">\(\text{MSE} = 0,0051\text{ (мг/м}^3)^2\)</span>. Обчисліть точне значення коефіцієнта детермінації <span class="arithmatex">\(R^2\)</span>, інтерпретуйте отриманий результат із погляду математичної теорії та поясніть, чому некваліфікована мовна модель може назвати цей розрахунок помилковим.</p>
+</blockquote>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: Коефіцієнт детермінації становить <span class="arithmatex">\(R^2 = -5,375\)</span>; це свідчить про те, що модель дає в 6,375 раза більшу помилку, ніж просте використання константного середнього значення; LLM сприймає це як помилку через плутанину між теоретичним визначенням <span class="arithmatex">\(R^2\)</span> на навчальних даних та емпіричним розрахунком на тестових вибірках.</strong></p>
+<ol>
+<li>
+<p>Повне логічне та аналітичне обґрунтування:</p>
+</li>
+<li>
+<p>Згідно з класичною формулою оцінки якості регресії на незалежній вибірці:
+     $<span class="arithmatex">\(R^2 = 1 - \frac{\text{MSE}}{\text{Var}(y_{\text{test}})} = 1 - \frac{\frac{1}{n} \sum (y_i - \hat{y}_i)^2}{\frac{1}{n} \sum (y_i - \bar{y}_{\text{test}})^2}\)</span>$</p>
+</li>
+<li>
+<p>Підставимо числові значення з умови завдання:
+     $<span class="arithmatex">\(R^2 = 1 - \frac{0,0051}{0,0008} = 1 - 6,375 = -5,375\)</span>$</p>
+</li>
+<li>
+<p>Математичний зміст: сума квадратів похибок прогнозу <span class="arithmatex">\(\sum (y_i - \hat{y}_i)^2\)</span> перевищує загальну суму квадратів відхилень ряду від його середнього <span class="arithmatex">\(\sum (y_i - \bar{y})^2\)</span> у 6,375 раза. Це означає, що якби дослідник взагалі не використовував жодної математичної моделі, а просто прогнозував концентрацію константою <span class="arithmatex">\(\hat{y} = \bar{y}\)</span>, помилка прогнозування була б ушестеро меншою. Модель виявилася повністю неадекватною динаміці тестового ряду.</p>
+</li>
+<li>
+<p>Причина помилкової інтерпретації мовною моделлю: у навчальних текстах для LLM домінує твердження з класичної економетрики про те, що «коефіцієнт детермінації є квадратом коефіцієнта множинної кореляції, тому <span class="arithmatex">\(R^2 \in [0, 1]\)</span>». Це твердження є справедливим виключно для лінійного МНК на навчальній вибірці з включеною константою. За відсутності глибокого математичного виводу мовна модель не розуміє контексту валідації на тестових рядах поза вибіркою (Out-Of-Sample) і галюцинує про «неможливість від'ємного числа».</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Припущення, що <span class="arithmatex">\(R^2\)</span> необхідно взяти по модулю (<span class="arithmatex">\(|-5,375| = 5,375\)</span>), є грубою математичною помилкою, оскільки коефіцієнт детермінації не може перевищувати одиницю.</p>
+</li>
+<li>
+<p>Висновок про те, що дисперсія розрахована невірно через мале числове значення (<span class="arithmatex">\(0,0008\)</span>), є хибним, оскільки концентрації газів у мг/м³ мають природний малий числовий масштаб.</p>
+</li>
+</ol>
+</details>
+<hr />
+<h3 id="_4">Вказівки для самостійного осмислення</h3>
+<ol>
+<li>
+<p>Сформулюйте математичні умови, за яких інформаційний критерій Акаіке (AIC) надає перевагу моделі з більшою кількістю параметрів над простою авторегресією, та поясніть механізм штрафування складності моделі за Оккамом.</p>
+</li>
+<li>
+<p>Проаналізуйте архітектуру мультимодального промпту для моделі комп'ютерного зору LLaVA, спрямованого на верифікацію відсутності витоку даних із майбутнього (Data Leakage) при візуальній оцінці графіків крос-валідації часових рядів.</p>
+</li>
+<li>
+<p>Розробіть структуру векторної бази даних для системи RAG муніципального моніторингу, визначивши стратегію розбиття нормативних екологічних актів на смислові чанки (Chunking Strategy) для мінімізації втрати юридичного контексту.</p>
+</li>
+</ol>
+<h2 id="3">3. Практичний індустріальний / фаховий кейс. Розробка інтелектуальної платформи оперативного екоменеджменту</h2>
+<h3 id="31-sktime-rshiny-llm-">3.1. Комплексний фаховий кейс. Впровадження автоматизованої системи прогнозування перевищень нормативів якості повітря в Кременчуцькій агломерації з використанням бібліотек Sktime, R/Shiny та когнітивного LLM-агента</h3>
+<h4 id="_5">Постановка задачі / ситуації</h4>
+<p>Кременчуцька промислова агломерація потерпає від хронічного забруднення приземного шару атмосфери формальдегідом (<span class="arithmatex">\(HCHO\)</span>), концентрації якого за даними стаціонарних постів моніторингу регулярно перевищують рівень середньодобової гранично допустимої концентрації у 2–4 рази, а в періоди літніх температурних аномалій фіксуються пікові сплески понад 8–10 ГДК. На балансі муніципального комунального підприємства «НДЦ» накопичено ретроспективну базу щомісячних спостережень за період 2008–2024 років (<span class="arithmatex">\(T = 192\)</span> місяці) для чотирьох стаціонарних лабораторій міста. Проте існуючий регламент обробки даних базувався на пасивному ручному внесенні записів у таблиці Excel без предиктивного аналізу, що унеможливлювало завчасне попередження органів охорони здоров'я та впровадження регуляторних обмежень для підприємств-забруднювачів (ПАТ «Укртатнафта», Кременчуцький завод технічного вуглецю).</p>
+<p>Для розв'язання проблеми здійснено розробку та впровадження автоматизованої інформаційної системи предиктивного моніторингу на основі архітектури DPPDMext. Програмний комплекс об'єднує бібліотеку аналізу часових рядів <code>sktime</code> (Python), вебінтерфейс візуалізації на базі <code>R/Shiny</code> та локально розгорнутий когнітивний модуль на основі мовної моделі логічного виводу DeepSeek-R1-distill-llama-8b, підсилений технологією RAG із векторною базою нормативних актів (Постанова КМУ № 827). Головне інженерне завдання полягає в автоматичній селекції оптимальної моделі прогнозування між ARIMA та BATS на 24-місячний горизонт (до 2026 року), проведенні streak-аналізу очікуваних серій перевищень нормативів та генерації юридично обґрунтованого експертного звіту.</p>
+<p>Вхідні параметри моделювання, часові характеристики та похибки наведено в таблиці нижче.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Параметр системи / моделі</th>
+<th style="text-align: left;">Одиниця виміру</th>
+<th style="text-align: left;">Числове значення</th>
+<th style="text-align: left;">Експлуатаційний та аналітичний контекст</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Тривалість навчальної вибірки (<span class="arithmatex">\(T_{\text{train}}\)</span>)</td>
+<td style="text-align: left;">місяців</td>
+<td style="text-align: left;">168</td>
+<td style="text-align: left;">Спостереження з серпня 2008 по серпень 2022 року</td>
+</tr>
+<tr>
+<td style="text-align: left;">Тривалість тестової вибірки (<span class="arithmatex">\(T_{\text{test}}\)</span>)</td>
+<td style="text-align: left;">місяців</td>
+<td style="text-align: left;">24</td>
+<td style="text-align: left;">Відкладена вибірка (вересень 2022 – серпень 2024 рр.)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Горизонт прогнозування (<span class="arithmatex">\(H\)</span>)</td>
+<td style="text-align: left;">місяців</td>
+<td style="text-align: left;">24</td>
+<td style="text-align: left;">Проекція концентрацій на період 2024–2026 років</td>
+</tr>
+<tr>
+<td style="text-align: left;">Вибіркова дисперсія тесту (<span class="arithmatex">\(\text{Var}(y_{\text{test}})\)</span>)</td>
+<td style="text-align: left;"><span class="arithmatex">\((\text{ГДК})^2\)</span></td>
+<td style="text-align: left;">1,550</td>
+<td style="text-align: left;">Реальна варіативність формальдегіду на тестовому проміжку</td>
+</tr>
+<tr>
+<td style="text-align: left;">Середньоквадратична похибка моделі BATS (<span class="arithmatex">\(\text{MSE}_{\text{BATS}}\)</span>)</td>
+<td style="text-align: left;"><span class="arithmatex">\((\text{ГДК})^2\)</span></td>
+<td style="text-align: left;">1,474</td>
+<td style="text-align: left;">Усереднений показник за стаціонарними постами Кременчука</td>
+</tr>
+<tr>
+<td style="text-align: left;">Середньоквадратична похибка моделі ARIMA (<span class="arithmatex">\(\text{MSE}_{\text{ARIMA}}\)</span>)</td>
+<td style="text-align: left;"><span class="arithmatex">\((\text{ГДК})^2\)</span></td>
+<td style="text-align: left;">7,798</td>
+<td style="text-align: left;">Показник моделі авторегресії з автоматичним підбором <span class="arithmatex">\(p, d, q\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Поріг екологічної небезпеки за формальдегідом (<span class="arithmatex">\(G\)</span>)</td>
+<td style="text-align: left;">кратності ГДК</td>
+<td style="text-align: left;">2,00</td>
+<td style="text-align: left;">Критична межа встановлення помаранчевого рівня AQI</td>
+</tr>
+<tr>
+<td style="text-align: left;">Поріг неперервної серійності (<span class="arithmatex">\(K\)</span>)</td>
+<td style="text-align: left;">місяців</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Мінімальна тривалість хронічної небезпечної події (streak)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Апаратна обчислювальна база</td>
+<td style="text-align: left;">–</td>
+<td style="text-align: left;">NVIDIA RTX 3090</td>
+<td style="text-align: left;">24 ГБ VRAM для інференсу локальної моделі DeepSeek-R1</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["Ретроспективна вибірка формальдегіду (2008–2024)"] --&gt; B["Розбиття на Train (85%) та Test (15%) у бібліотеці Sktime"]
+    B --&gt; C["Паралельне навчання: ARIMA(p,d,q) та BATS"]
+    C --&gt; D["Оцінка похибок на Test: MSE_BATS = 1.474 проти MSE_ARIMA = 7.798"]
+    D --&gt; E["Автоматична селекція: затвердження моделі BATS для прогнозу на 24 міс."]
+    E --&gt; F["Streak-аналіз прогнозу: виявлення серій C &gt; 2.0 ГДК тривалістю &gt;= 3 міс."]
+    F --&gt; G["Формування JSON-профілю метрик для R/Shiny інтерфейсу"]
+    G --&gt; H["Семантичний запит до RAG-бази Постанови КМУ № 827 (ChromaDB)"]
+    H --&gt; I["Генерація експертного висновку моделлю DeepSeek-R1"]
+    I --&gt; J["Публікація офіційного аналітичного звіту для муніципалітету"]</code></pre>
+<h4 id="_6">Покроковий аналіз та розв'язок</h4>
+<h5 id="1">Крок 1. Бенчмаркінг моделей та автоматична селекція прогностичного ядра</h5>
+<p>У бібліотеці <code>sktime</code> виконано зіставлення точності моделей ARIMA та BATS на тестовому інтервалі <span class="arithmatex">\(T_{\text{test}} = 24\)</span> місяці. Розрахуємо коефіцієнт детермінації <span class="arithmatex">\(R^2\)</span> для обох моделей за формулою:</p>
+<div class="arithmatex">\[R^2 = 1 - \frac{\text{MSE}}{\text{Var}(y_{\text{test}})}\]</div>
+<p>Для моделі BATS при <span class="arithmatex">\(\text{MSE}_{\text{BATS}} = 1,474\text{ (ГДК)}^2\)</span>:</p>
+<div class="arithmatex">\[R_{\text{BATS}}^2 = 1 - \frac{1,474}{1,550} = 1 - 0,951 = +0,049 \quad (4,9\%)\]</div>
+<p>Для моделі ARIMA при <span class="arithmatex">\(\text{MSE}_{\text{ARIMA}} = 7,798\text{ (ГДК)}^2\)</span>:</p>
+<div class="arithmatex">\[R_{\text{ARIMA}}^2 = 1 - \frac{7,798}{1,550} = 1 - 5,031 = -4,031\]</div>
+<p>Модель ARIMA зазнала повної деградації (<span class="arithmatex">\(R^2 = -4,031\)</span>), оскільки її прогноз через складну нелінійність процесу виродився у пряму лінію, похибка якої в 5 разів перевищила дисперсію спостережень. Натомість модель BATS успішно врахувала тригонометричну сезонність і нелінійність завдяки перетворенню Бокса-Кокса, показавши позитивне значення <span class="arithmatex">\(R^2\)</span> та зменшивши середньоквадратичну помилку у 5,3 раза. Селектор інформаційної системи автоматично обирає ядро <strong>BATS</strong> для екстраполяції на 2024–2026 роки.</p>
+<h5 id="2-streak-">Крок 2. Предиктивний streak-аналіз тривалості перевищень нормативу</h5>
+<p>Згенерований моделлю BATS 24-місячний прогноз формальдегіду <span class="arithmatex">\(\hat{y}_t\)</span> підлягає перевірці на формування хронічних небезпечних періодів. Задамо індикаторну функцію перевищення подвоєного нормативу <span class="arithmatex">\(G = 2,0\text{ ГДК}\)</span>:</p>
+<div class="arithmatex">\[P_t = \begin{cases} 
+1, &amp; \text{якщо } \hat{y}_t &gt; 2,00\text{ ГДК} \\ 
+0, &amp; \text{якщо } \hat{y}_t \le 2,00\text{ ГДК} 
+\end{cases}\]</div>
+<p>За результатами прогнозування отримано бінарний вектор для періоду з травня по вересень 2025 року:</p>
+<div class="arithmatex">\[P_{\text{трав}} = 1, \quad P_{\text{черв}} = 1, \quad P_{\text{лип}} = 1, \quad P_{\text{серп}} = 1, \quad P_{\text{вер}} = 0\]</div>
+<p>Поточний лічильник неперервності акумулює значення <span class="arithmatex">\(\text{streak} = 4\)</span> місяці поспіль. Оскільки порогове значення становить <span class="arithmatex">\(K = 3\)</span>, алгоритм фіксує виникнення тривалого небезпечного інциденту:</p>
+<div class="arithmatex">\[L_{\text{HCHO}} = 1 \quad (\text{тривалість } 4 \text{ місяці: травень–серпень 2025})\]</div>
+<h5 id="3_1">Крок 3. Розрахунок інтегрального індексу екологічного ризику на прогностичному горизонті</h5>
+<p>Розрахуємо середню частоту перевищення нормативу <span class="arithmatex">\(R_{\text{post}}\)</span> для досліджуваного поста на 24-місячному горизонті, якщо сумарна кількість місяців із концентрацією <span class="arithmatex">\(\hat{y}_t &gt; 1,0\text{ ГДК}\)</span> склала <span class="arithmatex">\(C_{\text{HCHO}} = 18\)</span>:</p>
+<div class="arithmatex">\[R_{\text{post}} = \frac{C_{\text{HCHO}}}{H} = \frac{18}{24} = 0,75 \quad (75\%)\]</div>
+<p>Це означає, що протягом трьох чвертей прогнозованого періоду мешканці району піддаватимуться хронічному впливу підвищених концентрацій канцерогенного формальдегіду.</p>
+<h5 id="4-rag-llm-">Крок 4. RAG-синтез експертного рішення когнітивним LLM-агентом</h5>
+<p>Зведені результати розрахунків передаються у модуль RAG. На основі семантичного співпадіння в системі ChromaDB вилучаються положення статті 11 Постанови КМУ № 827 щодо запровадження спеціальних режимів роботи підприємств у періоди несприятливих метеорологічних умов (НМУ). Модель DeepSeek-R1 формує структурований висновок:</p>
+<p>«За результатами моделювання BATS у період травень–серпень 2025 року прогнозується стійка серія перевищення нормативів формальдегіду тривалістю 4 місяці з максимумом 3,2 ГДК. Відповідно до вимог Постанови КМУ № 827, муніципалітету рекомендовано завчасно зобов'язати хімічні виробництва Північного промвузла зменшити обсяги регенерації смол на 30% у літні місяці та перенаправити транзитний вантажний автотранспорт в обхід вулиці Молодіжної».</p>
+<h4 id="_7">Інтерпретація результатів та альтернативні сценарії</h4>
+<p>Інтеграція математичного ядра Sktime з когнітивним агентом забезпечила перехід від констатації минулих збитків до прескриптивного управління: муніципальні служби отримали точні часові межі прогнозованої екологічної кризи за 10 місяців до її фактичного настання, що дає змогу реалізувати превентивні технологічні обмеження на промислових об'єктах.</p>
+<p>Якби вхідні дані часового ряду характеризувалися відсутністю сезонності та домінуванням короткочасних імпульсних стрибків (як у випадку діоксиду сірки <span class="arithmatex">\(SO_2\)</span>), селектор моделей віддав би перевагу алгоритму ARIMA(<span class="arithmatex">\(1, 0, 1\)</span>), оскільки модель BATS у таких умовах намагається підібрати неіснуючі тригонометричні гармоніки, що призводить до зростання помилки на тесті на 40–60%. У такому альтернативному сценарії streak-аналіз показав би значення <span class="arithmatex">\(L = 0\)</span> (відсутність тривалих серій), а LLM-агент згенерував би рекомендацію щодо встановлення індикативних локальних газоаналізаторів замість введення довгострокових загальноміських обмежень на виробництво.</p>
+<hr />
+<h3 id="32">3.2. Зведена довідкова система лекції</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Термін / Концепція</th>
+<th style="text-align: left;">Формалізація / Сутність</th>
+<th style="text-align: left;">Реальний кейс застосування</th>
+<th style="text-align: left;">Основне обмеження / Ризик</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Парадигма DPPDMext</td>
+<td style="text-align: left;">Кортежний цикл аналітики: <span class="arithmatex">\(\text{DPPDMext} = \langle A, Q, M, E, P, F \rangle\)</span></td>
+<td style="text-align: left;">Архітектура цифрового сервісу моніторингу КП «НДЦ» Кременчука</td>
+<td style="text-align: left;">Потреба у високій інтеграції різнорідних програмних модулів</td>
+</tr>
+<tr>
+<td style="text-align: left;">Модель BATS</td>
+<td style="text-align: left;">Баєсівська стан-просторова регресія з Box-Cox та гармоніками Фур'є</td>
+<td style="text-align: left;">Прогнозування формальдегіду та пилу з комплексною сезонністю</td>
+<td style="text-align: left;">Підвищені обчислювальні витрати баєсівського оцінювання</td>
+</tr>
+<tr>
+<td style="text-align: left;">Авторегресія ARIMA</td>
+<td style="text-align: left;">Лінійна стохастична модель часового ряду: <span class="arithmatex">\(\Phi(B) \nabla^d y_t = \Theta(B) \varepsilon_t\)</span></td>
+<td style="text-align: left;">Короткостроковий прогноз стабільних газових маркерів (<span class="arithmatex">\(SO_2\)</span>, фенол)</td>
+<td style="text-align: left;">Виродження прогнозу в пряму горизонтальну лінію при зашумленості</td>
+</tr>
+<tr>
+<td style="text-align: left;">Індекс якості повітря (AQI)</td>
+<td style="text-align: left;">Кусочно-лінійна інтерполяція: <span class="arithmatex">\(I = \frac{\Delta I}{\Delta C}(C - C_l) + I_l\)</span></td>
+<td style="text-align: left;">Візуалізація небезпеки повітряного басейну у вебінтерфейсі R/Shiny</td>
+<td style="text-align: left;">Згладжування інформації про специфічні високотоксичні домішки</td>
+</tr>
+<tr>
+<td style="text-align: left;">Аналіз серійності (Streak Analysis)</td>
+<td style="text-align: left;">Ітераційна фіксація неперервних порушень: <span class="arithmatex">\(\sum \mathbb{I}(X_t &gt; G) \ge K\)</span></td>
+<td style="text-align: left;">Виявлення небезпечних періодів хронічного забруднення в Кременчуці</td>
+<td style="text-align: left;">Можливий пропуск швидкоплинних гострих аварійних викидів</td>
+</tr>
+<tr>
+<td style="text-align: left;">Когнітивний VLM-агент</td>
+<td style="text-align: left;">Мультимодальна нейромережа аналізу графіків і числових таблиць</td>
+<td style="text-align: left;">Детектування артефактів та розбіжностей фаз прогнозу (LLaVA-v1.5)</td>
+<td style="text-align: left;">Відсутність глибинного розуміння фізичних законів дисперсії</td>
+</tr>
+<tr>
+<td style="text-align: left;">Модель логічного виводу LLM</td>
+<td style="text-align: left;">Велика мовна модель міркувань (DeepSeek-R1) для генерації висновків</td>
+<td style="text-align: left;">Автоматизоване складання юридичних звітів за Постановою № 827</td>
+<td style="text-align: left;">Схильність до генерації правдоподібних галюцинацій без RAG</td>
+</tr>
+<tr>
+<td style="text-align: left;">Технологія RAG</td>
+<td style="text-align: left;">Семантичний пошук у векторній базі нормативів перед генерацією тексту</td>
+<td style="text-align: left;">Забезпечення посилань на чинне законодавство у висновках системи</td>
+<td style="text-align: left;">Ризик підстановки нерелевантних фрагментів нормативних актів</td>
+</tr>
+<tr>
+<td style="text-align: left;">Від'ємний коефіцієнт <span class="arithmatex">\(R^2\)</span></td>
+<td style="text-align: left;">Результат валідації поза вибіркою: <span class="arithmatex">\(R^2 = 1 - \text{MSE}/\text{Var}(y) &lt; 0\)</span></td>
+<td style="text-align: left;">Фіксація деградації моделі ARIMA при прогнозі волатильних рядів</td>
+<td style="text-align: left;">Хибне сприйняття некваліфікованими мовними моделями як помилки коду</td>
+</tr>
+<tr>
+<td style="text-align: left;">Бібліотека Sktime</td>
+<td style="text-align: left;">Уніфікований фреймворк мови Python для аналізу та прогнозу часових рядів</td>
+<td style="text-align: left;">Програмне ядро автоматичної селекції моделей за метриками помилок</td>
+<td style="text-align: left;">Обмежена підтримка квантово-гібридних нейромережевих шарів</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="33">3.3. Контрольні питання та завдання</h3>
+<h4 id="_8">Прикладні тестові завдання</h4>
+<ol>
+<li>
+<p>Під час оцінювання двох прогностичних моделей для часового ряду концентрацій пилу на навчальній вибірці модель A показала інформаційний критерій <span class="arithmatex">\(\text{AIC} = 142,5\)</span>, а модель B — <span class="arithmatex">\(\text{AIC} = 158,0\)</span>. Проте на незалежній тестовій вибірці (24 місяці) модель A продемонструвала <span class="arithmatex">\(\text{MSE} = 0,085\)</span>, тоді як модель B показала <span class="arithmatex">\(\text{MSE} = 0,032\)</span>. Яку модель повинен автоматично обрати селектор системи DPPDMext для реального прогнозування і чому?</p>
+</li>
+<li>
+<p>A. Модель A, оскільки критерій Акаіке має абсолютний пріоритет над тестовою похибкою.</p>
+</li>
+<li>
+<p>B. Модель B, оскільки суттєво нижча помилка MSE на відкладеній вибірці вказує на перенавчання (overfitting) моделі A під навчальні дані та кращу узагальнюючу здатність моделі B.</p>
+</li>
+<li>
+<p>C. Обидві моделі необхідно відкинути і замінити їх на розрахунок вибіркової медіани.</p>
+</li>
+<li>
+<p>D. Модель A, оскільки розрахунок MSE на тестовій вибірці заборонений стандартами екологічного моніторингу.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>Критерій AIC оцінює якість моделі виключно на навчальній вибірці, штрафуючи за кількість параметрів. Проте низький AIC не гарантує високої узагальнюючої здатності на нових даних: модель A могла налаштуватися під специфічний шум навчального періоду (явище перенавчання). Тестова середньоквадратична помилка (Out-Of-Sample MSE) є об'єктивним емпіричним критерієм реальної прогностичної сили. Оскільки модель B показала помилку в 2,6 раза меншу (<span class="arithmatex">\(\text{MSE} = 0,032\)</span> проти <span class="arithmatex">\(0,085\)</span>), саме вона забезпечить надійніші прогнози на практиці.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A є методологічною помилкою, оскільки сліпа довіра до AIC без перевірки на тестовому інтервалі призводить до використання перенавчених конфігурацій.</p>
+</li>
+<li>
+<p>Варіант C є нераціональним, оскільки помилка <span class="arithmatex">\(0,032\)</span> свідчить про високу адекватність моделі B.</p>
+</li>
+<li>
+<p>Варіант D є хибним, оскільки валідація на незалежних тестах є фундаментальним стандартом машинного навчання.</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>Під час аналізу графіка прогнозу формальдегіду мультимодальний VLM-агент зафіксував, що крива прогнозу на 24 місяці перетворилася на абсолютно пряму горизонтальну лінію зі значенням <span class="arithmatex">\(1,80\text{ ГДК}\)</span>. Який правильний висновок має сформувати інтелектуальна система щодо математичної поведінки моделі?</p>
+</li>
+<li>
+<p>A. В атмосфері міста настав ідеальний хімічний баланс, за якого концентрація більше ніколи не зміниться.</p>
+</li>
+<li>
+<p>B. Модель авторегресії не виявила статистично значущого детермінованого тренду і сезонності, внаслідок чого авторегресійні коефіцієнти швидко згасли до нуля, а прогноз асимптотично зійшовся до константного безумовного середнього значення ряду.</p>
+</li>
+<li>
+<p>C. Програма зіткнулася з діленням на нуль в операційній системі сервера.</p>
+</li>
+<li>
+<p>D. Датчики станції заблоковані захисними ковпачками.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>Це класична математична поведінка стаціонарних процесів ARMA(<span class="arithmatex">\(p, q\)</span>): за відсутності виділеного інтегрованого тренду (<span class="arithmatex">\(d = 0\)</span>) або тригонометричних гармонік вплив початкових умов експоненційно затухає з віддаленням від останньої точки спостереження (<span class="arithmatex">\(\phi^k \to 0\)</span> при <span class="arithmatex">\(k \to \infty\)</span>). На довгому горизонті (понад 6–12 місяців) прогноз лінійної моделі природним чином сходиться до математичного сподівання процесу <span class="arithmatex">\(\mu\)</span>, утворюючи пряму лінію, яка не відображає реальних майбутніх сезонних амплітуд.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A є абсурдним з погляду екології, оскільки природні концентрації завжди відчувають кліматичні флуктуації.</p>
+</li>
+<li>
+<p>Варіант C є невірним, оскільки збіжність до середнього є штатним аналітичним розв'язком різницевого рівняння, а не збоєм.</p>
+</li>
+<li>
+<p>Варіант D є хибним, оскільки поведінка прогностичного алгоритму в майбутньому не пов'язана з поточним механічним станом сенсора.</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>Для вибірки середньомісячних значень концентрації пилу тестова дисперсія становить <span class="arithmatex">\(\text{Var}(y_{\text{test}}) = 0,050\text{ (ГДК)}^2\)</span>. Модель BATS забезпечила похибку <span class="arithmatex">\(\text{MSE} = 0,020\text{ (ГДК)}^2\)</span>. Чому дорівнює коефіцієнт детермінації <span class="arithmatex">\(R^2\)</span> і як його інтерпретувати?</p>
+</li>
+<li>
+<p>A. <span class="arithmatex">\(R^2 = 0,40\)</span>; модель пояснює 40% загальної дисперсії процесу.</p>
+</li>
+<li>
+<p>B. <span class="arithmatex">\(R^2 = 0,60\)</span>; модель пояснює 60% дисперсії тестового часового ряду, демонструючи високу якість прогнозу.</p>
+</li>
+<li>
+<p>C. <span class="arithmatex">\(R^2 = -0,60\)</span>; модель працює гірше за середнє значення.</p>
+</li>
+<li>
+<p>D. <span class="arithmatex">\(R^2 = 2,50\)</span>; модель подвоює точність спостережень.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>Розрахуємо коефіцієнт детермінації за стандартною формулою:
+   $<span class="arithmatex">\(R^2 = 1 - \frac{\text{MSE}}{\text{Var}(y_{\text{test}})} = 1 - \frac{0,020}{0,050} = 1 - 0,40 = 0,60 \quad (60\%)\)</span>$
+   Отримане додатне значення <span class="arithmatex">\(R^2 = 0,60\)</span> свідчить про те, що модель BATS редукує 60% невизначеності тестових спостережень, успішно відтворюючи як сезонні піки, так і міжрічну динаміку процесу.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A (0,40) є результатом неповного розрахунку, що відповідає відношенню похибки до дисперсії (<span class="arithmatex">\(\text{MSE}/\text{Var}\)</span>), а не самому коефіцієнту детермінації (<span class="arithmatex">\(1 - \text{MSE}/\text{Var}\)</span>).</p>
+</li>
+<li>
+<p>Варіант C є помилкою зі знаком, оскільки похибка менша за дисперсію (<span class="arithmatex">\(0,02 &lt; 0,05\)</span>).</p>
+</li>
+<li>
+<p>Варіант D суперечить математичному змісту <span class="arithmatex">\(R^2\)</span>, максимальне теоретичне значення якого дорівнює 1,0.</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>Який критичний ризик виникає при використанні непідсиленої моделі LLM (без RAG-архітектури) для автоматичного формування приписів екологічної безпеки на основі розрахованих індексів AQI?</p>
+</li>
+<li>
+<p>A. Модель витратить надмірний обсяг електроенергії на відеокарті.</p>
+</li>
+<li>
+<p>B. Модель може згенерувати галюцинації щодо неіснуючих юридичних статей законів, переплутати нормативи ГДК різних токсикантів або вказати безпечними концентрації, що несуть смертельну загрозу.</p>
+</li>
+<li>
+<p>C. База даних MySQL автоматично заблокує вхідні порти.</p>
+</li>
+<li>
+<p>D. Станція Vaisala припинить вимірювання метеорологічних параметрів.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>Базові мовні моделі є генераторами тексту за статистичними зв'язками слів і не мають доступу до актуальної бази нормативно-правових документів. Без технології RAG модель може впевнено процитувати неіснуючу постанову уряду, переплутати разові та середньодобові ГДК або видати рекомендацію про безпечність перебування на вулиці при концентрації діоксиду сірки 5 ГДК, створивши пряму загрозу життю людей та юридичну відповідальність для муніципалітету.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A хоча й відображає факт енергоспоживання GPU, не є критичним ризиком для безпеки життя населення.</p>
+</li>
+<li>
+<p>Варіант C є технічно некоректним, оскільки робота мовної моделі не викликає мережевого блокування портів СУБД.</p>
+</li>
+<li>
+<p>Варіант D є безглуздим, оскільки робота аналітичного сервера не впливає на фізичні датчики станцій.</p>
+</li>
+</ol>
+</details>
+<hr />
+<h4 id="_9">Завдання для самостійної роботи</h4>
+<h5 id="_10">Постановка задачі</h5>
+<p>У великому металургійному центрі впроваджується автоматизований модуль раннього екологічного спостереження, що контролює приземні концентрації діоксиду сірки (<span class="arithmatex">\(SO_2\)</span>) та сірководню (<span class="arithmatex">\(H_2S\)</span>) за щогодинними даними автоматичних постів. У період осінніх температурних інверсій фіксуються стійкі накопичення сірчистих сполук, що викликають скарги населення на задуху. Необхідно налаштувати алгоритм автоматичного вибору моделі, streak-аналізу та генерації приписів підприємствам за допомогою RAG-агента.</p>
+<h5 id="_11">Завдання для виконання</h5>
+<ol>
+<li>
+<p>Складіть програмний скрипт на мові Python із використанням бібліотеки <code>sktime</code>, який реалізує паралельне навчання моделей ARIMA та BATS для часового ряду <span class="arithmatex">\(SO_2\)</span> із вибором оптимального ядра за критерієм мінімізації тестової похибки MAE.</p>
+</li>
+<li>
+<p>Реалізуйте алгоритм streak-аналізу, що обчислює кількість випадків безперервного перевищення максимально разової ГДК діоксиду сірки тривалістю понад 3 години поспіль за останні три роки спостережень.</p>
+</li>
+<li>
+<p>Спроєктуйте структуру векторної бази даних ChromaDB для індексації вимог статті 10 Закону України «Про охорону атмосферного повітря» та Постанови КМУ № 827 для забезпечення роботи модуля RAG.</p>
+</li>
+<li>
+<p>Розробіть шаблон системного промпту для мовної моделі логічного виводу, який жорстко обмежує генерацію приписів виключно знайденими статтями нормативних актів та забороняє будь-які оціночні судження за відсутності прямого перевищення нормативів.</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Повернутись нагору
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Kyrylo Vadurin &bull; <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "header.autohide", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0456\u0439\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u0421\u043a\u043e\u043f\u0456\u044e\u0432\u0430\u0442\u0438 \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0429\u0435 1 \u0437\u0431\u0456\u0433 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.more.other": "\u0429\u0435 # \u0437\u0431\u0456\u0433\u0456\u0432 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.none": "\u0417\u0431\u0456\u0433\u0456\u0432 \u043d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0437\u0431\u0456\u0433", "search.result.other": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e # \u0437\u0431\u0456\u0433\u0456\u0432", "search.result.placeholder": "\u0420\u043e\u0437\u043f\u043e\u0447\u043d\u0456\u0442\u044c \u043f\u0438\u0441\u0430\u0442\u0438 \u0434\u043b\u044f \u043f\u043e\u0448\u0443\u043a\u0443", "search.result.term.missing": "\u041d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e \u0437\u0430\u043f\u0438\u0442\u0443", "select.version": "\u041e\u0431\u0440\u0430\u0442\u0438 \u0432\u0435\u0440\u0441\u0456\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

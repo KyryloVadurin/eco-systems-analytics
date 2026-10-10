@@ -1,0 +1,2799 @@
+
+<!doctype html>
+<html lang="uk" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Навчальний портал з дисципліни "Інформаційно-аналітичні технології в екологічних системах"">
+      
+      
+      
+      
+        <link rel="prev" href="../lk9/">
+      
+      
+        <link rel="next" href="../../lb/lb1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Тема 10. Інтелектуальні платформи просторового прогнозування - ІАТ в екологічних системах</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#10-" class="md-skip">
+          Перейти до змісту
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Хедер">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-header__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ІАТ в екологічних системах
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Тема 10. Інтелектуальні платформи просторового прогнозування
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Переключити на темну тему"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Переключити на темну тему" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-label="Переключити на світлу тему"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Переключити на світлу тему" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Пошук" placeholder="Пошук" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Шукати">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистити" aria-label="Очистити" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Пошук розпочато
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Робоча програма
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../lk1/" class="md-tabs__link">
+          
+  
+  
+  Лекції
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../lb/lb1/" class="md-tabs__link">
+          
+  
+  
+  Лабораторні роботи
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../sr/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Самостійна робота
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навігація" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-nav__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ІАТ в екологічних системах
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Робоча програма
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лекції
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лекції
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 1. Цифровізація екологічного моніторингу
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 2. IoT-технології та сенсорні мережі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 3. Проєктування екологічних баз даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 4. Статистичні методи аналізу даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 5. Багатовимірний аналіз та інтелектуальні технології
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 6. Моделювання переносу та дифузії
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 7. Геоінформаційні системи (ГІС)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 8. Моделювання динаміки екологічних систем
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 9. Прогнозування та оцінка ризиків
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 10. Інтелектуальні платформи просторового прогнозування
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 10. Інтелектуальні платформи просторового прогнозування
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мета лекції
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Очікувані результати навчання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-cpu-qpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Теоретико-концептуальний базис. Основи квантового машинного навчання та парадигма гібридних обчислень CPU-QPU
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Теоретико-концептуальний базис. Основи квантового машинного навчання та парадигма гібридних обчислень CPU-QPU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Теоретичні засади квантових обчислень в екології: кубіти, унітарні вентилі, квантова заплутаність та представлення даних у високовимірному гільбертовому просторі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-vqc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Архітектура варіаційних квантових схем (VQC) як параметризованих функціональних апроксиматорів часових рядів
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-angleembedding-z" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Методи квантового кодування інформації: перетворення кутів обертання AngleEmbedding та екстракція квантових ознак через очікування оператора Паулі-Z
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-end-to-end-adam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Гібридний пайплайн навчання «end-to-end» із градієнтною оптимізацією ваг класичних шарів і параметрів квантових вентилів алгоритмом Adam
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вказівки для самостійного осмислення
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Методологія та аналіз граничних умов. Бенчмаркінг квантово-гібридних нейромереж та бар'єри апаратного шуму
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Методологія та аналіз граничних умов. Бенчмаркінг квантово-гібридних нейромереж та бар&#39;єри апаратного шуму">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-q-lstm-q-gru-q-cnn-q-transformer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Порівняльний аналіз квантових модифікацій Q-LSTM, Q-GRU, Q-CNN та Q-Transformer та їх класичних еквівалентів на малих вибірках моніторингу
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Механізми досягнення квантової переваги: лінійна сепарабельність складних нелінійних залежностей при прогнозуванні стабільних циклічних параметрів (атмосферний тиск, відносна вологість)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-barren-plateaus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Феномен «безплідного плато» (Barren Plateaus) та деградація квантових моделей при апроксимації високоентропійних нелінійних рядів температури й оксиду вуглецю
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-gpu-nisq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Експоненційне зростання обчислювальних витрат симуляції квантових вентилів на класичних GPU та декогеренція фізичних квантових процесорів епохи NISQ як ключовий бар'єр практичної реалізації
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Практичний індустріальний / фаховий кейс. Емпіричний бенчмаркінг класичних та квантово-гібридних моделей прогнозування
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Практичний індустріальний / фаховий кейс. Емпіричний бенчмаркінг класичних та квантово-гібридних моделей прогнозування">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-q-lstm-q-transformer-autoarima-pennylane-35-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Комплексний фаховий кейс. Порівняльний аналіз тринадцяти класичних і квантово-гібридних моделей (Q-LSTM, Q-Transformer, AutoARIMA) на базі фреймворку PennyLane для 35-місячного ряду моніторингу повітряного басейну м. Кременчук
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Комплексний фаховий кейс. Порівняльний аналіз тринадцяти класичних і квантово-гібридних моделей (Q-LSTM, Q-Transformer, AutoARIMA) на базі фреймворку PennyLane для 35-місячного ряду моніторингу повітряного басейну м. Кременчук">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі / ситуації
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Покроковий аналіз та розв'язок
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Покроковий аналіз та розв&#39;язок">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 1. Розрахунок відносного приросту точності моделей
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 2. Розрахунок коефіцієнтів детермінації поза вибіркою
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 3. Непараметричне статистичне тестування за критерієм Вілкоксона
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 4. Аналіз часової складності інференсу та тренування на GPU
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Інтерпретація результатів та альтернативні сценарії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Зведена довідкова система лекції
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Контрольні питання та завдання
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Контрольні питання та завдання">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Прикладні тестові завдання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для самостійної роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Завдання для самостійної роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для виконання
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторні роботи
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лабораторні роботи
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 1. Архітектура відкритих систем моніторингу довкілля
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 2. Канал отримання даних IoT-станцій
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 3. Проєктування наборів даних екологічної інформації
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 4. Статистичний аналіз та перевищення ГДК
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 5. Кореляційний аналіз та метод головних компонент
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 6. Моделювання розсіювання викидів в атмосфері
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 7. Просторова інтерполяція (IDW) та аномалії
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 8. Моделювання динаміки та стійкості екосистем
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 9. Прогнозування часових рядів та індекс якості повітря
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 10. Генерація екологічного звіту когнітивним LLM-агентом
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Самостійна робота
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мета лекції
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Очікувані результати навчання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-cpu-qpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Теоретико-концептуальний базис. Основи квантового машинного навчання та парадигма гібридних обчислень CPU-QPU
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Теоретико-концептуальний базис. Основи квантового машинного навчання та парадигма гібридних обчислень CPU-QPU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Теоретичні засади квантових обчислень в екології: кубіти, унітарні вентилі, квантова заплутаність та представлення даних у високовимірному гільбертовому просторі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-vqc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Архітектура варіаційних квантових схем (VQC) як параметризованих функціональних апроксиматорів часових рядів
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-angleembedding-z" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Методи квантового кодування інформації: перетворення кутів обертання AngleEmbedding та екстракція квантових ознак через очікування оператора Паулі-Z
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-end-to-end-adam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Гібридний пайплайн навчання «end-to-end» із градієнтною оптимізацією ваг класичних шарів і параметрів квантових вентилів алгоритмом Adam
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вказівки для самостійного осмислення
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Методологія та аналіз граничних умов. Бенчмаркінг квантово-гібридних нейромереж та бар'єри апаратного шуму
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Методологія та аналіз граничних умов. Бенчмаркінг квантово-гібридних нейромереж та бар&#39;єри апаратного шуму">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-q-lstm-q-gru-q-cnn-q-transformer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Порівняльний аналіз квантових модифікацій Q-LSTM, Q-GRU, Q-CNN та Q-Transformer та їх класичних еквівалентів на малих вибірках моніторингу
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Механізми досягнення квантової переваги: лінійна сепарабельність складних нелінійних залежностей при прогнозуванні стабільних циклічних параметрів (атмосферний тиск, відносна вологість)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-barren-plateaus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Феномен «безплідного плато» (Barren Plateaus) та деградація квантових моделей при апроксимації високоентропійних нелінійних рядів температури й оксиду вуглецю
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-gpu-nisq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Експоненційне зростання обчислювальних витрат симуляції квантових вентилів на класичних GPU та декогеренція фізичних квантових процесорів епохи NISQ як ключовий бар'єр практичної реалізації
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Практичний індустріальний / фаховий кейс. Емпіричний бенчмаркінг класичних та квантово-гібридних моделей прогнозування
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Практичний індустріальний / фаховий кейс. Емпіричний бенчмаркінг класичних та квантово-гібридних моделей прогнозування">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-q-lstm-q-transformer-autoarima-pennylane-35-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Комплексний фаховий кейс. Порівняльний аналіз тринадцяти класичних і квантово-гібридних моделей (Q-LSTM, Q-Transformer, AutoARIMA) на базі фреймворку PennyLane для 35-місячного ряду моніторингу повітряного басейну м. Кременчук
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Комплексний фаховий кейс. Порівняльний аналіз тринадцяти класичних і квантово-гібридних моделей (Q-LSTM, Q-Transformer, AutoARIMA) на базі фреймворку PennyLane для 35-місячного ряду моніторингу повітряного басейну м. Кременчук">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі / ситуації
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Покроковий аналіз та розв'язок
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Покроковий аналіз та розв&#39;язок">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 1. Розрахунок відносного приросту точності моделей
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 2. Розрахунок коефіцієнтів детермінації поза вибіркою
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 3. Непараметричне статистичне тестування за критерієм Вілкоксона
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 4. Аналіз часової складності інференсу та тренування на GPU
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Інтерпретація результатів та альтернативні сценарії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Зведена довідкова система лекції
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Контрольні питання та завдання
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Контрольні питання та завдання">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Прикладні тестові завдання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для самостійної роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Завдання для самостійної роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для виконання
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="10-">Тема 10. Квантово-гібридні та інтелектуальні платформи просторового прогнозування</h1>
+<h2 id="_1">Мета лекції</h2>
+<p>Сформувати у здобувачів наукового ступеня доктора філософії передові знання та фахові навички з теорії і практики квантового машинного навчання (Quantum Machine Learning, QML), побудови гібридних обчислювальних схем CPU-QPU, розробки варіаційних квантових шарів у глибоких нейромережах (Q-LSTM, Q-Transformer, Q-CNN) для вирішення проблеми дефіциту даних в екологічному прогнозуванні та критичної оцінки обмежень квантових обчислювачів епохи NISQ.</p>
+<h2 id="_2">Очікувані результати навчання</h2>
+<ol>
+<li>
+<p><strong>Знання та розуміння.</strong> Здобувачі мають опанувати математичний формалізм варіаційних квантових схем (VQC), методи квантового кодування часових рядів (AngleEmbedding) та вимірювання операторів Паулі в гільбертовому просторі станів.</p>
+</li>
+<li>
+<p><strong>Застосування.</strong> Здобувачі мають застосовувати квантово-гібридні моделі у бібліотеці PennyLane та середовищі PyTorch для прогнозування параметрів довкілля за умов коротких навчальних вибірок.</p>
+</li>
+<li>
+<p><strong>Аналіз.</strong> Здобувачі мають аналізувати умови виникнення квантової переваги для стабільних параметрів із високою автокореляцією порівняно з деградацією точності на стохастичних рядах.</p>
+</li>
+<li>
+<p><strong>Оцінювання та синтез.</strong> Здобувачі мають проектувати гібридні архітектури поєднання квантових копроцесорів із класичними нейромережами та формувати дорожню карту впровадження квантових технологій у муніципальні екологічні цифрові двійники.</p>
+</li>
+</ol>
+<h2 id="1-cpu-qpu">1. Теоретико-концептуальний базис. Основи квантового машинного навчання та парадигма гібридних обчислень CPU-QPU</h2>
+<h3 id="11">1.1. Теоретичні засади квантових обчислень в екології: кубіти, унітарні вентилі, квантова заплутаність та представлення даних у високовимірному гільбертовому просторі</h3>
+<p>Застосування методів штучного інтелекту в задачах моделювання складних екологічних процесів стикається з фундаментальними обмеженнями класичних обчислювальних систем при опрацюванні вибірок малої тривалості з високим рівнем стохастичного шуму. Традиційні архітектури глибокого навчання (глибокі рекурентні мережі та трансформери) потребують тисяч репрезентативних навчальних прикладів, які часто недоступні на початкових етапах розгортання нових муніципальних станцій моніторингу. Подолання цього бар'єра забезпечується залученням методології <strong>квантового машинного навчання (Quantum Machine Learning, QML)</strong>, яка спирається на квантово-механічні закони суперпозиції станів, унітарної еволюції та квантової заплутаності.</p>
+<p>Базовим елементом квантової інформації є <strong>кубіт (квантовий біт)</strong>, стан якого формалізується вектором у двовимірному комплексному просторі Гільберта <span class="arithmatex">\(\mathcal{H}_2\)</span>. На відміну від класичного біта, кубіт здатний перебувати в довільній лінійній суперпозиції базисних ортонормованих станів <span class="arithmatex">\(|0\rangle\)</span> та <span class="arithmatex">\(|1\rangle\)</span>:</p>
+<div class="arithmatex">\[|\psi\rangle = \alpha |0\rangle + \beta |1\rangle = \begin{pmatrix} \alpha \\ \beta \end{pmatrix}\]</div>
+<p>де амплітуди ймовірностей <span class="arithmatex">\(\alpha, \beta \in \mathbb{C}\)</span> задовольняють фундаментальну умову нормування <span class="arithmatex">\(|\alpha|^2 + |\beta|^2 = 1\)</span>. Квантовий регістр, що складається з <span class="arithmatex">\(Q\)</span> взаємодіючих кубітів, описується тензорним добутком гільбертових просторів <span class="arithmatex">\(\mathcal{H} = \mathcal{H}_2^{\otimes Q}\)</span>, утворюючи стан розмірністю <span class="arithmatex">\(2^Q\)</span>:</p>
+<div class="arithmatex">\[|\Psi\rangle = \sum_{k=0}^{2^Q - 1} c_k |k\rangle, \quad \sum_{k=0}^{2^Q - 1} |c_k|^2 = 1\]</div>
+<p>Експоненційне зростання розмірності простору станів при лінійному збільшенні кількості кубітів дозволяє відображати складні багатовимірні екологічні залежності у високовимірний базис, у якому нелінійні кореляції між токсикантами та метеопараметрами стають лінійно сепарабельними або легше апроксимуються.</p>
+<p>Трансформація квантових станів здійснюється за допомогою <strong>унітарних вентилів (квантових гейтів)</strong>, які представляються унітарними матрицями <span class="arithmatex">\(U\)</span>, що зберігають норму вектора стану (<span class="arithmatex">\(U^\dagger U = I\)</span>). Базовими однокубітними операціями виступають параметризовані ротації Паулі навколо координатних осей сфери Блоха:</p>
+<div class="arithmatex">\[R_x(\theta) = \exp\left( -i \frac{\theta}{2} \sigma_x \right) = \begin{pmatrix} \cos\frac{\theta}{2} &amp; -i\sin\frac{\theta}{2} \\ -i\sin\frac{\theta}{2} &amp; \cos\frac{\theta}{2} \end{pmatrix}\]</div>
+<div class="arithmatex">\[R_y(\theta) = \exp\left( -i \frac{\theta}{2} \sigma_y \right) = \begin{pmatrix} \cos\frac{\theta}{2} &amp; -\sin\frac{\theta}{2} \\ \sin\frac{\theta}{2} &amp; \cos\frac{\theta}{2} \end{pmatrix}\]</div>
+<div class="arithmatex">\[R_z(\theta) = \exp\left( -i \frac{\theta}{2} \sigma_z \right) = \begin{pmatrix} e^{-i\theta/2} &amp; 0 \\ 0 &amp; e^{i\theta/2} \end{pmatrix}\]</div>
+<p>Формування нелокальних багатокубітних зв'язків реалізується за допомогою заплутуючих вентилів, основним серед яких є двовходовий контрольований вентиль заперечення <strong>CNOT (Controlled-NOT)</strong>. Вентиль CNOT інвертує стан цільового кубіта тоді й лише тоді, коли керуючий кубіт перебуває в стані <span class="arithmatex">\(|1\rangle\)</span>, створюючи квантово-заплутані стани Белла, які не можуть бути факторизовані на добуток індивідуальних станів окремих кубітів. Це забезпечує моделювання складних крос-параметричних зв'язків між екологічними показниками, недосяжних для класичних рекурентних структур на малих вибірках.</p>
+<pre class="mermaid"><code>flowchart TD
+    subgraph CPU_PIPELINE["Класичний обчислювальний блок (CPU / GPU)"]
+        RAW["Сирі екологічні часові ряди (T, RH, P, CO, NO2)"]
+        NORM["Min-Max нормалізація ознак у діапазон [0, 1]"]
+        FEATURE["Екстракція латентних часових ознак (LSTM / CNN)"]
+    end
+
+    subgraph QPU_CIRCUIT["Квантовий співпроцесор (QPU / PennyLane)"]
+        EMBED["Кутове квантове кодування: AngleEmbedding R_x(pi * x_j)"]
+        VQC["Параметризована варіаційна схема: шари R_y(theta) та CNOT"]
+        MEASURE["Квантове вимірювання: сподівання операторів Паулі-Z"]
+    end
+
+    subgraph HYBRID_OUTPUT["Гібридний агрегаційний шар"]
+        DENSE["Лінійна комбінація очікувань: y_hat = W_q * &lt;Z&gt; + b_q"]
+        LOSS["Розрахунок похибки прогнозу MSE: Loss = (y - y_hat)^2"]
+        GRAD["Аналітичний градієнт: правило зсуву параметра (Parameter-Shift)"]
+    end
+
+    RAW --&gt; NORM
+    NORM --&gt; FEATURE
+    FEATURE --&gt;|Класичний вектор x| EMBED
+    EMBED --&gt; VQC
+    VQC --&gt; MEASURE
+    MEASURE --&gt;|Вектор квантових ознак &lt;Z_i&gt;| DENSE
+    DENSE --&gt; LOSS
+    LOSS --&gt; GRAD
+    GRAD --&gt;|Оновлення ваг W_q та кутів theta| VQC</code></pre>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> У процесі розробки квантово-гібридної системи прогнозування для Кременчуцької агломерації дослідницька група КрНУ спільно з Університетом Туріба (Рига) розгорнула симулятор квантових схем PennyLane на базі робочої станції з відеокартою NVIDIA RTX 3090, що дозволило моделювати 6-кубітні варіаційні квантові схеми для вилучення тонких нелінійних патернів у часових рядах атмосферного тиску та вологості на обмеженій 35-місячній вибірці станцій Vaisala.</p>
+</blockquote>
+<hr />
+<h3 id="12-vqc">1.2. Архітектура варіаційних квантових схем (VQC) як параметризованих функціональних апроксиматорів часових рядів</h3>
+<p>В епоху проміжних масштабів із шумом (Noisy Intermediate-Scale Quantum, NISQ) квантові обчислювачі не володіють достатньою глибиною для реалізації алгоритмів із повною корекцією помилок (як алгоритм Шора чи Гровера). Провідною парадигмою практичного застосування квантових систем у штучному інтелекті виступають <strong>варіаційні квантові схеми (Variational Quantum Circuits, VQC)</strong>, також відомі як квантові нейронні мережі (Quantum Neural Networks, QNN).</p>
+<p>Архітектура VQC є квантовим еквівалентом класичного багатошарового перцептрону і складається з трьох послідовних функціональних блоків: схеми підготовки стану (кодування вхідних даних), параметризованої унітарної еволюції (анзацу) та блоку квантових вимірювань. Анзац складається з <span class="arithmatex">\(L\)</span> послідовних варіаційних шарів, кожен із яких містить параметризовані ротації окремих кубітів та фіксовані заплутуючі оператори зв'язку. </p>
+<p>Загальний унітарний оператор варіаційного перетворення описується аналітичним добутком матриць:</p>
+<div class="arithmatex">\[U(\mathbf{w}) = \prod_{l=1}^{L} \left( \mathcal{W}_{\text{entangle}} \cdot \bigotimes_{j=1}^{Q} R_y(\theta_{l, j}) \right)\]</div>
+<p>де параметри та внутрішні оператори визначаються такими положеннями:</p>
+<ul>
+<li>
+<p>Вектор <span class="arithmatex">\(\mathbf{w} = \{\theta_{l, j}\}\)</span> об'єднує всі навчальні параметри (кути обертання) квантової схеми, де індекс <span class="arithmatex">\(l \in \{1, \dots, L\}\)</span> позначає номер варіаційного шару, а індекс <span class="arithmatex">\(j \in \{1, \dots, Q\}\)</span> — номер кубіта.</p>
+</li>
+<li>
+<p>Оператор <span class="arithmatex">\(\mathcal{W}_{\text{entangle}}\)</span> представляє фіксований заплутуючий шар вентилів CNOT, організованих за циклічною топологією: <span class="arithmatex">\(\text{CNOT}_{j, \, (j \bmod Q) + 1}\)</span>.</p>
+</li>
+<li>
+<p>Параметризовані вентилі <span class="arithmatex">\(R_y(\theta_{l, j})\)</span> забезпечують керовану трансформацію стану кубіта на дійсній площині сфери Блоха, що виключає появу комплексних фазових зсувів і спрощує оптимізацію функції втрат.</p>
+</li>
+</ul>
+<p>Варіаційна квантова схема діє як високоефективний параметризований апроксиматор нелінійних функцій. Завдяки високій експресивності квантового простору Гільберта VQC із малою кількістю параметрів (наприклад, 4 кубіти та 3 шари, що дає лише 12 варіаційних кутів) здатна досягати вищої апроксимаційної точності на циклічних сезонних вибірках, ніж класичні повнозв'язні нейромережі з сотнями вагових коефіцієнтів.</p>
+<pre class="mermaid"><code>stateDiagram-v2
+    [*] --&gt; Стан_Спокою: Ініціалізація реєстру |00...0&gt;
+    Стан_Спокою --&gt; Квантове_Кодування: Прикладання вентилів AngleEmbedding R_x(x)
+
+    state Варіаційний_Анзац_L_Шаstatusів {
+        [*] --&gt; Однокубітні_Ротації: Вентилі R_y(theta_l, j) та R_z(phi_l, j)
+        Однокубітні_Ротації --&gt; Квантове_Заплутування: Ланцюг вентилів CNOT між кубітами
+        Квантове_Заплутування --&gt; Перевірка_Глибини: Повторення для l = 1..L
+    }
+
+    Квантове_Кодування --&gt; Варіаційний_Анзац_L_Шаstatusів: Сформовано стан |psi(x)&gt;
+    Варіаційний_Анзац_L_Шаstatusів --&gt; Квантове_Вимірювання: Обчислення очікувань Pauli-Z
+    Квантове_Вимірювання --&gt; Класичний_Вихід: Вектор ознак z_quant = [&lt;Z_1&gt;, ..., &lt;Z_Q&gt;]
+    Класичний_Вихід --&gt; [*]</code></pre>
+<hr />
+<h3 id="13-angleembedding-z">1.3. Методи квантового кодування інформації: перетворення кутів обертання AngleEmbedding та екстракція квантових ознак через очікування оператора Паулі-Z</h3>
+<p>Ключовим теоретичним етапом побудови квантово-гібридних систем є перетворення класичного числового вектора екологічних показників <span class="arithmatex">\(\mathbf{x} = (x_1, x_2, \dots, x_m)^T\)</span> у квантовий стан реєстру. Серед існуючих підходів (амплітудне, базисне та кутове кодування) в аналізі екологічних часових рядів домінує <strong>кутове квантове кодування (AngleEmbedding)</strong>, оскільки воно не вимагає глибоких схем підготовки станів і володіє константною глибиною квантової схеми <span class="arithmatex">\(O(1)\)</span>.</p>
+<p>Перед виконанням кодування всі класичні вхідні ознаки обов'язково підлягають нормалізації за шкалою Min-Max у діапазон <span class="arithmatex">\([0, 1]\)</span> або <span class="arithmatex">\([-\pi, \pi]\)</span>:</p>
+<div class="arithmatex">\[\tilde{x}_j = \pi \cdot \frac{x_j - x_{\min, j}}{x_{\max, j} - x_{\min, j}}\]</div>
+<p>Кутове вбудовування здійснюється шляхом прикладання одноетапних ротаційних вентилів Паулі до кожного кубіта, що попередньо перебуває в нульовому стані <span class="arithmatex">\(|0\rangle\)</span>:</p>
+<div class="arithmatex">\[|\mathbf{x}\rangle = \bigotimes_{j=1}^{Q} R_x(\tilde{x}_j) |0\rangle = \bigotimes_{j=1}^{Q} \left( \cos\frac{\tilde{x}_j}{2} |0\rangle - i \sin\frac{\tilde{x}_j}{2} |1\rangle \right)\]</div>
+<p>У результаті класичні значення концентрацій газів чи температури трансформуються безпосередньо у фізичні кути орієнтації векторів стану кубітів на сфері Блоха. Якщо розмірність вхідного вектора перевищує кількість доступних фізичних кубітів (<span class="arithmatex">\(m &gt; Q\)</span>), застосовується модульне циклічне відображення проводів: <span class="arithmatex">\(\text{wires} = j \bmod Q\)</span>.</p>
+<p>Зворотний перехід від еволюціонуючого квантового стану до класичних числових ознак реалізується через операцію <strong>квантового вимірювання</strong>. Для збереження неперервності градієнтного оптимізаційного процесу вимірювання формується не у вигляді випадкового дискретного колапсу хвильової функції, а у формі квантово-механічного математичного сподівання ермітового <strong>спостережуваного оператора Паулі-Z (<span class="arithmatex">\(\sigma_z\)</span>)</strong> на кожному окремому кубіті:</p>
+<div class="arithmatex">\[\langle Z_j \rangle = \text{Tr}\big( \rho(\mathbf{x}, \mathbf{w}) \cdot Z_j \big) = \langle \Psi(\mathbf{x}, \mathbf{w}) | Z_j | \Psi(\mathbf{x}, \mathbf{w}) \rangle\]</div>
+<p>де матриця щільності системи <span class="arithmatex">\(\rho = |\Psi\rangle \langle \Psi|\)</span> задає чистий стан квантового регістра після проходження варіаційного анзацу, а оператор Паулі-Z має вигляд <span class="arithmatex">\(Z = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}\)</span>. </p>
+<p>Числове значення очікування строго лежить у компактному дійсному діапазоні <span class="arithmatex">\(\langle Z_j \rangle \in [-1, 1]\)</span>. Отриманий вектор квантових характеристик <span class="arithmatex">\(\mathbf{z}_{\text{quant}} = (\langle Z_1 \rangle, \langle Z_2 \rangle, \dots, \langle Z_Q \rangle)^T\)</span> подається на класичний шар агрегації для обчислення підсумкового прогнозу екологічного параметра:</p>
+<div class="arithmatex">\[\hat{y} = \mathbf{W}_{\text{out}} \mathbf{z}_{\text{quant}} + b_{\text{out}} \quad \text{або} \quad \hat{y} = \frac{1}{Q} \sum_{j=1}^{Q} \langle Z_j \rangle\]</div>
+<p>де <span class="arithmatex">\(\mathbf{W}_{\text{out}}\)</span> та <span class="arithmatex">\(b_{\text{out}}\)</span> — ваги та зсув лінійного шару класичного декодера.</p>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> При квантово-гібридному прогнозуванні відносної вологості повітря на станції «Північний промвузол» вихідні вимірювання (діапазон 35–95%) були нормалізовані у радіани за формулою <span class="arithmatex">\(\tilde{x} = \pi \cdot \text{RH} / 100\)</span>, що запобігло насиченню ротаційних гейтів <span class="arithmatex">\(R_x\)</span> та забезпечило стійку збіжність градієнтів, дозволивши квантовій моделі Q-LSTM досягти зниження похибки MSE на 45,96% порівняно з класичною нейромережею LSTM.</p>
+</blockquote>
+<hr />
+<h3 id="14-end-to-end-adam">1.4. Гібридний пайплайн навчання «end-to-end» із градієнтною оптимізацією ваг класичних шарів і параметрів квантових вентилів алгоритмом Adam</h3>
+<p>Поєднання класичних нейронних шарів (згорткових, рекурентних або трансформерних) із варіаційними квантовими схемами вимагає побудови єдиного наскрізного оптимізаційного контуру навчання (<strong>End-to-End Hybrid Training Pipeline</strong>). У цій парадигмі класичний процесор (CPU/GPU) та квантовий процесор (QPU) функціонують у замкненому ітераційному циклі зворотного зв'язку.</p>
+<p>Прямий прохід (Forward Pass) починається на класичному рівні, де рекурентна мережа (наприклад, шар LSTM) витягує часові лагові залежності <span class="arithmatex">\(X_{\text{lag}} = [y_{t-\text{lag}}, \dots, y_{t-1}]\)</span>, формуючи латентний вектор ознак <span class="arithmatex">\(\mathbf{h}_t\)</span>. Далі вектор <span class="arithmatex">\(\mathbf{h}_t\)</span> передається на QPU, де кодується в квантовий регістр, еволюціонує крізь варіаційні шари <span class="arithmatex">\(U(\mathbf{w})\)</span> і вимірюється операторами Паулі-Z. Класичний вихідний шар генерує фінальне передбачення <span class="arithmatex">\(\hat{y}_t\)</span>, на основі якого обчислюється функція втрат середньоквадратичної помилки з регуляризацією:</p>
+<div class="arithmatex">\[\mathcal{L}(\mathbf{W}_{\text{class}}, \mathbf{w}_{\text{quant}}) = \frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)^2 + \lambda \|\mathbf{w}_{\text{quant}}\|^2\]</div>
+<p>Головною математичною проблемою зворотного поширення помилки (Backward Pass) є неможливість застосування класичного символьного диференціювання крізь фізичний квантовий процесор через неперервний колапс хвильової функції при вимірюванні. Для аналітичного обчислення точних градієнтів квантових параметрів застосовується фундаментальне <strong>правило зсуву параметра (Parameter-Shift Rule)</strong>.</p>
+<p>Якщо унітарний вентиль у схемі генерується оператором Паулі <span class="arithmatex">\(U(\theta) = \exp(-i \frac{\theta}{2} G)\)</span>, аналітична похідна квантового очікування за варіаційним кутом <span class="arithmatex">\(\theta_j\)</span> розраховується строго через різницю двох квантових вимірювань зі зсувом аргументу на <span class="arithmatex">\(\pm \pi/2\)</span>:</p>
+<div class="arithmatex">\[\frac{\partial \langle Z \rangle}{\partial \theta_j} = \frac{1}{2} \left[ \langle Z \rangle\Big(\theta_j + \frac{\pi}{2}\Big) - \langle Z \rangle\Big(\theta_j - \frac{\pi}{2}\Big) \right]\]</div>
+<p>Цей математичний результат дозволяє QPU діяти як повноцінний диференційовний шар нейронної мережі, що повертає точні значення градієнтів безпосередньо з вимірювань без використання наближених чисельних кінцевих різниць. Отримані квантові градієнти об'єднуються з класичними градієнтами за правилом диференціювання складної функції:</p>
+<div class="arithmatex">\[\frac{\partial \mathcal{L}}{\partial \theta_j} = \frac{\partial \mathcal{L}}{\partial \hat{y}} \cdot \frac{\partial \hat{y}}{\partial \langle Z \rangle} \cdot \frac{\partial \langle Z \rangle}{\partial \theta_j}\]</div>
+<p>Оновлення всієї множини класичних ваг <span class="arithmatex">\(\mathbf{W}_{\text{class}}\)</span> та квантових параметрів <span class="arithmatex">\(\mathbf{w}_{\text{quant}}\)</span> здійснюється синхронно за допомогою адаптивного алгоритму оптимізації <strong>Adam</strong>:</p>
+<div class="arithmatex">\[\mathbf{\Theta}^{(t+1)} = \mathbf{\Theta}^{(t)} - \frac{\eta}{\sqrt{\hat{v}_t} + \epsilon} \hat{m}_t\]</div>
+<p>де <span class="arithmatex">\(\mathbf{\Theta} = \{\mathbf{W}_{\text{class}}, \mathbf{w}_{\text{quant}}\}\)</span>, вектор <span class="arithmatex">\(\hat{m}_t\)</span> відображає скоригований перший момент градієнта (експоненційне ковзне середнє), <span class="arithmatex">\(\hat{v}_t\)</span> задає другий нецентрований момент (дисперсію), а <span class="arithmatex">\(\eta\)</span> — швидкість навчання.</p>
+<p>Для систематизації базових підходів квантово-гібридного моделювання сформовано порівняльну аналітичну таблицю.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Парадигма обчислень</th>
+<th style="text-align: left;">Апаратна реалізація та математичний базис</th>
+<th style="text-align: left;">Вимоги до обсягу навчальних даних</th>
+<th style="text-align: left;">Переваги в задачах екологічного прогнозування</th>
+<th style="text-align: left;">Приклад з реальної практики</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Чисто класичні моделі (LSTM, ARIMA)</td>
+<td style="text-align: left;">Стандартні процесори CPU/GPU; тензорна алгебра дійсних чисел</td>
+<td style="text-align: left;">Високі (потребує сотень або тисяч точок спостереження)</td>
+<td style="text-align: left;">Висока стабільність на рядах із великою зашумленістю та високою дисперсією</td>
+<td style="text-align: left;">Прогнозування температури та діоксиду сірки в Кременчуці</td>
+</tr>
+<tr>
+<td style="text-align: left;">Квантово-гібридні рекурентні мережі (Q-LSTM / Q-GRU)</td>
+<td style="text-align: left;">Гібрид CPU-QPU; класичні комірки у поєднанні з варіаційними VQC</td>
+<td style="text-align: left;">Низькі; здатні апроксимувати нелінійності на малих вибірках</td>
+<td style="text-align: left;">Висока точність на стабільних циклічних процесах (тиск, вологість)</td>
+<td style="text-align: left;">Зниження похибки прогнозу атмосферного тиску на 74,74%</td>
+</tr>
+<tr>
+<td style="text-align: left;">Квантово-згорткові мережі (Q-CNN)</td>
+<td style="text-align: left;">1D згортка з квантовими фільтрами стиснення простору ознак</td>
+<td style="text-align: left;">Низькі; робастність до локальних просторових зсувів</td>
+<td style="text-align: left;">Ефективне вилучення кореляцій у багатопараметричних сенсорних масивах</td>
+<td style="text-align: left;">Прогнозування діоксиду азоту в районі «Фаворит»</td>
+</tr>
+<tr>
+<td style="text-align: left;">Квантові трансформери (Quantum Transformer)</td>
+<td style="text-align: left;">Механізм самоуваги, підсилений квантовими шарами обробки лагів</td>
+<td style="text-align: left;">Помірні; здатні утримувати довгостроковий контекст</td>
+<td style="text-align: left;">Висока сепарабельність складних гармонійних сезонних залежностей</td>
+<td style="text-align: left;">Прогнозування вологості та тиску в промисловому вузлі</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<blockquote>
+<p><strong>ТИПОВА ПОМИЛКА:</strong> Спроба подачі сирих значень екологічних вимірювань у фізичних одиницях (наприклад, атмосферного тиску 1013,25 гПа або концентрації пилу 450 мкг/м³) безпосередньо як кутів ротації вентилів <span class="arithmatex">\(R_x(\theta)\)</span> або <span class="arithmatex">\(R_y(\theta)\)</span> у квантову схему. Оскільки тригонометричні ротаційні вентилі є періодичними з періодом <span class="arithmatex">\(2\pi\)</span> (<span class="arithmatex">\(\theta \equiv \theta \bmod 2\pi\)</span>), подача ненормованого значення <span class="arithmatex">\(1013,25\)</span> призводить до випадкового хаотичного закручування квантового стану на сфері Блоха (<span class="arithmatex">\(1013,25 \bmod 2\pi \approx 1,60\text{ рад}\)</span>), повністю руйнуючи природну монотонну лінійність фізичного параметра та унеможливлюючи навчання мережі.</p>
+</blockquote>
+<hr />
+<blockquote>
+<p><strong>КОНТРОЛЬНЕ ПИТАННЯ:</strong> Квантовий прогностичний вузол складається з одного кубіта, що перебуває в початковому стані <span class="arithmatex">\(|0\rangle\)</span>. До кубіта прикладається вхідний ротаційний вентиль <span class="arithmatex">\(R_y(\theta)\)</span>, де кут <span class="arithmatex">\(\theta\)</span> є нормалізованим параметром екологічного часового ряду. Чому дорівнює теоретичне квантове математичне сподівання оператора Паулі-Z (<span class="arithmatex">\(\langle Z \rangle\)</span>) на виході схеми як функція кута <span class="arithmatex">\(\theta\)</span>, і як за допомогою правила зсуву параметра (Parameter-Shift Rule) обчислити його точну аналітичну похідну <span class="arithmatex">\(\frac{\partial \langle Z \rangle}{\partial \theta}\)</span> у точці <span class="arithmatex">\(\theta = \frac{\pi}{3}\)</span>?</p>
+</blockquote>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: Теоретичне сподівання дорівнює <span class="arithmatex">\(\langle Z \rangle(\theta) = \cos\theta\)</span>; аналітична похідна в точці <span class="arithmatex">\(\theta = \pi/3\)</span> становить <span class="arithmatex">\(\frac{\partial \langle Z \rangle}{\partial \theta} = -\frac{\sqrt{3}}{2} \approx -0,866\)</span>, що строго збігається з результатом правила зсуву параметра.</strong></p>
+<ol>
+<li>
+<p>Повне логічне та аналітичне обґрунтування:</p>
+</li>
+<li>
+<p>Стан кубіта після дії вентиля <span class="arithmatex">\(R_y(\theta)\)</span> на базисний вектор <span class="arithmatex">\(|0\rangle\)</span> описується вектором:
+     $<span class="arithmatex">\(|\psi(\theta)\rangle = R_y(\theta) |0\rangle = \begin{pmatrix} \cos\frac{\theta}{2} &amp; -\sin\frac{\theta}{2} \\ \sin\frac{\theta}{2} &amp; \cos\frac{\theta}{2} \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} \cos\frac{\theta}{2} \\ \sin\frac{\theta}{2} \end{pmatrix} = \cos\frac{\theta}{2} |0\rangle + \sin\frac{\theta}{2} |1\rangle\)</span>$</p>
+</li>
+<li>
+<p>Обчислимо квантове математичне сподівання оператора Паулі-Z (<span class="arithmatex">\(Z = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}\)</span>):
+     $<span class="arithmatex">\(\langle Z \rangle(\theta) = \langle \psi(\theta) | Z | \psi(\theta)\rangle = \begin{pmatrix} \cos\frac{\theta}{2} &amp; \sin\frac{\theta}{2} \end{pmatrix} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} \begin{pmatrix} \cos\frac{\theta}{2} \\ \sin\frac{\theta}{2} \end{pmatrix} = \cos^2\frac{\theta}{2} - \sin^2\frac{\theta}{2} = \cos\theta\)</span>$</p>
+</li>
+<li>
+<p>Пряма аналітична похідна від косинуса:
+     $<span class="arithmatex">\(\frac{\partial \langle Z \rangle}{\partial \theta} = \frac{d}{d\theta}(\cos\theta) = -\sin\theta\)</span>$
+     У точці <span class="arithmatex">\(\theta = \frac{\pi}{3}\)</span>: <span class="arithmatex">\(-\sin\left(\frac{\pi}{3}\right) = -\frac{\sqrt{3}}{2} \approx -0,8660\)</span>.</p>
+</li>
+<li>
+<p>Застосуємо правило зсуву параметра (Parameter-Shift Rule) без знання аналітичної похідної:
+     $<span class="arithmatex">\(\frac{\partial \langle Z \rangle}{\partial \theta} = \frac{1}{2} \left[ \langle Z \rangle\Big(\theta + \frac{\pi}{2}\Big) - \langle Z \rangle\Big(\theta - \frac{\pi}{2}\Big) \right] = \frac{1}{2} \left[ \cos\Big(\theta + \frac{\pi}{2}\Big) - \cos\Big(\theta - \frac{\pi}{2}\Big) \right]\)</span>$
+     Оскільки <span class="arithmatex">\(\cos(\theta + \pi/2) = -\sin\theta\)</span>, а <span class="arithmatex">\(\cos(\theta - \pi/2) = \sin\theta\)</span>:
+     $<span class="arithmatex">\(\frac{1}{2} [-\sin\theta - \sin\theta] = \frac{1}{2} [-2\sin\theta] = -\sin\theta\)</span>$</p>
+</li>
+<li>
+<p>У точці <span class="arithmatex">\(\theta = \pi/3\)</span>: <span class="arithmatex">\(\frac{1}{2} [\cos(5\pi/6) - \cos(-\pi/6)] = \frac{1}{2} [-\frac{\sqrt{3}}{2} - \frac{\sqrt{3}}{2}] = -\frac{\sqrt{3}}{2} \approx -0,8660\)</span>.</p>
+</li>
+<li>
+<p>Розрахунок доводить, що квантовий процесор шляхом виконання лише двох вимірювань зі зсувом кута на <span class="arithmatex">\(\pm \pi/2\)</span> отримує абсолютно точне аналітичне значення градієнта функції.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Твердження про те, що сподівання дорівнює <span class="arithmatex">\(\sin\theta\)</span>, є математично невірним, оскільки оператор Паулі-Z вимірює різницю ймовірностей базисних станів <span class="arithmatex">\(|0\rangle\)</span> та <span class="arithmatex">\(|1\rangle\)</span>, що дає косинус подвійного половинного кута.</p>
+</li>
+<li>
+<p>Висновок про необхідність використання скінченних різниць із малим кроком <span class="arithmatex">\(\Delta \theta \to 0\)</span> є хибним для квантових систем, оскільки малий крок у присутності шуму вимірювань (shot noise) викликає катастрофічну нестабільність градієнта.</p>
+</li>
+</ol>
+</details>
+<hr />
+<h3 id="_3">Вказівки для самостійного осмислення</h3>
+<ol>
+<li>
+<p>Здійсніть аналітичне виведення правила зсуву параметра (Parameter-Shift Rule) для довільного унітарного вентиля <span class="arithmatex">\(U(\theta) = \exp(-i \frac{\theta}{2} G)\)</span>, генератор якого <span class="arithmatex">\(G\)</span> задовольняє умову <span class="arithmatex">\(G^2 = I\)</span>.</p>
+</li>
+<li>
+<p>Проаналізуйте геометричний зміст квантової заплутаності двох кубітів на сфері Блоха та поясніть, чому стан Белла <span class="arithmatex">\(|\Phi^+\rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)\)</span> не може бути представлений як дві незалежні точки на індивідуальних сферах Блоха.</p>
+</li>
+<li>
+<p>Дослідіть математичні обмеження симуляції квантових систем на класичних комп'ютерах, розрахувавши обсяг оперативної пам'яті (RAM), необхідний для збереження вектора стану квантового регістра розмірністю 30 кубітів у форматі чисел із плаваючою комою подвійної точності (complex128).</p>
+</li>
+</ol>
+<h2 id="2-">2. Методологія та аналіз граничних умов. Бенчмаркінг квантово-гібридних нейромереж та бар'єри апаратного шуму</h2>
+<h3 id="21-q-lstm-q-gru-q-cnn-q-transformer">2.1. Порівняльний аналіз квантових модифікацій Q-LSTM, Q-GRU, Q-CNN та Q-Transformer та їх класичних еквівалентів на малих вибірках моніторингу</h3>
+<p>Емпірична валідація квантово-гібридних обчислювальних підходів на натурних даних муніципального екологічного моніторингу формує об'єктивну наукову картину можливостей та обмежень сучасного прикладного квантового машинного навчання. Порівняльний бенчмаркінг тринадцяти прогностичних архітектур, проведений на реальних рядах вимірювальних станцій Vaisala у місті Кременчук із загальною тривалістю спостережень лише 35 місяців (розбиття: 28 місяців навчальної вибірки та 7 місяців відкладеного тесту), виявив виражену параметричну дихотомію в ефективності моделей.</p>
+<p>Для комплексного оцінювання якості прогнозів застосовується система стандартизованих числових критеріїв: середньоквадратична похибка (MSE), середня абсолютна похибка (MAE) та коефіцієнт детермінації (<span class="arithmatex">\(R^2\)</span>). Додатково для забезпечення фізичної достовірності прогнозів у вихідний шар усіх моделей інтегровано постобробну функцію на основі лінійного випрямляча:</p>
+<div class="arithmatex">\[f_{\text{ReLU}}(x) = \max(0, x)\]</div>
+<p>що апаратно блокує генерацію неможливих від'ємних концентрацій хімічних токсикантів або від'ємних рівнів вологості.</p>
+<p>Результати систематичного зіставлення квантових модифікацій нейронних мереж із їхніми класичними аналогами наведені у формі багатофакторної порівняльної матриці.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Архітектурний клас</th>
+<th style="text-align: left;">Найкраща класична модель</th>
+<th style="text-align: left;">Похибка MSE (Classical)</th>
+<th style="text-align: left;">Найкраща квантова модель</th>
+<th style="text-align: left;">Похибка MSE (Quantum)</th>
+<th style="text-align: left;">Відносна зміна похибки (<span class="arithmatex">\(\Delta \text{MSE}\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Відносна вологість (Гімназія № 26)</td>
+<td style="text-align: left;">Класичний Transformer</td>
+<td style="text-align: left;">81,25</td>
+<td style="text-align: left;">Гібридний Q-GRU</td>
+<td style="text-align: left;">70,51</td>
+<td style="text-align: left;">Зниження на 13,21% (виграш QML)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Відносна вологість (Промвузол)</td>
+<td style="text-align: left;">Класична мережа LSTM</td>
+<td style="text-align: left;">120,33</td>
+<td style="text-align: left;">Гібридна мережа Q-LSTM</td>
+<td style="text-align: left;">65,02</td>
+<td style="text-align: left;">Зниження на 45,96% (виграш QML)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Атмосферний тиск (Гімназія № 26)</td>
+<td style="text-align: left;">Класична AutoARIMA</td>
+<td style="text-align: left;">5,28</td>
+<td style="text-align: left;">Гібридна мережа Q-CNN</td>
+<td style="text-align: left;">2,68</td>
+<td style="text-align: left;">Зниження на 49,16% (виграш QML)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Атмосферний тиск (Промвузол)</td>
+<td style="text-align: left;">Класична AutoARIMA</td>
+<td style="text-align: left;">4,25</td>
+<td style="text-align: left;">Гібридний Q-Transformer</td>
+<td style="text-align: left;">1,07</td>
+<td style="text-align: left;">Зниження на 74,74% (виграш QML)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Діоксид азоту (Промвузол)</td>
+<td style="text-align: left;">Класична мережа GRU</td>
+<td style="text-align: left;">0,00007</td>
+<td style="text-align: left;">Гібридний Q-Transformer</td>
+<td style="text-align: left;">0,00003</td>
+<td style="text-align: left;">Зниження на 49,23% (виграш QML)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Монооксид вуглецю (Гімназія № 26)</td>
+<td style="text-align: left;">Класична AutoARIMA</td>
+<td style="text-align: left;">0,0051</td>
+<td style="text-align: left;">Квантова Q-AutoARIMA</td>
+<td style="text-align: left;">0,0126</td>
+<td style="text-align: left;">Зростання на 147,0% (програш QML)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Температура повітря (Гімназія № 26)</td>
+<td style="text-align: left;">Класична AutoARIMA</td>
+<td style="text-align: left;">12,89</td>
+<td style="text-align: left;">Квантова модель Q-TBATS</td>
+<td style="text-align: left;">53,45</td>
+<td style="text-align: left;">Зростання на 314,6% (програш QML)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Температура повітря (Промвузол)</td>
+<td style="text-align: left;">Класична AutoARIMA</td>
+<td style="text-align: left;">22,45</td>
+<td style="text-align: left;">Квантова Q-AutoETS</td>
+<td style="text-align: left;">48,75</td>
+<td style="text-align: left;">Зростання на 117,2% (програш QML)</td>
+</tr>
+</tbody>
+</table>
+<p>Статистична достовірність виявлених відмінностей перевірялася за допомогою непараметричного критерію знакових рангів Вілкоксона (Wilcoxon signed-rank test) на масивах залишкових помилок. Для параметрів відносної вологості та атмосферного тиску перевага квантово-гібридних моделей підтверджена зі рівнем значущості <span class="arithmatex">\(p &lt; 0,05\)</span>. Водночас для температури та оксиду вуглецю квантові структури продемонстрували статистично значущу деградацію точності порівняно з класичними статистичними моделями.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    participant InputPipe as Вхідний нормалізатор вибірки (T = 35 міс.)
+    participant ClassicalCore as Класичний екстрактор ознак (LSTM / CNN)
+    participant QPUCircuit as Варіаційна схема VQC (PennyLane QPU)
+    participant PlateauCheck as Монітор градієнтів (Barren Plateau Monitor)
+    participant AdamOpt as Адаптивний оптимізатор Adam
+    actor ValidationEngine as Валідатор похибок поза вибіркою (Test Split)
+
+    InputPipe-&gt;&gt;ClassicalCore: Пакет лагових ознак X_lag у діапазоні [0, 1]
+    ClassicalCore-&gt;&gt;QPUCircuit: Латентний вектор h_t для AngleEmbedding
+    QPUCircuit-&gt;&gt;QPUCircuit: Еволюція стану крізь L шарів ротацій та CNOT
+    QPUCircuit-&gt;&gt;PlateauCheck: Розрахунок аналітичних градієнтів d&lt;Z&gt;/d(theta)
+    alt Дисперсія градієнта Var(grad) &lt; 10^-5 (Безплідне плато)
+        PlateauCheck-&gt;&gt;AdamOpt: Сигнал про згасання градієнта: Зрив навчання
+        AdamOpt--&gt;&gt;ValidationEngine: Зупинка: модель застрягла у локальному мінімумі
+    else Градієнт стабільний (Var(grad) &gt;= 10^-5)
+        PlateauCheck-&gt;&gt;AdamOpt: Передача вектора градієнтів Parameter-Shift
+        AdamOpt-&gt;&gt;ClassicalCore: Синхронне оновлення ваг W та кутів theta
+        ClassicalCore-&gt;&gt;ValidationEngine: Формування прогнозу y_hat на 7 місяців
+    end
+    ValidationEngine-&gt;&gt;ValidationEngine: Розрахунок критерію Вілкоксона та дельта MSE</code></pre>
+<hr />
+<h3 id="22">2.2. Механізми досягнення квантової переваги: лінійна сепарабельність складних нелінійних залежностей при прогнозуванні стабільних циклічних параметрів (атмосферний тиск, відносна вологість)</h3>
+<p>Виражений успіх квантово-гібридних архітектур у прогнозуванні атмосферного тиску (падіння похибки MSE до 74,74%) та вологості (зниження MSE до 45,96%) зумовлений узгодженістю між спектральними характеристиками цих процесів та індуктивним зміщенням (inductive bias) варіаційних квантових схем. Часові ряди тиску та вологості характеризуються високою автокореляцією на першому лагу (<span class="arithmatex">\(\text{ACF}_1 &gt; 0,85\)</span>), плавною гармонійною циклічністю та стабільною фізичною природою, підпорядкованою барометричним законам.</p>
+<p>Механізм формування квантової переваги базується на властивостях ядра у просторі Гільберта. Коли вектор часових ознак відображається у квантовий стан за допомогою кутового кодування, схема реалізує неявний ядерний метод із нескінченновимірним простором станів:</p>
+<div class="arithmatex">\[\mathcal{K}_{\text{quantum}}(\mathbf{x}_i, \mathbf{x}_j) = |\langle \psi(\mathbf{x}_i) | \psi(\mathbf{x}_j) \rangle|^2\]</div>
+<p>У цьому просторі складні нелінійні траєкторії циклічних екологічних коливань стають лінійно роздільними. Варіаційні ротаційні шари формують ортогональні перетворення, здатні вловлювати гладкі періодичності високих порядків без явища недонавчання (underfitting), яке спостерігається у стандартних лінійних моделей або неглибоких класичних LSTM.</p>
+<p>Крім того, обмежена кількість кубітів у схемі (<span class="arithmatex">\(Q \in [2, 6]\)</span>) діє як ефективне <strong>інформаційне вузьке горло (information bottleneck)</strong>. Для стабільних детермінованих сигналів тиску це обмеження виконує функцію природної регуляризації: модель фізично не має параметричної ємності для запам'ятовування випадкових мікрофлуктуацій і змушена налаштовуватися виключно на домінуючі низькочастотні гармонійні компоненти сигналу, що забезпечує неперевершену узагальнюючу здатність на тестових даних.</p>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> При моделюванні атмосферного тиску для станції моніторингу в районі «Фаворит» м. Кременчук квантова модель на базі варіаційної схеми TBATS (Q-TBATS) знизила середньоквадратичну похибку з 1,34 до 1,08 <span class="arithmatex">\((\text{гПа})^2\)</span>, забезпечивши точне відтворення барометричних хвиль без використання масивних класичних ансамблів.</p>
+</blockquote>
+<hr />
+<h3 id="23-barren-plateaus">2.3. Феномен «безплідного плато» (Barren Plateaus) та деградація квантових моделей при апроксимації високоентропійних нелінійних рядів температури й оксиду вуглецю</h3>
+<p>Діаметрально протилежні результати зафіксовано при спробі квантово-гібридного прогнозування температури навколишнього середовища та концентрацій монооксиду вуглецю, де квантові моделі зазнали повної поразки від класичного алгоритму AutoARIMA (деградація похибки перевищила 300%). Це явище розкриває головний теоретичний та алгоритмічний бар'єр сучасного квантового машинного навчання — проблему <strong>«безплідного плато» (Barren Plateau Phenomenon)</strong> у поєднанні з високою ентропією сигналу.</p>
+<p>Математична сутність явища безплідного плато, строго доведена МакКліном, полягає в тому, що для випадково ініціалізованих глибоких варіаційних квантових схем дисперсія градієнта функції втрат за будь-яким параметром <span class="arithmatex">\(\theta_k\)</span> експоненційно згасає зі зростанням кількості кубітів <span class="arithmatex">\(Q\)</span>:</p>
+<div class="arithmatex">\[\text{Var}_{\mathbf{w}} \left[ \frac{\partial \mathcal{L}(\mathbf{w})}{\partial \theta_k} \right] \in \mathcal{O}\left( \frac{1}{2^Q} \right)\]</div>
+<p>Це означає, що поверхня функції втрат у багатовимірному просторі параметрів стає практично абсолютно пласкою за винятком надзвичайно вузьких локальних ущелин. Градієнтні методи оптимізації (включаючи Adam) стикаються з нульовими похідними та не можуть знайти напрямок спуску.</p>
+<p>В екологічних дослідженнях цей ефект катастрофічно посилюється специфікою вхідних даних:</p>
+<ol>
+<li>
+<p>Часовий ряд температури в континентальному кліматі має максимальну вибіркову дисперсію (<span class="arithmatex">\(\sigma^2 = 86,8\text{ (}^\circ\text{C})^2\)</span>) та високу стохастичну амплітуду добових коливань. Поверхня функції втрат стає екстремально порізаною. Класичний алгоритм AutoARIMA успішно згладжує цю дисперсію процедурою статистичного диференціювання <span class="arithmatex">\(d=1\)</span>, тоді як квантовий градієнтний спуск миттєво застрягає в неглибоких локальних мінімумах біля точки старту.</p>
+</li>
+<li>
+<p>Концентрації монооксиду вуглецю (<span class="arithmatex">\(CO\)</span>) формуються випадковими антропогенними сплесками транспортного трафіку, які є нестаціонарними (<span class="arithmatex">\(p\text{-value} = 0,981\)</span>). Висока експресивність нескінченновимірного простору Гільберта у поєднанні з малим обсягом вибірки (28 точок навчання) призводить до важкого <strong>квантового перенавчання (quantum overfitting)</strong>: модель ідеально підлаштовується під стохастичний шум тренувального набору, але повністю втрачає зв'язок із фізичною реальністю на тестових даних.</p>
+</li>
+</ol>
+<p>Аналітичний розбір повного багатоетапного контуру квантово-гібридного навчання та діагностики плато описується наступним формалізованим математико-алгоритмічним контуром:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\text{Крок 1 (Латентне стиснення CPU):} &amp; \quad \mathbf{h}_t = \text{LSTM}_{\text{cell}}(\mathbf{x}_t, \mathbf{h}_{t-1}; \mathbf{W}_{\text{lstm}}), \quad \mathbf{h}_t \in [0, \pi]^Q \\
+\text{Крок 2 (Квантова еволюція QPU):} &amp; \quad |\Psi(\mathbf{h}_t, \boldsymbol{\theta})\rangle = \prod_{l=1}^L \Big( \text{CNOT} \cdot R_y(\boldsymbol{\theta}_l) \Big) \bigotimes_{j=1}^Q R_x(h_{t, j}) |0\rangle \\
+\text{Крок 3 (Екстракція очікувань):} &amp; \quad z_j = \langle \Psi | Z_j | \Psi \rangle \in [-1, 1], \quad \hat{y}_t = \mathbf{w}_{\text{out}}^T \mathbf{z} + b_{\text{out}} \\
+\text{Крок 4 (Parameter-Shift градієнт):} &amp; \quad g_k = \frac{\partial \mathcal{L}}{\partial \theta_k} = \frac{1}{2} \Big( \mathcal{L}(\theta_k + \frac{\pi}{2}) - \mathcal{L}(\theta_k - \frac{\pi}{2}) \Big) \\
+\text{Крок 5 (Діагностика плато):} &amp; \quad \text{IF } \|g_k\| \lt  \varepsilon_{\text{plateau}} \quad \Longrightarrow \quad \text{HaltOrReinit}() \quad \text{ELSE } \boldsymbol{\theta} \leftarrow \text{Adam}(\boldsymbol{\theta}, g_k)
+\end{aligned}
+\]</div>
+<p>де поріг <span class="arithmatex">\(\varepsilon_{\text{plateau}} \approx 10^{-5}\)</span> сигналізує про потрапляння схеми в безплідне плато, за якого подальше навчання квантових вентилів є математично беззмістовним.</p>
+<blockquote>
+<p><strong>ВАЖЛИВО:</strong> Застосування квантово-гібридних нейромереж до нестаціонарних екологічних часових рядів із високою дисперсією шуму без попереднього статистичного детрендування та десезонізації є неприпустимим, оскільки висока експресивність квантових гейтів гарантовано провокує перенавчання на випадкових екстремумах вибірки.</p>
+</blockquote>
+<hr />
+<h3 id="24-gpu-nisq">2.4. Експоненційне зростання обчислювальних витрат симуляції квантових вентилів на класичних GPU та декогеренція фізичних квантових процесорів епохи NISQ як ключовий бар'єр практичної реалізації</h3>
+<p>Практична реалізація квантового машинного навчання у виробничих контурах муніципального моніторингу стикається з подвійним технологічним бар'єром: високою вартістю емуляції квантових схем на класичних серверах та фізичною недосконалістю реального квантового апаратного забезпечення.</p>
+<p>На сучасному етапі переважна більшість квантово-гібридних досліджень виконується за допомогою безшумних векторних симуляторів квантового стану (наприклад, пристрою <code>default.qubit</code> фреймворку PennyLane). Математичне моделювання унітарної еволюції регістра з <span class="arithmatex">\(Q\)</span> кубітів вимагає підтримки в оперативній пам'яті вектора стану розмірністю <span class="arithmatex">\(2^Q\)</span> комплексних чисел подвійної точності. Виконання кожного двовходового вентиля CNOT еквівалентне множенню матриці розмірністю <span class="arithmatex">\(2^Q \times 2^Q\)</span> на вектор стану, що формує експоненційну обчислювальну складність <span class="arithmatex">\(\mathcal{O}(2^Q)\)</span>. </p>
+<p>В експериментальних випробуваннях на відеокарті NVIDIA RTX 3090 тривалість однієї епохи навчання квантово-гібридної моделі Q-LSTM становила 45 секунд порівняно з лише 4 секундами для класичної моделі LSTM аналогічної глибини (обчислювальне уповільнення у 11,25 раза). Для оперативних задач прогнозування висока затримка навчання стримує можливість частого перекалібрування моделей при надходженні нових порцій вимірювань.</p>
+<p>Фізичне розгортання VQC на реальних процесорах епохи NISQ стикається з проблемою <strong>квантової декогеренції та апаратного шуму вентилів</strong>. Реальні фізичні кубіти (напівпровідникові або надпровідні) неперервно взаємодіють із тепловим та електромагнітним оточенням, що призводить до втрати квантової фази за характерний час дефазування <span class="arithmatex">\(T_2\)</span> та самовільного переходу в основний стан за час енергетичної релаксації <span class="arithmatex">\(T_1\)</span> (для сучасних процесорів величини <span class="arithmatex">\(T_1, T_2\)</span> становлять лише <span class="arithmatex">\(50–150\text{ мкс}\)</span>).</p>
+<p>Унітарна еволюція за наявності апаратного шуму деградує у змішаний стан, що описується квантовим стохастичним рівнянням Ліндблада для матриці щільності <span class="arithmatex">\(\rho\)</span>:</p>
+<div class="arithmatex">\[\frac{d\rho}{dt} = -i [H(\mathbf{w}), \rho] + \sum_{k} \left( L_k \rho L_k^\dagger - \frac{1}{2} \{L_k^\dagger L_k, \rho\} \right)\]</div>
+<p>де оператори Ліндблада <span class="arithmatex">\(L_k\)</span> моделюють деполяризаційний шум та фазове згасання (phase damping). При глибині схеми <span class="arithmatex">\(L \ge 4\)</span> накопичення апаратних помилок вентилів перетворює вихідний квантовий стан на максимально змішаний хаотичний стан <span class="arithmatex">\(\rho \to \frac{1}{2^Q} I\)</span>, за якого будь-яке вимірювання оператора Паулі-Z дає нульове математичне сподівання (<span class="arithmatex">\(\langle Z \rangle \to 0\)</span>), повністю знищуючи будь-яку корисну інформацію про екологічний процес.</p>
+<p>Для систематизації та порівняння архітектур предиктивного моделювання сформовано підсумкову аналітичну матрицю.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Модель прогнозування</th>
+<th style="text-align: left;">Тип обчислювальної платформи</th>
+<th style="text-align: left;">Стабільність градієнтного спуску</th>
+<th style="text-align: left;">Час навчання однієї епохи</th>
+<th style="text-align: left;">Складність впровадження</th>
+<th style="text-align: left;">Критичні ризики та обмеження методології</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Класична AutoARIMA</td>
+<td style="text-align: left;">Класичний процесор (CPU)</td>
+<td style="text-align: left;">Абсолютна; аналітичний розв'язок різницевих рівнянь</td>
+<td style="text-align: left;">Долі секунди на вибірку</td>
+<td style="text-align: left;">Вкрай низька; стандартні пакети</td>
+<td style="text-align: left;">Обмеженість суто лінійними стаціонарними процесами</td>
+</tr>
+<tr>
+<td style="text-align: left;">Класична мережа LSTM</td>
+<td style="text-align: left;">Класичний процесор (CPU / GPU)</td>
+<td style="text-align: left;">Висока; стабільне зворотне поширення крізь час (BPTT)</td>
+<td style="text-align: left;">3–5 секунд на GPU</td>
+<td style="text-align: left;">Середня; вимагає підбору гіперпараметрів</td>
+<td style="text-align: left;">Схильність до недонавчання на малих вибірках (<span class="arithmatex">\(T &lt; 50\)</span> точок)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Гібридна мережа Q-LSTM</td>
+<td style="text-align: left;">Гібрид CPU + QPU (PennyLane)</td>
+<td style="text-align: left;">Середня; чутлива до вибору початкових кутів ротацій</td>
+<td style="text-align: left;">40–50 секунд на GPU</td>
+<td style="text-align: left;">Висока; вимагає інтеграції квантових шарів</td>
+<td style="text-align: left;">Експоненційне зростання часу симуляції при <span class="arithmatex">\(Q &gt; 10\)</span> кубітів</td>
+</tr>
+<tr>
+<td style="text-align: left;">Квантовий Q-Transformer</td>
+<td style="text-align: left;">Гібрид CPU + QPU з увагою над кубітами</td>
+<td style="text-align: left;">Низька; ризик потрапляння у безплідне плато (Barren Plateau)</td>
+<td style="text-align: left;">60–90 секунд на GPU</td>
+<td style="text-align: left;">Дуже висока; складна топологія заплутування</td>
+<td style="text-align: left;">Катастрофічне перенавчання на нелінійному шумі емісій</td>
+</tr>
+<tr>
+<td style="text-align: left;">Фізичний NISQ-процесор</td>
+<td style="text-align: left;">Реальний квантовий чип (наприклад, IBM Quantum)</td>
+<td style="text-align: left;">Екстремально низька; стохастичний шум вимірювань (Shot Noise)</td>
+<td style="text-align: left;">Долі секунди виконання, але довгі черги доступу</td>
+<td style="text-align: left;">Екстремальна; вимагає доступу до хмарних квантових хабів</td>
+<td style="text-align: left;">Швидка декогеренція хвильової функції при глибині схеми <span class="arithmatex">\(L &gt; 3\)</span></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> При бенчмаркінгу на навчальній вибірці муніципального поста № 2 у місті Кременчук квантові моделі продемонстрували стандартне відхилення похибки за 10 послідовними запусками з різними випадковими вагами на рівні <span class="arithmatex">\(\sigma_{\text{MSE}} \approx 12,4\%\)</span>, тоді як класичні нейромережі показали варіативність лише <span class="arithmatex">\(\sigma_{\text{MSE}} \approx 4,1\%\)</span>, що підтвердило підвищену чутливість квантових варіаційних ландшафтів до стохастичної ініціалізації параметрів.</p>
+</blockquote>
+<hr />
+<blockquote>
+<p><strong>КОНТРОЛЬНЕ ПИТАННЯ:</strong> Під час навчання 6-кубітної варіаційної квантової схеми для прогнозування часового ряду концентрації оксиду вуглецю за допомогою алгоритму Adam градієнти варіаційних параметрів на 3-й епосі впали до значень <span class="arithmatex">\(\|\nabla_{\boldsymbol{\theta}} \mathcal{L}\| \approx 10^{-7}\)</span>, а середньоквадратична похибка застрягла на позначці <span class="arithmatex">\(\text{MSE} = 0,0126\text{ (мг/м}^3)^2\)</span>. Збільшення швидкості навчання з <span class="arithmatex">\(\eta = 0,001\)</span> до <span class="arithmatex">\(\eta = 0,1\)</span> не дало жодного результату. Який фізико-математичний феномен став причиною зупинки навчання та яке структурне рішення в архітектурі схеми дозволить вивести модель із цього стану?</p>
+</blockquote>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: Схема потрапила у явище «безплідного плато» (Barren Plateau) через надмірну випадкову експресивність анзацу; рішення полягає у зменшенні глибини схеми, застосуванні локальних операторів спостереження та пошаровій ініціалізації параметрів (Layer-by-Layer Training).</strong></p>
+<ol>
+<li>
+<p>Повне логічне та аналітичне обґрунтування:</p>
+</li>
+<li>
+<p>Зниження норми градієнта до величини <span class="arithmatex">\(10^{-7}\)</span> при відсутності оптимізації функції втрат є класичною діагностичною ознакою безплідного плато. При випадковій ініціалізації кутів у глибоких анзацах із циклічним заплутуванням CNOT квантовий стан рівномірно розтікається по всьому гільбертовому простору розмірністю <span class="arithmatex">\(2^6 = 64\)</span>, формуючи 2-дизайн Хаара. У цьому стані дисперсія градієнта згасає експоненційно, перетворюючи ландшафт втрат на пласку поверхню.</p>
+</li>
+<li>
+<p>Просте збільшення швидкості навчання <span class="arithmatex">\(\eta\)</span> є неефективним, оскільки крок у довільному напрямку на пласкій поверхні не створює вектору спуску.</p>
+</li>
+<li>
+<p>Конструктивні інженерні рішення для усунення плато:</p>
+<ul>
+<li>
+<p>Зменшення кількості варіаційних шарів до <span class="arithmatex">\(L = 1–2\)</span>, що обмежує дифузію стану за мірою Хаара.</p>
+</li>
+<li>
+<p>Застосування локальних спостережуваних величин (вимірювання лише одного чи двох кубітів замість глобального добутку операторів Паулі).</p>
+</li>
+<li>
+<p>Пошарове навчання (Layer-by-Layer / Identity Initialization), коли початкові варіаційні кути ініціалізуються нулями <span class="arithmatex">\(\boldsymbol{\theta} = \mathbf{0}\)</span>, що перетворює унітарний оператор на одиничну матрицю (<span class="arithmatex">\(U = I\)</span>) і гарантує збереження великих значень початкових градієнтів.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Гіпотеза про збій комп'ютера є хибною, оскільки падіння градієнта є математичною властивістю геометрії квантових функціоналів.</p>
+</li>
+<li>
+<p>Пропозиція додати ще 4 кубіти лише катастрофічно погіршить проблему, оскільки дисперсія градієнта впаде ще в <span class="arithmatex">\(2^4 = 16\)</span> разів.</p>
+</li>
+</ol>
+</details>
+<h2 id="3-">3. Практичний індустріальний / фаховий кейс. Емпіричний бенчмаркінг класичних та квантово-гібридних моделей прогнозування</h2>
+<h3 id="31-q-lstm-q-transformer-autoarima-pennylane-35-">3.1. Комплексний фаховий кейс. Порівняльний аналіз тринадцяти класичних і квантово-гібридних моделей (Q-LSTM, Q-Transformer, AutoARIMA) на базі фреймворку PennyLane для 35-місячного ряду моніторингу повітряного басейну м. Кременчук</h3>
+<h4 id="_4">Постановка задачі / ситуації</h4>
+<p>Впровадження автоматизованих технологій предиктивного моніторингу в урбоекосистемах часто стикається з проблемою «малих даних»: після розгортання нових автоматичних станцій спостереження доступний ретроспективний часовий ряд охоплює лише два-три роки вимірювань, що є недостатнім для повноцінного навчання глибоких нейромереж. Для вирішення цього завдання на базі муніципальної мережі міста Кременчук проведено масштабний порівняльний бенчмаркінг класичних та квантово-гібридних алгоритмів штучного інтелекту. </p>
+<p>Емпіричне дослідження спирається на масив даних трьох автоматичних станцій Vaisala AQT420, розташованих у контрастних функціональних зонах міста: «Гімназія № 26» (житловий масив), «Північний промисловий вузол» (район нафтохімічних підприємств) та район «Фаворит» (комерційна зона з інтенсивним автотрафіком). Спостереження охоплюють 35 місяців безперервних помісячних вимірювань п'яти ключових параметрів: температури, відносної вологості, атмосферного тиску, оксиду вуглецю (<span class="arithmatex">\(CO\)</span>) та діоксиду азоту (<span class="arithmatex">\(NO_2\)</span>). Вибірка суворо розбита на навчальну множину (перші 28 місяців, 80%) та відкладену тестову множину (останні 7 місяців, 20%). Необхідно за допомогою бібліотек PyTorch, TensorFlow та квантового фреймворку PennyLane реалізувати класичні моделі (AutoARIMA, LSTM, GRU, CNN, Transformer, MLP, TBATS) та їхні квантово-гібридні версії, розрахувати показники похибок на тестовому інтервалі, провести статистичну перевірку значущості за критерієм Вілкоксона та визначити межі ефективності кожної парадигми.</p>
+<p>Вхідні параметри експериментальної установки та числові результати бенчмаркінгу наведено в таблиці нижче.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Досліджуваний параметр / Умова</th>
+<th style="text-align: left;">Одиниця виміру</th>
+<th style="text-align: left;">Числове значення (Класична модель)</th>
+<th style="text-align: left;">Числове значення (Квантова модель)</th>
+<th style="text-align: left;">Результат порівняння (<span class="arithmatex">\(\Delta \text{MSE}\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Тиск (Північний промвузол)</td>
+<td style="text-align: left;"><span class="arithmatex">\((\text{гПа})^2\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{MSE} = 4,25\)</span> (AutoARIMA)</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{MSE} = 1,07\)</span> (Q-Transformer)</td>
+<td style="text-align: left;">Зниження на 74,74% (перевага QML)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Вологість (Північний промвузол)</td>
+<td style="text-align: left;"><span class="arithmatex">\((\%)^2\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{MSE} = 120,33\)</span> (LSTM)</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{MSE} = 65,02\)</span> (Q-LSTM)</td>
+<td style="text-align: left;">Зниження на 45,96% (перевага QML)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Діоксид азоту (Промвузол)</td>
+<td style="text-align: left;"><span class="arithmatex">\((\text{мг/м}^3)^2\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{MSE} = 7,0 \times 10^{-5}\)</span> (GRU)</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{MSE} = 3,0 \times 10^{-5}\)</span> (Q-Transformer)</td>
+<td style="text-align: left;">Зниження на 49,23% (перевага QML)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Температура (Гімназія № 26)</td>
+<td style="text-align: left;"><span class="arithmatex">\((^\circ\text{C})^2\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{MSE} = 12,89\)</span> (AutoARIMA)</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{MSE} = 53,45\)</span> (Q-TBATS)</td>
+<td style="text-align: left;">Зростання на 314,6% (деградація QML)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Оксид вуглецю (Гімназія № 26)</td>
+<td style="text-align: left;"><span class="arithmatex">\((\text{мг/м}^3)^2\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{MSE} = 0,0051\)</span> (AutoARIMA)</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{MSE} = 0,0126\)</span> (Q-AutoARIMA)</td>
+<td style="text-align: left;">Зростання на 147,0% (деградація QML)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Тривалість навчальної вибірки</td>
+<td style="text-align: left;">місяців</td>
+<td style="text-align: left;">28</td>
+<td style="text-align: left;">28</td>
+<td style="text-align: left;">80% від загального масиву ряду</td>
+</tr>
+<tr>
+<td style="text-align: left;">Тривалість тестової вибірки</td>
+<td style="text-align: left;">місяців</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">Оцінка узагальнюючої здатності</td>
+</tr>
+<tr>
+<td style="text-align: left;">Кількість модельованих кубітів (<span class="arithmatex">\(Q\)</span>)</td>
+<td style="text-align: left;">од.</td>
+<td style="text-align: left;">–</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Квантова схема PennyLane default.qubit</td>
+</tr>
+<tr>
+<td style="text-align: left;">Глибина варіаційного анзацу (<span class="arithmatex">\(L\)</span>)</td>
+<td style="text-align: left;">шарів</td>
+<td style="text-align: left;">–</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Вентилі <span class="arithmatex">\(R_y(\theta)\)</span> та кільцеві CNOT</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["Екологічний часовий ряд (35 місяців, 3 станції)"] --&gt; B["Поділ: 28 міс. Train (80%) та 7 міс. Test (20%)"]
+    B --&gt; C["Min-Max масштабування ознак у простір [0, pi]"]
+    C --&gt; D["Паралельний розрахунок 13 моделей (Класичні vs Квантові)"]
+    D --&gt; E["Квантове ядро: AngleEmbedding + 4 кубіти VQC + Pauli-Z вимірювання"]
+    D --&gt; F["Класичне ядро: Автоматичний підбір AutoARIMA та LSTM/Transformer"]
+    E &amp; F --&gt; G["Постобробка виходів: лінійний випрямляч f(x) = max(0, x)"]
+    G --&gt; H["Розрахунок похибок MSE та критерію рангових знаків Вілкоксона"]
+    H --&gt; I{"p-value &lt; 0.05 на залишках?"}
+    I -- "Так (Тиск, Вологість)" --&gt; J["Затвердження квантово-гібридної моделі (виграш до 74.7%)"]
+    I -- "Ні (Температура, CO)" --&gt; K["Затвердження класичної AutoARIMA (квантове плато)"]</code></pre>
+<h4 id="_5">Покроковий аналіз та розв'язок</h4>
+<h5 id="1">Крок 1. Розрахунок відносного приросту точності моделей</h5>
+<p>Відносна зміна середньоквадратичної помилки між найкращою класичною (<span class="arithmatex">\(\text{MSE}_{\text{class}}\)</span>) та найкращою квантово-гібридною (<span class="arithmatex">\(\text{MSE}_{\text{quant}}\)</span>) моделями формалізується математичним виразом:</p>
+<div class="arithmatex">\[\Delta \text{MSE} = \frac{\text{MSE}_{\text{quant}} - \text{MSE}_{\text{class}}}{\text{MSE}_{\text{class}}} \cdot 100\%\]</div>
+<p>Обчислимо точне значення відносного виграшу для атмосферного тиску в зоні Північного промислового вузла, де класична AutoARIMA показала <span class="arithmatex">\(\text{MSE} = 4,25\text{ (гПа)}^2\)</span>, а квантовий трансформер Q-Transformer показав <span class="arithmatex">\(\text{MSE} = 1,07\text{ (гПа)}^2\)</span>:</p>
+<div class="arithmatex">\[\Delta \text{MSE}_{\text{Pressure}} = \frac{1,07 - 4,25}{4,25} \cdot 100\% = \frac{-3,18}{4,25} \cdot 100\% \approx -74,82\% \quad (\text{з урахуванням округлення таблиці } -74,74\%)\]</div>
+<p>Обчислимо зміну похибки для температури повітря у районі гімназії № 26, де AutoARIMA показала <span class="arithmatex">\(\text{MSE} = 12,89\text{ (}^\circ\text{C})^2\)</span>, а квантова модель Q-TBATS продемонструвала <span class="arithmatex">\(\text{MSE} = 53,45\text{ (}^\circ\text{C})^2\)</span>:</p>
+<div class="arithmatex">\[\Delta \text{MSE}_{\text{Temp}} = \frac{53,45 - 12,89}{12,89} \cdot 100\% = \frac{+40,56}{12,89} \cdot 100\% \approx +314,66\%\]</div>
+<p>Отримані співвідношення наочно демонструють математичну дихотомію: колосальний виграш квантового підходу на барометричних рядах і його катастрофічний зрив на температурних даних.</p>
+<h5 id="2">Крок 2. Розрахунок коефіцієнтів детермінації поза вибіркою</h5>
+<p>Оцінимо якість моделей за критерієм <span class="arithmatex">\(R^2\)</span> на тестовому масиві атмосферного тиску, де вибіркова дисперсія тестових вимірювань становила <span class="arithmatex">\(\text{Var}(y_{\text{test}}) = 4,78\text{ (гПа)}^2\)</span>.</p>
+<p>Для класичної моделі AutoARIMA:</p>
+<div class="arithmatex">\[R_{\text{class}}^2 = 1 - \frac{\text{MSE}_{\text{class}}}{\text{Var}(y_{\text{test}})} = 1 - \frac{4,25}{4,78} = 1 - 0,889 = +0,111 \quad (11,1\%)\]</div>
+<p>Для квантово-гібридного трансформера Q-Transformer:</p>
+<div class="arithmatex">\[R_{\text{quant}}^2 = 1 - \frac{\text{MSE}_{\text{quant}}}{\text{Var}(y_{\text{test}})} = 1 - \frac{1,07}{4,78} = 1 - 0,224 = +0,776 \quad (77,6\%)\]</div>
+<p>Квантова модель змогла пояснити майже 78% дисперсії майбутніх значень тиску проти лише 11% у класичного алгоритму, що підтверджує здатність квантових гільбертових ядер виділяти тонкі нелінійні взаємозв'язки в гладких періодичних сигналах.</p>
+<h5 id="3">Крок 3. Непараметричне статистичне тестування за критерієм Вілкоксона</h5>
+<p>Оскільки розподіл похибок екологічних моделей відхиляється від нормального закону, перевіримо статистичну значущість різниці результатів за допомогою критерію знакових рангів Вілкоксона для парних вибірок. Нехай <span class="arithmatex">\(d_t = |y_t - \hat{y}_{\text{class}, t}| - |y_t - \hat{y}_{\text{quant}, t}|\)</span> є різницею абсолютних похибок для 7 тестових точок (<span class="arithmatex">\(t = 1, \dots, 7\)</span>).</p>
+<p>Для атмосферного тиску вектор різниць помилок склав: <span class="arithmatex">\(\mathbf{d} = (+1,2; \, +1,8; \, +0,9; \, +2,1; \, -0,3; \, +1,4; \, +0,8)\)</span>. 
+Виключивши знаки та відсортувавши модулі значень за зростанням, отримаємо ранги: 
+<span class="arithmatex">\(|-0,3| \to 1\)</span>, <span class="arithmatex">\(|+0,8| \to 2\)</span>, <span class="arithmatex">\(|+0,9| \to 3\)</span>, <span class="arithmatex">\(|+1,2| \to 4\)</span>, <span class="arithmatex">\(|+1,4| \to 5\)</span>, <span class="arithmatex">\(|+1,8| \to 6\)</span>, <span class="arithmatex">\(|+2,1| \to 7\)</span>.</p>
+<p>Сума рангів позитивних різниць (де квантова модель перевершила класичну) дорівнює:</p>
+<div class="arithmatex">\[W^+ = 2 + 3 + 4 + 5 + 6 + 7 = 27\]</div>
+<p>Сума рангів негативних різниць: <span class="arithmatex">\(W^- = 1\)</span>. Статистика критерію становить <span class="arithmatex">\(W = \min(W^+, W^-) = 1\)</span>. Для вибірки <span class="arithmatex">\(n = 7\)</span> критичне значення при рівні значущості <span class="arithmatex">\(\alpha = 0,05\)</span> становить <span class="arithmatex">\(W_{\text{crit}} = 2\)</span>. Оскільки <span class="arithmatex">\(W = 1 \le 2\)</span>, нульова гіпотеза про випадковість відмінностей упевнено відкидається (<span class="arithmatex">\(p &lt; 0,05\)</span>). Квантова перевага в точності прогнозування тиску є статистично доведеною.</p>
+<h5 id="4-gpu">Крок 4. Аналіз часової складності інференсу та тренування на GPU</h5>
+<p>Оцінимо обчислювальні витрати. На апаратній платформі NVIDIA RTX 3090 середня тривалість епохи тренування класичної моделі LSTM становила <span class="arithmatex">\(t_{\text{class}} = 4,1\text{ с}\)</span>, тоді як для квантово-гібридної Q-LSTM на 4 кубітах цей показник досяг <span class="arithmatex">\(t_{\text{quant}} = 46,2\text{ с}\)</span> (уповільнення у 11,3 раза). Проте після завершення навчання час інференсу (генерації прогнозу на 7 кроків уперед) для обох моделей склав менше 80 мілісекунд (<span class="arithmatex">\(t_{\text{infer}} &lt; 0,08\text{ с}\)</span>), що повністю вкладається в нормативні вимоги муніципальних систем оперативного інформування.</p>
+<h4 id="_6">Інтерпретація результатів та альтернативні сценарії</h4>
+<p>Емпіричний аналіз підтвердив контекстну природу квантової переваги: квантові схеми не є універсальною панацеєю, проте демонструють високу ефективність на стабільних циклічних процесах (тиск, вологість) за умов гострого дефіциту даних спостережень. Для параметрів із високою внутрішньою ентропією та випадковим характером викидів (температура, монооксид вуглецю) класична модель AutoARIMA залишається неперевершеною завдяки принципу простоти Оккама та відсутності квантового перенавчання.</p>
+<p>Якби вхідний набір даних охоплював не 35 місяців, а 20 років щоденних спостережень (<span class="arithmatex">\(T &gt; 7000\)</span> точок), архітектурний вибір змінився б на користь повномасштабних класичних трансформерів глибокого навчання (Informer, PatchTST), оскільки на великих масивах класичні нейромережі долають проблему перенавчання, а експоненційна вартість класичної симуляції квантових гейтів на GPU зробила б навчання QML-моделей економічно недоцільним.</p>
+<hr />
+<h3 id="32">3.2. Зведена довідкова система лекції</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Термін / Концепція</th>
+<th style="text-align: left;">Формалізація / Сутність</th>
+<th style="text-align: left;">Реальний кейс застосування</th>
+<th style="text-align: left;">Основне обмеження / Ризик</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Кубіт (Qubit)</td>
+<td style="text-align: left;">Квантовий стан суперпозиції: $</td>
+<td style="text-align: left;">\psi\rangle = \alpha</td>
+<td style="text-align: left;">0\rangle + \beta</td>
+</tr>
+<tr>
+<td style="text-align: left;">Варіаційна квантова схема (VQC)</td>
+<td style="text-align: left;">Квантова схема з навчальними ротаційними гейтами: <span class="arithmatex">\(U(\mathbf{w}) = \prod \text{CNOT} \cdot R_y(\theta)\)</span></td>
+<td style="text-align: left;">Прогностичне ядро для апроксимації циклічних патернів вологості</td>
+<td style="text-align: left;">Ризик застрягання в безплідному плато при випадковій ініціалізації</td>
+</tr>
+<tr>
+<td style="text-align: left;">Кутове кодування (AngleEmbedding)</td>
+<td style="text-align: left;">Відображення нормалізованих ознак у кути обертання: $</td>
+<td style="text-align: left;">\mathbf{x}\rangle = \bigotimes R_x(\pi x_j)</td>
+<td style="text-align: left;">0\rangle$</td>
+</tr>
+<tr>
+<td style="text-align: left;">Спостережуваний оператор Паулі-Z</td>
+<td style="text-align: left;">Квантове вимірювання математичного сподівання: <span class="arithmatex">\(\langle Z_i \rangle = \text{Tr}(\rho Z_i) \in [-1, 1]\)</span></td>
+<td style="text-align: left;">Зняття дійсних чисел із квантового співпроцесора для класичного виходу</td>
+<td style="text-align: left;">Стохастичний шум дробових вимірювань (shot noise) на реальних QPU</td>
+</tr>
+<tr>
+<td style="text-align: left;">Правило зсуву параметра</td>
+<td style="text-align: left;">Точний аналітичний квантовий градієнт: <span class="arithmatex">\(\partial \langle Z \rangle / \partial \theta = \frac{1}{2}[\langle Z(\theta + \frac{\pi}{2}) \rangle - \langle Z(\theta - \frac{\pi}{2}) \rangle]\)</span></td>
+<td style="text-align: left;">Розрахунок градієнтів функції втрат для оптимізатора Adam на GPU</td>
+<td style="text-align: left;">Подвоєння кількості квантових запусків для кожного навчального параметра</td>
+</tr>
+<tr>
+<td style="text-align: left;">Феномен «безплідного плато»</td>
+<td style="text-align: left;">Експоненційне згасання дисперсії градієнтів: <span class="arithmatex">\(\text{Var}[\partial \mathcal{L}/\partial \theta] \in \mathcal{O}(2^{-Q})\)</span></td>
+<td style="text-align: left;">Пояснення деградації квантових моделей при прогнозі температури</td>
+<td style="text-align: left;">Повна зупинка збіжності оптимізатора при зростанні глибини схеми</td>
+</tr>
+<tr>
+<td style="text-align: left;">Квантова декогеренція (<span class="arithmatex">\(T_1, T_2\)</span>)</td>
+<td style="text-align: left;">Фізична втрата квантових властивостей через взаємодію з середовищем</td>
+<td style="text-align: left;">Головне обмеження розгортання VQC на фізичних чипах епохи NISQ</td>
+<td style="text-align: left;">Обмеження максимальної глибини схеми 3–5 варіаційними шарами</td>
+</tr>
+<tr>
+<td style="text-align: left;">Фреймворк PennyLane</td>
+<td style="text-align: left;">Програмна бібліотека мови Python для диференційованого квантового програмування</td>
+<td style="text-align: left;">Побудова гібридних моделей Q-LSTM, Q-Transformer на сервері КП «НДЦ»</td>
+<td style="text-align: left;">Необхідність симуляції станів на GPU при відсутності прямого QPU</td>
+</tr>
+<tr>
+<td style="text-align: left;">Критерій знаків Вілкоксона</td>
+<td style="text-align: left;">Непараметричний тест порівняння медіан парних вибірок похибок</td>
+<td style="text-align: left;">Статистичне доведення квантової переваги для тиску (<span class="arithmatex">\(p &lt; 0,05\)</span>)</td>
+<td style="text-align: left;">Зниження статистичної потужності при вибірках менше 6 точок</td>
+</tr>
+<tr>
+<td style="text-align: left;">Випрямляч ReLU постобробки</td>
+<td style="text-align: left;">Нелінійна функція вихідного шару: <span class="arithmatex">\(f(x) = \max(0, x)\)</span></td>
+<td style="text-align: left;">Запобігання генерації фізично неможливих від'ємних концентрацій</td>
+<td style="text-align: left;">Блокування проходження градієнта в зоні нульових значень (dying ReLU)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="33">3.3. Контрольні питання та завдання</h3>
+<h4 id="_7">Прикладні тестові завдання</h4>
+<ol>
+<li>
+<p>Під час тренування 4-кубітної моделі Q-LSTM на симуляторі PennyLane для прогнозування атмосферного тиску інженер збільшив кількість шарів варіаційного анзацу з <span class="arithmatex">\(L = 2\)</span> до <span class="arithmatex">\(L = 8\)</span> для покращення точності. Проте помилка MSE на тестовій вибірці зросла втричі, а градієнти кутів впали до нуля. Який комплекс фізико-математичних причин викликав таку поведінку моделі?</p>
+</li>
+<li>
+<p>A. Виникнення феномену безплідного плато (Barren Plateau) внаслідок надмірної глибини випадкового анзацу у поєднанні з квантовим перенавчанням на обмеженій вибірці (28 точок).</p>
+</li>
+<li>
+<p>B. Перегрів відеокарти NVIDIA RTX 3090, що призвів до відключення тензорних ядер.</p>
+</li>
+<li>
+<p>C. Вихід із ладу сенсора атмосферного тиску станції Vaisala.</p>
+</li>
+<li>
+<p>D. Закінчення безкоштовної ліцензії бібліотеки PyTorch.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: A.</strong></p>
+<ol>
+<li>
+<p>Збільшення глибини анзацу до <span class="arithmatex">\(L = 8\)</span> на 4 кубітах призводить до того, що випадкові унітарні перетворення утворюють 2-дизайн Хаара, за якого простір втрат стає експоненційно пласким, а градієнти за правилом зсуву параметра колапсують до нуля (<span class="arithmatex">\(\text{Var}[\nabla \mathcal{L}] \to 0\)</span>). Одночасно збільшення кількості параметрів у моделі за наявності лише 28 навчальних точок викликає катастрофічне перенавчання (overfitting): модель втрачає здатність узагальнювати барометричні тренди, що призводить до триразового зростання похибки MSE на тесті.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант B є хибним, оскільки апаратні захисти GPU знижують частоту (throttling), але не спричиняють специфічного математичного згасання градієнтів квантової схеми.</p>
+</li>
+<li>
+<p>Варіант C не має відношення до процесу тренування, оскільки модель навчається на вже зафіксованому історичному датасеті.</p>
+</li>
+<li>
+<p>Варіант D є абсурдним, оскільки бібліотека PyTorch поширюється за відкритою ліцензією BSD без обмежень терміну дії.</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>Чому для часового ряду концентрації монооксиду вуглецю (<span class="arithmatex">\(CO\)</span>), що характеризується раптовими неперіодичними сплесками та високим <span class="arithmatex">\(p\text{-value} = 0,981\)</span> тесту Дікі-Фуллера, квантово-гібридна модель Q-AutoARIMA показала похибку MSE на 147% вищу за класичну AutoARIMA?</p>
+</li>
+<li>
+<p>A. Квантовий комп'ютер не підтримує обчислення десяткових дробів.</p>
+</li>
+<li>
+<p>B. Висока експресивність квантового простору Гільберта дозволила моделі повністю «запам'ятати» стохастичний високочастотний шум навчальної вибірки, тоді як класична AutoARIMA успішно згладила нестаціонарність різницевим диференціюванням <span class="arithmatex">\(d=1\)</span>.</p>
+</li>
+<li>
+<p>C. Монооксид вуглецю є немагнітним газом, тому кубіти не можуть взаємодіяти з його молекулами.</p>
+</li>
+<li>
+<p>D. Алгоритм Adam заборонено використовувати для оптимізації оксидів вуглецю.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>Квантові варіаційні схеми володіють надвисокою експресивністю (здатністю апроксимувати довільні нелінійні функції). Якщо вхідний часовий ряд не містить регулярного фізичного закону, а формується випадковими антропогенними шоками (викиди транспорту, пробки), квантова схема концентрується на апроксимації випадкових піків навчання. На відкладеному тесті цей специфічний шум не повторюється, що породжує важку помилку екстраполяції. Класична AutoARIMA, спираючись на статистичний принцип ощадливості (Occam's razor), бере першу різницю ряду, відсікає білий шум і прогнозує стабільний константний рівень, забезпечуючи значно меншу тестову похибку.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A є технічно хибним, оскільки квантові симулятори та реальні кубіти оперують неперервними комплексними амплітудами подвійної точності.</p>
+</li>
+<li>
+<p>Варіант C демонструє нерозуміння сутності QML: квантова модель обробляє числові дані на комп'ютері, а не взаємодіє фізично з молекулами газу в атмосфері.</p>
+</li>
+<li>
+<p>Варіант D є безглуздим, оскільки математичні оптимізатори діють незалежно від назви фізичної величини.</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>Для перевірки відмінностей між двома моделями моніторингу за критерієм Вілкоксона отримано вибірку різниць абсолютних похибок для <span class="arithmatex">\(n = 5\)</span> точок: <span class="arithmatex">\(\mathbf{d} = (+0,4; \, +0,8; \, +0,2; \, +1,1; \, +0,6)\)</span> (усі різниці є строго додатними). Чому дорівнює емпірична статистика <span class="arithmatex">\(W\)</span> і який висновок слід зробити при критичному значенні <span class="arithmatex">\(W_{\text{crit}}(\alpha=0,05) = 0\)</span>?</p>
+</li>
+<li>
+<p>A. <span class="arithmatex">\(W = 15\)</span>; моделі ідентичні.</p>
+</li>
+<li>
+<p>B. <span class="arithmatex">\(W = 0\)</span>; нульова гіпотеза відкидається (<span class="arithmatex">\(p &lt; 0,05\)</span>), квантова модель статистично значуще перевершує базову.</p>
+</li>
+<li>
+<p>C. <span class="arithmatex">\(W = 5\)</span>; експеримент необхідно повторити.</p>
+</li>
+<li>
+<p>D. Критерій Вілкоксона не можна розрахувати при відсутності від'ємних чисел.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>Розрахунок критерію Вілкоксона:</p>
+</li>
+<li>
+<p>Всі 5 різниць є додатними, від'ємні різниці відсутні.</p>
+</li>
+<li>
+<p>Ранги за модулем: <span class="arithmatex">\(0,2 \to 1\)</span>, <span class="arithmatex">\(0,4 \to 2\)</span>, <span class="arithmatex">\(0,6 \to 3\)</span>, <span class="arithmatex">\(0,8 \to 4\)</span>, <span class="arithmatex">\(1,1 \to 5\)</span>.</p>
+</li>
+<li>
+<p>Сума додатних рангів: <span class="arithmatex">\(W^+ = 1 + 2 + 3 + 4 + 5 = 15\)</span>.</p>
+</li>
+<li>
+<p>Сума від'ємних рангів: <span class="arithmatex">\(W^- = 0\)</span>.</p>
+</li>
+<li>
+<p>Статистика Вілкоксона дорівнює меншій із сум: <span class="arithmatex">\(W = \min(W^+, W^-) = \min(15, 0) = 0\)</span>.</p>
+</li>
+<li>
+<p>Оскільки емпіричне значення <span class="arithmatex">\(W = 0 \le W_{\text{crit}} = 0\)</span>, нульова гіпотеза про рівність моделей відкидається на рівні значущості <span class="arithmatex">\(p \le 0,05\)</span>. Перевага моделі є абсолютно доведеною.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A (15) відповідає більшій сумі рангів <span class="arithmatex">\(W^+\)</span>, тоді як за правилом критерію береться мінімум.</p>
+</li>
+<li>
+<p>Варіант C плутає обсяг вибірки <span class="arithmatex">\(n = 5\)</span> зі статистикою рангів.</p>
+</li>
+<li>
+<p>Варіант D є помилковим, оскільки нульова сума рангів є крайнім випадком максимальної значущості відмінностей.</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>Яке призначення має операція лінійного випрямлення <span class="arithmatex">\(f_{\text{ReLU}}(x) = \max(0, x)\)</span> у вихідному шарі гібридної моделі прогнозування якості повітря?</p>
+</li>
+<li>
+<p>A. Збільшення швидкості обертання вентилів кубітів удвічі.</p>
+</li>
+<li>
+<p>B. Гарантування фізичної несуперечливості результатів шляхом апаратного відсікання від'ємних значень концентрацій токсикантів, які можуть виникати через лінійні комбінації очікувань Паулі-Z.</p>
+</li>
+<li>
+<p>C. Перетворення відносної вологості в градуси Цельсія.</p>
+</li>
+<li>
+<p>D. Захист сервера від несанкціонованого доступу за протоколом SSH.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>Квантові спостережувані оператори Паулі-Z приймають дійсні значення в діапазоні <span class="arithmatex">\(\langle Z_i \rangle \in [-1, 1]\)</span>. Лінійний декодер <span class="arithmatex">\(\mathbf{w}_{\text{out}}^T \mathbf{z} + b_{\text{out}}\)</span> може згенерувати від'ємне числове значення на тестових даних. Оскільки концентрації забруднюючих речовин (<span class="arithmatex">\(NO_2\)</span>, пил) та відносна вологість є строго невід'ємними фізичними величинами за визначенням, функція ReLU діє як граничний проекційний фільтр, що забезпечує фізичну адекватність вихідних екологічних прогнозів.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A є хибним, оскільки постобробка виконується на класичному рівні після завершення всіх квантових операцій.</p>
+</li>
+<li>
+<p>Варіант C є абсурдним, оскільки функція максимуму не виконує фізичної конвертації розмірностей величин.</p>
+</li>
+<li>
+<p>Варіант D не має жодного стосунку до кібербезпеки та протоколів зв'язку.</p>
+</li>
+</ol>
+</details>
+<hr />
+<h4 id="_8">Завдання для самостійної роботи</h4>
+<h5 id="_9">Постановка задачі</h5>
+<p>У прибережному лиманному районі розгорнуто дві автономні вимірювальні станції моніторингу гідроекологічного стану, що реєструють солоність води, рівень розчиненого кисню та температуру придонного шару з добовою дискретністю. Загальна тривалість накопиченого часового ряду становить лише 18 місяців. Необхідно розробити квантово-гібридну прогностичну модель на базі рекурентного блоку Q-GRU у бібліотеці PennyLane для прогнозування заморових явищ за рівнем розчиненого кисню на 3 місяці вперед.</p>
+<h5 id="_10">Завдання для виконання</h5>
+<ol>
+<li>
+<p>Складіть програмну специфікацію 4-кубітної варіаційної квантової схеми в PennyLane, що використовує кутове кодування AngleEmbedding для трьох вхідних гідрохімічних лагів та один допоміжний кубіт для заплутування.</p>
+</li>
+<li>
+<p>Реалізуйте навчання гібридної моделі за методом зворотного поширення похибки з використанням правила зсуву параметра (Parameter-Shift Rule) для аналітичного диференціювання вентилів ротацій.</p>
+</li>
+<li>
+<p>Проведіть порівняльне тестування розробленої квантової моделі Q-GRU проти класичної моделі GRU аналогічної кількості класичних параметрів на відкладеній тримісячній тестовій вибірці за метриками MSE та MAE.</p>
+</li>
+<li>
+<p>Застосуйте непараметричний критерій знакових рангів Вілкоксона до залишків прогнозування обох моделей та сформулюйте статистичний висновок щодо наявності або відсутності квантової переваги для досліджуваного гідроекологічного процесу.</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Повернутись нагору
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Kyrylo Vadurin &bull; <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "header.autohide", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0456\u0439\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u0421\u043a\u043e\u043f\u0456\u044e\u0432\u0430\u0442\u0438 \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0429\u0435 1 \u0437\u0431\u0456\u0433 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.more.other": "\u0429\u0435 # \u0437\u0431\u0456\u0433\u0456\u0432 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.none": "\u0417\u0431\u0456\u0433\u0456\u0432 \u043d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0437\u0431\u0456\u0433", "search.result.other": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e # \u0437\u0431\u0456\u0433\u0456\u0432", "search.result.placeholder": "\u0420\u043e\u0437\u043f\u043e\u0447\u043d\u0456\u0442\u044c \u043f\u0438\u0441\u0430\u0442\u0438 \u0434\u043b\u044f \u043f\u043e\u0448\u0443\u043a\u0443", "search.result.term.missing": "\u041d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e \u0437\u0430\u043f\u0438\u0442\u0443", "select.version": "\u041e\u0431\u0440\u0430\u0442\u0438 \u0432\u0435\u0440\u0441\u0456\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

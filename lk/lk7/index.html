@@ -1,0 +1,2702 @@
+
+<!doctype html>
+<html lang="uk" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Навчальний портал з дисципліни "Інформаційно-аналітичні технології в екологічних системах"">
+      
+      
+      
+      
+        <link rel="prev" href="../lk6/">
+      
+      
+        <link rel="next" href="../lk8/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Тема 7. Геоінформаційні системи (ГІС) - ІАТ в екологічних системах</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#7" class="md-skip">
+          Перейти до змісту
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Хедер">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-header__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ІАТ в екологічних системах
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Тема 7. Геоінформаційні системи (ГІС)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Переключити на темну тему"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Переключити на темну тему" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-label="Переключити на світлу тему"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Переключити на світлу тему" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Пошук" placeholder="Пошук" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Шукати">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистити" aria-label="Очистити" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Пошук розпочато
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Робоча програма
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../lk1/" class="md-tabs__link">
+          
+  
+  
+  Лекції
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../lb/lb1/" class="md-tabs__link">
+          
+  
+  
+  Лабораторні роботи
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../sr/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Самостійна робота
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навігація" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-nav__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ІАТ в екологічних системах
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Робоча програма
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лекції
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лекції
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 1. Цифровізація екологічного моніторингу
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 2. IoT-технології та сенсорні мережі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 3. Проєктування екологічних баз даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 4. Статистичні методи аналізу даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 5. Багатовимірний аналіз та інтелектуальні технології
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 6. Моделювання переносу та дифузії
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 7. Геоінформаційні системи (ГІС)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 7. Геоінформаційні системи (ГІС)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мета лекції
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Очікувані результати навчання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Теоретико-концептуальний базис. Геопросторове представлення та метричні трансформації екологічних даних
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Теоретико-концептуальний базис. Геопросторове представлення та метричні трансформації екологічних даних">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-wgs84-epsg3857" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Системи координат у муніципальному моніторингу: перехід від WGS84 до метричної проекції EPSG:3857 для коректних розрахунків відстаней
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-geopandas-shapely-startinpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Програмно-алгоритмічний інструментарій обробки просторових геометрій з використанням бібліотек Geopandas, Shapely та Startinpy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Побудова регулярних сіток інтерполяції та контурних полігонів ізоконцентрацій забруднюючих речовин
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-openstreetmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Інтеграція геопросторових шарів екологічних даних із відкритими картографічними сервісами класу OpenStreetMap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вказівки для самостійного осмислення
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Методологія та аналіз граничних умов. Методи просторової інтерполяції та виявлення локальних екологічних аномалій
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Методологія та аналіз граничних умов. Методи просторової інтерполяції та виявлення локальних екологічних аномалій">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-idw-p" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Математична постановка методу зважених зворотних відстаней (IDW) та вибір ступеня вагового параметра згладжування p
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Алгоритм математичного визначення фонових територій на базі альфа-відсікання мінімальних значень інтерпольованої поверхні
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Метод виявлення локальних джерел забруднення шляхом розрахунку градієнта концентрацій між цільовими та фоновими точками
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-bulls-eye-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Ефект «округлих плям» (bull's-eye effect), геометричні артефакти та деградація точності інтерполяції в умовах надмірно розрідженої мережі датчиків
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Практичний індустріальний / фаховий кейс. Просторова оптимізація розміщення станцій муніципального моніторингу
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Практичний індустріальний / фаховий кейс. Просторова оптимізація розміщення станцій муніципального моніторингу">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-idw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Комплексний фаховий кейс. Картографування полів розсіювання пилу і формальдегіду в м. Кременчук методом IDW та обґрунтування локацій нових постів спостереження за критерієм мінімізації фонової невизначеності
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Комплексний фаховий кейс. Картографування полів розсіювання пилу і формальдегіду в м. Кременчук методом IDW та обґрунтування локацій нових постів спостереження за критерієм мінімізації фонової невизначеності">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі / ситуації
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Покроковий аналіз та розв'язок
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Покроковий аналіз та розв&#39;язок">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 1. Просторова інтерполяція концентрацій у точці Кандидат 1 (Крюківський міст)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 2. Розрахунок фонового порогу за алгоритмом альфа-відсікання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 3. Розрахунок просторового градієнта та невизначеності для кандидатних локацій
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 4. Багатокритеріальне ранжування локацій для монтажу нового поста
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Інтерпретація результатів та альтернативні сценарії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Зведена довідкова система лекції
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Контрольні питання та завдання
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Контрольні питання та завдання">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Прикладні тестові завдання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для самостійної роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Завдання для самостійної роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для виконання
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 8. Моделювання динаміки екологічних систем
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 9. Прогнозування та оцінка ризиків
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lk10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 10. Інтелектуальні платформи просторового прогнозування
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторні роботи
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лабораторні роботи
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 1. Архітектура відкритих систем моніторингу довкілля
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 2. Канал отримання даних IoT-станцій
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 3. Проєктування наборів даних екологічної інформації
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 4. Статистичний аналіз та перевищення ГДК
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 5. Кореляційний аналіз та метод головних компонент
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 6. Моделювання розсіювання викидів в атмосфері
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 7. Просторова інтерполяція (IDW) та аномалії
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 8. Моделювання динаміки та стійкості екосистем
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 9. Прогнозування часових рядів та індекс якості повітря
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lb/lb10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 10. Генерація екологічного звіту когнітивним LLM-агентом
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Самостійна робота
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мета лекції
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Очікувані результати навчання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Теоретико-концептуальний базис. Геопросторове представлення та метричні трансформації екологічних даних
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Теоретико-концептуальний базис. Геопросторове представлення та метричні трансформації екологічних даних">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-wgs84-epsg3857" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Системи координат у муніципальному моніторингу: перехід від WGS84 до метричної проекції EPSG:3857 для коректних розрахунків відстаней
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-geopandas-shapely-startinpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Програмно-алгоритмічний інструментарій обробки просторових геометрій з використанням бібліотек Geopandas, Shapely та Startinpy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Побудова регулярних сіток інтерполяції та контурних полігонів ізоконцентрацій забруднюючих речовин
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-openstreetmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Інтеграція геопросторових шарів екологічних даних із відкритими картографічними сервісами класу OpenStreetMap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вказівки для самостійного осмислення
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Методологія та аналіз граничних умов. Методи просторової інтерполяції та виявлення локальних екологічних аномалій
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Методологія та аналіз граничних умов. Методи просторової інтерполяції та виявлення локальних екологічних аномалій">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-idw-p" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Математична постановка методу зважених зворотних відстаней (IDW) та вибір ступеня вагового параметра згладжування p
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Алгоритм математичного визначення фонових територій на базі альфа-відсікання мінімальних значень інтерпольованої поверхні
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Метод виявлення локальних джерел забруднення шляхом розрахунку градієнта концентрацій між цільовими та фоновими точками
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-bulls-eye-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Ефект «округлих плям» (bull's-eye effect), геометричні артефакти та деградація точності інтерполяції в умовах надмірно розрідженої мережі датчиків
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Практичний індустріальний / фаховий кейс. Просторова оптимізація розміщення станцій муніципального моніторингу
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Практичний індустріальний / фаховий кейс. Просторова оптимізація розміщення станцій муніципального моніторингу">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-idw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Комплексний фаховий кейс. Картографування полів розсіювання пилу і формальдегіду в м. Кременчук методом IDW та обґрунтування локацій нових постів спостереження за критерієм мінімізації фонової невизначеності
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Комплексний фаховий кейс. Картографування полів розсіювання пилу і формальдегіду в м. Кременчук методом IDW та обґрунтування локацій нових постів спостереження за критерієм мінімізації фонової невизначеності">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі / ситуації
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Покроковий аналіз та розв'язок
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Покроковий аналіз та розв&#39;язок">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 1. Просторова інтерполяція концентрацій у точці Кандидат 1 (Крюківський міст)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 2. Розрахунок фонового порогу за алгоритмом альфа-відсікання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 3. Розрахунок просторового градієнта та невизначеності для кандидатних локацій
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Крок 4. Багатокритеріальне ранжування локацій для монтажу нового поста
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Інтерпретація результатів та альтернативні сценарії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Зведена довідкова система лекції
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Контрольні питання та завдання
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Контрольні питання та завдання">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Прикладні тестові завдання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для самостійної роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Завдання для самостійної роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Постановка задачі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завдання для виконання
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="7">Тема 7. Геоінформаційні системи в екологічних дослідженнях</h1>
+<h2 id="_1">Мета лекції</h2>
+<p>Забезпечити формування у здобувачів наукового ступеня доктора філософії компетентностей щодо застосування методів просторової інтерполяції, геоінформаційного моделювання, картографування ізоконцентрацій забруднень та алгоритмічного виявлення фонових зон для оптимізації топології моніторингових мереж і локалізації прихованих джерел антропогенного навантаження.</p>
+<h2 id="_2">Очікувані результати навчання</h2>
+<ol>
+<li>
+<p><strong>Знання та розуміння.</strong> Здобувачі мають засвоїти математичні засади геопросторової прив'язки, перетворення систем координат та просторової інтерполяції екологічних метрик.</p>
+</li>
+<li>
+<p><strong>Застосування.</strong> Здобувачі мають застосовувати метод зворотних зважених відстаней (IDW) для побудови неперервних полів концентрацій забруднюючих речовин.</p>
+</li>
+<li>
+<p><strong>Аналіз.</strong> Здобувачі мають аналізувати просторовий розподіл градієнтів концентрацій забруднювачів для диференціації регіонального фону та локальних техногенних аномалій.</p>
+</li>
+<li>
+<p><strong>Оцінювання та синтез.</strong> Здобувачі мають синтезувати алгоритми фільтрації віртуальних станцій за допомогою альфа-відсікання для визначення пріоритетних локацій встановлення нових постів спостереження.</p>
+</li>
+</ol>
+<h2 id="1-">1. Теоретико-концептуальний базис. Геопросторове представлення та метричні трансформації екологічних даних</h2>
+<h3 id="11-wgs84-epsg3857">1.1. Системи координат у муніципальному моніторингу: перехід від WGS84 до метричної проекції EPSG:3857 для коректних розрахунків відстаней</h3>
+<p>Геопросторове моделювання екологічного стану довкілля спирається на точну прив'язку вимірювальних станцій, промислових джерел емісій та транспортних магістралей до поверхні Землі. Більшість первинних супутникових систем навігації (GPS/GLONASS) та відкритих телеметричних IoT-модулів надають географічні координати вимірювальних пунктів у системі <strong>WGS84 (World Geodetic System 1984, ідентифікатор EPSG:4326)</strong>, що використовує тривимірний референц-еліпсоїд і виражає просторове положення точок у кутових одиницях: широті <span class="arithmatex">\(\phi\)</span> (latitude) та довготі <span class="arithmatex">\(\lambda\)</span> (longitude). Проте безпосереднє використання кутових координат для розрахунку відстаней, побудови зон розсіювання шлейфів або просторової інтерполяції є методологічно неприпустимим через значні геометричні спотворення.</p>
+<p>Сутність спотворення полягає в тому, що довжина одного градуса довготи на еліпсоїді не є сталою величиною, а зменшується зі зростанням широти пропорційно косинусу кута широти. На екваторі один кутовий градус відповідає приблизно 111,32 км, тоді як на географічній широті міста Кременчук (<span class="arithmatex">\(\phi \approx 49,07^\circ\text{ пн. ш.}\)</span>) лінійна довжина одного градуса довготи становить лише:</p>
+<div class="arithmatex">\[\Delta L_{\lambda} \approx 111,32 \cdot \cos(49,07^\circ) \approx 72,94 \text{ км}\]</div>
+<p>Якщо обчислювати відстані між постами безпосередньо у градусах за стандартною формулою Евкліда, будь-яка кругова ізотропна модель розсіювання викидів деформується у витягнутий еліпс, штучно завищуючи градієнти концентрацій у меридіональному напрямку та спотворюючи результати просторового аналізу.</p>
+<p>Для забезпечення коректних метричних розрахунків здійснюється картографічна проекція геодезичних кутових координат у двовимірну прямокутну систему <strong>WGS 84 / Pseudo-Mercator (EPSG:3857)</strong>, також відому як сферична проекція Меркатора (Web Mercator). Математична трансформація сферичних географічних координат <span class="arithmatex">\((\phi, \lambda)\)</span>, виражених у радіанах, у декартові координати на площині <span class="arithmatex">\((X, Y)\)</span>, що вимірюються в метрах, описується парою нелінійних аналітичних рівнянь:</p>
+<div class="arithmatex">\[X = R_{\text{earth}} \cdot \lambda\]</div>
+<div class="arithmatex">\[Y = R_{\text{earth}} \cdot \ln\left[ \tan\left( \frac{\pi}{4} + \frac{\phi}{2} \right) \right] = \frac{R_{\text{earth}}}{2} \ln\left( \frac{1 + \sin\phi}{1 - \sin\phi} \right)\]</div>
+<p>де параметри та математичні константи мають наступне значення:</p>
+<ul>
+<li>
+<p>Константа <span class="arithmatex">\(R_{\text{earth}} = 6378137,0\text{ м}\)</span> позначає екваторіальний радіус земного еліпсоїда за стандартом WGS84.</p>
+</li>
+<li>
+<p>Змінна <span class="arithmatex">\(\lambda \in [-\pi, \pi]\)</span> відповідає географічній довготі точки в радіанах від Гринвіцького меридіана.</p>
+</li>
+<li>
+<p>Змінна <span class="arithmatex">\(\phi \in [-\phi_{\max}, \phi_{\max}]\)</span> визначає географічну широту точки в радіанах, де граничне значення <span class="arithmatex">\(\phi_{\max} \approx 85,0511^\circ \approx 1,4844\text{ рад}\)</span> обмежує модель для уникнення сингулярності на полюсах.</p>
+</li>
+<li>
+<p>Функціонал <span class="arithmatex">\(\ln(\cdot)\)</span> реалізує натуральний логарифм тригонометричного виразу ізометричної широти.</p>
+</li>
+</ul>
+<p>Зворотне перетворення метричних координат площини <span class="arithmatex">\((X, Y)\)</span> у географічні кутові координати <span class="arithmatex">\((\phi, \lambda)\)</span> виконується за аналітичними виразами:</p>
+<div class="arithmatex">\[\lambda = \frac{X}{R_{\text{earth}}}\]</div>
+<div class="arithmatex">\[\phi = 2 \arctan\left( \exp\left( \frac{Y}{R_{\text{earth}}} \right) \right) - \frac{\pi}{2}\]</div>
+<p>Перехід до проекції EPSG:3857 переводить просторові координати вимірювальних постів у конформну метричну площину, де локальні кути зберігаються без спотворень, а евклідова відстань між будь-якою парою станцій <span class="arithmatex">\(p_1 = (X_1, Y_1)\)</span> та <span class="arithmatex">\(p_2 = (X_2, Y_2)\)</span> розраховується за стандартним метричним співвідношенням:</p>
+<div class="arithmatex">\[d(p_1, p_2) = \sqrt{(X_1 - X_2)^2 + (Y_1 - Y_2)^2} \quad [\text{метрів}]\]</div>
+<p>Ця трансформація є обов'язковим попереднім етапом для подальшого виконання процедур просторової інтерполяції, тріангуляції та інтеграції з растровими картографічними підкладками.</p>
+<pre class="mermaid"><code>flowchart TD
+    subgraph SATELLITE_DATA["Первинні геодані (WGS84 / EPSG:4326)"]
+        GPS["Координати постів у градусах: phi (широта), lambda (довгота)"]
+    end
+
+    subgraph PROJECTION_ENGINE["Модуль проекційних перетворень"]
+        MERC["Формули Меркатора: X = R*lambda, Y = R*ln(tan(pi/4 + phi/2))"]
+        EPSG3857["Метричні прямокутні координати (EPSG:3857, метри)"]
+    end
+
+    subgraph GEOMETRY_STACK["Програмний геоінформаційний стек"]
+        GEOPANDAS["GeoPandas: геопросторові датафрейми (GeoDataFrame)"]
+        SHAPELY["Shapely: топологічні операції над точками та полігонами"]
+        STARTINPY["Startinpy: 2D тріангуляція Делоне простору станцій"]
+    end
+
+    subgraph VISUALIZATION_TIER["Рівень картографування"]
+        GRID["Регулярна розрахункова сітка інтерполяції (X_i, Y_j)"]
+        CONTOUR["Побудова ізоліній концентрацій (Contour Polygons)"]
+        OSM["Накладання шарів на растрові тайли OpenStreetMap"]
+    end
+
+    GPS --&gt; MERC
+    MERC --&gt; EPSG3857
+    EPSG3857 --&gt; GEOPANDAS
+    GEOPANDAS --&gt; SHAPELY
+    SHAPELY --&gt; STARTINPY
+    STARTINPY --&gt; GRID
+    GRID --&gt; CONTOUR
+    CONTOUR --&gt; OSM</code></pre>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> При проєктуванні геоінформаційного модуля інформаційної системи моніторингу Кременчуцької агломерації всі координати лабораторій поста № 1 (вул. Молодіжна, <span class="arithmatex">\(\phi = 49,114^\circ\)</span>, <span class="arithmatex">\(\lambda = 33,431^\circ\)</span>), поста № 4 (вул. Шевченка, <span class="arithmatex">\(\phi = 49,068^\circ\)</span>, <span class="arithmatex">\(\lambda = 33,415^\circ\)</span>) та станцій Горішніх Плавнів були автоматично трансформовані з кутової системи EPSG:4326 у метричні значення проекції EPSG:3857 (<span class="arithmatex">\(X \approx 3,72 \times 10^6\text{ м}\)</span>, <span class="arithmatex">\(Y \approx 6,29 \times 10^6\text{ м}\)</span>), що усунуло 35% похибку розрахунку міжосьових відстаней при оцінці зон впливу гірничозбагачувального комбінату Ferrexpo.</p>
+</blockquote>
+<hr />
+<h3 id="12-geopandas-shapely-startinpy">1.2. Програмно-алгоритмічний інструментарій обробки просторових геометрій з використанням бібліотек Geopandas, Shapely та Startinpy</h3>
+<p>Обробка просторово розподілених екологічних вибірок вимагає високопродуктивного програмного стека, здатного оперувати векторами геометрій, виконувати топологічні предикати та підтримувати розрахунки тріангуляційних поверхонь. У сучасних екологічних дослідженнях стандартом мови Python є поєднання бібліотек <strong>Geopandas</strong>, <strong>Shapely</strong> та <strong>Startinpy</strong>, які забезпечують замкнений контур обробки геоданих від сирого табличного формату до векторних шарів картографування.</p>
+<p>Бібліотека <strong>Shapely</strong> забезпечує низькорівневе геометричне моделювання просторових об'єктів на площині на основі специфікації Simple Features Access міжнародного консорціуму OGC. Просторові сутності формалізуються трьома базовими геометричними класами: точками (<code>Point</code>), полілініями (<code>LineString</code>) та полігонами (<code>Polygon</code>). Точки репрезентують просторові координати сенсорних постів <span class="arithmatex">\(S_i = (x_i, y_i)\)</span>, лінії моделюють транспортні коридори переміщення екологічного транспорту, а полігони описують межі санітарно-захисних зон підприємств і контури адміністративних районів. Shapely підтримує обчислення топологічних предикатів DE-9IM (перетин <code>intersects</code>, місткість <code>contains</code>, дотик <code>touches</code>) та розрахунок буферних зон довкола джерел викидів:</p>
+<div class="arithmatex">\[\mathcal{B}(S_i, R_{\text{buf}}) = \big\{ p \in \mathbb{R}^2 : d(p, S_i) \le R_{\text{buf}} \big\}\]</div>
+<p>Бібліотека <strong>Geopandas</strong> розширює функціонал табличних структур <code>pandas.DataFrame</code>, додаючи спеціалізований геометричний стовпець <code>geometry</code> і формуючи об'єкти класу <code>GeoDataFrame</code>. Це дозволяє виконувати просторові об'єднання (Spatial Join) вимірювальних даних із картографічними межами урбосистеми. Наприклад, операція фільтрації вимірювань, що потрапляють у межі конкретного промислового району міста <span class="arithmatex">\(P_{\text{ind}}\)</span>, записується через просторовий предикат перетину:</p>
+<div class="arithmatex">\[\text{GeoDataFrame}_{\text{filtered}} = \big\{ \text{row} \in \text{GeoDataFrame} : \text{row.geometry} \cap P_{\text{ind}} \neq \emptyset \big\}\]</div>
+<p>Бібліотека <strong>Startinpy</strong> використовується для побудови нерегулярних тріангуляційних мереж (Triangulated Irregular Network, TIN) на основі алгоритму <strong>тріангуляції Делоне</strong>. Ключовою властивістю тріангуляції Делоне є критерій порожнього описаного кола: коло, описане навколо будь-якого трикутника мережі, не повинно містити всередині жодної іншої точки вихідної множини станцій <span class="arithmatex">\(S\)</span>. Використання Startinpy, написаної на мові Rust із прямими біндінгами до Python, забезпечує високу швидкість просторового розбиття розріджених даних станцій спостереження та дозволяє виконувати швидку інтерполяцію за методом природних сусідів (Natural Neighbor Interpolation) без накладних витрат інтерпретатора.</p>
+<pre class="mermaid"><code>stateDiagram-v2
+    [*] --&gt; Завантаження_CSV_Таблиці: Табличні координати та концентрації C_i
+    Завантаження_CSV_Таблиці --&gt; Створення_GeoDataFrame: Конвертація у Point(x, y) через Shapely
+    Створення_GeoDataFrame --&gt; Репроекція_Координат: Метод to_crs('EPSG:3857') у Geopandas
+
+    state Просторова_Обробка {
+        [*] --&gt; Тріангуляція_Startinpy: Побудова TIN Делоне за координатами станцій
+        Тріангуляція_Startinpy --&gt; Просторова_Фільтрація: Перевірка потрапляння в межі міста
+        Просторова_Фільтрація --&gt; Буферизація_Джерел: Побудова буферів впливу навколо труб
+    }
+
+    Репроекція_Координат --&gt; Просторова_Обробка
+    Просторова_Обробка --&gt; Генерація_Растрової_Сітки
+    Генерація_Растрової_Сітки --&gt; [*]</code></pre>
+<blockquote>
+<p><strong>ТИПОВА ПОМИЛКА:</strong> Здійснення просторового об'єднання (Spatial Join) або розрахунку буферних зон у бібліотеці Geopandas над геоданими у вихідній системі координат EPSG:4326 із завданням радіуса буфера у метрах. Якщо виконати команду <code>gdf.buffer(500)</code> над датафреймом у градусах, програма сприйме число 500 як 500 кутових градусів замість метрів, що призведе до фатального переповнення геометрії полігону на кілька порядків за межі розмірів планети.</p>
+</blockquote>
+<hr />
+<h3 id="13">1.3. Побудова регулярних сіток інтерполяції та контурних полігонів ізоконцентрацій забруднюючих речовин</h3>
+<p>Оскільки фізичні станції моніторингу розташовані дискретно в окремих точках простору, формування суцільної цифрової карти екологічного навантаження вимагає генерації <strong>регулярної розрахункової сітки (Regular Spatial Grid)</strong>. Регулярна сітка дискретизує географічний домен на множину рівновіддалених вузлів, у кожному з яких розраховується інтерпольоване значення концентрації забруднювача.</p>
+<p>Просторові межі розрахункового домену визначаються екстремальними координатами опорної множини станцій <span class="arithmatex">\(S = \{(X_i, Y_i, Z_i)\}_{i=1}^N\)</span> із додаванням захисного просторового буфера <span class="arithmatex">\(\delta_{\text{buf}}\)</span>:</p>
+<div class="arithmatex">\[X_{\min} = \min_{i} X_i - \delta_{\text{buf}}, \quad X_{\max} = \max_{i} X_i + \delta_{\text{buf}}\]</div>
+<div class="arithmatex">\[Y_{\min} = \min_{i} Y_i - \delta_{\text{buf}}, \quad Y_{\max} = \max_{i} Y_i + \delta_{\text{buf}}\]</div>
+<p>Дискретні координати вузлів сітки вздовж осей формуються з фіксованим кроком дискретизації <span class="arithmatex">\(\Delta s\)</span> (наприклад, <span class="arithmatex">\(\Delta s = 50\text{ м}\)</span>):</p>
+<div class="arithmatex">\[x_k = X_{\min} + k \cdot \Delta s, \quad k \in \left\{ 0, 1, \dots, \left\lfloor \frac{X_{\max} - X_{\min}}{\Delta s} \right\rfloor \right\}\]</div>
+<div class="arithmatex">\[y_l = Y_{\min} + l \cdot \Delta s, \quad l \in \left\{ 0, 1, \dots, \left\lfloor \frac{Y_{\max} - Y_{\min}}{\Delta s} \right\rfloor \right\}\]</div>
+<p>У кожному вузлі регулярної сітки <span class="arithmatex">\((x_k, y_l)\)</span> обчислюється розрахункове значення концентрації <span class="arithmatex">\(\hat{Z}(x_k, y_l)\)</span> за обраним математичним методом інтерполяції. Отримана двовимірна матриця значень <span class="arithmatex">\(M_{\text{grid}} \in \mathbb{R}^{N_x \times N_y}\)</span> виступає цифровою поверхнею поля забруднення.</p>
+<p>Для візуалізації градієнтів концентрацій та зручного виділення небезпечних зон формуються <strong>контурні полігони ізоконцентрацій</strong>. Ізолінія є геометричним місцем точок на площині, в яких значення концентрації дорівнює заданій константі: <span class="arithmatex">\(\mathcal{L}_c = \{(x, y) : \hat{Z}(x, y) = c\}\)</span>. Генерація замкнених контурів здійснюється за алгоритмом крокуючих квадратів (Marching Squares). Отримані неперервні лінії полігонізуються у замкнені векторні фігури, кожна з яких фарбується відповідним кольором нормативної шкали екологічної безпеки.</p>
+<p>Для усунення графічних артефактів та розривів між контурами різного рівня концентрацій граничні межі колірних інтервалів програмно розширюються на величину регуляризаційного перекриття:</p>
+<div class="arithmatex">\[\text{Range}_k = [C_k - 0,1 \cdot \Delta C_k, \; C_{k+1} + 0,1 \cdot \Delta C_k]\]</div>
+<p>Це гарантує взаємне перекриття полігонів на 10% ширини контуру у графічній бібліотеці Matplotlib, запобігаючи виникненню порожніх піксельних просвітів на фінальних картах забруднення.</p>
+<p>Для систематизації картографічних та геоінформаційних підходів до обробки екологічних даних сформовано зведену таблицю.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Метод просторового представлення</th>
+<th style="text-align: left;">Математичний апарат та структура</th>
+<th style="text-align: left;">Інструментальні програмні засоби</th>
+<th style="text-align: left;">Точність та роздільна здатність</th>
+<th style="text-align: left;">Приклад з реальної практики</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Точкові векторні геометрії</td>
+<td style="text-align: left;">Координатні кортежі: <span class="arithmatex">\(P = (X, Y)\)</span> з атрибутивними таблицями</td>
+<td style="text-align: left;">GeoPandas, Shapely, PostgreSQL / PostGIS</td>
+<td style="text-align: left;">Дискретна точкова прив'язка (похибка GPS <span class="arithmatex">\(\pm 3\text{ м}\)</span>)</td>
+<td style="text-align: left;">Реєстрація координат 5 стаціонарних лабораторій м. Кременчук</td>
+</tr>
+<tr>
+<td style="text-align: left;">Нерегулярні мережі трикутників (TIN)</td>
+<td style="text-align: left;">2D тріангуляція Делоне з критерієм порожнього описаного кола</td>
+<td style="text-align: left;">Бібліотека Startinpy (Rust / Python)</td>
+<td style="text-align: left;">Адаптивна; висока біля станцій, низька на периферії</td>
+<td style="text-align: left;">Швидка попередня інтерполяція рельєфу та фонових концентрацій</td>
+</tr>
+<tr>
+<td style="text-align: left;">Регулярні растрові матриці</td>
+<td style="text-align: left;">Двовимірні матриці <span class="arithmatex">\(M \in \mathbb{R}^{N_x \times N_y}\)</span> із фіксованим кроком <span class="arithmatex">\(\Delta s\)</span></td>
+<td style="text-align: left;">NumPy, SciPy <code>griddata</code>, GDAL Raster</td>
+<td style="text-align: left;">Рівномірна просторова сітка (крок 20–50 метрів)</td>
+<td style="text-align: left;">Формування карт інтенсивності пилу для OpenStreetMap</td>
+</tr>
+<tr>
+<td style="text-align: left;">Контурні полігональні ізолінії</td>
+<td style="text-align: left;">Замкнені векторні полігони, побудовані алгоритмом Marching Squares</td>
+<td style="text-align: left;">Matplotlib <code>contourf</code>, Shapely <code>MultiPolygon</code></td>
+<td style="text-align: left;">Векторна плавна поверхня з пороговим кодуванням</td>
+<td style="text-align: left;">Візуалізація зон кратності ГДК діоксиду азоту (шкала від 0 до 3 ГДК)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="14-openstreetmap">1.4. Інтеграція геопросторових шарів екологічних даних із відкритими картографічними сервісами класу OpenStreetMap</h3>
+<p>Фінальним етапом геоінформаційного аналізу є публікація та візуалізація розрахованих полів забруднення в інтерактивних вебінтерфейсах систем підтримки прийняття рішень. Без контекстної прив'язки до вуличної мережі, адміністративних кордонів та житлових масивів абстрактне ізолінійне поле концентрацій є малоінформативним для муніципальних служб та мешканців міста.</p>
+<p>Інтеграція здійснюється на основі веб-картографічних сервісів класу <strong>OpenStreetMap (OSM)</strong>, що функціонують за протоколом тайлової піраміди Web Mercator (XYZ Tile Service). Земна поверхня у проекції EPSG:3857 розбивається на ієрархічні рівні масштабування <span class="arithmatex">\(z \in \{0, 1, \dots, 20\}\)</span>. На кожному рівні <span class="arithmatex">\(z\)</span> карта складається з <span class="arithmatex">\(2^z \times 2^z\)</span> растрових плиток (тайлів) розміром <span class="arithmatex">\(256 \times 256\)</span> пікселів. Формула перерахунку географічних координат <span class="arithmatex">\((\phi, \lambda)\)</span> у цілочисельні індекси тайла <span class="arithmatex">\((x_{\text{tile}}, y_{\text{tile}})\)</span> на рівні зуму <span class="arithmatex">\(z\)</span> має вигляд:</p>
+<div class="arithmatex">\[x_{\text{tile}} = \left\lfloor \frac{\lambda + 180^\circ}{360^\circ} \cdot 2^z \right\rfloor\]</div>
+<div class="arithmatex">\[y_{\text{tile}} = \left\lfloor \left( 1 - \frac{\ln\big(\tan(\phi) + \sec(\phi)\big)}{\pi} \right) \cdot 2^{z-1} \right\rfloor\]</div>
+<p>Програмна інтеграція екологічних шарів реалізується шляхом накладання напівпрозорих растрових або векторних оверлеїв (GeoJSON / WMS шарів) поверх базової підкладки OpenStreetMap. Векторні полігони ізоконцентрацій, згенеровані модулем просторової інтерполяції, транслюються у формат GeoJSON із зазначенням кольорів відповідно до міжнародного екологічного індексу якості повітря (зелений — безпечно, жовтий — задовільно, помаранчевий — шкідливо для вразливих груп, червоний — небезпечно). Вебінтерфейс на базі клієнтських бібліотек (Leaflet або OpenLayers) забезпечує динамічне масштабування, фільтрацію забруднювачів за списком та відображення спливаючих вікон (pop-up) із числовими характеристиками концентрацій при наведенні курсора на будь-яку ділянку карти.</p>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> У муніципальній системі моніторингу повітряного басейну міста Кременчук інтерактивна карта на базі OpenStreetMap та бібліотеки Leaflet дозволила накласти векторні контури розсіювання формальдегіду на шари адміністративного зонування, виявивши, що зона підвищених концентрацій понад 2,5 ГДК у літній період на 60% перекриває житлові квартали мікрорайону Молодіжне.</p>
+</blockquote>
+<hr />
+<blockquote>
+<p><strong>КОНТРОЛЬНЕ ПИТАННЯ:</strong> Під час переведення географічних координат станції моніторингу (<span class="arithmatex">\(\phi = 49,0^\circ\text{ пн. ш.}\)</span>, <span class="arithmatex">\(\lambda = 33,0^\circ\text{ сх. д.}\)</span>) у метричну проекцію EPSG:3857 розраховано значення <span class="arithmatex">\(X = 3\,673\,337\text{ м}\)</span> та <span class="arithmatex">\(Y = 6\,275\,285\text{ м}\)</span>. Відомо, що масштабне спотворення відстаней у проекції Меркатора дорівнює локальному масштабному коефіцієнту <span class="arithmatex">\(k = \sec(\phi) = 1/\cos(\phi)\)</span>. Чому, незважаючи на те, що на широті <span class="arithmatex">\(49^\circ\)</span> масштаб відстаней спотворений у <span class="arithmatex">\(k = 1/\cos(49^\circ) \approx 1,524\)</span> раза (спотворення на 52,4%), проекція EPSG:3857 залишається повністю придатною для просторової інтерполяції концентрацій забруднювачів за методом зворотних зважених відстаней (IDW) у межах міста площею <span class="arithmatex">\(10 \times 10\text{ км}\)</span>?</p>
+</blockquote>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: Проекція Меркатора є строго конформною, а відносне спотворення масштабу в межах локального міського домену є практично сталим, що зберігає точні співвідношення між ваговими коефіцієнтами в алгоритмі інтерполяції.</strong></p>
+<ol>
+<li>
+<p>Повне логічне та аналітичне обґрунтування:</p>
+</li>
+<li>
+<p>Проекція Меркатора належить до класу рівнокутних (конформних) проекцій. Це означає, що в кожній нескінченно малій точці масштаб за всіма напрямками однаковий (<span class="arithmatex">\(k_x = k_y = k = \sec\phi\)</span>), тобто кути та форми локальних об'єктів не деформуються (кола залишаються колами, а не еліпсами).</p>
+</li>
+<li>
+<p>Хоча абсолютна метрична довжина на площині завищена у <span class="arithmatex">\(k \approx 1,524\)</span> раза відносно реальної відстані на геоїді, для компактного міського домену протяжністю <span class="arithmatex">\(10\text{ км}\)</span> зміна широти становить менше <span class="arithmatex">\(0,09^\circ\)</span>. Відповідно, зміна масштабного коефіцієнта <span class="arithmatex">\(\Delta k\)</span> між північною та південною межами міста є нехтовно малою (<span class="arithmatex">\(\Delta k &lt; 0,002\)</span>).</p>
+</li>
+<li>
+<p>Метод IDW розраховує вагові коефіцієнти як відношення:
+     $<span class="arithmatex">\(w_i = \frac{1}{d_i^p} = \frac{1}{(k \cdot d_{\text{true}, i})^p} = \frac{1}{k^p} \cdot \frac{1}{d_{\text{true}, i}^p}\)</span>$
+     При підстановці ваг у нормалізоване рівняння IDW постійний множник <span class="arithmatex">\(1/k^p\)</span> скорочується в чисельнику та знаменнику:
+     $<span class="arithmatex">\(\hat{Z} = \frac{\sum w_i Z_i}{\sum w_i} = \frac{\frac{1}{k^p} \sum \frac{Z_i}{d_{\text{true}, i}^p}}{\frac{1}{k^p} \sum \frac{1}{d_{\text{true}, i}^p}} = \frac{\sum \frac{Z_i}{d_{\text{true}, i}^p}}{\sum \frac{1}{d_{\text{true}, i}^p}}\)</span>$</p>
+</li>
+<li>
+<p>Таким чином, локальне рівномірне розтягнення простору абсолютно не впливає на вагові коефіцієнти сусідніх станцій, гарантуючи математичну точність інтерполяції.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Твердження про те, що спотворення спотворює розрахунок концентрацій на 52,4%, є грубою помилкою, оскільки концентрація інтерполюється на основі відносних ваг відстаней, а не шляхом множення на абсолютну довжину.</p>
+</li>
+<li>
+<p>Висновок про необхідність переходу до неконформних проекцій є невірним, оскільки порушення рівнокутності спотворить форму вітрових шлейфів розсіювання.</p>
+</li>
+</ol>
+</details>
+<hr />
+<h3 id="_3">Вказівки для самостійного осмислення</h3>
+<ol>
+<li>
+<p>Здійсніть аналітичне диференціювання рівняння проекції Меркатора <span class="arithmatex">\(Y(\phi) = R_{\text{earth}} \ln[\tan(\pi/4 + \phi/2)]\)</span> за кутом широти <span class="arithmatex">\(\phi\)</span> та виведіть формулу локального коефіцієнта масштабу <span class="arithmatex">\(k(\phi) = \sec\phi\)</span>.</p>
+</li>
+<li>
+<p>Порівняйте обчислювальну складність алгоритму просторового пошуку k-найближчих станцій моніторингу за допомогою KD-дерева (KD-Tree) та R-дерева (R-Tree), реалізованого в модулі <code>rtree</code> бібліотеки Shapely.</p>
+</li>
+<li>
+<p>Розробіть просторову схему мапування тривимірних координат висотних димових труб у проекції EPSG:3857 та оцініть похибку визначення приземної проекції факела викидів при куті нахилу рельєфу понад 15 градусів.</p>
+</li>
+</ol>
+<h2 id="2">2. Методологія та аналіз граничних умов. Методи просторової інтерполяції та виявлення локальних екологічних аномалій</h2>
+<h3 id="21-idw-p">2.1. Математична постановка методу зважених зворотних відстаней (IDW) та вибір ступеня вагового параметра згладжування p</h3>
+<p>Відновлення неперервного поля концентрацій забруднюючих речовин за дискретними точковими спостереженнями є ключовим завданням екологічної геоінформатики. В умовах обмеженої кількості стаціонарних постів моніторингу виникає потреба в алгоритмічній оцінці екологічного навантаження в довільній точці міського простору, де фізичні вимірювання відсутні. Базовим математичним інструментом просторової апроксимації виступає <strong>метод зважених зворотних відстаней (Inverse Distance Weighting, IDW)</strong>, що спирається на першу аксіому географії Вальдо Тоблера, згідно з якою всі об'єкти простору взаємодіють між собою, проте ближчі об'єкти мають значно більший взаємний вплив, ніж віддалені.</p>
+<p>Нехай стан навколишнього середовища фіксується множиною з <span class="arithmatex">\(N\)</span> вимірювальних станцій <span class="arithmatex">\(S = \{(x_i, y_i, Z_i)\}_{i=1}^N\)</span>, де координати <span class="arithmatex">\((x_i, y_i)\)</span> задані в метричній проекції EPSG:3857, а скалярна величина <span class="arithmatex">\(Z_i\)</span> представляє виміряну концентрацію токсиканта. Розрахункове значення концентрації <span class="arithmatex">\(\hat{Z}(x, y)\)</span> у довільному вузлі просторової сітки <span class="arithmatex">\((x, y)\)</span> обчислюється як зважене середнє арифметичне спостережуваних величин:</p>
+<div class="arithmatex">\[\hat{Z}(x, y) = \frac{\sum_{i=1}^{N} w_i(x, y) \cdot Z_i}{\sum_{i=1}^{N} w_i(x, y)}\]</div>
+<p>де ваговий коефіцієнт <span class="arithmatex">\(i\)</span>-ї станції <span class="arithmatex">\(w_i(x, y)\)</span> знаходиться в обернено-пропорційній степеневій залежності від метричної евклідової відстані до цільової точки:</p>
+<div class="arithmatex">\[w_i(x, y) = \frac{1}{\big(d(x, y, x_i, y_i)\big)^p} = \frac{1}{\left( \sqrt{(x - x_i)^2 + (y - y_i)^2} \right)^p}\]</div>
+<p>Параметр <span class="arithmatex">\(p \in [1, \infty)\)</span> виступає ключовим гіперпараметром методу, що визначає ступінь згладжування відновлюваної поверхні. При виборі значення <span class="arithmatex">\(p = 1\)</span> інтерполяційна поверхня демонструє плавний спад із широкими зонами впливу віддалених станцій, що призводить до надмірного згладжування локальних піків викидів. При виборі значень <span class="arithmatex">\(p \ge 3\)</span> вага віддалених точок практично обнуляється, а відновлене поле перетворюється на східчасту мозаїку полігонів Вороного навколо найближчих пунктів спостереження. </p>
+<p>У практиці моніторингу урбанізованого атмосферного повітря стандартом де-факто є використання квадратичного параметра згладжування (<span class="arithmatex">\(p = 2\)</span>). Це забезпечує компроміс між відображенням загальноміського фону та збереженням градієнтів концентрацій поблизу промислових майданчиків. Якщо розрахункова точка строго збігається з координатами вимірювального поста (<span class="arithmatex">\(d_i \to 0\)</span>), алгоритм обходить усувну сингулярність шляхом прямого присвоєння значення: <span class="arithmatex">\(\hat{Z}(x_i, y_i) = Z_i\)</span>.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    actor SensorNet as Мережа станцій (Vaisala / EcoCity)
+    participant GridGen as Генератор регулярної сітки EPSG:3857
+    participant IDWEngine as Розрахунковий модуль IDW (p = 2)
+    participant AlphaFilter as Фільтр фонового рівня (alpha = 0.1)
+    participant GradientDetector as Детектор градієнтних аномалій Delta_C
+    actor Inspector as Диспетчер природоохоронного центру
+
+    SensorNet-&gt;&gt;GridGen: Масив координат (x_i, y_i) та концентрацій Z_i
+    GridGen-&gt;&gt;IDWEngine: Вузли регулярної сітки (x_k, y_l) із кроком 50 м
+    IDWEngine-&gt;&gt;IDWEngine: Обчислення ваг w_i = 1 / d_i^2 для кожної клітинки
+    IDWEngine-&gt;&gt;IDWEngine: Генерація неперервного поля Z_grid(x, y)
+    IDWEngine-&gt;&gt;AlphaFilter: Передача масиву: пошук екстремумів z_min та z_max
+    AlphaFilter-&gt;&gt;AlphaFilter: Відсікання 10% найчистіших точок: Z &lt;= z_min + 0.1(z_max - z_min)
+    AlphaFilter--&gt;&gt;GradientDetector: Множина віртуальних фонових станцій S_background
+    GradientDetector-&gt;&gt;GradientDetector: Розрахунок контрасту Delta_C = C_target - C_background
+    alt Зафіксовано Delta_C &gt; 0.5 MPC
+        GradientDetector-&gt;&gt;Inspector: Сигнал про локалізоване джерело емісій (Hotspot)
+    else Рівномірний розподіл
+        GradientDetector-&gt;&gt;Inspector: Підтвердження стабільного фонового стану міста
+    end</code></pre>
+<hr />
+<h3 id="22-">2.2. Алгоритм математичного визначення фонових територій на базі альфа-відсікання мінімальних значень інтерпольованої поверхні</h3>
+<p>Управління якістю атмосферного повітря вимагає суворого математичного визначення поняття екологічного фону. Фонова концентрація характеризує рівень забруднення, сформований природними факторами та транскордонним масопереносом за відсутності прямого впливу локальних міських джерел викидів. Проте в умовах високої щільності промислових об'єктів жодна фізична станція спостереження не може вважатися абсолютно ізольованою від антропогенного навантаження.</p>
+<p>Для подолання цієї проблеми розроблено метод <strong>алгоритмічного синтезу віртуальних фонових станцій на основі <span class="arithmatex">\(\alpha\)</span>-відсікання</strong>. Після побудови неперервного цифрового поля забруднення <span class="arithmatex">\(\hat{Z}(x, y)\)</span> за методом IDW на множині вузлів регулярної сітки <span class="arithmatex">\(G\)</span>, інформаційна система виконує глобальний екстремальний аналіз:</p>
+<div class="arithmatex">\[z_{\min} = \min_{(x, y) \in G} \hat{Z}(x, y), \quad z_{\max} = \max_{(x, y) \in G} \hat{Z}(x, y)\]</div>
+<p>Динамічний діапазон просторової варіативності концентрації визначається як <span class="arithmatex">\(\Delta Z = z_{\max} - z_{\min}\)</span>. Території, які можуть бути класифіковані як регіональний екологічний фон, виділяються за допомогою порогового критерію відсікання:</p>
+<div class="arithmatex">\[\mathcal{A}_{\text{background}} = \Big\{ (x, y) \in G : \hat{Z}(x, y) \le z_{\min} + \alpha \cdot (z_{\max} - z_{\min}) \Big\}\]</div>
+<p>де параметр <span class="arithmatex">\(\alpha \in [0; \, 0,1]\)</span> визначає частку відсікання найменш забруднених територій урбосистеми (типово 10% нижнього діапазону). </p>
+<p>Формалізація повного аналітичного циклу розрахунку фонових полів, ідентифікації локальних джерел та оптимізації сенсорної топології записується у вигляді структурованого алгоритмічного контуру:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\text{Крок 1 (Метрична конверсія):} &amp; \quad (X_i, Y_i) = \text{Project}_{\text{EPSG:3857}}(\phi_i, \lambda_i), \quad \forall i \in \{1, \dots, N\} \\
+\text{Крок 2 (IDW-інтерполяція):} &amp; \quad \hat{Z}(x_k, y_l) = \frac{\sum_{i=1}^N \frac{Z_i}{(x_k - X_i)^2 + (y_l - Y_i)^2}}{\sum_{i=1}^N \frac{1}{(x_k - X_i)^2 + (y_l - Y_i)^2}}, \quad \forall (x_k, y_l) \in G \\
+\text{Крок 3 (Екстремальний аналіз):} &amp; \quad \Theta_{\text{bg}} = \min_{G} \hat{Z} + \alpha \cdot \big( \max_{G} \hat{Z} - \min_{G} \hat{Z} \big), \quad \alpha = 0,10 \\
+\text{Крок 4 (Синтез фонової точки):} &amp; \quad (x_f, y_f) = \arg\min_{(x, y) \in S \cup G} \hat{Z}(x, y) \\
+\text{Крок 5 (Оцінка локальної емісії):} &amp; \quad \Delta C = \hat{Z}(x_{\text{target}}, y_{\text{target}}) - \hat{Z}(x_f, y_f) \quad \Longrightarrow \quad \text{IF } \Delta C &gt; 0 \to \text{LocalSourceHypothesis}
+\end{aligned}
+\]</div>
+<p>де точка <span class="arithmatex">\((x_f, y_f)\)</span> репрезентує абсолютний просторовий мінімум концентрації в досліджуваному регіоні, відносно якого оцінюється техногенний приріст у будь-якій довільній цільовій точці міста <span class="arithmatex">\((x_{\text{target}}, y_{\text{target}})\)</span>. Отримані координати віртуальних фонових точок використовуються для оптимізації мережі моніторингу: саме в цих секторах встановлення додаткових фізичних датчиків є найбільш пріоритетним для усунення сліпих зон вимірювання базової лінії якості довкілля.</p>
+<blockquote>
+<p><strong>ВАЖЛИВО:</strong> Величина параметра <span class="arithmatex">\(\alpha\)</span>-відсікання повинна вибиратися суворо в діапазоні <span class="arithmatex">\(\alpha \le 0,10\)</span>. Збільшення параметра до <span class="arithmatex">\(\alpha \ge 0,25\)</span> призводить до захоплення в масив фонових точок зон розсіювання низькоінтенсивних промислових викидів, що штучно завищує нормативний фон міста та спотворює розрахунки допустимих емісій для нових підприємств.</p>
+</blockquote>
+<hr />
+<h3 id="23">2.3. Метод виявлення локальних джерел забруднення шляхом розрахунку градієнта концентрацій між цільовими та фоновими точками</h3>
+<p>Ідентифікація неврахованих або несанкціонованих джерел забруднення в урбосистемі базується на концепції просторового градієнта концентрацій. Якщо в певній географічній зоні спостерігається систематичне перевищення концентрацій над фоновим рівнем, це дозволяє висунути науково обґрунтовану гіпотезу про наявність локального джерела емісій.</p>
+<p>Математична модель виявлення аномалій спирається на порівняння цільової досліджуваної точки <span class="arithmatex">\((x_t, y_t)\)</span> — наприклад, перехрестя з інтенсивним рухом або території біля заводу — із розрахунковою фоновою точкою. Якщо цільова точка не збігається з вузлом регулярної сітки, найближча інтерпольована точка <span class="arithmatex">\((x_n, y_n) \in G\)</span> приймається за референтну:</p>
+<div class="arithmatex">\[(x_n, y_n) = \arg\min_{(x, y) \in G} \sqrt{(x - x_t)^2 + (y - y_t)^2}\]</div>
+<p>Концентраційний контраст між цільовою та фоновою точками формалізується співвідношенням:</p>
+<div class="arithmatex">\[\Delta C = \hat{Z}(x_n, y_n) - \hat{Z}(x_f, y_f)\]</div>
+<p>Якщо виконується умова <span class="arithmatex">\(\Delta C &gt; 0\)</span>, алгоритм підтверджує наявність локального джерела викиду. Просторова локалізація емісійного центру здійснюється шляхом розрахунку числового двовимірного градієнта поля концентрацій за методом скінченних різниць:</p>
+<div class="arithmatex">\[\nabla \hat{Z}(x_k, y_l) = \left( \frac{\hat{Z}(x_{k+1}, y_l) - \hat{Z}(x_{k-1}, y_l)}{2 \Delta s}, \; \frac{\hat{Z}(x_k, y_{l+1}) - \hat{Z}(x_k, y_{l-1})}{2 \Delta s} \right)\]</div>
+<p>Вектор <span class="arithmatex">\(\nabla \hat{Z}\)</span> вказує напрямок найшвидшого зростання концентрації токсиканта, спрямовуючи пошуковий алгоритм безпосередньо до фізичного джерела викиду.</p>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> При порівнянні ретроспективних показників цільової точки на Крюківському мості з фоновою точкою в районі стаціонарного поста № 5 за період 2019–2024 рр. розрахований контраст концентрацій діоксиду азоту становив <span class="arithmatex">\(\Delta C = +0,85\text{ ГДК}\)</span> у години пік, що математично довело наявність постійного неврахованого джерела викидів на мостовому переході, обумовленого заторами великовагового транзитного автотранспорту.</p>
+</blockquote>
+<hr />
+<h3 id="24-bulls-eye-effect">2.4. Ефект «округлих плям» (bull's-eye effect), геометричні артефакти та деградація точності інтерполяції в умовах надмірно розрідженої мережі датчиків</h3>
+<p>Незважаючи на високу обчислювальну простоту та швидкість методу IDW, його практичне використання в муніципальних системах моніторингу стикається з фундаментальними математичними обмеженнями, які можуть спотворювати уявлення про реальний екологічний стан території.</p>
+<p>Головним геометричним недоліком методу IDW є виникнення <strong>ефекту «округлих плям» (bull's-eye effect)</strong>. Оскільки вагові коефіцієнти розраховуються строго за радіальною евклідовою відстанню, поблизу кожної ізольованої вимірювальної станції формуються концентричні колоподібні ізолінії, що створюють хибне враження локального точкового джерела або локального поглинача безпосередньо в місці монтажу датчика. Цей артефакт посилюється при виборі завищених значень параметра згладжування (<span class="arithmatex">\(p \ge 3\)</span>), що призводить до майже повної втрати інформації про просторовий тренд між станціями.</p>
+<p>Математичні моделі просторової інтерполяції зазнають критичної втрати адекватності за настання таких граничних умов функціонування:</p>
+<ol>
+<li>
+<p><strong>Екстраполяція за межі опуклої оболонки станцій (Convex Hull Extrapolation Failure).</strong> Метод IDW є опуклим комбінаторним інтерполятором, тобто розрахункове значення концентрації в будь-якій точці строго обмежене діапазоном мінімального та максимального значень вихідних датчиків: <span class="arithmatex">\(\hat{Z}(x, y) \in [z_{\min}, z_{\max}]\)</span>. Якщо потужне промислове джерело викидів розташоване за межами полігону, утвореного фізичними станціями, алгоритм принципово не здатний спрогнозувати концентрацію, вищу за максимальне зафіксоване значення на периферійному пості, створюючи небезпечну ілюзію екологічного благополуччя на околицях міста.</p>
+</li>
+<li>
+<p><strong>Екстремальна розрідженість мережі відносно просторового радіуса кореляції (<span class="arithmatex">\(d_{\text{station}} \gg R_{\text{corr}}\)</span>).</strong> Якщо середня відстань між стаціонарними постами становить 5–10 км, а радіус кореляції поля приземного забруднення в умовах міської забудови не перевищує 800–1200 метрів, результати будь-якої інтерполяції перетворюються на випадкові геометричні фікції. Алгоритм просто з'єднує незалежні вимірювальні острови плавними штучними переходами, повністю ігноруючи реальні провали та сплески концентрацій у житлових масивах між постами.</p>
+</li>
+<li>
+<p><strong>Ігнорування конвективного вітрового переносу та міського рельєфу.</strong> Метод IDW є строго геометричним і не містить жодної фізичної компоненти. Він передбачає абсолютну ізотропність розсіювання на <span class="arithmatex">\(360^\circ\)</span>. В умовах сильного спрямованого вітру (наприклад, <span class="arithmatex">\(V = 6\text{ м/с}\)</span>), коли реальний шлейф викидів зноситься на підвітряний бік у формі витягнутого конуса, інтерполяція IDW продовжує малювати симетричну пляму навколо джерела, завищуючи концентрацію з навітряного боку на 400–600% і занижуючи її за вітром.</p>
+</li>
+</ol>
+<p>Для систематизації та порівняння методів просторового моделювання розподілу полютантів сформовано порівняльну матрицю геостатистичних інструментів.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Метод просторової інтерполяції</th>
+<th style="text-align: left;">Математичний апарат та теоретичний базис</th>
+<th style="text-align: left;">Складність впровадження</th>
+<th style="text-align: left;">Чутливість до розрідженості мережі</th>
+<th style="text-align: left;">Обчислювальна швидкість</th>
+<th style="text-align: left;">Критичні ризики та обмеження методології</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Зважені зворотні відстані (IDW)</td>
+<td style="text-align: left;">Детермінована комбінація: <span class="arithmatex">\(\hat{Z} = \sum w_i Z_i / \sum w_i\)</span>, <span class="arithmatex">\(w_i = d_i^{-p}\)</span></td>
+<td style="text-align: left;">Вкрай низька; прямий матричний розрахунок</td>
+<td style="text-align: left;">Висока; поява штучних концентричних плям</td>
+<td style="text-align: left;">Дуже висока (<span class="arithmatex">\(O(N \cdot M)\)</span> для сітки)</td>
+<td style="text-align: left;">Нездатність екстраполювати екстремуми, повне ігнорування вітру та рельєфу</td>
+</tr>
+<tr>
+<td style="text-align: left;">Звичайний кригінг (Ordinary Kriging)</td>
+<td style="text-align: left;">Геостатистична лінійна оцінка з варіаграмним моделюванням просторової автокореляції</td>
+<td style="text-align: left;">Висока; вимагає підбору теоретичної варіаграми</td>
+<td style="text-align: left;">Середня; розраховує дисперсію похибки кригінгу</td>
+<td style="text-align: left;">Помірна; вимагає обернення матриці <span class="arithmatex">\(O(N^3)\)</span></td>
+<td style="text-align: left;">Нестійкість оптимізації варіаграми при кількості станцій менше 10–15</td>
+</tr>
+<tr>
+<td style="text-align: left;">Тріангуляція з лінійною інтерполяцією (TIN)</td>
+<td style="text-align: left;">Розбиття простору на трикутники Делоне з лінійною інтерполяцією площини</td>
+<td style="text-align: left;">Низька; стандартні алгоритми Startinpy</td>
+<td style="text-align: left;">Дуже висока; негладка результуюча поверхня</td>
+<td style="text-align: left;">Екстремально висока (<span class="arithmatex">\(O(N \log N)\)</span>)</td>
+<td style="text-align: left;">Формування неприродних зламів і гострих кутів на межах трикутників</td>
+</tr>
+<tr>
+<td style="text-align: left;">Радіальні базисні функції (RBF Splines)</td>
+<td style="text-align: left;">Мінімізація поверхневого натягу: <span class="arithmatex">\(\hat{Z} = \sum \lambda_i \phi(\|x - x_i\|)\)</span></td>
+<td style="text-align: left;">Середня; розв'язання системи лінійних рівнянь</td>
+<td style="text-align: left;">Середня; можливі неконтрольовані осциляції</td>
+<td style="text-align: left;">Середня; залежить від функції ядра</td>
+<td style="text-align: left;">Ризик виникнення нефізичних від'ємних концентрацій на периферії</td>
+</tr>
+<tr>
+<td style="text-align: left;">Регресійний кригінг (Regression Kriging)</td>
+<td style="text-align: left;">Гібрид географічної регресії з метеофакторами та кригінгу залишків</td>
+<td style="text-align: left;">Дуже висока; вимагає додаткових растрових коваріат</td>
+<td style="text-align: left;">Низька; використовує супутникові дані для компенсації</td>
+<td style="text-align: left;">Низька; вимагає значних обчислень</td>
+<td style="text-align: left;">Високі вимоги до наявності супутніх просторових шарів високої роздільності</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> При просторовому картографуванні концентрацій формальдегіду за даними чотирьох стаціонарних лабораторій міста Кременчук використання методу IDW з параметром <span class="arithmatex">\(p = 2\)</span> створило стійкий ефект концентричної плями навколо поста № 1 по вулиці Молодіжній, що вимагало програмного розширення меж колірних інтервалів на 10% у бібліотеці Matplotlib для забезпечення візуального перекриття полігонів та усунення розривів між контурами рівнів забруднення.</p>
+</blockquote>
+<hr />
+<blockquote>
+<p><strong>КОНТРОЛЬНЕ ПИТАННЯ:</strong> У місті функціонують три стаціонарні станції моніторингу зі взаємними відстанями по 4 км, які зафіксували такі концентрації діоксиду сірки: станція <span class="arithmatex">\(A (0, 0)\)</span> — <span class="arithmatex">\(0,20\text{ мг/м}^3\)</span>, станція <span class="arithmatex">\(B (4000, 0)\)</span> — <span class="arithmatex">\(0,40\text{ мг/м}^3\)</span>, станція <span class="arithmatex">\(C (2000, 3464)\)</span> — <span class="arithmatex">\(0,30\text{ мг/м}^3\)</span>. На відстані 1 км на південь від осі станцій <span class="arithmatex">\(AB\)</span> розташоване невраховане промислове підприємство, реальний викид якого формує в точці <span class="arithmatex">\(D (2000, -1000)\)</span> концентрацію <span class="arithmatex">\(1,20\text{ мг/м}^3\)</span>. Яке значення концентрації розрахує метод IDW (<span class="arithmatex">\(p = 2\)</span>) у точці <span class="arithmatex">\(D\)</span>, якщо датчик на підприємстві відсутній, і до якої системної помилки екологічного менеджменту це призведе?</p>
+</blockquote>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: Метод IDW розрахує занижене значення <span class="arithmatex">\(\hat{Z}_D \approx 0,277\text{ мг/м}^3\)</span>, що у 4,3 раза менше реального рівня (<span class="arithmatex">\(1,20\text{ мг/м}^3\)</span>); це призведе до приховування факту аварійного перевищення ГДК через вихід джерела за межі опуклої оболонки станцій.</strong></p>
+<ol>
+<li>
+<p>Повне логічне та аналітичне обґрунтування:</p>
+</li>
+<li>
+<p>Визначимо координати цільової точки: <span class="arithmatex">\(D = (2000, -1000)\)</span>.</p>
+</li>
+<li>
+<p>Розрахуємо квадрати відстаней від точки <span class="arithmatex">\(D\)</span> до кожної з трьох станцій:
+     $<span class="arithmatex">\(d_A^2 = (2000 - 0)^2 + (-1000 - 0)^2 = 4 \times 10^6 + 1 \times 10^6 = 5 \times 10^6 \text{ м}^2\)</span>$
+     $<span class="arithmatex">\(d_B^2 = (2000 - 4000)^2 + (-1000 - 0)^2 = 4 \times 10^6 + 1 \times 10^6 = 5 \times 10^6 \text{ м}^2\)</span>$
+     $<span class="arithmatex">\(d_C^2 = (2000 - 2000)^2 + (-1000 - 3464)^2 = 0 + (-4464)^2 \approx 19,93 \times 10^6 \text{ м}^2\)</span>$</p>
+</li>
+<li>
+<p>Обчислимо вагові коефіцієнти для <span class="arithmatex">\(p = 2\)</span> (поділивши на спільний множник <span class="arithmatex">\(10^6\)</span>):
+     $<span class="arithmatex">\(w_A = \frac{1}{5} = 0,200, \quad w_B = \frac{1}{5} = 0,200, \quad w_C = \frac{1}{19,93} \approx 0,0502\)</span>$</p>
+</li>
+<li>
+<p>Сума ваг: <span class="arithmatex">\(\sum w_i = 0,200 + 0,200 + 0,0502 = 0,4502\)</span>.</p>
+</li>
+<li>
+<p>Розрахуємо інтерпольовану концентрацію в точці <span class="arithmatex">\(D\)</span>:
+     $<span class="arithmatex">\(\hat{Z}_D = \frac{0,200 \cdot 0,20 + 0,200 \cdot 0,40 + 0,0502 \cdot 0,30}{0,4502} = \frac{0,040 + 0,080 + 0,01506}{0,4502} = \frac{0,13506}{0,4502} \approx 0,300 \text{ мг/м}^3\)</span>$</p>
+</li>
+<li>
+<p>Розрахункове значення <span class="arithmatex">\(0,30\text{ мг/м}^3\)</span> знаходиться в межах безпечної норми (ГДК для <span class="arithmatex">\(SO_2\)</span> становить <span class="arithmatex">\(0,50\text{ мг/м}^3\)</span>), тоді як фактична концентрація становить <span class="arithmatex">\(1,20\text{ мг/м}^3\)</span> (2,4 ГДК). Метод IDW за своєю природою не здатний екстраполювати значення вище максимального з опорних (<span class="arithmatex">\(0,40\text{ мг/м}^3\)</span>), внаслідок чого аварійний викид за межами периметра станцій повністю маскується, а муніципальні служби дезінформуються щодо відсутності загрози.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Припущення, що IDW спрогнозує концентрацію понад <span class="arithmatex">\(1,0\text{ мг/м}^3\)</span>, є математично неможливим, оскільки алгоритм є зваженим середнім і не екстраполює за межі екстремумів.</p>
+</li>
+<li>
+<p>Висновок про те, що розрахунок викличе помилку ділення на нуль, є хибним, оскільки відстані до станцій <span class="arithmatex">\(A, B, C\)</span> становлять понад 2,2 км.</p>
+</li>
+</ol>
+</details>
+<h2 id="3">3. Практичний індустріальний / фаховий кейс. Просторова оптимізація розміщення станцій муніципального моніторингу</h2>
+<h3 id="31-idw">3.1. Комплексний фаховий кейс. Картографування полів розсіювання пилу і формальдегіду в м. Кременчук методом IDW та обґрунтування локацій нових постів спостереження за критерієм мінімізації фонової невизначеності</h3>
+<h4 id="_4">Постановка задачі / ситуації</h4>
+<p>Муніципальна система екологічного спостереження міста Кременчук базується на мережі з чотирьох стаціонарних постів моніторингу: пост № 1 (вул. Молодіжна, 9, північний сектор біля промвузла), пост № 2 (вул. Лікаря О. Богаєвського, центрально-східний сектор), пост № 4 (вул. Шевченка, 22/30, центральна міська забудова) та пост № 5 (вул. І. Приходька, 89, правобережна частина Крюків). Додатковий пост розташований у місті Горішні Плавні (вул. Добровольського, 6). Багаторічні спостереження фіксують систематичні перевищення гранично допустимих концентрацій (ГДК) за двома критичними маркерами: недиференційованим пилом (<span class="arithmatex">\(G_{\text{Dust}} = 0,5\text{ мг/м}^3\)</span>) та формальдегідом (<span class="arithmatex">\(G_{\text{HCHO}} = 0,035\text{ мг/м}^3\)</span>).</p>
+<p>У межах програми цифровізації екологічної безпеки міська рада виділила фінансування на придбання та монтаж лише однієї нової автоматизованої вимірювальної станції референтного класу. Головна фахова дилема полягає у виборі локації: промисловий відділ наполягає на встановленні станції безпосередньо на межі Північного промвузла біля ПАТ «Укртатнафта» (Кандидат 2), транспортний департамент вимагає контролю викидів на в'їзді до Крюківського мосту (Кандидат 1), а екологічна інспекція пропонує встановити станцію у рекреаційній приміській зоні Білецьківських плавнів (Кандидат 3) для вперше точної фіксації регіонального фону. Необхідно за допомогою методу просторової інтерполяції IDW (<span class="arithmatex">\(p = 2\)</span>) у метричній системі координат EPSG:3857 розрахувати концентраційні поля, застосувати алгоритм <span class="arithmatex">\(\alpha\)</span>-відсікання для визначення зон фонової невизначеності та на основі математичного багатокритеріального аналізу визначити координати оптимального монтажу станції.</p>
+<p>Параметри наявної мережі постів та координати кандидатних точок наведено в таблиці нижче.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Пост / Кандидатна точка</th>
+<th style="text-align: left;">Координата X (EPSG:3857, м)</th>
+<th style="text-align: left;">Координата Y (EPSG:3857, м)</th>
+<th style="text-align: left;">Концентрація пилу (кратність ГДК)</th>
+<th style="text-align: left;">Концентрація формальдегіду (кратність ГДК)</th>
+<th style="text-align: left;">Географічний та інфраструктурний контекст</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Пост № 1 (Молодіжна)</td>
+<td style="text-align: left;">3 721 500</td>
+<td style="text-align: left;">6 298 400</td>
+<td style="text-align: left;">1,15</td>
+<td style="text-align: left;">3,40</td>
+<td style="text-align: left;">Північний промисловий вузол</td>
+</tr>
+<tr>
+<td style="text-align: left;">Пост № 2 (Богаєвського)</td>
+<td style="text-align: left;">3 722 800</td>
+<td style="text-align: left;">6 291 200</td>
+<td style="text-align: left;">0,95</td>
+<td style="text-align: left;">2,60</td>
+<td style="text-align: left;">Зона змішаної забудови та ТЕЦ</td>
+</tr>
+<tr>
+<td style="text-align: left;">Пост № 4 (Шевченка)</td>
+<td style="text-align: left;">3 720 100</td>
+<td style="text-align: left;">6 288 500</td>
+<td style="text-align: left;">1,05</td>
+<td style="text-align: left;">2,90</td>
+<td style="text-align: left;">Центр міста, висока щільність населення</td>
+</tr>
+<tr>
+<td style="text-align: left;">Пост № 5 (Приходька)</td>
+<td style="text-align: left;">3 718 400</td>
+<td style="text-align: left;">6 285 800</td>
+<td style="text-align: left;">0,80</td>
+<td style="text-align: left;">1,80</td>
+<td style="text-align: left;">Правобережний район (Крюків)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Кандидат 1 (Крюківський міст)</td>
+<td style="text-align: left;">3 719 600</td>
+<td style="text-align: left;">6 287 200</td>
+<td style="text-align: left;">Невідомо</td>
+<td style="text-align: left;">Невідомо</td>
+<td style="text-align: left;">Вузьке місце транспортного коридору</td>
+</tr>
+<tr>
+<td style="text-align: left;">Кандидат 2 (Північна межа)</td>
+<td style="text-align: left;">3 723 500</td>
+<td style="text-align: left;">6 301 000</td>
+<td style="text-align: left;">Невідомо</td>
+<td style="text-align: left;">Невідомо</td>
+<td style="text-align: left;">Межа санітарної зони нафтопереробки</td>
+</tr>
+<tr>
+<td style="text-align: left;">Кандидат 3 (Білецьківка)</td>
+<td style="text-align: left;">3 714 000</td>
+<td style="text-align: left;">6 284 000</td>
+<td style="text-align: left;">Невідомо</td>
+<td style="text-align: left;">Невідомо</td>
+<td style="text-align: left;">Потенційна фонова рекреаційна зона</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["Координати 4 постів у системі EPSG:3857"] --&gt; B["Генерація регулярної розрахункової сітки з кроком 250 м"]
+    B --&gt; C["IDW-інтерполяція полів пилу та формальдегіду (p = 2)"]
+    C --&gt; D["Пошук глобальних екстремумів z_min та z_max на сітці"]
+    D --&gt; E["Алгоритм альфа-відсікання (alpha = 0.1): синтез фонового полігону"]
+    E --&gt; F["Оцінка просторової невизначеності сигналу в точках Кандидат 1, 2, 3"]
+    F --&gt; G["Розрахунок багатокритеріального індексу пріоритету розміщення"]
+    G --&gt; H["Ухвалення рішення: рекомендація локації нового поста моніторингу"]</code></pre>
+<h4 id="_5">Покроковий аналіз та розв'язок</h4>
+<h5 id="1-1">Крок 1. Просторова інтерполяція концентрацій у точці Кандидат 1 (Крюківський міст)</h5>
+<p>Визначимо інтерпольоване значення концентрації формальдегіду в точці транспортного вузла Кандидат 1 (<span class="arithmatex">\(X_k = 3\,719\,600\)</span>, <span class="arithmatex">\(Y_k = 6\,287\,200\)</span>) за допомогою методу IDW зі степенем <span class="arithmatex">\(p = 2\)</span>. Обчислимо квадрати метричних відстаней від точки Кандидат 1 до кожного з чотирьох стаціонарних постів:</p>
+<div class="arithmatex">\[d_1^2 = (3\,719\,600 - 3\,721\,500)^2 + (6\,287\,200 - 6\,298\,400)^2 = (-1900)^2 + (-11200)^2 = 3,61 \times 10^6 + 125,44 \times 10^6 = 129,05 \times 10^6 \text{ м}^2\]</div>
+<div class="arithmatex">\[d_2^2 = (3\,719\,600 - 3\,722\,800)^2 + (6\,287\,200 - 6\,291\,200)^2 = (-3200)^2 + (-4000)^2 = 10,24 \times 10^6 + 16,00 \times 10^6 = 26,24 \times 10^6 \text{ м}^2\]</div>
+<div class="arithmatex">\[d_4^2 = (3\,719\,600 - 3\,720\,100)^2 + (6\,287\,200 - 6\,288\,500)^2 = (-500)^2 + (-1300)^2 = 0,25 \times 10^6 + 1,69 \times 10^6 = 1,94 \times 10^6 \text{ м}^2\]</div>
+<div class="arithmatex">\[d_5^2 = (3\,719\,600 - 3\,718\,400)^2 + (6\,287\,200 - 6\,285\,800)^2 = (1200)^2 + (1400)^2 = 1,44 \times 10^6 + 1,96 \times 10^6 = 3,40 \times 10^6 \text{ м}^2\]</div>
+<p>Розрахуємо вагові коефіцієнти <span class="arithmatex">\(w_i = 1 / d_i^2\)</span>, нормалізувавши їх множником <span class="arithmatex">\(10^6\)</span>:</p>
+<div class="arithmatex">\[w_1 = \frac{1}{129,05} \approx 0,0077, \quad w_2 = \frac{1}{26,24} \approx 0,0381, \quad w_4 = \frac{1}{1,94} \approx 0,5155, \quad w_5 = \frac{1}{3,40} \approx 0,2941\]</div>
+<p>Сума вагових коефіцієнтів становить:</p>
+<div class="arithmatex">\[\sum_{i=1}^{4} w_i = 0,0077 + 0,0381 + 0,5155 + 0,2941 = 0,8554\]</div>
+<p>Обчислимо інтерпольовану концентрацію формальдегіду для Кандидата 1:</p>
+<div class="arithmatex">\[\hat{Z}_{\text{Cand1}} = \frac{0,0077 \cdot 3,40 + 0,0381 \cdot 2,60 + 0,5155 \cdot 2,90 + 0,2941 \cdot 1,80}{0,8554} = \frac{0,0262 + 0,0991 + 1,4950 + 0,5294}{0,8554} = \frac{2,1497}{0,8554} \approx 2,51 \text{ ГДК}\]</div>
+<p>Аналогічно розраховується інтерпольоване значення концентрації пилу: <span class="arithmatex">\(\hat{Z}_{\text{Dust, Cand1}} \approx 0,96\text{ ГДК}\)</span>.</p>
+<h5 id="2-">Крок 2. Розрахунок фонового порогу за алгоритмом альфа-відсікання</h5>
+<p>За результатами суцільної інтерполяції на регулярній розрахунковій сітці міста Кременчук екстремальні значення поля формальдегіду склали <span class="arithmatex">\(z_{\min} = 1,75\text{ ГДК}\)</span> (у південно-західному приміському секторі) та <span class="arithmatex">\(z_{\max} = 3,45\text{ ГДК}\)</span> (у зоні поста № 1). Застосуємо поріг <span class="arithmatex">\(\alpha\)</span>-відсікання при <span class="arithmatex">\(\alpha = 0,10\)</span> для визначення множини віртуальних фонових станцій:</p>
+<div class="arithmatex">\[\Theta_{\text{bg}} = z_{\min} + \alpha \cdot (z_{\max} - z_{\min}) = 1,75 + 0,10 \cdot (3,45 - 1,75) = 1,75 + 0,10 \cdot 1,70 = 1,75 + 0,17 = 1,92 \text{ ГДК}\]</div>
+<p>Усі точки сітки, де концентрація <span class="arithmatex">\(\hat{Z}(x, y) \le 1,92\text{ ГДК}\)</span>, утворюють 10% найчистіших віртуальних комірок урбосистеми, що визначаються як регіональний екологічний фон.</p>
+<h5 id="3_1">Крок 3. Розрахунок просторового градієнта та невизначеності для кандидатних локацій</h5>
+<p>Оцінимо концентраційний контраст <span class="arithmatex">\(\Delta C = \hat{Z} - z_{\min}\)</span> та міру просторової невизначеності (відстань до найближчого існуючого фізичного поста <span class="arithmatex">\(d_{\min}\)</span>) для кожного кандидата:</p>
+<p>Для Кандидата 1 (Крюківський міст): <span class="arithmatex">\(\hat{Z} = 2,51\text{ ГДК}\)</span>, <span class="arithmatex">\(\Delta C = 2,51 - 1,75 = 0,76\text{ ГДК}\)</span>, найближчий пост № 4 знаходиться на відстані <span class="arithmatex">\(d_{\min} = \sqrt{1,94 \times 10^6} \approx 1393\text{ м}\)</span>.</p>
+<p>Для Кандидата 2 (Північна межа): точка розташована за 3,3 км на північ від поста № 1, інтерпольована концентрація <span class="arithmatex">\(\hat{Z} \approx 3,35\text{ ГДК}\)</span>, <span class="arithmatex">\(\Delta C = 1,60\text{ ГДК}\)</span>, найближча відстань <span class="arithmatex">\(d_{\min} \approx 3280\text{ м}\)</span>.</p>
+<p>Для Кандидата 3 (Білецьківка): точка віддалена на захід, розрахункова концентрація потрапляє у фоновий діапазон <span class="arithmatex">\(\hat{Z} \approx 1,78\text{ ГДК} \le \Theta_{\text{bg}}\)</span>, <span class="arithmatex">\(\Delta C = 0,03\text{ ГДК}\)</span>, проте відстань до найближчого поста № 5 становить <span class="arithmatex">\(d_{\min} = \sqrt{(3\,714\,000 - 3\,718\,400)^2 + (6\,284\,000 - 6\,285\,800)^2} = \sqrt{19,36 \times 10^6 + 3,24 \times 10^6} = \sqrt{22,60 \times 10^6} \approx 4754\text{ м}\)</span>.</p>
+<h5 id="4">Крок 4. Багатокритеріальне ранжування локацій для монтажу нового поста</h5>
+<p>Сформуємо цільову функцію вибору локації <span class="arithmatex">\(Score_k\)</span>, яка максимізує усунення інформаційної сліпої зони (<span class="arithmatex">\(d_{\min}\)</span>), захист густонаселених районів (<span class="arithmatex">\(\rho_{\text{pop}}\)</span>) та ліквідацію фонової невизначеності:</p>
+<div class="arithmatex">\[Score_k = w_1 \cdot \frac{d_{\min, k}}{d_{\text{norm}}} + w_2 \cdot \frac{\rho_{\text{pop}, k}}{\rho_{\text{norm}}} + w_3 \cdot \frac{\Delta C_k}{\Delta C_{\text{norm}}}\]</div>
+<p>Прийнявши рівні ваги критеріїв <span class="arithmatex">\(w_1 = 0,35\)</span>, <span class="arithmatex">\(w_2 = 0,40\)</span>, <span class="arithmatex">\(w_3 = 0,25\)</span> та провівши нормалізацію відносно максимальних величин (<span class="arithmatex">\(d_{\text{norm}} = 5000\text{ м}\)</span>, <span class="arithmatex">\(\rho_{\text{norm}} = 5000\text{ осіб/км}^2\)</span>, <span class="arithmatex">\(\Delta C_{\text{norm}} = 1,70\text{ ГДК}\)</span>):</p>
+<p>Для Кандидата 1:
+$<span class="arithmatex">\(Score_1 = 0,35 \cdot \frac{1393}{5000} + 0,40 \cdot \frac{4800}{5000} + 0,25 \cdot \frac{0,76}{1,70} = 0,35 \cdot 0,279 + 0,40 \cdot 0,960 + 0,25 \cdot 0,447 = 0,098 + 0,384 + 0,112 = 0,594\)</span>$</p>
+<p>Для Кандидата 2:
+$<span class="arithmatex">\(Score_2 = 0,35 \cdot \frac{3280}{5000} + 0,40 \cdot \frac{800}{5000} + 0,25 \cdot \frac{1,60}{1,70} = 0,35 \cdot 0,656 + 0,40 \cdot 0,160 + 0,25 \cdot 0,941 = 0,230 + 0,064 + 0,235 = 0,529\)</span>$</p>
+<p>Для Кандидата 3:
+$<span class="arithmatex">\(Score_3 = 0,35 \cdot \frac{4754}{5000} + 0,40 \cdot \frac{200}{5000} + 0,25 \cdot \frac{0,03}{1,70} = 0,35 \cdot 0,951 + 0,40 \cdot 0,040 + 0,25 \cdot 0,018 = 0,333 + 0,016 + 0,004 = 0,353\)</span>$</p>
+<p>Найвищий пріоритет отримав <strong>Кандидат 1</strong> (<span class="arithmatex">\(Score = 0,594\)</span>), оскільки він ліквідує сліпу зону над критичною транспортною артерією з високою експозицією населення.</p>
+<h4 id="_6">Інтерпретація результатів та альтернативні сценарії</h4>
+<p>Розрахунки довели, що розгортання поста біля Крюківського мосту (Кандидат 1) є найбільш доцільним рішенням: ця точка усуває критичну інформаційну сліпу зону на перетині селітебних масивів і магістрального трафіку. Встановлення станції в точці Кандидат 3, попри її максимальну віддаленість, є недоцільним через низьку густоту населення, тоді як Кандидат 2 дублює функціонал наявного поста № 1.</p>
+<p>Якби цільовим критерієм муніципалітету було суто виконання міжнародних зобов'язань за програмами транскордонного моніторингу EMEP (де пріоритетом є контроль чистого регіонального фону за межами антропогенного впливу, тобто <span class="arithmatex">\(w_1 = 0,70, w_2 = 0,05, w_3 = 0,25\)</span>), Кандидат 3 отримав би найвищий бал (<span class="arithmatex">\(Score_3 \approx 0,670\)</span>), і рішення було б ухвалене на користь Білецьківських плавнів для побудови референтної базової лінії кліматичних змін.</p>
+<hr />
+<h3 id="32">3.2. Зведена довідкова система лекції</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Термін / Концепція</th>
+<th style="text-align: left;">Формалізація / Сутність</th>
+<th style="text-align: left;">Реальний кейс застосування</th>
+<th style="text-align: left;">Основне обмеження / Ризик</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Проекція EPSG:3857 (Web Mercator)</td>
+<td style="text-align: left;">Конформне відображення: <span class="arithmatex">\(X = R\lambda, Y = R\ln[\tan(\pi/4 + \phi/2)]\)</span></td>
+<td style="text-align: left;">Переведення кутових координат GPS лабораторій Кременчука в метричний базис</td>
+<td style="text-align: left;">Зростання масштабу площ зі збільшенням широти (<span class="arithmatex">\(k = \sec\phi\)</span>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Зважені зворотні відстані (IDW)</td>
+<td style="text-align: left;">Алгоритм інтерполяції: <span class="arithmatex">\(\hat{Z} = \sum w_i Z_i / \sum w_i, w_i = d_i^{-p}\)</span></td>
+<td style="text-align: left;">Побудова цифрової поверхні концентрацій пилу та формальдегіду</td>
+<td style="text-align: left;">Ефект «бичачого ока», нездатність екстраполювати за межі екстремумів</td>
+</tr>
+<tr>
+<td style="text-align: left;">Показник степеня згладжування <span class="arithmatex">\(p\)</span></td>
+<td style="text-align: left;">Степеневий параметр ваги відстані в IDW: <span class="arithmatex">\(w_i = 1 / d_i^p\)</span></td>
+<td style="text-align: left;">Вибір стандарту <span class="arithmatex">\(p = 2\)</span> для моделювання міського забруднення</td>
+<td style="text-align: left;">При <span class="arithmatex">\(p \ge 3\)</span> карта вироджується в дискретні східчасті полігони Вороного</td>
+</tr>
+<tr>
+<td style="text-align: left;">Алгоритм <span class="arithmatex">\(\alpha\)</span>-відсікання</td>
+<td style="text-align: left;">Пошук фону: <span class="arithmatex">\(\hat{Z} \le z_{\min} + \alpha(z_{\max} - z_{\min}), \alpha \in [0, 0.1]\)</span></td>
+<td style="text-align: left;">Виділення 10% найчистіших віртуальних станцій у заплаві Дніпра</td>
+<td style="text-align: left;">Чутливість до вибору <span class="arithmatex">\(\alpha\)</span>: завищення фону при <span class="arithmatex">\(\alpha &gt; 0.2\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Тріангуляція Делоне (TIN)</td>
+<td style="text-align: left;">Розбиття множини точок на трикутники за критерієм порожнього описаного кола</td>
+<td style="text-align: left;">Швидка поверхнева тріангуляція за допомогою бібліотеки Startinpy</td>
+<td style="text-align: left;">Поява гострих штучних граней на ребрах трикутників</td>
+</tr>
+<tr>
+<td style="text-align: left;">Геоінформаційний стек GeoPandas</td>
+<td style="text-align: left;">Програмний комплекс обробки просторових датафреймів із типами Shapely</td>
+<td style="text-align: left;">Просторова фільтрація вимірювань за межами адміністративних районів</td>
+<td style="text-align: left;">Значне споживання оперативної пам'яті при обробці полігонів високої деталізації</td>
+</tr>
+<tr>
+<td style="text-align: left;">Алгоритм Marching Squares</td>
+<td style="text-align: left;">Двовимірний ізолінійний алгоритм побудови замкнених контурів на регулярній сітці</td>
+<td style="text-align: left;">Векторизація колірних зон кратностей ГДК для картографування</td>
+<td style="text-align: left;">Виникнення топологічних неоднозначностей у сідлових комірках сітки</td>
+</tr>
+<tr>
+<td style="text-align: left;">Тайлова піраміда OpenStreetMap</td>
+<td style="text-align: left;">Ієрархічне тайлове растрове представлення Землі за рівнями зуму <span class="arithmatex">\(z \in [0, 20]\)</span></td>
+<td style="text-align: left;">Фонова географічна підкладка у вебінтерфейсі моніторингу КП «НДЦ»</td>
+<td style="text-align: left;">Залежність швидкості завантаження від стабільності інтернет-з'єднання</td>
+</tr>
+<tr>
+<td style="text-align: left;">Регуляризаційне перекриття контурів</td>
+<td style="text-align: left;">Штучне розширення меж ізолінійних діапазонів на 10% у коді Matplotlib</td>
+<td style="text-align: left;">Усунення проміжних білих піксельних щілин між контурними полігонами</td>
+<td style="text-align: left;">Невелике математичне зміщення візуальної межі класу концентрації</td>
+</tr>
+<tr>
+<td style="text-align: left;">Концентраційний контраст <span class="arithmatex">\(\Delta C\)</span></td>
+<td style="text-align: left;">Різниця між досліджуваною та фоновою концентраціями: <span class="arithmatex">\(\Delta C = \hat{Z}_t - \hat{Z}_{\text{bg}}\)</span></td>
+<td style="text-align: left;">Наукове підтвердження існування локального джерела викидів на мості</td>
+<td style="text-align: left;">Може маскуватися за умов сильного транскордонного фонового забруднення</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="33">3.3. Контрольні питання та завдання</h3>
+<h4 id="_7">Прикладні тестові завдання</h4>
+<ol>
+<li>
+<p>При виконанні просторової інтерполяції методом IDW для 5 станцій моніторингу дослідник встановив параметр згладжування <span class="arithmatex">\(p = 5\)</span>. Які візуальні та математичні зміни відбудуться на результуючій карті концентрацій?</p>
+</li>
+<li>
+<p>A. Поверхня стане абсолютно гладкою та наблизиться до площини лінійного тренду.</p>
+</li>
+<li>
+<p>B. Навколо кожної станції утворяться різкі концентричні кола («округлі плями»), а простір між станціями перетвориться на східчасті зони константних значень найближчого датчика.</p>
+</li>
+<li>
+<p>C. Всі розрахункові концентрації автоматично зменшаться у 5 разів.</p>
+</li>
+<li>
+<p>D. Програма аварійно завершить роботу через ділення на нуль у кожній комірці сітки.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>При зростанні показника степеня <span class="arithmatex">\(p \ge 3\)</span> вага віддалених точок згасає експоненційно швидко (<span class="arithmatex">\(w_i = 1/d_i^5\)</span>). У результаті в будь-якій точці простору домінує виключно один найближчий датчик, а внесок решти стає нехтовно малим. Математично метод IDW при <span class="arithmatex">\(p \to \infty\)</span> строго вироджується в діаграму Вороного (полігони Тіссена), формуючи різкі східчасті стрибки на серединних перпендикулярах між постами та яскраві концентричні артефакти навколо вимірювальних точок.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A є протилежним за суттю, оскільки згладжування до площини відбувається при зменшенні <span class="arithmatex">\(p \to 0\)</span>, а не при його зростанні.</p>
+</li>
+<li>
+<p>Варіант C є безглуздим, оскільки параметр <span class="arithmatex">\(p\)</span> є степенем відстані у вагах і не масштабує абсолютні значення вимірювань у чисельнику.</p>
+</li>
+<li>
+<p>Варіант D є хибним, оскільки ділення на нуль виникає лише в точках точного збігу координат із датчиками, що програмно обробляється окремою умовою.</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>Під час побудови карти перевищень діоксиду азоту в геоінформаційній системі виявлено, що на межі двох суміжних колірних зон (інтервал 0,5–1,0 ГДК та інтервал 1,0–1,5 ГДК) спостерігаються тонкі розриви та білі піксельні смуги підкладки. Яке програмне рішення у бібліотеці Matplotlib усуває цей дефект?</p>
+</li>
+<li>
+<p>A. Збільшення кроку сітки дискретизації з 50 до 500 метрів.</p>
+</li>
+<li>
+<p>B. Програмне розширення меж розрахункових колірних градацій на величину <span class="arithmatex">\(\pm 10\%\)</span> для забезпечення геометричного перекриття контурів.</p>
+</li>
+<li>
+<p>C. Повне відключення системи просторових координат EPSG:3857.</p>
+</li>
+<li>
+<p>D. Перехід від кольорового відображення до монохромного чорно-білого растру.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>Поява піксельних просвітів між контурами у векторних рандерерах (зокрема у функції <code>contourf</code> бібліотеки Matplotlib) зумовлена округленням координат вершин полігонів при векторизації на стиках неперервних числових інтервалів. Впровадження взаємного перекриття діапазонів на 10% (<span class="arithmatex">\(\pm 10\%\)</span> ширини інтервалу) створює мікроскопічний напуск сусідніх контурних шарів, що гарантує відсутність візуальних дефектів без спотворення загальної екологічної шкали.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A лише погіршить візуальну якість, зробивши межі контурів грубими та ламаними.</p>
+</li>
+<li>
+<p>Варіант C паралізує геоінформаційну прив'язку, оскільки без проекції екологічний шар не співпаде з картою міста.</p>
+</li>
+<li>
+<p>Варіант D є абсурдним, оскільки колірне кодування є обов'язковим стандартом візуалізації індексів екологічної небезпеки.</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>На території міста мінімальна зафіксована концентрація пилу становить <span class="arithmatex">\(z_{\min} = 0,40\text{ ГДК}\)</span>, а максимальна — <span class="arithmatex">\(z_{\max} = 2,80\text{ ГДК}\)</span>. Яким буде верхнє порогове значення концентрації <span class="arithmatex">\(\Theta_{\text{bg}}\)</span> для виділення віртуальних фонових точок за умови вибору нормативного параметра <span class="arithmatex">\(\alpha = 0,10\)</span>?</p>
+</li>
+<li>
+<p>A. 0,40 ГДК</p>
+</li>
+<li>
+<p>B. 0,64 ГДК</p>
+</li>
+<li>
+<p>C. 0,90 ГДК</p>
+</li>
+<li>
+<p>D. 1,60 ГДК</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: B.</strong></p>
+<ol>
+<li>
+<p>Розрахуємо фоновий поріг за формулою <span class="arithmatex">\(\alpha\)</span>-відсікання:
+   $<span class="arithmatex">\(\Theta_{\text{bg}} = z_{\min} + \alpha \cdot (z_{\max} - z_{\min}) = 0,40 + 0,10 \cdot (2,80 - 0,40) = 0,40 + 0,10 \cdot 2,40 = 0,40 + 0,24 = 0,64 \text{ ГДК}\)</span>$
+   Усі комірки регулярної сітки зі значеннями концентрацій <span class="arithmatex">\(\hat{Z} \le 0,64\text{ ГДК}\)</span> будуть класифіковані як фонові зони міста.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант A (0,40 ГДК) відповідає абсолютному мінімуму при <span class="arithmatex">\(\alpha = 0\)</span>, що виділить лише одну дискретну точку замість репрезентативного фонового ареалу.</p>
+</li>
+<li>
+<p>Варіант C (0,90 ГДК) є результатом помилкового розрахунку відносного відсотка без урахування мінімальної бази.</p>
+</li>
+<li>
+<p>Варіант D (1,60 ГДК) відповідає завищеному значенню <span class="arithmatex">\(\alpha = 0,50\)</span> (медіана розмаху), що призведе до включення зон промислового впливу у фоновий клас.</p>
+</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>Чому при аналізі забруднення приземного шару атмосфери методом IDW у долині річки, оточеній пагорбами, математична інтерполяція між двома станціями, розташованими по різні боки хребта, дає критичну похибку?</p>
+</li>
+<li>
+<p>A. Метод IDW враховує лише геометричну евклідову відстань «по прямій» крізь гірський масив, повністю ігноруючи фізичну неможливість повітряного перенесення через орографічний бар'єр.</p>
+</li>
+<li>
+<p>B. Бібліотека Shapely не підтримує розрахунок геометрій на висотах понад 100 метрів.</p>
+</li>
+<li>
+<p>C. Проекція EPSG:3857 втрачає точність при наявності водних об'єктів.</p>
+</li>
+<li>
+<p>D. Концентрація діоксиду азоту завжди дорівнює нулю на вершинах пагорбів.</p>
+</li>
+</ol>
+<details class="note">
+<summary>Розгорнути аналіз / відповідь</summary>
+<p><strong>Правильний варіант: A.</strong></p>
+<ol>
+<li>
+<p>Метод IDW є суто двовимірним планарним інтерполятором, який розраховує вагу виключно на основі декартової відстані <span class="arithmatex">\(d = \sqrt{\Delta x^2 + \Delta y^2}\)</span>. Алгоритм не має інформації про цифровий рельєф місцевості (Digital Elevation Model, DEM). У реальності гірський хребет є фізичним екраном, що розділяє два ізольовані повітряні басейни, тоді як IDW формує плавний перехід концентрацій прямо крізь вершину хребта, спотворюючи реальні поля забруднення в обох долинах.</p>
+</li>
+<li>
+<p>Аналіз дистракторів:</p>
+</li>
+<li>
+<p>Варіант B є технічно невірним, оскільки Shapely оперує координатами як абстрактними дійсними числами незалежно від абсолютних висот.</p>
+</li>
+<li>
+<p>Варіант C є хибним, оскільки конформна проекція Меркатора діє однаково як над сушею, так і над акваторіями.</p>
+</li>
+<li>
+<p>Варіант D суперечить основам фізики атмосфери, оскільки оксиди азоту переносяться вітром на будь-які доступні висоти.</p>
+</li>
+</ol>
+</details>
+<hr />
+<h4 id="_8">Завдання для самостійної роботи</h4>
+<h5 id="_9">Постановка задачі</h5>
+<p>У річковій долині агропромислового району розташовано свинокомплекс, птахофабрику та міські мулові поля каналізаційних очисних споруд, які є потужними джерелами емісій аміаку (<span class="arithmatex">\(NH_3\)</span>) та сірководню (<span class="arithmatex">\(H_2S\)</span>). Моніторинг здійснюється трьома стаціонарними станціями, які розташовані хаотично і не фіксують концентрації безпосередньо біля житлових селищ. Муніципалітет планує оптимізувати мережу шляхом додавання двох нових індикативних станцій для захисту населення та контролю фону.</p>
+<h5 id="_10">Завдання для виконання</h5>
+<ol>
+<li>
+<p>Трансформуйте вихідні географічні координати трьох наявних станцій та джерел викидів із системи WGS84 (EPSG:4326) у метричну проекцію EPSG:3857, розрахувавши взаємні відстані між усіма об'єктами.</p>
+</li>
+<li>
+<p>Згенеруйте регулярну сітку інтерполяції з просторовим кроком 100 метрів у межах прямокутного домену розміром <span class="arithmatex">\(8 \times 8\text{ км}\)</span> та реалізуйте алгоритм IDW (<span class="arithmatex">\(p = 2\)</span>) для розрахунку полів концентрацій аміаку.</p>
+</li>
+<li>
+<p>Застосуйте процедуру <span class="arithmatex">\(\alpha\)</span>-відсікання з параметром <span class="arithmatex">\(\alpha = 0,08\)</span> для автоматичного оконтурювання зон чистого регіонального фону та розрахуйте концентраційний контраст <span class="arithmatex">\(\Delta C\)</span> для найбільш навантаженого житлового масиву.</p>
+</li>
+<li>
+<p>Розробіть багатокритеріальну матрицю прийняття рішень для вибору двох локацій нових постів спостереження, збалансувавши критерії близькості до житлових будинків, мінімізації відстані до фонового полігону та наявності електропостачання.</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Повернутись нагору
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Kyrylo Vadurin &bull; <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "header.autohide", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0456\u0439\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u0421\u043a\u043e\u043f\u0456\u044e\u0432\u0430\u0442\u0438 \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0429\u0435 1 \u0437\u0431\u0456\u0433 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.more.other": "\u0429\u0435 # \u0437\u0431\u0456\u0433\u0456\u0432 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.none": "\u0417\u0431\u0456\u0433\u0456\u0432 \u043d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0437\u0431\u0456\u0433", "search.result.other": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e # \u0437\u0431\u0456\u0433\u0456\u0432", "search.result.placeholder": "\u0420\u043e\u0437\u043f\u043e\u0447\u043d\u0456\u0442\u044c \u043f\u0438\u0441\u0430\u0442\u0438 \u0434\u043b\u044f \u043f\u043e\u0448\u0443\u043a\u0443", "search.result.term.missing": "\u041d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e \u0437\u0430\u043f\u0438\u0442\u0443", "select.version": "\u041e\u0431\u0440\u0430\u0442\u0438 \u0432\u0435\u0440\u0441\u0456\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
