@@ -1,0 +1,1831 @@
+
+<!doctype html>
+<html lang="uk" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Навчальний портал з дисципліни "Інформаційно-аналітичні технології в екологічних системах"">
+      
+      
+      
+      
+        <link rel="prev" href="../lb8/">
+      
+      
+        <link rel="next" href="../lb10/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>ЛБ 9. Розробка аналітичної панелі для розрахунку та візуалізації індексу якості повітря в реальному часі - ІАТ в екологічних системах</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#no-9" class="md-skip">
+          Перейти до змісту
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Хедер">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-header__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ІАТ в екологічних системах
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ЛБ 9. Розробка аналітичної панелі для розрахунку та візуалізації індексу якості повітря в реальному часі
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Переключити на темну тему"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Переключити на темну тему" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-label="Переключити на світлу тему"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Переключити на світлу тему" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Пошук" placeholder="Пошук" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Шукати">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистити" aria-label="Очистити" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Пошук розпочато
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Робоча програма
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../lk/lk1/" class="md-tabs__link">
+          
+  
+  
+  Лекції
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../lb1/" class="md-tabs__link">
+          
+  
+  
+  Лабораторні роботи
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../sr/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Самостійна робота
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навігація" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-nav__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ІАТ в екологічних системах
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Робоча програма
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лекції
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лекції
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 1. Сучасні концепції цифровізації екологічного моніторингу
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 2. IoT-технології та сенсорні мережі в екології
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 3. Проектування екологічних баз даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 4. Статистичні методи аналізу складних екологічних даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 5. Багатовимірний аналіз та інтелектуальні технології
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 6. Комп’ютерне моделювання переносу та дифузії забруднюючих речовин
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 7. Геоінформаційні системи в екологічних дослідженнях
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 8. Моделювання динаміки та стійкості екологічних систем
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 9. Інформаційні системи прогнозування та оцінки екологічних ризиків
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 10. Квантово-гібридні та інтелектуальні платформи просторового прогнозування
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторні роботи
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лабораторні роботи
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 1. Дослідження функціональної архітектури та екологічного наповнення відкритих систем моніторингу довкілля
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 2. Конфігурування каналу передачі даних від IoT-станцій екологічного моніторингу на основі емульованих сенсорів та протоколу MQTT/LwM2M
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 3. Розробка реляційної структури екологічної бази даних для збереження показників забруднення атмосферного повітря
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 4. Статистична обробка часових рядів концентрацій екологічних забруднювачів
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 5. Класифікація та ранжування муніципальних об’єктів за рівнем екологічного навантаження методом головних компонент
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 6. Комп’ютерне моделювання процесів розсіювання викидів промислових підприємств у атмосферному повітрі на основі гаусової моделі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 7. Геопросторова інтерполяція та картографування розподілу забруднюючих речовин у ГІС-середовищі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 8. Моделювання стійкості популяції та оцінка критичних екологічних навантажень за моделлю Лотки-Вольтерра
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 9. Розробка аналітичної панелі для розрахунку та візуалізації індексу якості повітря в реальному часі
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 9. Розробка аналітичної панелі для розрахунку та візуалізації індексу якості повітря в реальному часі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Короткі теоретичні відомості
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Порядок виконання роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Порядок виконання роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 1. Ознайомлення з масивом погодинних спостережень
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 2. Реалізація розрахунку субіндексів за кусочно-лінійною формулою
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-aqi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 3. Визначення інтегрального індексу AQI та провідного забруднювача
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 4. Налаштування умовного колірного форматування та індикатора тривоги
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-streak-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 5. Реалізація рекурентного streak-аналізу тривалості небезпеки
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-llmrag-google-colab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 6. Автоматизована генерація офіційного звіту через LLM/RAG у Google Colab
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Індивідуальні завдання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вимоги до змісту звіту
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Контрольні запитання
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 10. Застосування алгоритмів нечіткої логіки та квантово-гібридних шаблонів для оцінки екологічних ризиків і якості мікроклімату приміщень
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Самостійна робота
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Короткі теоретичні відомості
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Порядок виконання роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Порядок виконання роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 1. Ознайомлення з масивом погодинних спостережень
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 2. Реалізація розрахунку субіндексів за кусочно-лінійною формулою
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-aqi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 3. Визначення інтегрального індексу AQI та провідного забруднювача
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 4. Налаштування умовного колірного форматування та індикатора тривоги
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-streak-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 5. Реалізація рекурентного streak-аналізу тривалості небезпеки
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-llmrag-google-colab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 6. Автоматизована генерація офіційного звіту через LLM/RAG у Google Colab
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Індивідуальні завдання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вимоги до змісту звіту
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Контрольні запитання
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="no-9">Лабораторна робота № 9. Розробка аналітичної панелі для розрахунку та візуалізації індексу якості повітря в реальному часі</h1>
+<p><strong>Мета:</strong> сформувати систему практичних умінь щодо побудови інформаційно-аналітичних панелей (екологічних дашбордів) та розрахунку інтегральних критеріїв оцінки стану приземного шару атмосфери; опанувати математичний апарат кусочно-лінійної інтерполяції для визначення індексу якості повітря (Air Quality Index, AQI) за концентраційними брейкпоінтами стандарту US EPA в табличному процесорі Microsoft Excel або Google Таблиці; реалізувати алгоритм ідентифікації провідного забруднювача та виявлення небезпечних серій забруднення (streak-аналіз); освоїти методику автоматизованого формування офіційних екологічних звітів за формою Постанови Кабінету Міністрів України № 827 із застосуванням великих мовних моделей і технології генерації, доповненої пошуком (Retrieval-Augmented Generation, RAG), у середовищі Google Colab без необхідності написання програмного коду.</p>
+<hr />
+<h2 id="_1">Короткі теоретичні відомості</h2>
+<p>У системах інформування населення та підтримки прийняття управлінських рішень пряме оперування числовими масивами абсолютних концентрацій багатьох хімічних речовин ускладнює оперативну оцінку екологічної безпеки. Для подолання цього бар'єра у міжнародній практиці застосовується агрегований безрозмірний індекс якості повітря (Air Quality Index, AQI). Індекс приводить гетерогенні вимірювання різнорідних забруднювачів із різними одиницями вимірювання та різними класами токсичності до єдиної стандартизованої шкали від 0 до 500 пунктів, яка однозначно асоціюється з рівнем загрози для здоров'я людини та супроводжується нормативним колірним кодуванням.</p>
+<p>Розрахунок індивідуального субіндексу <span class="arithmatex">\(I_p\)</span> для кожного окремого забруднювача здійснюється за методом кусочно-лінійної інтерполяції на основі нормативної таблиці порогових концентрацій (брейкпоінтів):</p>
+<div class="arithmatex">\[I_p = \frac{I_{\text{high}} - I_{\text{low}}}{C_{\text{high}} - C_{\text{low}}} \cdot (C_p - C_{\text{low}}) + I_{\text{low}}\]</div>
+<p>де параметр <span class="arithmatex">\(C_p\)</span> позначає фактичну виміряну або згладжену концентрацію <span class="arithmatex">\(p\)</span>-го забруднювача; величини <span class="arithmatex">\(C_{\text{low}}\)</span> та <span class="arithmatex">\(C_{\text{high}}\)</span> являють собою нижню та верхню межі концентраційного інтервалу, всередину якого потрапляє значення <span class="arithmatex">\(C_p\)</span>; параметри <span class="arithmatex">\(I_{\text{low}}\)</span> та <span class="arithmatex">\(I_{\text{high}}\)</span> визначають відповідні нижню та верхню межі шкали індексу AQI для обраного інтервалу.</p>
+<pre class="mermaid"><code>flowchart TD
+    subgraph SENSOR_DATA["1. Потокові вимірювання концентрацій Cp"]
+        RAW["Сенсори: PM2.5, PM10, CO, SO2, NO2 (погодинні заміри)"]
+    end
+
+    subgraph AQI_ENGINE["2. Розрахункове ядро AQI (Табличний процесор)"]
+        INTERP["Кусочно-лінійна інтерполяція брейкпоінтів для кожного газу Ip"]
+        MAX_OP["Оператор максимуму: AQI = max(Ip)"]
+        CRIT_POL["Визначення критичного забруднювача (Critical Pollutant)"]
+        STREAK["Streak-аналіз: виявлення серій небезпеки (тривалість &gt;= 3 год)"]
+    end
+
+    subgraph DASHBOARD_VIS["3. Аналітична панель (KPI &amp; Графіки)"]
+        GAUGE["Колірні статуси (Зелений -&gt; Бордовий)"]
+        ALERT["Сигналізація перевищення нормативів Постанови № 827"]
+    end
+
+    subgraph RAG_REPORTING["4. Когнітивна генерація звітності (Google Colab / RAG)"]
+        KNOWLEDGE["База нормативних знань Постанови КМУ № 827"]
+        LLM["Мовна модель: синтез проекту офіційного повідомлення"]
+        DOC["Готовий текстовий звіт для екологічної інспекції"]
+    end
+
+    RAW --&gt; INTERP --&gt; MAX_OP --&gt; CRIT_POL --&gt; GAUGE
+    MAX_OP --&gt; STREAK --&gt; ALERT
+    CRIT_POL --&gt; LLM
+    ALERT --&gt; LLM
+    KNOWLEDGE --&gt; LLM --&gt; DOC</code></pre>
+<p>Інтегральний індекс якості повітря для комплексу одночасно контрольованих забруднюючих речовин визначається за принципом найгіршого показника за допомогою оператора математичного максимуму:</p>
+<div class="arithmatex">\[\text{AQI}_{\text{total}} = \max_{p \in \mathcal{P}} \left( I_p \right)\]</div>
+<p>де множина <span class="arithmatex">\(\mathcal{P} = \{\text{PM}_{2.5}, \text{PM}_{10}, \text{CO}, \text{SO}_2, \text{NO}_2\}\)</span> задає перелік контрольованих маркерів. Забруднююча речовина, для якої зафіксовано найвище значення індивідуального субіндексу, автоматично набуває статусу провідного (критичного) забруднювача (Critical Pollutant) для поточного моменту часу, і саме її токсикологічний вплив визначає медичні рекомендації для населення.</p>
+<p>Шкала індексу AQI розподілена на шість стандартизованих категорій небезпеки відповідно до чинних міжнародних настанови Всесвітньої організації охорони здоров'я.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Діапазон AQI</th>
+<th style="text-align: left;">Категорія якості повітря</th>
+<th style="text-align: left;">Колірний код</th>
+<th style="text-align: left;">Рівень загрози для здоров'я населення</th>
+<th style="text-align: left;">Рекомендовані заходи захисту</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(0 \ldots 50\)</span></td>
+<td style="text-align: left;">Добрий (Good)</td>
+<td style="text-align: left;">Зелений</td>
+<td style="text-align: left;">Якість повітря вважається задовільною, забруднення не становить загрози</td>
+<td style="text-align: left;">Обмеження на перебування на відкритому повітрі відсутні</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(51 \ldots 100\)</span></td>
+<td style="text-align: left;">Помірний (Moderate)</td>
+<td style="text-align: left;">Жовтий</td>
+<td style="text-align: left;">Якість повітря є прийнятною, проте можливий незначний вплив на надчутливих осіб</td>
+<td style="text-align: left;">Чутливим особам слід обмежити тривалі інтенсивні навантаження на вулиці</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(101 \ldots 150\)</span></td>
+<td style="text-align: left;">Шкідливий для чутливих груп</td>
+<td style="text-align: left;">Помаранчевий</td>
+<td style="text-align: left;">Підвищений ризик загострення респіраторних хвороб у дітей, літніх людей та астматиків</td>
+<td style="text-align: left;">Особам із захворюваннями дихальних шляхів обмежити перебування просто неба</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(151 \ldots 200\)</span></td>
+<td style="text-align: left;">Шкідливий (Unhealthy)</td>
+<td style="text-align: left;">Червоний</td>
+<td style="text-align: left;">Негативний вплив на здоров'я може відчувати будь-яка людина, для вразливих груп — серйозні наслідки</td>
+<td style="text-align: left;">Рекомендується уникати тривалих фізичних навантажень на відкритому повітрі</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(201 \ldots 300\)</span></td>
+<td style="text-align: left;">Дуже шкідливий (Very Unhealthy)</td>
+<td style="text-align: left;">Фіолетовий</td>
+<td style="text-align: left;">Стан тривоги: значне погіршення здоров'я усього міського населення</td>
+<td style="text-align: left;">Усім громадянам рекомендується максимально уникати перебування на вулиці</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(301 \ldots 500\)</span></td>
+<td style="text-align: left;">Небезпечний (Hazardous)</td>
+<td style="text-align: left;">Темно-бордовий</td>
+<td style="text-align: left;">Надзвичайна ситуація: гостра токсична дія, висока загроза життю та здоров'ю</td>
+<td style="text-align: left;">Запровадження режиму надзвичайного стану, перебування на вулиці заборонено</td>
+</tr>
+</tbody>
+</table>
+<p>Для розрахунку субіндексів за формулою кусочно-лінійної інтерполяції використовуються нормативні концентраційні брейкпоінти (граничні концентрації), наведені у наступній таблиці стандартів.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(\text{PM}_{2.5}\)</span>, <span class="arithmatex">\(\text{мкг/м}^3\)</span> (24 год)</th>
+<th style="text-align: center;"><span class="arithmatex">\(\text{PM}_{10}\)</span>, <span class="arithmatex">\(\text{мкг/м}^3\)</span> (24 год)</th>
+<th style="text-align: center;"><span class="arithmatex">\(\text{CO}\)</span>, <span class="arithmatex">\(\text{мг/м}^3\)</span> (8 год)</th>
+<th style="text-align: center;"><span class="arithmatex">\(\text{SO}_2\)</span>, <span class="arithmatex">\(\text{мкг/м}^3\)</span> (1 год)</th>
+<th style="text-align: center;"><span class="arithmatex">\(\text{NO}_2\)</span>, <span class="arithmatex">\(\text{мкг/м}^3\)</span> (1 год)</th>
+<th style="text-align: center;"><span class="arithmatex">\(I_{\text{low}} - I_{\text{high}}\)</span> (AQI)</th>
+<th style="text-align: left;">Категорія AQI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(0,0 \ldots 12,0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0 \ldots 54\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0,0 \ldots 4,4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0 \ldots 35\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0 \ldots 53\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0 \ldots 50\)</span></td>
+<td style="text-align: left;">Добрий</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(12,1 \ldots 35,4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(55 \ldots 154\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(4,5 \ldots 9,4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(36 \ldots 75\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(54 \ldots 100\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(51 \ldots 100\)</span></td>
+<td style="text-align: left;">Помірний</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(35,5 \ldots 55,4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(155 \ldots 254\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(9,5 \ldots 12,4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(76 \ldots 185\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(101 \ldots 360\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(101 \ldots 150\)</span></td>
+<td style="text-align: left;">Для чутливих груп</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(55,5 \ldots 150,4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(255 \ldots 354\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(12,5 \ldots 15,4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(186 \ldots 304\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(361 \ldots 649\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(151 \ldots 200\)</span></td>
+<td style="text-align: left;">Шкідливий</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(150,5 \ldots 250,4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(355 \ldots 424\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(15,5 \ldots 30,4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(305 \ldots 604\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(650 \ldots 1249\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(201 \ldots 300\)</span></td>
+<td style="text-align: left;">Дуже шкідливий</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(250,5 \ldots 500,4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(425 \ldots 604\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(30,5 \ldots 50,4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(605 \ldots 1004\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1250 \ldots 2049\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(301 \ldots 500\)</span></td>
+<td style="text-align: left;">Небезпечний</td>
+</tr>
+</tbody>
+</table>
+<p>Відповідно до Постанови КМУ № 827, оперативне реагування вимагає фіксації не поодиноких сплесків, а тривалих періодів підвищеного забруднення. З цією метою у розрахунковій системі налаштовується алгоритм streak-аналізу, який рахує тривалість безперервної послідовності годин, під час яких <span class="arithmatex">\(\text{AQI}_{\text{total}} \ge 101\)</span>. Якщо лічильник серії сягає критичного порогу <span class="arithmatex">\(K = 3\)</span> години, система ініціює оповіщення та передає агреговані параметри до аналітичного блоку формування звіту.</p>
+<p>Для автоматизації складання звітної документації застосовується концепція когнітивного аналізу даних на базі великих мовних моделей (LLM) з архітектурою RAG. Технологія RAG дозволяє мовній моделі використовувати не загальні текстові шаблони, а точні положення нормативно-правових актів України та регламенти Постанови № 827, що виключає фактологічні помилки та забезпечує генерацію юридично грамотного звіту безпосередньо з числових табличних масивів.</p>
+<blockquote>
+<p><strong>ВАЖЛИВО:</strong> Під час розрахунку кусочно-лінійного субіндексу концентрації речовин перед підстановкою у формулу підлягають попередньому усіченню (округленню) до встановленої точності стандарту: пил PM2.5 округлюється до десятих часток (<span class="arithmatex">\(0,1\text{ мкг/м}^3\)</span>), оксид вуглецю — до десятих часток (<span class="arithmatex">\(0,1\text{ мг/м}^3\)</span>), а для PM10, діоксиду сірки та діоксиду азоту значення усікаються до цілих чисел. Округлення результуючого значення субіндексу <span class="arithmatex">\(I_p\)</span> завжди виконується до найближчого цілого числа.</p>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> В інформаційно-аналітичній системі муніципального моніторингу міста Кременчук розроблено веб-сервіс, де за даними станцій Vaisala в автоматичному режимі формуються інтерактивні шкали AQI та реалізовано автоматичне генерування офіційних звітів у форматі документів MS Word для надання до органів Міністерства захисту довкілля та природних ресурсів України при фіксації 3-годинних перевищень нормативів.</p>
+<p><strong>ТИПОВА ПОМИЛКА:</strong> Спроба обчислення інтегрального індексу AQI як середнього арифметичного значення індивідуальних субіндексів окремих речовин. Такий підхід категорично неприпустимий, оскільки усереднення маскує смертельну небезпеку: наприклад, якщо субіндекс діоксиду азоту дорівнює 350 (надзвичайна небезпека), а решта чотирьох речовин мають показники близько 20 (чисте повітря), середнє значення складе 86 (помірний рівень), що дезінформує органи управління та загрожує життю громадян.</p>
+</blockquote>
+<hr />
+<h2 id="_2">Порядок виконання роботи</h2>
+<p>Для виконання завдань використовується вхідний файл <code>aqi_monitoring_kremenchuk.xlsx</code>, наданий викладачем. Усі розрахунки кусочно-лінійних інтерполяцій, оператора максимуму та streak-аналізу реалізуються в електронних таблицях MS Excel або Google Таблиці, а генерація проекту звіту на базі LLM/RAG — у хмарному блокноті Google Colab.</p>
+<h3 id="1">Етап 1. Ознайомлення з масивом погодинних спостережень</h3>
+<p>Здобувач відкриває аркуш файлу <code>aqi_monitoring_kremenchuk.xlsx</code> відповідно до номера свого варіанта. У вибірці представлено добовий масив погодинних вимірювань (24 часові точки) за п'ятьма обов'язковими забруднюючими речовинами: <span class="arithmatex">\(\text{PM}_{2.5}\)</span>, <span class="arithmatex">\(\text{PM}_{10}\)</span>, <span class="arithmatex">\(\text{CO}\)</span>, <span class="arithmatex">\(\text{SO}_2\)</span> та <span class="arithmatex">\(\text{NO}_2\)</span>. Проводиться візуальний контроль розмірностей: концентрації газів та пилу звіряються з одиницями нормативної таблиці брейкпоінтів.</p>
+<h3 id="2-">Етап 2. Реалізація розрахунку субіндексів за кусочно-лінійною формулою</h3>
+<p>В електронній таблиці створюються п'ять розрахункових стовпців для визначення індивідуальних субіндексів <span class="arithmatex">\(I_{\text{PM2.5}}, I_{\text{PM10}}, I_{\text{CO}}, I_{\text{SO2}}, I_{\text{NO2}}\)</span>. Розрахунок реалізується за допомогою функції багатоваріантної перевірки умов <code>=IFS</code> (або вкладених функцій <code>=ЯКЩО</code>), де для кожного концентраційного діапазону речовини прописується відповідна формула лінійної інтерполяції з таблиці теоретичних відомостей:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>=IFS(B2&lt;=12; (50/12)*B2; B2&lt;=35,4; ((100-51)/(35,4-12,1))*(B2-12,1)+51; ...)
+</span></code></pre></div>
+Розраховані значення субіндексів округлюються до цілих чисел за допомогою функції <code>=ROUND(..., 0)</code>.</p>
+<h3 id="3-aqi">Етап 3. Визначення інтегрального індексу AQI та провідного забруднювача</h3>
+<p>У сусідньому розрахунковому стовпці обчислюється підсумковий показник <span class="arithmatex">\(\text{AQI}_{\text{total}}\)</span> для кожної години доби за допомогою функції пошуку максимуму:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>=MAX(G2:K2)
+</span></code></pre></div>
+В окремому стовпці визначається назва провідного забруднювача (Critical Pollutant) за допомогою зв'язки пошукових функцій:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>=INDEX($G$1:$K$1; MATCH(L2; G2:K2; 0))
+</span></code></pre></div>
+де клітинка <code>L2</code> містить розрахований максимальний AQI, а діапазон <code>$G$1:$K$1</code> містить текстові назви стовпців субіндексів.</p>
+<h3 id="4">Етап 4. Налаштування умовного колірного форматування та індикатора тривоги</h3>
+<p>Для стовпця інтегрального індексу налаштовується умовне форматування клітинок відповідно до нормативної колірної шкали (зелений для <span class="arithmatex">\(0 \ldots 50\)</span>, жовтий для <span class="arithmatex">\(51 \ldots 100\)</span>, помаранчевий для <span class="arithmatex">\(101 \ldots 150\)</span>, червоний для <span class="arithmatex">\(151 \ldots 200\)</span>, фіолетовий для <span class="arithmatex">\(201 \ldots 300\)</span>, бордовий для <span class="arithmatex">\(301 \ldots 500\)</span>). Додається стовпець бінарного індикатора перевищення безпечного порогу:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>=ЯКЩО(L2 &gt;= 101; 1; 0)
+</span></code></pre></div></p>
+<h3 id="5-streak-">Етап 5. Реалізація рекурентного streak-аналізу тривалості небезпеки</h3>
+<p>В окремому стовпці <code>Streak_Hours</code> реалізується накопичувальний лічильник послідовних годин підвищеного забруднення. Для першого рядка вводиться значення бінарного індикатора, а для наступних рядків прописується рекурентна функція накопичення:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>=ЯКЩО(N3=1; O2+1; 0)
+</span></code></pre></div>
+де клітинка <code>N3</code> є поточним індикатором перевищення, а клітинка <code>O2</code> — попереднім значенням лічильника серії. За допомогою функції <code>=COUNTIF(O:O; "&gt;=3")</code> фіксується факт виникнення критичної ситуації за нормативами Постанови № 827. Будується графік погодинної динаміки <span class="arithmatex">\(\text{AQI}_{\text{total}}\)</span> із сигнальною горизонтальною лінією порогу 100 пунктів.</p>
+<h3 id="6-llmrag-google-colab">Етап 6. Автоматизована генерація офіційного звіту через LLM/RAG у Google Colab</h3>
+<p>Здобувач переходить до хмарного блокнота Google Colab. У форму введення вносяться підсумкові розрахункові метрики за добу: максимальний зареєстрований індекс <span class="arithmatex">\(\text{AQI}_{\text{total}}\)</span>, назва критичного забруднювача, тривалість найдовшої безперервної серії перевищення у годинах, а також дата та адреса спостережного поста. Запускається готовий скрипт, який за допомогою технології RAG зіставляє отримані показники зі статтею Постанови КМУ № 827 і генерує проект офіційного повідомлення до територіального органу екологічної інспекції. Здобувач копіює згенерований текст до аналітичного звіту.</p>
+<hr />
+<h2 id="_3">Індивідуальні завдання</h2>
+<p>Здобувач обирає номер індивідуального варіанта за наведеною таблицею, знаходить у файлі <code>aqi_monitoring_kremenchuk.xlsx</code> відповідний добовий масив погодинних спостережень та проводить повний розрахунковий цикл аналізу індексу AQI і генерації офіційного звіту.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Варіант</th>
+<th style="text-align: left;">Станція спостереження / адреса</th>
+<th style="text-align: left;">Характер функціональної зони</th>
+<th style="text-align: center;">Дата добового аналізу</th>
+<th style="text-align: left;">Пріоритетні сенсорні маркери</th>
+<th style="text-align: center;">Критичний поріг реагування (<span class="arithmatex">\(K\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Пост № 1 (вул. Молодіжна, 9)</td>
+<td style="text-align: left;">Промислово-селітебна зона</td>
+<td style="text-align: center;">12.07.2023</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{PM}_{2.5}, \text{PM}_{10}, \text{CO}, \text{NO}_2, \text{SO}_2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 3\)</span> год при <span class="arithmatex">\(\text{AQI} \ge 101\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Пост № 2 (вул. Богаєвського)</td>
+<td style="text-align: left;">Транспортний перетин доріг</td>
+<td style="text-align: center;">18.07.2023</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{PM}_{2.5}, \text{PM}_{10}, \text{CO}, \text{NO}_2, \text{SO}_2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 3\)</span> год при <span class="arithmatex">\(\text{AQI} \ge 101\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Пост № 4 (вул. Шевченка, 22/30)</td>
+<td style="text-align: left;">Центральна міська забудова</td>
+<td style="text-align: center;">25.07.2023</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{PM}_{2.5}, \text{PM}_{10}, \text{CO}, \text{NO}_2, \text{SO}_2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 3\)</span> год при <span class="arithmatex">\(\text{AQI} \ge 101\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Пост № 5 (вул. І. Приходька, 89)</td>
+<td style="text-align: left;">Привокзальна промислова зона</td>
+<td style="text-align: center;">05.08.2023</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{PM}_{2.5}, \text{PM}_{10}, \text{CO}, \text{NO}_2, \text{SO}_2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 3\)</span> год при <span class="arithmatex">\(\text{AQI} \ge 101\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Vaisala T3950716 (Північний вузол)</td>
+<td style="text-align: left;">Важка нафтохімічна індустрія</td>
+<td style="text-align: center;">14.08.2023</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{PM}_{2.5}, \text{PM}_{10}, \text{CO}, \text{NO}_2, \text{SO}_2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 3\)</span> год при <span class="arithmatex">\(\text{AQI} \ge 101\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Vaisala T3950713 (Район «Фаворит»)</td>
+<td style="text-align: left;">Торговельно-транспортний вузол</td>
+<td style="text-align: center;">22.08.2023</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{PM}_{2.5}, \text{PM}_{10}, \text{CO}, \text{NO}_2, \text{SO}_2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 3\)</span> год при <span class="arithmatex">\(\text{AQI} \ge 101\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">Vaisala V0440346 (Гімназія № 26)</td>
+<td style="text-align: left;">Спальний мікрорайон, школа</td>
+<td style="text-align: center;">02.09.2023</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{PM}_{2.5}, \text{PM}_{10}, \text{CO}, \text{NO}_2, \text{SO}_2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 3\)</span> год при <span class="arithmatex">\(\text{AQI} \ge 101\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">EcoCity 1748 (вул. Соборна)</td>
+<td style="text-align: left;">Пішохідна зона центра міста</td>
+<td style="text-align: center;">11.09.2023</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{PM}_{2.5}, \text{PM}_{10}, \text{CO}, \text{NO}_2, \text{SO}_2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 3\)</span> год при <span class="arithmatex">\(\text{AQI} \ge 101\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: left;">EcoCity 1756 (Крюківський міст)</td>
+<td style="text-align: left;">Вузьке горло мостової магістралі</td>
+<td style="text-align: center;">20.09.2023</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{PM}_{2.5}, \text{PM}_{10}, \text{CO}, \text{NO}_2, \text{SO}_2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 3\)</span> год при <span class="arithmatex">\(\text{AQI} \ge 101\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: left;">Пост № 1 (м. Горішні Плавні)</td>
+<td style="text-align: left;">Гірничо-збагачувальний комбінат</td>
+<td style="text-align: center;">28.09.2023</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{PM}_{2.5}, \text{PM}_{10}, \text{CO}, \text{NO}_2, \text{SO}_2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 3\)</span> год при <span class="arithmatex">\(\text{AQI} \ge 101\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_4">Вимоги до змісту звіту</h2>
+<p>Звіт оформлюється в електронному вигляді у форматі PDF або DOCX та подається на перевірку викладачу разом із розрахунковою таблицею у форматі XLSX.</p>
+<p>Структура звіту повинна містити такі обов'язкові розділи:</p>
+<ol>
+<li>
+<p><strong>Титульна сторінка:</strong> містить найменування навчального закладу, інституту, випускової кафедри, назву навчальної дисципліни, тему лабораторної роботи, номер варіанта індивідуального завдання, а також прізвище, ініціали та навчальну групу здобувача.</p>
+</li>
+<li>
+<p><strong>Мета роботи:</strong> чітке формулювання дослідницьких і розрахункових цілей відповідно до наданих методичних вказівок.</p>
+</li>
+<li>
+<p><strong>Порядок виконання роботи:</strong> структурований опис послідовності обчислювальних кроків у табличному процесорі із зазначенням використаних формул кусочно-лінійної інтерполяції та алгоритму streak-аналізу.</p>
+</li>
+<li>
+<p><strong>Результати розрахунків та аналітична панель:</strong></p>
+</li>
+<li>
+<p>Зведена розрахункова таблиця за 24 години, що містить значення фактичних концентрацій, індивідуальних субіндексів для 5 речовин, інтегрального <span class="arithmatex">\(\text{AQI}_{\text{total}}\)</span>, назви провідного забруднювача та показників лічильника серії небезпеки.</p>
+</li>
+<li>
+<p>Кольорове оформлення стовпця <span class="arithmatex">\(\text{AQI}_{\text{total}}\)</span> відповідно до стандартизованої шкали небезпеки.</p>
+</li>
+<li>
+<p>Графік погодинної динаміки індексу AQI з нанесеною сигнальною лінією порогу 100 пунктів та виділеною зоною небезпечної неперервної серії (<span class="arithmatex">\(\ge 3\)</span> годин).</p>
+</li>
+<li>
+<p>Повний текст офіційного аналітичного звіту за формою Постанови КМУ № 827, згенерований мовною моделлю в середовищі Google Colab.</p>
+</li>
+<li>
+<p><strong>Аналітичні висновки:</strong> фахове екологічне трактування добового стану якості повітря; характеристика виявленого провідного забруднювача та ймовірних джерел його генерації; оцінка своєчасності детектування небезпечної події за допомогою streak-аналізу; рекомендації для муніципалітету щодо регулювання транспортних або промислових викидів.</p>
+</li>
+<li>
+<p><strong>Відповіді на контрольні запитання:</strong> розгорнуті письмові відповіді на всі контрольні запитання, наведені у розділі 5.</p>
+</li>
+</ol>
+<hr />
+<h2 id="5">5 Контрольні запитання</h2>
+<ol>
+<li>
+<p>Які переваги та обмеження має використання інтегрального індексу якості повітря (AQI) у порівнянні з прямим зіставленням фактичних концентрацій забруднювачів із нормативами гранично допустимих концентрацій?</p>
+</li>
+<li>
+<p>Опишіть математичний алгоритм кусочно-лінійної інтерполяції субіндексів за формулою US EPA. Чому для кожного забруднювача встановлено індивідуальні концентраційні діапазони брейкпоінтів?</p>
+</li>
+<li>
+<p>Чому інтегральний індекс якості повітря для багатокомпонентного середовища визначається виключно за оператором математичного максимуму <span class="arithmatex">\(\text{AQI} = \max(I_p)\)</span>, а не за формулою середнього арифметичного значення?</p>
+</li>
+<li>
+<p>Який нормативний та екологічний зміст має виявлення безперервних серій підвищеного забруднення тривалістю три години поспіль і більше (streak-аналіз) у контексті вимог Постанови Кабінету Міністрів України № 827?</p>
+</li>
+<li>
+<p>У чому полягає принципова відмінність технології пошуково-доповненої генерації (Retrieval-Augmented Generation, RAG) від звичайного використання великих мовних моделей під час автоматизації підготовки офіційних екологічних звітів?</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Повернутись нагору
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Kyrylo Vadurin &bull; <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "header.autohide", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0456\u0439\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u0421\u043a\u043e\u043f\u0456\u044e\u0432\u0430\u0442\u0438 \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0429\u0435 1 \u0437\u0431\u0456\u0433 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.more.other": "\u0429\u0435 # \u0437\u0431\u0456\u0433\u0456\u0432 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.none": "\u0417\u0431\u0456\u0433\u0456\u0432 \u043d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0437\u0431\u0456\u0433", "search.result.other": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e # \u0437\u0431\u0456\u0433\u0456\u0432", "search.result.placeholder": "\u0420\u043e\u0437\u043f\u043e\u0447\u043d\u0456\u0442\u044c \u043f\u0438\u0441\u0430\u0442\u0438 \u0434\u043b\u044f \u043f\u043e\u0448\u0443\u043a\u0443", "search.result.term.missing": "\u041d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e \u0437\u0430\u043f\u0438\u0442\u0443", "select.version": "\u041e\u0431\u0440\u0430\u0442\u0438 \u0432\u0435\u0440\u0441\u0456\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

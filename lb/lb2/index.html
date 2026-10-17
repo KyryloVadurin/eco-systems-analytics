@@ -1,0 +1,1768 @@
+
+<!doctype html>
+<html lang="uk" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Навчальний портал з дисципліни "Інформаційно-аналітичні технології в екологічних системах"">
+      
+      
+      
+      
+        <link rel="prev" href="../lb1/">
+      
+      
+        <link rel="next" href="../lb3/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>ЛБ 2. Конфігурування каналу передачі даних від IoT-станцій екологічного моніторингу на основі емульованих сенсорів та протоколу MQTT/LwM2M - ІАТ в екологічних системах</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#no-2-iot-mqttlwm2m" class="md-skip">
+          Перейти до змісту
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Хедер">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-header__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ІАТ в екологічних системах
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ЛБ 2. Конфігурування каналу передачі даних від IoT-станцій екологічного моніторингу на основі емульованих сенсорів та протоколу MQTT/LwM2M
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Переключити на темну тему"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Переключити на темну тему" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-label="Переключити на світлу тему"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Переключити на світлу тему" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Пошук" placeholder="Пошук" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Шукати">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистити" aria-label="Очистити" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Пошук розпочато
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Робоча програма
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../lk/lk1/" class="md-tabs__link">
+          
+  
+  
+  Лекції
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../lb1/" class="md-tabs__link">
+          
+  
+  
+  Лабораторні роботи
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../sr/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Самостійна робота
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навігація" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-nav__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ІАТ в екологічних системах
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Робоча програма
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лекції
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лекції
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 1. Сучасні концепції цифровізації екологічного моніторингу
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 2. IoT-технології та сенсорні мережі в екології
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 3. Проектування екологічних баз даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 4. Статистичні методи аналізу складних екологічних даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 5. Багатовимірний аналіз та інтелектуальні технології
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 6. Комп’ютерне моделювання переносу та дифузії забруднюючих речовин
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 7. Геоінформаційні системи в екологічних дослідженнях
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 8. Моделювання динаміки та стійкості екологічних систем
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 9. Інформаційні системи прогнозування та оцінки екологічних ризиків
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 10. Квантово-гібридні та інтелектуальні платформи просторового прогнозування
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторні роботи
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лабораторні роботи
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 1. Дослідження функціональної архітектури та екологічного наповнення відкритих систем моніторингу довкілля
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 2. Конфігурування каналу передачі даних від IoT-станцій екологічного моніторингу на основі емульованих сенсорів та протоколу MQTT/LwM2M
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 2. Конфігурування каналу передачі даних від IoT-станцій екологічного моніторингу на основі емульованих сенсорів та протоколу MQTT/LwM2M
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Короткі теоретичні відомості
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Порядок виконання роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Порядок виконання роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 1. Ознайомлення з вихідними технічними параметрами станції
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 2. Моделювання обсягів мережевого трафіку для трьох протоколів
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 3. Розрахунок фазового енергоспоживання сенсорного вузла
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 4. Розрахунок інтегрального струму споживання та терміну автономності
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 5. Оцінка чутливості життєвого циклу станції до регламенту опитування
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 6. Порівняльний аналіз енергетичної та трафікової ефективності
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Індивідуальні завдання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вимоги до змісту звіту
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Контрольні запитання
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 3. Розробка реляційної структури екологічної бази даних для збереження показників забруднення атмосферного повітря
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 4. Статистична обробка часових рядів концентрацій екологічних забруднювачів
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 5. Класифікація та ранжування муніципальних об’єктів за рівнем екологічного навантаження методом головних компонент
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 6. Комп’ютерне моделювання процесів розсіювання викидів промислових підприємств у атмосферному повітрі на основі гаусової моделі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 7. Геопросторова інтерполяція та картографування розподілу забруднюючих речовин у ГІС-середовищі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 8. Моделювання стійкості популяції та оцінка критичних екологічних навантажень за моделлю Лотки-Вольтерра
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 9. Розробка аналітичної панелі для розрахунку та візуалізації індексу якості повітря в реальному часі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 10. Застосування алгоритмів нечіткої логіки та квантово-гібридних шаблонів для оцінки екологічних ризиків і якості мікроклімату приміщень
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Самостійна робота
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Короткі теоретичні відомості
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Порядок виконання роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Порядок виконання роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 1. Ознайомлення з вихідними технічними параметрами станції
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 2. Моделювання обсягів мережевого трафіку для трьох протоколів
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 3. Розрахунок фазового енергоспоживання сенсорного вузла
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 4. Розрахунок інтегрального струму споживання та терміну автономності
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 5. Оцінка чутливості життєвого циклу станції до регламенту опитування
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 6. Порівняльний аналіз енергетичної та трафікової ефективності
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Індивідуальні завдання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вимоги до змісту звіту
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Контрольні запитання
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="no-2-iot-mqttlwm2m">Лабораторна робота № 2. Конфігурування каналу передачі даних від IoT-станцій екологічного моніторингу на основі емульованих сенсорів та протоколу MQTT/LwM2M</h1>
+<p><strong>Мета:</strong> дослідити мережеву архітектуру та протокольні механізми функціонування розподілених систем Інтернету речей (IoT) для задач моніторингу атмосферного повітря; опанувати аналітичні методи оцінки мережевих накладних витрат під час передачі екологічної інформації за протоколами LwM2M/CoAP, MQTT та HTTP/REST; навчитися розраховувати енергетичний баланс, середній струм споживання та прогнозований життєвий цикл автономних польових станцій моніторингу залежно від складу сенсорного обладнання і регламенту передачі даних за допомогою табличного процесора Microsoft Excel або Google Таблиці.</p>
+<hr />
+<h2 id="_1">Короткі теоретичні відомості</h2>
+<p>Розгортання муніципальних та локальних мереж екологічного моніторингу передбачає розміщення значної кількості вимірювальних приладів у зонах, де відсутнє підключення до стаціонарної електромережі та дротових каналів зв'язку. Такі автономні вимірювальні вузли комплектуються акумуляторними батареями, сонячними панелями та бездротовими модемами стільникового зв'язку (переважно стандартів LTE Cat-M, NB-IoT або 2G/GPRS). Головним системним обмеженням польових станцій виступає жорсткий компроміс між частотою фіксації екологічних параметрів, обчислювальною стійкістю алгоритмів шифрування та енергетичною автономністю живлення.</p>
+<p>Вибір прикладного мережевого протоколу безпосередньо визначає як обсяг трафіку, так і тривалість активної фази радіопередавача. Традиційні протоколи глобальної мережі (зокрема HTTP/REST поверх стека TCP/IP) створюють надмірне інформаційне навантаження через передачу великих текстових службових заголовків та необхідність багаторазового підтвердження встановлення сесії. Протокол MQTT функціонує за моделлю видавець-підписник і зменшує розмір заголовка, проте вимагає постійної підтримки активного TCP-з'єднання, що призводить до швидкого виснаження батареї. Спеціалізований протокол Lightweight M2M (LwM2M), розроблений альянсом OMA, використовує стек CoAP поверх ненадійного протоколу дейтаграм UDP із захистом DTLS. Завдяки ієрархічній бінарній структурі даних «Об'єкт / Екземпляр / Ресурс» (O/I/R), протокол LwM2M забезпечує мінімальні накладні витрати та потребує лише 6–9% оперативної пам'яті контролера.</p>
+<pre class="mermaid"><code>flowchart TD
+    subgraph STACK_COMP["Порівняння стеків протоколів передачі екологічних даних"]
+        subgraph HTTP_STACK["Стек HTTP/REST (Надмірний)"]
+            H1["Дані: JSON/XML (500-1500 Байт)"]
+            H2["Транспорт: HTTP/1.1"]
+            H3["Безпека: TLS (X.509)"]
+            H4["Мережа: TCP / IP"]
+        end
+        subgraph MQTT_STACK["Стек MQTT (Помірний)"]
+            M1["Дані: JSON/Текст (150-400 Байт)"]
+            M2["Транспорт: MQTT Packet"]
+            M3["Безпека: TLS (PSK/X.509)"]
+            M4["Мережа: TCP / IP"]
+        end
+        subgraph LWM2M_STACK["Стек LwM2M/CoAP (Оптимальний)"]
+            L1["Дані: TLV / OMA Objects (20-60 Байт)"]
+            L2["Транспорт: LwM2M / CoAP"]
+            L3["Безпека: DTLS (PSK/RPK)"]
+            L4["Мережа: UDP / IP"]
+        end
+    end
+
+    H1 --&gt; H2 --&gt; H3 --&gt; H4
+    M1 --&gt; M2 --&gt; M3 --&gt; M4
+    L1 --&gt; L2 --&gt; L3 --&gt; L4</code></pre>
+<p>Для порівняльної оцінки ефективності протоколів передачі телеметрії від автоматичних постів моніторингу використовуються нормативні технічні характеристики інформаційних пакетів, наведені у наступній таблиці.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Параметр порівняння</th>
+<th style="text-align: left;">Протокол HTTP / REST</th>
+<th style="text-align: left;">Протокол MQTT</th>
+<th style="text-align: left;">Протокол LwM2M / CoAP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Транспортний рівень мережі</td>
+<td style="text-align: left;">TCP</td>
+<td style="text-align: left;">TCP</td>
+<td style="text-align: left;">UDP</td>
+</tr>
+<tr>
+<td style="text-align: left;">Протокол криптографічного захисту</td>
+<td style="text-align: left;">TLS</td>
+<td style="text-align: left;">TLS</td>
+<td style="text-align: left;">DTLS або OSCORE</td>
+</tr>
+<tr>
+<td style="text-align: left;">Середній розмір службового заголовка</td>
+<td style="text-align: left;">200–800 байт</td>
+<td style="text-align: left;">2–5 байт</td>
+<td style="text-align: left;">4–8 байт</td>
+</tr>
+<tr>
+<td style="text-align: left;">Формат представлення корисних даних</td>
+<td style="text-align: left;">Текстовий JSON або XML</td>
+<td style="text-align: left;">Текстовий JSON або текст</td>
+<td style="text-align: left;">Бінарний TLV / CBOR або Plain-text</td>
+</tr>
+<tr>
+<td style="text-align: left;">Підтримка підтримки зв'язку (Keep-Alive)</td>
+<td style="text-align: left;">Постійне TCP-з'єднання</td>
+<td style="text-align: left;">Регулярні PING-пакети</td>
+<td style="text-align: left;">Режим сну без утримання каналу</td>
+</tr>
+<tr>
+<td style="text-align: left;">Частка оперативної пам'яті клієнта (RAM)</td>
+<td style="text-align: left;">25–40%</td>
+<td style="text-align: left;">12–18%</td>
+<td style="text-align: left;">6–9%</td>
+</tr>
+<tr>
+<td style="text-align: left;">Придатність до автономного батарейного живлення</td>
+<td style="text-align: left;">Вкрай низька</td>
+<td style="text-align: left;">Середня</td>
+<td style="text-align: left;">Висока</td>
+</tr>
+</tbody>
+</table>
+<p>Енергетичний цикл функціонування будь-якого екологічного IoT-вузла складається з чотирьох послідовних часових фаз. Першою є фаза прогріву та стабілізації вимірювального тракту, під час якої напівпровідникові або електрохімічні сенсори виходять на стабільний робочий режим. Другою є фаза активного аналогово-цифрового перетворення і зчитування інформації контролером. Третьою виступає фаза радіообміну, що включає реєстрацію в мережі, шифрування та передачу пакета. Четвертою, найбільш тривалою фазою, є стан глибокого сну мікроконтролера, під час якого функціонує лише внутрішній таймер реального часу з мінімальним енергоспоживанням.</p>
+<p>Сумарний добовий обсяг генерованого мережевого трафіку для обраного протоколу визначається за математичним виразом:</p>
+<div class="arithmatex">\[V_{\text{day}} = \frac{1440}{T_{\text{period}}} \cdot (S_{\text{payload}} + S_{\text{header}}) \cdot \frac{1}{1024}\]</div>
+<p>де параметр <span class="arithmatex">\(V_{\text{day}}\)</span> вимірюється у кілобайтах за добу, величина <span class="arithmatex">\(T_{\text{period}}\)</span> задає інтервал передачі даних у хвилинах, число 1440 визначає кількість хвилин у добі, змінна <span class="arithmatex">\(S_{\text{payload}}\)</span> позначає розмір корисного навантаження вимірювань у байтах, а величина <span class="arithmatex">\(S_{\text{header}}\)</span> відповідає сумарному розміру мережевих заголовків транспортного та прикладного рівнів.</p>
+<p>Середній струм споживання пристрою за один повний робочий цикл обчислюється як зважена сума струмів усіх його активних та пасивних фаз:</p>
+<div class="arithmatex">\[I_{\text{avg}} = \frac{I_{\text{warmup}} \cdot t_{\text{warmup}} + I_{\text{read}} \cdot t_{\text{read}} + I_{\text{tx}} \cdot t_{\text{tx}} + I_{\text{sleep}} \cdot (t_{\text{cycle}} - t_{\text{warmup}} - t_{\text{read}} - t_{\text{tx}})}{t_{\text{cycle}}}\]</div>
+<p>де значення <span class="arithmatex">\(t_{\text{cycle}} = T_{\text{period}} \cdot 60\)</span> задає загальну тривалість робочого циклу у секундах, параметри <span class="arithmatex">\(t_{\text{warmup}}, t_{\text{read}}, t_{\text{tx}}\)</span> позначають тривалість фаз прогріву, зчитування та бездротової передачі відповідно, а змінні <span class="arithmatex">\(I_{\text{warmup}}, I_{\text{read}}, I_{\text{tx}}, I_{\text{sleep}}\)</span> позначають струми споживання електронної схеми у відповідних функціональних режимах у міліамперах.</p>
+<p>Прогнозована тривалість автономної роботи польового сенсорного комплексу без підзарядки розраховується за формулою:</p>
+<div class="arithmatex">\[T_{\text{life}} = \frac{C_{\text{batt}} \cdot \eta_{\text{discharge}}}{I_{\text{avg}} \cdot 24}\]</div>
+<p>де параметр <span class="arithmatex">\(T_{\text{life}}\)</span> позначає прогнозовану кількість діб автономного функціонування, величина <span class="arithmatex">\(C_{\text{batt}}\)</span> визначає паспортну електричну ємність акумулятора у міліампер-годинах (<span class="arithmatex">\(\text{мА}\cdot\text{год}\)</span>), а коефіцієнт <span class="arithmatex">\(\eta_{\text{discharge}} \approx 0,80\)</span> враховує ефективну глибину розряду хімічного джерела струму без критичної деградації напруги.</p>
+<blockquote>
+<p><strong>ВАЖЛИВО:</strong> Оптичні сенсори твердих частинок (пиломіри PM2.5/PM10) та газоаналізатори з нагрівальними елементами потребують значного струму для виходу на робочий режим (до 150–250 мА). Спроба проводити неперервні вимірювання кожну хвилину скорочує час життя акумулятора міської станції з кількох місяців до 2–3 діб, що робить перехід на адаптивні цикли та енергоефективні протоколи обов'язковою інженерною вимогою.</p>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> У муніципальній системі моніторингу Кременчука автоматичні модулі контролю якості повітря використовують передачу даних за протоколом LwM2M у мережі стільникового зв'язку, що дозволяє зменшити споживання оперативної пам'яті контролера до 8% та забезпечити роботу станцій під час віялових відключень електроенергії завдяки буферному акумулятору.</p>
+<p><strong>ТИПОВА ПОМИЛКА:</strong> Ігнорування енерговитрат на попередній підігрів газових датчиків або неврахування часу встановлення з'єднання модема з базовою станцією стільникового зв'язку під час розрахунку тривалості активної фази. Помилково вважати, що енергія витрачається лише безпосередньо під час передачі кількох байт корисної інформації.</p>
+</blockquote>
+<hr />
+<h2 id="_2">Порядок виконання роботи</h2>
+<p>Для виконання завдань використовується вхідний файл <code>iot_monitoring_parameters.xlsx</code>, наданий викладачем. Усі розрахунки реалізуються засобами електронних таблиць Microsoft Excel або Google Таблиці.</p>
+<h3 id="1">Етап 1. Ознайомлення з вихідними технічними параметрами станції</h3>
+<p>Здобувач відкриває аркуш файлу <code>iot_monitoring_parameters.xlsx</code>, що відповідає номеру його варіанта. У таблиці фіксуються вихідні дані: тип мікроконтролера, перелік встановлених сенсорних модулів, характеристики акумуляторної батареї, паспортні струми споживання компонентів у різних режимах, а також базовий часовий інтервал опитування.</p>
+<h3 id="2">Етап 2. Моделювання обсягів мережевого трафіку для трьох протоколів</h3>
+<p>В електронній таблиці створюється розрахунковий блок для визначення розмірів інформаційного пакета. Для кожного протоколу (HTTP, MQTT, LwM2M) обчислюється сумарний розмір повідомлення, що складається із заданого розміру корисних даних та нормативного заголовка. За допомогою формули добового трафіку здобувач розраховує навантаження на канал зв'язку для чотирьох регламентів опитування: 1 хвилина, 10 хвилин, 20 хвилин та 60 хвилин:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>=(1440 / Часовий_інтервал) * (Розмір_payload + Розмір_заголовка) / 1024
+</span></code></pre></div>
+За результатами обчислень будується зведена гістограма, яка ілюструє різницю у витратах інтернет-трафіку між протоколами.</p>
+<h3 id="3">Етап 3. Розрахунок фазового енергоспоживання сенсорного вузла</h3>
+<p>На новому аркуші таблиці формується модель балансу струмів сенсорного вузла. Здобувач заповнює таблицю струмів для чотирьох функціональних фаз, підсумовуючи струми всіх задіяних модулів:</p>
+<ul>
+<li>
+<p>У фазі прогріву підсумовуються струм мікроконтролера в активному стані та струм нагрівачів газових сенсорів.</p>
+</li>
+<li>
+<p>У фазі зчитування додається струм живлення оптичних сенсорів пилу та аналогово-цифрових перетворювачів.</p>
+</li>
+<li>
+<p>У фазі передачі враховується струм пікового випромінювання стільникового або бездротового модема.</p>
+</li>
+<li>
+<p>У фазі глибокого сну враховується лише сумарний струм витоку електронної плати та таймера мікроконтролера.</p>
+</li>
+</ul>
+<h3 id="4">Етап 4. Розрахунок інтегрального струму споживання та терміну автономності</h3>
+<p>Використовуючи часові тривалості кожної фази (задані в секундах), здобувач реалізує розрахунок середньогодинного струму споживання <span class="arithmatex">\(I_{\text{avg}}\)</span> за наведеною у теоретичних відомостях формулою. На основі розрахованого значення <span class="arithmatex">\(I_{\text{avg}}\)</span> в окремій комірці обчислюється прогнозована тривалість безперервної роботи акумуляторної батареї у добах:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>=(Ємність_АКБ * 0,80) / (I_avg * 24)
+</span></code></pre></div></p>
+<h3 id="5">Етап 5. Оцінка чутливості життєвого циклу станції до регламенту опитування</h3>
+<p>Здобувач проводить багатоваріантний розрахунок автономності для п'яти різних часових інтервалів відправки пакетів: 1, 5, 10, 20 та 60 хвилин. За отриманими точками будується нелінійний графік залежності тривалості роботи поста (у добах) від інтервалу передачі даних. На графіку візуально позначається точка екстремального скорочення автономності.</p>
+<h3 id="6">Етап 6. Порівняльний аналіз енергетичної та трафікової ефективності</h3>
+<p>На завершальному етапі здобувач аналізує розраховані параметри та обирає найбільш доцільний протокол для муніципальної станції. Формулюється обґрунтований висновок щодо вибору оптимального періоду вимірювань, який забезпечує нормативну репрезентативність екологічних спостережень без надмірного скорочення терміну функціонування акумулятора.</p>
+<hr />
+<h2 id="_3">Індивідуальні завдання</h2>
+<p>Здобувач обирає свій варіант за наведеною нижче таблицею та вибирає з файлу <code>iot_monitoring_parameters.xlsx</code> відповідні технічні характеристики обладнання для проведення повного розрахункового циклу.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Варіант</th>
+<th style="text-align: left;">Модель вимірювального вузла</th>
+<th style="text-align: left;">Мікроконтролерна платформа</th>
+<th style="text-align: left;">Сенсорний пакет вимірювання</th>
+<th style="text-align: left;">Акумуляторна батарея</th>
+<th style="text-align: center;">Базовий період передачі</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Еко-пост «Пром-1» (Кременчук)</td>
+<td style="text-align: left;">ESP32-WROOM-32E</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{MQ135 } (\text{газ}), \text{ PMS7003 } (\text{пил}), \text{ DHT22}\)</span></td>
+<td style="text-align: left;">Li-Ion 18650, 2600 мА·год, 3,7 В</td>
+<td style="text-align: center;">10 хв</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Станція мікроклімату «Аудиторія»</td>
+<td style="text-align: left;">ESP8266 NodeMCU</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{CCS811 } (\text{VOC/eCO}_2), \text{ BME280 } (T, P, H)\)</span></td>
+<td style="text-align: left;">Li-Pol, 2000 мА·год, 3,7 В</td>
+<td style="text-align: center;">5 хв</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Мобільний комплекс на транспорті</td>
+<td style="text-align: left;">STM32L431 (Low-Power)</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{PMS7003 } (\text{пил}), \text{ GPS Neo-6M}, \text{ DHT22}\)</span></td>
+<td style="text-align: left;">LiFePO4, 3200 мА·год, 3,2 В</td>
+<td style="text-align: center;">1 хв</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Автономний пост «Крюківський міст»</td>
+<td style="text-align: left;">ESP32-WROOM-32E</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{MICS-6814 } (\text{NO}_2/\text{CO}), \text{ SDS011}, \text{ BME280}\)</span></td>
+<td style="text-align: left;">Li-Ion 21700, 4800 мА·год, 3,7 В</td>
+<td style="text-align: center;">20 хв</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Екологічний шлюз «Північний вузол»</td>
+<td style="text-align: left;">PIC32CM5164LS</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{AQT530 } (\text{мультигаз}), \text{ WXT530 } (\text{метео})\)</span></td>
+<td style="text-align: left;">LiFePO4, 6000 мА·год, 6,4 В</td>
+<td style="text-align: center;">10 хв</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Станція спостереження за водоймами</td>
+<td style="text-align: left;">STM32L072</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{Розчинений кисень}, \text{ pH-сенсор}, \text{ DS18B20}\)</span></td>
+<td style="text-align: left;">Li-Ion 18650, 3000 мА·год, 3,7 В</td>
+<td style="text-align: center;">30 хв</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">Диспетчерський пост «Житловий масив»</td>
+<td style="text-align: left;">ESP32-WROOM-32E</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{MQ135}, \text{ MQ7 } (\text{CO}), \text{ PMS7003}, \text{ BME280}\)</span></td>
+<td style="text-align: left;">Li-Ion блок, 5200 мА·год, 3,7 В</td>
+<td style="text-align: center;">15 хв</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">Санітарний буфер промислового вузла</td>
+<td style="text-align: left;">NXP LPC55S36</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{SO}_2 \text{ електрохімічний}, \text{ H}_2\text{S}, \text{ DHT22}\)</span></td>
+<td style="text-align: left;">LiFePO4, 4000 мА·год, 3,2 В</td>
+<td style="text-align: center;">20 хв</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: left;">Локальний детектор пилу та шуму</td>
+<td style="text-align: left;">ESP8266 NodeMCU</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{SDS011 } (\text{пил}), \text{ Шумомір}, \text{ AM2302}\)</span></td>
+<td style="text-align: left;">Li-Pol, 2500 мА·год, 3,7 В</td>
+<td style="text-align: center;">10 хв</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: left;">Регіональний реперний фоновий пункт</td>
+<td style="text-align: left;">STM32L476</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{AQT530 } (\text{газ}), \text{ BME280}, \text{ Опадомір}\)</span></td>
+<td style="text-align: left;">LiFePO4, 10000 мА·год, 6,4 В</td>
+<td style="text-align: center;">60 хв</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_4">Вимоги до змісту звіту</h2>
+<p>Звіт оформлюється в електронному вигляді у форматі PDF або DOCX та подається на перевірку разом із розрахунковою таблицею у форматі XLSX.</p>
+<p>Структура звіту повинна містити такі обов'язкові розділи:</p>
+<ol>
+<li>
+<p><strong>Титульна сторінка:</strong> містить найменування навчального закладу, інституту, випускової кафедри, назву навчальної дисципліни, тему лабораторної роботи, номер варіанта індивідуального завдання, а також прізвище, ініціали та навчальну групу здобувача.</p>
+</li>
+<li>
+<p><strong>Мета роботи:</strong> чітке формулювання дослідницьких і розрахункових цілей відповідно до наданих методичних вказівок.</p>
+</li>
+<li>
+<p><strong>Порядок виконання роботи:</strong> структурований опис кроків побудови математичної та енергетичної моделі у табличному процесорі із зазначенням використаних формул Excel.</p>
+</li>
+<li>
+<p><strong>Результати розрахунків:</strong></p>
+</li>
+<li>
+<p>Зведена таблиця обсягів добового мережевого трафіку для протоколів HTTP, MQTT та LwM2M за різної періодичності надсилання телеметрії.</p>
+</li>
+<li>
+<p>Гістограма порівняння мережевих витрат для досліджених протоколів.</p>
+</li>
+<li>
+<p>Розрахункова таблиця фазового струмоспоживання станції з виділенням струмів датчиків, мікроконтролера та модема.</p>
+</li>
+<li>
+<p>Підсумкові значення середнього струму (<span class="arithmatex">\(I_{\text{avg}}\)</span>) та прогнозованого терміну автономності (<span class="arithmatex">\(T_{\text{life}}\)</span>) станції у добах.</p>
+</li>
+<li>
+<p>Графік залежності терміну автономної роботи поста від інтервалу надсилання пакетів даних.</p>
+</li>
+<li>
+<p><strong>Аналітичні висновки:</strong> фахове екологічне та інженерне обґрунтування вибору конфігурації обладнання; оцінка впливу частоти моніторингу на здатність приладу своєчасно фіксувати екстремальні перевищення ГДК; рекомендації щодо підвищення тривалості роботи польового поста.</p>
+</li>
+<li>
+<p><strong>Відповіді на контрольні запитання:</strong> розгорнуті письмові відповіді на всі контрольні запитання, наведені у розділі 5.</p>
+</li>
+</ol>
+<hr />
+<h2 id="5_1">5 Контрольні запитання</h2>
+<ol>
+<li>
+<p>Які принципові архітектурні відмінності існують між протоколами передачі даних HTTP/REST, MQTT та LwM2M/CoAP, і чому використання протоколу HTTP є неефективним для польових сенсорних вузлів із батарейним живленням?</p>
+</li>
+<li>
+<p>Яким чином модель даних «Об'єкт / Екземпляр / Ресурс» (O/I/R) у протоколі LwM2M дозволяє стандартизувати вимірювання екологічних показників та оптимізувати обсяг корисної телеметрії?</p>
+</li>
+<li>
+<p>З яких функціональних фаз складається повний робочий цикл польової IoT-станції моніторингу повітря, та яка з цих фаз створює найбільше навантаження на автономне джерело електричного живлення?</p>
+</li>
+<li>
+<p>Чому напівпровідникові та електрохімічні сенсори якості повітря потребують спеціальної фази прогріву перед фіксацією концентрації, і як цей технологічний процес впливає на середній інтегральний струм вузла?</p>
+</li>
+<li>
+<p>Які заходи (на рівні апаратного оснащення та налаштування регламентів зв'язку) дозволяють подовжити життєвий цикл автономної станції спостереження без втрати критичної інформації про залпові викиди забруднювачів?</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Повернутись нагору
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Kyrylo Vadurin &bull; <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "header.autohide", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0456\u0439\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u0421\u043a\u043e\u043f\u0456\u044e\u0432\u0430\u0442\u0438 \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0429\u0435 1 \u0437\u0431\u0456\u0433 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.more.other": "\u0429\u0435 # \u0437\u0431\u0456\u0433\u0456\u0432 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.none": "\u0417\u0431\u0456\u0433\u0456\u0432 \u043d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0437\u0431\u0456\u0433", "search.result.other": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e # \u0437\u0431\u0456\u0433\u0456\u0432", "search.result.placeholder": "\u0420\u043e\u0437\u043f\u043e\u0447\u043d\u0456\u0442\u044c \u043f\u0438\u0441\u0430\u0442\u0438 \u0434\u043b\u044f \u043f\u043e\u0448\u0443\u043a\u0443", "search.result.term.missing": "\u041d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e \u0437\u0430\u043f\u0438\u0442\u0443", "select.version": "\u041e\u0431\u0440\u0430\u0442\u0438 \u0432\u0435\u0440\u0441\u0456\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

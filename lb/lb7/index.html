@@ -1,0 +1,1774 @@
+
+<!doctype html>
+<html lang="uk" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Навчальний портал з дисципліни "Інформаційно-аналітичні технології в екологічних системах"">
+      
+      
+      
+      
+        <link rel="prev" href="../lb6/">
+      
+      
+        <link rel="next" href="../lb8/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>ЛБ 7. Геопросторова інтерполяція та картографування розподілу забруднюючих речовин у ГІС-середовищі - ІАТ в екологічних системах</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#no-7-" class="md-skip">
+          Перейти до змісту
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Хедер">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-header__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ІАТ в екологічних системах
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ЛБ 7. Геопросторова інтерполяція та картографування розподілу забруднюючих речовин у ГІС-середовищі
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Переключити на темну тему"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Переключити на темну тему" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-label="Переключити на світлу тему"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Переключити на світлу тему" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Пошук" placeholder="Пошук" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Шукати">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистити" aria-label="Очистити" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Пошук розпочато
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Робоча програма
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../lk/lk1/" class="md-tabs__link">
+          
+  
+  
+  Лекції
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../lb1/" class="md-tabs__link">
+          
+  
+  
+  Лабораторні роботи
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../sr/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Самостійна робота
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навігація" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-nav__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ІАТ в екологічних системах
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Робоча програма
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лекції
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лекції
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 1. Сучасні концепції цифровізації екологічного моніторингу
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 2. IoT-технології та сенсорні мережі в екології
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 3. Проектування екологічних баз даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 4. Статистичні методи аналізу складних екологічних даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 5. Багатовимірний аналіз та інтелектуальні технології
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 6. Комп’ютерне моделювання переносу та дифузії забруднюючих речовин
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 7. Геоінформаційні системи в екологічних дослідженнях
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 8. Моделювання динаміки та стійкості екологічних систем
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 9. Інформаційні системи прогнозування та оцінки екологічних ризиків
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 10. Квантово-гібридні та інтелектуальні платформи просторового прогнозування
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторні роботи
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лабораторні роботи
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 1. Дослідження функціональної архітектури та екологічного наповнення відкритих систем моніторингу довкілля
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 2. Конфігурування каналу передачі даних від IoT-станцій екологічного моніторингу на основі емульованих сенсорів та протоколу MQTT/LwM2M
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 3. Розробка реляційної структури екологічної бази даних для збереження показників забруднення атмосферного повітря
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 4. Статистична обробка часових рядів концентрацій екологічних забруднювачів
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 5. Класифікація та ранжування муніципальних об’єктів за рівнем екологічного навантаження методом головних компонент
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 6. Комп’ютерне моделювання процесів розсіювання викидів промислових підприємств у атмосферному повітрі на основі гаусової моделі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 7. Геопросторова інтерполяція та картографування розподілу забруднюючих речовин у ГІС-середовищі
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 7. Геопросторова інтерполяція та картографування розподілу забруднюючих речовин у ГІС-середовищі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Короткі теоретичні відомості
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Порядок виконання роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Порядок виконання роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 1. Підготовка вихідних координат та показників постів спостереження
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-idw-ms-excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 2. Ручний розрахунок оцінки IDW для контрольної віртуальної точки в MS Excel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-google-colab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 3. Запуск модуля регулярної просторової інтерполяції в Google Colab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-openstreetmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 4. Картографічна візуалізація ізоліній на підкладці OpenStreetMap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-alpha-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 5. Застосування алгоритму \(\alpha\)-відсікання для визначення фонового полігону
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 6. Порівняльний аналіз цільової точки з фоном та вибір місця для нового поста
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Індивідуальні завдання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вимоги до змісту звіту
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Контрольні запитання
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 8. Моделювання стійкості популяції та оцінка критичних екологічних навантажень за моделлю Лотки-Вольтерра
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 9. Розробка аналітичної панелі для розрахунку та візуалізації індексу якості повітря в реальному часі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 10. Застосування алгоритмів нечіткої логіки та квантово-гібридних шаблонів для оцінки екологічних ризиків і якості мікроклімату приміщень
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Самостійна робота
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Короткі теоретичні відомості
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Порядок виконання роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Порядок виконання роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 1. Підготовка вихідних координат та показників постів спостереження
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-idw-ms-excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 2. Ручний розрахунок оцінки IDW для контрольної віртуальної точки в MS Excel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-google-colab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 3. Запуск модуля регулярної просторової інтерполяції в Google Colab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-openstreetmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 4. Картографічна візуалізація ізоліній на підкладці OpenStreetMap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-alpha-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 5. Застосування алгоритму \(\alpha\)-відсікання для визначення фонового полігону
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 6. Порівняльний аналіз цільової точки з фоном та вибір місця для нового поста
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Індивідуальні завдання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вимоги до змісту звіту
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Контрольні запитання
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="no-7-">Лабораторна робота № 7. Геопросторова інтерполяція та картографування розподілу забруднюючих речовин у ГІС-середовищі</h1>
+<p><strong>Мета:</strong> сформувати систему практичних умінь щодо застосування геоінформаційних технологій та методів просторового аналізу для моделювання неперервних полів забруднення атмосферного повітря; опанувати математичний алгоритм методу зважених зворотних відстаней (IDW) за допомогою табличного процесора Microsoft Excel або Google Таблиці; навчитися здійснювати репроекцію геопросторових даних із системи географічних координат WGS84 у метричну проекцію EPSG:3857, будувати ізолінії концентрацій на регулярній розрахунковій сітці, визначати просторові зони регіонального екологічного фону за алгоритмом <span class="arithmatex">\(\alpha\)</span>-відсікання та формувати науково обґрунтовані рекомендації щодо розміщення нових вимірювальних постів у середовищі Google Colab без необхідності написання програмного коду.</p>
+<hr />
+<h2 id="_1">Короткі теоретичні відомості</h2>
+<p>Мережі спостереження за якістю атмосферного повітря в урбанізованих регіонах складаються з обмеженої кількості фізичних постів моніторингу через високу вартість прецизійного газоаналітичного обладнання та його технічного обслуговування. Точковий характер первинних замірів формує у міському просторі значні інформаційні «сліпі зони», де інструментальні спостереження відсутні, проте ризики негативного впливу на населення залишаються високими. Для відновлення суцільного поля приземних концентрацій домішок у міжпостовому просторі застосовуються методи геопросторової детермінованої інтерполяції.</p>
+<p>Теоретичною основою просторового відновлення даних є Перший закон географії В. Тоблера, який стверджує, що всі просторові об'єкти пов'язані між собою, проте ближчі об'єкти мають більший ступінь взаємного зв'язку, ніж віддалені. Найбільш ефективним та обчислювально стійким методом для умов розріджених міських мереж є метод зважених зворотних відстаней (Inverse Distance Weighting, IDW). Згідно з цим методом, прогнозоване значення концентрації <span class="arithmatex">\(Z(x, y)\)</span> у довільному неконтрольованому вузлі розрахункової сітки з координатами <span class="arithmatex">\((x, y)\)</span> обчислюється як зважене середнє арифметичне значення показників усіх наявних фізичних станцій спостереження:</p>
+<div class="arithmatex">\[Z(x, y) = \frac{\sum_{i=1}^{N} w_i(x, y) \cdot Z_i}{\sum_{i=1}^{N} w_i(x, y)}\]</div>
+<p>де змінна <span class="arithmatex">\(Z_i\)</span> позначає фактичну виміряну концентрацію забруднюючої речовини на <span class="arithmatex">\(i\)</span>-му фізичному пості спостереження; величина <span class="arithmatex">\(N\)</span> задає загальну кількість задіяних у розрахунку опорних станцій; функція <span class="arithmatex">\(w_i(x, y)\)</span> визначає ваговий коефіцієнт впливу <span class="arithmatex">\(i\)</span>-ї станції на цільову розрахункову точку.</p>
+<p>Ваговий коефіцієнт є оберненою функцією евклідової відстані між точкою інтерполяції та опорною станцією:</p>
+<div class="arithmatex">\[w_i(x, y) = \frac{1}{d_i^p} = \frac{1}{\left( \sqrt{(x - x_i)^2 + (y - y_i)^2} \right)^p}\]</div>
+<p>де координати <span class="arithmatex">\((x_i, y_i)\)</span> визначають просторове положення <span class="arithmatex">\(i\)</span>-ї станції на місцевості; величина <span class="arithmatex">\(d_i\)</span> позначає геометричну відстань у метрах; параметр <span class="arithmatex">\(p\)</span> є степенем згладжування (ваговою експонентою). У дослідженнях міського атмосферного забруднення стандартним є значення <span class="arithmatex">\(p = 2\)</span>, що відповідає фізичному закону зменшення інтенсивності поля обернено пропорційно квадрату відстані.</p>
+<pre class="mermaid"><code>flowchart TD
+    subgraph SPATIAL_INPUT["1. Просторові координати та вимірювання"]
+        ST["Опорні пости Si = (xi, yi, Ci) у системі WGS84"]
+        PROJ["Репроекція координат у метричну систему EPSG:3857"]
+    end
+
+    subgraph IDW_MODEL["2. Моделювання поля забруднення (IDW, p=2)"]
+        GRID["Побудова регулярної сітки вузлів (крок 100 м)"]
+        DIST["Розрахунок матриці евклідових відстаней di"]
+        WEIGHT["Обчислення ваг wi = 1 / di^2 та концентрації Z(x, y)"]
+    end
+
+    subgraph BACKGROUND_ANALYSIS["3. Визначення екологічного фону (alpha-відсікання)"]
+        EXTR["Пошук глобальних екстремумів z_min та z_max"]
+        FILTER["Фільтрація 10% найчистіших точок (alpha &lt;= 0.10)"]
+        DIFF["Порівняння цільової та фонової зон: Delta_C = C_target - C_bg"]
+    end
+
+    subgraph DECISION_TIER["4. Картографування та оптимізація мережі"]
+        MAP["Побудова карти ізоліній на підкладці OpenStreetMap"]
+        NEW_ST["Обґрунтування локацій нових станцій моніторингу"]
+    end
+
+    ST --&gt; PROJ --&gt; GRID --&gt; DIST --&gt; WEIGHT
+    WEIGHT --&gt; EXTR --&gt; FILTER --&gt; DIFF
+    WEIGHT --&gt; MAP --&gt; NEW_ST
+    DIFF --&gt; NEW_ST</code></pre>
+<p>Обов'язковою передумовою коректного застосування методу IDW є приведення просторових координат до єдиної метричної проекції. Первинні дані географічних координат (широта й довгота у системі WGS84, код EPSG:4326) задаються у кутових градусах. Обчислення евклідової відстані за різницею градусів є неприпустимим, оскільки довжина одного градуса довготи суттєво змінюється залежно від широти місцевості. Для забезпечення метричної точності просторові координати обов'язково трансформуються у проекцію Псевдо-Меркатора (WGS 84 / Pseudo-Mercator, код EPSG:3857), у якій одиницею вимірювання є метр.</p>
+<p>Після побудови суцільної інтерполяційної поверхні <span class="arithmatex">\(Z(x, y)\)</span> для оцінки ступеня техногенного навантаження реалізується алгоритм виділення регіональних фонових зон за допомогою критерію <span class="arithmatex">\(\alpha\)</span>-відсікання. Спочатку визначаються абсолютний мінімум та максимум розрахованого концентраційного поля:</p>
+<div class="arithmatex">\[z_{\min} = \min_{x, y} Z(x, y), \quad z_{\max} = \max_{x, y} Z(x, y)\]</div>
+<p>Віртуальна або реальна точка простору класифікується як фонова точка міста, якщо її розрахована концентрація задовольняє умові:</p>
+<div class="arithmatex">\[Z(x, y) \le z_{\min} + \alpha \cdot (z_{\max} - z_{\min})\]</div>
+<p>де параметр <span class="arithmatex">\(\alpha \in [0; \, 0,10]\)</span> задає граничний рівень фільтрації (відсікання 10% точок із найменшим рівнем забруднення). Середнє значення цієї множини приймається за регіональний екологічний фон <span class="arithmatex">\(C(x_f, y_f)\)</span>.</p>
+<p>Для виявлення локальних техногенних аномалій обчислюється різниця між концентрацією у цільовій точці спостереження (наприклад, на завантаженій транспортній розв'язці) та регіональним фоном:</p>
+<div class="arithmatex">\[\Delta C = C(x_n, y_n) - C(x_f, y_f)\]</div>
+<p>Якщо виконується умова <span class="arithmatex">\(\Delta C &gt; 0\)</span>, висувається обґрунтована гіпотеза про наявність неврахованого локального джерела емісій та обґрунтовується необхідність встановлення нового вимірювального поста в зоні максимального градієнта забруднення.</p>
+<p>Параметри просторової інтерполяції та картографічні характеристики, що використовуються у розрахунках, зведено у наступній нормативно-методичній таблиці.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Параметр просторового аналізу</th>
+<th style="text-align: left;">Позначення</th>
+<th style="text-align: left;">Одиниця вимірювання</th>
+<th style="text-align: left;">Нормативне або розрахункове значення</th>
+<th style="text-align: left;">Призначення у моделюванні</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Географічна система координат</td>
+<td style="text-align: left;">WGS84</td>
+<td style="text-align: left;">Градуси</td>
+<td style="text-align: left;">EPSG:4326</td>
+<td style="text-align: left;">Первинна реєстрація GPS-координат датчиків</td>
+</tr>
+<tr>
+<td style="text-align: left;">Проектована система координат</td>
+<td style="text-align: left;">Pseudo-Mercator</td>
+<td style="text-align: left;">Метри</td>
+<td style="text-align: left;">EPSG:3857</td>
+<td style="text-align: left;">Розрахунок метричних евклідових відстаней</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ваговий показник степеня</td>
+<td style="text-align: left;"><span class="arithmatex">\(p\)</span></td>
+<td style="text-align: left;">Безрозмірний</td>
+<td style="text-align: left;"><span class="arithmatex">\(p = 2\)</span></td>
+<td style="text-align: left;">Визначає швидкість зменшення впливу віддалених постів</td>
+</tr>
+<tr>
+<td style="text-align: left;">Крок регулярної розрахункової сітки</td>
+<td style="text-align: left;"><span class="arithmatex">\(\Delta x, \Delta y\)</span></td>
+<td style="text-align: left;">Метри</td>
+<td style="text-align: left;">100 м</td>
+<td style="text-align: left;">Забезпечує оптимальну роздільну здатність карти</td>
+</tr>
+<tr>
+<td style="text-align: left;">Параметр відсікання фону</td>
+<td style="text-align: left;"><span class="arithmatex">\(\alpha\)</span></td>
+<td style="text-align: left;">Частка</td>
+<td style="text-align: left;"><span class="arithmatex">\(\alpha = 0,10\)</span></td>
+<td style="text-align: left;">Виділення 10% найчистіших територій для визначення фону</td>
+</tr>
+<tr>
+<td style="text-align: left;">Буферний перекрив колірних зон</td>
+<td style="text-align: left;"><span class="arithmatex">\(\delta\)</span></td>
+<td style="text-align: left;">Відсотки</td>
+<td style="text-align: left;"><span class="arithmatex">\(\pm 10\%\)</span></td>
+<td style="text-align: left;">Усунення артефактів та розривів між ізолініями</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>ВАЖЛИВО:</strong> Метод зважених зворотних відстаней є виключно інтерполяційним, а не екстраполяційним методом. Відновлені значення концентрацій за формулою IDW строго обмежені інтервалом між найменшим і найбільшим значеннями, зафіксованими на фізичних станціях (<span class="arithmatex">\(z_{\min} \le Z(x, y) \le z_{\max}\)</span>). Метод не здатен самостійно відтворити екстремальний викид у міжпостовому просторі, якщо цей викид не був зафіксований хоча б одним сусіднім фізичним сенсором.</p>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> У муніципальній геоінформаційній системі Кременчука інтерполяція концентрацій формальдегіду за методом IDW на основі чотирьох постів виявила зону стійкого регіонального фону в правобережній житловій частині Крюківського району, водночас на Крюківському мостовому переході розраховане перевищення фону сягнуло <span class="arithmatex">\(\Delta C = 1,8\)</span> кратності ГДК, що довело домінуючий внесок автомобільного трафіку в забруднення мостового коридору.</p>
+<p><strong>ТИПОВА ПОМИЛКА:</strong> Розрахунок відстані <span class="arithmatex">\(d_i\)</span> безпосередньо за різницею кутових десяткових градусів (<span class="arithmatex">\(\sqrt{(\text{lat}_1 - \text{lat}_2)^2 + (\text{lon}_1 - \text{lon}_2)^2}\)</span>) замість метричних координат. Оскільки на широті України довжина одного градуса довготи (близько 72 км) суттєво менша за довжину одного градуса широти (близько 111 км), прямий розрахунок у градусах створює геометричну деформацію просторового поля, штучно витягуючи ізолінії концентрацій у широтному напрямку.</p>
+</blockquote>
+<hr />
+<h2 id="_2">Порядок виконання роботи</h2>
+<p>Для виконання завдань використовується файл <code>spatial_air_monitoring_kremenchuk.xlsx</code>, наданий викладачем. Етап перевірки аналітичного розрахунку IDW для контрольного вузла виконується в табличному процесорі MS Excel або Google Таблиці, а побудова повного інтерполяційного растра, <span class="arithmatex">\(\alpha\)</span>-фільтрація та візуалізація карти на підкладці OpenStreetMap — у блокноті Google Colab.</p>
+<h3 id="1">Етап 1. Підготовка вихідних координат та показників постів спостереження</h3>
+<p>Здобувач відкриває аркуш файлу <code>spatial_air_monitoring_kremenchuk.xlsx</code> відповідно до номера свого варіанта. У таблицю виписуються номери 4–5 опорних станцій спостереження, їхні географічні координати (широта, довгота), а також заміряні концентрації цільової забруднюючої речовини. Проводиться розрахунок або перевірка метричних координат станцій у системі EPSG:3857 (значення координат <span class="arithmatex">\(X\)</span> та <span class="arithmatex">\(Y\)</span> у метрах).</p>
+<h3 id="2-idw-ms-excel">Етап 2. Ручний розрахунок оцінки IDW для контрольної віртуальної точки в MS Excel</h3>
+<p>Для глибокого розуміння математичного апарату інтерполяції здобувач обирає одну цільову неконтрольовану точку з відомими координатами <span class="arithmatex">\((x_0, y_0)\)</span> та реалізує в електронній таблиці покроковий розрахунок:</p>
+<ul>
+<li>
+<p>Обчислюються евклідові відстані <span class="arithmatex">\(d_i\)</span> від цільової точки до кожної опорної станції:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>=SQRT((X_0 - X_i)^2 + (Y_0 - Y_i)^2)
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Розраховуються вагові коефіцієнти за законом зворотних квадратів <span class="arithmatex">\(w_i = \frac{1}{d_i^2}\)</span>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>=1 / (d_i^2)
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Обчислюється чисельник <span class="arithmatex">\(\sum (w_i \cdot Z_i)\)</span>, знаменник <span class="arithmatex">\(\sum w_i\)</span> та результуюча концентрація <span class="arithmatex">\(Z(x_0, y_0)\)</span>.</p>
+</li>
+</ul>
+<h3 id="3-google-colab">Етап 3. Запуск модуля регулярної просторової інтерполяції в Google Colab</h3>
+<p>Здобувач переходить до хмарного блокнота Google Colab. За допомогою графічного інтерфейсу завантажується вихідний файл варіанта, обирається контрольована домішка та встановлюється крок розрахункової сітки 100 метрів. Програма формує регулярну матрицю вузлів, обчислює концентрацію для кожної клітинки міського простору за алгоритмом IDW (<span class="arithmatex">\(p = 2\)</span>) та виводить значення глобального мінімуму <span class="arithmatex">\(z_{\min}\)</span> і максимуму <span class="arithmatex">\(z_{\max}\)</span>.</p>
+<h3 id="4-openstreetmap">Етап 4. Картографічна візуалізація ізоліній на підкладці OpenStreetMap</h3>
+<p>У середовищі Google Colab запускається блок візуалізації, який автоматично підвантажує просторові межі адміністративних районів міста та шар картографічної підкладки OpenStreetMap. Програма будує плавні колірні полігони концентрацій із розширенням меж колірних градієнтів на <span class="arithmatex">\(\pm 10\%\)</span> для забезпечення безперервного колірного накладання. Червоно-помаранчевими тонами виділяються зони перевищення санітарних норм (більше 1,0 ГДК), а зеленими — безпечні зони.</p>
+<h3 id="5-alpha-">Етап 5. Застосування алгоритму <span class="arithmatex">\(\alpha\)</span>-відсікання для визначення фонового полігону</h3>
+<p>За допомогою інтерактивного повзунка в блокноті здобувач встановлює параметр відсікання <span class="arithmatex">\(\alpha = 0,10\)</span>. Програма автоматично фільтрує 10% вузлів регулярної сітки з найнижчими концентраціями, фарбує їх у бірюзовий колір і наносить поверх основної карти. Здобувач визначає географічне розташування отриманого фонового масиву (назва району, переважаючий тип забудови або природного ландшафту).</p>
+<h3 id="6">Етап 6. Порівняльний аналіз цільової точки з фоном та вибір місця для нового поста</h3>
+<p>Здобувач фіксує координати контрольного об'єкта підвищеного ризику (наприклад, мостовий перехід чи перехрестя магістралей) і за розрахованим полем знаходить його концентрацію <span class="arithmatex">\(C(x_n, y_n)\)</span>. Обчислюється перевищення над регіональним фоном <span class="arithmatex">\(\Delta C\)</span>. На основі аналізу отриманого картографічного градієнта та розташування інформаційних «сліпих зон» здобувач визначає точні координати <span class="arithmatex">\((X, Y)\)</span> та адресу найбільш доцільного місця для встановлення додаткового автоматичного поста спостереження.</p>
+<hr />
+<h2 id="_3">Індивідуальні завдання</h2>
+<p>Здобувач обирає свій варіант за наведеною таблицею, знаходить у файлі <code>spatial_air_monitoring_kremenchuk.xlsx</code> вихідний набір координат та концентрацій і проводить повний цикл просторової інтерполяції та картографування.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Варіант</th>
+<th style="text-align: left;">Базовий набір станцій спостереження</th>
+<th style="text-align: left;">Забруднююча речовина</th>
+<th style="text-align: center;">Часовий зріз вимірювань</th>
+<th style="text-align: left;">Об'єкт підвищеного ризику (цільова точка)</th>
+<th style="text-align: center;">Цільовий норматив ГДК, <span class="arithmatex">\(\text{мг/м}^3\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Муніципальні пости № 1, 2, 4, 5 (Кременчук)</td>
+<td style="text-align: left;">Формальдегід (<span class="arithmatex">\(\text{HCHO}\)</span>)</td>
+<td style="text-align: center;">01.07.2023, 12:00</td>
+<td style="text-align: left;">Крюківський мостовий перехід</td>
+<td style="text-align: center;">0,035 (макс. разова)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Муніципальні пости № 1, 2, 4, 5 (Кременчук)</td>
+<td style="text-align: left;">Діоксид азоту (<span class="arithmatex">\(\text{NO}_2\)</span>)</td>
+<td style="text-align: center;">15.07.2023, 08:00</td>
+<td style="text-align: left;">Перехрестя вул. Троїцька / Халаменюка</td>
+<td style="text-align: center;">0,200 (макс. разова)</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Муніципальні пости № 1, 2, 4, 5 (Кременчук)</td>
+<td style="text-align: left;">Пил недиференційований (<span class="arithmatex">\(\text{Dust}\)</span>)</td>
+<td style="text-align: center;">01.08.2023, 15:00</td>
+<td style="text-align: left;">Залізничний вокзал «Кременчук»</td>
+<td style="text-align: center;">0,500 (макс. разова)</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Станції Vaisala T3950716, T3950713, V0440346</td>
+<td style="text-align: left;">Діоксид азоту (<span class="arithmatex">\(\text{NO}_2\)</span>)</td>
+<td style="text-align: center;">15.08.2023, 18:00</td>
+<td style="text-align: left;">Автомагістраль Київ – Дніпро (М-22)</td>
+<td style="text-align: center;">0,200 (макс. разова)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Станції Vaisala T3950716, T3950713, V0440346</td>
+<td style="text-align: left;">Дрібнодисперсний пил (<span class="arithmatex">\(\text{PM}_{2.5}\)</span>)</td>
+<td style="text-align: center;">01.09.2023, 09:00</td>
+<td style="text-align: left;">Сквер Бабаєва (центральна зона)</td>
+<td style="text-align: center;">0,075 (макс. разова)</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Станції EcoCity 1748, 1753, 1755, 1756</td>
+<td style="text-align: left;">Дрібнодисперсний пил (<span class="arithmatex">\(\text{PM}_{10}\)</span>)</td>
+<td style="text-align: center;">10.09.2023, 14:00</td>
+<td style="text-align: left;">Житловий масив Молодіжний</td>
+<td style="text-align: center;">0,150 (макс. разова)</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">Станції EcoCity 1748, 1753, 1755, 1756</td>
+<td style="text-align: left;">Оксид вуглецю (<span class="arithmatex">\(\text{CO}\)</span>)</td>
+<td style="text-align: center;">20.09.2023, 17:00</td>
+<td style="text-align: left;">Південна прохідна КрАЗ</td>
+<td style="text-align: center;">5,000 (макс. разова)</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">Пости № 1, 4 (Кременчук) та Пост № 1 (Г. Плавні)</td>
+<td style="text-align: left;">Діоксид сірки (<span class="arithmatex">\(\text{SO}_2\)</span>)</td>
+<td style="text-align: center;">01.10.2023, 11:00</td>
+<td style="text-align: left;">Буферна зона між містами</td>
+<td style="text-align: center;">0,500 (макс. разова)</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: left;">Муніципальні пости № 1, 2, 4, 5 (Кременчук)</td>
+<td style="text-align: left;">Оксид вуглецю (<span class="arithmatex">\(\text{CO}\)</span>)</td>
+<td style="text-align: center;">15.10.2023, 08:00</td>
+<td style="text-align: left;">Річковий порт Кременчука</td>
+<td style="text-align: center;">5,000 (макс. разова)</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: left;">Станції Vaisala T3950716, T3950713 та EcoCity 1756</td>
+<td style="text-align: left;">Діоксид азоту (<span class="arithmatex">\(\text{NO}_2\)</span>)</td>
+<td style="text-align: center;">01.11.2023, 19:00</td>
+<td style="text-align: left;">Дамба Кременчуцького водосховища</td>
+<td style="text-align: center;">0,200 (макс. разова)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_4">Вимоги до змісту звіту</h2>
+<p>Звіт оформлюється в електронному вигляді у форматі PDF або DOCX та подається на перевірку разом із розрахунковою таблицею у форматі XLSX.</p>
+<p>Структура звіту повинна містити такі обов'язкові розділи:</p>
+<ol>
+<li>
+<p><strong>Титульна сторінка:</strong> містить найменування навчального закладу, інституту, випускової кафедри, назву навчальної дисципліни, тему лабораторної роботи, номер варіанта індивідуального завдання, а також прізвище, ініціали та навчальну групу здобувача.</p>
+</li>
+<li>
+<p><strong>Мета роботи:</strong> чітке формулювання дослідницьких і розрахункових цілей відповідно до наданих методичних вказівок.</p>
+</li>
+<li>
+<p><strong>Порядок виконання роботи:</strong> структурований опис послідовності дій в електронних таблицях та середовищі Google Colab із наведенням розрахункових формул і параметрів перетворення координат.</p>
+</li>
+<li>
+<p><strong>Результати розрахунків та просторового картографування:</strong></p>
+</li>
+<li>
+<p>Таблиця координат опорних станцій моніторингу у кутових одиницях WGS84 та метричних значеннях проекції EPSG:3857.</p>
+</li>
+<li>
+<p>Зведена розрахункова таблиця ручного покрокового розрахунку методу IDW для контрольного вузла в MS Excel (відстані, ваги, зважена концентрація).</p>
+</li>
+<li>
+<p>Електронна карта інтерполяційного розподілу забруднення, побудована на географічній підкладці OpenStreetMap із чіткою градацією ізоліній концентрацій.</p>
+</li>
+<li>
+<p>Карта результатів просторової <span class="arithmatex">\(\alpha\)</span>-фільтрації з виділеними точками 10% найчистішого регіонального екологічного фону.</p>
+</li>
+<li>
+<p>Розрахункова оцінка локальної аномалії <span class="arithmatex">\(\Delta C\)</span> для заданого цільового об'єкта підвищеного техногенного навантаження.</p>
+</li>
+<li>
+<p>Обґрунтування просторових координат (широта, довгота або X, Y у системі EPSG:3857) та топографічної прив'язки рекомендованого місця встановлення нового вимірювального поста.</p>
+</li>
+<li>
+<p><strong>Аналітичні висновки:</strong> фахове екологічне трактування отриманої просторової картини розсіювання; аналіз виявлених зон екологічного неблагополуччя; оцінка впливу щільності мережі на точність методу IDW; рекомендації для муніципальних органів охорони довкілля.</p>
+</li>
+<li>
+<p><strong>Відповіді на контрольні запитання:</strong> розгорнуті письмові відповіді на всі контрольні запитання, наведені у розділі 5.</p>
+</li>
+</ol>
+<hr />
+<h2 id="5">5 Контрольні запитання</h2>
+<ol>
+<li>
+<p>У чому полягає фізична та математична суть методу зважених зворотних відстаней (IDW), і як варіювання вагового показника степеня <span class="arithmatex">\(p\)</span> впливає на форму результуючої інтерполяційної поверхні навколо опорних постів?</p>
+</li>
+<li>
+<p>Чому розрахунок евклідових відстаней між станціями спостереження не можна проводити безпосередньо у географічних кутових координатах WGS84 (EPSG:4326), та яка функціональна роль метричної проекції EPSG:3857 у ГІС-аналізі?</p>
+</li>
+<li>
+<p>Опишіть алгоритм виділення регіонального екологічного фону за допомогою методу <span class="arithmatex">\(\alpha\)</span>-відсікання. Який екологічний зміст має виділення 10% найчистіших віртуальних точок регулярної сітки?</p>
+</li>
+<li>
+<p>Які переваги та фундаментальні обмеження має детермінований метод IDW у порівнянні з геостатистичними методами класу Кригінг (Kriging) під час аналізу сильно розріджених муніципальних систем моніторингу повітря?</p>
+</li>
+<li>
+<p>Яким чином інформація про просторові градієнти забруднення та розташування локальних техногенних аномалій (<span class="arithmatex">\(\Delta C &gt; 0\)</span>) дозволяє оптимізувати схему розміщення нових автоматичних постів моніторингу в місті?</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Повернутись нагору
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Kyrylo Vadurin &bull; <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "header.autohide", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0456\u0439\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u0421\u043a\u043e\u043f\u0456\u044e\u0432\u0430\u0442\u0438 \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0429\u0435 1 \u0437\u0431\u0456\u0433 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.more.other": "\u0429\u0435 # \u0437\u0431\u0456\u0433\u0456\u0432 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.none": "\u0417\u0431\u0456\u0433\u0456\u0432 \u043d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0437\u0431\u0456\u0433", "search.result.other": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e # \u0437\u0431\u0456\u0433\u0456\u0432", "search.result.placeholder": "\u0420\u043e\u0437\u043f\u043e\u0447\u043d\u0456\u0442\u044c \u043f\u0438\u0441\u0430\u0442\u0438 \u0434\u043b\u044f \u043f\u043e\u0448\u0443\u043a\u0443", "search.result.term.missing": "\u041d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e \u0437\u0430\u043f\u0438\u0442\u0443", "select.version": "\u041e\u0431\u0440\u0430\u0442\u0438 \u0432\u0435\u0440\u0441\u0456\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

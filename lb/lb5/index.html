@@ -1,0 +1,1758 @@
+
+<!doctype html>
+<html lang="uk" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Навчальний портал з дисципліни "Інформаційно-аналітичні технології в екологічних системах"">
+      
+      
+      
+      
+        <link rel="prev" href="../lb4/">
+      
+      
+        <link rel="next" href="../lb6/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>ЛБ 5. Класифікація та ранжування муніципальних об’єктів за рівнем екологічного навантаження методом головних компонент - ІАТ в екологічних системах</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#no-5" class="md-skip">
+          Перейти до змісту
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Хедер">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-header__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ІАТ в екологічних системах
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ЛБ 5. Класифікація та ранжування муніципальних об’єктів за рівнем екологічного навантаження методом головних компонент
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Переключити на темну тему"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Переключити на темну тему" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-label="Переключити на світлу тему"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Переключити на світлу тему" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Пошук" placeholder="Пошук" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Шукати">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистити" aria-label="Очистити" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Пошук розпочато
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Робоча програма
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../lk/lk1/" class="md-tabs__link">
+          
+  
+  
+  Лекції
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../lb1/" class="md-tabs__link">
+          
+  
+  
+  Лабораторні роботи
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../sr/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Самостійна робота
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навігація" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-nav__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ІАТ в екологічних системах
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Робоча програма
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лекції
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лекції
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 1. Сучасні концепції цифровізації екологічного моніторингу
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 2. IoT-технології та сенсорні мережі в екології
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 3. Проектування екологічних баз даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 4. Статистичні методи аналізу складних екологічних даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 5. Багатовимірний аналіз та інтелектуальні технології
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 6. Комп’ютерне моделювання переносу та дифузії забруднюючих речовин
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 7. Геоінформаційні системи в екологічних дослідженнях
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 8. Моделювання динаміки та стійкості екологічних систем
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 9. Інформаційні системи прогнозування та оцінки екологічних ризиків
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 10. Квантово-гібридні та інтелектуальні платформи просторового прогнозування
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторні роботи
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лабораторні роботи
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 1. Дослідження функціональної архітектури та екологічного наповнення відкритих систем моніторингу довкілля
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 2. Конфігурування каналу передачі даних від IoT-станцій екологічного моніторингу на основі емульованих сенсорів та протоколу MQTT/LwM2M
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 3. Розробка реляційної структури екологічної бази даних для збереження показників забруднення атмосферного повітря
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 4. Статистична обробка часових рядів концентрацій екологічних забруднювачів
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 5. Класифікація та ранжування муніципальних об’єктів за рівнем екологічного навантаження методом головних компонент
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 5. Класифікація та ранжування муніципальних об’єктів за рівнем екологічного навантаження методом головних компонент
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Короткі теоретичні відомості
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Порядок виконання роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Порядок виконання роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 1. Підготовка вихідного масиву багатокомпонентних даних
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 2. Побудова та візуалізація кореляційної матриці в табличному процесорі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-pca-google-colab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 3. Виконання аналізу PCA у хмарному блокноті Google Colab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 4. Визначення кількості значущих компонент та аналіз навантажень
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 5. Розрахунок інтегрального індексу навантаження та ранжування постів
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-one-class-svm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 6. Ідентифікація багатовимірних хімічних аномалій через One-Class SVM
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Індивідуальні завдання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вимоги до змісту звіту
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Контрольні запитання
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 6. Комп’ютерне моделювання процесів розсіювання викидів промислових підприємств у атмосферному повітрі на основі гаусової моделі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 7. Геопросторова інтерполяція та картографування розподілу забруднюючих речовин у ГІС-середовищі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 8. Моделювання стійкості популяції та оцінка критичних екологічних навантажень за моделлю Лотки-Вольтерра
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 9. Розробка аналітичної панелі для розрахунку та візуалізації індексу якості повітря в реальному часі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 10. Застосування алгоритмів нечіткої логіки та квантово-гібридних шаблонів для оцінки екологічних ризиків і якості мікроклімату приміщень
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Самостійна робота
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Короткі теоретичні відомості
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Порядок виконання роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Порядок виконання роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 1. Підготовка вихідного масиву багатокомпонентних даних
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 2. Побудова та візуалізація кореляційної матриці в табличному процесорі
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-pca-google-colab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 3. Виконання аналізу PCA у хмарному блокноті Google Colab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 4. Визначення кількості значущих компонент та аналіз навантажень
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 5. Розрахунок інтегрального індексу навантаження та ранжування постів
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-one-class-svm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 6. Ідентифікація багатовимірних хімічних аномалій через One-Class SVM
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Індивідуальні завдання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вимоги до змісту звіту
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Контрольні запитання
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="no-5">Лабораторна робота № 5. Класифікація та ранжування муніципальних об’єктів за рівнем екологічного навантаження методом головних компонент</h1>
+<p><strong>Мета:</strong> сформувати систему практичних умінь щодо аналізу багатовимірних взаємозв'язків між хімічними забруднювачами та зниження розмірності простору екологічних ознак; опанувати методи розрахунку й візуалізації кореляційних матриць Пірсона засобами табличного процесора Microsoft Excel або Google Таблиці; навчитися виділяти приховані техногенні фактори якості атмосферного повітря за допомогою методу головних компонент (PCA), ранжувати пункти спостереження за інтегральним рівнем антропогенного навантаження та виявляти комплексні хімічні аномалії за допомогою інтерактивного блокнота Google Colab без потреби самостійного програмування.</p>
+<hr />
+<h2 id="_1">Короткі теоретичні відомості</h2>
+<p>У процесі муніципального моніторингу довкілля на кожному вимірювальному пості одночасно фіксується широкий спектр різнорідних забруднюючих речовин. Багатовимірна природа екологічних даних створює явище високої кореляційної залежності (мультиколінеарності) між окремими показниками. Наприклад, концентрації оксиду вуглецю, діоксиду азоту та сажі в урбанізованому середовищі тісно пов'язані між собою через спільне джерело походження — процеси високотемпературного спалювання викопного палива у двигунах автотранспорту та на теплоенергетичних підприємствах. Прямий аналіз десятків окремих речовин для багатьох районів міста ускладнює загальну оцінку екологічного стану території та прийняття своєчасних управлінських рішень.</p>
+<p>Для виявлення структури взаємних зв'язків між полютантами обчислюється кореляційна матриця <span class="arithmatex">\(R\)</span>, елементи якої <span class="arithmatex">\(r_{ij}\)</span> являють собою коефіцієнти лінійної кореляції Пірсона між часовими рядами концентрацій <span class="arithmatex">\(i\)</span>-ї та <span class="arithmatex">\(j\)</span>-ї речовин:</p>
+<div class="arithmatex">\[r_{ij} = \frac{\text{Cov}(X_i, X_j)}{\sigma_{X_i} \sigma_{X_j}} = \frac{\sum_{t=1}^{T} (x_{i,t} - \mu_i)(x_{j,t} - \mu_j)}{\sqrt{\sum_{t=1}^{T} (x_{i,t} - \mu_i)^2 \sum_{t=1}^{T} (x_{j,t} - \mu_j)^2}}\]</div>
+<p>де змінні <span class="arithmatex">\(x_{i,t}\)</span> та <span class="arithmatex">\(x_{j,t}\)</span> позначають концентрації відповідних речовин у момент часу <span class="arithmatex">\(t\)</span>; параметри <span class="arithmatex">\(\mu_i, \mu_j\)</span> є їхніми середніми арифметичними значеннями за досліджуваний період; величини <span class="arithmatex">\(\sigma_{X_i}, \sigma_{X_j}\)</span> позначають вибіркові середньоквадратичні відхилення відповідних часових рядів.</p>
+<pre class="mermaid"><code>flowchart TD
+    subgraph MULTIVARIATE_INPUT["1. Вхідний масив параметрів"]
+        IN1["Багатовимірні дані моніторингу: Dust, SO2, CO, NO2, HCHO, Soot"]
+    end
+
+    subgraph CORRELATION_TIER["2. Кореляційний аналіз (Табличний процесор)"]
+        CORR["Побудова симетричної матриці Пірсона R"]
+        HEAT["Теплова карта (Умовне форматування Excel)"]
+        GENESIS["Ідентифікація спільних джерел емісій"]
+    end
+
+    subgraph PCA_TIER["3. Факторизація PCA (Google Colab)"]
+        EIGEN["Розрахунок власних значень матриці (lambda_k)"]
+        SCREE["Графік кам'янистого осипу та правило Кайзера (lambda &gt; 1)"]
+        LOADINGS["Матриця факторних навантажень (PC1, PC2)"]
+    end
+
+    subgraph RANKING_TIER["4. Інтегральне оцінювання та аномалії"]
+        RANK["Розрахунок зведеного індексу екологічного ризику I_rank"]
+        ANOMALY["Детектування екстремальних викидів (One-Class SVM)"]
+        DECISION["Ранжування районів міста за рівнем навантаження"]
+    end
+
+    IN1 --&gt; CORR --&gt; HEAT --&gt; GENESIS
+    CORR --&gt; EIGEN --&gt; SCREE --&gt; LOADINGS
+    LOADINGS --&gt; RANK --&gt; DECISION
+    LOADINGS --&gt; ANOMALY --&gt; DECISION</code></pre>
+<p>Метод головних компонент (Principal Component Analysis, PCA) забезпечує перетворення множини <span class="arithmatex">\(M\)</span> вихідних взаємопов'язаних екологічних змінних у значно меншу кількість <span class="arithmatex">\(K \ll M\)</span> некорельованих інтегральних факторів (головних компонент), які зберігають переважну частку інформаційної дисперсії вихідного масиву. З геометричного погляду метод виконує ортогональне обертання системи координат уздовж напрямків максимального розкиду вимірювань. Розрахунок дисперсії кожної компоненти зводиться до пошуку власних значень <span class="arithmatex">\(\lambda_k\)</span> кореляційної матриці:</p>
+<div class="arithmatex">\[\det(R - \lambda I) = 0\]</div>
+<p>Частка дисперсії, що пояснюється <span class="arithmatex">\(k\)</span>-ю головною компонентою, обчислюється як відношення її власного значення до загальної суми власних значень:</p>
+<div class="arithmatex">\[\eta_k = \frac{\lambda_k}{\sum_{m=1}^{M} \lambda_m} \cdot 100\%\]</div>
+<p>Відбір кількості головних компонент, які є достатніми для подальшого аналізу, здійснюється за правилом Кайзера (залишаються компоненти, власні значення яких перевищують одиницю, <span class="arithmatex">\(\lambda_k &gt; 1\)</span>) та за графіком кам'янистого осипу Кеттелла (точка зламу кривої власних значень). Сумарна накопичена дисперсія відібраних компонент зазвичай повинна складати не менше 70–80% загальної дисперсії вибірки.</p>
+<p>Для інтегрального порівняння та ранжування різних районів або спостережних пунктів міста за сумарним рівнем екологічної небезпеки розраховується зведений індекс техногенного навантаження (<span class="arithmatex">\(I_{\text{rank}}\)</span>) для кожного вимірювального поста:</p>
+<div class="arithmatex">\[I_{\text{rank}, i} = \sum_{k=1}^{K} w_k \cdot \text{PC}_{k, i}\]</div>
+<p>де параметр <span class="arithmatex">\(\text{PC}_{k, i}\)</span> позначає стандартизовану оцінку <span class="arithmatex">\(k\)</span>-ї головної компоненти для <span class="arithmatex">\(i\)</span>-го поста; коефіцієнт <span class="arithmatex">\(w_k = \frac{\lambda_k}{\sum_{j=1}^K \lambda_j}\)</span> задає ваговий внесок відповідної компоненти в сумарну дисперсію системи.</p>
+<p>Для ідентифікації екстремальних багатокомпонентних екологічних викидів застосовується алгоритм машинного навчання One-Class Support Vector Machine (One-Class SVM). Алгоритм знаходить розділяючу гіперплощину, яка відокремлює стандартний профіль забруднення від аномальних точок, що виникають під час залпових аварійних скидів або несприятливих метеорологічних умов.</p>
+<p>Типові діапазони взаємних кореляційних зв'язків між атмосферними полютантами промислових міст наведено у наступній аналітичній таблиці.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Пара забруднюючих речовин</th>
+<th style="text-align: left;">Коефіцієнт кореляції (<span class="arithmatex">\(r\)</span>)</th>
+<th style="text-align: left;">Характер зв'язку</th>
+<th style="text-align: left;">Провідний екологічний механізм формування</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\text{CO} \longleftrightarrow \text{NO}_2\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(+0,38 \ldots +0,52\)</span></td>
+<td style="text-align: left;">Помірний / сильний додатний</td>
+<td style="text-align: left;">Спільні джерела викидів: автомобільний транспорт та пальникові пристрої</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\text{CO} \longleftrightarrow \text{HCHO}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(+0,40 \ldots +0,50\)</span></td>
+<td style="text-align: left;">Помірний додатний</td>
+<td style="text-align: left;">Продукти неповного згоряння палива та вторинні фотохімічні реакції</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\text{HCHO} \longleftrightarrow \text{Фенол}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(+0,35 \ldots +0,48\)</span></td>
+<td style="text-align: left;">Помірний додатний</td>
+<td style="text-align: left;">Специфічні викиди хімічних, деревообробних та нафтопереробних виробництв</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\text{Пил (Dust)} \longleftrightarrow \text{Сажа (Soot)}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(+0,30 \ldots +0,45\)</span></td>
+<td style="text-align: left;">Помірний додатний</td>
+<td style="text-align: left;">Дрібнодисперсні аерозолі механічного стирання шин та димових газів</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\text{SO}_2 \longleftrightarrow \text{CO}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(-0,10 \ldots -0,20\)</span></td>
+<td style="text-align: left;">Слабкий від'ємний</td>
+<td style="text-align: left;">Розподіл джерел: <span class="arithmatex">\(\text{SO}_2\)</span> формується важким промисловим паливом, <span class="arithmatex">\(\text{CO}\)</span> — легким транспортом</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\text{SO}_2 \longleftrightarrow \text{NO}_2\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(-0,12 \ldots -0,18\)</span></td>
+<td style="text-align: left;">Слабкий від'ємний</td>
+<td style="text-align: left;">Просторова роз'єднаність факелів високих промислових труб і приземного трафіку</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>ВАЖЛИВО:</strong> Високий позитивний кореляційний зв'язок між двома забруднювачами свідчить про спільне джерело їх генерації або паралельні атмосферні процеси переносу, тоді як нульова чи слабка від'ємна кореляція вказує на суттєву просторову або технологічну відокремленість джерел викидів.</p>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> У промисловому районі Кременчука (район розташування нафтопереробного заводу та Північного промвузла) спостерігається стійка кореляція між оксидом вуглецю та діоксидом азоту (<span class="arithmatex">\(r = 0,42\)</span>), а також між формальдегідом і фенолом (<span class="arithmatex">\(r = 0,41\)</span>), що дозволило за допомогою методу PCA об'єднати шість контрольованих маркерів у два головні фактори: фактор спалювання палива (транспортно-енергетичний) та фактор промислового органічного синтезу.</p>
+<p><strong>ТИПОВА ПОМИЛКА:</strong> Застосування методу головних компонент без попередньої стандартизації (нормування) вхідних рядів спостережень. Оскільки концентрації оксиду вуглецю вимірюються в одиницях порядку <span class="arithmatex">\(1,0 \ldots 5,0\text{ мг/м}^3\)</span>, а концентрації діоксиду азоту та фенолу становлять <span class="arithmatex">\(0,001 \ldots 0,04\text{ мг/м}^3\)</span>, розрахунок PCA на нестандартизованих даних призводить до того, що перша головна компонента описує виключно оксид вуглецю через його велику абсолютну дисперсію, повністю нівелюючи вплив високотоксичних домішок.</p>
+</blockquote>
+<hr />
+<h2 id="_2">Порядок виконання роботи</h2>
+<p>Для виконання завдань використовується файл <code>air_multipollutant_kremenchuk.xlsx</code>, наданий викладачем. Розрахунок кореляційної матриці та ранжування виконуються в електронних таблицях Excel або Google Таблицях, а факторизація PCA та детектування аномалій — у хмарному блокноті Google Colab.</p>
+<h3 id="1">Етап 1. Підготовка вихідного масиву багатокомпонентних даних</h3>
+<p>Здобувач відкриває аркуш файлу <code>air_multipollutant_kremenchuk.xlsx</code> відповідно до номера свого варіанта. Необхідно проконтролювати наявність вимірювань за 6–8 забруднюючими речовинами (пил, діоксид сірки, оксид вуглецю, діоксид азоту, формальдегід, фенол, сажа тощо) для кількох спостережних постів. Проводиться очищення масиву від рядків із неповними замірами, забезпечуючи однакову часову довжину рядів для всіх досліджуваних домішок.</p>
+<h3 id="2">Етап 2. Побудова та візуалізація кореляційної матриці в табличному процесорі</h3>
+<p>У середовищі MS Excel або Google Таблиці за допомогою надбудови «Аналіз даних -&gt; Кореляція» або стандартної розрахункової формули будується симетрична кореляційна матриця розмірності <span class="arithmatex">\(M \times M\)</span>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>=CORREL(Діапазон_речовини_A; Діапазон_речовини_B)
+</span></code></pre></div>
+Для отриманої таблиці налаштовується умовне форматування у вигляді триколірної колірної шкали (синій колір відповідає значенню <span class="arithmatex">\(-1\)</span>, білий — <span class="arithmatex">\(0\)</span>, червоний — <span class="arithmatex">\(+1\)</span>). Здобувач виділяє пари речовин із найбільшим додатним (<span class="arithmatex">\(r \ge 0,35\)</span>) та найбільшим від'ємним зв'язком, заносячи їх до протоколу.</p>
+<h3 id="3-pca-google-colab">Етап 3. Виконання аналізу PCA у хмарному блокноті Google Colab</h3>
+<p>Здобувач переходить до спеціалізованого блокнота Google Colab. У зручній графічній формі інтерфейсу завантажується файл свого варіанта та вмикається обов'язкова опція стандартизації ознак (StandardScaler). Програма виконує сингулярний розклад матриці та виводить на екран:</p>
+<ul>
+<li>
+<p>Таблицю власних значень <span class="arithmatex">\(\lambda_k\)</span> для кожної головної компоненти.</p>
+</li>
+<li>
+<p>Відсоток дисперсії, що пояснюється кожною окремою компонентою <span class="arithmatex">\(\eta_k\)</span>, та кумулятивну дисперсію.</p>
+</li>
+<li>
+<p>Графік кам'янистого осипу власних значень (Scree Plot).</p>
+</li>
+</ul>
+<h3 id="4">Етап 4. Визначення кількості значущих компонент та аналіз навантажень</h3>
+<p>Спираючись на правило Кайзера (<span class="arithmatex">\(\lambda_k &gt; 1\)</span>) та форму графіка осипу, здобувач обирає кількість значущих головних компонент (зазвичай 2 або 3). На екрані блокнота аналізується таблиця факторних навантажень (Factor Loadings), що показує ступінь кореляції кожного первинного забруднювача з виділеними компонентами. Здобувач визначає змістовний екологічний сенс кожної компоненти (наприклад: Головна компонента 1 відповідає транспортному навантаженню, Головна компонента 2 — викидам стаціонарних промислових печей).</p>
+<h3 id="5">Етап 5. Розрахунок інтегрального індексу навантаження та ранжування постів</h3>
+<p>Отримані стандартизовані значення перших двох головних компонент копіюються в електронну таблицю Excel. Для кожного пункту спостереження за наведеною у теоретичних відомостях формулою обчислюється зведений індекс екологічного навантаження <span class="arithmatex">\(I_{\text{rank}}\)</span>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>=(lambda_1 / (lambda_1 + lambda_2)) * PC1 + (lambda_2 / (lambda_1 + lambda_2)) * PC2
+</span></code></pre></div>
+За отриманими числовими значеннями <span class="arithmatex">\(I_{\text{rank}}\)</span> проводиться ранжування постів спостереження від найбільш забрудненого (ранг 1) до найбільш екологічно безпечного (фонового).</p>
+<h3 id="6-one-class-svm">Етап 6. Ідентифікація багатовимірних хімічних аномалій через One-Class SVM</h3>
+<p>У середовищі Google Colab здобувач за допомогою повзунка налаштовує параметр допустимої частки аномалій <span class="arithmatex">\(\nu\)</span> (від 0,02 до 0,05) та запускає алгоритм One-Class SVM. Програма будує двовимірну діаграму розсіювання вимірювань у площині компонент <span class="arithmatex">\(\text{PC}_1 - \text{PC}_2\)</span> та позначає червоними маркерами аномальні часові точки, що виходять за межі нормального функціонування урбоекосистеми. Здобувач фіксує дати виявлених інцидентів та співвідносить їх із відомими технологічними подіями.</p>
+<hr />
+<h2 id="_3">Індивідуальні завдання</h2>
+<p>Здобувач обирає індивідуальний варіант за наведеною таблицею, знаходить відповідний набір спостережень у файлі <code>air_multipollutant_kremenchuk.xlsx</code> та виконує повний аналітичний цикл факторизації та ранжування.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Варіант</th>
+<th style="text-align: left;">Досліджувані об'єкти / пости</th>
+<th style="text-align: left;">Перелік контрольованих забруднювачів</th>
+<th style="text-align: center;">Аналізований період</th>
+<th style="text-align: center;">Цільовий параметр аномалій <span class="arithmatex">\(\nu\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Пост № 1 (вул. Молодіжна) та Пост № 4 (вул. Шевченка)</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{Dust}, \text{SO}_2, \text{CO}, \text{NO}_2, \text{HCHO}, \text{Фенол}, \text{Сажа}\)</span></td>
+<td style="text-align: center;">2019–2024 рр.</td>
+<td style="text-align: center;">0,03</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Пост № 2 (вул. Богаєвського) та Пост № 5 (вул. Приходька)</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{Dust}, \text{SO}_2, \text{CO}, \text{NO}_2, \text{HCHO}, \text{Фенол}\)</span></td>
+<td style="text-align: center;">2019–2024 рр.</td>
+<td style="text-align: center;">0,05</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Станція Vaisala T3950716 (Північний промвузол)</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{PM}_{10}, \text{PM}_{2.5}, \text{SO}_2, \text{NO}_2, \text{CO}, \text{H}_2\text{S}, \text{Температура}\)</span></td>
+<td style="text-align: center;">2021–2024 рр.</td>
+<td style="text-align: center;">0,02</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Станція Vaisala T3950713 (Район «Фаворит»)</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{PM}_{10}, \text{PM}_{2.5}, \text{CO}, \text{NO}_2, \text{Вологість}, \text{Тиск}\)</span></td>
+<td style="text-align: center;">2021–2024 рр.</td>
+<td style="text-align: center;">0,04</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Станція Vaisala V0440346 (Гімназія № 26)</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{PM}_{2.5}, \text{CO}, \text{NO}_2, \text{H}_2\text{S}, \text{Температура}, \text{Вологість}\)</span></td>
+<td style="text-align: center;">2021–2024 рр.</td>
+<td style="text-align: center;">0,03</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Станції EcoCity 1748, 1753 та 1756 (Кременчук)</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{PM}_{2.5}, \text{PM}_{10}, \text{CO}, \text{NO}_2, \text{HCHO}, \text{VOC}\)</span></td>
+<td style="text-align: center;">2022–2024 рр.</td>
+<td style="text-align: center;">0,05</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">Стаціонарний пост № 1 (Горішні Плавні)</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{Dust}, \text{SO}_2, \text{NO}_2, \text{CO}, \text{Фенол}, \text{Сажа}\)</span></td>
+<td style="text-align: center;">2018–2024 рр.</td>
+<td style="text-align: center;">0,02</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">Порівняльна вибірка: Пост № 1, 2, 4, 5 (Кременчук)</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{Dust}, \text{NO}_2, \text{CO}, \text{HCHO}\)</span> (середньорічні)</td>
+<td style="text-align: center;">2008–2024 рр.</td>
+<td style="text-align: center;">0,04</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: left;">Автоматичний шлюз КП «НДЦ» (проммайданчик)</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{PM}_{2.5}, \text{SO}_2, \text{NO}_2, \text{CO}, \text{H}_2\text{S}, \text{Швидкість вітру}\)</span></td>
+<td style="text-align: center;">2023–2024 рр.</td>
+<td style="text-align: center;">0,03</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: left;">Комплексна вибірка: Кременчук та Горішні Плавні</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{Dust}, \text{SO}_2, \text{NO}_2, \text{CO}, \text{HCHO}\)</span></td>
+<td style="text-align: center;">2020–2024 рр.</td>
+<td style="text-align: center;">0,05</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_4">Вимоги до змісту звіту</h2>
+<p>Звіт оформлюється в електронному вигляді у форматі PDF або DOCX та подається на перевірку разом із розрахунковим файлом електронної таблиці XLSX.</p>
+<p>Структура звіту повинна містити такі обов'язкові розділи:</p>
+<ol>
+<li>
+<p><strong>Титульна сторінка:</strong> містить найменування навчального закладу, інституту, випускової кафедри, назву навчальної дисципліни, тему лабораторної роботи, номер варіанта індивідуального завдання, а також прізвище, ініціали та навчальну групу здобувача.</p>
+</li>
+<li>
+<p><strong>Мета роботи:</strong> чітке формулювання дослідницьких і розрахункових цілей відповідно до наданих методичних вказівок.</p>
+</li>
+<li>
+<p><strong>Порядок виконання роботи:</strong> структурований опис послідовності виконання дій у табличному процесорі та блокноті Google Colab із зазначенням використаних статистичних інструментів.</p>
+</li>
+<li>
+<p><strong>Результати розрахунків та візуалізація:</strong></p>
+</li>
+<li>
+<p>Кореляційна матриця Пірсона у форматі таблиці з умовним кольоровим форматуванням (теплова карта).</p>
+</li>
+<li>
+<p>Аналітичний перелік пар речовин із найвищим позитивним і негативним взаємозв'язком із зазначенням можливих спільних джерел емісій.</p>
+</li>
+<li>
+<p>Таблиця власних значень <span class="arithmatex">\(\lambda_k\)</span>, відсотків індивідуальної поясненої дисперсії <span class="arithmatex">\(\eta_k\)</span> та кумулятивної дисперсії компонент.</p>
+</li>
+<li>
+<p>Графік кам'янистого осипу власних значень (Scree Plot) із позначенням межі Кайзера (<span class="arithmatex">\(\lambda = 1\)</span>).</p>
+</li>
+<li>
+<p>Таблиця факторних навантажень перших двох головних компонент із зазначенням фізичного та екологічного змісту кожного виділеного фактора.</p>
+</li>
+<li>
+<p>Зведена рейтингова таблиця спостережних постів або періодів спостереження, впорядкована за індексом техногенного навантаження <span class="arithmatex">\(I_{\text{rank}}\)</span>.</p>
+</li>
+<li>
+<p>Двовимірна діаграма розсіювання в осях <span class="arithmatex">\(\text{PC}_1 - \text{PC}_2\)</span> із виділеними точками багатовимірних аномалій за алгоритмом One-Class SVM.</p>
+</li>
+<li>
+<p><strong>Аналітичні висновки:</strong> фахове екологічне трактування результатів факторизації; обґрунтування домінуючих факторів формування якості повітря в досліджуваному районі; характеристика виявлених хімічних аномалій та пропозиції щодо оптимізації програми муніципального моніторингу довкілля.</p>
+</li>
+<li>
+<p><strong>Відповіді на контрольні запитання:</strong> розгорнуті письмові відповіді на всі контрольні запитання, наведені у розділі 5.</p>
+</li>
+</ol>
+<hr />
+<h2 id="5_1">5 Контрольні запитання</h2>
+<ol>
+<li>
+<p>У чому полягає математична та екологічна сутність проблеми мультиколінеарності у багатовимірних масивах даних моніторингу атмосферного повітря?</p>
+</li>
+<li>
+<p>Яким чином високі додатні значення парних коефіцієнтів кореляції (наприклад, між <span class="arithmatex">\(\text{CO}\)</span>, <span class="arithmatex">\(\text{NO}_2\)</span> та формальдегідом) дозволяють ідентифікувати специфічні джерела антропогенних емісій?</p>
+</li>
+<li>
+<p>Які критерії (правило Кайзера, графік кам'янистого осипу Кеттелла) використовуються для обґрунтування кількості головних компонент, що залишаються для інтерпретації, та яка частка загальної дисперсії вважається достатньою в екологічних дослідженнях?</p>
+</li>
+<li>
+<p>Чому операція стандартизації (центрування та нормування на стандартне відхилення) є обов'язковою передумовою коректного застосування методу головних компонент до масивів екологічних даних?</p>
+</li>
+<li>
+<p>Яким чином комбінація методу PCA та алгоритмів машинного навчання (зокрема One-Class SVM) дозволяє виявляти приховані техногенні аномалії, які не фіксуються одновимірним контролем гранично допустимих концентрацій?</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Повернутись нагору
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Kyrylo Vadurin &bull; <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "header.autohide", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0456\u0439\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u0421\u043a\u043e\u043f\u0456\u044e\u0432\u0430\u0442\u0438 \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0429\u0435 1 \u0437\u0431\u0456\u0433 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.more.other": "\u0429\u0435 # \u0437\u0431\u0456\u0433\u0456\u0432 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.none": "\u0417\u0431\u0456\u0433\u0456\u0432 \u043d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0437\u0431\u0456\u0433", "search.result.other": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e # \u0437\u0431\u0456\u0433\u0456\u0432", "search.result.placeholder": "\u0420\u043e\u0437\u043f\u043e\u0447\u043d\u0456\u0442\u044c \u043f\u0438\u0441\u0430\u0442\u0438 \u0434\u043b\u044f \u043f\u043e\u0448\u0443\u043a\u0443", "search.result.term.missing": "\u041d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e \u0437\u0430\u043f\u0438\u0442\u0443", "select.version": "\u041e\u0431\u0440\u0430\u0442\u0438 \u0432\u0435\u0440\u0441\u0456\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

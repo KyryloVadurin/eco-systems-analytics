@@ -1,0 +1,1770 @@
+
+<!doctype html>
+<html lang="uk" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Навчальний портал з дисципліни "Інформаційно-аналітичні технології в екологічних системах"">
+      
+      
+      
+      
+        <link rel="prev" href="../lb9/">
+      
+      
+        <link rel="next" href="../../sr/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>ЛБ 10. Застосування алгоритмів нечіткої логіки та квантово-гібридних шаблонів для оцінки екологічних ризиків і якості мікроклімату приміщень - ІАТ в екологічних системах</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#no-10-" class="md-skip">
+          Перейти до змісту
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Хедер">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-header__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ІАТ в екологічних системах
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ЛБ 10. Застосування алгоритмів нечіткої логіки та квантово-гібридних шаблонів для оцінки екологічних ризиків і якості мікроклімату приміщень
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Переключити на темну тему"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Переключити на темну тему" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-label="Переключити на світлу тему"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Переключити на світлу тему" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Пошук" placeholder="Пошук" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Шукати">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистити" aria-label="Очистити" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Пошук розпочато
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Робоча програма
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../lk/lk1/" class="md-tabs__link">
+          
+  
+  
+  Лекції
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../lb1/" class="md-tabs__link">
+          
+  
+  
+  Лабораторні роботи
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../sr/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Самостійна робота
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навігація" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ІАТ в екологічних системах" class="md-nav__button md-logo" aria-label="ІАТ в екологічних системах" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ІАТ в екологічних системах
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Робоча програма
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лекції
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лекції
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 1. Сучасні концепції цифровізації екологічного моніторингу
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 2. IoT-технології та сенсорні мережі в екології
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 3. Проектування екологічних баз даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 4. Статистичні методи аналізу складних екологічних даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 5. Багатовимірний аналіз та інтелектуальні технології
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 6. Комп’ютерне моделювання переносу та дифузії забруднюючих речовин
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 7. Геоінформаційні системи в екологічних дослідженнях
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 8. Моделювання динаміки та стійкості екологічних систем
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 9. Інформаційні системи прогнозування та оцінки екологічних ризиків
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lk/lk10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тема 10. Квантово-гібридні та інтелектуальні платформи просторового прогнозування
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторні роботи
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лабораторні роботи
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 1. Дослідження функціональної архітектури та екологічного наповнення відкритих систем моніторингу довкілля
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 2. Конфігурування каналу передачі даних від IoT-станцій екологічного моніторингу на основі емульованих сенсорів та протоколу MQTT/LwM2M
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 3. Розробка реляційної структури екологічної бази даних для збереження показників забруднення атмосферного повітря
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 4. Статистична обробка часових рядів концентрацій екологічних забруднювачів
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 5. Класифікація та ранжування муніципальних об’єктів за рівнем екологічного навантаження методом головних компонент
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 6. Комп’ютерне моделювання процесів розсіювання викидів промислових підприємств у атмосферному повітрі на основі гаусової моделі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 7. Геопросторова інтерполяція та картографування розподілу забруднюючих речовин у ГІС-середовищі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 8. Моделювання стійкості популяції та оцінка критичних екологічних навантажень за моделлю Лотки-Вольтерра
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lb9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 9. Розробка аналітичної панелі для розрахунку та візуалізації індексу якості повітря в реальному часі
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 10. Застосування алгоритмів нечіткої логіки та квантово-гібридних шаблонів для оцінки екологічних ризиків і якості мікроклімату приміщень
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛБ 10. Застосування алгоритмів нечіткої логіки та квантово-гібридних шаблонів для оцінки екологічних ризиків і якості мікроклімату приміщень
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Короткі теоретичні відомості
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Порядок виконання роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Порядок виконання роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-google-colab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 1. Дослідження системи нечіткого виводу Мамдані в Google Colab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cri" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 2. Розрахунок комплексного індексу ризику CRI за різними сценаріями
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-google-colab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 3. Запуск квантово-гібридного бенчмаркінгу в Google Colab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ms-excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 4. Перенесення масиву залишків у табличний процесор MS Excel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 5. Реалізація розрахунку критерію знакових рангів Вілкоксона
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 6. Порівняльний аналіз результатів та формування висновків
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Індивідуальні завдання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вимоги до змісту звіту
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Контрольні запитання
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Самостійна робота
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Короткі теоретичні відомості
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Порядок виконання роботи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Порядок виконання роботи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-google-colab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 1. Дослідження системи нечіткого виводу Мамдані в Google Colab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cri" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 2. Розрахунок комплексного індексу ризику CRI за різними сценаріями
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-google-colab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 3. Запуск квантово-гібридного бенчмаркінгу в Google Colab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ms-excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 4. Перенесення масиву залишків у табличний процесор MS Excel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 5. Реалізація розрахунку критерію знакових рангів Вілкоксона
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Етап 6. Порівняльний аналіз результатів та формування висновків
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Індивідуальні завдання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вимоги до змісту звіту
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Контрольні запитання
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="no-10-">Лабораторна робота № 10. Застосування алгоритмів нечіткої логіки та квантово-гібридних шаблонів для оцінки екологічних ризиків і якості мікроклімату приміщень</h1>
+<p><strong>Мета:</strong> сформувати систему практичних умінь щодо інтелектуального аналізу екологічних ризиків в умовах невизначеності вхідної інформації за допомогою систем нечіткої логіки та новітніх квантово-гібридних обчислювальних технологій; опанувати процедуру побудови систем нечіткого виводу Мамдані для комплексної оцінки якості мікроклімату приміщень і урбанізованого середовища в інтерактивному блокноті Google Colab; навчитися проводити порівняльний аналіз (бенчмаркінг) точності квантово-гібридних архітектур (Q-LSTM, Q-Transformer) та їхніх класичних аналогів на реальних часових рядах моніторингу; опанувати розрахунок непараметричного критерію знакових рангів Вілкоксона для оцінки статистичної значущості квантової переваги за допомогою табличного процесора Microsoft Excel або Google Таблиці.</p>
+<hr />
+<h2 id="_1">Короткі теоретичні відомості</h2>
+<p>Оцінка екологічної безпеки урбоекосистем та виробничих приміщень часто спирається на параметри, що характеризуються розмитими межами між безпечним, допустимим та загрозливим станами. Формалізація таких слабкоструктурованих характеристик класичними методами булевої логіки («так / ні») призводить до втрати чутливості системи моніторингу поблизу нормативних меж. Подолання цієї проблеми забезпечується апаратом теорії нечітких множин та системами нечіткого логічного виводу (Fuzzy Inference Systems, FIS) за алгоритмом Мамдані.</p>
+<p>Процес нечіткого моделювання складається з чотирьох послідовних етапів. На етапі фазифікації кожне точне числове значення фізичного показника (наприклад, температури <span class="arithmatex">\(T\)</span>, відносної вологості <span class="arithmatex">\(H\)</span> чи концентрації вуглекислого газу <span class="arithmatex">\(\text{CO}_2\)</span>) трансформується у вектор ступенів належності до лінгвістичних термів за допомогою трикутних або трапецієподібних функцій належності <span class="arithmatex">\(\mu_A(x) \in [0; \, 1]\)</span>. На етапі логічного виводу до фазифікованих змінних застосовується база експертних продукційних правил виду «ЯКЩО <span class="arithmatex">\(T\)</span> висока І <span class="arithmatex">\(H\)</span> висока, ТО ризик критичний». На етапі агрегації формується підсумкова підрізана фігура результуючої функції належності за оператором максимуму. На етапі дефазифікації отримане нечітке значення переводиться у чітке число комплексного індексу екологічного ризику (Comprehensive Risk Index, CRI) методом центру ваги (Centroid method):</p>
+<div class="arithmatex">\[y^* = \frac{\int y \cdot \mu_{\text{agg}}(y) \, dy}{\int \mu_{\text{agg}}(y) \, dy}\]</div>
+<p>де змінна <span class="arithmatex">\(y\)</span> позначає значення вихідного індексу ризику за шкалою від 0 до 100 пунктів; функція <span class="arithmatex">\(\mu_{\text{agg}}(y)\)</span> визначає результуючу агреговану функцію належності виходу системи.</p>
+<pre class="mermaid"><code>flowchart TD
+    subgraph FUZZY_TIER["Контур нечіткої оцінки ризику (Mamdani FIS, Colab)"]
+        IN_PARAM["Фізичні заміри: Температура, Вологість, CO2"]
+        FUZZ["Фазифікація: функції належності mu(x)"]
+        RULES["База експертних екологічних правил"]
+        AGG["Агрегація та дефазифікація методом центру ваги"]
+        CRI["Комплексний індекс екологічного ризику CRI"]
+    end
+
+    subgraph QUANTUM_TIER["Контур квантово-гібридного прогнозу (PennyLane / Colab)"]
+        TS_INPUT["Вхідні екологічні часові ряди (вологість, тиск)"]
+        EMBED["Квантове кодування: AngleEmbedding (ротації RX)"]
+        VQC["Варіаційна квантова схема: ротації RY + заплутаність CNOT"]
+        EXPVAL["Зчитування сподівань Паулі-Z: &lt;Zi&gt; = Tr(rho * Zi)"]
+        Q_PRED["Прогноз концентрацій моделлю Q-LSTM"]
+    end
+
+    subgraph VALIDATION_TIER["Статистична верифікація переваги (MS Excel)"]
+        RESID["Аналіз абсолютних залишків помилок |y_true - y_pred|"]
+        WILCOXON["Критерій знакових рангів Вілкоксона (W, p-value &lt; 0.05)"]
+        DECISION["Обґрунтування меж застосовності квантових моделей"]
+    end
+
+    IN_PARAM --&gt; FUZZ --&gt; RULES --&gt; AGG --&gt; CRI
+    TS_INPUT --&gt; EMBED --&gt; VQC --&gt; EXPVAL --&gt; Q_PRED
+    Q_PRED --&gt; RESID
+    CRI --&gt; DECISION
+    RESID --&gt; WILCOXON --&gt; DECISION</code></pre>
+<p>Для прецизійного прогнозування майбутніх значень екологічних параметрів у сучасних системах застосовується парадигма квантового машинного навчання (Quantum Machine Learning, QML). На етапі поточного розвитку квантових технологій (епоха шумових квантових процесорів проміжного масштабу, NISQ) найбільш перспективними є квантово-гібридні архітектури, де класична нейромережа (LSTM або Transformer) доповнюється варіаційною квантовою схемою (Variational Quantum Circuit, VQC), що виступає як спеціалізований копроцесор оптимізації ознакового простору.</p>
+<p>У квантово-гібридній моделі Q-LSTM нормалізований класичний вектор екологічних ознак <span class="arithmatex">\(\mathbf{x} \in [0; \, 1]^n\)</span> відображається у квантовий стан за допомогою ротаційного кодування (AngleEmbedding), де значення параметрів задають кути обертання квантових вентилів:</p>
+<div class="arithmatex">\[\text{qml.RX}(x_i, \text{wires} = i), \quad i \in \{1, \ldots, n_{\text{qubits}}\}\]</div>
+<p>Далі квантовий стан перетворюється варіаційними шарами, що містять параметризовані ротації навколо осі <span class="arithmatex">\(Y\)</span> (<span class="arithmatex">\(\text{RY}(\theta)\)</span>) та фіксовані вентилі контрольованого заперечення CNOT для створення квантової заплутаності між кубітами. Зчитування результату здійснюється шляхом вимірювання математичного сподівання оператора Паулі-Z для кожного кубіта:</p>
+<div class="arithmatex">\[\langle Z_i \rangle = \text{Tr}\big( \rho(\mathbf{x}, \mathbf{w}) \cdot Z_i \big)\]</div>
+<p>де матриця <span class="arithmatex">\(\rho\)</span> описує еволюціонувавший квантовий стан системи, а вектор <span class="arithmatex">\(\mathbf{w}\)</span> містить оптимізовані ваги квантової схеми. Підсумковий прогноз формується усередненням квантових сподівань або їх пропусканням через лінійний повнозв'язний шар:</p>
+<div class="arithmatex">\[\hat{y}_t = \frac{1}{Q} \sum_{i=1}^{Q} \langle Z_i \rangle\]</div>
+<p>Емпіричні дослідження на масивах моніторингу міста Кременчук виявили виражену параметричну дихотомію ефективності квантово-гібридних моделей у порівнянні з класичними аналогами. Для стабільних циклічних параметрів із високою автокореляцією першого лагу (<span class="arithmatex">\(\text{ACF}(1) &gt; 0,80\)</span>), таких як атмосферний тиск та вологість повітря, квантові моделі демонструють істотне зменшення середньоквадратичної похибки (зниження MSE сягає від 19,39% до 74,74%). Це пояснюється здатністю варіаційних квантових схем діяти як ядерні методи з нескінченновимірним гільбертовим простором, що забезпечує лінійну подільність нелінійних взаємозв'язків без ризику перенавчання на малому числі кубітів. Водночас для параметрів із надзвичайно високою стохастичною волатильністю (температура повітря та концентрації оксиду вуглецю) квантові моделі суттєво програють класичним алгоритмам AutoARIMA (похибка зростає на 60–314%) внаслідок явища «безплідного плато» (Barren Plateau) та перенавчання на апаратному шумі.</p>
+<p>Для наукового доведення квантової переваги використовується непараметричний парний критерій знакових рангів Вілкоксона, який перевіряє нульову гіпотезу про те, що медіана різниць абсолютних помилок між класичною моделлю (<span class="arithmatex">\(e_{\text{cl}} = |y - \hat{y}_{\text{cl}}|\)</span>) та квантовою моделлю (<span class="arithmatex">\(e_{\text{qu}} = |y - \hat{y}_{\text{qu}}|\)</span>) дорівнює нулю. Статистика тесту <span class="arithmatex">\(W\)</span> визначається виразом:</p>
+<div class="arithmatex">\[W = \min(W^+, W^-)\]</div>
+<p>де величини <span class="arithmatex">\(W^+\)</span> та <span class="arithmatex">\(W^-\)</span> позначають відповідно суми рангів додатних і від'ємних різниць похибок. Якщо розрахований рівень значущості <span class="arithmatex">\(p\text{-value} &lt; 0,05\)</span>, перевага моделі визнається статистично достовірною.</p>
+<p>Порівняльні характеристики точності базових моделей на тестових масивах Кременчуцької агломерації наведено у наступній аналітичній таблиці.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Параметр середовища</th>
+<th style="text-align: left;">Пункт моніторингу</th>
+<th style="text-align: left;">Найкраща класична модель</th>
+<th style="text-align: center;">MSE класичної моделі</th>
+<th style="text-align: left;">Найкраща квантова модель</th>
+<th style="text-align: center;">MSE квантової моделі</th>
+<th style="text-align: center;">Відносна зміна похибки <span class="arithmatex">\(\Delta \text{MSE}\)</span></th>
+<th style="text-align: center;">Статистична значущість (Wilcoxon)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Відносна вологість</td>
+<td style="text-align: left;">Промвузол</td>
+<td style="text-align: left;">LSTM</td>
+<td style="text-align: center;">120,33</td>
+<td style="text-align: left;">Q-LSTM</td>
+<td style="text-align: center;">65,02</td>
+<td style="text-align: center;">Зниження на 45,96%</td>
+<td style="text-align: center;"><span class="arithmatex">\(p &lt; 0,05\)</span> (значуща)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Атмосферний тиск</td>
+<td style="text-align: left;">Промвузол</td>
+<td style="text-align: left;">AutoARIMA</td>
+<td style="text-align: center;">4,25</td>
+<td style="text-align: left;">Q-Transformer</td>
+<td style="text-align: center;">1,07</td>
+<td style="text-align: center;">Зниження на 74,74%</td>
+<td style="text-align: center;"><span class="arithmatex">\(p &lt; 0,05\)</span> (значуща)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Діоксид азоту (<span class="arithmatex">\(\text{NO}_2\)</span>)</td>
+<td style="text-align: left;">Район «Фаворит»</td>
+<td style="text-align: left;">Theta</td>
+<td style="text-align: center;">0,00035</td>
+<td style="text-align: left;">Q-CNN</td>
+<td style="text-align: center;">0,00019</td>
+<td style="text-align: center;">Зниження на 46,46%</td>
+<td style="text-align: center;"><span class="arithmatex">\(p &lt; 0,05\)</span> (значуща)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Оксид вуглецю (<span class="arithmatex">\(\text{CO}\)</span>)</td>
+<td style="text-align: left;">Гімназія № 26</td>
+<td style="text-align: left;">AutoARIMA</td>
+<td style="text-align: center;">0,00510</td>
+<td style="text-align: left;">Q-AutoARIMA</td>
+<td style="text-align: center;">0,01260</td>
+<td style="text-align: center;">Зростання на 147,0%</td>
+<td style="text-align: center;"><span class="arithmatex">\(p &gt; 0,05\)</span> (незначуща)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Температура повітря</td>
+<td style="text-align: left;">Гімназія № 26</td>
+<td style="text-align: left;">AutoARIMA</td>
+<td style="text-align: center;">12,89</td>
+<td style="text-align: left;">Q-TBATS</td>
+<td style="text-align: center;">53,45</td>
+<td style="text-align: center;">Зростання на 314,6%</td>
+<td style="text-align: center;"><span class="arithmatex">\(p &lt; 0,05\)</span> (класична краща)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>ВАЖЛИВО:</strong> Застосування квантово-гібридних нейромереж є науково виправданим виключно за наявності складної нелінійної гармонійної структури у вихідних даних моніторингу за обмеженого обсягу навчальної вибірки. Для простих, зашумлених або високодисперсних часових рядів принцип статистичної простоти («Бритва Оккама») забезпечує перевагу класичних моделей лінійної авторегресії (AutoARIMA).</p>
+<p><strong>ПРАКТИЧНИЙ ЯКІР:</strong> При моніторингу виробничого мікроклімату на підприємствах Кременчука впровадження нечіткої експертної системи Мамдані дозволило автоматизувати управління припливно-витяжною вентиляцією, знижуючи ризик теплового та токсичного стресу працівників у цехах без необхідності встановлення надто дорогих датчиків специфічних газів.</p>
+<p><strong>ТИПОВА ПОМИЛКА:</strong> Спроба оцінювати перевагу моделі лише за одиничним значенням середньоквадратичної похибки без проведення непараметричних статистичних тестів на розподілі залишків. Через аномальні поодинокі викиди середнє значення похибки може бути викривлене, що призводить до помилкового висновку про перевагу моделі, яка насправді генерує більшу кількість значних відхилень у повсякденних режимах роботи.</p>
+</blockquote>
+<hr />
+<h2 id="_2">Порядок виконання роботи</h2>
+<p>Для виконання завдань використовується вхідний файл <code>quantum_classical_forecasting_benchmark.xlsx</code>, наданий викладачем. Розрахунок нечіткого виводу та запуск квантових прогнозів здійснюються у хмарному блокноті Google Colab за допомогою графічних форм, а статистична перевірка похибок за тестом Вілкоксона — у табличному процесорі Microsoft Excel або Google Таблиці.</p>
+<h3 id="1-google-colab">Етап 1. Дослідження системи нечіткого виводу Мамдані в Google Colab</h3>
+<p>Здобувач відкриває інтерактивний блокнот Google Colab у розділі «Fuzzy Microclimate Evaluation». У графічній панелі інтерфейсу аналізуються трикутні та трапецієподібні функції належності для вхідних показників мікроклімату: температури (терми «Холодно», «Комфортно», «Жарко»), вологості («Сухо», «Норма», «Волого») та вмісту вуглекислого газу («Чисто», «Забруднено», «Критично»). Здобувач переглядає вбудовану базу експертних продукційних правил.</p>
+<h3 id="2-cri">Етап 2. Розрахунок комплексного індексу ризику CRI за різними сценаріями</h3>
+<p>За допомогою інтерактивних повзунків здобувач по черзі виставляє комбінації вхідних параметрів відповідно до свого варіанта індивідуального завдання (наприклад, <span class="arithmatex">\(T = 28\text{ °C}\)</span>, вологість 75%, <span class="arithmatex">\(\text{CO}_2 = 1200\text{ ppm}\)</span>). Програма виконує операції фазифікації, знаходження мінімумів у логічних зв'язках, агрегацію максимальних меж та дефазифікацію за методом центру ваги. Здобувач фіксує розраховане числове значення індексу екологічного ризику <span class="arithmatex">\(\text{CRI} \in [0; \, 100]\)</span> та згенерований текстовий статус виробничого середовища.</p>
+<h3 id="3-google-colab">Етап 3. Запуск квантово-гібридного бенчмаркінгу в Google Colab</h3>
+<p>У другій секції блокнота здобувач обирає з випадаючого списку часовий ряд екологічного показника згідно з варіантом (наприклад, атмосферний тиск або відносна вологість на станції Північного промвузла) та задає кількість кубітів у схемі (<span class="arithmatex">\(Q = 4\)</span>). Програма виконує прогін попередньо натренованих моделей (класичної LSTM та квантово-гібридної Q-LSTM), формує прогнози на тестовому горизонті та виводить таблицю числових похибок (MSE, MAE, <span class="arithmatex">\(R^2\)</span>), а також розділену скрипкову діаграму (split violin plot) щільності розподілу залишків.</p>
+<h3 id="4-ms-excel">Етап 4. Перенесення масиву залишків у табличний процесор MS Excel</h3>
+<p>Масив парних абсолютних похибок для тестових точок копіюється з блокнота Colab до аркуша табличного процесора MS Excel. Формуються стовпці: фактичне значення <span class="arithmatex">\(y_t\)</span>, прогноз класичної моделі <span class="arithmatex">\(\hat{y}_{\text{cl}}\)</span>, прогноз квантової моделі <span class="arithmatex">\(\hat{y}_{\text{qu}}\)</span>, а також абсолютні похибки <span class="arithmatex">\(e_{\text{cl}} = |y_t - \hat{y}_{\text{cl}}|\)</span> та <span class="arithmatex">\(e_{\text{qu}} = |y_t - \hat{y}_{\text{qu}}|\)</span>.</p>
+<h3 id="5">Етап 5. Реалізація розрахунку критерію знакових рангів Вілкоксона</h3>
+<p>В електронній таблиці створюється стовпець попарних різниць похибок <span class="arithmatex">\(\Delta e_t = e_{\text{cl}, t} - e_{\text{qu}, t}\)</span>. Рядки з нульовою різницею виключаються. Для абсолютних значень різниць <span class="arithmatex">\(|\Delta e_t|\)</span> за допомогою стандартної функції ранжування присвоюються ранги:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>=RANK.AVG(ABS(D2); ABS($D$2:$D$21); 1)
+</span></code></pre></div>
+Окремо підсумовуються ранги для позитивних різниць (де квантова модель була точнішою, <span class="arithmatex">\(W^+\)</span>) та для негативних різниць (де точнішою була класична модель, <span class="arithmatex">\(W^-\)</span>). Менше з двох значень визначає тестову статистику <span class="arithmatex">\(W\)</span>. Здобувач зіставляє отримане значення <span class="arithmatex">\(W\)</span> із табличним критичним порогом для заданого обсягу вибірки при рівні значущості <span class="arithmatex">\(\alpha = 0,05\)</span>.</p>
+<h3 id="6">Етап 6. Порівняльний аналіз результатів та формування висновків</h3>
+<p>Здобувач зіставляє форму скрипкових діаграм похибок (лептокуртичний гострий розподіл біля нуля свідчить про високу точність і надійність) та результати тесту Вілкоксона. Формулюється обґрунтований науковий висновок про те, чи підтверджується наявність квантової переваги для дослідженого екологічного параметра, та розкриваються фізичні причини поведінки моделі.</p>
+<hr />
+<h2 id="_3">Індивідуальні завдання</h2>
+<p>Здобувач обирає свій варіант за наведеною таблицею, вносить вхідні параметри мікроклімату до нечіткої системи, проводить квантово-гібридне тестування в блокноті Google Colab та виконує статистичний тест у MS Excel.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Варіант</th>
+<th style="text-align: left;">Станція / об'єкт моніторингу</th>
+<th style="text-align: left;">Досліджуваний часовий ряд</th>
+<th style="text-align: left;">Пара порівнюваних моделей</th>
+<th style="text-align: center;">Тестовий горизонт</th>
+<th style="text-align: left;">Сценарій мікроклімату <span class="arithmatex">\((T, H, \text{CO}_2)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Станція Vaisala T3950716 (Промвузол)</td>
+<td style="text-align: left;">Відносна вологість (%)</td>
+<td style="text-align: left;">LSTM проти Q-LSTM</td>
+<td style="text-align: center;">7 місяців</td>
+<td style="text-align: left;"><span class="arithmatex">\(T = 32\text{ °C}, H = 80\%, \text{CO}_2 = 1400\text{ ppm}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Станція Vaisala T3950716 (Промвузол)</td>
+<td style="text-align: left;">Атмосферний тиск (кПа)</td>
+<td style="text-align: left;">AutoARIMA проти Q-Transformer</td>
+<td style="text-align: center;">7 місяців</td>
+<td style="text-align: left;"><span class="arithmatex">\(T = 16\text{ °C}, H = 40\%, \text{CO}_2 = 600\text{ ppm}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Станція Vaisala T3950713 (Район «Фаворит»)</td>
+<td style="text-align: left;">Діоксид азоту (<span class="arithmatex">\(\text{NO}_2\)</span>)</td>
+<td style="text-align: left;">CNN проти Q-CNN</td>
+<td style="text-align: center;">7 місяців</td>
+<td style="text-align: left;"><span class="arithmatex">\(T = 24\text{ °C}, H = 55\%, \text{CO}_2 = 900\text{ ppm}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Станція Vaisala T3950713 (Район «Фаворит»)</td>
+<td style="text-align: left;">Відносна вологість (%)</td>
+<td style="text-align: left;">MLP проти Q-Transformer</td>
+<td style="text-align: center;">7 місяців</td>
+<td style="text-align: left;"><span class="arithmatex">\(T = 29\text{ °C}, H = 70\%, \text{CO}_2 = 1100\text{ ppm}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Станція Vaisala V0440346 (Гімназія № 26)</td>
+<td style="text-align: left;">Оксид вуглецю (<span class="arithmatex">\(\text{CO}\)</span>)</td>
+<td style="text-align: left;">AutoARIMA проти Q-AutoARIMA</td>
+<td style="text-align: center;">7 місяців</td>
+<td style="text-align: left;"><span class="arithmatex">\(T = 20\text{ °C}, H = 50\%, \text{CO}_2 = 800\text{ ppm}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Станція Vaisala V0440346 (Гімназія № 26)</td>
+<td style="text-align: left;">Температура повітря (°C)</td>
+<td style="text-align: left;">AutoARIMA проти Q-TBATS</td>
+<td style="text-align: center;">7 місяців</td>
+<td style="text-align: left;"><span class="arithmatex">\(T = 12\text{ °C}, H = 85\%, \text{CO}_2 = 1300\text{ ppm}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">Станція EcoCity 1748 (Центр міста)</td>
+<td style="text-align: left;">Дрібнодисперсний пил PM2.5</td>
+<td style="text-align: left;">GRU проти Q-GRU</td>
+<td style="text-align: center;">7 місяців</td>
+<td style="text-align: left;"><span class="arithmatex">\(T = 26\text{ °C}, H = 60\%, \text{CO}_2 = 1000\text{ ppm}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">Станція EcoCity 1756 (Крюківський міст)</td>
+<td style="text-align: left;">Діоксид азоту (<span class="arithmatex">\(\text{NO}_2\)</span>)</td>
+<td style="text-align: left;">Transformer проти Q-Transformer</td>
+<td style="text-align: center;">7 місяців</td>
+<td style="text-align: left;"><span class="arithmatex">\(T = 35\text{ °C}, H = 45\%, \text{CO}_2 = 1600\text{ ppm}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: left;">Лабораторія екологічного контролю</td>
+<td style="text-align: left;">Концентрація <span class="arithmatex">\(\text{CO}_2\)</span> (приміщення)</td>
+<td style="text-align: left;">LSTM проти Q-LSTM</td>
+<td style="text-align: center;">7 місяців</td>
+<td style="text-align: left;"><span class="arithmatex">\(T = 22\text{ °C}, H = 50\%, \text{CO}_2 = 750\text{ ppm}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: left;">Регіональний пост (Горішні Плавні)</td>
+<td style="text-align: left;">Атмосферний тиск (кПа)</td>
+<td style="text-align: left;">AutoARIMA проти Q-TBATS</td>
+<td style="text-align: center;">7 місяців</td>
+<td style="text-align: left;"><span class="arithmatex">\(T = 18\text{ °C}, H = 65\%, \text{CO}_2 = 850\text{ ppm}\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_4">Вимоги до змісту звіту</h2>
+<p>Звіт оформлюється в електронному вигляді у форматі PDF або DOCX та подається на перевірку викладачу разом із розрахунковою таблицею у форматі XLSX.</p>
+<p>Структура звіту повинна містити такі обов'язкові розділи:</p>
+<ol>
+<li>
+<p><strong>Титульна сторінка:</strong> містить найменування навчального закладу, інституту, випускової кафедри, назву навчальної дисципліни, тему лабораторної роботи, номер варіанта індивідуального завдання, а також прізвище, ініціали та навчальну групу здобувача.</p>
+</li>
+<li>
+<p><strong>Мета роботи:</strong> чітке формулювання дослідницьких і розрахункових цілей відповідно до наданих методичних вказівок.</p>
+</li>
+<li>
+<p><strong>Порядок виконання роботи:</strong> структурований опис кроків налаштування системи нечіткої логіки та проведення квантово-гібридного бенчмаркінгу з описом формул розрахунку тесту Вілкоксона.</p>
+</li>
+<li>
+<p><strong>Результати розрахунків та візуалізація:</strong></p>
+</li>
+<li>
+<p>Графіки вхідних функцій належності та поверхня нечіткого виводу (Fuzzy Surface), отримані в середовищі Google Colab.</p>
+</li>
+<li>
+<p>Розраховане точне числове значення індексу екологічного ризику <span class="arithmatex">\(\text{CRI}\)</span> та його фахова інтерпретація для заданого мікрокліматичного сценарію.</p>
+</li>
+<li>
+<p>Зведена таблиця метрик точності (MSE, MAE, <span class="arithmatex">\(R^2\)</span>) для класичної та квантово-гібридної моделей прогнозування за досліджуваним екологічним параметром.</p>
+</li>
+<li>
+<p>Скриншот розділеної скрипкової діаграми (split violin plot) щільності розподілу залишків класичної та квантової архітектур.</p>
+</li>
+<li>
+<p>Розрахункова таблиця критерію знакових рангів Вілкоксона в MS Excel із визначеними сумами рангів <span class="arithmatex">\(W^+, W^-\)</span> та підсумковою тестовою статистикою <span class="arithmatex">\(W\)</span>.</p>
+</li>
+<li>
+<p><strong>Аналітичні висновки:</strong> фахове екологічне трактування отриманих результатів; аналіз придатності нечіткої логіки для оцінки комфорту середовища; детальне фізико-математичне пояснення наявності чи відсутності квантової переваги для досліджуваного параметра (вплив спектральних характеристик ряду, наявності циклічності та рівня апаратного шуму).</p>
+</li>
+<li>
+<p><strong>Відповіді на контрольні запитання:</strong> розгорнуті письмові відповіді на всі контрольні запитання, наведені у розділі 5.</p>
+</li>
+</ol>
+<hr />
+<h2 id="5_1">5 Контрольні запитання</h2>
+<ol>
+<li>
+<p>У чому полягає системна перевага застосування апарату нечіткої логіки та алгоритму Мамдані для оцінки комплексних екологічних ризиків у порівнянні з класичними пороговими правилами булевої логіки?</p>
+</li>
+<li>
+<p>Опишіть призначення етапів фазифікації, агрегації правил та дефазифікації методом центру ваги (Centroid method) у системах інтелектуального моніторингу виробничого мікроклімату.</p>
+</li>
+<li>
+<p>Яким чином варіаційні квантові схеми (VQC) інтегруються у класичні рекурентні нейронні мережі (створення архітектури Q-LSTM), та яку функцію виконує квантове ротаційне кодування AngleEmbedding?</p>
+</li>
+<li>
+<p>Чому на стабільних гармонійних екологічних часових рядах (атмосферний тиск, вологість) квантово-гібридні моделі демонструють значну перевагу у точності, а на високодисперсних рядах температури та оксиду вуглецю зазнають деградації похибки?</p>
+</li>
+<li>
+<p>З якою метою при порівнянні точності екологічних прогнозних моделей застосовується непараметричний критерій знакових рангів Вілкоксона, і чому використання класичного параметричного t-критерію Стьюдента часто є некоректним для екологічних вибірок залишків?</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Повернутись нагору
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Kyrylo Vadurin &bull; <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "header.autohide", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0456\u0439\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u0421\u043a\u043e\u043f\u0456\u044e\u0432\u0430\u0442\u0438 \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0429\u0435 1 \u0437\u0431\u0456\u0433 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.more.other": "\u0429\u0435 # \u0437\u0431\u0456\u0433\u0456\u0432 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.none": "\u0417\u0431\u0456\u0433\u0456\u0432 \u043d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0437\u0431\u0456\u0433", "search.result.other": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e # \u0437\u0431\u0456\u0433\u0456\u0432", "search.result.placeholder": "\u0420\u043e\u0437\u043f\u043e\u0447\u043d\u0456\u0442\u044c \u043f\u0438\u0441\u0430\u0442\u0438 \u0434\u043b\u044f \u043f\u043e\u0448\u0443\u043a\u0443", "search.result.term.missing": "\u041d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e \u0437\u0430\u043f\u0438\u0442\u0443", "select.version": "\u041e\u0431\u0440\u0430\u0442\u0438 \u0432\u0435\u0440\u0441\u0456\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
